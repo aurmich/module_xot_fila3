@@ -1,50 +1,106 @@
-# Documentation Guidelines
+# Modulo Xot
 
-This directory (`docs`) serves as the primary documentation repository for the project. All team members should follow these guidelines:
+## Panoramica
+Il modulo Xot fornisce le funzionalità base e le utilities utilizzate da tutti gli altri moduli dell'applicazione.
 
-## Core Principles
+## Componenti Principali
 
-1. **Single Source of Truth**: This `docs` directory is the main repository for all project documentation.
-2. **Continuous Updates**: Documentation must be updated whenever:
-   - Code changes are made
-   - Issues are resolved
-   - New features are implemented
-   - Bug fixes are applied
+### XotBaseResource
+Classe base per tutte le risorse Filament. Gestisce:
+- Navigazione automatica
+- Traduzioni
+- Permessi base
+- Configurazioni comuni
+
+### XotBasePage
+Classe base per tutte le pagine Filament. Fornisce:
+- Layout standard
+- Gestione permessi
+- Integrazione con il sistema di traduzioni
+- Funzionalità comuni
+
+### XotBaseModel
+Modello base con funzionalità comuni:
+- Soft delete
+- Timestamp automatici
+- Relazioni standard
+- Metodi utility
+
+## Servizi
+
+### LangService
+Gestisce le traduzioni dell'applicazione:
+- Caricamento automatico
+- Fallback configurabile
+- Cache delle traduzioni
+- Supporto per più lingue
+
+### PermissionService
+Gestisce i permessi dell'applicazione:
+- Controllo accessi
+- Ruoli e capacità
+- Cache dei permessi
+- Integrazione con Gate
+
+## Traits
+
+### HasPermissions
+Trait per la gestione dei permessi nei modelli:
+- Verifica permessi
+- Assegnazione ruoli
+- Sincronizzazione permessi
+
+### HasTranslations
+Trait per la gestione delle traduzioni nei modelli:
+- Campi traducibili
+- Fallback automatico
+- Cache delle traduzioni
+
+## Configurazione
+Il modulo è configurabile tramite:
+- `config/xot.php`
+- Environment variables
+- Service providers
 
 ## Best Practices
+1. Estendere sempre le classi base appropriate
+2. Utilizzare i traits forniti
+3. Seguire le convenzioni di naming
+4. Mantenere la documentazione aggiornata
 
-1. **Pre-Change Check**: Before making any changes to the codebase:
-   - Review relevant documentation in this directory
-   - Avoid duplicating existing information
-   - Identify potential impacts on existing documentation
+## Directory Principali
+- `Abstracts/`: Classi base e interfacce
+- `Helpers/`: Utility globali
+- `Http/`: Middleware e controller base
+- `config/`: Configurazioni condivise
 
-2. **Regular Review**:
-   - Periodically review documentation for accuracy
-   - Update outdated information
-   - Identify areas needing more detailed documentation
+## Funzionalità Chiave
+1. **Helper Globali**
+   - Manipolazione stringhe/array
+   - Utility date e tempi
+   - Helper database
+   - Funzioni sicurezza
 
-3. **Documentation Structure**:
-   - Keep documentation organized and easy to navigate
-   - Use clear, consistent formatting
-   - Include examples where appropriate
-   - Link related documents together
+2. **Astrazioni Base**
+   - Interfacce comuni
+   - Classi base per modelli/controller
+   - Trait riutilizzabili
 
-## Current Documentation
+3. **Quality Assurance**
+   - PHP Insights
+   - PHPStan
+   - PHPMD
+   - Psalm
+   - Rector
+   - PHP CS Fixer
 
-The following documentation is currently available:
-- `documentation_script_readme.md`: Script documentation
-- `documentation_strategy.md`: Documentation strategy
-- `form_schema_audit.md`: Form schema auditing
-- `laraxot.md`: Laraxot framework documentation
-- `module_geo.md`: Geographic module documentation
-- `project.md`: Project overview
-- `widget.md`: Widget documentation
+## Utilizzo
+1. Estendere le classi base per nuovi modelli/controller
+2. Utilizzare gli helper per funzionalità comuni
+3. Seguire gli standard di codice definiti
 
-## Contributing
-
-When contributing to documentation:
-1. Use clear and concise language
-2. Include relevant code examples
-3. Update the table of contents if necessary
-4. Cross-reference related documentation
-5. Commit documentation changes along with code changes
+## Documentazione Dettagliata
+- `/docs/filament/`: Integrazione Filament
+- `/docs/model/`: Gestione modelli
+- `/docs/service/`: Servizi disponibili
+- `/docs/activity/`: Sistema di logging 
