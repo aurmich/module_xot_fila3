@@ -20,7 +20,6 @@ abstract class XotBaseWidget extends FilamentWidget
     public string $title = '';
     public string $icon = '';
     /**
-<<<<<<< HEAD
      * The view that should be rendered for the widget.
      *
      * This property allows either a string that can be rendered as a view
@@ -30,12 +29,6 @@ abstract class XotBaseWidget extends FilamentWidget
      * @var view-string
      */
     protected static string $view;
-=======
-     * @var view-string
-     * @phpstan-var view-string
-     */
-    protected static string $view; // = 'ui::empty';
->>>>>>> origin/dev
 
 
     public function __construct()

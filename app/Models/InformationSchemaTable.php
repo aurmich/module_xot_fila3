@@ -9,12 +9,7 @@ use Webmozart\Assert\Assert;
 use InvalidArgumentException;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Schema;
-<<<<<<< HEAD
 use Illuminate\Database\Eloquent\Model;
-=======
-use InvalidArgumentException;
-use Sushi\Sushi;
->>>>>>> origin/dev
 
 /**
  * Represents a table in the INFORMATION_SCHEMA.TABLES.
@@ -317,11 +312,7 @@ class InformationSchemaTable extends Model
         if ($rows === null) {
             return 0;
         }
-<<<<<<< HEAD
         Assert::numeric($rows);
-=======
-
->>>>>>> origin/dev
         return (int) $rows;
     }
 
@@ -359,4 +350,4 @@ class InformationSchemaTable extends Model
         DB::connection('mysql')
             ->statement("ANALYZE TABLE `{$database}`.`{$tableName}`");
     }
-} 
+}

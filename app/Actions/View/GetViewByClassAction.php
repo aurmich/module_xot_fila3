@@ -15,10 +15,7 @@ class GetViewByClassAction
 
     /**
      * "Modules\UI\Filament\Widgets\GroupWidget" => "ui::filament.widgets.group"
-<<<<<<< HEAD
      * @return view-string
-=======
->>>>>>> origin/dev
      */
     public function execute(string $class, string $suffix = ''): string
     {
@@ -51,10 +48,7 @@ class GetViewByClassAction
                     $value = Str::of($value)->beforeLast($singular)->toString();
                 }
             }
-<<<<<<< HEAD
             
-=======
->>>>>>> origin/dev
             return Str::of($value)->slug()->toString();
         });
 
@@ -66,6 +60,5 @@ class GetViewByClassAction
         }
 
         return $view;
-
     }
 }

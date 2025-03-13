@@ -39,6 +39,7 @@ class GetModulesNavigationItems
 
             // Otteniamo il percorso relativo della configurazione
             $relativeConfigPath = config('modules.paths.generator.config.path');
+<<<<<<< HEAD
             $relativeConfigPathStr = is_string($relativeConfigPath) ? $relativeConfigPath : 'Config';
             
             try {
@@ -75,6 +76,22 @@ class GetModulesNavigationItems
             $icon = $config['icon'] ?? 'heroicon-o-question-mark-circle';
             Assert::string($icon, "L'icona deve essere una stringa");
             
+=======
+            try {
+                $configPath = module_path($module, $relativeConfigPath);
+            } catch (\Error $e) {
+                dddx([
+                    'module' => $module,
+                    'relativeConfigPath' => $relativeConfigPath,
+                    'error' => $e->getMessage(),
+                ]);
+            }
+            /**
+             * @var array
+             */
+            $config = File::getRequire($configPath.'/config.php');
+            Assert::string($icon = $config['icon'] ?? 'heroicon-o-question-mark-circle');
+>>>>>>> 37f72ffc3 (up)
             $role = $module_low.'::admin';
             Assert::stringNotEmpty($role, 'Il ruolo non può essere vuoto');
             
