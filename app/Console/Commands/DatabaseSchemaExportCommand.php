@@ -42,7 +42,11 @@ class DatabaseSchemaExportCommand extends Command
         $outputPath = $this->option('output');
 
         // Assicurati che il percorso sia assoluto
+<<<<<<< HEAD
         if ($outputPath !== null && !Str::startsWith($outputPath, '/')) {
+=======
+        if (!Str::startsWith($outputPath, '/')) {
+>>>>>>> origin/dev
             $outputPath = base_path($outputPath);
         }
 
@@ -63,7 +67,11 @@ class DatabaseSchemaExportCommand extends Command
 
             // Ottieni tutte le tabelle
             $tables = DB::select('SHOW TABLES');
+<<<<<<< HEAD
             $tablesKey = 'Tables_in_' . $databaseNameStr;
+=======
+            $tablesKey = 'Tables_in_' . $databaseName;
+>>>>>>> origin/dev
 
             $schema = [
                 'database' => $databaseNameStr,
@@ -175,6 +183,7 @@ class DatabaseSchemaExportCommand extends Command
             $this->newLine(2);
 
             // Crea directory se non esiste
+<<<<<<< HEAD
             if ($outputPath !== null) {
                 $directory = dirname($outputPath);
                 if (!File::exists($directory)) {
@@ -192,6 +201,22 @@ class DatabaseSchemaExportCommand extends Command
                 }
             }
 
+=======
+            $directory = dirname($outputPath);
+            if (!File::exists($directory)) {
+                File::makeDirectory($directory, 0755, true);
+            }
+
+            // Salva lo schema in un file JSON
+            $jsonContent = json_encode($schema, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES);
+            if ($jsonContent === false) {
+                throw new \RuntimeException('Failed to encode schema to JSON');
+            }
+            File::put($outputPath, $jsonContent);
+
+            $this->info("Schema del database esportato con successo in: {$outputPath}");
+
+>>>>>>> origin/dev
             // Genera un report riassuntivo
             $this->generateReport($schema);
 
@@ -254,11 +279,15 @@ class DatabaseSchemaExportCommand extends Command
         /** @var \Illuminate\Support\Collection<string, array<string, mixed>> $relevantTables */
         $relevantTables = collect($schema['tables'])
             ->map(function (array $table, string $tableName) use ($schema): array {
+<<<<<<< HEAD
                 /** @var \Illuminate\Support\Collection<int, array<string, mixed>> $relationships */
                 $relationships = collect($schema['relationships']);
                 
                 /** @var int $relationCount */
                 $relationCount = $relationships
+=======
+                $relationCount = collect($schema['relationships'])
+>>>>>>> origin/dev
                     ->filter(function (array $rel) use ($tableName): bool {
                         return $rel['local_table'] === $tableName || $rel['foreign_table'] === $tableName;
                     })

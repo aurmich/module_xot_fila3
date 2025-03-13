@@ -200,6 +200,7 @@ class XotData extends Data implements Wireable
     public function getProfileClass(): string
     {
         $class = 'Modules\\'.$this->main_module.'\Models\Profile';
+<<<<<<< HEAD
         
         // Verifica che la classe esista
         Assert::classExists($class, '['.$class.']['.__LINE__.']['.class_basename($this).']');
@@ -209,6 +210,13 @@ class XotData extends Data implements Wireable
         Assert::implementsInterface($class, ProfileContract::class, '['.__LINE__.']['.class_basename($this).']['.$class.']');
         
         /** @var class-string<Model&ProfileContract> */
+=======
+        //Assert::classExists($class, '['.$class.']['.__LINE__.']['.class_basename($this).']');
+        // Assert::isInstanceOf($class, Model::class, '['.__LINE__.']['.class_basename($this).']['.$class.']');
+        //Assert::isAOf($class, Model::class, '['.__LINE__.']['.class_basename($this).']['.$class.']');
+        //Assert::implementsInterface($class, ProfileContract::class, '['.__LINE__.']['.class_basename($this).']['.$class.']');
+
+>>>>>>> origin/dev
         return $class;
     }
 

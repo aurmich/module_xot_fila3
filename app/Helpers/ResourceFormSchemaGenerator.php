@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace Modules\Xot\Helpers;
 
 use Illuminate\Support\Str;
+<<<<<<< HEAD
 use Webmozart\Assert\Assert;
 
 use function Safe\glob;
@@ -13,6 +14,14 @@ use function Safe\preg_match;
 use function Safe\preg_replace;
 use function Safe\file_get_contents;
 use function Safe\file_put_contents;
+=======
+use function Safe\file_get_contents;
+use function Safe\file_put_contents;
+use function Safe\glob;
+use function Safe\preg_match;
+use function Safe\preg_replace;
+use function Safe\error_log;
+>>>>>>> origin/dev
 
 class ResourceFormSchemaGenerator
 {
@@ -28,6 +37,10 @@ class ResourceFormSchemaGenerator
 
             $reflection = new \ReflectionClass($resourceClass);
             $filename = $reflection->getFileName();
+            
+            if ($filename === false) {
+                throw new \RuntimeException("Failed to get filename for class: {$resourceClass}");
+            }
 
             if ($filename === false) {
                 throw new \RuntimeException("Failed to get filename for class: {$resourceClass}");
@@ -78,16 +91,27 @@ class ResourceFormSchemaGenerator
 
         foreach ($resourceFiles as $file) {
             try {
+<<<<<<< HEAD
                 Assert::string($file);
                 $content = file_get_contents($file);
                 $namespaceMatch = [];
                 $classMatch = [];
 
+=======
+                $content = file_get_contents($file);
+                $namespaceMatch = [];
+                $classMatch = [];
+                
+>>>>>>> origin/dev
                 if (preg_match('/namespace\s+([\w\\\\\\\\]+);/', $content, $namespaceMatch) &&
                     preg_match('/class\s+(\w+)\s+extends\s+XotBaseResource/', $content, $classMatch) &&
                     !empty($namespaceMatch[1]) && !empty($classMatch[1])) {
                     $fullClassName = $namespaceMatch[1].'\\'.$classMatch[1];
+<<<<<<< HEAD
 
+=======
+                    
+>>>>>>> origin/dev
                     if (class_exists($fullClassName)) {
                         /** @var class-string $fullClassName */
                         if (self::generateFormSchema($fullClassName)) {

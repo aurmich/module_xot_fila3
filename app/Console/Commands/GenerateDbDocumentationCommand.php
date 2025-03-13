@@ -37,10 +37,17 @@ class GenerateDbDocumentationCommand extends Command
         }
 
         $schemaContent = File::get($schemaFilePath);
+<<<<<<< HEAD
         try {
             $schema = \Safe\json_decode($schemaContent, true);
         } catch (\Exception $e) {
             $this->error("Errore nella decodifica del file JSON: " . $e->getMessage());
+=======
+        $schema = json_decode($schemaContent, true);
+
+        if (json_last_error() !== JSON_ERROR_NONE) {
+            $this->error("Errore nella decodifica del file JSON: " . json_last_error_msg());
+>>>>>>> origin/dev
             return 1;
         }
 
@@ -153,6 +160,7 @@ Tabella `{$tableName}` nel database.
 MARKDOWN;
 
         foreach ($columns as $columnName => $column) {
+<<<<<<< HEAD
             $type = isset($column['type']) ? (string)$column['type'] : '';
             $nullable = isset($column['nullable']) && $column['nullable'] ? 'Sì' : 'No';
             $default = isset($column['default']) ? (string)$column['default'] : 'NULL';
@@ -164,11 +172,24 @@ MARKDOWN;
         }
 
         if (is_array($indexes) && !empty($indexes)) {
+=======
+            $type = $column['type'];
+            $nullable = $column['nullable'] ? 'Sì' : 'No';
+            $default = $column['default'] ?? 'NULL';
+            $extra = $column['extra'] ?? '';
+            $comment = $column['comment'] ?? '';
+            
+            $content .= "| {$columnName} | {$type} | {$nullable} | {$default} | {$extra} | {$comment} |\n";
+        }
+
+        if (!empty($indexes) && count($indexes) > 0) {
+>>>>>>> origin/dev
             $content .= "\n## Indici\n\n";
             $content .= "| Nome | Colonne | Unico |\n";
             $content .= "|------|---------|-------|\n";
 
             foreach ($indexes as $indexName => $index) {
+<<<<<<< HEAD
                 if (!is_array($index)) {
                     continue;
                 }
@@ -182,6 +203,16 @@ MARKDOWN;
                 $indexNameSafe = is_string($indexName) ? $indexName : '';
                 
                 $content .= "| {$indexNameSafe} | {$columns} | {$unique} |\n";
+=======
+                if ($indexName === 'PRIMARY') {
+                    continue;
+                }
+                
+                $columns = implode(', ', $index['columns']);
+                $unique = $index['unique'] ? 'Sì' : 'No';
+                
+                $content .= "| {$indexName} | {$columns} | {$unique} |\n";
+>>>>>>> origin/dev
             }
         }
 

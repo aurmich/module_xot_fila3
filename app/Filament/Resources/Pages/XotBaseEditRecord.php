@@ -25,6 +25,7 @@ abstract class XotBaseEditRecord extends FilamentEditRecord
             $resource = $this->getResource();
             $schema = $resource::getFormSchema();
         }
+<<<<<<< HEAD
         
         // Ensure schema is properly typed for PHPStan level 10
         /** @var array<string|int, \Filament\Forms\Components\Component>|array<\Filament\Forms\Components\Component> $validSchema */
@@ -41,5 +42,8 @@ abstract class XotBaseEditRecord extends FilamentEditRecord
     protected function getFormSchema(): array
     {
         return [];
+=======
+        return $form->schema($schema);
+>>>>>>> origin/dev
     }
 }

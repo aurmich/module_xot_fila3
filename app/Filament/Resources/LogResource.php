@@ -16,6 +16,15 @@ use Modules\Xot\Filament\Traits\NavigationLabelTrait;
 use Modules\Xot\Models\Log;
 use Modules\Xot\Filament\Resources\RelationManagers\XotBaseRelationManager;
 
+
+
+
+use Modules\Xot\Filament\Resources\RelationManagers\XotBaseRelationManager;
+
+
+
+
+
 class LogResource extends XotBaseResource
 {
     use NavigationLabelTrait;
