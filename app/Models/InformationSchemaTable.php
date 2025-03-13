@@ -4,15 +4,66 @@ declare(strict_types=1);
 
 namespace Modules\Xot\Models;
 
-use Illuminate\Database\Eloquent\Model;
+use Sushi\Sushi;
+use Webmozart\Assert\Assert;
+use InvalidArgumentException;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Schema;
-use InvalidArgumentException;
-use Sushi\Sushi;
+use Illuminate\Database\Eloquent\Model;
 
 /**
  * Represents a table in the INFORMATION_SCHEMA.TABLES.
+ *
  * Provides metadata and statistics about database tables.
+ *
+ * @property string|null $TABLE_CATALOG
+ * @property string|null $TABLE_SCHEMA
+ * @property string|null $TABLE_NAME
+ * @property string|null $TABLE_TYPE
+ * @property string|null $ENGINE
+ * @property int|null $VERSION
+ * @property string|null $ROW_FORMAT
+ * @property int|null $TABLE_ROWS
+ * @property int|null $AVG_ROW_LENGTH
+ * @property int|null $DATA_LENGTH
+ * @property int|null $MAX_DATA_LENGTH
+ * @property int|null $INDEX_LENGTH
+ * @property int|null $DATA_FREE
+ * @property int|null $AUTO_INCREMENT
+ * @property \Illuminate\Support\Carbon|null $CREATE_TIME
+ * @property \Illuminate\Support\Carbon|null $UPDATE_TIME
+ * @property \Illuminate\Support\Carbon|null $CHECK_TIME
+ * @property string|null $TABLE_COLLATION
+ * @property int|null $CHECKSUM
+ * @property string|null $CREATE_OPTIONS
+ * @property string|null $TABLE_COMMENT
+ * @property int $id
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|InformationSchemaTable newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|InformationSchemaTable newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|InformationSchemaTable query()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|InformationSchemaTable whereAUTOINCREMENT($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|InformationSchemaTable whereAVGROWLENGTH($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|InformationSchemaTable whereCHECKSUM($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|InformationSchemaTable whereCHECKTIME($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|InformationSchemaTable whereCREATEOPTIONS($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|InformationSchemaTable whereCREATETIME($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|InformationSchemaTable whereDATAFREE($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|InformationSchemaTable whereDATALENGTH($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|InformationSchemaTable whereENGINE($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|InformationSchemaTable whereINDEXLENGTH($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|InformationSchemaTable whereId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|InformationSchemaTable whereMAXDATALENGTH($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|InformationSchemaTable whereROWFORMAT($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|InformationSchemaTable whereTABLECATALOG($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|InformationSchemaTable whereTABLECOLLATION($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|InformationSchemaTable whereTABLECOMMENT($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|InformationSchemaTable whereTABLENAME($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|InformationSchemaTable whereTABLEROWS($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|InformationSchemaTable whereTABLESCHEMA($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|InformationSchemaTable whereTABLETYPE($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|InformationSchemaTable whereUPDATETIME($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|InformationSchemaTable whereVERSION($value)
+ * @mixin \Eloquent
  */
 class InformationSchemaTable extends Model
 {
@@ -261,7 +312,7 @@ class InformationSchemaTable extends Model
         if ($rows === null) {
             return 0;
         }
-
+        Assert::numeric($rows);
         return (int) $rows;
     }
 
@@ -299,4 +350,4 @@ class InformationSchemaTable extends Model
         DB::connection('mysql')
             ->statement("ANALYZE TABLE `{$database}`.`{$tableName}`");
     }
-} 
+}

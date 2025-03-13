@@ -37,10 +37,10 @@ class GenerateDbDocumentationCommand extends Command
         }
 
         $schemaContent = File::get($schemaFilePath);
-        $schema = json_decode($schemaContent, true);
-
-        if (json_last_error() !== JSON_ERROR_NONE) {
-            $this->error("Errore nella decodifica del file JSON: " . json_last_error_msg());
+        try {
+            $schema = \Safe\json_decode($schemaContent, true);
+        } catch (\Exception $e) {
+            $this->error("Errore nella decodifica del file JSON: " . $e->getMessage());
             return 1;
         }
 
@@ -153,29 +153,35 @@ Tabella `{$tableName}` nel database.
 MARKDOWN;
 
         foreach ($columns as $columnName => $column) {
-            $type = $column['type'];
-            $nullable = $column['nullable'] ? 'Sì' : 'No';
-            $default = $column['default'] ?? 'NULL';
-            $extra = $column['extra'] ?? '';
-            $comment = $column['comment'] ?? '';
+            $type = isset($column['type']) ? (string)$column['type'] : '';
+            $nullable = isset($column['nullable']) && $column['nullable'] ? 'Sì' : 'No';
+            $default = isset($column['default']) ? (string)$column['default'] : 'NULL';
+            $extra = isset($column['extra']) ? (string)$column['extra'] : '';
+            $comment = isset($column['comment']) ? (string)$column['comment'] : '';
             
-            $content .= "| {$columnName} | {$type} | {$nullable} | {$default} | {$extra} | {$comment} |\n";
+            $columnNameSafe = is_string($columnName) ? $columnName : '';
+            $content .= "| {$columnNameSafe} | {$type} | {$nullable} | {$default} | {$extra} | {$comment} |\n";
         }
 
-        if (!empty($indexes) && count($indexes) > 0) {
+        if (is_array($indexes) && !empty($indexes)) {
             $content .= "\n## Indici\n\n";
             $content .= "| Nome | Colonne | Unico |\n";
             $content .= "|------|---------|-------|\n";
 
             foreach ($indexes as $indexName => $index) {
+                if (!is_array($index)) {
+                    continue;
+                }
                 if ($indexName === 'PRIMARY') {
                     continue;
                 }
                 
-                $columns = implode(', ', $index['columns']);
-                $unique = $index['unique'] ? 'Sì' : 'No';
+                $columnsArray = isset($index['columns']) && is_array($index['columns']) ? $index['columns'] : [];
+                $columns = implode(', ', $columnsArray);
+                $unique = isset($index['unique']) && $index['unique'] ? 'Sì' : 'No';
+                $indexNameSafe = is_string($indexName) ? $indexName : '';
                 
-                $content .= "| {$indexName} | {$columns} | {$unique} |\n";
+                $content .= "| {$indexNameSafe} | {$columns} | {$unique} |\n";
             }
         }
 
@@ -236,7 +242,11 @@ MARKDOWN;
         if (!empty($tableInfo['sample_data'])) {
             $content .= "\n## Dati di Esempio\n\n";
             $content .= "```json\n";
-            $content .= json_encode($tableInfo['sample_data'], JSON_PRETTY_PRINT);
+            try {
+                $content .= \Safe\json_encode($tableInfo['sample_data'], JSON_PRETTY_PRINT);
+            } catch (\Exception $e) {
+                $content .= "Errore nella formattazione dei dati di esempio: " . $e->getMessage();
+            }
             $content .= "\n```\n";
         }
 

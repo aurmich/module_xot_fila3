@@ -59,6 +59,7 @@ abstract class XotBaseResource extends FilamentResource
 
     /**
      * per rendere obbligatorio questo metodo.
+     * @return array<string,\Filament\Forms\Components\Component>
      */
     abstract public static function getFormSchema(): array;
 
@@ -104,6 +105,16 @@ abstract class XotBaseResource extends FilamentResource
         $edit = Str::of($prefix)->append('Edit'.$name.'')->toString();
         $view = Str::of($prefix)->append('View'.$name.'')->toString();
 
+        /** @var class-string<\Filament\Resources\Pages\Page> $index */
+        $index = $index;
+        /** @var class-string<\Filament\Resources\Pages\Page> $create */
+        $create = $create;
+        /** @var class-string<\Filament\Resources\Pages\Page> $edit */
+        $edit = $edit;
+        /** @var class-string<\Filament\Resources\Pages\Page> $view */
+        $view = $view;
+        
+        /** @var array<string, \Filament\Resources\Pages\PageRegistration> $pages */
         $pages = [
             'index' => $index::route('/'),
             'create' => $create::route('/create'),
@@ -118,6 +129,9 @@ abstract class XotBaseResource extends FilamentResource
         return $pages;
     }
 
+    /**
+     * @return array<class-string<\Filament\Resources\RelationManagers\RelationManager>|\Filament\Resources\RelationManagers\RelationGroup|\Filament\Resources\RelationManagers\RelationManagerConfiguration>
+     */
     public static function getRelations(): array
     {
         $reflector = new \ReflectionClass(static::class);
@@ -130,10 +144,25 @@ abstract class XotBaseResource extends FilamentResource
             ->toString();
 
         $files = glob($path.DIRECTORY_SEPARATOR.'*RelationManager.php');
+        /** @var array<class-string<\Filament\Resources\RelationManagers\RelationManager>|\Filament\Resources\RelationManagers\RelationGroup|\Filament\Resources\RelationManagers\RelationManagerConfiguration> $res */
         $res = [];
         foreach ($files as $file) {
+            // Ensure $file is a string before passing to pathinfo
+            if (!is_string($file)) {
+                continue;
+            }
+            
             $info = pathinfo($file);
-            $res[] = static::class.'\RelationManagers\\'.$info['filename'];
+            if (!isset($info['filename']) || !is_string($info['filename'])) {
+                continue;
+            }
+            
+            $className = static::class.'\RelationManagers\\'.$info['filename'];
+            // Verifica che la classe esista ed estenda RelationManager
+            if (class_exists($className) && is_subclass_of($className, \Filament\Resources\RelationManagers\RelationManager::class)) {
+                /** @var class-string<\Filament\Resources\RelationManagers\RelationManager> $className */
+                $res[] = $className;
+            }
         }
 
         return $res;
