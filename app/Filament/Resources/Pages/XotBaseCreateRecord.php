@@ -8,7 +8,6 @@ use Filament\Resources\Pages\CreateRecord as FilamentCreateRecord;
 
 abstract class XotBaseCreateRecord extends FilamentCreateRecord
 {
-<<<<<<< HEAD
     /**
      * Get default form data.
      *
@@ -18,7 +17,4 @@ abstract class XotBaseCreateRecord extends FilamentCreateRecord
     {
         return [];
     }
-=======
-    // ...
->>>>>>> e2a4c5d (.)
 }

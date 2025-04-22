@@ -18,16 +18,10 @@ class RegisterBladeComponentsAction
         $comps = app(GetComponentsAction::class)
             ->execute($path, $namespace.'\View\Components', $prefix);
 
-<<<<<<< HEAD
         if (0 === $comps->count()) {
             return;
         }
 
-=======
-        if (0 == $comps->count()) {
-            return;
-        }
->>>>>>> e2a4c5d (.)
         foreach ($comps->items() as $comp) {
             if (! $comp instanceof ComponentFileData) {
                 continue;

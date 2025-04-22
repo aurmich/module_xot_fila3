@@ -20,11 +20,7 @@ use Illuminate\Support\Carbon;
  * @property string|null        $updated_by
  * @property string|null        $title
  * @property PivotContract|null $pivot
-<<<<<<< HEAD
  * @property string $tennant_name
-=======
- * @property string             $tennant_name
->>>>>>> e2a4c5d (.)
  * @property int|null           $author_id
  * @property UserContract|null  $user
  * @property UserContract|null  $author

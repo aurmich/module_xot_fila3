@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 namespace Modules\Xot\Filament\Resources\LogResource\Pages;
 
-<<<<<<< HEAD
 use Filament\Actions;
 use Filament\Infolists\Components\Section;
 use Filament\Infolists\Components\TextEntry;
@@ -40,12 +39,4 @@ class ViewLog extends \Modules\Xot\Filament\Resources\Pages\XotBaseViewRecord
                 ]),
         ];
     }
-=======
-use Filament\Resources\Pages\ViewRecord;
-use Modules\Xot\Filament\Resources\LogResource;
-
-class ViewLog extends ViewRecord
-{
-    protected static string $resource = LogResource::class;
->>>>>>> e2a4c5d (.)
 }

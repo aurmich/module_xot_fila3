@@ -5,47 +5,26 @@ declare(strict_types=1);
 namespace Modules\Xot\Models;
 
 /**
-<<<<<<< HEAD
- * 
+ *
  *
  * @property \Modules\Xot\Contracts\ProfileContract|null $creator
  * @property \Modules\Xot\Contracts\ProfileContract|null $updater
-=======
- * @property \Modules\Xot\Contracts\ProfileContract|null $creator
- * @property \Modules\Xot\Contracts\ProfileContract|null $updater
- *
->>>>>>> e2a4c5d (.)
  * @method static \Modules\Xot\Database\Factories\PulseValueFactory factory($count = null, $state = [])
  * @method static \Illuminate\Database\Eloquent\Builder|PulseValue  newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|PulseValue  newQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|PulseValue  query()
-<<<<<<< HEAD
  * @property int         $id
  * @property int         $timestamp
  * @property string $type
  * @property string $key
  * @property string|null $key_hash
  * @property string $value
-=======
- *
- * @property int         $id
- * @property int         $timestamp
- * @property string      $type
- * @property string      $key
- * @property string|null $key_hash
- * @property string      $value
- *
->>>>>>> e2a4c5d (.)
  * @method static \Illuminate\Database\Eloquent\Builder|PulseValue whereId($value)
  * @method static \Illuminate\Database\Eloquent\Builder|PulseValue whereKey($value)
  * @method static \Illuminate\Database\Eloquent\Builder|PulseValue whereKeyHash($value)
  * @method static \Illuminate\Database\Eloquent\Builder|PulseValue whereTimestamp($value)
  * @method static \Illuminate\Database\Eloquent\Builder|PulseValue whereType($value)
  * @method static \Illuminate\Database\Eloquent\Builder|PulseValue whereValue($value)
-<<<<<<< HEAD
-=======
- *
->>>>>>> e2a4c5d (.)
  * @mixin \Eloquent
  */
 class PulseValue extends BaseModel

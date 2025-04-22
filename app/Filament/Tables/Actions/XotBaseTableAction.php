@@ -9,7 +9,6 @@ use Illuminate\Database\Eloquent\Model;
 
 /**
  * @property ?Model $record
-<<<<<<< HEAD
  * @method ?Model getRecord()
  */
 abstract class XotBaseTableAction extends Action
@@ -17,11 +16,6 @@ abstract class XotBaseTableAction extends Action
     /**
      * @return \Illuminate\Database\Eloquent\Model|null
      */
-=======
- */
-abstract class XotBaseTableAction extends Action
-{
->>>>>>> e2a4c5d (.)
     public function getRecord(): ?Model
     {
         return $this->record;

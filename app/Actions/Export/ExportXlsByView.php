@@ -16,14 +16,13 @@ class ExportXlsByView
 {
     use QueueableAction;
 
-<<<<<<< HEAD
     /**
      * Esporta una vista in Excel.
      *
      * @param View $view Vista da esportare
      * @param string $filename Nome del file Excel
      * @param array<string>|null $fields Campi da includere nell'export
-     * 
+     *
      * @return BinaryFileResponse
      */
     public function execute(
@@ -44,15 +43,6 @@ class ExportXlsByView
             transKey: null,
             fields: $stringFields
         );
-=======
-    public function execute(
-        View $view,
-        string $filename = 'test.xlsx',
-        ?string $transKey = null,
-        ?array $fields = null,
-    ): BinaryFileResponse {
-        $export = new ViewExport($view, $transKey, $fields);
->>>>>>> e2a4c5d (.)
 
         return Excel::download($export, $filename);
     }

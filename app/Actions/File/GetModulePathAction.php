@@ -16,16 +16,13 @@ class GetModulePathAction
 {
     use QueueableAction;
 
-<<<<<<< HEAD
     /**
      * Ottiene il percorso di un modulo.
      *
      * @param string $moduleName Il nome del modulo
-     * 
+     *
      * @return string Il percorso completo del modulo
      */
-=======
->>>>>>> e2a4c5d (.)
     public function execute(string $moduleName): string
     {
         try {
@@ -37,9 +34,8 @@ class GetModulePathAction
             }
 
             $files = scandir($modulesPath);
-<<<<<<< HEAD
             $moduleNameLower = Str::lower($moduleName);
-            
+
             $foundModule = collect($files)
                 ->filter(
                     static function ($item) use ($moduleNameLower): bool {
@@ -49,20 +45,13 @@ class GetModulePathAction
                         return Str::lower($item) === $moduleNameLower;
                     }
                 )->first();
-            
+
             // Se non troviamo il modulo, restituiamo un percorso di fallback
             if ($foundModule === null || !is_string($foundModule)) {
                 return base_path('Modules/'.$moduleName);
             }
-            
+
             $module_path = base_path('Modules/'.$foundModule);
-=======
-            $module_path = collect($files)
-                ->filter(
-                    static fn ($item): bool => Str::lower($item) === Str::lower($moduleName)
-                )->first();
-            $module_path = base_path('Modules/'.$module_path);
->>>>>>> e2a4c5d (.)
         }
 
         return $module_path;

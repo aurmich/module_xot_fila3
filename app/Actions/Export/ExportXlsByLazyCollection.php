@@ -6,10 +6,7 @@ namespace Modules\Xot\Actions\Export;
 
 use Illuminate\Http\Response;
 use Illuminate\Support\LazyCollection;
-<<<<<<< HEAD
 use Maatwebsite\Excel\Facades\Excel;
-=======
->>>>>>> e2a4c5d (.)
 use Modules\Xot\Exports\LazyCollectionExport;
 use Spatie\QueueableAction\QueueableAction;
 use Symfony\Component\HttpFoundation\BinaryFileResponse;
@@ -18,14 +15,13 @@ class ExportXlsByLazyCollection
 {
     use QueueableAction;
 
-<<<<<<< HEAD
     /**
      * Esporta una lazy collection in Excel.
      *
      * @param LazyCollection $collection La lazy collection da esportare
      * @param string $filename Nome del file Excel
      * @param array<int, string> $fields Campi da includere nell'export
-     * 
+     *
      * @return BinaryFileResponse
      */
     public function execute(
@@ -46,16 +42,5 @@ class ExportXlsByLazyCollection
         );
 
         return Excel::download($export, $filename);
-=======
-    public function execute(
-        LazyCollection $collection,
-        string $filename = 'test.xlsx',
-        ?string $transKey = null,
-        array $fields = [],
-    ): Response|BinaryFileResponse {
-        $export = new LazyCollectionExport($collection, $transKey, $fields);
-
-        return $export->download($filename);
->>>>>>> e2a4c5d (.)
     }
 }

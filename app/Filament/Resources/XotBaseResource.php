@@ -10,7 +10,6 @@ use Filament\Resources\Resource as FilamentResource;
 use Illuminate\Support\Str;
 use Modules\Xot\Actions\ModelClass\CountAction;
 use Modules\Xot\Filament\Traits\NavigationLabelTrait;
-<<<<<<< HEAD
 use Webmozart\Assert\Assert;
 
 use function Safe\glob;
@@ -18,13 +17,6 @@ use function Safe\glob;
 /**
  * @method static string getUrl(string $name, array<string, mixed> $parameters = [], bool $isAbsolute = true)
  */
-=======
-
-use function Safe\glob;
-
-use Webmozart\Assert\Assert;
-
->>>>>>> e2a4c5d (.)
 abstract class XotBaseResource extends FilamentResource
 {
     use NavigationLabelTrait;
@@ -69,19 +61,11 @@ abstract class XotBaseResource extends FilamentResource
     }
 
     /**
-<<<<<<< HEAD
      * @return array<string|int,\Filament\Forms\Components\Component>
      */
     abstract public static function getFormSchema(): array;
 
     final public static function form(Form $form): Form
-=======
-     * per rendere obbligatorio questo metodo.
-     */
-    abstract public static function getFormSchema(): array;
-
-    public static function form(Form $form): Form
->>>>>>> e2a4c5d (.)
     {
         return $form
             ->schema(static::getFormSchema());
@@ -113,12 +97,9 @@ abstract class XotBaseResource extends FilamentResource
         }
     }
 
-<<<<<<< HEAD
     /**
      * @return array<string, \Filament\Resources\Pages\PageRegistration>
      */
-=======
->>>>>>> e2a4c5d (.)
     public static function getPages(): array
     {
         $prefix = static::class.'\Pages\\';
@@ -129,7 +110,6 @@ abstract class XotBaseResource extends FilamentResource
         $edit = Str::of($prefix)->append('Edit'.$name.'')->toString();
         $view = Str::of($prefix)->append('View'.$name.'')->toString();
 
-<<<<<<< HEAD
         /** @var class-string<\Filament\Resources\Pages\Page> $index */
         $index = $index;
         /** @var class-string<\Filament\Resources\Pages\Page> $create */
@@ -138,10 +118,8 @@ abstract class XotBaseResource extends FilamentResource
         $edit = $edit;
         /** @var class-string<\Filament\Resources\Pages\Page> $view */
         $view = $view;
-        
+
         /** @var array<string, \Filament\Resources\Pages\PageRegistration> $pages */
-=======
->>>>>>> e2a4c5d (.)
         $pages = [
             'index' => $index::route('/'),
             'create' => $create::route('/create'),
@@ -156,21 +134,15 @@ abstract class XotBaseResource extends FilamentResource
         return $pages;
     }
 
-<<<<<<< HEAD
     /**
      * @return array<class-string<\Filament\Resources\RelationManagers\RelationManager>|\Filament\Resources\RelationManagers\RelationGroup|\Filament\Resources\RelationManagers\RelationManagerConfiguration>
      */
-=======
->>>>>>> e2a4c5d (.)
     public static function getRelations(): array
     {
         $reflector = new \ReflectionClass(static::class);
         $filename = $reflector->getFileName();
-<<<<<<< HEAD
         Assert::string($filename);
-        
-=======
->>>>>>> e2a4c5d (.)
+
         $path = Str::of($filename)
             ->before('.php')
             ->append(DIRECTORY_SEPARATOR)
@@ -178,9 +150,8 @@ abstract class XotBaseResource extends FilamentResource
             ->toString();
 
         $files = glob($path.DIRECTORY_SEPARATOR.'*RelationManager.php');
-<<<<<<< HEAD
         Assert::isArray($files);
-        
+
         /** @var array<class-string<\Filament\Resources\RelationManagers\RelationManager>> $res */
         $res = [];
         foreach ($files as $file) {
@@ -189,17 +160,11 @@ abstract class XotBaseResource extends FilamentResource
                 ->before('.php')
                 ->prepend(static::class.'\RelationManagers\\')
                 ->toString();
-            
+
             if (class_exists($className)) {
                 Assert::subclassOf($className, \Filament\Resources\RelationManagers\RelationManager::class);
                 $res[] = $className;
             }
-=======
-        $res = [];
-        foreach ($files as $file) {
-            $info = pathinfo($file);
-            $res[] = static::class.'\RelationManagers\\'.$info['filename'];
->>>>>>> e2a4c5d (.)
         }
 
         return $res;

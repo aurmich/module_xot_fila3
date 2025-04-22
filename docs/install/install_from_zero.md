@@ -88,11 +88,11 @@ edit file composer.json
     "license": "MIT",
     "require": {
         "php": "^8.2",
-<<<<<<< HEAD
+
         "filament/filament": "^3.3",
-=======
+
         "filament/filament": "^3.2",
->>>>>>> e2a4c5d (.)
+ e2a4c5d (.)
         "laravel/framework": "^11.9",
         "nwidart/laravel-modules": "^11.0"
     },

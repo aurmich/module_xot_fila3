@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 [
     {
         "name": "dashboard.item",
@@ -15,6 +14,3 @@
         "ns": "Modules\\Xot\\View\\Components\\XDebug"
     }
 ]
-=======
-[]
->>>>>>> e2a4c5d (.)

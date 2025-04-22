@@ -11,30 +11,17 @@ use Filament\Resources\Pages\ViewRecord as FilamentViewRecord;
 abstract class XotBaseViewRecord extends FilamentViewRecord
 {
     // Aggiungi qui eventuali metodi o proprietà comuni a tutte le pagine di visualizzazione
-<<<<<<< HEAD
     final public function infolist(Infolist $infolist): Infolist
-=======
-    public function infolist(Infolist $infolist): Infolist
->>>>>>> e2a4c5d (.)
     {
         return $infolist->schema($this->getInfolistSchema());
     }
 
     /**
-<<<<<<< HEAD
      * Restituisce lo schema dell'infolist per la visualizzazione dei dettagli del record.
      * Questo metodo deve sempre restituire un array con chiavi di tipo stringa.
      *
      * @return array<int|string, \Filament\Infolists\Components\Component>
      */
     abstract protected function getInfolistSchema(): array;
-    
-=======
-     * @return array<Component>
-     */
-    protected function getInfolistSchema(): array
-    {
-        return [];
-    }
->>>>>>> e2a4c5d (.)
+
 }

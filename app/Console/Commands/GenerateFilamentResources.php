@@ -11,27 +11,20 @@ use Nwidart\Modules\Facades\Module;
 
 class GenerateFilamentResources extends Command
 {
-<<<<<<< HEAD
     protected $signature = 'filament:generate-resources {module : Il nome del modulo per cui generare le risorse}';
-=======
-    protected $signature = 'filament:generate-resources';
->>>>>>> e2a4c5d (.)
 
     protected $description = 'Generate Filament resources for all models';
 
     public function handle(): int
     {
         $moduleName = $this->argument('module');
-<<<<<<< HEAD
-        
+
         // Assicuriamoci che $moduleName sia una stringa
         if (!is_string($moduleName)) {
             $this->error("Il nome del modulo deve essere una stringa.");
             return Command::FAILURE;
         }
-        
-=======
->>>>>>> e2a4c5d (.)
+
         $module = Module::find($moduleName);
 
         if (! $module) {
@@ -53,13 +46,9 @@ class GenerateFilamentResources extends Command
         foreach ($models as $model) {
             $modelName = $model->getFilenameWithoutExtension();
 
-<<<<<<< HEAD
             // Assicuriamoci che $moduleName sia una stringa per strtolower
             $panelName = strtolower($moduleName);
             $panel = $panelName.'::admin';
-=======
-            $panel = strtolower($moduleName).'::admin';
->>>>>>> e2a4c5d (.)
             $params = [
                 'name' => $modelName,
                 '--panel' => $panel,

@@ -18,30 +18,15 @@ use Illuminate\Support\Facades\File;
  * @method static \Illuminate\Database\Eloquent\Builder|Feed  newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|Feed  newQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|Feed  query()
-<<<<<<< HEAD
-=======
- *
->>>>>>> e2a4c5d (.)
  * @property string|null $id
  * @property string|null $name
  * @property int|null    $size
  * @property string|null $file_content
-<<<<<<< HEAD
  * @method static \Illuminate\Database\Eloquent\Builder|Log whereId($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Log whereName($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Log whereSize($value)
  * @property \Modules\Xot\Contracts\ProfileContract|null $creator
  * @property \Modules\Xot\Contracts\ProfileContract|null $updater
-=======
- *
- * @method static \Illuminate\Database\Eloquent\Builder|Log whereId($value)
- * @method static \Illuminate\Database\Eloquent\Builder|Log whereName($value)
- * @method static \Illuminate\Database\Eloquent\Builder|Log whereSize($value)
- *
- * @property \Modules\Xot\Contracts\ProfileContract|null $creator
- * @property \Modules\Xot\Contracts\ProfileContract|null $updater
- *
->>>>>>> e2a4c5d (.)
  * @mixin \Eloquent
  */
 class Log extends BaseModel
