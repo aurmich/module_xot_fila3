@@ -9,13 +9,17 @@ use Maatwebsite\Excel\Facades\Excel;
 use Modules\Xot\Exports\CollectionExport;
 use Spatie\QueueableAction\QueueableAction;
 use Symfony\Component\HttpFoundation\BinaryFileResponse;
+<<<<<<< HEAD
 use PhpOffice\PhpSpreadsheet\Spreadsheet;
 use PhpOffice\PhpSpreadsheet\Writer\Xlsx;
+=======
+>>>>>>> e2a4c5d (.)
 
 class ExportXlsByCollection
 {
     use QueueableAction;
 
+<<<<<<< HEAD
     /**
      * Esporta una collezione in Excel.
      *
@@ -26,12 +30,15 @@ class ExportXlsByCollection
      * 
      * @return BinaryFileResponse
      */
+=======
+>>>>>>> e2a4c5d (.)
     public function execute(
         Collection $collection,
         string $filename = 'test.xlsx',
         ?string $transKey = null,
         array $fields = [],
     ): BinaryFileResponse {
+<<<<<<< HEAD
         // Assicuriamo che $fields sia un array di stringhe
         $stringFields = array_map(function (string|int|float|bool $field): string {
             return (string) $field;
@@ -41,10 +48,17 @@ class ExportXlsByCollection
             collection: $collection,
             transKey: $transKey,
             fields: $stringFields
+=======
+        $export = new CollectionExport(
+            collection: $collection,
+            transKey: $transKey,
+            fields: $fields
+>>>>>>> e2a4c5d (.)
         );
 
         return Excel::download($export, $filename);
     }
+<<<<<<< HEAD
 
     /**
      * Esporta una collezione in Excel utilizzando PhpSpreadsheet direttamente.
@@ -111,4 +125,6 @@ class ExportXlsByCollection
             $row++;
         }
     }
+=======
+>>>>>>> e2a4c5d (.)
 }

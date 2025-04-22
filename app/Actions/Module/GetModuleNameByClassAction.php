@@ -15,6 +15,10 @@ class GetModuleNameByClassAction
     {
         $module = Str::between($model_class, 'Modules\\', '\Models\\');
 
+<<<<<<< HEAD
         return is_string($module) ? $module : (string) $module;
+=======
+        return (string) $module;
+>>>>>>> e2a4c5d (.)
     }
 }

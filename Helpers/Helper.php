@@ -165,7 +165,11 @@ if (! function_exists('dddx')) {
         $file = str_replace('/', DIRECTORY_SEPARATOR, $file);
 
         Assert::string($doc_root = $_SERVER['DOCUMENT_ROOT']);
+<<<<<<< HEAD
         $doc_root = str_replace('/', DIRECTORY_SEPARATOR, $doc_root);
+=======
+        $doc_root = str_replace('/', DIRECTORY_SEPARATOR, (string) $doc_root);
+>>>>>>> e2a4c5d (.)
 
         $dir_piece = explode(DIRECTORY_SEPARATOR, __DIR__);
         $dir_piece = array_slice($dir_piece, 0, -6);
@@ -403,7 +407,11 @@ if (! function_exists('params2ContainerItem')) {
             $pattern = '/(container|item)(\d+)/';
             preg_match($pattern, $k, $matches);
 
+<<<<<<< HEAD
             if (!empty($matches) && isset($matches[1]) && isset($matches[2]) && is_string($matches[1]) && is_string($matches[2])) {
+=======
+            if (is_array($matches) && isset($matches[1]) && isset($matches[2])) {
+>>>>>>> e2a4c5d (.)
                 $sk = $matches[1];
                 $sv = $matches[2];
                 // @phpstan-ignore offsetAccess.nonOffsetAccessible
@@ -415,6 +423,7 @@ if (! function_exists('params2ContainerItem')) {
     }
 }
 
+<<<<<<< HEAD
 
 if (! function_exists('getModelFields')) {
     function getModelFields(Model $model): array {
@@ -423,6 +432,17 @@ if (! function_exists('getModelFields')) {
 }
 
 
+=======
+if (! function_exists('getModelFields')) {
+    function getModelFields(Model $model): array
+    {
+        return $model->getConnection()
+            ->getSchemaBuilder()
+            ->getColumnListing($model->getTable());
+    }
+}
+
+>>>>>>> e2a4c5d (.)
 if (! function_exists('getModelByName')) {
     function getModelByName(string $name): Model
     {
@@ -571,8 +591,13 @@ if (! function_exists('getAllModulesModels')) {
                 continue;
             }
 
+<<<<<<< HEAD
             $moduleName = $module->getName();
             if ($moduleName === '') {
+=======
+            $moduleName = $module->get('name');
+            if (! is_string($moduleName)) {
+>>>>>>> e2a4c5d (.)
                 continue;
             }
 
@@ -581,7 +606,11 @@ if (! function_exists('getAllModulesModels')) {
                 $moduleModels = getModuleModels($moduleName);
                 $res = array_merge($res, $moduleModels);
             } catch (Exception $e) {
+<<<<<<< HEAD
                 \Illuminate\Support\Facades\Log::error('[Module:'.$moduleName.'] Error getting models: '.$e->getMessage());
+=======
+                Log::error('[Module:'.$moduleName.'] Error getting models: '.$e->getMessage());
+>>>>>>> e2a4c5d (.)
 
                 continue;
             }
@@ -952,6 +981,7 @@ if (! function_exists('debugStack')) {
             throw new RuntimeException('XDebug must be installed to use this function');
         }
 
+<<<<<<< HEAD
         if (function_exists('xdebug_set_filter') && defined('XDEBUG_FILTER_TRACING') && defined('XDEBUG_PATH_EXCLUDE')) {
             @xdebug_set_filter(
                 @constant('XDEBUG_FILTER_TRACING'),
@@ -965,6 +995,16 @@ if (! function_exists('debugStack')) {
         } else {
             debug_print_backtrace();
         }
+=======
+        xdebug_set_filter(
+            XDEBUG_FILTER_TRACING,
+            XDEBUG_PATH_EXCLUDE,
+            // [LARAVEL_DIR.'/vendor/']
+            [__DIR__.'/../../vendor/']
+        );
+
+        xdebug_print_function_stack();
+>>>>>>> e2a4c5d (.)
     }
 }
 
@@ -1114,6 +1154,7 @@ if (! function_exists('cssInLine')) {
 }
 
 if (! function_exists('authId')) {
+<<<<<<< HEAD
     /**
      * Get the current authenticated user ID from Filament or Laravel auth.
      */
@@ -1157,3 +1198,21 @@ function safe_object_call($object, string $method, ...$args) {
     
     return $object->$method(...$args);
 }
+=======
+    function authId(): ?string
+    {
+        try {
+            $id = Filament::auth()->id() ?? auth()->id();
+        } catch (Exception $e) {
+            return null;
+        } catch (Error $e) {
+            return null;
+        }
+        if (null === $id) {
+            return null;
+        }
+
+        return (string) $id;
+    }
+}
+>>>>>>> e2a4c5d (.)

@@ -14,6 +14,7 @@ class AssetAction
 {
     use QueueableAction;
 
+<<<<<<< HEAD
     /**
      * Gestisce i percorsi degli asset, copiandoli nella directory pubblica se necessario.
      *
@@ -23,6 +24,8 @@ class AssetAction
      * 
      * @throws \Exception Se il file sorgente non esiste o non può essere copiato
      */
+=======
+>>>>>>> e2a4c5d (.)
     public function execute(string $path): string
     {
         $xot = XotData::make();
@@ -45,13 +48,18 @@ class AssetAction
 
         $ns_after0 = Str::before($ns_after, '/');
         $ns_after1 = Str::after($ns_after, '/');
+<<<<<<< HEAD
         $ns_after = str_replace('.', '/', is_string($ns_after0) ? $ns_after0 : (string) $ns_after0).'/'.$ns_after1;
+=======
+        $ns_after = str_replace('.', '/', (string) $ns_after0).'/'.$ns_after1;
+>>>>>>> e2a4c5d (.)
 
         if (Str::startsWith($ns_after, '/')) {
             $ns_after = Str::after($ns_after, '/');
         }
 
         if (\in_array($ns, ['pub_theme', 'adm_theme'], false)) {
+<<<<<<< HEAD
             // Assicuriamoci che $theme sia una stringa
             $theme = $xot->{$ns};
             Assert::string($theme, 'Il tema deve essere una stringa');
@@ -62,6 +70,13 @@ class AssetAction
             
             $themeAssetPath = 'themes/'.$theme.'/'.$ns_after;
             $asset = $themeAssetPath;
+=======
+            $theme = $xot->{$ns};
+
+            $filename_from = app(FixPathAction::class)->execute(base_path('Themes/'.$theme.'/resources/'.$ns_after));
+            // $filename_from = Str::replace('/resources//', '/resources/', $filename_from);
+            $asset = 'themes/'.$theme.'/'.$ns_after;
+>>>>>>> e2a4c5d (.)
             $filename_to = app(FixPathAction::class)->execute(public_path($asset));
             $asset = Str::replace(url(''), '', asset($asset));
 
@@ -74,8 +89,12 @@ class AssetAction
                     File::copy($filename_from, $filename_to);
                 } catch (\Exception $e) {
                     throw new \Exception('message:['.$e->getMessage().']
+<<<<<<< HEAD
                         public_path ['.public_path().']
                         path ['.$path.']
+=======
+                        path :['.$path.']
+>>>>>>> e2a4c5d (.)
                         file from ['.$filename_from.']
                         file to ['.$filename_to.']', $e->getCode(), $e);
                 }

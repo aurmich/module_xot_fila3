@@ -4,7 +4,10 @@ declare(strict_types=1);
 
 namespace Modules\Xot\Filament\Traits;
 
+<<<<<<< HEAD
 use TypeError;
+=======
+>>>>>>> e2a4c5d (.)
 use Illuminate\Support\Arr;
 use Illuminate\Support\Str;
 use Modules\Lang\Actions\SaveTransAction;
@@ -25,7 +28,11 @@ trait TransTrait
 
         if (is_string($res)) {
             if ($exceptionIfNotExist && $res === $tmp) {
+<<<<<<< HEAD
                 throw new \Exception('[' . __LINE__ . '][' . class_basename(__CLASS__) . ']');
+=======
+                throw new \Exception('['.__LINE__.']['.class_basename(__CLASS__).']');
+>>>>>>> e2a4c5d (.)
             }
 
             return $res;
@@ -34,11 +41,19 @@ trait TransTrait
         if (is_array($res)) {
             $first = current($res);
             if (is_string($first) || is_numeric($first)) {
+<<<<<<< HEAD
                 return is_string($first) ? $first : (string) $first;
             }
         }
 
         return 'fix:' . $tmp;
+=======
+                return (string) $first;
+            }
+        }
+
+        return 'fix:'.$tmp;
+>>>>>>> e2a4c5d (.)
     }
 
     /**
@@ -49,9 +64,13 @@ trait TransTrait
         /** @var string */
         $transKey = app(GetTransKeyAction::class)->execute(static::class);
 
+<<<<<<< HEAD
         $key = $transKey . '.' . $key;
         $key = Str::of($key)->replace('.cluster.pages.', '.')->toString();
         return $key;
+=======
+        return $transKey.'.'.$key;
+>>>>>>> e2a4c5d (.)
     }
 
     /**
@@ -67,9 +86,13 @@ trait TransTrait
         /** @var string */
         $transKey = app(GetTransKeyAction::class)->execute(static::class);
 
+<<<<<<< HEAD
         $key = $transKey . '.' . $key;
         $key = Str::of($key)->replace('.cluster.pages.', '.')->toString();
         return $key;
+=======
+        return $transKey.'.'.$key;
+>>>>>>> e2a4c5d (.)
     }
 
     /**
@@ -78,6 +101,7 @@ trait TransTrait
     public static function transFunc(string $func, bool $exceptionIfNotExist = false): string
     {
         $key = static::getKeyTransFunc($func);
+<<<<<<< HEAD
         /** @var string|array<int|string,mixed>|null */
         $trans = null;
 
@@ -93,16 +117,28 @@ trait TransTrait
         if ($key === $trans) {
             $group = Str::of($key)->before('.')->toString();
             $item = Str::of($key)->after($group . '.')->toString();
+=======
+        /** @var string|array<int|string,mixed>|null $trans */
+        $trans = trans($key);
+
+        if ($key == $trans) {
+            $group = Str::of($key)->before('.')->toString();
+            $item = Str::of($key)->after($group.'.')->toString();
+>>>>>>> e2a4c5d (.)
             $group_arr = trans($group);
             if (is_array($group_arr)) {
                 $trans = Arr::get($group_arr, $item);
             }
         }
+<<<<<<< HEAD
 
+=======
+>>>>>>> e2a4c5d (.)
         if (is_numeric($trans)) {
             return strval($trans);
         }
 
+<<<<<<< HEAD
         if (is_array($trans)) {
             $first = current($trans);
             if (is_string($first) || is_numeric($first)) {
@@ -111,6 +147,19 @@ trait TransTrait
         }
 
         if (is_string($trans)) {
+=======
+        // if (! is_string($trans) && ! is_numeric($trans) && ! is_array($trans)) {
+        //    return 'fix:'.$key;
+        // }
+        if (is_array($trans)) {
+            $first = current($trans);
+            if (is_string($first) || is_numeric($first)) {
+                return (string) $first;
+            }
+        }
+
+        if (is_string($trans) /* || is_numeric($trans) */) {
+>>>>>>> e2a4c5d (.)
             if ($trans === $key) {
                 $newTrans = Str::of($key)
                     ->between('::', '.')
@@ -124,7 +173,11 @@ trait TransTrait
             return $trans;
         }
 
+<<<<<<< HEAD
         if ($trans === null) {
+=======
+        if (is_null($trans)) {
+>>>>>>> e2a4c5d (.)
             $newTrans = Str::of($key)
                 ->between('::', '.')
                 ->replace('_', ' ')
@@ -134,7 +187,16 @@ trait TransTrait
             return $newTrans;
         }
 
+<<<<<<< HEAD
         return 'fix:' . $key;
+=======
+        // $first = current($trans);
+        // if (is_string($first) || is_numeric($first)) {
+        //    return (string) $first;
+        // }
+
+        return 'fix:'.$key;
+>>>>>>> e2a4c5d (.)
     }
 
     protected function transChoice(string $key, int $number, array $replace = []): string

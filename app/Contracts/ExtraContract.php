@@ -22,8 +22,13 @@ use Illuminate\Support\Carbon;
  * @method static \Illuminate\Database\Eloquent\Builder|ExtraContract withExtraAttributes()
  *
  * @property int         $id
+<<<<<<< HEAD
  * @property string $model_type
  * @property string $model_id
+=======
+ * @property string      $model_type
+ * @property string      $model_id
+>>>>>>> e2a4c5d (.)
  * @property Carbon|null $created_at
  * @property Carbon|null $updated_at
  * @property string|null $updated_by

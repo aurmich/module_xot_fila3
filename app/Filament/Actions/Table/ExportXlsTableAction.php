@@ -22,7 +22,11 @@ class ExportXlsTableAction extends Action
     {
         parent::setUp();
         $this->translateLabel()
+<<<<<<< HEAD
             
+=======
+            ->label('')
+>>>>>>> e2a4c5d (.)
             ->tooltip(__('xot::actions.export_xls'))
              // ->icon('fas-file-excel')
             ->icon('heroicon-o-arrow-down-tray')
@@ -34,6 +38,7 @@ class ExportXlsTableAction extends Action
                 $query = $livewire->getFilteredTableQuery();
                 // ->getQuery(); // Staudenmeir\LaravelCte\Query\Builder
                 $rows = $query->get();
+<<<<<<< HEAD
                 /** @var array<int, string> $fields */
                 $fields = [];
                 if (method_exists($livewire_class, 'getXlsFields')) {
@@ -49,6 +54,11 @@ class ExportXlsTableAction extends Action
                             $fields[] = $field['name'];
                         }
                     }
+=======
+                $fields = [];
+                if (method_exists($livewire_class, 'getXlsFields')) {
+                    Assert::isArray($fields = $livewire_class::getXlsFields($livewire->tableFilters));
+>>>>>>> e2a4c5d (.)
                 }
 
                 return app(ExportXlsByCollection::class)->execute($rows, $filename, $transKey, $fields);

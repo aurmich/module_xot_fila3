@@ -10,6 +10,10 @@ namespace Modules\Xot\Models;
  * @property string $key
  * @property string $value
  * @property int    $expiration
+<<<<<<< HEAD
+=======
+ *
+>>>>>>> e2a4c5d (.)
  * @method static \Modules\Xot\Database\Factories\CacheFactory factory($count = null, $state = [])
  * @method static \Illuminate\Database\Eloquent\Builder|Cache  newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|Cache  newQuery()
@@ -17,7 +21,13 @@ namespace Modules\Xot\Models;
  * @method static \Illuminate\Database\Eloquent\Builder|Cache  whereExpiration($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Cache  whereKey($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Cache  whereValue($value)
+<<<<<<< HEAD
  * @property int $expiration
+=======
+ *
+ * @property int $expiration
+ *
+>>>>>>> e2a4c5d (.)
  * @method static \Modules\Xot\Database\Factories\CacheFactory factory($count = null, $state = [])
  * @method static \Illuminate\Database\Eloquent\Builder|Cache  newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|Cache  newQuery()
@@ -25,8 +35,15 @@ namespace Modules\Xot\Models;
  * @method static \Illuminate\Database\Eloquent\Builder|Cache  whereExpiration($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Cache  whereKey($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Cache  whereValue($value)
+<<<<<<< HEAD
  * @property \Modules\Xot\Contracts\ProfileContract|null $creator
  * @property \Modules\Xot\Contracts\ProfileContract|null $updater
+=======
+ *
+ * @property \Modules\Xot\Contracts\ProfileContract|null $creator
+ * @property \Modules\Xot\Contracts\ProfileContract|null $updater
+ *
+>>>>>>> e2a4c5d (.)
  * @mixin \Eloquent
  */
 class Cache extends BaseModel

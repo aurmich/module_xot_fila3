@@ -14,8 +14,13 @@ use Spatie\Permission\Exceptions\PermissionDoesNotExist;
 /**
  * Modules\Xot\Contracts\ModelProfileContract.
  *
+<<<<<<< HEAD
  * @property string $id
  * @property string $email
+=======
+ * @property string                $id
+ * @property string                $email
+>>>>>>> e2a4c5d (.)
  * @property Collection<int, Role> $roles
  * @property int|null              $roles_count
  *

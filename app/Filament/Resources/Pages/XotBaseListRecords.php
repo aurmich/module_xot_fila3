@@ -18,16 +18,39 @@ use Webmozart\Assert\Assert;
 /**
  * Base class for list records pages.
  *
+<<<<<<< HEAD
  * @property ?string $model
  * @property ?string $resource
  * @property ?string $slug
+=======
+ * @property ?string         $model
+ * @property ?string         $resource
+ * @property ?string         $slug
+>>>>>>> e2a4c5d (.)
  * @property TableLayoutEnum $layoutView
  */
 abstract class XotBaseListRecords extends FilamentListRecords
 {
     use HasXotTable;
 
+<<<<<<< HEAD
 
+=======
+    /*
+     * Get the table instance.
+
+    public function table(Table $table): Table
+    {
+        $defaultSort = $this->getDefaultSort();
+        $column = key($defaultSort);
+        $direction = current($defaultSort);
+
+        return $table
+            ->columns($this->getListTableColumns())
+            ->defaultSort($column, $direction);
+    }
+    */
+>>>>>>> e2a4c5d (.)
     /**
      * Get the table columns.
      *
@@ -82,8 +105,12 @@ abstract class XotBaseListRecords extends FilamentListRecords
             $count = $query->count();
 
             /* @var \Illuminate\Contracts\Pagination\Paginator */
+<<<<<<< HEAD
             Assert::isInstanceOf($res = $query->fastPaginate($count), Paginator::class);
             return $res;
+=======
+            return $query->fastPaginate($count);
+>>>>>>> e2a4c5d (.)
         }
 
         if (is_numeric($perPage)) {
@@ -91,6 +118,7 @@ abstract class XotBaseListRecords extends FilamentListRecords
             Assert::greaterThan($perPageInt, 0);
 
             /* @var \Illuminate\Contracts\Pagination\Paginator */
+<<<<<<< HEAD
             Assert::isInstanceOf($res = $query->fastPaginate($perPageInt), Paginator::class);
             return $res;
         }
@@ -98,5 +126,12 @@ abstract class XotBaseListRecords extends FilamentListRecords
         /* @var \Illuminate\Contracts\Pagination\Paginator */
         Assert::isInstanceOf($res = $query->fastPaginate(10), Paginator::class);
         return $res;
+=======
+            return $query->fastPaginate($perPageInt);
+        }
+
+        /* @var \Illuminate\Contracts\Pagination\Paginator */
+        return $query->fastPaginate(10);
+>>>>>>> e2a4c5d (.)
     }
 }

@@ -419,7 +419,11 @@ class GeoLogger
             ->info('Geocoding request', [
                 'address' => $address,
                 'success' => $result !== null,
+<<<<<<< HEAD
                 'coordinates' => $result->toArray()
+=======
+                'coordinates' => $result?->toArray()
+>>>>>>> e2a4c5d (.)
             ]);
     }
 
@@ -553,7 +557,11 @@ class ModuleList extends Component
     
     public function delete(int $id): void
     {
+<<<<<<< HEAD
         Module::find($id)->delete();
+=======
+        Module::find($id)?->delete();
+>>>>>>> e2a4c5d (.)
         $this->emit('moduleDeleted');
     }
 }
@@ -845,7 +853,11 @@ class ClientMapWidget extends Widget
     protected function getViewData(): array
     {
         return [
+<<<<<<< HEAD
             'clients' => $this->listClients->getTableQuery()
+=======
+            'clients' => $this->listClients?->getTableQuery()
+>>>>>>> e2a4c5d (.)
                 ->get(['latitude', 'longitude', 'name'])
                 ->toArray(),
         ];
@@ -891,7 +903,11 @@ class ClientMapWidget extends Widget
     protected function getViewData(): array
     {
         return [
+<<<<<<< HEAD
             'clients' => $this->listClients->getTableQuery()
+=======
+            'clients' => $this->listClients?->getTableQuery()
+>>>>>>> e2a4c5d (.)
                 ->get(['latitude', 'longitude', 'name'])
                 ->toArray(),
         ];
@@ -1644,7 +1660,15 @@ return [
 ✅ **USARE** invece:
 - Un file di traduzione dedicato per ogni componente
 - Struttura standardizzata con chiave 'navigation'
+<<<<<<< HEAD
 - Definizione completa di gruppo, label, icona e ordinamento
+=======
+- Definizione completa di gruppo, label, icona e ordinamento 
+
+
+=======
+>>>>>>> origin/dev
+>>>>>>> e2a4c5d (.)
 # Laraxot Framework
 
 ## Panoramica
@@ -1953,6 +1977,7 @@ $query = sprintf('%s.%s', (string)$table, (string)$column);
 ```
 
 ## PHPStan Analisi Moduli
+<<<<<<< HEAD
 
 ### Validazione a Livello 7
 
@@ -1996,6 +2021,14 @@ Il file di configurazione principale (`phpstan.neon`) è già impostato per il l
 - **Activity**: Validato a livello 7
 - **Gdpr**: Validato a livello 7
 - **User**: Validato a livello 7
+=======
+Risultati dell'ultima analisi per modulo:
+- **Xot**: Risolti tutti gli errori critici
+- **Fixcity**: In fase di ottimizzazione
+- **Media**: Nessun errore critico
+- **UI**: Ottimizzato per PHPStan level 8
+- **Tenant**: Risolti problemi di tipizzazione
+>>>>>>> e2a4c5d (.)
 
 ## Ottimizzazioni Recenti
 
@@ -4115,7 +4148,11 @@ use Filament\Resources\RelationManagers\RelationManager;
 class MyRelationManager extends RelationManager
 
 // ✅ CORRETTO
+<<<<<<< HEAD
 use Modules\Xot\Filament\Resources\RelationManagers\XotBaseRelationManager;
+=======
+use Modules\Xot\Filament\Resources\XotBaseResource\RelationManager\XotBaseRelationManager;
+>>>>>>> e2a4c5d (.)
 class MyRelationManager extends XotBaseRelationManager
 ```
 
@@ -4676,7 +4713,11 @@ use Modules\Xot\Filament\Resources\Pages\XotBaseEditRecord;
 ### 2. RelationManagers
 ```php
 // ❌ ERRATO: Namespace non corretto
+<<<<<<< HEAD
 use Modules\Xot\Filament\Resources\RelationManagers\XotBaseRelationManager;
+=======
+use Modules\Xot\Filament\Resources\XotBaseResource\RelationManager\XotBaseRelationManager;
+>>>>>>> e2a4c5d (.)
 
 // ✅ CORRETTO: Namespace corretto
 use Modules\Xot\Filament\RelationManagers\XotBaseRelationManager;
@@ -4730,7 +4771,11 @@ class CommentsRelationManager extends XotBaseRelationManager
    use Modules\Xot\Filament\RelationManagers\XotBaseRelationManager;
    
    // ❌ ERRATO: Import con namespace errato
+<<<<<<< HEAD
    use Modules\Xot\Filament\Resources\RelationManagers\XotBaseRelationManager;
+=======
+   use Modules\Xot\Filament\Resources\XotBaseResource\RelationManager\XotBaseRelationManager;
+>>>>>>> e2a4c5d (.)
    ```
 
 2. **Organizzazione File**:
@@ -4778,7 +4823,11 @@ class CommentsRelationManager extends XotBaseRelationManager
 ```php
 // ❌ ERRATO: Questi namespace non esistono
 use Modules\Xot\Filament\RelationManagers\XotBaseRelationManager;
+<<<<<<< HEAD
 use Modules\Xot\Filament\Resources\RelationManagers\XotBaseRelationManager;
+=======
+use Modules\Xot\Filament\Resources\XotBaseResource\RelationManager\XotBaseRelationManager;
+>>>>>>> e2a4c5d (.)
 ```
 
 ### ✅ Namespace Corretti da Usare
@@ -6815,7 +6864,11 @@ use Filament\Resources\RelationManagers\RelationManager;
 class MyRelationManager extends RelationManager
 
 // ✅ CORRETTO
+<<<<<<< HEAD
 use Modules\Xot\Filament\Resources\RelationManagers\XotBaseRelationManager;
+=======
+use Modules\Xot\Filament\Resources\XotBaseResource\RelationManager\XotBaseRelationManager;
+>>>>>>> e2a4c5d (.)
 class MyRelationManager extends XotBaseRelationManager
 ```
 
@@ -7376,7 +7429,11 @@ use Modules\Xot\Filament\Resources\Pages\XotBaseEditRecord;
 ### 2. RelationManagers
 ```php
 // ❌ ERRATO: Namespace non corretto
+<<<<<<< HEAD
 use Modules\Xot\Filament\Resources\RelationManagers\XotBaseRelationManager;
+=======
+use Modules\Xot\Filament\Resources\XotBaseResource\RelationManager\XotBaseRelationManager;
+>>>>>>> e2a4c5d (.)
 
 // ✅ CORRETTO: Namespace corretto
 use Modules\Xot\Filament\RelationManagers\XotBaseRelationManager;
@@ -7430,7 +7487,11 @@ class CommentsRelationManager extends XotBaseRelationManager
    use Modules\Xot\Filament\RelationManagers\XotBaseRelationManager;
    
    // ❌ ERRATO: Import con namespace errato
+<<<<<<< HEAD
    use Modules\Xot\Filament\Resources\RelationManagers\XotBaseRelationManager;
+=======
+   use Modules\Xot\Filament\Resources\XotBaseResource\RelationManager\XotBaseRelationManager;
+>>>>>>> e2a4c5d (.)
    ```
 
 2. **Organizzazione File**:
@@ -7478,7 +7539,11 @@ class CommentsRelationManager extends XotBaseRelationManager
 ```php
 // ❌ ERRATO: Questi namespace non esistono
 use Modules\Xot\Filament\RelationManagers\XotBaseRelationManager;
+<<<<<<< HEAD
 use Modules\Xot\Filament\Resources\RelationManagers\XotBaseRelationManager;
+=======
+use Modules\Xot\Filament\Resources\XotBaseResource\RelationManager\XotBaseRelationManager;
+>>>>>>> e2a4c5d (.)
 ```
 
 ### ✅ Namespace Corretti da Usare
@@ -8815,4 +8880,8 @@ class ClientMapWidget extends Widget
 3. Implementare sempre controlli di tipo
 4. Gestire i casi di errore in modo graceful
 5. La reattività funziona automaticamente con Livewire 3
+<<<<<<< HEAD
   - Contact section
+=======
+  - Contact section 
+>>>>>>> e2a4c5d (.)

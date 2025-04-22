@@ -4,15 +4,21 @@ declare(strict_types=1);
 
 namespace Modules\Xot\Actions\File;
 
+<<<<<<< HEAD
 use Illuminate\Support\Facades\View;
 use Modules\Xot\Datas\XotData;
 use Spatie\QueueableAction\QueueableAction;
 use Webmozart\Assert\Assert;
+=======
+use Modules\Xot\Datas\XotData;
+use Spatie\QueueableAction\QueueableAction;
+>>>>>>> e2a4c5d (.)
 
 class GetViewNameSpacePathAction
 {
     use QueueableAction;
 
+<<<<<<< HEAD
     /**
      * Ottiene il percorso di un namespace di vista.
      *
@@ -55,5 +61,27 @@ class GetViewNameSpacePathAction
         }
 
         return base_path('Themes/'.$theme_name);
+=======
+    public function execute(string $ns): ?string
+    {
+        $xot = XotData::make();
+        $finder = view()->getFinder();
+        $viewHints = [];
+        if (method_exists($finder, 'getHints')) {
+            $viewHints = $finder->getHints();
+        }
+
+        if (isset($viewHints[$ns])) {
+            return $viewHints[$ns][0];
+        }
+
+        if (\in_array($ns, ['pub_theme'], false)) {
+            $theme_name = $xot->{$ns};
+
+            return base_path('Themes/'.$theme_name);
+        }
+
+        return null;
+>>>>>>> e2a4c5d (.)
     }
 }

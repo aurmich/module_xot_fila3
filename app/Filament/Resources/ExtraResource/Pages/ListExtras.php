@@ -11,7 +11,10 @@ use Filament\Tables\Columns\TextColumn;
 use Modules\Xot\Filament\Resources\ExtraResource;
 use Modules\Xot\Filament\Resources\Pages\XotBaseListRecords;
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> e2a4c5d (.)
 /**
  * @see ExtraResource
  */
@@ -54,6 +57,7 @@ class ListExtras extends XotBaseListRecords
     public function getTableActions(): array
     {
         return [
+<<<<<<< HEAD
             'edit' => EditAction::make(),
         ];
     }
@@ -65,6 +69,16 @@ class ListExtras extends XotBaseListRecords
     {
         return [
             'delete' => DeleteBulkAction::make(),
+=======
+            EditAction::make(),
+        ];
+    }
+
+    public function getTableBulkActions(): array
+    {
+        return [
+            DeleteBulkAction::make(),
+>>>>>>> e2a4c5d (.)
         ];
     }
 }

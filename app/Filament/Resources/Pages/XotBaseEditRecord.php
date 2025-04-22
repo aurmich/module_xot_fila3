@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Modules\Xot\Filament\Resources\Pages;
 
+<<<<<<< HEAD
 use Filament\Forms\Form;
 use Filament\Resources\Pages\EditRecord as FilamentEditRecord;
 
@@ -42,4 +43,11 @@ abstract class XotBaseEditRecord extends FilamentEditRecord
     {
         return [];
     }
+=======
+use Filament\Resources\Pages\EditRecord as FilamenEditRecord;
+
+abstract class XotBaseEditRecord extends FilamenEditRecord
+{
+    // ...
+>>>>>>> e2a4c5d (.)
 }

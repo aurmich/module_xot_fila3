@@ -39,11 +39,15 @@ class StoreAction
         $relations = app(FilterRelationsAction::class)->execute($model, $data);
 
         foreach ($relations as $relation) {
+<<<<<<< HEAD
             // Ottieni il tipo di relazione dal nome della classe
             $relationClass = get_class($relation);
             $relationshipType = class_basename($relationClass);
             
             $action_class = __NAMESPACE__.'\\Store\\'.$relationshipType.'Action';
+=======
+            $action_class = __NAMESPACE__.'\\Store\\'.$relation->relationship_type.'Action';
+>>>>>>> e2a4c5d (.)
             $action = app($action_class);
             Assert::object($action);
             if (! method_exists($action, 'execute')) {
