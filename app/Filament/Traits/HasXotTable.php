@@ -15,8 +15,6 @@ use Filament\Tables\Filters\BaseFilter;
 use Illuminate\Database\Eloquent\Model;
 use Filament\Notifications\Notification;
 use Filament\Tables\Actions\Action;
-use Filament\Tables\Actions\Action;
-use Filament\Tables\Actions\Action;
 use Filament\Tables\Actions\ActionGroup;
 use Filament\Tables\Enums\FiltersLayout;
 use Filament\Tables\Columns\Layout\Stack;
@@ -27,27 +25,6 @@ use Filament\Tables\Actions\DeleteBulkAction;
 use Illuminate\Database\Eloquent\Relations\Relation;
 use Modules\Xot\Actions\Model\TableExistsByModelClassActions;
 use Modules\UI\Filament\Actions\Table\TableLayoutToggleTableAction;
-use Filament\Actions;
-use Filament\Notifications\Notification;
-use Filament\Tables;
-use Filament\Tables\Actions\Action;
-use Filament\Tables\Actions\ActionGroup;
-use Filament\Tables\Actions\BulkAction;
-use Filament\Tables\Actions\DeleteBulkAction;
-use Filament\Tables\Columns\Layout\Stack;
-use Filament\Tables\Columns\TextColumn;
-use Filament\Tables\Enums\ActionsPosition;
-use Filament\Tables\Enums\FiltersLayout;
-use Filament\Tables\Filters\BaseFilter;
-use Filament\Tables\Filters\TernaryFilter;
-use Filament\Tables\Table;
-use Illuminate\Database\Eloquent\Builder;
-use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\Relations\Relation;
-use Modules\UI\Enums\TableLayoutEnum;
-use Modules\UI\Filament\Actions\Table\TableLayoutToggleTableAction;
-use Modules\Xot\Actions\Model\TableExistsByModelClassActions;
-use Webmozart\Assert\Assert;
 
 /**
  * Trait HasXotTable.
@@ -74,8 +51,6 @@ trait HasXotTable
      * @return array<string, Action|ActionGroup>
      */
     public function getTableHeaderActions(): array
-    public function getTableHeaderActions(): array
-    protected function getTableHeaderActions(): array
     {
         $actions = [];
 
@@ -222,14 +197,12 @@ trait HasXotTable
      * mantenendo la retrocompatibilità e prevenendo errori.
      *
      * Ultimo aggiornamento: 10/2023
-     * Configure the table.
      */
     public function table(Table $table): Table
     {
         $modelClass = $this->getModelClass();
         if (! app(TableExistsByModelClassActions::class)->execute($modelClass)) {
             $this->notifyTableMissing();
-
             return $this->configureEmptyTable($table);
         }
 
@@ -237,7 +210,6 @@ trait HasXotTable
         $model = app($modelClass);
         Assert::isInstanceOf($model, Model::class);
 
-        // Configurazione base della tabella
         // Configurazione base della tabella
         $table = $table
             ->recordTitleAttribute($this->getTableRecordTitleAttribute())
@@ -263,13 +235,6 @@ trait HasXotTable
         }
 
         $table = $table
-            ->headerActions($this->getTableHeaderActions())
-            ->filters($this->getTableFilters())
-            ->filtersLayout(FiltersLayout::AboveContent)
-            ->filtersFormColumns($this->getTableFiltersFormColumns())
-            ->persistFiltersInSession()
-            ->actions($this->getTableActions())
-            ->bulkActions($this->getTableBulkActions())
             ->actionsPosition(ActionsPosition::BeforeColumns)
             ->emptyStateActions($this->getTableEmptyStateActions())
             ->striped();
@@ -314,12 +279,6 @@ trait HasXotTable
      * @return array<string|int, Tables\Filters\Filter|TernaryFilter|BaseFilter>
      */
     public function getTableFilters(): array
-     * @return array<string|int, Tables\Filters\Filter|TernaryFilter|BaseFilter>
-     */
-    public function getTableFilters(): array
-     * @return array<string, Tables\Filters\Filter|TernaryFilter|BaseFilter>
-     */
-    protected function getTableFilters(): array
     {
         return [];
     }
@@ -328,15 +287,8 @@ trait HasXotTable
      * Get table actions.
      *
      * @return array<string, Tables\Actions\Action|Tables\Actions\ActionGroup>
-     * @return array<string, Tables\Actions\Action|Tables\Actions\ActionGroup>
-     * @return array<string, Action|ActionGroup>
      */
     public function getTableActions(): array
-     */
-    public function getTableActions(): array
-     * @return array<string, Action|ActionGroup>
-     */
-    protected function getTableActions(): array
     {
         $actions = [];
 
@@ -374,26 +326,6 @@ trait HasXotTable
                     }
                 }
             }
-        if ($this->shouldShowReplicateAction()) {
-            $actions['replicate'] = Tables\Actions\ReplicateAction::make()
-                ->label('')
-                ->tooltip(__('user::actions.replicate'))
-                ->iconButton();
-        }
-
-        if (! $this->shouldShowDetachAction()) {
-            $actions['delete'] = Tables\Actions\DeleteAction::make()
-                ->tooltip(__('user::actions.delete'))
-                ->iconButton();
-        }
-
-        if ($this->shouldShowDetachAction()) {
-            $actions['detach'] = Tables\Actions\DetachAction::make()
-                ->label('')
-                ->tooltip(__('user::actions.detach'))
-                ->icon('heroicon-o-link-slash')
-                ->color('danger')
-                ->requiresConfirmation();
         }
 
         return $actions;
@@ -405,13 +337,10 @@ trait HasXotTable
      * @return array<string, BulkAction>
      */
     public function getTableBulkActions(): array
-    public function getTableBulkActions(): array
-    protected function getTableBulkActions(): array
     {
         return [
             'delete' => DeleteBulkAction::make()
                 ->label('')
-                ->tooltip(__('user::actions.delete_selected'))
                 ->icon('heroicon-o-trash')
                 ->color('danger')
                 ->requiresConfirmation(),

@@ -22,9 +22,6 @@ class RegisterBladeComponentsAction
             return;
         }
 
-        if (0 == $comps->count()) {
-            return;
-        }
         foreach ($comps->items() as $comp) {
             if (! $comp instanceof ComponentFileData) {
                 continue;

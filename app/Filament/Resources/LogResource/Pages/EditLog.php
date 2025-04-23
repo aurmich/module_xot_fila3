@@ -10,7 +10,7 @@ use Modules\Xot\Filament\Resources\LogResource;
 
 
 
-use Modules\Xot\Filament\Resources\XotBaseResource\RelationManagers\XotBaseRelationManager;
+use Modules\Xot\Filament\Resources\XotBaseResource\RelationManager\XotBaseRelationManager;
 
 
 
@@ -21,9 +21,4 @@ class EditLog extends \Modules\Xot\Filament\Resources\Pages\XotBaseEditRecord
     protected static string $resource = LogResource::class;
 
 
-use Modules\Xot\Filament\Resources\LogResource;
-
-class EditLog extends \Modules\Xot\Filament\Resources\Pages\XotBaseEditRecord
-{
-    protected static string $resource = LogResource::class;
 }

@@ -215,7 +215,6 @@ abstract class XotBaseMigration extends Migration
     public function dropTableIfExists(string $table): void
     {
         $this->getConn()->dropIfExists($table);
-        $this->getConn()->dropIfExists($this->getTable());
     }
 
     public function renameTable(string $from, string $to): void
@@ -246,20 +245,6 @@ abstract class XotBaseMigration extends Migration
     {
         $tableName = $table ?? $this->getTable();
         $this->getConn()->table($tableName, $next);
-            $table->renameColumn($from, $to);
-        });
-    }
-
-    public function tableCreate(\Closure $next): void
-    {
-        if (! $this->tableExists()) {
-            $this->getConn()->create($this->getTable(), $next);
-        }
-    }
-
-    public function tableUpdate(\Closure $next): void
-    {
-        $this->getConn()->table($this->getTable(), $next);
     }
 
     public function timestamps(Blueprint $table, bool $hasSoftDeletes = false): void
@@ -275,12 +260,6 @@ abstract class XotBaseMigration extends Migration
 
 
         if ($hasSoftDeletes ) {
-        $table->timestamps();
-        $table->foreignIdFor($userClass, 'user_id')->nullable();
-        $table->foreignIdFor($userClass, 'updated_by')->nullable();
-        $table->foreignIdFor($userClass, 'created_by')->nullable();
-
-        if ($hasSoftDeletes) {
             $table->softDeletes();
         }
     }
@@ -329,11 +308,6 @@ abstract class XotBaseMigration extends Migration
 
                 $table->uuid('team_id')->nullable()->change();
 
-            $table->string('model_id', 36)->index()->change();
-        }
-
-        if ($this->hasColumn('team_id') && 'bigint' === $this->getColumnType('team_id')) {
-            $table->uuid('team_id')->nullable()->change();
         }
     }
 

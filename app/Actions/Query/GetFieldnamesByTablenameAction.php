@@ -16,17 +16,11 @@ final class GetFieldnamesByTablenameAction
     /**
      * Get column names from a table with specific database connection.
      *
-     * @param string $table          Table name to get columns from
-     * @param string $table Table name to get columns from
-     * @param string      $table          Table name to get columns from
      * @param string $table Table name to get columns from
      * @param string|null $connectionName Database connection name (optional)
      *
      * @throws \InvalidArgumentException
      *
-     * @return list
-     * @return list<string> Lista dei nomi delle colonne della tabella
-     * @return list
      * @return list<string> Lista dei nomi delle colonne della tabella
      */
     public function execute(string $table, ?string $connectionName = null): array
@@ -41,47 +35,19 @@ final class GetFieldnamesByTablenameAction
 
         // Validate database connection
         if (! $this->isValidConnection($connectionName)) {
-            throw new \InvalidArgumentException(sprintf('Invalid database connection: %s',  $connectionName));
-        if (! $this->isValidConnection($connectionName)) {
             throw new \InvalidArgumentException(sprintf('Invalid database connection: %s', $connectionName));
         }
 
         // Check if table exists in the database
         if (! Schema::connection($connectionName)->hasTable($table)) {
-            throw new \InvalidArgumentException(sprintf('Table "%s" does not exist in connection "%s".', $table,  $connectionName));
-        if (! $this->isValidConnection(is_string($connectionName) ? $connectionName : (string) $connectionName)) {
-            throw new \InvalidArgumentException(sprintf('Invalid database connection: %s', is_string($connectionName) ? $connectionName : (string) $connectionName));
-        }
-
-        // Check if table exists in the database
-        if (! Schema::connection(is_string($connectionName) ? $connectionName : (string) $connectionName)->hasTable($table)) {
-            throw new \InvalidArgumentException(sprintf('Table "%s" does not exist in connection "%s".', $table, is_string($connectionName) ? $connectionName : (string) $connectionName));
             throw new \InvalidArgumentException(sprintf('Table "%s" does not exist in connection "%s".', $table, $connectionName));
-        if (! $this->isValidConnection((string) $connectionName)) {
-            throw new \InvalidArgumentException(sprintf('Invalid database connection: %s', (string) $connectionName));
-        }
-
-        // Check if table exists in the database
-        if (! Schema::connection((string) $connectionName)->hasTable($table)) {
-            throw new \InvalidArgumentException(sprintf('Table "%s" does not exist in connection "%s".', $table, (string) $connectionName));
         }
 
         // Get and return column listing
         try {
             $columns = Schema::connection($connectionName)->getColumnListing($table);
             $columns = array_values($columns);
-            // $columns = array_map('strval', $columns);
-
-            return $columns;
-            // return array_values(array_map(static fn ($value): string => is_string($value) ? $value : (string) $value, $columns));
             
-            // Assicuriamoci che tutti i valori siano stringhe
-            return array_map(static fn ($value): string => is_string($value) ? $value : (string) $value, $columns);
-            // $columns = array_map('strval', $columns);
-
-            return $columns;
-            // return array_values(array_map(static fn ($value): string => (string) $value, $columns));
-
             // Assicuriamoci che tutti i valori siano stringhe
             return array_map(static fn ($value): string => is_string($value) ? $value : (string) $value, $columns);
         } catch (\Throwable $e) {

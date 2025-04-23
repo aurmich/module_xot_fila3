@@ -68,10 +68,6 @@ class CreateTableIndexByModelClassColumnsAction
      *
      * @param string $connectionName database connection name
      * @param string $tableName      name of the table
-     * @param string $connectionName database connection name
-     * @param string $tableName      name of the table
-     * @param string   $connectionName database connection name
-     * @param string   $tableName      name of the table
      * @param string[] $columns        columns to validate
      *
      * @throws \RuntimeException
@@ -100,10 +96,10 @@ class CreateTableIndexByModelClassColumnsAction
 
         // Query to check if the index exists
         $query = '
-        SELECT COUNT(*)
-        FROM information_schema.statistics
-        WHERE table_schema = ?
-        AND table_name = ?
+        SELECT COUNT(*) 
+        FROM information_schema.statistics 
+        WHERE table_schema = ? 
+        AND table_name = ? 
         AND index_name = ?;
     ';
 
@@ -128,8 +124,6 @@ class CreateTableIndexByModelClassColumnsAction
      * Generate a unique index name based on the table and columns.
      *
      * @param string $tableName name of the table
-     * @param string $tableName name of the table
-     * @param string   $tableName name of the table
      * @param string[] $columns   columns to include in the index
      */
     private function generateIndexName(string $tableName, array $columns): string

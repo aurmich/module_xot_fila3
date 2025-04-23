@@ -13,7 +13,6 @@ namespace Modules\Xot\Filament\Actions\Header;
 use Filament\Actions\Action;
 use Filament\Resources\Pages\ListRecords;
 use Illuminate\Database\Eloquent\Builder;
-use Illuminate\Database\Eloquent\Builder;
 use Modules\Xot\Actions\Export\ExportXlsByLazyCollection;
 use Modules\Xot\Actions\Export\ExportXlsByQuery;
 use Modules\Xot\Actions\Export\ExportXlsStreamByLazyCollection;
@@ -27,9 +26,6 @@ class ExportXlsLazyAction extends Action
         parent::setUp();
         $this->translateLabel()
             
-            
-            ->label('')
-
             ->tooltip(__('xot::actions.export_xls'))
             ->icon('heroicon-o-arrow-down-tray')
             ->action(static function (ListRecords $livewire) {
@@ -57,17 +53,17 @@ class ExportXlsLazyAction extends Action
                 }
 
                 $lazy = $livewire->getFilteredTableQuery();
-
+                
                 if ($lazy->count() < 7) {
                     Assert::isInstanceOf($lazy, Builder::class);
-
+                    
                     /** @var array<int, string> $stringFields */
                     $stringFields = array_values($fields);
-
+                    
                     return app(ExportXlsByQuery::class)->execute(
-                        $lazy,
-                        $filename,
-                        $stringFields,
+                        $lazy, 
+                        $filename, 
+                        $stringFields, 
                         null
                     );
                 }
@@ -76,41 +72,18 @@ class ExportXlsLazyAction extends Action
 
                 if ($lazyCursor->count() > 3000) {
                     return app(ExportXlsStreamByLazyCollection::class)->execute(
-                        $lazyCursor,
-                        $filename,
-                        $transKey,
+                        $lazyCursor, 
+                        $filename, 
+                        $transKey, 
                         array_values($fields)
                     );
                 }
 
                 return app(ExportXlsByLazyCollection::class)->execute(
-                    $lazyCursor,
-                    $filename,
+                    $lazyCursor, 
+                    $filename, 
                     array_values($fields)
                 );
-                $fields = [];
-                if (method_exists($resource, 'getXlsFields')) {
-                    Assert::isArray($fields = $resource::getXlsFields($livewire->tableFilters));
-                }
-
-                $lazy = $livewire->getFilteredTableQuery();
-                if (empty($fields)) {
-                    $fields = [];
-                }
-
-                if ($lazy->count() < 7) {
-                    $query = $lazy->getQuery();
-
-                    return app(ExportXlsByQuery::class)->execute($query, $filename, $transKey, $fields);
-                }
-
-                $lazy = $lazy->cursor();
-
-                if ($lazy->count() > 3000) {
-                    return app(ExportXlsStreamByLazyCollection::class)->execute($lazy, $filename, $transKey, $fields);
-                }
-
-                return app(ExportXlsByLazyCollection::class)->execute($lazy, $filename, $transKey, $fields);
             });
     }
 

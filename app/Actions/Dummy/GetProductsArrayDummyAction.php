@@ -30,7 +30,6 @@ class GetProductsArrayDummyAction
                 return []; // Restituiamo un array vuoto se $item non è un array
             }
             
-
             return Arr::only(
                 $item,
                 [

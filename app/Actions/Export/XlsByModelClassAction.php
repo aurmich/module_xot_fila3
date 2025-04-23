@@ -7,10 +7,6 @@ namespace Modules\Xot\Actions\Export;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Carbon;
 use Illuminate\Support\Collection;
-use Illuminate\Database\Eloquent\Model;
-use Illuminate\Support\Carbon;
-use Illuminate\Support\Collection;
-use Illuminate\Support\Carbon;
 use Illuminate\Support\Str;
 use Maatwebsite\Excel\Facades\Excel;
 use Modules\Xot\Actions\Model\GetTransKeyByModelClassAction;
@@ -18,7 +14,6 @@ use Modules\Xot\Actions\Model\GetTransKeyByModelClassAction;
 use Modules\Xot\Exports\CollectionExport;
 use Spatie\QueueableAction\QueueableAction;
 use Symfony\Component\HttpFoundation\BinaryFileResponse;
-use Webmozart\Assert\Assert;
 use Webmozart\Assert\Assert;
 
 class XlsByModelClassAction
@@ -33,7 +28,7 @@ class XlsByModelClassAction
      * @param array<int, string> $includes Relazioni o campi da includere
      * @param array<int, string> $excludes Campi da escludere
      * @param callable|null $callback Callback per manipolare i dati
-     *
+     * 
      * @return BinaryFileResponse
      */
     public function execute(
@@ -46,14 +41,14 @@ class XlsByModelClassAction
         // Verifichiamo che la classe del modello esista
         Assert::classExists($modelClass);
         Assert::subclassOf($modelClass, Model::class);
-
+        
         $with = $this->getWithByIncludes($includes);
 
         // Creiamo l'istanza del modello e costruiamo la query
         /** @var Model $model */
         $model = app($modelClass);
         $query = $model->query()->with($with);
-
+        
         // Applichiamo le condizioni where
         foreach ($where as $key => $value) {
             $query->where($key, $value);
@@ -62,15 +57,8 @@ class XlsByModelClassAction
         // Otteniamo i risultati
         /** @var Collection $rows */
         $rows = $query->get();
-
+        
         // Filtriamo i campi se sono specificati gli includes
-        $with = $this->getWithByIncludes($includes);
-
-        $rows = app($modelClass)
-            ->with($with)
-            ->where($where);
-
-        $rows = $rows->get();
         if ([] !== $includes) {
             $rows = $rows->map(
                 static function ($item) use ($includes) {
@@ -96,15 +84,10 @@ class XlsByModelClassAction
         }
 
         // Applichiamo il callback se fornito
-        if ([] !== $excludes) {
-            $rows = $rows->makeHidden($excludes);
-        }
-
         if (null !== $callback) {
             $rows = $rows->map($callback);
         }
 
-        // Otteniamo la chiave di traduzione e creiamo l'export
         // Otteniamo la chiave di traduzione e creiamo l'export
         $transKey = app(GetTransKeyByModelClassAction::class)->execute($modelClass);
         $collectionExport = new CollectionExport($rows, $transKey);
@@ -117,7 +100,7 @@ class XlsByModelClassAction
      * Ottiene le relazioni da caricare in base ai campi inclusi.
      *
      * @param array<int, string> $includes Campi da includere
-     *
+     * 
      * @return array<int, string>
      */
     private function getWithByIncludes(array $includes): array
@@ -126,12 +109,12 @@ class XlsByModelClassAction
         foreach ($includes as $include) {
             // Assicuriamo che $include sia una stringa
             $includeStr = is_string($include) ? $include : (string) $include;
-
+            
             // Verifichiamo se contiene un punto (indicatore di relazione)
             if (!Str::contains($includeStr, '.')) {
                 continue;
             }
-
+            
             // Estraiamo il nome della relazione (prima parte prima del punto)
             $parts = explode('.', $includeStr);
             if (!empty($parts[0])) {
@@ -146,22 +129,9 @@ class XlsByModelClassAction
      * Genera il nome del file di export.
      *
      * @param string $modelClass Classe del modello
-     *
+     * 
      * @return string
      */
-            $tmp = explode('.', (string) $include);
-            if (! isset($tmp[0])) {
-                continue;
-            }
-            if (! Str::contains($include, '.')) {
-                continue;
-            }
-            $with[] = $tmp[0];
-        }
-
-        return $with;
-    }
-
     private function getExportName(string $modelClass): string
     {
         return sprintf(

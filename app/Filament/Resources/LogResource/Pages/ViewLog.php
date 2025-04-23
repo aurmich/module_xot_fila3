@@ -39,10 +39,4 @@ class ViewLog extends \Modules\Xot\Filament\Resources\Pages\XotBaseViewRecord
                 ]),
         ];
     }
-use Filament\Resources\Pages\ViewRecord;
-use Modules\Xot\Filament\Resources\LogResource;
-
-class ViewLog extends ViewRecord
-{
-    protected static string $resource = LogResource::class;
 }

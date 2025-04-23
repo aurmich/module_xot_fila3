@@ -164,7 +164,7 @@ if (! function_exists('dddx')) {
         $file = $tmp[0]['file'] ?? 'file-unknown';
         $file = str_replace('/', DIRECTORY_SEPARATOR, $file);
 
-        $doc_root = $_SERVER['DOCUMENT_ROOT'];
+        Assert::string($doc_root = $_SERVER['DOCUMENT_ROOT']);
         $doc_root = str_replace('/', DIRECTORY_SEPARATOR, $doc_root);
 
         $dir_piece = explode(DIRECTORY_SEPARATOR, __DIR__);
@@ -415,22 +415,92 @@ if (! function_exists('params2ContainerItem')) {
     }
 }
 
+
 if (! function_exists('getModelFields')) {
-    function getModelFields(Model $model): array
-    {
+    function getModelFields(Model $model): array {
         return $model->getConnection()->getSchemaBuilder()->getColumnListing($model->getTable());
     }
 }
+
 
 if (! function_exists('getModelByName')) {
     function getModelByName(string $name): Model
     {
         $registered = config('morph_map.'.$name);
-        if (! is_string($registered)) {
+        if (is_string($registered) && class_exists($registered)) {
+            Assert::isInstanceOf($res = app($registered), Model::class);
+
+            return $res;
+        }
+
+        // getFirst..
+        $files_path = base_path('Modules').'/*/Models/*.php';
+        Assert::isArray($files = glob($files_path));
+        // if (false === $files) {
+        //    throw new Exception('['.__LINE__.']['.__FILE__.']');
+        // }
+
+        $path = Arr::first(
+            $files,
+            function ($file) use ($name): bool {
+                Assert::string($file);
+                $info = pathinfo($file);
+
+                // Accedi direttamente a 'filename', che esiste sempre in pathinfo
+                $filename = $info['filename'] ?? '';
+
+                return Str::snake($filename) === $name;
+            }
+        );
+
+        if (null === $path) {
+            throw new Exception('['.$name.'] not in morph_map ['.__LINE__.']['.__FILE__.']');
+        }
+        Assert::string($path);
+
+        $path = app(Modules\Xot\Actions\File\FixPathAction::class)->execute($path);
+        $info = pathinfo($path);
+        $module_name = Str::between($path, 'Modules'.DIRECTORY_SEPARATOR, DIRECTORY_SEPARATOR.'Models');
+
+        $class = 'Modules\\'.$module_name.'\Models\\'.$info['filename'];
+
+        Assert::isInstanceOf($res = app($class), Model::class);
+
+        return $res;
+    }
+}
+
+/* moved into xotData
+if (! function_exists('getUserClass')) {
+    function getUserClass(): string
+    {
+        $class = config('auth.providers.users.model');
+        if (! is_string($class)) {
             throw new Exception('['.__LINE__.']['.__FILE__.']');
         }
 
-        Assert::isInstanceOf($res = app($registered), Model::class);
+        return $class;
+    }
+}
+*/
+
+if (! function_exists('getModuleFromModel')) {
+    function getModuleFromModel(object $model): Nwidart\Modules\Module
+    {
+        $class = $model::class;
+        $module_name = Str::before(Str::after($class, 'Modules\\'), '\\Models\\');
+
+        // call to an undefined static method  Nwidart\Modules\Facades\Module::find().
+        // $mod = Module::find($module_name);
+        // Call to an undefined static method Nwidart\Modules\Facades\Module::get().
+        // $mod = Module::get($module_name);
+        // Static call to instance method Nwidart\Modules\Module::get()
+        // $mod = \Nwidart\Modules\Module::get($module_name);
+        // 480    Call to an undefined method Nwidart\Modules\Facades\Module::get()
+        // $mod = app('module')->get($module_name);
+
+        // @phpstan-ignore method.nonObject
+        Assert::isInstanceOf($res = app('module')->find($module_name), Nwidart\Modules\Module::class);
 
         return $res;
     }
@@ -1052,11 +1122,11 @@ if (! function_exists('authId')) {
         try {
             $filamentAuth = Filament::auth();
             $id = null;
-
+            
             if ($filamentAuth && method_exists($filamentAuth, 'id')) {
                 $id = $filamentAuth->id();
             }
-
+            
             if ($id === null && auth()->check()) {
                 $id = auth()->id();
             }
@@ -1080,10 +1150,10 @@ function safe_object_call($object, string $method, ...$args) {
     if (!is_object($object)) {
         return null;
     }
-
+    
     if (!method_exists($object, $method)) {
         return null;
     }
-
+    
     return $object->$method(...$args);
 }

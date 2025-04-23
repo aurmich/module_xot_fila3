@@ -20,12 +20,6 @@ use Webmozart\Assert\Assert;
  * @property string $currency
  * @property float              $price
  * @property string $price_complete
- * @property string $currency
- * @property float              $price
- * @property string $price_complete
- * @property string             $currency
- * @property float              $price
- * @property string             $price_complete
  * @property int                $qty
  * @property ExtraContract|null $extra
  */
@@ -60,7 +54,6 @@ trait HasExtraTrait
             return null;
         }
         $value = $this->extra->extra_attributes->get($name);
-        $value = $this->extra?->extra_attributes->get($name);
         if (
             is_array($value) || is_int($value)
             // || is_float($value)
@@ -89,11 +82,5 @@ trait HasExtraTrait
         Assert::notNull($extra);
         $extra->extra_attributes->set($name, $value);
         $extra->save();
-        Assert::notNull($extra);
-        $extra->extra_attributes->set($name, $value);
-        $extra->save();
-
-        $extra?->extra_attributes->set($name, $value);
-        $extra?->save();
     }
 }

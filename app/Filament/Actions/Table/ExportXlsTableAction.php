@@ -23,9 +23,6 @@ class ExportXlsTableAction extends Action
         parent::setUp();
         $this->translateLabel()
             
-            
-            ->label('')
-
             ->tooltip(__('xot::actions.export_xls'))
              // ->icon('fas-file-excel')
             ->icon('heroicon-o-arrow-down-tray')
@@ -42,7 +39,7 @@ class ExportXlsTableAction extends Action
                 if (method_exists($livewire_class, 'getXlsFields')) {
                     $rawFields = $livewire_class::getXlsFields($livewire->tableFilters);
                     Assert::isArray($rawFields);
-
+                    
                     // Ensure fields are properly formatted as array<int, string>
                     $fields = [];
                     foreach ($rawFields as $key => $field) {
@@ -52,9 +49,6 @@ class ExportXlsTableAction extends Action
                             $fields[] = $field['name'];
                         }
                     }
-                $fields = [];
-                if (method_exists($livewire_class, 'getXlsFields')) {
-                    Assert::isArray($fields = $livewire_class::getXlsFields($livewire->tableFilters));
                 }
 
                 return app(ExportXlsByCollection::class)->execute($rows, $filename, $transKey, $fields);

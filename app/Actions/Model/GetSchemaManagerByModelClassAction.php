@@ -8,10 +8,6 @@ use Doctrine\DBAL\Schema\AbstractSchemaManager;
 use Illuminate\Database\Connection;
 use Illuminate\Database\Eloquent\Model as EloquentModel;
 use Illuminate\Support\Facades\DB;
-use Illuminate\Database\Connection;
-use Illuminate\Database\Eloquent\Model as EloquentModel;
-use Illuminate\Support\Facades\DB;
-use Illuminate\Database\Eloquent\Model as EloquentModel;
 use Spatie\QueueableAction\QueueableAction;
 use Webmozart\Assert\Assert;
 
@@ -30,7 +26,6 @@ class GetSchemaManagerByModelClassAction
         Assert::isInstanceOf($model = app($modelClass), EloquentModel::class);
         $connection = $model->getConnection();
         
-
         // In Laravel 9+ il metodo getDoctrineSchemaManager è stato deprecato
         // ma getDoctrineConnection() non esiste, dobbiamo usare getDoctrineSchemaManager direttamente
         if (method_exists($connection, 'getDoctrineSchemaManager')) {
@@ -40,7 +35,5 @@ class GetSchemaManagerByModelClassAction
 
         // Se in futuro il metodo getDoctrineConnection diventa disponibile, possiamo usare questo
         throw new \RuntimeException('Non è possibile ottenere lo schema manager Doctrine per questo modello.');
-
-        return $connection->getDoctrineSchemaManager();
     }
 }

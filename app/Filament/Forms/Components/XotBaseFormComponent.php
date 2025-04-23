@@ -33,14 +33,11 @@ abstract class XotBaseFormComponent extends Field
     {
         $label = parent::getLabel();
         if ($label === null) {
-        if ($label === null) {
-        if (null === $label) {
             return Str::title($this->getName());
         }
         if ($label instanceof \Illuminate\Contracts\Support\Htmlable) {
             return $label->toHtml();
         }
-
         return (string) $label;
     }
 

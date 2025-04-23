@@ -9,8 +9,6 @@ use Illuminate\Support\Str;
 use Webmozart\Assert\Assert;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Foundation\Auth\User;
-use Illuminate\Support\Facades\Auth;
-use Illuminate\Foundation\Auth\User;
 
 /**
  * Class Modules\Xot\Filament\Pages\MainDashboard.
@@ -29,11 +27,6 @@ class MainDashboard extends Dashboard
 
     public function mount(): void
     {
-        Assert::notNull($user = auth()->user(), '['.__LINE__.']['.class_basename($this).']');
-        $user = Auth::user();
-        Assert::notNull($user, '['.__LINE__.']['.class_basename($this).']');
-
-        Assert::notNull($user = auth()->user(), '['.__LINE__.']['.class_basename($this).']');
         $user = Auth::user();
         Assert::notNull($user, '['.__LINE__.']['.class_basename($this).']');
 
@@ -46,12 +39,6 @@ class MainDashboard extends Dashboard
         if (1 === $modules->count()) {
             Assert::notNull($module_first = $modules->first(), '['.__LINE__.']['.class_basename($this).']');
             $panel_name = $module_first->name;
-            Assert::notNull($module_first = $modules->first(), '['.__LINE__.']['.class_basename($this).']');
-            $panel_name = $module_first->name;
-            Assert::notNull($modules->first(), '['.__LINE__.']['.class_basename($this).']');
-            $panel_name = $modules->first()?->name;
-            Assert::notNull($modules->first(), '['.__LINE__.']['.class_basename($this).']');
-            $panel_name = $modules->first()->name;
             $module_name = Str::before($panel_name, '::admin');
             $url = '/'.$module_name.'/admin';
             redirect($url);

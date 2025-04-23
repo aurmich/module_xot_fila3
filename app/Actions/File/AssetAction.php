@@ -18,9 +18,9 @@ class AssetAction
      * Gestisce i percorsi degli asset, copiandoli nella directory pubblica se necessario.
      *
      * @param string $path Il percorso dell'asset
-     *
+     * 
      * @return string Il percorso pubblico dell'asset
-     *
+     * 
      * @throws \Exception Se il file sorgente non esiste o non può essere copiato
      */
     public function execute(string $path): string
@@ -46,8 +46,6 @@ class AssetAction
         $ns_after0 = Str::before($ns_after, '/');
         $ns_after1 = Str::after($ns_after, '/');
         $ns_after = str_replace('.', '/', is_string($ns_after0) ? $ns_after0 : (string) $ns_after0).'/'.$ns_after1;
-        $ns_after = str_replace('.', '/', is_string($ns_after0) ? $ns_after0 : (string) $ns_after0).'/'.$ns_after1;
-        $ns_after = str_replace('.', '/', (string) $ns_after0).'/'.$ns_after1;
 
         if (Str::startsWith($ns_after, '/')) {
             $ns_after = Str::after($ns_after, '/');
@@ -57,18 +55,13 @@ class AssetAction
             // Assicuriamoci che $theme sia una stringa
             $theme = $xot->{$ns};
             Assert::string($theme, 'Il tema deve essere una stringa');
-
+            
             // Costruiamo i percorsi
             $themeResourcePath = 'Themes/'.$theme.'/resources/'.$ns_after;
             $filename_from = app(FixPathAction::class)->execute(base_path($themeResourcePath));
-
+            
             $themeAssetPath = 'themes/'.$theme.'/'.$ns_after;
             $asset = $themeAssetPath;
-            $theme = $xot->{$ns};
-
-            $filename_from = app(FixPathAction::class)->execute(base_path('Themes/'.$theme.'/resources/'.$ns_after));
-            // $filename_from = Str::replace('/resources//', '/resources/', $filename_from);
-            $asset = 'themes/'.$theme.'/'.$ns_after;
             $filename_to = app(FixPathAction::class)->execute(public_path($asset));
             $asset = Str::replace(url(''), '', asset($asset));
 
@@ -83,9 +76,6 @@ class AssetAction
                     throw new \Exception('message:['.$e->getMessage().']
                         public_path ['.public_path().']
                         path ['.$path.']
-                        public_path ['.public_path().']
-                        path ['.$path.']
-                        path :['.$path.']
                         file from ['.$filename_from.']
                         file to ['.$filename_to.']', $e->getCode(), $e);
                 }

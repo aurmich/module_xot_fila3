@@ -22,7 +22,7 @@ class ExportXlsByView
      * @param View $view Vista da esportare
      * @param string $filename Nome del file Excel
      * @param array<string>|null $fields Campi da includere nell'export
-     *
+     * 
      * @return BinaryFileResponse
      */
     public function execute(
@@ -34,11 +34,10 @@ class ExportXlsByView
         $stringFields = null;
         if (is_array($fields)) {
             $stringFields = array_map(function ($field) {
+
                 return strval($field);
-                return strval($field);
-                return is_string($field) ? $field : (string) $field;
-            $stringFields = array_map(function (string|int|float|bool $field): string {
-                return (string) $field;
+
+>>>>>>> origin/dev
             }, array_values($fields));
         }
 
@@ -47,13 +46,6 @@ class ExportXlsByView
             transKey: null,
             fields: $stringFields
         );
-    public function execute(
-        View $view,
-        string $filename = 'test.xlsx',
-        ?string $transKey = null,
-        ?array $fields = null,
-    ): BinaryFileResponse {
-        $export = new ViewExport($view, $transKey, $fields);
 
         return Excel::download($export, $filename);
     }

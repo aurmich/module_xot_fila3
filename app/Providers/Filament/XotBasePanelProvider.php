@@ -121,6 +121,7 @@ abstract class XotBasePanelProvider extends PanelProvider
                 ]
             );
 
+       
         return $panel;
     }
 

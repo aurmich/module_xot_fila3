@@ -17,5 +17,4 @@ abstract class XotBaseCreateRecord extends FilamentCreateRecord
     {
         return [];
     }
-    // ...
 }

@@ -17,13 +17,10 @@ use Filament\Forms\Get;
 use Filament\Notifications\Notification;
 use Filament\Pages\Page;
 use Filament\Support\Colors\Color;
-use Filament\Support\Colors\Color;
 use Modules\Tenant\Services\TenantService;
 use Modules\Xot\Datas\MetatagData;
 use Modules\Xot\Filament\Traits\NavigationLabelTrait;
 use Webmozart\Assert\Assert;
-use Filament\Support\Colors\Color;
-use Filament\Support\Colors\Color;
 
 /**
  * @property ComponentContainer $form
@@ -101,20 +98,6 @@ class MetatagPage extends Page implements HasForms
                                 ->visible(fn (Get $get) => $get('color') === 'custom')
                                 ->required(),
                         ])
-
-                                ->required()
-                                ->options($metatag->getFilamentColors()),
-                            Select::make('color')
-
-                                ->required()
-                                ->reactive()
-                                ->options(array_merge(['custom' => '--- custom ---'], $metatag->getAllColors())),
-                            ColorPicker::make('hex')
-
-                                ->visible(fn (Get $get): bool => 'custom' == $get('color'))
-                                ->required(), // e.g., '#0071b0'
-                        ])
-                    // ->keyValueArray(true) // Store as key-value pairs in the 'colors' array
                         ->columns(3),
                 ]
             )->columns(2)
@@ -136,8 +119,6 @@ class MetatagPage extends Page implements HasForms
     {
         return [
             Action::make('save')
-
-
                 ->submit('save'),
         ];
     }

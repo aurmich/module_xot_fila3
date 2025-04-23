@@ -12,7 +12,7 @@ use Modules\Xot\Models\Extra;
 
 
 
-use Modules\Xot\Filament\Resources\XotBaseResource\RelationManagers\XotBaseRelationManager;
+use Modules\Xot\Filament\Resources\XotBaseResource\RelationManager\XotBaseRelationManager;
 
 
 
@@ -24,7 +24,7 @@ class ExtraResource extends XotBaseResource
 
     /**
      * Get the form schema for the resource.
-     *
+     * 
      * @return array<string, \Filament\Forms\Components\Component>
      */
     public static function getFormSchema(): array
@@ -43,22 +43,6 @@ class ExtraResource extends XotBaseResource
                 ->numeric(),
 
             'value' => KeyValue::make('value')
-    public static function getFormSchema(): array
-    {
-        return [
-            TextInput::make('id')
-                ->required()
-                ->maxLength(36),
-
-            TextInput::make('post_type')
-                ->required()
-                ->maxLength(255),
-
-            TextInput::make('post_id')
-                ->required()
-                ->numeric(),
-
-            KeyValue::make('value')
                 ->keyLabel('Chiave')
                 ->valueLabel('Valore')
                 ->reorderable()

@@ -4,15 +4,11 @@ declare(strict_types=1);
 
 namespace Modules\Xot\Filament\Resources;
 
-use Modules\Xot\Models\Cache;
 use Filament\Forms\Components\KeyValue;
 use Filament\Forms\Components\TextInput;
-use Modules\Xot\Filament\Resources\XotBaseResource;
 use Modules\Xot\Filament\Resources\CacheResource\Pages;
 use Modules\Xot\Models\Cache;
 use Modules\Xot\Filament\Resources\XotBaseResource\RelationManager\XotBaseRelationManager;
-use Modules\Xot\Filament\Resources\XotBaseResource\RelationManager\XotBaseRelationManager;
-use Modules\Xot\Filament\Resources\XotBaseResource\RelationManagers\XotBaseRelationManager;
 
 class CacheResource extends XotBaseResource
 {
@@ -30,15 +26,6 @@ class CacheResource extends XotBaseResource
                 ->numeric(),
 
             'value' => KeyValue::make('value')
-            TextInput::make('key')
-                ->required()
-                ->maxLength(255),
-
-            TextInput::make('expiration')
-                ->required()
-                ->numeric(),
-
-            KeyValue::make('value')
                 ->columnSpanFull(),
         ];
     }

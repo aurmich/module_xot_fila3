@@ -10,17 +10,12 @@ namespace Modules\Xot\Actions\Filament;
 
 use Filament\Forms\Components\Field;
 use Filament\Forms\Components\Component;
-use Filament\Forms\Components\Field;
-use Filament\Forms\Components\Component;
 use Illuminate\Support\Arr;
 use Modules\Lang\Actions\SaveTransAction;
 use Modules\Xot\Actions\GetTransKeyAction;
 use Spatie\QueueableAction\QueueableAction;
 use Webmozart\Assert\Assert;
 
-/**
- * Classe per automatizzare l'assegnazione di etichette ai componenti Filament.
- */
 /**
  * Classe per automatizzare l'assegnazione di etichette ai componenti Filament.
  */
@@ -48,9 +43,6 @@ class AutoLabelAction
         // @phpstan-ignore function.alreadyNarrowedType
         if (method_exists($component, 'getStatePath')) {
             $statePath = $component->getStatePath();
-            return $statePath;
-            return $statePath;
-            return is_string($statePath) ? $statePath : (string) $statePath;
 
             return $statePath;
         }
@@ -59,12 +51,6 @@ class AutoLabelAction
         $reflectionClass = new \ReflectionClass($component);
         if ($reflectionClass->hasProperty('name') && $reflectionClass->getProperty('name')->isPublic()) {
             $property = $reflectionClass->getProperty('name');
-            Assert::string($value = $property->getValue($component));
-            return $value;
-            Assert::string($value = $property->getValue($component));
-            return $value;
-            $value = $property->getValue($component);
-            return is_string($value) ? $value : (string) $value;
 
             Assert::string($value = $property->getValue($component));
             return $value;
@@ -78,15 +64,12 @@ class AutoLabelAction
      * Applica automaticamente le etichette ai componenti Filament.
      *
      * @param Field|Component $component Il componente a cui applicare l'etichetta
-     * 
      *
      * @return Field|Component Il componente con l'etichetta applicata
      */
     public function execute(Field|Component $component): Field|Component
     {
         Assert::isInstanceOf($component, Field::class, 'Il componente deve essere un\'istanza di Field o Component');
-
-        
 
         $backtrace = debug_backtrace(DEBUG_BACKTRACE_PROVIDE_OBJECT, 6);
 
@@ -110,18 +93,6 @@ class AutoLabelAction
         $transKeyAction = app(GetTransKeyAction::class);
         Assert::isCallable([$transKeyAction, 'execute'], 'GetTransKeyAction::execute deve essere chiamabile');
 
-        
-        // Assicuriamo che $class sia una stringa
-        if (!is_string($class)) {
-            $class = is_object($class) ? get_class($class) : is_string($class) ? $class : (string) $class;
-        }
-
-        Assert::stringNotEmpty($class, 'La classe deve essere una stringa non vuota');
-        
-        // Otteniamo la chiave di traduzione
-        $transKeyAction = app(GetTransKeyAction::class);
-        Assert::isCallable([$transKeyAction, 'execute'], 'GetTransKeyAction::execute deve essere chiamabile');
-        
         $trans_key = $transKeyAction->execute($class);
         Assert::stringNotEmpty($trans_key, 'La chiave di traduzione non può essere vuota');
 
@@ -130,15 +101,6 @@ class AutoLabelAction
         Assert::stringNotEmpty($componentName, 'Il nome del componente non può essere vuoto');
 
         // Costruiamo la chiave per l'etichetta
-        $label_key = $trans_key . '.fields.' . $componentName . '.label';
-        $label = trans($label_key);
-
-        $label_key = $trans_key . '.fields.' . $componentName . '.label';
-        $label = trans($label_key);
-
-        $label_key = $trans_key.'.fields.'.$componentName.'.label';
-        $label = trans($label_key);
-        
         $label_key = $trans_key . '.fields.' . $componentName . '.label';
         $label = trans($label_key);
 
@@ -151,11 +113,6 @@ class AutoLabelAction
                 $label_key1 = $trans_key . '.fields.' . $componentName;
                 $label1 = trans($label_key1);
 
-                
-                // Proviamo a ottenere una traduzione più breve
-                $label_key1 = $trans_key.'.fields.'.$componentName;
-                $label1 = trans($label_key1);
-                
                 if ($label_key1 !== $label1 && is_string($label1)) {
                     $label_value = $label1;
                 }
@@ -167,35 +124,8 @@ class AutoLabelAction
                 $saveTransAction->execute($label_key, $label_value);
             }
 
-                
-                $saveTransAction->execute($label_key, $label_value);
-            }
-            
             // Applichiamo l'etichetta al componente
             // Field ha sempre un metodo label(), quindi possiamo chiamarlo direttamente
-            // Applichiamo l'etichetta al componente
-            // Field ha sempre un metodo label(), quindi possiamo chiamarlo direttamente
-     * Undocumented function.
-     * return number of input added.
-     */
-    public function execute($component)
-    {
-        $backtrace = debug_backtrace();
-        Assert::string($class = Arr::get($backtrace, '5.class'));
-        $trans_key = app(GetTransKeyAction::class)->execute($class);
-        $label_key = $trans_key.'.fields.'.$component->getName().'.label';
-        $label = trans($label_key);
-        if (is_string($label)) {
-            if ($label_key == $label) {
-                $label_value = $component->getName();
-                $label_key1 = $trans_key.'.fields.'.$component->getName();
-                $label1 = trans($label_key1);
-                if ($label_key1 != $label1) {
-                    $label_value = $label1;
-                }
-
-                app(SaveTransAction::class)->execute($label_key, $label_value);
-            }
             $component->label($label);
         }
 

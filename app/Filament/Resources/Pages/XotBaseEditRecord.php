@@ -20,19 +20,19 @@ abstract class XotBaseEditRecord extends FilamentEditRecord
     public function form(Form $form): Form
     {
         $schema = $this->getFormSchema();
-
+        
         if (empty($schema)) {
             $resource = $this->getResource();
             $schema = $resource::getFormSchema();
         }
-
+        
         // Ensure schema is properly typed for PHPStan level 10
         /** @var array<string|int, \Filament\Forms\Components\Component>|array<\Filament\Forms\Components\Component> $validSchema */
         $validSchema = $schema;
-
+        
         return $form->schema($validSchema);
     }
-
+    
     /**
      * Get the form schema.
      *
@@ -42,9 +42,4 @@ abstract class XotBaseEditRecord extends FilamentEditRecord
     {
         return [];
     }
-use Filament\Resources\Pages\EditRecord as FilamenEditRecord;
-
-abstract class XotBaseEditRecord extends FilamenEditRecord
-{
-    // ...
 }

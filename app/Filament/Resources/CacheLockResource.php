@@ -11,7 +11,7 @@ use Modules\Xot\Models\CacheLock;
 
 
 
-use Modules\Xot\Filament\Resources\XotBaseResource\RelationManagers\XotBaseRelationManager;
+use Modules\Xot\Filament\Resources\XotBaseResource\RelationManager\XotBaseRelationManager;
 
 
 
@@ -38,18 +38,6 @@ class CacheLockResource extends XotBaseResource
                 ->maxLength(255),
 
             'expiration' => TextInput::make('expiration')
-    public static function getFormSchema(): array
-    {
-        return [
-            TextInput::make('key')
-                ->required()
-                ->maxLength(255),
-
-            TextInput::make('owner')
-                ->required()
-                ->maxLength(255),
-
-            TextInput::make('expiration')
                 ->required()
                 ->numeric(),
         ];

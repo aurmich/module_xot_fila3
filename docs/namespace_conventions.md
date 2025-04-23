@@ -16,41 +16,7 @@ namespace Modules\Tenant\Repositories;
 
 ### Esempi Errati
 ```php
-
-
-
 namespace Modules\Xot\app\Console\Commands;
-
-
- d9307de (fix: auto resolve conflict)
-
-
-
-
- c2dac53 (.)
-namespace Modules\Xot\Console\Commands;
-
-
-namespace Modules\Xot\Console\Commands;
-
-namespace Modules\Xot\app\Console\Commands;
-
- origin/dev
- origin/dev
-
- e5c56c3 (.)
-
-
-namespace Modules\Xot\app\Console\Commands;
- 50bb41c (fix: auto resolve conflict)
- d9307de (fix: auto resolve conflict)
-
-
-
-
-namespace Modules\Xot\app\Console\Commands;
- 50bb41c (fix: auto resolve conflict)
- c2dac53 (.)
 namespace Modules\Broker\app\Models;
 namespace Modules\User\app\Services;
 namespace Modules\Tenant\app\Repositories;

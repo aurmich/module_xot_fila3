@@ -2,7 +2,7 @@
 
 ## Problema
 
-Durante lo sviluppo del progetto SaluteOra, sono stati identificati diversi file con conflitti di merge non risolti. Questi conflitti erano indicati dalla presenza di marcatori come ``, `` e `` nel codice sorgente. I conflitti non risolti causavano errori durante l'analisi statica con PHPStan e impedivano il corretto funzionamento del codice.
+Durante lo sviluppo del progetto SaluteOra, sono stati identificati diversi file con conflitti di merge non risolti. Questi conflitti erano indicati dalla presenza di marcatori come `<<<<<<< HEAD`, `=======` e `>>>>>>> origin/dev` nel codice sorgente. I conflitti non risolti causavano errori durante l'analisi statica con PHPStan e impedivano il corretto funzionamento del codice.
 
 ## File Coinvolti
 
@@ -39,7 +39,7 @@ Per risolvere i conflitti, è stato seguito un approccio sistematico:
 
 ### 1. Rimozione dei Marcatori di Conflitto
 
-In ogni file, sono stati rimossi tutti i marcatori di conflitto (``, ``, ``), mantenendo la versione più completa e corretta del codice.
+In ogni file, sono stati rimossi tutti i marcatori di conflitto (`<<<<<<< HEAD`, `=======`, `>>>>>>> origin/dev`), mantenendo la versione più completa e corretta del codice.
 
 ### 2. Correzione dei Problemi di Tipizzazione
 
@@ -194,6 +194,7 @@ Risultato:
 Note: Using configuration file /var/www/html/saluteora/laravel/phpstan.neon.
  1/1 [▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓] 100%
 
+
                                                                                 
  [OK] No errors
 ```
@@ -214,15 +215,7 @@ Per prevenire problemi simili in futuro, si raccomanda di:
   #!/bin/bash
   
   # Verifica se ci sono marcatori di conflitto nei file in staging
-
-
-  if git diff --cached | grep -E '|| ' > /dev/null; then
-
-  if git diff --cached | grep -E '|| ' > /dev/null; then
- d9307de (fix: auto resolve conflict)
-
-  if git diff --cached | grep -E '|| ' > /dev/null; then
- 7b67053 (fix: auto resolve conflict)
+  if git diff --cached | grep -E '<<<<<<< HEAD|=======|>>>>>>> ' > /dev/null; then
       echo "Error: You have unresolved merge conflicts. Please resolve them before committing."
       exit 1
   fi
@@ -252,8 +245,4 @@ L'integrazione con PHPStan è cruciale per identificare problemi di tipizzazione
 
 La risoluzione dei conflitti di merge ha ripristinato la corretta funzionalità dei file coinvolti, permettendo l'analisi statica con PHPStan e garantendo il corretto funzionamento dell'applicazione. Le soluzioni implementate hanno mantenuto la coerenza del codice e migliorato la robustezza delle classi.
 
-L'implementazione di procedure preventive e la standardizzazione del processo di risoluzione dei conflitti contribuiranno a evitare problemi simili in futuro e a mantenere un codice di alta qualità.
-
-## Collegamenti Principali
-- [Documentazione Git Subtree](../../../../docs/bashscripts/GIT_SUBTREE.md)
-- [Best Practices](../../Gdpr/docs/CONFLITTI_MERGE_RISOLTI.md) 
+L'implementazione di procedure preventive e la standardizzazione del processo di risoluzione dei conflitti contribuiranno a evitare problemi simili in futuro e a mantenere un codice di alta qualità. 

@@ -16,20 +16,13 @@ use Filament\Support\Concerns\Configurable;
 use Filament\Tables\Columns\Column;
 use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Filters\BaseFilter;
-use Illuminate\Auth\AuthenticationException;
-use Illuminate\Contracts\Debug\ExceptionHandler;
 use Illuminate\Database\Events\MigrationsEnded;
 use Illuminate\Support\Carbon;
 use Illuminate\Support\Facades\Event;
 use Illuminate\Support\Facades\File;
-use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\URL;
 use Illuminate\Support\Facades\View;
-use Modules\Xot\Exceptions\Formatters\WebhookErrorFormatter;
-use Modules\Xot\Exceptions\Handlers\HandlerDecorator;
-use Modules\Xot\Exceptions\Handlers\HandlersRepository;
 use Modules\Xot\View\Composers\XotComposer;
-use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 use Webmozart\Assert\Assert;
 
 use function Safe\realpath;
@@ -51,7 +44,6 @@ class XotServiceProvider extends XotBaseServiceProvider
         $this->redirectSSL();
         $this->registerViewComposers();
         $this->registerEvents();
-        $this->registerExceptionHandler();
         $this->registerTimezone();
         $this->registerProviders();
     }
@@ -60,8 +52,6 @@ class XotServiceProvider extends XotBaseServiceProvider
     {
         parent::register();
         $this->registerConfig();
-        $this->registerExceptionHandlersRepository();
-        $this->extendExceptionHandler();
         $this->registerCommands();
     }
 
@@ -86,32 +76,10 @@ class XotServiceProvider extends XotBaseServiceProvider
         TextColumn::configureUsing(fn (TextColumn $column) => $column->timezone($timezone));
     }
 
-    /**
-     * @see https://github.com/cerbero90/exception-handler
-     */
-    public function registerExceptionHandler(): void
-    {
-        $exceptionHandler = $this->app->make(ExceptionHandler::class);
-
-        if ($exceptionHandler instanceof HandlerDecorator) {
-            $exceptionHandler->reporter(
-                static function (\Throwable $e): void {
-                    $data = (new WebhookErrorFormatter($e))->format();
-                    if ($e instanceof AuthenticationException || $e instanceof NotFoundHttpException) {
-                        return;
-                    }
-                    if (is_string(config('logging.channels.slack_errors.url')) && mb_strlen(config('logging.channels.slack_errors.url')) > 5) {
-                        Log::channel('slack_errors')->error($e->getMessage(), $data);
-                    }
-                }
-            );
-        }
-    }
-
     public function registerConfig(): void
     {
-        $config_file = realpath(__DIR__.'/../config/xot.php');
-        $this->mergeConfigFrom($config_file, 'xot');
+        // $config_file = realpath(__DIR__.'/../config/metatag.php');
+        // $this->mergeConfigFrom($config_file, 'metatag');
     }
 
     public function loadHelpersFrom(string $path): void
@@ -121,10 +89,12 @@ class XotServiceProvider extends XotBaseServiceProvider
             if ('php' !== $file->getExtension()) {
                 continue;
             }
+
             $realPath = $file->getRealPath();
             if (false === $realPath) {
                 continue;
             }
+
             include_once $realPath;
         }
     }
@@ -139,30 +109,6 @@ class XotServiceProvider extends XotBaseServiceProvider
                 $translatable->translateLabel();
             });
         }
-    }
-
-    /**
-     * Register the custom exception handlers repository.
-     */
-    public function registerExceptionHandlersRepository(): void
-    {
-        $this->app->singleton(HandlersRepository::class, HandlersRepository::class);
-    }
-
-    /**
-     * Extend the Laravel default exception handler.
-     *
-     * @see https://github.com/cerbero90/exception-handler/blob/master/src/Providers/ExceptionHandlerServiceProvider.php
-     */
-    private function extendExceptionHandler(): void
-    {
-        $this->app->extend(
-            ExceptionHandler::class,
-            static function (ExceptionHandler $handler, $app) {
-                // @phpstan-ignore offsetAccess.nonOffsetAccessible, argument.type
-                return new HandlerDecorator($handler, $app[HandlersRepository::class]);
-            }
-        );
     }
 
     private function redirectSSL(): void

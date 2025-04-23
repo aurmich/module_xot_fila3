@@ -23,17 +23,6 @@ Lo script esegue le seguenti operazioni:
 1. **Analisi della struttura delle directory**: Identifica i file che non seguono le convenzioni di Laraxot PTVX.
 2. **Correzione automatica**: Sposta i file nelle posizioni corrette.
 3. **Verifica finale**: Controlla che tutte le correzioni siano state applicate correttamente.
-4. **Output visivo**: Utilizza colori per una migliore leggibilità dei risultati.
-
-### Aggiornamenti e Risoluzioni di Conflitti
-
-Lo script è stato recentemente aggiornato per:
-- Specificare chiaramente che è dedicato ai moduli Laraxot PTVX
-- Migliorare la compatibilità con le convenzioni Laravel più recenti
-- Ottimizzare la logica di identificazione dei file dell'applicazione
-- Rifinire l'output visivo con sistemi di colori coerenti
-
-**Nota**: Durante la risoluzione dei conflitti di merge, è stata mantenuta la descrizione più specifica che identifica l'uso esclusivo per i moduli Laraxot PTVX, per evitare confusione con altri tipi di moduli.
 
 ### Regole Fondamentali
 

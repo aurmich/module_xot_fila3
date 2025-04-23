@@ -11,8 +11,6 @@ use Spatie\QueueableAction\QueueableAction;
 use Symfony\Component\HttpFoundation\BinaryFileResponse;
 use PhpOffice\PhpSpreadsheet\Spreadsheet;
 use PhpOffice\PhpSpreadsheet\Writer\Xlsx;
-use PhpOffice\PhpSpreadsheet\Spreadsheet;
-use PhpOffice\PhpSpreadsheet\Writer\Xlsx;
 
 class ExportXlsByCollection
 {
@@ -25,7 +23,7 @@ class ExportXlsByCollection
      * @param string $filename Nome del file Excel
      * @param string|null $transKey Chiave di traduzione per i campi
      * @param array<int, string> $fields Campi da includere nell'export
-     *
+     * 
      * @return BinaryFileResponse
      */
     public function execute(
@@ -43,10 +41,6 @@ class ExportXlsByCollection
             collection: $collection,
             transKey: $transKey,
             fields: $stringFields
-        $export = new CollectionExport(
-            collection: $collection,
-            transKey: $transKey,
-            fields: $fields
         );
 
         return Excel::download($export, $filename);
@@ -58,7 +52,7 @@ class ExportXlsByCollection
      * @param Collection $rows La collezione da esportare
      * @param array<string> $fields Campi da includere nell'export
      * @param string $filename Nome del file Excel
-     *
+     * 
      * @return string Il percorso del file generato
      */
     public function executeWithSpreadsheet(Collection $rows, array $fields, string $filename): string
@@ -89,14 +83,15 @@ class ExportXlsByCollection
     }
 
     /**
+
+
      * Scrive le righe nel foglio di lavoro.
      *
      * @param \PhpOffice\PhpSpreadsheet\Worksheet\Worksheet $sheet Il foglio di lavoro
      * @param \Illuminate\Support\Collection $rows I dati da scrivere
-     * Scrive le righe di dati nel foglio Excel.
-     *
-     * @param \PhpOffice\PhpSpreadsheet\Worksheet\Worksheet $sheet Il foglio Excel
-     * @param Collection $rows Le righe di dati da scrivere
+
+
+>>>>>>> origin/dev
      * @param array<string> $fields I campi da utilizzare per le colonne
      */
     protected function writeRows(\PhpOffice\PhpSpreadsheet\Worksheet\Worksheet $sheet, Collection $rows, array $fields): void
@@ -116,8 +111,6 @@ class ExportXlsByCollection
                 } elseif (is_object($data) && property_exists($data, $field)) {
                     $value = $data->{$field} ?? '';
                 }
-
-                $value = $data->get($field) ?? '';
                 $sheet->setCellValueByColumnAndRow($col + 1, $row, $value);
             }
             $row++;

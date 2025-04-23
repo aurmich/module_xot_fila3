@@ -10,7 +10,7 @@ use Modules\Xot\Filament\Resources\SessionResource;
 
 
 
-use Modules\Xot\Filament\Resources\XotBaseResource\RelationManagers\XotBaseRelationManager;
+use Modules\Xot\Filament\Resources\XotBaseResource\RelationManager\XotBaseRelationManager;
 
 
 
@@ -21,9 +21,4 @@ class EditSession extends \Modules\Xot\Filament\Resources\Pages\XotBaseEditRecor
     protected static string $resource = SessionResource::class;
 
 
-use Modules\Xot\Filament\Resources\SessionResource;
-
-class EditSession extends \Modules\Xot\Filament\Resources\Pages\XotBaseEditRecord
-{
-    protected static string $resource = SessionResource::class;
 }

@@ -10,7 +10,6 @@ use Modules\Xot\Datas\XotData;
 use Spatie\QueueableAction\QueueableAction;
 use Webmozart\Assert\Assert;
 use Nwidart\Modules\Facades\Module;
-use Nwidart\Modules\Facades\Module;
 
 class GetViewNameSpacePathAction
 {
@@ -31,28 +30,5 @@ class GetViewNameSpacePathAction
         }
 
         return $namespace_path;
-    public function execute(string $ns): string
-    {
-        $xot = XotData::make();
-        /** @var FileViewFinder $finder */
-        $finder = view()->getFinder();
-        $viewHints = [];
-        if (method_exists($finder, 'getHints')) {
-            /** @var array<string, array<string>> $viewHints */
-            $viewHints = $finder->getHints();
-        }
-
-        $path = Arr::get($viewHints, "$ns.0");
-        if (! empty($path) && is_string($path)) {
-            return $path;
-        }
-
-        if (\in_array($ns, ['pub_theme', 'adm_theme'], false)) {
-            Assert::string($theme_name = ($xot->{$ns} ?? ''));
-
-            return base_path('Themes/'.$theme_name);
-        }
-
-        throw new \Exception('View namespace not found['.$ns.'].');
     }
 }

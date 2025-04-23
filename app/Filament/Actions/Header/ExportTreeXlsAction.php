@@ -30,9 +30,6 @@ class ExportTreeXlsAction extends Action
         $this->translateLabel()
 
             
-            
-            ->label('')
-
             ->tooltip(__('xot::actions.export_xls'))
 
             // ->icon('heroicon-o-cloud-arrow-down')
@@ -57,7 +54,6 @@ class ExportTreeXlsAction extends Action
                     // Convertiamo tutti i valori a stringhe
                     $fields = array_map(fn ($field) => is_string($field) ? $field : (string) $field, (array) $fields);
                     Assert::isArray($fields);
-                    Assert::isArray($fields = $resource::getXlsFields($tableFilters));
                 }
 
                 return app(ExportXlsByCollection::class)->execute($rows, $filename, $transKey, $fields);

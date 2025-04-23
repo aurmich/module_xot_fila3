@@ -27,8 +27,6 @@ use Illuminate\Support\Carbon;
  * @property bool               $table_enable
  * @property PivotContract|null $pivot
  * @property string $tennant_name
- * @property string $tennant_name
- * @property string             $tennant_name
  *
  * @method mixed     getKey()
  * @method string    getRouteKey()
@@ -44,7 +42,6 @@ use Illuminate\Support\Carbon;
  * @method mixed     attach($params)
  * @method array     treeLabel()
  * @method array     treeSons()
- * @method int       treeSonsCount()
  * @method int       treeSonsCount()
  * @method array     toArray()
  * @method BelongsTo user()
@@ -105,8 +102,6 @@ interface ModelContract
      * @param  mixed  $operator
      * @param  mixed  $value
      * @param  string $boolean
-     * @param  string $boolean
-     * @param  string  $boolean
      * @return $this
 
     public function where($column, $operator = null, $value = null, $boolean = 'and');
@@ -116,8 +111,6 @@ interface ModelContract
      * Execute the query and get the first result or throw an exception.
      *
      * @param  array|string $columns
-     * @param  array|string $columns
-     * @param  array|string  $columns
      * @return \Illuminate\Database\Eloquent\Model|static
      *
      * @throws \Illuminate\Database\Eloquent\ModelNotFoundException<\Illuminate\Database\Eloquent\Model>

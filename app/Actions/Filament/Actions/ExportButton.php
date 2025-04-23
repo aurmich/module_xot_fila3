@@ -15,9 +15,6 @@ class ExportButton
     {
         return Action::make('export')
             
-            
-            ->label('')
-
             ->tooltip('export XLS')
             ->icon('heroicon-o-inbox-arrow-down')
             // ->visible(null != $year)

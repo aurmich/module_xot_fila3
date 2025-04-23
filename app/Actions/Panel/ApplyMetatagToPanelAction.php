@@ -16,7 +16,7 @@ class ApplyMetatagToPanelAction
      * Applica i metatag al pannello Filament.
      *
      * @param Panel &$panel Il pannello Filament a cui applicare i metatag
-     *
+     * 
      * @return Panel Il pannello con i metatag applicati
      */
     public function execute(Panel &$panel): Panel
@@ -27,33 +27,15 @@ class ApplyMetatagToPanelAction
             return $panel
                 // @phpstan-ignore argument.type
                 ->colors($metatag->getColors())
-                // @phpstan-ignore argument.type
-                ->colors($metatag->getColors())
-                //->colors($metatag->getColors())
-                // @phpstan-ignore argument.type
-                ->colors($metatag->getColors())
                 ->brandLogo($metatag->getLogoHeader())
                 ->brandName($metatag->title)
                 ->darkModeBrandLogo($metatag->getLogoHeaderDark())
                 ->brandLogoHeight($metatag->getLogoHeight())
                 ->favicon($metatag->getFavicon());
-        } catch (\Exception $e) {
         } catch (\Throwable $e) {
             // Log l'errore ma non bloccare l'applicazione
             \Illuminate\Support\Facades\Log::error('Error applying metatag to panel: ' . $e->getMessage());
             return $panel;
         }
-    public function execute(Panel &$panel): Panel
-    {
-        $metatag = MetatagData::make();
-
-        return $panel
-            // @phpstan-ignore argument.type
-            ->colors($metatag->getColors())
-            ->brandLogo($metatag->getLogoHeader())
-            ->brandName($metatag->title)
-            ->darkModeBrandLogo($metatag->getLogoHeaderDark())
-            ->brandLogoHeight($metatag->getLogoHeight())
-            ->favicon($metatag->getFavicon());
     }
 }

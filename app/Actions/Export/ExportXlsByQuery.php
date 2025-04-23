@@ -6,11 +6,6 @@ namespace Modules\Xot\Actions\Export;
 
 use Illuminate\Database\Eloquent\Builder;
 use Maatwebsite\Excel\Facades\Excel;
-use Illuminate\Database\Eloquent\Builder;
-use Maatwebsite\Excel\Facades\Excel;
-use Illuminate\Database\Eloquent\Builder as EloquentBuilder;
-use Illuminate\Database\Query\Builder as QueryBuilder;
-use Illuminate\Http\Response;
 use Modules\Xot\Exports\QueryExport;
 use Spatie\QueueableAction\QueueableAction;
 // use Staudenmeir\LaravelCte\Query\Builder as CteBuilder;
@@ -27,7 +22,7 @@ class ExportXlsByQuery
      * @param string $filename Nome del file Excel
      * @param array<int, string> $fields Campi da includere nell'export
      * @param int|null $limit Limite di righe da esportare
-     *
+     * 
      * @return BinaryFileResponse
      */
     public function execute(
@@ -38,9 +33,6 @@ class ExportXlsByQuery
     ): BinaryFileResponse {
         // Assicuriamo che $fields sia un array di stringhe
         $stringFields = array_map(function ($field) {
-            return strval($field);
-            return strval($field);
-            return is_string($field) ? $field : (string) $field;
 
             return strval($field);
         }, array_values($fields));
@@ -50,8 +42,6 @@ class ExportXlsByQuery
             transKey: null,
             fields: $stringFields
         );
-
-        
         // Note: QueryExport doesn't accept a limit parameter directly
         // If limit is needed, apply it to the query before passing to the exporter
         if ($limit !== null) {
@@ -59,15 +49,5 @@ class ExportXlsByQuery
         }
 
         return Excel::download($export, $filename);
-    public function execute(
-        QueryBuilder|EloquentBuilder $query,
-        string $filename = 'test.xlsx',
-        ?string $transKey = null,
-        array $fields = [],
-    ): Response|BinaryFileResponse {
-        $queryExport = new QueryExport($query, $transKey, $fields);
-        // $queryExport->queue($filename); // Serialization of 'PDO' is not allowed
-
-        return $queryExport->download($filename);
     }
 }

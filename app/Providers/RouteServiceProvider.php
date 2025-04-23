@@ -123,29 +123,18 @@ class RouteServiceProvider extends ServiceProvider
         $lang_pattern = '/|'.$lang_pattern.'|/i';
 
         $router->pattern('lang', $lang_pattern);
-        // ---------- container
-        $router->pattern('container', '[\w\-]+');
-        $router->pattern('container0', '[\w]+');
-        // ---------- Item
-        // $router->pattern('item', '[a-z0-9_\-]+');
-        $router->pattern('item', '[\w\-]+');
-        $router->pattern('item_hash', '[a-z0-9]+');
-        $router->pattern('item_id', '[\d]+');
-        // $router->pattern('item_id', '[a-z0-9]+');
-        // ---------- Item
-        $router->pattern('blog_id', '[\d]+');
-        $router->pattern('blog_cat_id', '[\d]+');
-        $router->pattern('article_cat_id', '[\d]+');
-        // ---------- parameters
-        $router->pattern('parameter', '[\w]+');
-        $router->pattern('parameters', '.*');
-        $router->pattern('route', '.*');
-        $router->pattern('related_cat', '.*');
-        $router->pattern('tab', '[\w]+');
-        $router->pattern('tabs', '[\w\/]+');
-        $router->pattern('act', '[\w]+');
-        // ---------- tenant
-        $router->pattern('tenant', '[\w\-\_]+');
-        $router->pattern('auth_provider', '[\w]+');
+
+        $models = config('morph_map');
+        if (! is_array($models)) {
+            $models = [];
+        }
+
+        $models_collect = collect(array_keys($models));
+        $models_collect->implode('|');
+        $models_collect->map(
+            fn ($item) => Str::plural(is_string($item) ? $item : (string) $item)
+        )->implode('|');
     }
+
+    // end registerRoutePattern
 }

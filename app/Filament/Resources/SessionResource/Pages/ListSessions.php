@@ -10,7 +10,6 @@ use Modules\Xot\Filament\Resources\Pages\XotBaseListRecords;
 use Modules\Xot\Filament\Resources\SessionResource;
 
 
-
 /**
  * @see SessionResource
  */

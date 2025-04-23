@@ -142,11 +142,6 @@ class ImportCsvAction
      * @phpstan-ignore method.unused
      */
     private function transformColumnsToColumnData(array $columns): array
-     * @param array<mixed> $columns
-     *
-     * @return array<ColumnData>
-     */
-    public function execute1(array $columns): array
     {
         return array_map(function ($column): ColumnData {
             Assert::string($column, 'Column must be a string');
@@ -155,7 +150,6 @@ class ImportCsvAction
                 name: $column,
                 type: 'string' // Default type, modify if necessary
             );
-            return new ColumnData($column);
         }, $columns);
     }
 }

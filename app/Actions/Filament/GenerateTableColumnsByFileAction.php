@@ -13,8 +13,6 @@ use Filament\Resources\Resource;
 use Filament\Support\Commands\Concerns\CanReadModelSchemas;
 use Filament\Tables\Commands\Concerns\CanGenerateTables;
 use Illuminate\Database\Eloquent\Model;
-use Filament\Support\Commands\Concerns\CanReadModelSchemas;
-use Filament\Tables\Commands\Concerns\CanGenerateTables;
 use Illuminate\Support\Facades\File as LaravelFile;
 use Illuminate\Support\Str;
 use Modules\Xot\Actions\ModelClass\GetMethodBodyAction;
@@ -37,18 +35,6 @@ class GenerateTableColumnsByFileAction
      *
      * @param File $file Il file della risorsa Filament
      * 
-     * @return void
-     */
-    public function execute(File $file): void
-     * Undocumented function.
-     *
-     * @return void
-     */
-    public function execute(File $file)
-     * Genera colonne per tabelle e form Filament basate su un file di risorsa.
-     *
-     * @param File $file Il file della risorsa Filament
-     *
      * @return void
      */
     public function execute(File $file): void
@@ -84,15 +70,11 @@ class GenerateTableColumnsByFileAction
         /** @var Model $modelInstance */
         $modelInstance = app($modelClass);
 
-        $model_name = app($class_name)->getModel();
-        $model = app($model_name);
         // ------------------- TABLE -------------------
         // *
         $body = app(GetMethodBodyAction::class)->execute($class_name, 'table');
         $body1 = app(GetStrBetweenStartsWithAction::class)->execute($body, '->columns(', '(', ')');
         $body_new = '->columns(['.chr(13).$this->getResourceTableColumns($modelClass).chr(13).'])';
-        $body_new = '->columns(['.chr(13).$this->getResourceTableColumns($modelClass).chr(13).'])';
-        $body_new = '->columns(['.chr(13).$this->getResourceTableColumns($model_name).chr(13).'])';
         $body_up = Str::of($body)
             ->replace($body1, $body_new)
             ->toString();
@@ -102,8 +84,6 @@ class GenerateTableColumnsByFileAction
         $body = app(GetMethodBodyAction::class)->execute($class_name, 'form');
         $body1 = app(GetStrBetweenStartsWithAction::class)->execute($body, '->schema(', '(', ')');
         $body_new = '->schema(['.chr(13).$this->getResourceFormSchema($modelClass).chr(13).'])';
-        $body_new = '->schema(['.chr(13).$this->getResourceFormSchema($modelClass).chr(13).'])';
-        $body_new = '->schema(['.chr(13).$this->getResourceFormSchema($model_name).chr(13).'])';
         $body_up = Str::of($body)
             ->replace($body1, $body_new)
             ->toString();
@@ -129,18 +109,6 @@ class GenerateTableColumnsByFileAction
                 $content_new = Str::of($file->getContents())->replace($body, $body_up)->toString();
                 LaravelFile::put($filename, $content_new);
             }
-        if (in_array('anno', $model->getFillable())) {
-            $body = app(GetMethodBodyAction::class)->execute($class_name, 'table');
-            $body1 = app(GetStrBetweenStartsWithAction::class)->execute($body, '->filters(', '(', ')');
-            $body_new = "->filters([
-                    app(\Modules\Xot\Actions\Filament\Filter\GetYearFilter::class)->execute('anno',intval(date('Y')) - 3,intval(date('Y'))),
-                ],layout: \Filament\Tables\Enums\FiltersLayout::AboveContent)
-                ->persistFiltersInSession()";
-            $body_up = Str::of($body)
-                ->replace($body1, $body_new)
-                ->toString();
-            $content_new = Str::of($file->getContents())->replace($body, $body_up)->toString();
-            LaravelFile::put($filename, $content_new);
         }
         // */
     }
@@ -149,7 +117,7 @@ class GenerateTableColumnsByFileAction
      * Mostra informazioni di debug su un file.
      *
      * @param File $file Il file da analizzare
-     *
+     * 
      * @return void
      */
     public function ddFile(File $file): void

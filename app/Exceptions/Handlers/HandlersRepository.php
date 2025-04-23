@@ -31,9 +31,6 @@ class HandlersRepository
     {
         array_unshift($this->reporters, $reporter);
         return count($this->reporters);
-        array_unshift($this->reporters, $reporter);
-        return count($this->reporters);
-        return array_unshift($this->reporters, $reporter);
     }
 
     /**
@@ -43,9 +40,6 @@ class HandlersRepository
     {
         array_unshift($this->renderers, $renderer);
         return count($this->renderers);
-        array_unshift($this->renderers, $renderer);
-        return count($this->renderers);
-        return array_unshift($this->renderers, $renderer);
     }
 
     /**
@@ -55,9 +49,6 @@ class HandlersRepository
     {
         array_unshift($this->consoleRenderers, $renderer);
         return count($this->consoleRenderers);
-        array_unshift($this->consoleRenderers, $renderer);
-        return count($this->consoleRenderers);
-        return array_unshift($this->consoleRenderers, $renderer);
     }
 
     /**
@@ -116,10 +107,5 @@ class HandlersRepository
         }
 
         return is_a($e, $type->getName(), true);
-        if (! $params = $reflection->getParameters()) {
-            return false;
-        }
-
-        return $params[0]->getClass() instanceof \ReflectionClass ? $params[0]->getClass()->isInstance($e) : true;
     }
 }

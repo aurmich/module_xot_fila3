@@ -11,7 +11,6 @@ use Modules\Xot\Filament\Resources\ModuleResource;
 use Modules\Xot\Models\Module;
 
 
-
 /**
  * @property Module $record
  */

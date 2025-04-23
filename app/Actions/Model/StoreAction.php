@@ -42,9 +42,8 @@ class StoreAction
             // Ottieni il tipo di relazione dal nome della classe
             $relationClass = get_class($relation);
             $relationshipType = class_basename($relationClass);
-
+            
             $action_class = __NAMESPACE__.'\\Store\\'.$relationshipType.'Action';
-            $action_class = __NAMESPACE__.'\\Store\\'.$relation->relationship_type.'Action';
             $action = app($action_class);
             Assert::object($action);
             if (! method_exists($action, 'execute')) {

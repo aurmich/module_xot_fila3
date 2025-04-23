@@ -21,12 +21,6 @@ use Webmozart\Assert\Assert;
  * @property ?string $model
  * @property ?string $resource
  * @property ?string $slug
- * @property ?string $model
- * @property ?string $resource
- * @property ?string $slug
- * @property ?string         $model
- * @property ?string         $resource
- * @property ?string         $slug
  * @property TableLayoutEnum $layoutView
  */
 abstract class XotBaseListRecords extends FilamentListRecords
@@ -34,21 +28,6 @@ abstract class XotBaseListRecords extends FilamentListRecords
     use HasXotTable;
 
 
-
-    /*
-     * Get the table instance.
-
-    public function table(Table $table): Table
-    {
-        $defaultSort = $this->getDefaultSort();
-        $column = key($defaultSort);
-        $direction = current($defaultSort);
-
-        return $table
-            ->columns($this->getListTableColumns())
-            ->defaultSort($column, $direction);
-    }
-    */
     /**
      * Get the table columns.
      *
@@ -105,9 +84,6 @@ abstract class XotBaseListRecords extends FilamentListRecords
             /* @var \Illuminate\Contracts\Pagination\Paginator */
             Assert::isInstanceOf($res = $query->fastPaginate($count), Paginator::class);
             return $res;
-            Assert::isInstanceOf($res = $query->fastPaginate($count), Paginator::class);
-            return $res;
-            return $query->fastPaginate($count);
         }
 
         if (is_numeric($perPage)) {
@@ -122,10 +98,5 @@ abstract class XotBaseListRecords extends FilamentListRecords
         /* @var \Illuminate\Contracts\Pagination\Paginator */
         Assert::isInstanceOf($res = $query->fastPaginate(10), Paginator::class);
         return $res;
-            return $query->fastPaginate($perPageInt);
-        }
-
-        /* @var \Illuminate\Contracts\Pagination\Paginator */
-        return $query->fastPaginate(10);
     }
 }

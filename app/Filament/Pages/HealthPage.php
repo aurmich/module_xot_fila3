@@ -70,15 +70,6 @@ class HealthPage extends Page
             $checks[] = $check;
         }
         /** @var array<\Spatie\Health\Checks\Check> $checks */
-            $checks[] = \Spatie\CpuLoadHealthCheck\CpuLoadCheck::new();
-        }
-        if (class_exists(\Spatie\SecurityAdvisoriesHealthCheck\SecurityAdvisoriesCheck::class)) {
-            $checks[] = \Spatie\SecurityAdvisoriesHealthCheck\SecurityAdvisoriesCheck::new();
-        }
-        if (class_exists(\Laraxot\SmtpHealthCheck\SmtpCheck::class)) {
-            $checks[] = \Laraxot\SmtpHealthCheck\SmtpCheck::new();
-        }
-        // @phpstan-ignore argument.type
         Health::checks($checks);
         Artisan::call(RunHealthChecksCommand::class);
         $this->dispatch('refresh-component');
@@ -93,9 +84,6 @@ class HealthPage extends Page
         return [
             Action::make('refresh')
                 
-                
-                ->label('')
-
                 ->tooltip('refresh')
                 ->icon('heroicon-o-arrow-path')
                 ->button()
@@ -116,8 +104,6 @@ class HealthPage extends Page
 
         return [
             'lastRanAt' => $checkResults?->finishedAt,
-            'lastRanAt' => $checkResults?->finishedAt,
-            'lastRanAt' => new Carbon($checkResults?->finishedAt),
             'checkResults' => $checkResults,
         ];
     }

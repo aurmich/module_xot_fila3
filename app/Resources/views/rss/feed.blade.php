@@ -20,9 +20,6 @@
                 <author><![CDATA[{{ $item->created_by }}]]></author>
                 {{-- guid o id?? --}}
                 <guid>{{ $item-> }}</guid>
-                <guid>{{ $item-> }}</guid>
-                <guid>{{ $item->id }}</guid>
-                <guid>{{ $item->id }}</guid>
                 <pubDate>{{ $item->created_at->toRssString() }}</pubDate>
             </item>
         @endforeach

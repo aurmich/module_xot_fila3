@@ -9,17 +9,13 @@ use Modules\Xot\Filament\Resources\SessionResource;
 
 
 
-use Modules\Xot\Filament\Resources\XotBaseResource\RelationManagers\XotBaseRelationManager;
+use Modules\Xot\Filament\Resources\XotBaseResource\RelationManager\XotBaseRelationManager;
 
 
 
 
 
 class CreateSession extends \Modules\Xot\Filament\Resources\Pages\XotBaseCreateRecord
-use Filament\Resources\Pages\CreateRecord;
-use Modules\Xot\Filament\Resources\SessionResource;
-
-class CreateSession extends CreateRecord
 {
     protected static string $resource = SessionResource::class;
 }

@@ -150,13 +150,6 @@ abstract class XotBaseServiceProvider extends ServiceProvider
     protected function registerConfig(): void
     {
         try {
-            $configPath = app(GetModulePathByGeneratorAction::class)->execute($this->name, 'config');
-
-            /*
-            $this->publishes([
-                $configPath => config_path($this->nameLower.'.php'),
-            ], 'config');
-            */
             Assert::string($relativePath = config('modules.paths.generator.config.path'));
             $configPath = module_path($this->name, $relativePath);
             if (! is_string($configPath)) {

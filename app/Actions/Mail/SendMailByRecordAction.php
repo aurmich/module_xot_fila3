@@ -7,7 +7,6 @@ namespace Modules\Xot\Actions\Mail;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Mail\Mailable;
 use Illuminate\Support\Facades\Mail;
-use Illuminate\Support\Facades\Mail;
 use Spatie\QueueableAction\QueueableAction;
 use Webmozart\Assert\Assert;
 
@@ -21,9 +20,6 @@ class SendMailByRecordAction
      * @param Model $record Il record da utilizzare come dati per la mail
      * @param string $mailClass La classe Mailable da utilizzare
      * @return void
-     * Undocumented function.
-     *
-     * @return bool
      */
     public function execute(Model $record, string $mailClass): void
     {
@@ -35,8 +31,5 @@ class SendMailByRecordAction
         /** @var Mailable $mail */
         $mail = app($mailClass, ['record' => $record]);
         Mail::send($mail);
-        /** @var Mailable $mail */
-        $mail = new $mailClass($record);
-        $mail->send();
     }
 }

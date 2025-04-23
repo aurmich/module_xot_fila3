@@ -1,28 +1,9 @@
-# Analisi PHPStan - Modulo Xot - Livello 10
+# PHPStan Level 10 - Modulo Xot
 
-[⬅️ Torna alla Roadmap del modulo](../roadmap.md)
+**Data generazione:** 2025-04-23 07:18
 
+## Errori rilevati e soluzioni proposte
 
-Data analisi: 2025-04-11 13:01:31
-
-## Risultato: ERRORI
-
-Rilevati  errori a livello 10.
-
-### Dettaglio errori
-```
-Note: Using configuration file /var/www/html/_bases/base_predict_fila3_mono/laravel/phpstan.neon.
-
- [ERROR] No files found to analyse.                                             
-```
-
-### Suggerimenti per la risoluzione
-
-### Consigli generali
-
-1. Iniziare risolvendo gli errori più semplici e ripetitivi
-2. Utilizzare `@phpstan-ignore-next-line` solo come ultima risorsa per errori non risolvibili
-3. Considerare l'aggiunta di test unitari per verificare il comportamento corretto
-4. Aggiornare la documentazione del codice con annotazioni PHPDoc complete
-5. Valutare l'utilizzo di classi di tipo dedicate (DTO) per strutture dati complesse
-6. Seguire le linee guida di tipizzazione nel documento 'Regole Windsurf per base_predict_fila3_mono'
+Nessun errore trovato al livello 10.
+## Collegamenti
+- Torna all'indice principale: [Indice Report PHPStan Moduli](../../../../../docs/phpstan_modules_index.md)

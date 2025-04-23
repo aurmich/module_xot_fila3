@@ -31,81 +31,29 @@ namespace Modules\Rating\App\Console\Commands;
 Un errore particolarmente frequente riguarda le Actions. La convenzione corretta è la seguente:
 
 - ✅ **CORRETTO**: `namespace Modules\Xot\Actions;`
-
-
-
-- ❌ **ERRATO**: `namespace Modules\Xot\app\Actions;`
-
-
- d9307de (fix: auto resolve conflict)
-
-
-
-
- c2dac53 (.)
+<<<<<<< HEAD
 - ❌ **ERRATO**: `namespace Modules\Xot\Actions;`
-
-
+=======
+<<<<<<< HEAD
 - ❌ **ERRATO**: `namespace Modules\Xot\Actions;`
-
+=======
 - ❌ **ERRATO**: `namespace Modules\Xot\app\Actions;`
-
- origin/dev
- origin/dev
-
- e5c56c3 (.)
-
-
-- ❌ **ERRATO**: `namespace Modules\Xot\app\Actions;`
- 50bb41c (fix: auto resolve conflict)
- d9307de (fix: auto resolve conflict)
-
-
-
-
-- ❌ **ERRATO**: `namespace Modules\Xot\app\Actions;`
- 50bb41c (fix: auto resolve conflict)
- c2dac53 (.)
+>>>>>>> origin/dev
+>>>>>>> origin/dev
 
 Anche se il file si trova nel percorso fisico `Modules/Xot/app/Actions/`, il namespace non deve mai includere il segmento `app`.
 
 Questo errore causa spesso problemi di PHPStan come:
 ```
-
-
-
-Class 'Modules\Xot\app\Actions\MyAction' not found.
-
-
- d9307de (fix: auto resolve conflict)
-
-
-
-
- c2dac53 (.)
+<<<<<<< HEAD
 Class 'Modules\Xot\Actions\MyAction' not found.
-
-
+=======
+<<<<<<< HEAD
 Class 'Modules\Xot\Actions\MyAction' not found.
-
+=======
 Class 'Modules\Xot\app\Actions\MyAction' not found.
-
- origin/dev
- origin/dev
-
- e5c56c3 (.)
-
-
-Class 'Modules\Xot\app\Actions\MyAction' not found.
- 50bb41c (fix: auto resolve conflict)
- d9307de (fix: auto resolve conflict)
-
-
-
-
-Class 'Modules\Xot\app\Actions\MyAction' not found.
- 50bb41c (fix: auto resolve conflict)
- c2dac53 (.)
+>>>>>>> origin/dev
+>>>>>>> origin/dev
 ```
 
 La correzione è sempre la stessa: rimuovere il segmento `app` dal namespace.
@@ -223,15 +171,6 @@ class RatingServiceProvider extends XotBaseServiceProvider
 }
 ```
 
-
-
-
-
-
- d9307de (fix: auto resolve conflict)
-
-
- c2dac53 (.)
 ### Route Service Providers
 
 ```php
@@ -254,17 +193,6 @@ class RouteServiceProvider extends XotBaseRouteServiceProvider
 }
 ```
 
-
-
- e5c56c3 (.)
-
-
- 50bb41c (fix: auto resolve conflict)
- d9307de (fix: auto resolve conflict)
-
-
- 50bb41c (fix: auto resolve conflict)
- c2dac53 (.)
 ## Corrispondenza tra Struttura delle Directory e Namespace
 
 | Directory fisica                             | Namespace corretto                   |
@@ -306,57 +234,6 @@ use Modules\User\Models\User;
 use Modules\Rating\Models\Rating as RatingModel;
 ```
 
-
-
-
-## Test di Validazione Namespace
-
-Per verificare la correttezza dei namespace, utilizzare il seguente test Pest:
-
-```php
-test('verifica correttezza namespace', function () {
-    $basePath = base_path('Modules');
-    $modules = array_filter(scandir($basePath), fn($item) => 
-        is_dir($basePath . '/' . $item) && !in_array($item, ['.', '..'])
-    );
-    
-    $errors = [];
-    
-    foreach ($modules as $module) {
-        $appPath = $basePath . '/' . $module . '/app';
-        if (!is_dir($appPath)) continue;
-        
-        $iterator = new RecursiveIteratorIterator(
-            new RecursiveDirectoryIterator($appPath)
-        );
-        
-        foreach ($iterator as $file) {
-            if ($file->isFile() && $file->getExtension() === 'php') {
-                $content = file_get_contents($file->getRealPath());
-                if (preg_match('/namespace\s+[^;]+;/', $content, $matches)) {
-                    $namespace = $matches[0];
-                    if (strpos($namespace, '\app\\') !== false) {
-                        $errors[] = sprintf(
-                            'File %s contiene namespace non valido: %s',
-                            $file->getRealPath(),
-                            $namespace
-                        );
-                    }
-                }
-            }
-        }
-    }
-    
-    expect($errors)
-        ->withContext("I seguenti file contengono namespace non validi:\n" . implode("\n", $errors))
-        ->toBeEmpty();
-}); 
-
-
- d9307de (fix: auto resolve conflict)
-
-
- c2dac53 (.)
 ## Namespace in composer.json
 
 Quando si definisce l'autoloading in `composer.json`, assicurarsi che la mappatura rifletta questa convenzione:
@@ -412,59 +289,3 @@ namespace Modules\Rating\Console\Commands;
 5. **Standard Laravel**: Allineato alle convenzioni di Laravel
 
 Seguire queste convenzioni di namespace aiuterà a mantenere un codebase coerente e a evitare errori comuni durante l'analisi statica del codice con PHPStan. 
-
-
- e5c56c3 (.)
-
-
-
-
- c2dac53 (.)
-## Test di Validazione Namespace
-
-Per verificare la correttezza dei namespace, utilizzare il seguente test Pest:
-
-```php
-test('verifica correttezza namespace', function () {
-    $basePath = base_path('Modules');
-    $modules = array_filter(scandir($basePath), fn($item) => 
-        is_dir($basePath . '/' . $item) && !in_array($item, ['.', '..'])
-    );
-    
-    $errors = [];
-    
-    foreach ($modules as $module) {
-        $appPath = $basePath . '/' . $module . '/app';
-        if (!is_dir($appPath)) continue;
-        
-        $iterator = new RecursiveIteratorIterator(
-            new RecursiveDirectoryIterator($appPath)
-        );
-        
-        foreach ($iterator as $file) {
-            if ($file->isFile() && $file->getExtension() === 'php') {
-                $content = file_get_contents($file->getRealPath());
-                if (preg_match('/namespace\s+[^;]+;/', $content, $matches)) {
-                    $namespace = $matches[0];
-                    if (strpos($namespace, '\app\\') !== false) {
-                        $errors[] = sprintf(
-                            'File %s contiene namespace non valido: %s',
-                            $file->getRealPath(),
-                            $namespace
-                        );
-                    }
-                }
-            }
-        }
-    }
-    
-    expect($errors)
-        ->withContext("I seguenti file contengono namespace non validi:\n" . implode("\n", $errors))
-        ->toBeEmpty();
-}); 
-
- 50bb41c (fix: auto resolve conflict)
- d9307de (fix: auto resolve conflict)
-
- 50bb41c (fix: auto resolve conflict)
- c2dac53 (.)

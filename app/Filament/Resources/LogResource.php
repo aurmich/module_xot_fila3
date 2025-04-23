@@ -15,8 +15,6 @@ use Modules\Xot\Filament\Resources\LogResource\Pages;
 use Modules\Xot\Filament\Traits\NavigationLabelTrait;
 use Modules\Xot\Models\Log;
 use Modules\Xot\Filament\Resources\XotBaseResource\RelationManager\XotBaseRelationManager;
-use Modules\Xot\Filament\Resources\XotBaseResource\RelationManager\XotBaseRelationManager;
-use Modules\Xot\Filament\Resources\XotBaseResource\RelationManagers\XotBaseRelationManager;
 
 class LogResource extends XotBaseResource
 {
@@ -36,15 +34,6 @@ class LogResource extends XotBaseResource
                 ->maxLength(255),
 
             'content' => Textarea::make('content')
-            TextInput::make('name')
-                ->required()
-                ->maxLength(255),
-
-            TextInput::make('path')
-                ->required()
-                ->maxLength(255),
-
-            Textarea::make('content')
                 ->columnSpanFull(),
         ];
     }

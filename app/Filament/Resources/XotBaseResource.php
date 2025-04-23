@@ -17,11 +17,6 @@ use function Safe\glob;
 /**
  * @method static string getUrl(string $name, array<string, mixed> $parameters = [], bool $isAbsolute = true)
  */
-
-use function Safe\glob;
-
-use Webmozart\Assert\Assert;
-
 abstract class XotBaseResource extends FilamentResource
 {
     use NavigationLabelTrait;
@@ -71,11 +66,6 @@ abstract class XotBaseResource extends FilamentResource
     abstract public static function getFormSchema(): array;
 
     final public static function form(Form $form): Form
-     * per rendere obbligatorio questo metodo.
-     */
-    abstract public static function getFormSchema(): array;
-
-    public static function form(Form $form): Form
     {
         return $form
             ->schema(static::getFormSchema());
@@ -110,9 +100,6 @@ abstract class XotBaseResource extends FilamentResource
     /**
      * @return array<string, \Filament\Resources\Pages\PageRegistration>
      */
-    /**
-     * @return array<string, \Filament\Resources\Pages\PageRegistration>
-     */
     public static function getPages(): array
     {
         $prefix = static::class.'\Pages\\';
@@ -131,7 +118,7 @@ abstract class XotBaseResource extends FilamentResource
         $edit = $edit;
         /** @var class-string<\Filament\Resources\Pages\Page> $view */
         $view = $view;
-
+        
         /** @var array<string, \Filament\Resources\Pages\PageRegistration> $pages */
         $pages = [
             'index' => $index::route('/'),
@@ -150,18 +137,12 @@ abstract class XotBaseResource extends FilamentResource
     /**
      * @return array<class-string<\Filament\Resources\RelationManagers\RelationManager>|\Filament\Resources\RelationManagers\RelationGroup|\Filament\Resources\RelationManagers\RelationManagerConfiguration>
      */
-    /**
-     * @return array<class-string<\Filament\Resources\RelationManagers\RelationManager>|\Filament\Resources\RelationManagers\RelationGroup|\Filament\Resources\RelationManagers\RelationManagerConfiguration>
-     */
     public static function getRelations(): array
     {
         $reflector = new \ReflectionClass(static::class);
         $filename = $reflector->getFileName();
         Assert::string($filename);
         
-        Assert::string($filename);
-        
-
         $path = Str::of($filename)
             ->before('.php')
             ->append(DIRECTORY_SEPARATOR)
@@ -170,7 +151,7 @@ abstract class XotBaseResource extends FilamentResource
 
         $files = glob($path.DIRECTORY_SEPARATOR.'*RelationManager.php');
         Assert::isArray($files);
-
+        
         /** @var array<class-string<\Filament\Resources\RelationManagers\RelationManager>> $res */
         $res = [];
         foreach ($files as $file) {
@@ -179,15 +160,11 @@ abstract class XotBaseResource extends FilamentResource
                 ->before('.php')
                 ->prepend(static::class.'\RelationManagers\\')
                 ->toString();
-
+            
             if (class_exists($className)) {
                 Assert::subclassOf($className, \Filament\Resources\RelationManagers\RelationManager::class);
                 $res[] = $className;
             }
-        $res = [];
-        foreach ($files as $file) {
-            $info = pathinfo($file);
-            $res[] = static::class.'\RelationManagers\\'.$info['filename'];
         }
 
         return $res;

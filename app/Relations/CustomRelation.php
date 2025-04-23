@@ -151,8 +151,6 @@ class CustomRelation extends Relation
      * @param mixed                                                       $operator
      * @param mixed                                                       $value
      * @param string $boolean
-     * @param string $boolean
-     * @param string                                                      $boolean
      *
      * @return \Illuminate\Database\Eloquent\Builder
      */

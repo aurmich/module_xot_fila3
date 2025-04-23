@@ -16,8 +16,6 @@ use Modules\Xot\Filament\Resources\ModuleResource;
 use Modules\Xot\Filament\Resources\Pages\XotBaseListRecords;
 use Nwidart\Modules\Facades\Module;
 
-use Modules\Xot\Filament\Resources\XotBaseResource\RelationManagers\XotBaseRelationManager;
-
 use Modules\Xot\Filament\Resources\XotBaseResource\RelationManager\XotBaseRelationManager;
 
 class ListModules extends XotBaseListRecords
@@ -82,12 +80,6 @@ class ListModules extends XotBaseListRecords
                 ,
             DeleteAction::make()
                 
-                ->label(''),
-            EditAction::make()
-                ->label(''),
-            DeleteAction::make()
-                ->label('')
-
                 ->requiresConfirmation(),
         ];
     }
@@ -96,8 +88,6 @@ class ListModules extends XotBaseListRecords
      * @return array<string, Tables\Actions\BulkAction>
      */
     public function getTableBulkActions(): array
-    public function getTableBulkActions(): array
-    protected function getTableBulkActions(): array
     {
         return [
             'delete' => DeleteBulkAction::make(),

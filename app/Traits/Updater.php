@@ -95,7 +95,7 @@ trait Updater
             static function (Model $model): void {
                 Assert::isArray($attributes = $model->attributes);
 
-                if (array_key_exists('deleted_by', $attributes)) {
+                if (\in_array('deleted_by', array_keys($attributes), false)) {
                     $model->setAttribute('deleted_by', authId());
                 }
             }

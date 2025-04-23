@@ -22,12 +22,6 @@ class GetViewByClassAction
         $module = Str::of($class)->betweenFirst('Modules\\', '\\')->toString();
         $module_low = Str::of($module)->lower()->toString();
         $after = Str::of($class)
-     */
-    public function execute(string $class, string $suffix=''): string
-    {
-        $module = Str::of($class)->betweenFirst('Modules\\', '\\')->toString();
-        $module_low = Str::of($module)->lower()->toString();
-        $after=Str::of($class)
             ->after('Modules\\'.$module.'\\')
             ->explode('\\')
             ->toArray();
@@ -36,56 +30,39 @@ class GetViewByClassAction
             if ($key > 0 && isset($after[$key - 1])) {
                 /** @var mixed $prevValue */
                 $prevValue = $after[$key - 1];
-
+                
                 // Gestione sicura delle conversioni di tipo per PHPStan level 10
                 $prevValueStr = '';
-
+                
                 if (is_string($prevValue)) {
                     $prevValueStr = $prevValue;
                 } elseif ($prevValue === null) {
                     $prevValueStr = '';
                 } elseif (is_scalar($prevValue)) {
                     // Cast sicuro per valori scalari (int, float, bool)
-                   // $prevValueStr = is_string($prevValue) ? $prevValue : (string) $prevValue;
-                   $prevValueStr = strval( $prevValue);
-                   // $prevValueStr = is_string($prevValue) ? $prevValue : (string) $prevValue;
-                   $prevValueStr = strval( $prevValue);
-                    $prevValueStr = is_string($prevValue) ? $prevValue : (string) $prevValue;
 
-                   // Utilizziamo il cast esplicito con controllo di tipo per PHPStan Level 9
-                   $prevValueStr = is_scalar($prevValue) ? (string) $prevValue : '';
+                   // $prevValueStr = is_string($prevValue) ? $prevValue : (string) $prevValue;
+                   $prevValueStr = strval( $prevValue);
+
+>>>>>>> origin/dev
                 }
-
+                
                 $singular = Str::of($prevValueStr)->singular()->toString();
                 if (Str::endsWith($value, $singular)) {
                     $value = Str::of($value)->beforeLast($singular)->toString();
                 }
             }
-
+            
             return Str::of($value)->slug()->toString();
         });
 
         $implode = implode('.', $mapped);
         $view = $module_low.'::'.$implode.$suffix;
-
+        
         if (!view()->exists($view)) {
             throw new \Exception('View not found: '.$view);
         }
 
         return $view;
-            if($key>0 && isset($after[$key-1])) {
-                $singular = Str::of($after[$key-1])->singular()->toString();
-                if(Str::endsWith($value, $singular)) {
-                    $value=Str::of($value)->beforeLast($singular)->toString();
-                }
-            }
-            return Str::of($value)->slug()->toString();
-        });
-
-        $implode=implode('.', $mapped);
-        $view=$module_low.'::'.$implode.$suffix;
-
-        return $view;
-        
     }
 }

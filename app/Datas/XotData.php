@@ -196,13 +196,14 @@ class XotData extends Data implements Wireable
     public function getProfileClass(): string
     {
         $class = 'Modules\\'.$this->main_module.'\Models\Profile';
+        
         // Verifica che la classe esista
         Assert::classExists($class, '['.$class.']['.__LINE__.']['.class_basename($this).']');
-
+        
         // Verifica che sia un Model e implementi ProfileContract
         Assert::isAOf($class, Model::class, '['.__LINE__.']['.class_basename($this).']['.$class.']');
         Assert::implementsInterface($class, ProfileContract::class, '['.__LINE__.']['.class_basename($this).']['.$class.']');
-
+        
         /** @var class-string<Model&ProfileContract> */
         return $class;
     }
@@ -254,12 +255,9 @@ class XotData extends Data implements Wireable
             return false;
         }
 
-        try {
-            $result = $user->hasRole('super-admin');
-        } catch (\Exception $e) {
-            return false;
-        }
-
+        // Utilizziamo un'asserzione per garantire che hasRole restituisca un booleano
+        $result = $user->hasRole('super-admin');
+        
         return $result === true;
     }
 
@@ -268,7 +266,7 @@ class XotData extends Data implements Wireable
         if (null !== $this->profile) {
             return $this->profile;
         }
-
+        
         $user_id = (string) authId();
         $this->profile = $this->getProfileModelByUserId($user_id);
         Assert::implementsInterface($this->profile, ProfileContract::class, '['.__LINE__.']['.class_basename($this).']');
@@ -296,7 +294,7 @@ class XotData extends Data implements Wireable
         $path0 = base_path('Themes/'.$this->pub_theme.'/resources/views/'.$key);
         try {
             $path = realpath($path0);
-
+            
             return $path;
         } catch (\Exception $e) {
             throw new \Exception('realpath not find dir['.$path0.']'.PHP_EOL.'['.$e->getMessage().']');

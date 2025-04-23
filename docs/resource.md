@@ -343,54 +343,7 @@ class ListMyRecords extends XotBaseListRecords
     public function mount(): void
     {
         abort_unless(
-
-
-
-
             Auth::user()->can('resource.read'),
-
-
-            Auth::user()?->can('resource.read'),
- e2a4c5d (.)
-
-            Auth::user()->can('resource.read'),
- e5c56c3 (.)
-
-
-
- 7b67053 (fix: auto resolve conflict)
-            Auth::user()->can('resource.read'),
-
-
-
-            Auth::user()->can('resource.read'),
-
-            Auth::user()?->can('resource.read'),
- e2a4c5d (.)
- 50bb41c (fix: auto resolve conflict)
-
- d9307de (fix: auto resolve conflict)
-
-
-
-            Auth::user()?->can('resource.read'),
- e2a4c5d (.)
- 4ab3760 (.)
- 7b67053 (fix: auto resolve conflict)
-
-
-
-            Auth::user()->can('resource.read'),
-
-            Auth::user()?->can('resource.read'),
- e2a4c5d (.)
- 50bb41c (fix: auto resolve conflict)
-
-
-            Auth::user()?->can('resource.read'),
- e2a4c5d (.)
- 4ab3760 (.)
- c2dac53 (.)
             403
         );
     }
@@ -399,54 +352,7 @@ class ListMyRecords extends XotBaseListRecords
     {
         return [
             CreateAction::make()
-
-
-
-
                 ->visible(fn () => Auth::user()->can('resource.write')),
-
-
-                ->visible(fn () => Auth::user()?->can('resource.write')),
- e2a4c5d (.)
-
-                ->visible(fn () => Auth::user()->can('resource.write')),
- e5c56c3 (.)
-
-
-
- 7b67053 (fix: auto resolve conflict)
-                ->visible(fn () => Auth::user()->can('resource.write')),
-
-
-
-                ->visible(fn () => Auth::user()->can('resource.write')),
-
-                ->visible(fn () => Auth::user()?->can('resource.write')),
- e2a4c5d (.)
- 50bb41c (fix: auto resolve conflict)
-
- d9307de (fix: auto resolve conflict)
-
-
-
-                ->visible(fn () => Auth::user()?->can('resource.write')),
- e2a4c5d (.)
- 4ab3760 (.)
- 7b67053 (fix: auto resolve conflict)
-
-
-
-                ->visible(fn () => Auth::user()->can('resource.write')),
-
-                ->visible(fn () => Auth::user()?->can('resource.write')),
- e2a4c5d (.)
- 50bb41c (fix: auto resolve conflict)
-
-
-                ->visible(fn () => Auth::user()?->can('resource.write')),
- e2a4c5d (.)
- 4ab3760 (.)
- c2dac53 (.)
         ];
     }
 }
@@ -495,54 +401,7 @@ class ListRecords extends XotBaseListRecords
     public function mount(): void
     {
         abort_unless(
-
-
-
-
             Auth::user()->can('resource.read'),
-
-
-            Auth::user()?->can('resource.read'),
- e2a4c5d (.)
-
-            Auth::user()->can('resource.read'),
- e5c56c3 (.)
-
-
-
- 7b67053 (fix: auto resolve conflict)
-            Auth::user()->can('resource.read'),
-
-
-
-            Auth::user()->can('resource.read'),
-
-            Auth::user()?->can('resource.read'),
- e2a4c5d (.)
- 50bb41c (fix: auto resolve conflict)
-
- d9307de (fix: auto resolve conflict)
-
-
-
-            Auth::user()?->can('resource.read'),
- e2a4c5d (.)
- 4ab3760 (.)
- 7b67053 (fix: auto resolve conflict)
-
-
-
-            Auth::user()->can('resource.read'),
-
-            Auth::user()?->can('resource.read'),
- e2a4c5d (.)
- 50bb41c (fix: auto resolve conflict)
-
-
-            Auth::user()?->can('resource.read'),
- e2a4c5d (.)
- 4ab3760 (.)
- c2dac53 (.)
             403
         );
     }
@@ -661,36 +520,6 @@ public function getTableColumns(): array
 3. Mantieni la visibilità pubblica dei metodi
 4. Non aggiungere il prefisso "List" ai nomi dei metodi
 
-
-
-
-
-
-
- e5c56c3 (.)
-
-
-
- 50bb41c (fix: auto resolve conflict)
- d9307de (fix: auto resolve conflict)
-
-
-
- 50bb41c (fix: auto resolve conflict)
-
-
- 4ab3760 (.)
- 7b67053 (fix: auto resolve conflict)
-
-
-
-
-
- 50bb41c (fix: auto resolve conflict)
-
-
- 4ab3760 (.)
- c2dac53 (.)
 ## Tipizzazione degli Array
 
 È **OBBLIGATORIO** utilizzare chiavi di tipo stringa per tutti gli array restituiti dai seguenti metodi:
@@ -771,40 +600,4 @@ public function getTableBulkActions(): array
 - Mantenere consistenza nei nomi delle chiavi tra diverse risorse
 - Utilizzare sempre la tipizzazione PHPDoc corretta
 
-
-
-
-
-
- e2a4c5d (.)
-
- e5c56c3 (.)
-
-
- 7b67053 (fix: auto resolve conflict)
-
-
- e2a4c5d (.)
- 50bb41c (fix: auto resolve conflict)
-
- d9307de (fix: auto resolve conflict)
-
-
-
- e2a4c5d (.)
- 4ab3760 (.)
- 7b67053 (fix: auto resolve conflict)
 // ... existing code ... 
-
-
-
-
-
- e2a4c5d (.)
- 50bb41c (fix: auto resolve conflict)
-
-
- e2a4c5d (.)
- 4ab3760 (.)
-// ... existing code ... 
- c2dac53 (.)

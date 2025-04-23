@@ -16,9 +16,6 @@ abstract class XotBaseTableAction extends Action
     /**
      * @return \Illuminate\Database\Eloquent\Model|null
      */
- */
-abstract class XotBaseTableAction extends Action
-{
     public function getRecord(): ?Model
     {
         return $this->record;

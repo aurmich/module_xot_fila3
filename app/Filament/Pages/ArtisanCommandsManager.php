@@ -9,7 +9,6 @@ use Filament\Notifications\Notification;
 use Filament\Pages\Page;
 use Filament\Support\Enums\IconPosition;
 use Livewire\Attributes\On;
-use Livewire\Attributes\On;
 use Modules\Xot\Actions\ExecuteArtisanCommandAction;
 
 /**
@@ -27,7 +26,7 @@ class ArtisanCommandsManager extends XotBasePage
 
     /**
      * Livewire event listeners for this component.
-     *
+     * 
      * @var array<string, string>
      * @phpstan-var array<string, string>
      */
@@ -39,29 +38,6 @@ class ArtisanCommandsManager extends XotBasePage
         'artisan-command.failed' => 'handleCommandFailed',
         'artisan-command.error' => 'handleCommandError',
     ];
-
-class ArtisanCommandsManager extends Page
-{
-    protected static ?string $navigationIcon = 'heroicon-o-command-line';
-    protected static ?string $navigationLabel = 'Artisan Commands';
-    protected static ?string $title = 'Artisan Commands Manager';
-    protected static ?string $slug = 'artisan-commands';
-
-    public array $output = [];
-    public string $currentCommand = '';
-    public string $status = '';
-    public bool $isRunning = false;
-    public ?string $processId = null;
-
-    protected $listeners = [
-        'echo:private-command-output,CommandOutput' => 'handleBroadcastOutput',
-        'refresh-component' => '$refresh',
-    ];
-
-    public function getPollingInterval(): ?string
-    {
-        return $this->isRunning ? '1s' : null;
-    }
 
     protected function getHeaderActions(): array
     {
@@ -148,9 +124,6 @@ class ArtisanCommandsManager extends Page
 
         try {
             app(ExecuteArtisanCommandAction::class)->execute($command);
-            app(ExecuteArtisanCommandAction::class)->execute($command);
-            $this->processId = uniqid('cmd_');
-            app(ExecuteArtisanCommandAction::class)->execute($command, $this->processId);
         } catch (\Exception $e) {
             Notification::make()
                 ->title(__('xot::artisan-commands-manager.notifications.error'))
@@ -213,43 +186,5 @@ class ArtisanCommandsManager extends Page
             ->body($error)
             ->danger()
             ->send();
-    public function getListeners()
-    {
-        return array_merge(parent::getListeners(), [
-            "echo-private:command.{$this->processId},CommandOutput" => 'handleRealTimeOutput',
-        ]);
-    }
-
-    public function handleRealTimeOutput($event)
-    {
-        if ($event['processId'] === $this->processId) {
-            $this->output[] = $event['output'];
-
-            if ('completed' === $event['type']) {
-                $this->isRunning = false;
-                $this->status = 'completed';
-                Notification::make()
-                    ->title(__('xot::artisan-commands-manager.notifications.success'))
-                    ->success()
-                    ->send();
-            } elseif ('error' === $event['type']) {
-                $this->isRunning = false;
-                $this->status = 'failed';
-                Notification::make()
-                    ->title(__('xot::artisan-commands-manager.notifications.error'))
-                    ->body($event['output'])
-                    ->danger()
-                    ->send();
-            }
-        }
-    }
-
-    public function render(): \Illuminate\Contracts\View\View
-    {
-        return view('xot::filament.pages.artisan-commands-manager', [
-            'output' => $this->output,
-            'isRunning' => $this->isRunning,
-            'currentCommand' => $this->currentCommand,
-        ]);
     }
 }

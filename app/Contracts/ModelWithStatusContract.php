@@ -26,12 +26,6 @@ use Spatie\ModelStatus\Status;
  * @property string $tennant_name
  * @property UserContract|null        $user
  * @property string $status
- * @property string $tennant_name
- * @property UserContract|null        $user
- * @property string $status
- * @property string                   $tennant_name
- * @property UserContract|null        $user
- * @property string                   $status
  * @property Collection|array<Status> $statuses
  * @property int|null                 $statuses_count
  *
@@ -50,7 +44,6 @@ use Spatie\ModelStatus\Status;
  * @method mixed     save($params)
  * @method array     treeLabel()
  * @method array     treeSons()
- * @method int       treeSonsCount()
  * @method int       treeSonsCount()
  * @method array     toArray()
  * @method BelongsTo user()

@@ -12,7 +12,6 @@ use Modules\Xot\Filament\Resources\ExtraResource;
 use Modules\Xot\Filament\Resources\Pages\XotBaseListRecords;
 
 
-
 /**
  * @see ExtraResource
  */
@@ -66,14 +65,6 @@ class ListExtras extends XotBaseListRecords
     {
         return [
             'delete' => DeleteBulkAction::make(),
-            EditAction::make(),
-        ];
-    }
-
-    public function getTableBulkActions(): array
-    {
-        return [
-            DeleteBulkAction::make(),
         ];
     }
 }

@@ -10,7 +10,7 @@ use Modules\Xot\Filament\Resources\ExtraResource;
 
 
 
-use Modules\Xot\Filament\Resources\XotBaseResource\RelationManagers\XotBaseRelationManager;
+use Modules\Xot\Filament\Resources\XotBaseResource\RelationManager\XotBaseRelationManager;
 
 
 
@@ -21,9 +21,4 @@ class EditExtra extends \Modules\Xot\Filament\Resources\Pages\XotBaseEditRecord
     protected static string $resource = ExtraResource::class;
 
 
-use Modules\Xot\Filament\Resources\ExtraResource;
-
-class EditExtra extends \Modules\Xot\Filament\Resources\Pages\XotBaseEditRecord
-{
-    protected static string $resource = ExtraResource::class;
 }

@@ -33,22 +33,6 @@ class RouteService
         }
 
         // Se il primo segmento dell'URL è 'admin', siamo in modalità amministrazione
-     * Summary of inAdmin.
-     *
-     * @param array<string,string> $params
-     */
-    public static function inAdmin(array $params = []): mixed
-    {
-        if (isset($params['in_admin'])) {
-            return $params['in_admin'];
-        }
-
-        // dddx(ThemeService::__getStatic('in_admin'));
-        /* Cannot call method get() on mixed
-        if (null !== config()->get('in_admin')) {
-            return config()->get('in_admin');
-        }
-        */
         if ('admin' === Request::segment(1)) {
             return true;
         }
@@ -59,16 +43,6 @@ class RouteService
         // Se abbiamo almeno un segmento, è 'livewire' e la sessione 'in_admin' è true
         return (is_countable($segments) ? \count($segments) : 0) > 0 && 
                'livewire' === $segments[0] && 
-               session('in_admin', false) === true;
-        $segments = Request::segments();
-
-        return (is_countable($segments) ? \count($segments) : 0) > 0 && 'livewire' === $segments[0] && true === session('in_admin');
-        // Verifichiamo un caso speciale per le richieste Livewire
-        $segments = Request::segments();
-
-        // Se abbiamo almeno un segmento, è 'livewire' e la sessione 'in_admin' è true
-        return (is_countable($segments) ? \count($segments) : 0) > 0 &&
-               'livewire' === $segments[0] &&
                session('in_admin', false) === true;
     }
 
@@ -180,8 +154,6 @@ class RouteService
             //return $tmp;
 
             $container_root = $parents->first()?->row;
-            $container_root = $parents->first()?->row;
-            $container_root = $parents->first()->row;
         }
 
         //$containers_class = self::getContainersClass();
