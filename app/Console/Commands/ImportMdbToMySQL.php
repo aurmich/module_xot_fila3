@@ -22,15 +22,21 @@ class ImportMdbToMySQL extends Command
      * @var string
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     protected $signature = 'xot:import-mdb-to-mysql 
                             {source : Percorso del file MDB sorgente} 
                             {connection : Nome della connessione MySQL} 
                             {--tables=* : Tabelle specifiche da importare} 
 =======
+=======
+>>>>>>> aurmich/dev
     protected $signature = 'xot:import-mdb-to-mysql
                             {source : Percorso del file MDB sorgente}
                             {connection : Nome della connessione MySQL}
                             {--tables=* : Tabelle specifiche da importare}
+<<<<<<< HEAD
+>>>>>>> aurmich/dev
+=======
 >>>>>>> aurmich/dev
                             {--skip-data : Salta l\'importazione dei dati}';
 
@@ -58,11 +64,14 @@ class ImportMdbToMySQL extends Command
 
         try {
 <<<<<<< HEAD
+<<<<<<< HEAD
             $this->importSchema($source, $connection, $tables);
             
             if (! $skipData) {
                 $this->importData($source, $connection, $tables);
 =======
+=======
+>>>>>>> aurmich/dev
             // Ottieni le credenziali dalla configurazione di connessione
             $config = config("database.connections.{$connection}");
             if (!$config) {
@@ -78,6 +87,9 @@ class ImportMdbToMySQL extends Command
 
             if (! $skipData) {
                 $this->importData($source, $mysqlUser, $mysqlPassword, $mysqlDb, $tables);
+<<<<<<< HEAD
+>>>>>>> aurmich/dev
+=======
 >>>>>>> aurmich/dev
             }
 
@@ -88,8 +100,11 @@ class ImportMdbToMySQL extends Command
             return 1;
         }
 <<<<<<< HEAD
+<<<<<<< HEAD
         
         return $tables;
+=======
+>>>>>>> aurmich/dev
 =======
 >>>>>>> aurmich/dev
     }
@@ -98,17 +113,23 @@ class ImportMdbToMySQL extends Command
      * Importa lo schema del database.
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     protected function importSchema(string $source, string $connection, ?array $tables = null): void
     {
         // Implementazione dell'importazione dello schema
         $this->info('Importazione schema in corso...');
 =======
+=======
+>>>>>>> aurmich/dev
     protected function importSchema(string $source, string $mysqlUser, string $mysqlPassword, string $mysqlDb, ?array $tables = null): void
     {
         $this->info('Importazione schema in corso...');
 
         $this->createDatabase($mysqlUser, $mysqlPassword, $mysqlDb);
         $this->createTablesInMySQL($source, $mysqlUser, $mysqlPassword, $mysqlDb, $tables);
+<<<<<<< HEAD
+>>>>>>> aurmich/dev
+=======
 >>>>>>> aurmich/dev
     }
 
@@ -116,11 +137,14 @@ class ImportMdbToMySQL extends Command
      * Importa i dati del database.
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     protected function importData(string $source, string $connection, ?array $tables = null): void
     {
         // Implementazione dell'importazione dei dati
         $this->info('Importazione dati in corso...');
 =======
+=======
+>>>>>>> aurmich/dev
     protected function importData(string $source, string $mysqlUser, string $mysqlPassword, string $mysqlDb, ?array $tables = null): void
     {
         $this->info('Importazione dati in corso...');
@@ -218,6 +242,9 @@ class ImportMdbToMySQL extends Command
             shell_exec($command);
             $this->info("Dati importati per la tabella: $table");
         }
+<<<<<<< HEAD
+>>>>>>> aurmich/dev
+=======
 >>>>>>> aurmich/dev
     }
 }

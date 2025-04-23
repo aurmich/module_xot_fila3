@@ -6,9 +6,12 @@ namespace Modules\Xot\Actions\File;
 
 use Illuminate\Support\Facades\File;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
+>>>>>>> aurmich/dev
+=======
 >>>>>>> aurmich/dev
 use Illuminate\Support\Str;
 use Modules\Xot\Datas\ComponentFileData;
@@ -39,7 +42,11 @@ class GetComponentsAction
             }
         }
 <<<<<<< HEAD
+<<<<<<< HEAD
         //$force_recreate = true;
+=======
+
+>>>>>>> aurmich/dev
 =======
 
 >>>>>>> aurmich/dev
@@ -104,11 +111,15 @@ class GetComponentsAction
 
             } catch (\Exception $e) {
 <<<<<<< HEAD
+<<<<<<< HEAD
                 dddx([
 =======
 
                 dddx([
 
+>>>>>>> aurmich/dev
+=======
+                dddx([
 >>>>>>> aurmich/dev
                     'comp_name' => $comp_name,
                     'class_name' => $class_name,

@@ -151,6 +151,7 @@ abstract class XotBaseServiceProvider extends ServiceProvider
     protected function registerConfig(): void
     {
         try {
+<<<<<<< HEAD
             Assert::string($relativePath = config('modules.paths.generator.config.path'));
             $configPath = module_path($this->name, $relativePath);
             if (! is_string($configPath)) {
@@ -160,6 +161,9 @@ abstract class XotBaseServiceProvider extends ServiceProvider
             if (! file_exists($configPath)) {
                 return;
             }
+=======
+            $configPath = app(GetModulePathByGeneratorAction::class)->execute($this->name, 'config');
+>>>>>>> aurmich/dev
 
             $this->publishes([
                 $configPath => config_path($this->nameLower.'.php'),
@@ -174,9 +178,18 @@ abstract class XotBaseServiceProvider extends ServiceProvider
 
     public function registerBladeComponents(): void
     {
+<<<<<<< HEAD
         $componentClassPath = app(GetModulePathByGeneratorAction::class)->execute($this->name, 'component-class');
 
         $namespace = $this->module_ns.'\View\Components';
+=======
+        $componentsViewPath = app(GetModulePathByGeneratorAction::class)->execute($this->name, 'component-view');
+        Blade::anonymousComponentPath($componentsViewPath);
+
+        $componentClassPath = app(GetModulePathByGeneratorAction::class)->execute($this->name, 'component-class');
+
+        $namespace = $this->module_ns.'\\View\\Components';
+>>>>>>> aurmich/dev
         Blade::componentNamespace($namespace, $this->nameLower);
 
         app(RegisterBladeComponentsAction::class)
@@ -219,11 +232,19 @@ abstract class XotBaseServiceProvider extends ServiceProvider
             static function (mixed $item): string {
                 Assert::isArray($item);
                 Assert::keyExists($item, 'ns');
+<<<<<<< HEAD
                 Assert::string($item['ns']);
+=======
+
+>>>>>>> aurmich/dev
                 return $item['ns'];
             },
             $commands
         );
+<<<<<<< HEAD
+=======
+
+>>>>>>> aurmich/dev
         $this->commands($commands);
     }
 

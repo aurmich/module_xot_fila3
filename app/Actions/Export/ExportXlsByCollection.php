@@ -24,11 +24,15 @@ class ExportXlsByCollection
      * @param string|null $transKey Chiave di traduzione per i campi
      * @param array<int, string> $fields Campi da includere nell'export
 <<<<<<< HEAD
+<<<<<<< HEAD
      * 
 =======
 
      * 
 
+>>>>>>> aurmich/dev
+=======
+     *
 >>>>>>> aurmich/dev
      * @return BinaryFileResponse
      */
@@ -59,11 +63,15 @@ class ExportXlsByCollection
      * @param array<string> $fields Campi da includere nell'export
      * @param string $filename Nome del file Excel
 <<<<<<< HEAD
+<<<<<<< HEAD
      * 
 =======
 
      * 
 
+>>>>>>> aurmich/dev
+=======
+     *
 >>>>>>> aurmich/dev
      * @return string Il percorso del file generato
      */
@@ -95,6 +103,7 @@ class ExportXlsByCollection
     }
 
     /**
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -102,10 +111,13 @@ class ExportXlsByCollection
 
 
 >>>>>>> aurmich/dev
+=======
+>>>>>>> aurmich/dev
      * Scrive le righe nel foglio di lavoro.
      *
      * @param \PhpOffice\PhpSpreadsheet\Worksheet\Worksheet $sheet Il foglio di lavoro
      * @param \Illuminate\Support\Collection $rows I dati da scrivere
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -114,6 +126,8 @@ class ExportXlsByCollection
 
 
 >>>>>>> aurmich/dev
+=======
+>>>>>>> aurmich/dev
      * @param array<string> $fields I campi da utilizzare per le colonne
      */
     protected function writeRows(\PhpOffice\PhpSpreadsheet\Worksheet\Worksheet $sheet, Collection $rows, array $fields): void
@@ -121,12 +135,15 @@ class ExportXlsByCollection
         $row = 2;
         foreach ($rows as $data) {
             foreach ($fields as $col => $field) {
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
 =======
 
 
+>>>>>>> aurmich/dev
+=======
 >>>>>>> aurmich/dev
                 $value = '';
 

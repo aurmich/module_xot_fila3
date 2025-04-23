@@ -3,7 +3,13 @@
 ## Problema
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 Durante lo sviluppo del progetto SaluteOra, sono stati identificati diversi file con conflitti di merge non risolti. Questi conflitti erano indicati dalla presenza di marcatori come `<<<<<<< HEAD`, `=======` e `>>>>>>> origin/dev` nel codice sorgente. I conflitti non risolti causavano errori durante l'analisi statica con PHPStan e impedivano il corretto funzionamento del codice.
+=======
+
+Durante lo sviluppo del progetto SaluteOra, sono stati identificati diversi file con conflitti di merge non risolti. Questi conflitti erano indicati dalla presenza di marcatori come ``, `origin/dev` nel codice sorgente. I conflitti non risolti causavano errori durante l'analisi statica con PHPStan e impedivano il corretto funzionamento del codice.
+aurmich/dev
+>>>>>>> aurmich/dev
 =======
 
 Durante lo sviluppo del progetto SaluteOra, sono stati identificati diversi file con conflitti di merge non risolti. Questi conflitti erano indicati dalla presenza di marcatori come ``, `origin/dev` nel codice sorgente. I conflitti non risolti causavano errori durante l'analisi statica con PHPStan e impedivano il corretto funzionamento del codice.
@@ -46,7 +52,13 @@ Per risolvere i conflitti, è stato seguito un approccio sistematico:
 ### 1. Rimozione dei Marcatori di Conflitto
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 In ogni file, sono stati rimossi tutti i marcatori di conflitto (`<<<<<<< HEAD`, `=======`, `>>>>>>> origin/dev`), mantenendo la versione più completa e corretta del codice.
+=======
+
+In ogni file, sono stati rimossi tutti i marcatori di conflitto (``, `origin/dev`), mantenendo la versione più completa e corretta del codice.
+aurmich/dev
+>>>>>>> aurmich/dev
 =======
 
 In ogni file, sono stati rimossi tutti i marcatori di conflitto (``, `origin/dev`), mantenendo la versione più completa e corretta del codice.
@@ -221,6 +233,10 @@ Per prevenire problemi simili in futuro, si raccomanda di:
 - **Merge Opzionali**: Considerare l'uso di `git merge --no-commit` per verificare il risultato prima di completare il merge
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> aurmich/dev
 =======
 
 >>>>>>> aurmich/dev
@@ -232,7 +248,11 @@ Per prevenire problemi simili in futuro, si raccomanda di:
   
   # Verifica se ci sono marcatori di conflitto nei file in staging
 <<<<<<< HEAD
+<<<<<<< HEAD
   if git diff --cached | grep -E '<<<<<<< HEAD|=======|>>>>>>> ' > /dev/null; then
+=======
+  if git diff --cached | grep -E '|' > /dev/null; then
+>>>>>>> aurmich/dev
 =======
   if git diff --cached | grep -E '|' > /dev/null; then
 >>>>>>> aurmich/dev
@@ -243,6 +263,10 @@ Per prevenire problemi simili in futuro, si raccomanda di:
   exit 0
   ```
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+aurmich/dev
+>>>>>>> aurmich/dev
 =======
 aurmich/dev
 >>>>>>> aurmich/dev
