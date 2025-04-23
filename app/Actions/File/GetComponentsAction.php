@@ -5,10 +5,8 @@ declare(strict_types=1);
 namespace Modules\Xot\Actions\File;
 
 use Illuminate\Support\Facades\File;
-<<<<<<< HEAD
-=======
-use Illuminate\Support\Facades\Log;
->>>>>>> aurmich/dev
+
+
 use Illuminate\Support\Str;
 use Modules\Xot\Datas\ComponentFileData;
 use Spatie\LaravelData\DataCollection;
@@ -98,11 +96,9 @@ class GetComponentsAction
                 ])->toArray();
 
             } catch (\Exception $e) {
-<<<<<<< HEAD
+
                 dddx([
-=======
-                Log::error('Errore nel GetComponentsAction', [
->>>>>>> aurmich/dev
+
                     'comp_name' => $comp_name,
                     'class_name' => $class_name,
                     'comp_ns' => $comp_ns,
