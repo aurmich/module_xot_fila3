@@ -11,9 +11,12 @@ use Illuminate\Support\Str;
 use Modules\Xot\Actions\ModelClass\CountAction;
 use Modules\Xot\Filament\Traits\NavigationLabelTrait;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> 50bb41c (fix: auto resolve conflict)
+=======
+>>>>>>> 4ab3760 (.)
 use Webmozart\Assert\Assert;
 
 use function Safe\glob;
@@ -21,6 +24,7 @@ use function Safe\glob;
 /**
  * @method static string getUrl(string $name, array<string, mixed> $parameters = [], bool $isAbsolute = true)
  */
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -31,6 +35,8 @@ use Webmozart\Assert\Assert;
 
 >>>>>>> e2a4c5d (.)
 >>>>>>> 50bb41c (fix: auto resolve conflict)
+=======
+>>>>>>> 4ab3760 (.)
 abstract class XotBaseResource extends FilamentResource
 {
     use NavigationLabelTrait;
@@ -76,14 +82,18 @@ abstract class XotBaseResource extends FilamentResource
 
     /**
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> 50bb41c (fix: auto resolve conflict)
+=======
+>>>>>>> 4ab3760 (.)
      * @return array<string|int,\Filament\Forms\Components\Component>
      */
     abstract public static function getFormSchema(): array;
 
     final public static function form(Form $form): Form
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -94,6 +104,8 @@ abstract class XotBaseResource extends FilamentResource
     public static function form(Form $form): Form
 >>>>>>> e2a4c5d (.)
 >>>>>>> 50bb41c (fix: auto resolve conflict)
+=======
+>>>>>>> 4ab3760 (.)
     {
         return $form
             ->schema(static::getFormSchema());
@@ -125,10 +137,10 @@ abstract class XotBaseResource extends FilamentResource
         }
     }
 
-<<<<<<< HEAD
     /**
      * @return array<string, \Filament\Resources\Pages\PageRegistration>
      */
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
     /**
@@ -137,6 +149,8 @@ abstract class XotBaseResource extends FilamentResource
 =======
 >>>>>>> e2a4c5d (.)
 >>>>>>> 50bb41c (fix: auto resolve conflict)
+=======
+>>>>>>> 4ab3760 (.)
     public static function getPages(): array
     {
         $prefix = static::class.'\Pages\\';
@@ -148,9 +162,12 @@ abstract class XotBaseResource extends FilamentResource
         $view = Str::of($prefix)->append('View'.$name.'')->toString();
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> 50bb41c (fix: auto resolve conflict)
+=======
+>>>>>>> 4ab3760 (.)
         /** @var class-string<\Filament\Resources\Pages\Page> $index */
         $index = $index;
         /** @var class-string<\Filament\Resources\Pages\Page> $create */
@@ -160,16 +177,23 @@ abstract class XotBaseResource extends FilamentResource
         /** @var class-string<\Filament\Resources\Pages\Page> $view */
         $view = $view;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
         
 >>>>>>> e5c56c3 (.)
+=======
+
+>>>>>>> 7b67053 (fix: auto resolve conflict)
         /** @var array<string, \Filament\Resources\Pages\PageRegistration> $pages */
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
 >>>>>>> e2a4c5d (.)
 >>>>>>> 50bb41c (fix: auto resolve conflict)
+=======
+>>>>>>> 4ab3760 (.)
         $pages = [
             'index' => $index::route('/'),
             'create' => $create::route('/create'),
@@ -184,10 +208,10 @@ abstract class XotBaseResource extends FilamentResource
         return $pages;
     }
 
-<<<<<<< HEAD
     /**
      * @return array<class-string<\Filament\Resources\RelationManagers\RelationManager>|\Filament\Resources\RelationManagers\RelationGroup|\Filament\Resources\RelationManagers\RelationManagerConfiguration>
      */
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
     /**
@@ -196,15 +220,19 @@ abstract class XotBaseResource extends FilamentResource
 =======
 >>>>>>> e2a4c5d (.)
 >>>>>>> 50bb41c (fix: auto resolve conflict)
+=======
+>>>>>>> 4ab3760 (.)
     public static function getRelations(): array
     {
         $reflector = new \ReflectionClass(static::class);
         $filename = $reflector->getFileName();
-<<<<<<< HEAD
         Assert::string($filename);
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
+=======
+>>>>>>> 7b67053 (fix: auto resolve conflict)
         
 <<<<<<< HEAD
 >>>>>>> e5c56c3 (.)
@@ -216,7 +244,13 @@ abstract class XotBaseResource extends FilamentResource
 =======
 >>>>>>> e2a4c5d (.)
 >>>>>>> 50bb41c (fix: auto resolve conflict)
+<<<<<<< HEAD
 >>>>>>> d9307de (fix: auto resolve conflict)
+=======
+=======
+
+>>>>>>> 4ab3760 (.)
+>>>>>>> 7b67053 (fix: auto resolve conflict)
         $path = Str::of($filename)
             ->before('.php')
             ->append(DIRECTORY_SEPARATOR)
@@ -225,15 +259,22 @@ abstract class XotBaseResource extends FilamentResource
 
         $files = glob($path.DIRECTORY_SEPARATOR.'*RelationManager.php');
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> 50bb41c (fix: auto resolve conflict)
+=======
+>>>>>>> 4ab3760 (.)
         Assert::isArray($files);
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
         
 >>>>>>> e5c56c3 (.)
+=======
+
+>>>>>>> 7b67053 (fix: auto resolve conflict)
         /** @var array<class-string<\Filament\Resources\RelationManagers\RelationManager>> $res */
         $res = [];
         foreach ($files as $file) {
@@ -243,14 +284,19 @@ abstract class XotBaseResource extends FilamentResource
                 ->prepend(static::class.'\RelationManagers\\')
                 ->toString();
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
             
 >>>>>>> e5c56c3 (.)
+=======
+
+>>>>>>> 7b67053 (fix: auto resolve conflict)
             if (class_exists($className)) {
                 Assert::subclassOf($className, \Filament\Resources\RelationManagers\RelationManager::class);
                 $res[] = $className;
             }
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -260,6 +306,8 @@ abstract class XotBaseResource extends FilamentResource
             $res[] = static::class.'\RelationManagers\\'.$info['filename'];
 >>>>>>> e2a4c5d (.)
 >>>>>>> 50bb41c (fix: auto resolve conflict)
+=======
+>>>>>>> 4ab3760 (.)
         }
 
         return $res;

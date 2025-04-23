@@ -16,9 +16,12 @@ class GetViewByClassAction
     /**
      * "Modules\UI\Filament\Widgets\GroupWidget" => "ui::filament.widgets.group"
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> 50bb41c (fix: auto resolve conflict)
+=======
+>>>>>>> 4ab3760 (.)
      * @return view-string
      */
     public function execute(string $class, string $suffix = ''): string
@@ -26,6 +29,7 @@ class GetViewByClassAction
         $module = Str::of($class)->betweenFirst('Modules\\', '\\')->toString();
         $module_low = Str::of($module)->lower()->toString();
         $after = Str::of($class)
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -37,18 +41,24 @@ class GetViewByClassAction
         $after=Str::of($class)
 >>>>>>> e2a4c5d (.)
 >>>>>>> 50bb41c (fix: auto resolve conflict)
+=======
+>>>>>>> 4ab3760 (.)
             ->after('Modules\\'.$module.'\\')
             ->explode('\\')
             ->toArray();
 
         $mapped = Arr::map($after, function (string $value, int $key) use ($after) {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> 50bb41c (fix: auto resolve conflict)
+=======
+>>>>>>> 4ab3760 (.)
             if ($key > 0 && isset($after[$key - 1])) {
                 /** @var mixed $prevValue */
                 $prevValue = $after[$key - 1];
+<<<<<<< HEAD
 <<<<<<< HEAD
 
                 // Gestione sicura delle conversioni di tipo per PHPStan level 10
@@ -60,6 +70,12 @@ class GetViewByClassAction
                 $prevValueStr = '';
                 
 >>>>>>> e5c56c3 (.)
+=======
+
+                // Gestione sicura delle conversioni di tipo per PHPStan level 10
+                $prevValueStr = '';
+
+>>>>>>> 7b67053 (fix: auto resolve conflict)
                 if (is_string($prevValue)) {
                     $prevValueStr = $prevValue;
                 } elseif ($prevValue === null) {
@@ -93,33 +109,46 @@ class GetViewByClassAction
                    $prevValueStr = is_scalar($prevValue) ? (string) $prevValue : '';
 >>>>>>> 50bb41c (fix: auto resolve conflict)
                 }
+<<<<<<< HEAD
                 
 >>>>>>> e5c56c3 (.)
+=======
+
+>>>>>>> 7b67053 (fix: auto resolve conflict)
                 $singular = Str::of($prevValueStr)->singular()->toString();
                 if (Str::endsWith($value, $singular)) {
                     $value = Str::of($value)->beforeLast($singular)->toString();
                 }
             }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
             
 >>>>>>> e5c56c3 (.)
+=======
+
+>>>>>>> 7b67053 (fix: auto resolve conflict)
             return Str::of($value)->slug()->toString();
         });
 
         $implode = implode('.', $mapped);
         $view = $module_low.'::'.$implode.$suffix;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
         
 >>>>>>> e5c56c3 (.)
+=======
+
+>>>>>>> 7b67053 (fix: auto resolve conflict)
         if (!view()->exists($view)) {
             throw new \Exception('View not found: '.$view);
         }
 
         return $view;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -139,5 +168,7 @@ class GetViewByClassAction
         
 >>>>>>> e2a4c5d (.)
 >>>>>>> 50bb41c (fix: auto resolve conflict)
+=======
+>>>>>>> 4ab3760 (.)
     }
 }

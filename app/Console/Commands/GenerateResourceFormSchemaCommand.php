@@ -6,9 +6,12 @@ namespace Modules\Xot\Console\Commands;
 
 use Illuminate\Console\Command;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> d9307de (fix: auto resolve conflict)
+=======
+>>>>>>> 7b67053 (fix: auto resolve conflict)
 use Illuminate\Support\Str;
 use Modules\Xot\Services\FileService;
 use Webmozart\Assert\Assert;
@@ -44,10 +47,14 @@ class GenerateResourceFormSchemaCommand extends Command
         Assert::string($resourceName, 'Il nome della risorsa deve essere una stringa');
         Assert::string($modelName, 'Il nome del modello deve essere una stringa');
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
         
 >>>>>>> d9307de (fix: auto resolve conflict)
+=======
+
+>>>>>>> 7b67053 (fix: auto resolve conflict)
         $this->info("Generazione schema form per la risorsa [{$resourceName}] basato sul modello [{$modelName}]");
 
         $pattern = $module
@@ -123,6 +130,7 @@ class GenerateResourceFormSchemaCommand extends Command
                     ->required()
                     ->maxLength(255),
 <<<<<<< HEAD
+<<<<<<< HEAD
 
                 Forms\Components\Textarea::make('{$variableName}_description')
                     ->label(trans('{$variableName}.fields.description'))
@@ -134,20 +142,28 @@ class GenerateResourceFormSchemaCommand extends Command
 
 =======
                     
+=======
+
+>>>>>>> 7b67053 (fix: auto resolve conflict)
                 Forms\Components\Textarea::make('{$variableName}_description')
                     ->label(trans('{$variableName}.fields.description'))
                     ->maxLength(65535),
-                    
+
                 Forms\Components\Toggle::make('is_active')
                     ->label(trans('common.fields.is_active'))
                     ->default(true),
+<<<<<<< HEAD
                     
 >>>>>>> d9307de (fix: auto resolve conflict)
+=======
+
+>>>>>>> 7b67053 (fix: auto resolve conflict)
                 Forms\Components\DateTimePicker::make('published_at')
                     ->label(trans('common.fields.published_at')),
             ]);
     }
 PHP;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -220,5 +236,7 @@ class GenerateResourceFormSchemaCommand extends Command
         return 0;
 >>>>>>> e2a4c5d (.)
 >>>>>>> d9307de (fix: auto resolve conflict)
+=======
+>>>>>>> 7b67053 (fix: auto resolve conflict)
     }
 }

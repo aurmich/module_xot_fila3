@@ -12,10 +12,10 @@ use Modules\Tenant\Services\TenantService;
 use Spatie\QueueableAction\QueueableAction;
 use Webmozart\Assert\Assert;
 
-<<<<<<< HEAD
 /**
  * Classe per gestire gli elementi di navigazione per i moduli.
  */
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 /**
@@ -24,15 +24,17 @@ use Webmozart\Assert\Assert;
 =======
 >>>>>>> e2a4c5d (.)
 >>>>>>> 50bb41c (fix: auto resolve conflict)
+=======
+>>>>>>> 4ab3760 (.)
 class GetModulesNavigationItems
 {
     use QueueableAction;
 
     /**
-<<<<<<< HEAD
      * Ottiene gli elementi di navigazione per i moduli.
      *
      * @return array<int, NavigationItem> Array di elementi di navigazione
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
      * Ottiene gli elementi di navigazione per i moduli.
@@ -44,6 +46,8 @@ class GetModulesNavigationItems
      * @return array<NavigationItem>
 >>>>>>> e2a4c5d (.)
 >>>>>>> 50bb41c (fix: auto resolve conflict)
+=======
+>>>>>>> 4ab3760 (.)
      */
     public function execute(): array
     {
@@ -51,18 +55,25 @@ class GetModulesNavigationItems
 
         $modules = TenantService::allModules();
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> 50bb41c (fix: auto resolve conflict)
+=======
+>>>>>>> 4ab3760 (.)
         Assert::isArray($modules, 'TenantService::allModules() deve restituire un array');
 
         foreach ($modules as $module) {
             Assert::string($module, 'Il nome del modulo deve essere una stringa');
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
             
 >>>>>>> e5c56c3 (.)
+=======
+
+>>>>>>> 7b67053 (fix: auto resolve conflict)
             $module_low = Str::lower($module);
             Assert::stringNotEmpty($module_low, 'Il nome del modulo convertito in minuscolo non può essere vuoto');
 
@@ -70,10 +81,14 @@ class GetModulesNavigationItems
             $relativeConfigPath = config('modules.paths.generator.config.path');
             $relativeConfigPathStr = is_string($relativeConfigPath) ? $relativeConfigPath : 'Config';
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
             
 >>>>>>> e5c56c3 (.)
+=======
+
+>>>>>>> 7b67053 (fix: auto resolve conflict)
             try {
                 // Proviamo a ottenere il percorso del modulo
                 $configPath = module_path($module, $relativeConfigPathStr);
@@ -83,6 +98,7 @@ class GetModulesNavigationItems
                 $configPath = base_path('Modules/'.$module.'/'.$relativeConfigPathStr);
             }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
             // Verifichiamo che $configPath sia una stringa valida
             Assert::stringNotEmpty($configPath, 'Il percorso di configurazione non può essere vuoto');
@@ -92,22 +108,33 @@ class GetModulesNavigationItems
 
 =======
             
+=======
+
+>>>>>>> 7b67053 (fix: auto resolve conflict)
             // Verifichiamo che $configPath sia una stringa valida
             Assert::stringNotEmpty($configPath, 'Il percorso di configurazione non può essere vuoto');
-            
+
             // Costruiamo il percorso completo del file di configurazione
             $configFilePath = $configPath.'/config.php';
+<<<<<<< HEAD
             
 >>>>>>> e5c56c3 (.)
+=======
+
+>>>>>>> 7b67053 (fix: auto resolve conflict)
             // Verifichiamo che il file esista
             if (!File::exists($configFilePath)) {
                 continue; // Saltiamo questo modulo se il file di configurazione non esiste
             }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
             
 >>>>>>> e5c56c3 (.)
+=======
+
+>>>>>>> 7b67053 (fix: auto resolve conflict)
             // Carichiamo la configurazione
             try {
                 /** @var array<string, mixed> $config */
@@ -118,6 +145,7 @@ class GetModulesNavigationItems
                 continue;
             }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
             // Estraiamo i valori di configurazione con valori predefiniti
             $icon = $config['icon'] ?? 'heroicon-o-question-mark-circle';
@@ -132,19 +160,27 @@ class GetModulesNavigationItems
 
 =======
             
+=======
+
+>>>>>>> 7b67053 (fix: auto resolve conflict)
             // Estraiamo i valori di configurazione con valori predefiniti
             $icon = $config['icon'] ?? 'heroicon-o-question-mark-circle';
             Assert::string($icon, "L'icona deve essere una stringa");
-            
+
             $role = $module_low.'::admin';
             Assert::stringNotEmpty($role, 'Il ruolo non può essere vuoto');
-            
+
             $navigation_sort = $config['navigation_sort'] ?? 1;
             Assert::integerish($navigation_sort, 'navigation_sort deve essere un intero');
             $navigation_sort = (int) $navigation_sort;
+<<<<<<< HEAD
             
 >>>>>>> e5c56c3 (.)
+=======
+
+>>>>>>> 7b67053 (fix: auto resolve conflict)
             // Creiamo l'elemento di navigazione
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -173,14 +209,16 @@ class GetModulesNavigationItems
             Assert::integer($navigation_sort = $config['navigation_sort'] ?? 1);
 >>>>>>> e2a4c5d (.)
 >>>>>>> 50bb41c (fix: auto resolve conflict)
+=======
+>>>>>>> 4ab3760 (.)
             $nav = NavigationItem::make($module)
                 ->url('/'.$module_low.'/admin')
                 ->icon($icon)
                 ->group('Modules')
                 ->sort($navigation_sort)
                 ->visible(
-<<<<<<< HEAD
                     static function () use ($role): bool {
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
                     static function () use ($role): bool {
@@ -188,15 +226,20 @@ class GetModulesNavigationItems
                     static function () use ($role) {
 >>>>>>> e2a4c5d (.)
 >>>>>>> 50bb41c (fix: auto resolve conflict)
+=======
+>>>>>>> 4ab3760 (.)
                         $user = Filament::auth()->user();
                         if (null === $user) {
                             return false;
                         }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> 50bb41c (fix: auto resolve conflict)
+=======
+>>>>>>> 4ab3760 (.)
                         // Verifichiamo che il metodo hasRole esista
                         if (!method_exists($user, 'hasRole')) {
                             return false;
@@ -204,12 +247,15 @@ class GetModulesNavigationItems
 
                         return (bool) $user->hasRole($role);
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
                         // Call to an undefined method Illuminate\Foundation\Auth\User::hasRole()
                         return $user->hasRole($role);
 >>>>>>> e2a4c5d (.)
 >>>>>>> 50bb41c (fix: auto resolve conflict)
+=======
+>>>>>>> 4ab3760 (.)
                     }
                 );
 

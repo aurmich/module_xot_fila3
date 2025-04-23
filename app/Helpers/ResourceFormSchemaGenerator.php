@@ -6,9 +6,12 @@ namespace Modules\Xot\Helpers;
 
 use Illuminate\Support\Str;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> 50bb41c (fix: auto resolve conflict)
+=======
+>>>>>>> 4ab3760 (.)
 use Webmozart\Assert\Assert;
 
 use function Safe\glob;
@@ -38,6 +41,7 @@ class ResourceFormSchemaGenerator
             }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 
@@ -51,19 +55,25 @@ class ResourceFormSchemaGenerator
 
 >>>>>>> e2a4c5d (.)
 >>>>>>> 50bb41c (fix: auto resolve conflict)
+=======
+>>>>>>> 4ab3760 (.)
             // Read the file contents
             $fileContents = file_get_contents($filename);
 
             // Check if getFormSchema method already exists
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> 50bb41c (fix: auto resolve conflict)
+=======
+>>>>>>> 4ab3760 (.)
             if (strpos($fileContents, 'public function getFormSchema') !== false) {
                 return false;
             }
 
             // Generate form schema
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -74,10 +84,13 @@ class ResourceFormSchemaGenerator
             // Generate a basic form schema based on the class name
 >>>>>>> e2a4c5d (.)
 >>>>>>> 50bb41c (fix: auto resolve conflict)
+=======
+>>>>>>> 4ab3760 (.)
             $modelName = str_replace('Resource', '', $reflection->getShortName());
             $modelVariable = Str::camel($modelName);
 
             $formSchemaMethod = "\n    public function getFormSchema(): array\n    {\n        return [\n";
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -111,22 +124,29 @@ class ResourceFormSchemaGenerator
 =======
 
             // Try to generate some basic form fields
+=======
+>>>>>>> 4ab3760 (.)
             $formSchemaMethod .= "            Forms\\Components\\TextInput::make('{$modelVariable}_name')\n";
             $formSchemaMethod .= "                ->label('".Str::headline($modelName)." Name')\n";
             $formSchemaMethod .= "                ->required(),\n";
-
             $formSchemaMethod .= "        ];\n    }\n";
 
             // Detect if the class is in a Clusters directory
-            $isInClustersDir = false !== strpos($filename, 'Clusters');
+            $isInClustersDir = strpos($filename, 'Clusters') !== false;
 
             // Insert the method before the last closing brace
             $modifiedContents = preg_replace(
                 '/}(\s*)$/',
                 $formSchemaMethod.($isInClustersDir ? '' : '}$1'),
+<<<<<<< HEAD
 >>>>>>> e2a4c5d (.)
 >>>>>>> 50bb41c (fix: auto resolve conflict)
+<<<<<<< HEAD
 >>>>>>> d9307de (fix: auto resolve conflict)
+=======
+=======
+>>>>>>> 4ab3760 (.)
+>>>>>>> 7b67053 (fix: auto resolve conflict)
                 $fileContents
             );
 
@@ -135,8 +155,8 @@ class ResourceFormSchemaGenerator
 
             return true;
         } catch (\Exception $e) {
-<<<<<<< HEAD
             error_log("Error generating form schema for {$resourceClass}: ".$e->getMessage());
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
             error_log("Error generating form schema for {$resourceClass}: ".$e->getMessage());
@@ -146,14 +166,19 @@ class ResourceFormSchemaGenerator
 
 >>>>>>> e2a4c5d (.)
 >>>>>>> 50bb41c (fix: auto resolve conflict)
+=======
+>>>>>>> 4ab3760 (.)
             return false;
         }
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> 50bb41c (fix: auto resolve conflict)
+=======
+>>>>>>> 4ab3760 (.)
     /**
      * @return array{updated: array<string>, skipped: array<string>}
      */
@@ -188,6 +213,7 @@ class ResourceFormSchemaGenerator
         }
 
         return $results;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -227,5 +253,7 @@ class ResourceFormSchemaGenerator
         ];
 >>>>>>> e2a4c5d (.)
 >>>>>>> 50bb41c (fix: auto resolve conflict)
+=======
+>>>>>>> 4ab3760 (.)
     }
 }

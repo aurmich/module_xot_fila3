@@ -6,7 +6,6 @@ namespace Modules\Xot\Exceptions\Formatters;
 
 use Illuminate\Support\Facades\Auth;
 
-<<<<<<< HEAD
 class WebhookErrorFormatter
 {
 <<<<<<< HEAD
@@ -107,6 +106,7 @@ class WebhookErrorFormatter
             'user' => sprintf('%d <%s>', Auth::id() ?? 0, $email),
             'ip' => request()->ip(),
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 // use Symfony\Component\HttpFoundation\Request;
@@ -140,6 +140,8 @@ class WebhookErrorFormatter
             // Request::ip();
 >>>>>>> e2a4c5d (.)
 >>>>>>> 50bb41c (fix: auto resolve conflict)
+=======
+>>>>>>> 4ab3760 (.)
             'thrown_while_calling' => sprintf(
                 '[%s] %s',
                 request()->getMethod(),
@@ -150,8 +152,8 @@ class WebhookErrorFormatter
             'exception_details' => sprintf(
                 "Trace:\n```json \n %s \n ```\n\n Previous: \n `%s`",
                 json_encode($this->exception->getTrace(), JSON_PRETTY_PRINT),
-<<<<<<< HEAD
                 $this->exception->getPrevious() ? ('`' . get_class($this->exception->getPrevious()) . '`') : 'None'
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
                 $this->exception->getPrevious() ? ('`' . get_class($this->exception->getPrevious()) . '`') : 'None'
@@ -159,6 +161,8 @@ class WebhookErrorFormatter
                 $this->exception->getPrevious() ? ('`'.get_class($this->exception->getPrevious()).'`') : 'None'
 >>>>>>> e2a4c5d (.)
 >>>>>>> 50bb41c (fix: auto resolve conflict)
+=======
+>>>>>>> 4ab3760 (.)
             ),
             */
         ];

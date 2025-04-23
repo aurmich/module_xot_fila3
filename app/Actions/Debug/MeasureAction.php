@@ -7,18 +7,25 @@ namespace Modules\Xot\Actions\Debug;
 use Filament\Notifications\Notification;
 use Illuminate\Support\Facades\Log;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> 50bb41c (fix: auto resolve conflict)
+=======
+>>>>>>> 4ab3760 (.)
 use Webmozart\Assert\Assert;
 
 /**
  * Classe per misurare le performance di esecuzione di un blocco di codice.
 <<<<<<< HEAD
+<<<<<<< HEAD
  *
 =======
  * 
 >>>>>>> e5c56c3 (.)
+=======
+ *
+>>>>>>> 7b67053 (fix: auto resolve conflict)
  * @template T
  */
 class MeasureAction
@@ -29,24 +36,33 @@ class MeasureAction
      * @param \Closure():T $closure La closure da eseguire e misurare
      * @param string $label Etichetta opzionale per identificare la misurazione
 <<<<<<< HEAD
+<<<<<<< HEAD
      *
 =======
      * 
 >>>>>>> e5c56c3 (.)
+=======
+     *
+>>>>>>> 7b67053 (fix: auto resolve conflict)
      * @return T Il risultato dell'esecuzione della closure
      */
     public function execute(\Closure $closure, string $label = ''): mixed
     {
         Assert::isCallable($closure, 'Il parametro $closure deve essere una funzione chiamabile');
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
         
 >>>>>>> e5c56c3 (.)
+=======
+
+>>>>>>> 7b67053 (fix: auto resolve conflict)
         $start = microtime(true);
         $memory_start = memory_get_usage();
 
         // Eseguiamo la closure e otteniamo il risultato
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -60,15 +76,17 @@ class MeasureAction
 
 >>>>>>> e2a4c5d (.)
 >>>>>>> 50bb41c (fix: auto resolve conflict)
+=======
+>>>>>>> 4ab3760 (.)
         $result = $closure();
 
         $end = microtime(true);
         $memory_end = memory_get_usage();
 
-<<<<<<< HEAD
         // Calcoliamo le metriche di performance
         $execution_time = ($end - $start) * 1000; // Conversione in millisecondi
         $memory_usage = ($memory_end - $memory_start) / 1024; // Conversione in KB
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
         // Calcoliamo le metriche di performance
@@ -79,6 +97,8 @@ class MeasureAction
         $memory_usage = ($memory_end - $memory_start) / 1024; // Convert to KB
 >>>>>>> e2a4c5d (.)
 >>>>>>> 50bb41c (fix: auto resolve conflict)
+=======
+>>>>>>> 4ab3760 (.)
 
         $metrics = [
             'label' => $label,
@@ -87,10 +107,10 @@ class MeasureAction
             // 'peak_memory' => round(memory_get_peak_usage() / 1024 / 1024, 2).' MB',
         ];
 
-<<<<<<< HEAD
         // Mostriamo una notifica con le metriche
         Notification::make()
             ->title('Performance Metrics '.($label !== '' ? $label : 'Unnamed'))
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
         // Mostriamo una notifica con le metriche
@@ -101,6 +121,8 @@ class MeasureAction
             ->title('Performance Metrics '.$label)
 >>>>>>> e2a4c5d (.)
 >>>>>>> 50bb41c (fix: auto resolve conflict)
+=======
+>>>>>>> 4ab3760 (.)
             ->body($metrics['execution_time'].'  '.$metrics['memory_usage'])
             ->success()
             ->persistent()
@@ -108,14 +130,16 @@ class MeasureAction
 
         // Log::debug('Performance Metrics', $metrics);
 
-<<<<<<< HEAD
         /** @var T $result */
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
         /** @var T $result */
 =======
 >>>>>>> e2a4c5d (.)
 >>>>>>> 50bb41c (fix: auto resolve conflict)
+=======
+>>>>>>> 4ab3760 (.)
         return $result;
     }
 }

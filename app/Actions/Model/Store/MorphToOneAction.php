@@ -13,7 +13,10 @@ use Webmozart\Assert\Assert;
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 7b67053 (fix: auto resolve conflict)
 =======
 <<<<<<< HEAD
 >>>>>>> d9307de (fix: auto resolve conflict)
@@ -26,11 +29,20 @@ use Webmozart\Assert\Assert;
 =======
 >>>>>>> e2a4c5d (.)
 >>>>>>> 50bb41c (fix: auto resolve conflict)
+<<<<<<< HEAD
 >>>>>>> d9307de (fix: auto resolve conflict)
+=======
+=======
+/**
+ * Azione per gestire le relazioni morphToOne nei modelli.
+ */
+>>>>>>> 4ab3760 (.)
+>>>>>>> 7b67053 (fix: auto resolve conflict)
 class MorphToOneAction
 {
     use QueueableAction;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     /**
@@ -44,6 +56,8 @@ class MorphToOneAction
 =======
 =======
 >>>>>>> d9307de (fix: auto resolve conflict)
+=======
+>>>>>>> 7b67053 (fix: auto resolve conflict)
     public function execute(Model $model, RelationDTO $relationDTO): void
     {
 <<<<<<< HEAD
@@ -67,6 +81,8 @@ class MorphToOneAction
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> 4ab3760 (.)
     /**
      * Esegue l'azione di creazione per una relazione morphToOne.
      *
@@ -77,6 +93,7 @@ class MorphToOneAction
     {
         Assert::isInstanceOf($rows = $relationDTO->rows, MorphToOne::class);
 
+<<<<<<< HEAD
 =======
     public function execute(Model $model, RelationDTO $relationDTO): void
     {
@@ -86,6 +103,8 @@ class MorphToOneAction
         // if (is_array($relation->data)) {
 >>>>>>> e2a4c5d (.)
 >>>>>>> 50bb41c (fix: auto resolve conflict)
+=======
+>>>>>>> 4ab3760 (.)
         if (! isset($relationDTO->data['lang'])) {
             $relationDTO->data['lang'] = App::getLocale();
         }
@@ -114,6 +133,7 @@ class MorphToOneAction
 =======
         $rows->create($relationDTO->data);
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 50bb41c (fix: auto resolve conflict)
         // } else {
@@ -138,6 +158,11 @@ class MorphToOneAction
 =======
 >>>>>>> e2a4c5d (.)
 >>>>>>> 50bb41c (fix: auto resolve conflict)
+<<<<<<< HEAD
 >>>>>>> d9307de (fix: auto resolve conflict)
+=======
+=======
+>>>>>>> 4ab3760 (.)
+>>>>>>> 7b67053 (fix: auto resolve conflict)
     }
 }

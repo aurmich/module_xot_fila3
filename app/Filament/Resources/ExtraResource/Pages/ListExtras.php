@@ -13,10 +13,13 @@ use Modules\Xot\Filament\Resources\Pages\XotBaseListRecords;
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> e5c56c3 (.)
 =======
+=======
+>>>>>>> 7b67053 (fix: auto resolve conflict)
 
 =======
 <<<<<<< HEAD
@@ -24,7 +27,12 @@ use Modules\Xot\Filament\Resources\Pages\XotBaseListRecords;
 =======
 >>>>>>> e2a4c5d (.)
 >>>>>>> 50bb41c (fix: auto resolve conflict)
+<<<<<<< HEAD
 >>>>>>> d9307de (fix: auto resolve conflict)
+=======
+=======
+>>>>>>> 4ab3760 (.)
+>>>>>>> 7b67053 (fix: auto resolve conflict)
 /**
  * @see ExtraResource
  */
@@ -68,9 +76,12 @@ class ListExtras extends XotBaseListRecords
     {
         return [
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> 50bb41c (fix: auto resolve conflict)
+=======
+>>>>>>> 4ab3760 (.)
             'edit' => EditAction::make(),
         ];
     }
@@ -82,6 +93,7 @@ class ListExtras extends XotBaseListRecords
     {
         return [
             'delete' => DeleteBulkAction::make(),
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -95,6 +107,8 @@ class ListExtras extends XotBaseListRecords
             DeleteBulkAction::make(),
 >>>>>>> e2a4c5d (.)
 >>>>>>> 50bb41c (fix: auto resolve conflict)
+=======
+>>>>>>> 4ab3760 (.)
         ];
     }
 }

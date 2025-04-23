@@ -5,9 +5,12 @@ declare(strict_types=1);
 namespace Modules\Xot\Filament\Traits;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> 50bb41c (fix: auto resolve conflict)
+=======
+>>>>>>> 4ab3760 (.)
 use Filament\Tables;
 use Filament\Actions;
 use Filament\Tables\Table;
@@ -48,6 +51,7 @@ use Illuminate\Database\Eloquent\Relations\Relation;
 use Modules\Xot\Actions\Model\TableExistsByModelClassActions;
 use Modules\UI\Filament\Actions\Table\TableLayoutToggleTableAction;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 use Filament\Actions;
@@ -73,6 +77,8 @@ use Modules\Xot\Actions\Model\TableExistsByModelClassActions;
 use Webmozart\Assert\Assert;
 >>>>>>> e2a4c5d (.)
 >>>>>>> 50bb41c (fix: auto resolve conflict)
+=======
+>>>>>>> 4ab3760 (.)
 
 /**
  * Trait HasXotTable.
@@ -98,8 +104,8 @@ trait HasXotTable
      *
      * @return array<string, Action|ActionGroup>
      */
-<<<<<<< HEAD
     public function getTableHeaderActions(): array
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
     public function getTableHeaderActions(): array
@@ -107,6 +113,8 @@ trait HasXotTable
     protected function getTableHeaderActions(): array
 >>>>>>> e2a4c5d (.)
 >>>>>>> 50bb41c (fix: auto resolve conflict)
+=======
+>>>>>>> 4ab3760 (.)
     {
         $actions = [];
 
@@ -239,9 +247,12 @@ trait HasXotTable
 
     /**
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> 50bb41c (fix: auto resolve conflict)
+=======
+>>>>>>> 4ab3760 (.)
      * Configura una tabella Filament.
      *
      * Nota: Questo metodo è stato modificato per risolvere l'errore
@@ -258,11 +269,14 @@ trait HasXotTable
      *
      * Ultimo aggiornamento: 10/2023
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
      * Configure the table.
 >>>>>>> e2a4c5d (.)
 >>>>>>> 50bb41c (fix: auto resolve conflict)
+=======
+>>>>>>> 4ab3760 (.)
      */
     public function table(Table $table): Table
     {
@@ -270,12 +284,15 @@ trait HasXotTable
         if (! app(TableExistsByModelClassActions::class)->execute($modelClass)) {
             $this->notifyTableMissing();
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 
 >>>>>>> e2a4c5d (.)
 >>>>>>> 50bb41c (fix: auto resolve conflict)
+=======
+>>>>>>> 4ab3760 (.)
             return $this->configureEmptyTable($table);
         }
 
@@ -283,23 +300,28 @@ trait HasXotTable
         $model = app($modelClass);
         Assert::isInstanceOf($model, Model::class);
 
-<<<<<<< HEAD
         // Configurazione base della tabella
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
         // Configurazione base della tabella
 =======
 >>>>>>> e2a4c5d (.)
 >>>>>>> 50bb41c (fix: auto resolve conflict)
+=======
+>>>>>>> 4ab3760 (.)
         $table = $table
             ->recordTitleAttribute($this->getTableRecordTitleAttribute())
             ->heading($this->getTableHeading())
             ->columns($this->layoutView->getTableColumns())
             ->contentGrid($this->layoutView->getTableContentGrid())
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> 50bb41c (fix: auto resolve conflict)
+=======
+>>>>>>> 4ab3760 (.)
             ->filters($this->getTableFilters())
             ->filtersLayout(FiltersLayout::AboveContent)
             ->filtersFormColumns($this->getTableFiltersFormColumns())
@@ -320,6 +342,7 @@ trait HasXotTable
 
         $table = $table
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
             ->headerActions($this->getTableHeaderActions())
@@ -331,6 +354,8 @@ trait HasXotTable
             ->bulkActions($this->getTableBulkActions())
 >>>>>>> e2a4c5d (.)
 >>>>>>> 50bb41c (fix: auto resolve conflict)
+=======
+>>>>>>> 4ab3760 (.)
             ->actionsPosition(ActionsPosition::BeforeColumns)
             ->emptyStateActions($this->getTableEmptyStateActions())
             ->striped();
@@ -372,10 +397,10 @@ trait HasXotTable
     /**
      * Get table filters.
      *
-<<<<<<< HEAD
      * @return array<string|int, Tables\Filters\Filter|TernaryFilter|BaseFilter>
      */
     public function getTableFilters(): array
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
      * @return array<string|int, Tables\Filters\Filter|TernaryFilter|BaseFilter>
@@ -387,6 +412,8 @@ trait HasXotTable
     protected function getTableFilters(): array
 >>>>>>> e2a4c5d (.)
 >>>>>>> 50bb41c (fix: auto resolve conflict)
+=======
+>>>>>>> 4ab3760 (.)
     {
         return [];
     }
@@ -394,7 +421,6 @@ trait HasXotTable
     /**
      * Get table actions.
      *
-<<<<<<< HEAD
      * @return array<string, Tables\Actions\Action|Tables\Actions\ActionGroup>
 <<<<<<< HEAD
 =======
@@ -413,12 +439,15 @@ trait HasXotTable
 =======
      */
     public function getTableActions(): array
+<<<<<<< HEAD
 =======
      * @return array<string, Action|ActionGroup>
      */
     protected function getTableActions(): array
 >>>>>>> e2a4c5d (.)
 >>>>>>> 50bb41c (fix: auto resolve conflict)
+=======
+>>>>>>> 4ab3760 (.)
     {
         $actions = [];
 
@@ -435,9 +464,12 @@ trait HasXotTable
         }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> 50bb41c (fix: auto resolve conflict)
+=======
+>>>>>>> 4ab3760 (.)
         $actions['delete'] = Tables\Actions\DeleteAction::make()
             ->iconButton()
             ->tooltip(__('user::actions.delete'));
@@ -460,6 +492,7 @@ trait HasXotTable
                     }
                 }
             }
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -485,6 +518,8 @@ trait HasXotTable
                 ->requiresConfirmation();
 >>>>>>> e2a4c5d (.)
 >>>>>>> 50bb41c (fix: auto resolve conflict)
+=======
+>>>>>>> 4ab3760 (.)
         }
 
         return $actions;
@@ -495,8 +530,8 @@ trait HasXotTable
      *
      * @return array<string, BulkAction>
      */
-<<<<<<< HEAD
     public function getTableBulkActions(): array
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
     public function getTableBulkActions(): array
@@ -504,10 +539,13 @@ trait HasXotTable
     protected function getTableBulkActions(): array
 >>>>>>> e2a4c5d (.)
 >>>>>>> 50bb41c (fix: auto resolve conflict)
+=======
+>>>>>>> 4ab3760 (.)
     {
         return [
             'delete' => DeleteBulkAction::make()
                 ->label('')
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -515,6 +553,8 @@ trait HasXotTable
                 ->tooltip(__('user::actions.delete_selected'))
 >>>>>>> e2a4c5d (.)
 >>>>>>> 50bb41c (fix: auto resolve conflict)
+=======
+>>>>>>> 4ab3760 (.)
                 ->icon('heroicon-o-trash')
                 ->color('danger')
                 ->requiresConfirmation(),

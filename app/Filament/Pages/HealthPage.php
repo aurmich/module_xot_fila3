@@ -56,9 +56,12 @@ class HealthPage extends Page
         ];
         if (class_exists(\Spatie\CpuLoadHealthCheck\CpuLoadCheck::class)) {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> 50bb41c (fix: auto resolve conflict)
+=======
+>>>>>>> 4ab3760 (.)
             /** @var \Spatie\CpuLoadHealthCheck\CpuLoadCheck $check */
             $check = \Spatie\CpuLoadHealthCheck\CpuLoadCheck::new();
             $checks[] = $check;
@@ -75,6 +78,7 @@ class HealthPage extends Page
         }
         /** @var array<\Spatie\Health\Checks\Check> $checks */
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
             $checks[] = \Spatie\CpuLoadHealthCheck\CpuLoadCheck::new();
@@ -88,6 +92,8 @@ class HealthPage extends Page
         // @phpstan-ignore argument.type
 >>>>>>> e2a4c5d (.)
 >>>>>>> 50bb41c (fix: auto resolve conflict)
+=======
+>>>>>>> 4ab3760 (.)
         Health::checks($checks);
         Artisan::call(RunHealthChecksCommand::class);
         $this->dispatch('refresh-component');
@@ -103,11 +109,14 @@ class HealthPage extends Page
             Action::make('refresh')
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
                 
 >>>>>>> e5c56c3 (.)
 =======
+=======
+>>>>>>> 7b67053 (fix: auto resolve conflict)
                 
 =======
 <<<<<<< HEAD
@@ -116,7 +125,13 @@ class HealthPage extends Page
                 ->label('')
 >>>>>>> e2a4c5d (.)
 >>>>>>> 50bb41c (fix: auto resolve conflict)
+<<<<<<< HEAD
 >>>>>>> d9307de (fix: auto resolve conflict)
+=======
+=======
+
+>>>>>>> 4ab3760 (.)
+>>>>>>> 7b67053 (fix: auto resolve conflict)
                 ->tooltip('refresh')
                 ->icon('heroicon-o-arrow-path')
                 ->button()
@@ -136,8 +151,8 @@ class HealthPage extends Page
         $checkResults = app(ResultStore::class)->latestResults();
 
         return [
-<<<<<<< HEAD
             'lastRanAt' => $checkResults?->finishedAt,
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
             'lastRanAt' => $checkResults?->finishedAt,
@@ -145,6 +160,8 @@ class HealthPage extends Page
             'lastRanAt' => new Carbon($checkResults?->finishedAt),
 >>>>>>> e2a4c5d (.)
 >>>>>>> 50bb41c (fix: auto resolve conflict)
+=======
+>>>>>>> 4ab3760 (.)
             'checkResults' => $checkResults,
         ];
     }

@@ -14,14 +14,22 @@ class ApplyMetatagToPanelAction
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 <<<<<<< HEAD
 >>>>>>> d9307de (fix: auto resolve conflict)
+=======
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 4ab3760 (.)
+>>>>>>> 7b67053 (fix: auto resolve conflict)
     /**
      * Applica i metatag al pannello Filament.
      *
      * @param Panel &$panel Il pannello Filament a cui applicare i metatag
+<<<<<<< HEAD
 <<<<<<< HEAD
      *
      * @return Panel Il pannello con i metatag applicati
@@ -30,6 +38,9 @@ class ApplyMetatagToPanelAction
 >>>>>>> e5c56c3 (.)
 =======
      * 
+=======
+     *
+>>>>>>> 7b67053 (fix: auto resolve conflict)
      * @return Panel Il pannello con i metatag applicati
      */
 >>>>>>> 50bb41c (fix: auto resolve conflict)
@@ -86,6 +97,7 @@ class ApplyMetatagToPanelAction
             return $panel;
         }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
     public function execute(Panel &$panel): Panel
@@ -102,5 +114,7 @@ class ApplyMetatagToPanelAction
             ->favicon($metatag->getFavicon());
 >>>>>>> e2a4c5d (.)
 >>>>>>> 50bb41c (fix: auto resolve conflict)
+=======
+>>>>>>> 4ab3760 (.)
     }
 }

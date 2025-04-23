@@ -18,11 +18,14 @@ final class GetFieldnamesByTablenameAction
      *
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @param string $table Table name to get columns from
 =======
      * @param string $table          Table name to get columns from
 >>>>>>> e5c56c3 (.)
 =======
+=======
+>>>>>>> 7b67053 (fix: auto resolve conflict)
      * @param string $table          Table name to get columns from
 =======
 <<<<<<< HEAD
@@ -31,11 +34,18 @@ final class GetFieldnamesByTablenameAction
      * @param string      $table          Table name to get columns from
 >>>>>>> e2a4c5d (.)
 >>>>>>> 50bb41c (fix: auto resolve conflict)
+<<<<<<< HEAD
 >>>>>>> d9307de (fix: auto resolve conflict)
+=======
+=======
+     * @param string $table Table name to get columns from
+>>>>>>> 4ab3760 (.)
+>>>>>>> 7b67053 (fix: auto resolve conflict)
      * @param string|null $connectionName Database connection name (optional)
      *
      * @throws \InvalidArgumentException
      *
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
      * @return list<string> Lista dei nomi delle colonne della tabella
@@ -43,6 +53,8 @@ final class GetFieldnamesByTablenameAction
      * @return list
 >>>>>>> e5c56c3 (.)
 =======
+=======
+>>>>>>> 7b67053 (fix: auto resolve conflict)
      * @return list
 =======
 <<<<<<< HEAD
@@ -51,7 +63,13 @@ final class GetFieldnamesByTablenameAction
      * @return list
 >>>>>>> e2a4c5d (.)
 >>>>>>> 50bb41c (fix: auto resolve conflict)
+<<<<<<< HEAD
 >>>>>>> d9307de (fix: auto resolve conflict)
+=======
+=======
+     * @return list<string> Lista dei nomi delle colonne della tabella
+>>>>>>> 4ab3760 (.)
+>>>>>>> 7b67053 (fix: auto resolve conflict)
      */
     public function execute(string $table, ?string $connectionName = null): array
     {
@@ -66,11 +84,14 @@ final class GetFieldnamesByTablenameAction
         // Validate database connection
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         if (! $this->isValidConnection($connectionName)) {
             throw new \InvalidArgumentException(sprintf('Invalid database connection: %s', $connectionName));
 =======
 =======
 >>>>>>> d9307de (fix: auto resolve conflict)
+=======
+>>>>>>> 7b67053 (fix: auto resolve conflict)
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -81,6 +102,8 @@ final class GetFieldnamesByTablenameAction
 >>>>>>> e5c56c3 (.)
 =======
 =======
+=======
+>>>>>>> 4ab3760 (.)
         if (! $this->isValidConnection($connectionName)) {
             throw new \InvalidArgumentException(sprintf('Invalid database connection: %s', $connectionName));
 >>>>>>> 50bb41c (fix: auto resolve conflict)
@@ -113,6 +136,7 @@ final class GetFieldnamesByTablenameAction
 =======
 =======
             throw new \InvalidArgumentException(sprintf('Table "%s" does not exist in connection "%s".', $table, $connectionName));
+<<<<<<< HEAD
 =======
         if (! $this->isValidConnection((string) $connectionName)) {
             throw new \InvalidArgumentException(sprintf('Invalid database connection: %s', (string) $connectionName));
@@ -123,7 +147,12 @@ final class GetFieldnamesByTablenameAction
             throw new \InvalidArgumentException(sprintf('Table "%s" does not exist in connection "%s".', $table, (string) $connectionName));
 >>>>>>> e2a4c5d (.)
 >>>>>>> 50bb41c (fix: auto resolve conflict)
+<<<<<<< HEAD
 >>>>>>> d9307de (fix: auto resolve conflict)
+=======
+=======
+>>>>>>> 4ab3760 (.)
+>>>>>>> 7b67053 (fix: auto resolve conflict)
         }
 
         // Get and return column listing
@@ -132,12 +161,15 @@ final class GetFieldnamesByTablenameAction
             $columns = array_values($columns);
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
             // Assicuriamoci che tutti i valori siano stringhe
             return array_map(static fn ($value): string => is_string($value) ? $value : (string) $value, $columns);
 =======
 =======
 >>>>>>> d9307de (fix: auto resolve conflict)
+=======
+>>>>>>> 7b67053 (fix: auto resolve conflict)
             // $columns = array_map('strval', $columns);
 
             return $columns;
@@ -157,7 +189,15 @@ final class GetFieldnamesByTablenameAction
             // return array_values(array_map(static fn ($value): string => (string) $value, $columns));
 >>>>>>> e2a4c5d (.)
 >>>>>>> 50bb41c (fix: auto resolve conflict)
+<<<<<<< HEAD
 >>>>>>> d9307de (fix: auto resolve conflict)
+=======
+=======
+
+            // Assicuriamoci che tutti i valori siano stringhe
+            return array_map(static fn ($value): string => is_string($value) ? $value : (string) $value, $columns);
+>>>>>>> 4ab3760 (.)
+>>>>>>> 7b67053 (fix: auto resolve conflict)
         } catch (\Throwable $e) {
             throw new \InvalidArgumentException(sprintf('Error fetching columns from table "%s": %s', $table, $e->getMessage()));
         }

@@ -167,11 +167,14 @@ if (! function_exists('dddx')) {
         Assert::string($doc_root = $_SERVER['DOCUMENT_ROOT']);
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         $doc_root = str_replace('/', DIRECTORY_SEPARATOR, (string) $doc_root);
 =======
         $doc_root = str_replace('/', DIRECTORY_SEPARATOR, $doc_root);
 >>>>>>> e5c56c3 (.)
 =======
+=======
+>>>>>>> 7b67053 (fix: auto resolve conflict)
         $doc_root = str_replace('/', DIRECTORY_SEPARATOR, $doc_root);
 =======
 <<<<<<< HEAD
@@ -180,7 +183,13 @@ if (! function_exists('dddx')) {
         $doc_root = str_replace('/', DIRECTORY_SEPARATOR, (string) $doc_root);
 >>>>>>> e2a4c5d (.)
 >>>>>>> 50bb41c (fix: auto resolve conflict)
+<<<<<<< HEAD
 >>>>>>> d9307de (fix: auto resolve conflict)
+=======
+=======
+        $doc_root = str_replace('/', DIRECTORY_SEPARATOR, (string) $doc_root);
+>>>>>>> 4ab3760 (.)
+>>>>>>> 7b67053 (fix: auto resolve conflict)
 
         $dir_piece = explode(DIRECTORY_SEPARATOR, __DIR__);
         $dir_piece = array_slice($dir_piece, 0, -6);
@@ -420,11 +429,14 @@ if (! function_exists('params2ContainerItem')) {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             if (is_array($matches) && isset($matches[1]) && isset($matches[2])) {
 =======
             if (!empty($matches) && isset($matches[1]) && isset($matches[2]) && is_string($matches[1]) && is_string($matches[2])) {
 >>>>>>> e5c56c3 (.)
 =======
+=======
+>>>>>>> 7b67053 (fix: auto resolve conflict)
             if (!empty($matches) && isset($matches[1]) && isset($matches[2]) && is_string($matches[1]) && is_string($matches[2])) {
 =======
 <<<<<<< HEAD
@@ -433,7 +445,13 @@ if (! function_exists('params2ContainerItem')) {
             if (is_array($matches) && isset($matches[1]) && isset($matches[2])) {
 >>>>>>> e2a4c5d (.)
 >>>>>>> 50bb41c (fix: auto resolve conflict)
+<<<<<<< HEAD
 >>>>>>> d9307de (fix: auto resolve conflict)
+=======
+=======
+            if (is_array($matches) && isset($matches[1]) && isset($matches[2])) {
+>>>>>>> 4ab3760 (.)
+>>>>>>> 7b67053 (fix: auto resolve conflict)
                 $sk = $matches[1];
                 $sv = $matches[2];
                 // @phpstan-ignore offsetAccess.nonOffsetAccessible
@@ -447,25 +465,38 @@ if (! function_exists('params2ContainerItem')) {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 if (! function_exists('getModelFields')) {
     function getModelFields(Model $model): array
     {
 =======
 =======
 =======
+>>>>>>> 7b67053 (fix: auto resolve conflict)
+=======
 <<<<<<< HEAD
 >>>>>>> 50bb41c (fix: auto resolve conflict)
 >>>>>>> d9307de (fix: auto resolve conflict)
 
+=======
+>>>>>>> 4ab3760 (.)
 if (! function_exists('getModelFields')) {
+<<<<<<< HEAD
     function getModelFields(Model $model): array {
 >>>>>>> e5c56c3 (.)
+=======
+    function getModelFields(Model $model): array
+    {
+>>>>>>> 7b67053 (fix: auto resolve conflict)
         return $model->getConnection()->getSchemaBuilder()->getColumnListing($model->getTable());
     }
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 7b67053 (fix: auto resolve conflict)
 
 <<<<<<< HEAD
 >>>>>>> e5c56c3 (.)
@@ -484,7 +515,12 @@ if (! function_exists('getModelFields')) {
 
 >>>>>>> e2a4c5d (.)
 >>>>>>> 50bb41c (fix: auto resolve conflict)
+<<<<<<< HEAD
 >>>>>>> d9307de (fix: auto resolve conflict)
+=======
+=======
+>>>>>>> 4ab3760 (.)
+>>>>>>> 7b67053 (fix: auto resolve conflict)
 if (! function_exists('getModelByName')) {
     function getModelByName(string $name): Model
     {
@@ -633,9 +669,9 @@ if (! function_exists('getAllModulesModels')) {
                 continue;
             }
 
-<<<<<<< HEAD
             $moduleName = $module->getName();
             if ($moduleName === '') {
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
             $moduleName = $module->getName();
@@ -645,6 +681,8 @@ if (! function_exists('getAllModulesModels')) {
             if (! is_string($moduleName)) {
 >>>>>>> e2a4c5d (.)
 >>>>>>> 50bb41c (fix: auto resolve conflict)
+=======
+>>>>>>> 4ab3760 (.)
                 continue;
             }
 
@@ -653,8 +691,8 @@ if (! function_exists('getAllModulesModels')) {
                 $moduleModels = getModuleModels($moduleName);
                 $res = array_merge($res, $moduleModels);
             } catch (Exception $e) {
-<<<<<<< HEAD
                 \Illuminate\Support\Facades\Log::error('[Module:'.$moduleName.'] Error getting models: '.$e->getMessage());
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
                 \Illuminate\Support\Facades\Log::error('[Module:'.$moduleName.'] Error getting models: '.$e->getMessage());
@@ -662,6 +700,8 @@ if (! function_exists('getAllModulesModels')) {
                 Log::error('[Module:'.$moduleName.'] Error getting models: '.$e->getMessage());
 >>>>>>> e2a4c5d (.)
 >>>>>>> 50bb41c (fix: auto resolve conflict)
+=======
+>>>>>>> 4ab3760 (.)
 
                 continue;
             }
@@ -1033,9 +1073,12 @@ if (! function_exists('debugStack')) {
         }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> 50bb41c (fix: auto resolve conflict)
+=======
+>>>>>>> 4ab3760 (.)
         if (function_exists('xdebug_set_filter') && defined('XDEBUG_FILTER_TRACING') && defined('XDEBUG_PATH_EXCLUDE')) {
             @xdebug_set_filter(
                 @constant('XDEBUG_FILTER_TRACING'),
@@ -1050,6 +1093,7 @@ if (! function_exists('debugStack')) {
             debug_print_backtrace();
         }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
         xdebug_set_filter(
@@ -1062,6 +1106,8 @@ if (! function_exists('debugStack')) {
         xdebug_print_function_stack();
 >>>>>>> e2a4c5d (.)
 >>>>>>> 50bb41c (fix: auto resolve conflict)
+=======
+>>>>>>> 4ab3760 (.)
     }
 }
 
@@ -1213,6 +1259,7 @@ if (! function_exists('cssInLine')) {
 if (! function_exists('authId')) {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     function authId(): ?string
     {
         try {
@@ -1231,6 +1278,8 @@ if (! function_exists('authId')) {
 }
 =======
 =======
+=======
+>>>>>>> 7b67053 (fix: auto resolve conflict)
 =======
 <<<<<<< HEAD
 >>>>>>> 50bb41c (fix: auto resolve conflict)
@@ -1284,6 +1333,8 @@ function safe_object_call($object, string $method, ...$args) {
 <<<<<<< HEAD
 =======
 =======
+=======
+>>>>>>> 4ab3760 (.)
     function authId(): ?string
     {
         try {
@@ -1300,6 +1351,12 @@ function safe_object_call($object, string $method, ...$args) {
         return (string) $id;
     }
 }
+<<<<<<< HEAD
 >>>>>>> e2a4c5d (.)
 >>>>>>> 50bb41c (fix: auto resolve conflict)
+<<<<<<< HEAD
 >>>>>>> d9307de (fix: auto resolve conflict)
+=======
+=======
+>>>>>>> 4ab3760 (.)
+>>>>>>> 7b67053 (fix: auto resolve conflict)

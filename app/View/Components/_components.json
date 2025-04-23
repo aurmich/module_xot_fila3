@@ -1,10 +1,18 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 []
 =======
 <<<<<<< HEAD
 >>>>>>> d9307de (fix: auto resolve conflict)
+=======
+[]
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 4ab3760 (.)
+>>>>>>> 7b67053 (fix: auto resolve conflict)
 [
     {
         "name": "dashboard.item",
@@ -21,6 +29,7 @@
         "ns": "Modules\\Xot\\View\\Components\\XDebug"
     }
 ]
+<<<<<<< HEAD
 =======
 []
 <<<<<<< HEAD
@@ -28,4 +37,9 @@
 =======
 >>>>>>> e2a4c5d (.)
 >>>>>>> 50bb41c (fix: auto resolve conflict)
+<<<<<<< HEAD
 >>>>>>> d9307de (fix: auto resolve conflict)
+=======
+=======
+>>>>>>> 4ab3760 (.)
+>>>>>>> 7b67053 (fix: auto resolve conflict)

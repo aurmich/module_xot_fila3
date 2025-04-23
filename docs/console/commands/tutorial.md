@@ -1,8 +1,12 @@
 https://fly.io/laravel-bytes/console-applications-with-laravel-zero/
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> 50bb41c (fix: auto resolve conflict)
+=======
+
+>>>>>>> 4ab3760 (.)
 
 <<<<<<< HEAD
 
@@ -98,13 +102,23 @@ class DatabaseSchemaExportCommand extends Command
 - [Console Applications with Laravel Zero](https://fly.io/laravel-bytes/console-applications-with-laravel-zero/)
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
  e2a4c5d (.)
 =======
 >>>>>>> e5c56c3 (.)
 =======
 =======
+>>>>>>> 7b67053 (fix: auto resolve conflict)
+=======
 =======
 >>>>>>> e2a4c5d (.)
 >>>>>>> 50bb41c (fix: auto resolve conflict)
+<<<<<<< HEAD
 >>>>>>> d9307de (fix: auto resolve conflict)
+=======
+=======
+
+ e2a4c5d (.)
+>>>>>>> 4ab3760 (.)
+>>>>>>> 7b67053 (fix: auto resolve conflict)

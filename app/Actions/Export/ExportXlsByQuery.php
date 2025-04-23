@@ -4,9 +4,9 @@ declare(strict_types=1);
 
 namespace Modules\Xot\Actions\Export;
 
-<<<<<<< HEAD
 use Illuminate\Database\Eloquent\Builder;
 use Maatwebsite\Excel\Facades\Excel;
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 use Illuminate\Database\Eloquent\Builder;
@@ -17,6 +17,8 @@ use Illuminate\Database\Query\Builder as QueryBuilder;
 use Illuminate\Http\Response;
 >>>>>>> e2a4c5d (.)
 >>>>>>> 50bb41c (fix: auto resolve conflict)
+=======
+>>>>>>> 4ab3760 (.)
 use Modules\Xot\Exports\QueryExport;
 use Spatie\QueueableAction\QueueableAction;
 // use Staudenmeir\LaravelCte\Query\Builder as CteBuilder;
@@ -27,9 +29,12 @@ class ExportXlsByQuery
     use QueueableAction;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> 50bb41c (fix: auto resolve conflict)
+=======
+>>>>>>> 4ab3760 (.)
     /**
      * Esporta i risultati di una query in Excel.
      *
@@ -38,10 +43,14 @@ class ExportXlsByQuery
      * @param array<int, string> $fields Campi da includere nell'export
      * @param int|null $limit Limite di righe da esportare
 <<<<<<< HEAD
+<<<<<<< HEAD
      *
 =======
      * 
 >>>>>>> e5c56c3 (.)
+=======
+     *
+>>>>>>> 7b67053 (fix: auto resolve conflict)
      * @return BinaryFileResponse
      */
     public function execute(
@@ -108,6 +117,7 @@ class ExportXlsByQuery
 
         return Excel::download($export, $filename);
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
     public function execute(
@@ -122,5 +132,7 @@ class ExportXlsByQuery
         return $queryExport->download($filename);
 >>>>>>> e2a4c5d (.)
 >>>>>>> 50bb41c (fix: auto resolve conflict)
+=======
+>>>>>>> 4ab3760 (.)
     }
 }

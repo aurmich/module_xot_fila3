@@ -8,23 +8,28 @@ use Filament\Actions\Action;
 use Filament\Notifications\Notification;
 use Filament\Pages\Page;
 use Filament\Support\Enums\IconPosition;
-<<<<<<< HEAD
 use Livewire\Attributes\On;
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 use Livewire\Attributes\On;
 =======
 >>>>>>> e2a4c5d (.)
 >>>>>>> 50bb41c (fix: auto resolve conflict)
+=======
+>>>>>>> 4ab3760 (.)
 use Modules\Xot\Actions\ExecuteArtisanCommandAction;
 
 /**
  * ---.
  */
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> 50bb41c (fix: auto resolve conflict)
+=======
+>>>>>>> 4ab3760 (.)
 class ArtisanCommandsManager extends XotBasePage
 {
     public array $output = [];
@@ -38,10 +43,14 @@ class ArtisanCommandsManager extends XotBasePage
     /**
      * Livewire event listeners for this component.
 <<<<<<< HEAD
+<<<<<<< HEAD
      *
 =======
      * 
 >>>>>>> e5c56c3 (.)
+=======
+     *
+>>>>>>> 7b67053 (fix: auto resolve conflict)
      * @var array<string, string>
      * @phpstan-var array<string, string>
      */
@@ -54,6 +63,7 @@ class ArtisanCommandsManager extends XotBasePage
         'artisan-command.error' => 'handleCommandError',
     ];
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -82,6 +92,8 @@ class ArtisanCommandsManager extends Page
 
 >>>>>>> e2a4c5d (.)
 >>>>>>> 50bb41c (fix: auto resolve conflict)
+=======
+>>>>>>> 4ab3760 (.)
     protected function getHeaderActions(): array
     {
         return [
@@ -166,8 +178,8 @@ class ArtisanCommandsManager extends Page
         $this->isRunning = true;
 
         try {
-<<<<<<< HEAD
             app(ExecuteArtisanCommandAction::class)->execute($command);
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
             app(ExecuteArtisanCommandAction::class)->execute($command);
@@ -176,6 +188,8 @@ class ArtisanCommandsManager extends Page
             app(ExecuteArtisanCommandAction::class)->execute($command, $this->processId);
 >>>>>>> e2a4c5d (.)
 >>>>>>> 50bb41c (fix: auto resolve conflict)
+=======
+>>>>>>> 4ab3760 (.)
         } catch (\Exception $e) {
             Notification::make()
                 ->title(__('xot::artisan-commands-manager.notifications.error'))
@@ -188,9 +202,12 @@ class ArtisanCommandsManager extends Page
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> 50bb41c (fix: auto resolve conflict)
+=======
+>>>>>>> 4ab3760 (.)
     #[On('artisan-command.started')]
     public function handleCommandStarted(string $command): void
     {
@@ -243,6 +260,7 @@ class ArtisanCommandsManager extends Page
             ->danger()
             ->send();
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
     public function getListeners()
@@ -285,5 +303,7 @@ class ArtisanCommandsManager extends Page
         ]);
 >>>>>>> e2a4c5d (.)
 >>>>>>> 50bb41c (fix: auto resolve conflict)
+=======
+>>>>>>> 4ab3760 (.)
     }
 }

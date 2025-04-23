@@ -18,13 +18,18 @@ use Nwidart\Modules\Facades\Module;
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 use Modules\Xot\Filament\Resources\XotBaseResource\RelationManagers\XotBaseRelationManager;
 =======
 =======
 >>>>>>> d9307de (fix: auto resolve conflict)
 use Modules\Xot\Filament\Resources\XotBaseResource\RelationManager\XotBaseRelationManager;
 >>>>>>> e5c56c3 (.)
+=======
+use Modules\Xot\Filament\Resources\XotBaseResource\RelationManagers\XotBaseRelationManager;
+>>>>>>> 7b67053 (fix: auto resolve conflict)
 
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 use Modules\Xot\Filament\Resources\XotBaseResource\RelationManager\XotBaseRelationManager;
@@ -32,6 +37,8 @@ use Modules\Xot\Filament\Resources\XotBaseResource\RelationManager\XotBaseRelati
 =======
 >>>>>>> e2a4c5d (.)
 >>>>>>> 50bb41c (fix: auto resolve conflict)
+=======
+>>>>>>> 4ab3760 (.)
 class ListModules extends XotBaseListRecords
 {
     public TableLayoutEnum $layoutView = TableLayoutEnum::LIST;
@@ -90,16 +97,22 @@ class ListModules extends XotBaseListRecords
         return [
             ViewAction::make()
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> 50bb41c (fix: auto resolve conflict)
+=======
+>>>>>>> 4ab3760 (.)
                 ,
             EditAction::make()
                 ,
             DeleteAction::make()
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
+=======
+>>>>>>> 7b67053 (fix: auto resolve conflict)
                 
 <<<<<<< HEAD
 >>>>>>> e5c56c3 (.)
@@ -114,7 +127,13 @@ class ListModules extends XotBaseListRecords
                 ->label('')
 >>>>>>> e2a4c5d (.)
 >>>>>>> 50bb41c (fix: auto resolve conflict)
+<<<<<<< HEAD
 >>>>>>> d9307de (fix: auto resolve conflict)
+=======
+=======
+
+>>>>>>> 4ab3760 (.)
+>>>>>>> 7b67053 (fix: auto resolve conflict)
                 ->requiresConfirmation(),
         ];
     }
@@ -122,8 +141,8 @@ class ListModules extends XotBaseListRecords
     /**
      * @return array<string, Tables\Actions\BulkAction>
      */
-<<<<<<< HEAD
     public function getTableBulkActions(): array
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
     public function getTableBulkActions(): array
@@ -131,6 +150,8 @@ class ListModules extends XotBaseListRecords
     protected function getTableBulkActions(): array
 >>>>>>> e2a4c5d (.)
 >>>>>>> 50bb41c (fix: auto resolve conflict)
+=======
+>>>>>>> 4ab3760 (.)
     {
         return [
             'delete' => DeleteBulkAction::make(),

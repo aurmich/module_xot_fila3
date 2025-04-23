@@ -9,12 +9,15 @@ use Illuminate\Support\Str;
 use Modules\Xot\Datas\ComponentFileData;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 use function Safe\json_decode;
 
 >>>>>>> e5c56c3 (.)
 =======
+=======
+>>>>>>> 7b67053 (fix: auto resolve conflict)
 
 use function Safe\json_decode;
 
@@ -26,7 +29,12 @@ use function Safe\json_decode;
 
 >>>>>>> e2a4c5d (.)
 >>>>>>> 50bb41c (fix: auto resolve conflict)
+<<<<<<< HEAD
 >>>>>>> d9307de (fix: auto resolve conflict)
+=======
+=======
+>>>>>>> 4ab3760 (.)
+>>>>>>> 7b67053 (fix: auto resolve conflict)
 use Spatie\LaravelData\DataCollection;
 use Spatie\QueueableAction\QueueableAction;
 use Webmozart\Assert\Assert;
@@ -55,6 +63,7 @@ class GetComponentsAction
         }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         //$force_recreate = true;
         $exists = File::exists($components_json);
         if ($exists && ! $force_recreate) {
@@ -68,6 +77,8 @@ class GetComponentsAction
 =======
 =======
 >>>>>>> d9307de (fix: auto resolve conflict)
+=======
+>>>>>>> 7b67053 (fix: auto resolve conflict)
 
         $exists = File::exists($components_json);
         if ($exists && ! $force_recreate) {
@@ -78,6 +89,8 @@ class GetComponentsAction
 =======
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> 4ab3760 (.)
         //$force_recreate = true;
         $exists = File::exists($components_json);
         if ($exists && ! $force_recreate) {
@@ -108,6 +121,7 @@ class GetComponentsAction
         
 =======
 
+<<<<<<< HEAD
 =======
 
         $exists = File::exists($components_json);
@@ -131,15 +145,23 @@ class GetComponentsAction
         $comps = [];
 >>>>>>> e2a4c5d (.)
 >>>>>>> 50bb41c (fix: auto resolve conflict)
+<<<<<<< HEAD
 >>>>>>> d9307de (fix: auto resolve conflict)
+=======
+=======
+>>>>>>> 4ab3760 (.)
+>>>>>>> 7b67053 (fix: auto resolve conflict)
         foreach ($files as $file) {
             if ('php' !== $file->getExtension()) {
                 continue;
             }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> 50bb41c (fix: auto resolve conflict)
+=======
+>>>>>>> 4ab3760 (.)
 
             $class_name = $file->getFilenameWithoutExtension();
             $relative_path = $file->getRelativePath();
@@ -234,6 +256,7 @@ class GetComponentsAction
         }
 
         $old_content = File::exists($components_json) ? File::get($components_json) : '';
+<<<<<<< HEAD
 =======
             $tmp = (object) [];
             $class_name = $file->getFilenameWithoutExtension();
@@ -296,13 +319,15 @@ class GetComponentsAction
         }
 >>>>>>> e2a4c5d (.)
 >>>>>>> 50bb41c (fix: auto resolve conflict)
+=======
+>>>>>>> 4ab3760 (.)
 
         if ($old_content !== $content) {
             File::put($components_json, $content);
         }
 
-<<<<<<< HEAD
         return ComponentFileData::collection($comps);
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
         return ComponentFileData::collection($comps);
@@ -312,5 +337,7 @@ class GetComponentsAction
         return $res;
 >>>>>>> e2a4c5d (.)
 >>>>>>> 50bb41c (fix: auto resolve conflict)
+=======
+>>>>>>> 4ab3760 (.)
     }
 }

@@ -8,9 +8,9 @@ declare(strict_types=1);
 
 namespace Modules\Xot\Actions\Filament;
 
-<<<<<<< HEAD
 use Filament\Resources\Resource;
 use Illuminate\Database\Eloquent\Model;
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 use Filament\Resources\Resource;
@@ -18,6 +18,8 @@ use Illuminate\Database\Eloquent\Model;
 =======
 >>>>>>> e2a4c5d (.)
 >>>>>>> 50bb41c (fix: auto resolve conflict)
+=======
+>>>>>>> 4ab3760 (.)
 use Illuminate\Support\Str;
 
 use function Safe\file;
@@ -32,18 +34,26 @@ class GenerateFormByFileAction
 
     /**
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> 50bb41c (fix: auto resolve conflict)
+=======
+>>>>>>> 4ab3760 (.)
      * Genera un form Filament basato su un file di risorsa.
      *
      * @param File $file Il file della risorsa Filament
+<<<<<<< HEAD
 <<<<<<< HEAD
      *
 =======
      * 
 >>>>>>> e5c56c3 (.)
+=======
+     *
+>>>>>>> 7b67053 (fix: auto resolve conflict)
      * @return int Numero di input aggiunti
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -51,6 +61,8 @@ class GenerateFormByFileAction
      * return number of input added.
 >>>>>>> e2a4c5d (.)
 >>>>>>> 50bb41c (fix: auto resolve conflict)
+=======
+>>>>>>> 4ab3760 (.)
      */
     public function execute(File $file): int
     {
@@ -66,6 +78,7 @@ class GenerateFormByFileAction
         $class_name = Str::substr($class_name, 0, -4);
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
         // Verifichiamo che la classe esista e sia una risorsa Filament
         Assert::classExists($class_name);
@@ -75,23 +88,33 @@ class GenerateFormByFileAction
 
 =======
 =======
+=======
+>>>>>>> 7b67053 (fix: auto resolve conflict)
 =======
 <<<<<<< HEAD
 >>>>>>> 50bb41c (fix: auto resolve conflict)
 >>>>>>> d9307de (fix: auto resolve conflict)
         
+=======
+
+>>>>>>> 4ab3760 (.)
         // Verifichiamo che la classe esista e sia una risorsa Filament
         Assert::classExists($class_name);
-        
+
         /** @var Resource $resourceInstance */
         $resourceInstance = app($class_name);
+<<<<<<< HEAD
         
 >>>>>>> e5c56c3 (.)
+=======
+
+>>>>>>> 7b67053 (fix: auto resolve conflict)
         // Verifichiamo che il metodo getModel esista
         if (!method_exists($resourceInstance, 'getModel')) {
             return 0;
         }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
         /** @var string $modelClass */
         $modelClass = $resourceInstance->getModel();
@@ -104,21 +127,29 @@ class GenerateFormByFileAction
 
 =======
         
+=======
+
+>>>>>>> 7b67053 (fix: auto resolve conflict)
         /** @var string $modelClass */
         $modelClass = $resourceInstance->getModel();
-        
+
         // Verifichiamo che la classe del modello esista
         Assert::classExists($modelClass);
-        
+
         /** @var Model $modelInstance */
         $modelInstance = app($modelClass);
+<<<<<<< HEAD
         
 >>>>>>> e5c56c3 (.)
+=======
+
+>>>>>>> 7b67053 (fix: auto resolve conflict)
         // Verifichiamo che il metodo getFillable esista
         if (!method_exists($modelInstance, 'getFillable')) {
             return 0;
         }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
         $fillable = $modelInstance->getFillable();
 
@@ -126,18 +157,28 @@ class GenerateFormByFileAction
 
 =======
         
+=======
+
+>>>>>>> 7b67053 (fix: auto resolve conflict)
         $fillable = $modelInstance->getFillable();
-        
+
         $reflection_class = new \ReflectionClass($class_name);
+<<<<<<< HEAD
         
 >>>>>>> e5c56c3 (.)
+=======
+
+>>>>>>> 7b67053 (fix: auto resolve conflict)
         // Verifichiamo che il metodo form esista
         if (!$reflection_class->hasMethod('form')) {
             return 0;
         }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
+=======
+>>>>>>> 7b67053 (fix: auto resolve conflict)
         
 <<<<<<< HEAD
 >>>>>>> e5c56c3 (.)
@@ -151,7 +192,13 @@ class GenerateFormByFileAction
         $reflection_class = new \ReflectionClass($class_name);
 >>>>>>> e2a4c5d (.)
 >>>>>>> 50bb41c (fix: auto resolve conflict)
+<<<<<<< HEAD
 >>>>>>> d9307de (fix: auto resolve conflict)
+=======
+=======
+
+>>>>>>> 4ab3760 (.)
+>>>>>>> 7b67053 (fix: auto resolve conflict)
         $form_method = $reflection_class->getMethod('form');
         $start_line = $form_method->getStartLine() - 1;
         // it's actually - 1, otherwise you wont get the function() block
@@ -163,27 +210,38 @@ class GenerateFormByFileAction
         $body = implode('', \array_slice($source, $start_line, $length));
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
         // Otteniamo i metodi della classe risorsa
         $resourceMethods = get_class_methods($resourceInstance);
 
 =======
 =======
+=======
+>>>>>>> 7b67053 (fix: auto resolve conflict)
 =======
 <<<<<<< HEAD
 >>>>>>> 50bb41c (fix: auto resolve conflict)
 >>>>>>> d9307de (fix: auto resolve conflict)
         
+=======
+
+>>>>>>> 4ab3760 (.)
         // Otteniamo i metodi della classe risorsa
         $resourceMethods = get_class_methods($resourceInstance);
+<<<<<<< HEAD
         
 >>>>>>> e5c56c3 (.)
+=======
+
+>>>>>>> 7b67053 (fix: auto resolve conflict)
         dd([
             'class_name' => $class_name,
             'model_name' => $modelClass,
             'fillable' => $fillable,
             // 't1'=>app($class_name)->form(app(\Filament\Forms\Form::class)),
             'methods' => $resourceMethods,
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -195,6 +253,8 @@ class GenerateFormByFileAction
             'methods' => get_class_methods(app($class_name)),
 >>>>>>> e2a4c5d (.)
 >>>>>>> 50bb41c (fix: auto resolve conflict)
+=======
+>>>>>>> 4ab3760 (.)
             'form_method' => $form_method,
             'form_method_methods' => get_class_methods($form_method),
             'body' => $body,
@@ -202,25 +262,35 @@ class GenerateFormByFileAction
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> 50bb41c (fix: auto resolve conflict)
+=======
+>>>>>>> 4ab3760 (.)
     /**
      * Mostra informazioni di debug su un file.
      *
      * @param File $file Il file da analizzare
 <<<<<<< HEAD
+<<<<<<< HEAD
      *
 =======
      * 
 >>>>>>> e5c56c3 (.)
+=======
+     *
+>>>>>>> 7b67053 (fix: auto resolve conflict)
      * @return void
      */
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
 >>>>>>> e2a4c5d (.)
 >>>>>>> 50bb41c (fix: auto resolve conflict)
+=======
+>>>>>>> 4ab3760 (.)
     public function ddFile(File $file): void
     {
         dd([

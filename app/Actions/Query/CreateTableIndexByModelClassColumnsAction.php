@@ -66,9 +66,9 @@ class CreateTableIndexByModelClassColumnsAction
     /**
      * Validate that all specified columns exist in the table.
      *
-<<<<<<< HEAD
      * @param string $connectionName database connection name
      * @param string $tableName      name of the table
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
      * @param string $connectionName database connection name
@@ -78,6 +78,8 @@ class CreateTableIndexByModelClassColumnsAction
      * @param string   $tableName      name of the table
 >>>>>>> e2a4c5d (.)
 >>>>>>> 50bb41c (fix: auto resolve conflict)
+=======
+>>>>>>> 4ab3760 (.)
      * @param string[] $columns        columns to validate
      *
      * @throws \RuntimeException
@@ -107,16 +109,22 @@ class CreateTableIndexByModelClassColumnsAction
         // Query to check if the index exists
         $query = '
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 7b67053 (fix: auto resolve conflict)
         SELECT COUNT(*)
         FROM information_schema.statistics
         WHERE table_schema = ?
         AND table_name = ?
+<<<<<<< HEAD
 =======
         SELECT COUNT(*) 
         FROM information_schema.statistics 
         WHERE table_schema = ? 
         AND table_name = ? 
 >>>>>>> e5c56c3 (.)
+=======
+>>>>>>> 7b67053 (fix: auto resolve conflict)
         AND index_name = ?;
     ';
 
@@ -140,8 +148,8 @@ class CreateTableIndexByModelClassColumnsAction
     /**
      * Generate a unique index name based on the table and columns.
      *
-<<<<<<< HEAD
      * @param string $tableName name of the table
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
      * @param string $tableName name of the table
@@ -149,6 +157,8 @@ class CreateTableIndexByModelClassColumnsAction
      * @param string   $tableName name of the table
 >>>>>>> e2a4c5d (.)
 >>>>>>> 50bb41c (fix: auto resolve conflict)
+=======
+>>>>>>> 4ab3760 (.)
      * @param string[] $columns   columns to include in the index
      */
     private function generateIndexName(string $tableName, array $columns): string

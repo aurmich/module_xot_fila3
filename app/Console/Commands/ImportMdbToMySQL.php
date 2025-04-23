@@ -6,18 +6,24 @@ namespace Modules\Xot\Console\Commands;
 
 use Illuminate\Console\Command;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> d9307de (fix: auto resolve conflict)
+=======
+>>>>>>> 7b67053 (fix: auto resolve conflict)
 use Illuminate\Support\Facades\DB;
 use Safe\Exceptions\DatetimeException;
 use Safe\Exceptions\JsonException;
 use Safe\Exceptions\PcreException;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> e2a4c5d (.)
 >>>>>>> d9307de (fix: auto resolve conflict)
+=======
+>>>>>>> 7b67053 (fix: auto resolve conflict)
 
 use function Safe\shell_exec;
 
@@ -27,24 +33,33 @@ class ImportMdbToMySQL extends Command
 {
     /**
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> d9307de (fix: auto resolve conflict)
+=======
+>>>>>>> 7b67053 (fix: auto resolve conflict)
      * Il nome e la firma del comando console.
      *
      * @var string
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 7b67053 (fix: auto resolve conflict)
     protected $signature = 'xot:import-mdb-to-mysql
                             {source : Percorso del file MDB sorgente}
                             {connection : Nome della connessione MySQL}
                             {--tables=* : Tabelle specifiche da importare}
+<<<<<<< HEAD
 =======
     protected $signature = 'xot:import-mdb-to-mysql 
                             {source : Percorso del file MDB sorgente} 
                             {connection : Nome della connessione MySQL} 
                             {--tables=* : Tabelle specifiche da importare} 
 >>>>>>> d9307de (fix: auto resolve conflict)
+=======
+>>>>>>> 7b67053 (fix: auto resolve conflict)
                             {--skip-data : Salta l\'importazione dei dati}';
 
     /**
@@ -71,6 +86,9 @@ class ImportMdbToMySQL extends Command
 
         try {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 7b67053 (fix: auto resolve conflict)
             // Ottieni le credenziali dalla configurazione di connessione
             $config = config("database.connections.{$connection}");
             if (!$config) {
@@ -84,6 +102,7 @@ class ImportMdbToMySQL extends Command
 
             $this->importSchema($source, $mysqlUser, $mysqlPassword, $mysqlDb, $tables);
 
+<<<<<<< HEAD
             if (! $skipData) {
                 $this->importData($source, $mysqlUser, $mysqlPassword, $mysqlDb, $tables);
 =======
@@ -92,6 +111,10 @@ class ImportMdbToMySQL extends Command
             if (! $skipData) {
                 $this->importData($source, $connection, $tables);
 >>>>>>> d9307de (fix: auto resolve conflict)
+=======
+            if (! $skipData) {
+                $this->importData($source, $mysqlUser, $mysqlPassword, $mysqlDb, $tables);
+>>>>>>> 7b67053 (fix: auto resolve conflict)
             }
 
             $this->info('Importazione completata con successo!');
@@ -101,15 +124,19 @@ class ImportMdbToMySQL extends Command
             return 1;
         }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
         
         return $tables;
 >>>>>>> d9307de (fix: auto resolve conflict)
+=======
+>>>>>>> 7b67053 (fix: auto resolve conflict)
     }
 
     /**
      * Importa lo schema del database.
      */
+<<<<<<< HEAD
 <<<<<<< HEAD
     protected function importSchema(string $source, string $mysqlUser, string $mysqlPassword, string $mysqlDb, ?array $tables = null): void
     {
@@ -119,15 +146,24 @@ class ImportMdbToMySQL extends Command
         $this->createTablesInMySQL($source, $mysqlUser, $mysqlPassword, $mysqlDb, $tables);
 =======
     protected function importSchema(string $source, string $connection, ?array $tables = null): void
+=======
+    protected function importSchema(string $source, string $mysqlUser, string $mysqlPassword, string $mysqlDb, ?array $tables = null): void
+>>>>>>> 7b67053 (fix: auto resolve conflict)
     {
-        // Implementazione dell'importazione dello schema
         $this->info('Importazione schema in corso...');
+<<<<<<< HEAD
 >>>>>>> d9307de (fix: auto resolve conflict)
+=======
+
+        $this->createDatabase($mysqlUser, $mysqlPassword, $mysqlDb);
+        $this->createTablesInMySQL($source, $mysqlUser, $mysqlPassword, $mysqlDb, $tables);
+>>>>>>> 7b67053 (fix: auto resolve conflict)
     }
 
     /**
      * Importa i dati del database.
      */
+<<<<<<< HEAD
 <<<<<<< HEAD
     protected function importData(string $source, string $mysqlUser, string $mysqlPassword, string $mysqlDb, ?array $tables = null): void
     {
@@ -137,16 +173,13 @@ class ImportMdbToMySQL extends Command
         $this->importDataToMySQL($source, $mysqlUser, $mysqlPassword, $mysqlDb, $exportedTables);
 =======
     protected function importData(string $source, string $connection, ?array $tables = null): void
-    {
-        // Implementazione dell'importazione dei dati
-        $this->info('Importazione dati in corso...');
 =======
-     * Il nome e la firma del comando.
-     *
-     * @var string
-     */
-    protected $signature = 'mdb:import-mysql {mdbFile} {mysqlUser} {mysqlPassword} {mysqlDb}';
+    protected function importData(string $source, string $mysqlUser, string $mysqlPassword, string $mysqlDb, ?array $tables = null): void
+>>>>>>> 7b67053 (fix: auto resolve conflict)
+    {
+        $this->info('Importazione dati in corso...');
 
+<<<<<<< HEAD
     /**
      * La descrizione del comando.
      *
@@ -175,6 +208,10 @@ class ImportMdbToMySQL extends Command
 
         return Command::SUCCESS;
 >>>>>>> d9307de (fix: auto resolve conflict)
+=======
+        $exportedTables = $this->exportTablesToCSV($source, $tables);
+        $this->importDataToMySQL($source, $mysqlUser, $mysqlPassword, $mysqlDb, $exportedTables);
+>>>>>>> 7b67053 (fix: auto resolve conflict)
     }
 
     /**
@@ -188,6 +225,7 @@ class ImportMdbToMySQL extends Command
 
     /**
 <<<<<<< HEAD
+<<<<<<< HEAD
      * Esporta le tabelle specificate dal file .mdb in formato CSV.
      *
      * @return array Le tabelle esportate
@@ -199,19 +237,30 @@ class ImportMdbToMySQL extends Command
 
 =======
      * Esporta tutte le tabelle dal file .mdb in formato CSV.
+=======
+     * Esporta le tabelle specificate dal file .mdb in formato CSV.
+     *
+     * @return array Le tabelle esportate
+>>>>>>> 7b67053 (fix: auto resolve conflict)
      */
-    private function exportTablesToCSV(string $mdbFile): void
+    private function exportTablesToCSV(string $mdbFile, ?array $specificTables = null): array
     {
-        $tables = [];
+        $exportedTables = [];
         $tableList = shell_exec("mdb-tables $mdbFile");
 
+<<<<<<< HEAD
         // Esporta ogni tabella in un file CSV
 >>>>>>> d9307de (fix: auto resolve conflict)
+=======
+>>>>>>> 7b67053 (fix: auto resolve conflict)
         foreach (explode("\n", trim($tableList)) as $table) {
             if (empty($table)) {
                 continue;
             }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 7b67053 (fix: auto resolve conflict)
 
             // Se sono state specificate delle tabelle, controlla se questa è inclusa
             if ($specificTables && !in_array($table, $specificTables)) {
@@ -219,6 +268,7 @@ class ImportMdbToMySQL extends Command
             }
 
             $exportedTables[] = $table;
+<<<<<<< HEAD
             $csvFile = storage_path("app/{$table}.csv");
             shell_exec("mdb-export $mdbFile $table > $csvFile");
             $this->info("Tabella esportata: $table");
@@ -227,20 +277,32 @@ class ImportMdbToMySQL extends Command
         return $exportedTables;
 =======
             $tables[] = $table;
+=======
+>>>>>>> 7b67053 (fix: auto resolve conflict)
             $csvFile = storage_path("app/{$table}.csv");
             shell_exec("mdb-export $mdbFile $table > $csvFile");
+            $this->info("Tabella esportata: $table");
         }
+<<<<<<< HEAD
 >>>>>>> d9307de (fix: auto resolve conflict)
+=======
+
+        return $exportedTables;
+>>>>>>> 7b67053 (fix: auto resolve conflict)
     }
 
     /**
      * Crea le tabelle nel database MySQL basandosi sullo schema del file .mdb.
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     private function createTablesInMySQL(string $mdbFile, string $mysqlUser, string $mysqlPassword, string $mysqlDb, ?array $specificTables = null): void
 =======
     private function createTablesInMySQL(string $mdbFile, string $mysqlUser, string $mysqlPassword, string $mysqlDb): void
 >>>>>>> d9307de (fix: auto resolve conflict)
+=======
+    private function createTablesInMySQL(string $mdbFile, string $mysqlUser, string $mysqlPassword, string $mysqlDb, ?array $specificTables = null): void
+>>>>>>> 7b67053 (fix: auto resolve conflict)
     {
         $schema = shell_exec("mdb-schema $mdbFile mysql");
         $tables = explode(";\n", $schema);
@@ -250,6 +312,9 @@ class ImportMdbToMySQL extends Command
                 continue;
             }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 7b67053 (fix: auto resolve conflict)
 
             // Verifica se questa tabella è inclusa nell'elenco specificato
             if ($specificTables) {
@@ -264,8 +329,11 @@ class ImportMdbToMySQL extends Command
                 }
             }
 
+<<<<<<< HEAD
 =======
 >>>>>>> d9307de (fix: auto resolve conflict)
+=======
+>>>>>>> 7b67053 (fix: auto resolve conflict)
             // Adatta le virgolette per MySQL
             $tableSchema = str_replace('`', '"', $tableSchema);
             // Crea la tabella in MySQL
@@ -278,6 +346,7 @@ class ImportMdbToMySQL extends Command
      * Importa i dati CSV nelle tabelle MySQL.
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     private function importDataToMySQL(string $mdbFile, string $mysqlUser, string $mysqlPassword, string $mysqlDb, array $tables): void
     {
 =======
@@ -286,6 +355,10 @@ class ImportMdbToMySQL extends Command
         $tables = $this->exportTablesToCSV($mdbFile);
 
 >>>>>>> d9307de (fix: auto resolve conflict)
+=======
+    private function importDataToMySQL(string $mdbFile, string $mysqlUser, string $mysqlPassword, string $mysqlDb, array $tables): void
+    {
+>>>>>>> 7b67053 (fix: auto resolve conflict)
         foreach ($tables as $table) {
             $csvFile = storage_path("app/{$table}.csv");
             $command = "mysql -u $mysqlUser -p$mysqlPassword $mysqlDb -e "
@@ -297,11 +370,16 @@ class ImportMdbToMySQL extends Command
                 .'IGNORE 1 LINES;"';
             shell_exec($command);
 <<<<<<< HEAD
+<<<<<<< HEAD
             $this->info("Dati importati per la tabella: $table");
         }
 =======
         }
 >>>>>>> e2a4c5d (.)
 >>>>>>> d9307de (fix: auto resolve conflict)
+=======
+            $this->info("Dati importati per la tabella: $table");
+        }
+>>>>>>> 7b67053 (fix: auto resolve conflict)
     }
 }

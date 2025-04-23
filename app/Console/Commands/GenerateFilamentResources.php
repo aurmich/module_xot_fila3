@@ -11,8 +11,8 @@ use Nwidart\Modules\Facades\Module;
 
 class GenerateFilamentResources extends Command
 {
-<<<<<<< HEAD
     protected $signature = 'filament:generate-resources {module : Il nome del modulo per cui generare le risorse}';
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
     protected $signature = 'filament:generate-resources {module : Il nome del modulo per cui generare le risorse}';
@@ -20,6 +20,8 @@ class GenerateFilamentResources extends Command
     protected $signature = 'filament:generate-resources';
 >>>>>>> e2a4c5d (.)
 >>>>>>> 50bb41c (fix: auto resolve conflict)
+=======
+>>>>>>> 4ab3760 (.)
 
     protected $description = 'Generate Filament resources for all models';
 
@@ -28,23 +30,35 @@ class GenerateFilamentResources extends Command
         $moduleName = $this->argument('module');
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
+=======
+>>>>>>> 7b67053 (fix: auto resolve conflict)
 =======
 <<<<<<< HEAD
 >>>>>>> 50bb41c (fix: auto resolve conflict)
 >>>>>>> d9307de (fix: auto resolve conflict)
         
+<<<<<<< HEAD
 >>>>>>> e5c56c3 (.)
+=======
+=======
+
+>>>>>>> 4ab3760 (.)
+>>>>>>> 7b67053 (fix: auto resolve conflict)
         // Assicuriamoci che $moduleName sia una stringa
         if (!is_string($moduleName)) {
             $this->error("Il nome del modulo deve essere una stringa.");
             return Command::FAILURE;
         }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
+=======
+>>>>>>> 7b67053 (fix: auto resolve conflict)
         
 <<<<<<< HEAD
 >>>>>>> e5c56c3 (.)
@@ -54,7 +68,13 @@ class GenerateFilamentResources extends Command
 =======
 >>>>>>> e2a4c5d (.)
 >>>>>>> 50bb41c (fix: auto resolve conflict)
+<<<<<<< HEAD
 >>>>>>> d9307de (fix: auto resolve conflict)
+=======
+=======
+
+>>>>>>> 4ab3760 (.)
+>>>>>>> 7b67053 (fix: auto resolve conflict)
         $module = Module::find($moduleName);
 
         if (! $module) {
@@ -76,10 +96,10 @@ class GenerateFilamentResources extends Command
         foreach ($models as $model) {
             $modelName = $model->getFilenameWithoutExtension();
 
-<<<<<<< HEAD
             // Assicuriamoci che $moduleName sia una stringa per strtolower
             $panelName = strtolower($moduleName);
             $panel = $panelName.'::admin';
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
             // Assicuriamoci che $moduleName sia una stringa per strtolower
@@ -89,6 +109,8 @@ class GenerateFilamentResources extends Command
             $panel = strtolower($moduleName).'::admin';
 >>>>>>> e2a4c5d (.)
 >>>>>>> 50bb41c (fix: auto resolve conflict)
+=======
+>>>>>>> 4ab3760 (.)
             $params = [
                 'name' => $modelName,
                 '--panel' => $panel,

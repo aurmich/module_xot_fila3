@@ -5,10 +5,14 @@
 ### Error
 ```
 <<<<<<< HEAD
+<<<<<<< HEAD
 Static access to instance property Modules\Xot\Filament\Resources\XotBaseResource\RelationManagers\XotBaseRelationManager::$resource.
 =======
 Static access to instance property Modules\Xot\Filament\Resources\XotBaseResource\RelationManager\XotBaseRelationManager::$resource.
 >>>>>>> e5c56c3 (.)
+=======
+Static access to instance property Modules\Xot\Filament\Resources\XotBaseResource\RelationManagers\XotBaseRelationManager::$resource.
+>>>>>>> 7b67053 (fix: auto resolve conflict)
 ```
 
 ### Additional Error

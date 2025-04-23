@@ -24,11 +24,14 @@ class ExportXlsTableAction extends Action
         $this->translateLabel()
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
             
 >>>>>>> e5c56c3 (.)
 =======
+=======
+>>>>>>> 7b67053 (fix: auto resolve conflict)
             
 =======
 <<<<<<< HEAD
@@ -37,7 +40,13 @@ class ExportXlsTableAction extends Action
             ->label('')
 >>>>>>> e2a4c5d (.)
 >>>>>>> 50bb41c (fix: auto resolve conflict)
+<<<<<<< HEAD
 >>>>>>> d9307de (fix: auto resolve conflict)
+=======
+=======
+
+>>>>>>> 4ab3760 (.)
+>>>>>>> 7b67053 (fix: auto resolve conflict)
             ->tooltip(__('xot::actions.export_xls'))
              // ->icon('fas-file-excel')
             ->icon('heroicon-o-arrow-down-tray')
@@ -50,19 +59,26 @@ class ExportXlsTableAction extends Action
                 // ->getQuery(); // Staudenmeir\LaravelCte\Query\Builder
                 $rows = $query->get();
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> 50bb41c (fix: auto resolve conflict)
+=======
+>>>>>>> 4ab3760 (.)
                 /** @var array<int, string> $fields */
                 $fields = [];
                 if (method_exists($livewire_class, 'getXlsFields')) {
                     $rawFields = $livewire_class::getXlsFields($livewire->tableFilters);
                     Assert::isArray($rawFields);
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
                     
 >>>>>>> e5c56c3 (.)
+=======
+
+>>>>>>> 7b67053 (fix: auto resolve conflict)
                     // Ensure fields are properly formatted as array<int, string>
                     $fields = [];
                     foreach ($rawFields as $key => $field) {
@@ -73,6 +89,7 @@ class ExportXlsTableAction extends Action
                         }
                     }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
                 $fields = [];
@@ -80,6 +97,8 @@ class ExportXlsTableAction extends Action
                     Assert::isArray($fields = $livewire_class::getXlsFields($livewire->tableFilters));
 >>>>>>> e2a4c5d (.)
 >>>>>>> 50bb41c (fix: auto resolve conflict)
+=======
+>>>>>>> 4ab3760 (.)
                 }
 
                 return app(ExportXlsByCollection::class)->execute($rows, $filename, $transKey, $fields);

@@ -6,13 +6,17 @@ namespace Modules\Xot\Console\Commands;
 
 use Illuminate\Console\Command;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> d9307de (fix: auto resolve conflict)
+=======
+>>>>>>> 7b67053 (fix: auto resolve conflict)
 use Illuminate\Support\Facades\DB;
 use Safe\Exceptions\DatetimeException;
 use Safe\Exceptions\JsonException;
 use Safe\Exceptions\PcreException;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -20,29 +24,40 @@ use Safe\Exceptions\PcreException;
 use function Safe\shell_exec;
 >>>>>>> e2a4c5d (.)
 >>>>>>> d9307de (fix: auto resolve conflict)
+=======
+>>>>>>> 7b67053 (fix: auto resolve conflict)
 
 class ImportMdbToSQLite extends Command
 {
     /**
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> d9307de (fix: auto resolve conflict)
+=======
+>>>>>>> 7b67053 (fix: auto resolve conflict)
      * Il nome e la firma del comando console.
      *
      * @var string
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 7b67053 (fix: auto resolve conflict)
     protected $signature = 'xot:import-mdb-to-sqlite
                             {source : Percorso del file MDB sorgente}
                             {destination : Percorso del file SQLite di destinazione}
                             {--tables=* : Tabelle specifiche da importare}
+<<<<<<< HEAD
 =======
     protected $signature = 'xot:import-mdb-to-sqlite 
                             {source : Percorso del file MDB sorgente} 
                             {destination : Percorso del file SQLite di destinazione} 
                             {--tables=* : Tabelle specifiche da importare} 
 >>>>>>> d9307de (fix: auto resolve conflict)
+=======
+>>>>>>> 7b67053 (fix: auto resolve conflict)
                             {--skip-data : Salta l\'importazione dei dati}';
 
     /**
@@ -70,10 +85,14 @@ class ImportMdbToSQLite extends Command
         try {
             $this->importSchema($source, $destination, $tables);
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
             
 >>>>>>> d9307de (fix: auto resolve conflict)
+=======
+
+>>>>>>> 7b67053 (fix: auto resolve conflict)
             if (! $skipData) {
                 $this->importData($source, $destination, $tables);
             }
@@ -83,6 +102,7 @@ class ImportMdbToSQLite extends Command
         } catch (\Exception $e) {
             $this->error('Errore durante l\'importazione: ' . $e->getMessage());
             return 1;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -179,14 +199,19 @@ class ImportMdbToSQLite extends Command
             shell_exec($command);
 >>>>>>> e2a4c5d (.)
 >>>>>>> d9307de (fix: auto resolve conflict)
+=======
+>>>>>>> 7b67053 (fix: auto resolve conflict)
         }
     }
 
     /**
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> d9307de (fix: auto resolve conflict)
+=======
+>>>>>>> 7b67053 (fix: auto resolve conflict)
      * Importa lo schema del database.
      */
     protected function importSchema(string $source, string $destination, ?array $tables = null): void
@@ -202,6 +227,7 @@ class ImportMdbToSQLite extends Command
     {
         // Implementazione dell'importazione dei dati
         $this->info('Importazione dati in corso...');
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -219,5 +245,7 @@ class ImportMdbToSQLite extends Command
         }
 >>>>>>> e2a4c5d (.)
 >>>>>>> d9307de (fix: auto resolve conflict)
+=======
+>>>>>>> 7b67053 (fix: auto resolve conflict)
     }
 }

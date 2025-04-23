@@ -215,10 +215,14 @@ Per prevenire problemi simili in futuro, si raccomanda di:
   
   # Verifica se ci sono marcatori di conflitto nei file in staging
 <<<<<<< HEAD
+<<<<<<< HEAD
   if git diff --cached | grep -E '|| ' > /dev/null; then
 =======
   if git diff --cached | grep -E '||>>>>>>> ' > /dev/null; then
 >>>>>>> d9307de (fix: auto resolve conflict)
+=======
+  if git diff --cached | grep -E '|| ' > /dev/null; then
+>>>>>>> 7b67053 (fix: auto resolve conflict)
       echo "Error: You have unresolved merge conflicts. Please resolve them before committing."
       exit 1
   fi

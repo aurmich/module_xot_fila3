@@ -17,25 +17,35 @@ class GetModulePathAction
     use QueueableAction;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> 50bb41c (fix: auto resolve conflict)
+=======
+>>>>>>> 4ab3760 (.)
     /**
      * Ottiene il percorso di un modulo.
      *
      * @param string $moduleName Il nome del modulo
 <<<<<<< HEAD
+<<<<<<< HEAD
      *
 =======
      * 
 >>>>>>> e5c56c3 (.)
+=======
+     *
+>>>>>>> 7b67053 (fix: auto resolve conflict)
      * @return string Il percorso completo del modulo
      */
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
 >>>>>>> e2a4c5d (.)
 >>>>>>> 50bb41c (fix: auto resolve conflict)
+=======
+>>>>>>> 4ab3760 (.)
     public function execute(string $moduleName): string
     {
         try {
@@ -48,15 +58,22 @@ class GetModulePathAction
 
             $files = scandir($modulesPath);
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> 50bb41c (fix: auto resolve conflict)
+=======
+>>>>>>> 4ab3760 (.)
             $moduleNameLower = Str::lower($moduleName);
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
             
 >>>>>>> e5c56c3 (.)
+=======
+
+>>>>>>> 7b67053 (fix: auto resolve conflict)
             $foundModule = collect($files)
                 ->filter(
                     static function ($item) use ($moduleNameLower): bool {
@@ -67,20 +84,29 @@ class GetModulePathAction
                     }
                 )->first();
 <<<<<<< HEAD
-
-=======
-            
->>>>>>> e5c56c3 (.)
-            // Se non troviamo il modulo, restituiamo un percorso di fallback
-            if ($foundModule === null || !is_string($foundModule)) {
-                return base_path('Modules/'.$moduleName);
-            }
 <<<<<<< HEAD
 
 =======
             
 >>>>>>> e5c56c3 (.)
+=======
+
+>>>>>>> 7b67053 (fix: auto resolve conflict)
+            // Se non troviamo il modulo, restituiamo un percorso di fallback
+            if ($foundModule === null || !is_string($foundModule)) {
+                return base_path('Modules/'.$moduleName);
+            }
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+            
+>>>>>>> e5c56c3 (.)
+=======
+
+>>>>>>> 7b67053 (fix: auto resolve conflict)
             $module_path = base_path('Modules/'.$foundModule);
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -91,6 +117,8 @@ class GetModulePathAction
             $module_path = base_path('Modules/'.$module_path);
 >>>>>>> e2a4c5d (.)
 >>>>>>> 50bb41c (fix: auto resolve conflict)
+=======
+>>>>>>> 4ab3760 (.)
         }
 
         return $module_path;

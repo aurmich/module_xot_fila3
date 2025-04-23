@@ -14,6 +14,7 @@ class GetYearFilter
     /**
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
      * Crea un filtro per selezionare un anno all'interno di un intervallo.
      *
      * @param string $fieldName Il nome del campo su cui filtrare
@@ -25,9 +26,13 @@ class GetYearFilter
      * Undocumented function.
 >>>>>>> e5c56c3 (.)
 =======
+=======
+>>>>>>> 7b67053 (fix: auto resolve conflict)
      * Undocumented function.
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> 4ab3760 (.)
      * Crea un filtro per selezionare un anno all'interno di un intervallo.
      *
      * @param string $fieldName Il nome del campo su cui filtrare
@@ -35,19 +40,25 @@ class GetYearFilter
      * @param int $to L'anno di fine dell'intervallo
      *
      * @return SelectFilter Il filtro Filament configurato
+<<<<<<< HEAD
 =======
      * Undocumented function.
 >>>>>>> e2a4c5d (.)
 >>>>>>> 50bb41c (fix: auto resolve conflict)
+<<<<<<< HEAD
 >>>>>>> d9307de (fix: auto resolve conflict)
+=======
+=======
+>>>>>>> 4ab3760 (.)
+>>>>>>> 7b67053 (fix: auto resolve conflict)
      */
     public function execute(string $fieldName, int $from, int $to): SelectFilter
     {
         $opts = [];
         for ($curr = $from; $curr <= $to; ++$curr) {
-<<<<<<< HEAD
             $currStr = (string) $curr;
             $opts[$currStr] = $currStr;
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -68,7 +79,12 @@ class GetYearFilter
             $opts[(string) $curr] = (string) $curr;
 >>>>>>> e2a4c5d (.)
 >>>>>>> 50bb41c (fix: auto resolve conflict)
+<<<<<<< HEAD
 >>>>>>> d9307de (fix: auto resolve conflict)
+=======
+=======
+>>>>>>> 4ab3760 (.)
+>>>>>>> 7b67053 (fix: auto resolve conflict)
         }
 
         return SelectFilter::make($fieldName)

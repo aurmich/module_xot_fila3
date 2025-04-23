@@ -6,14 +6,16 @@ namespace Modules\Xot\Actions\Export;
 
 use Illuminate\Http\Response;
 use Illuminate\Support\LazyCollection;
-<<<<<<< HEAD
 use Maatwebsite\Excel\Facades\Excel;
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 use Maatwebsite\Excel\Facades\Excel;
 =======
 >>>>>>> e2a4c5d (.)
 >>>>>>> 50bb41c (fix: auto resolve conflict)
+=======
+>>>>>>> 4ab3760 (.)
 use Modules\Xot\Exports\LazyCollectionExport;
 use Spatie\QueueableAction\QueueableAction;
 use Symfony\Component\HttpFoundation\BinaryFileResponse;
@@ -23,9 +25,12 @@ class ExportXlsByLazyCollection
     use QueueableAction;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> 50bb41c (fix: auto resolve conflict)
+=======
+>>>>>>> 4ab3760 (.)
     /**
      * Esporta una lazy collection in Excel.
      *
@@ -33,10 +38,14 @@ class ExportXlsByLazyCollection
      * @param string $filename Nome del file Excel
      * @param array<int, string> $fields Campi da includere nell'export
 <<<<<<< HEAD
+<<<<<<< HEAD
      *
 =======
      * 
 >>>>>>> e5c56c3 (.)
+=======
+     *
+>>>>>>> 7b67053 (fix: auto resolve conflict)
      * @return BinaryFileResponse
      */
     public function execute(
@@ -80,6 +89,7 @@ class ExportXlsByLazyCollection
 
         return Excel::download($export, $filename);
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
     public function execute(
@@ -93,5 +103,7 @@ class ExportXlsByLazyCollection
         return $export->download($filename);
 >>>>>>> e2a4c5d (.)
 >>>>>>> 50bb41c (fix: auto resolve conflict)
+=======
+>>>>>>> 4ab3760 (.)
     }
 }

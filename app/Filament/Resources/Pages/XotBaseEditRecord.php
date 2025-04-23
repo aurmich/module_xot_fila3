@@ -5,9 +5,12 @@ declare(strict_types=1);
 namespace Modules\Xot\Filament\Resources\Pages;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> 50bb41c (fix: auto resolve conflict)
+=======
+>>>>>>> 4ab3760 (.)
 use Filament\Forms\Form;
 use Filament\Resources\Pages\EditRecord as FilamentEditRecord;
 
@@ -25,14 +28,19 @@ abstract class XotBaseEditRecord extends FilamentEditRecord
     {
         $schema = $this->getFormSchema();
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
         
 >>>>>>> e5c56c3 (.)
+=======
+
+>>>>>>> 7b67053 (fix: auto resolve conflict)
         if (empty($schema)) {
             $resource = $this->getResource();
             $schema = $resource::getFormSchema();
         }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
         // Ensure schema is properly typed for PHPStan level 10
@@ -44,14 +52,21 @@ abstract class XotBaseEditRecord extends FilamentEditRecord
 
 =======
         
+=======
+
+>>>>>>> 7b67053 (fix: auto resolve conflict)
         // Ensure schema is properly typed for PHPStan level 10
         /** @var array<string|int, \Filament\Forms\Components\Component>|array<\Filament\Forms\Components\Component> $validSchema */
         $validSchema = $schema;
-        
+
         return $form->schema($validSchema);
     }
+<<<<<<< HEAD
     
 >>>>>>> e5c56c3 (.)
+=======
+
+>>>>>>> 7b67053 (fix: auto resolve conflict)
     /**
      * Get the form schema.
      *
@@ -62,6 +77,7 @@ abstract class XotBaseEditRecord extends FilamentEditRecord
         return [];
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 use Filament\Resources\Pages\EditRecord as FilamenEditRecord;
@@ -71,4 +87,6 @@ abstract class XotBaseEditRecord extends FilamenEditRecord
     // ...
 >>>>>>> e2a4c5d (.)
 >>>>>>> 50bb41c (fix: auto resolve conflict)
+=======
+>>>>>>> 4ab3760 (.)
 }
