@@ -2,19 +2,9 @@
 
 ## Problema
 
-<<<<<<< HEAD
 
 Durante lo sviluppo del progetto SaluteOra, sono stati identificati diversi file con conflitti di merge non risolti. Questi conflitti erano indicati dalla presenza di marcatori come ``, `origin/dev` nel codice sorgente. I conflitti non risolti impedivano la corretta esecuzione del codice e causavano errori durante l'analisi statica con PHPStan.
 aurmich/dev
-=======
-<<<<<<< HEAD
-Durante lo sviluppo del progetto SaluteOra, sono stati identificati diversi file con conflitti di merge non risolti. Questi conflitti erano indicati dalla presenza di marcatori come ``, `` e `` nel codice sorgente. I conflitti non risolti impedivano la corretta esecuzione del codice e causavano errori durante l'analisi statica con PHPStan.
-=======
-
-Durante lo sviluppo del progetto SaluteOra, sono stati identificati diversi file con conflitti di merge non risolti. Questi conflitti erano indicati dalla presenza di marcatori come ``, `origin/dev` nel codice sorgente. I conflitti non risolti impedivano la corretta esecuzione del codice e causavano errori durante l'analisi statica con PHPStan.
-aurmich/dev
->>>>>>> aurmich/dev
->>>>>>> aurmich/dev
 
 I file principali con conflitti erano:
 - `Modules/Xot/app/Datas/MetatagData.php`
@@ -50,28 +40,10 @@ In `GetFieldnamesByTablenameAction.php`, c'erano conflitti relativi alla gestion
 
 ```php
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-if (! $this->isValidConnection($connectionName)) {
-if (! $this->isValidConnection(is_string($connectionName) ? $connectionName : (string) $connectionName)) {
-
-
-if (! $this->isValidConnection($connectionName)) {
-
-if (! $this->isValidConnection(is_string($connectionName) ? $connectionName : (string) $connectionName)) {
-
-
-=======
->>>>>>> aurmich/dev
 
 if (! $this->isValidConnection($connectionName)) {
 origin/dev
 aurmich/dev
-<<<<<<< HEAD
-=======
->>>>>>> aurmich/dev
->>>>>>> aurmich/dev
 ```
 
 #### 2. Conflitti nelle Annotazioni PHPDoc
@@ -80,33 +52,12 @@ In `TemporaryUploadPathGenerator.php`, c'erano conflitti nelle annotazioni PHPDo
 
 ```php
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-/**
- * @param \Modules\Media\Models\Media $media
- */
-
-=======
->>>>>>> aurmich/dev
->>>>>>> aurmich/dev
 
 /**
  * @param \Modules\Media\Models\Media $media
  */
-<<<<<<< HEAD
 origin/dev
 aurmich/dev
-=======
-<<<<<<< HEAD
-
-
-
-=======
-origin/dev
-aurmich/dev
->>>>>>> aurmich/dev
->>>>>>> aurmich/dev
 ```
 
 #### 3. Conflitti nell'Implementazione dei Metodi
@@ -115,31 +66,11 @@ In `ApplyMetatagToPanelAction.php`, c'erano conflitti nell'implementazione del m
 
 ```php
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-// @phpstan-ignore argument.type
-->colors($metatag->getColors())
-//->colors($metatag->getColors())
-
-
-// @phpstan-ignore argument.type
-->colors($metatag->getColors())
-
-//->colors($metatag->getColors())
-
-
-=======
->>>>>>> aurmich/dev
 
 // @phpstan-ignore argument.type
 ->colors($metatag->getColors())
 origin/dev
 aurmich/dev
-<<<<<<< HEAD
-=======
->>>>>>> aurmich/dev
->>>>>>> aurmich/dev
 ```
 
 #### 4. Conflitti nella Gestione delle Eccezioni
@@ -148,39 +79,12 @@ In `SaveJsonArrayAction.php`, c'erano conflitti nella gestione delle condizioni 
 
 ```php
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-//if ($content === false) {
-//    return false;
-//}
-if ($content === false) {
-    return false;
-}
-
-=======
->>>>>>> aurmich/dev
->>>>>>> aurmich/dev
 
 //if ($content === false) {
 //    return false;
 //}
-<<<<<<< HEAD
 origin/dev
 aurmich/dev
-=======
-<<<<<<< HEAD
-
-if ($content === false) {
-    return false;
-}
-
-
-=======
-origin/dev
-aurmich/dev
->>>>>>> aurmich/dev
->>>>>>> aurmich/dev
 ```
 
 #### 5. Conflitti nelle API Fluenti
@@ -192,15 +96,6 @@ $headers = [
 
     'Content-Disposition' => 'attachment; filename=' . $filename,
 
-<<<<<<< HEAD
->>>>>>> origin/dev
-=======
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/dev
->>>>>>> aurmich/dev
->>>>>>> aurmich/dev
 ```
 
 E anche nella tipizzazione delle funzioni di callback:
@@ -214,15 +109,6 @@ $headStrings = array_map(function ($item) {
 
 
 
-<<<<<<< HEAD
->>>>>>> origin/dev
-=======
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/dev
->>>>>>> aurmich/dev
->>>>>>> aurmich/dev
 ```
 
 ## Soluzione Implementata
@@ -310,14 +196,7 @@ Per verificare la correttezza della soluzione, sono stati creati test Pest che v
 4. La gestione corretta delle eccezioni
 5. La compatibilità con PHPStan a livello massimo
 
-<<<<<<< HEAD
 
-=======
-<<<<<<< HEAD
-=======
-
->>>>>>> aurmich/dev
->>>>>>> aurmich/dev
 ### Test per i File del Modulo Media
 
 ```php
@@ -331,25 +210,11 @@ it('verifica che i file corretti non contengano marcatori di conflitto', functio
     foreach ($files as $file) {
         $content = File::get($file);
         expect($content)->not->toContain('')
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-            ->and($content)->not->toContain('')
-            ->and($content)->not->toContain('');
-    }
-});
-```
-=======
->>>>>>> aurmich/dev
             ->and($content)->not->toContain('origin/dev');
     }
 });
 ```
 aurmich/dev
-<<<<<<< HEAD
-=======
->>>>>>> aurmich/dev
->>>>>>> aurmich/dev
 
 ### Test per i File del Modulo Xot
 
@@ -373,15 +238,6 @@ $headers = [
 
     'Content-Disposition' => 'attachment; filename=' . $filename,
 
-<<<<<<< HEAD
->>>>>>> origin/dev
-=======
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/dev
->>>>>>> aurmich/dev
->>>>>>> aurmich/dev
 ];
 
 // Dopo
@@ -472,19 +328,9 @@ In particolare, le correzioni hanno portato i seguenti benefici:
 5. **Compatibilità con PHPStan**: Riduzione degli errori di analisi statica
 
 Questo lavoro di risoluzione dei conflitti ha inoltre contribuito a stabilire best practices per la gestione dei merge nel progetto SaluteOra, che potranno essere applicate in futuro per prevenire problemi simili.
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> aurmich/dev
 
 49ebea7 (.)`.
 
 **Risoluzione**: Eliminate le proprietà duplicate e risolto il conflitto di tipo per la proprietà `blocks`.
 
 **Documentazione**: [Moduli Cms](../../../Cms/docs/models/PageContent_conflict.md)
->>>>>>> aurmich/dev
-<<<<<<< HEAD
-=======
->>>>>>> aurmich/dev
->>>>>>> aurmich/dev

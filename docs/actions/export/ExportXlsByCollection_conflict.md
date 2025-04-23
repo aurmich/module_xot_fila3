@@ -3,8 +3,7 @@
 ## Problema
 È stato rilevato un conflitto di merge nel file `Modules/Xot/app/Actions/Export/ExportXlsByCollection.php` alla riga relativa alla documentazione del metodo `writeRows()`.
 
-Il file presenta un marker di conflitto `>>>>>>> origin/dev` che indica un merge non completato tra due rami di sviluppo.
-
+Il file presenta un marker di conflitto `
 ## Analisi del Contesto
 Il conflitto si verifica nella documentazione PHPDoc del metodo `writeRows()`. In particolare, l'incongruenza riguarda la descrizione dei parametri e la formattazione della documentazione, che è stata probabilmente aggiornata in uno dei rami di sviluppo per migliorare la compatibilità con PHPStan.
 

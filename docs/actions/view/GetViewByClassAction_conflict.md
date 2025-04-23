@@ -3,8 +3,7 @@
 ## Problema
 È stato rilevato un conflitto di merge nel file `Modules/Xot/app/Actions/View/GetViewByClassAction.php` alla riga relativa alla conversione di tipi scalari in stringa.
 
-Il file presenta un marker di conflitto `>>>>>>> origin/dev` che indica un merge non completato tra due rami di sviluppo.
-
+Il file presenta un marker di conflitto `
 ## Analisi del Contesto
 Il conflitto si verifica nella funzione di callback utilizzata per mappare array di percorsi di classi in nomi di view. La porzione di codice interessata gestisce la conversione sicura di tipi scalari in stringa per garantire compatibilità con PHPStan livello 10.
 

@@ -23,19 +23,7 @@ class ExportXlsByCollection
      * @param string $filename Nome del file Excel
      * @param string|null $transKey Chiave di traduzione per i campi
      * @param array<int, string> $fields Campi da includere nell'export
-<<<<<<< HEAD
-
-     * 
-
-=======
-<<<<<<< HEAD
-     * 
-=======
-
-     * 
-
->>>>>>> aurmich/dev
->>>>>>> aurmich/dev
+     *
      * @return BinaryFileResponse
      */
     public function execute(
@@ -64,19 +52,7 @@ class ExportXlsByCollection
      * @param Collection $rows La collezione da esportare
      * @param array<string> $fields Campi da includere nell'export
      * @param string $filename Nome del file Excel
-<<<<<<< HEAD
-
-     * 
-
-=======
-<<<<<<< HEAD
-     * 
-=======
-
-     * 
-
->>>>>>> aurmich/dev
->>>>>>> aurmich/dev
+     *
      * @return string Il percorso del file generato
      */
     public function executeWithSpreadsheet(Collection $rows, array $fields, string $filename): string
@@ -107,35 +83,10 @@ class ExportXlsByCollection
     }
 
     /**
-
-
-<<<<<<< HEAD
-
-
-=======
-<<<<<<< HEAD
-=======
-
-
->>>>>>> aurmich/dev
->>>>>>> aurmich/dev
      * Scrive le righe nel foglio di lavoro.
      *
      * @param \PhpOffice\PhpSpreadsheet\Worksheet\Worksheet $sheet Il foglio di lavoro
      * @param \Illuminate\Support\Collection $rows I dati da scrivere
-
-
-<<<<<<< HEAD
-
-
-=======
-<<<<<<< HEAD
->>>>>>> origin/dev
-=======
-
-
->>>>>>> aurmich/dev
->>>>>>> aurmich/dev
      * @param array<string> $fields I campi da utilizzare per le colonne
      */
     protected function writeRows(\PhpOffice\PhpSpreadsheet\Worksheet\Worksheet $sheet, Collection $rows, array $fields): void
@@ -143,18 +94,6 @@ class ExportXlsByCollection
         $row = 2;
         foreach ($rows as $data) {
             foreach ($fields as $col => $field) {
-
-
-<<<<<<< HEAD
-
-
-=======
-<<<<<<< HEAD
-=======
-
-
->>>>>>> aurmich/dev
->>>>>>> aurmich/dev
                 $value = '';
 
                 // Verifica che $data supporti il metodo get

@@ -1,11 +1,4 @@
-<<<<<<< HEAD
 
-=======
-<<<<<<< HEAD
-=======
-
->>>>>>> aurmich/dev
->>>>>>> aurmich/dev
 # Rapporto PHPStan Livello 4 per il modulo Xot
 
 Data analisi: 2025-04-15 21:53:50
@@ -57,11 +50,4 @@ Trovati 4 errori al livello 4.
 - [Documentazione PHPStan](https://phpstan.org/user-guide/getting-started)
 - [Tipi in PHP](https://www.php.net/manual/en/language.types.declarations.php)
 - [PSR-12: Standard di codifica](https://www.php-fig.org/psr/psr-12/)
-<<<<<<< HEAD
 aurmich/dev
-=======
-<<<<<<< HEAD
-=======
-aurmich/dev
->>>>>>> aurmich/dev
->>>>>>> aurmich/dev
