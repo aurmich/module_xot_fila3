@@ -76,6 +76,27 @@ trait NavigationLabelTrait
 
         return $default;
     }
+<<<<<<< HEAD
+=======
+    /*
+    public function getHeading(): string|Htmlable
+    {
+        return 'AAAAAAAAAA';
+    }
+
+    public static function getBreadcrumb(): string {
+        return JobsWaitingPlugin::make()->getBreadcrumb();
+    }
+
+    public static function shouldRegisterNavigation(): bool {
+        return JobsWaitingPlugin::make()->shouldRegisterNavigation();
+    }
+
+    public static function getNavigationIcon(): string {
+        return JobsWaitingPlugin::make()->getNavigationIcon();
+    }
+    */
+>>>>>>> aurmich/dev
 }
 
 /*
