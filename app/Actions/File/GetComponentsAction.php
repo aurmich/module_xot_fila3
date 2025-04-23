@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace Modules\Xot\Actions\File;
 
 use Illuminate\Support\Facades\File;
+use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Str;
 use Modules\Xot\Datas\ComponentFileData;
 use Spatie\LaravelData\DataCollection;
@@ -94,7 +95,7 @@ class GetComponentsAction
                 ])->toArray();
 
             } catch (\Exception $e) {
-                dddx([
+                Log::error('Errore nel GetComponentsAction', [
                     'comp_name' => $comp_name,
                     'class_name' => $class_name,
                     'comp_ns' => $comp_ns,
