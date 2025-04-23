@@ -13,6 +13,7 @@ use Illuminate\Support\ServiceProvider;
 use Modules\Xot\Datas\ComponentFileData;
 use Nwidart\Modules\Traits\PathNamespace;
 use Modules\Xot\Actions\Blade\RegisterBladeComponentsAction;
+use Modules\Xot\Actions\File\GetComponentsAction;
 use Modules\Xot\Actions\Module\GetModulePathByGeneratorAction;
 use Modules\Xot\Actions\Livewire\RegisterLivewireComponentsAction;
 
@@ -150,16 +151,6 @@ abstract class XotBaseServiceProvider extends ServiceProvider
     protected function registerConfig(): void
     {
         try {
-<<<<<<< HEAD
-            $configPath = app(GetModulePathByGeneratorAction::class)->execute($this->name, 'config');
-
-
-            /*
-            $this->publishes([
-                $configPath => config_path($this->nameLower.'.php'),
-            ], 'config');
-            */
-=======
             Assert::string($relativePath = config('modules.paths.generator.config.path'));
             $configPath = module_path($this->name, $relativePath);
             if (! is_string($configPath)) {
@@ -174,7 +165,6 @@ abstract class XotBaseServiceProvider extends ServiceProvider
                 $configPath => config_path($this->nameLower.'.php'),
             ], 'config');
 
->>>>>>> aurmich/dev
             $this->mergeConfigFrom($configPath, $this->nameLower);
         } catch (\Exception $e) {
             // Ignore missing configuration
@@ -184,16 +174,6 @@ abstract class XotBaseServiceProvider extends ServiceProvider
 
     public function registerBladeComponents(): void
     {
-<<<<<<< HEAD
-
-        $componentsViewPath = app(GetModulePathByGeneratorAction::class)->execute($this->name, 'component-view');
-
-        // $components_path = realpath(__DIR__.'/../resources/views/components');
-        Blade::anonymousComponentPath($componentsViewPath);
-
-
-=======
->>>>>>> aurmich/dev
         $componentClassPath = app(GetModulePathByGeneratorAction::class)->execute($this->name, 'component-class');
 
         $namespace = $this->module_ns.'\View\Components';
