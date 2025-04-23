@@ -8,22 +8,43 @@ declare(strict_types=1);
 
 namespace Modules\Xot\Actions\Filament;
 
+<<<<<<< HEAD
 use Filament\Forms\Components\Field;
 use Filament\Forms\Components\Component;
+=======
+<<<<<<< HEAD
+use Filament\Forms\Components\Field;
+use Filament\Forms\Components\Component;
+=======
+>>>>>>> e2a4c5d (.)
+>>>>>>> 50bb41c (fix: auto resolve conflict)
 use Illuminate\Support\Arr;
 use Modules\Lang\Actions\SaveTransAction;
 use Modules\Xot\Actions\GetTransKeyAction;
 use Spatie\QueueableAction\QueueableAction;
 use Webmozart\Assert\Assert;
 
+<<<<<<< HEAD
 /**
  * Classe per automatizzare l'assegnazione di etichette ai componenti Filament.
  */
+=======
+<<<<<<< HEAD
+/**
+ * Classe per automatizzare l'assegnazione di etichette ai componenti Filament.
+ */
+=======
+>>>>>>> e2a4c5d (.)
+>>>>>>> 50bb41c (fix: auto resolve conflict)
 class AutoLabelAction
 {
     use QueueableAction;
 
     /**
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 50bb41c (fix: auto resolve conflict)
      * Get the component name based on its actual type.
      *
      * @param Field|Component $component Il componente di cui ottenere il nome
@@ -44,9 +65,12 @@ class AutoLabelAction
         if (method_exists($component, 'getStatePath')) {
             $statePath = $component->getStatePath();
 <<<<<<< HEAD
+<<<<<<< HEAD
 
             return $statePath;
 =======
+=======
+>>>>>>> d9307de (fix: auto resolve conflict)
 <<<<<<< HEAD
             return $statePath;
 =======
@@ -56,7 +80,14 @@ class AutoLabelAction
             return is_string($statePath) ? $statePath : (string) $statePath;
 >>>>>>> origin/dev
 >>>>>>> origin/dev
+<<<<<<< HEAD
 >>>>>>> e5c56c3 (.)
+=======
+=======
+
+            return $statePath;
+>>>>>>> 50bb41c (fix: auto resolve conflict)
+>>>>>>> d9307de (fix: auto resolve conflict)
         }
 
         // Fallback a reflection per altri casi
@@ -64,10 +95,13 @@ class AutoLabelAction
         if ($reflectionClass->hasProperty('name') && $reflectionClass->getProperty('name')->isPublic()) {
             $property = $reflectionClass->getProperty('name');
 <<<<<<< HEAD
+<<<<<<< HEAD
 
             Assert::string($value = $property->getValue($component));
             return $value;
 =======
+=======
+>>>>>>> d9307de (fix: auto resolve conflict)
 <<<<<<< HEAD
             Assert::string($value = $property->getValue($component));
             return $value;
@@ -80,7 +114,15 @@ class AutoLabelAction
             return is_string($value) ? $value : (string) $value;
 >>>>>>> origin/dev
 >>>>>>> origin/dev
+<<<<<<< HEAD
 >>>>>>> e5c56c3 (.)
+=======
+=======
+
+            Assert::string($value = $property->getValue($component));
+            return $value;
+>>>>>>> 50bb41c (fix: auto resolve conflict)
+>>>>>>> d9307de (fix: auto resolve conflict)
         }
 
         // Ultima risorsa: ritorniamo il nome della classe
@@ -92,18 +134,28 @@ class AutoLabelAction
      *
      * @param Field|Component $component Il componente a cui applicare l'etichetta
 <<<<<<< HEAD
+<<<<<<< HEAD
      *
 =======
      * 
 >>>>>>> e5c56c3 (.)
+=======
+     * 
+=======
+     *
+>>>>>>> 50bb41c (fix: auto resolve conflict)
+>>>>>>> d9307de (fix: auto resolve conflict)
      * @return Field|Component Il componente con l'etichetta applicata
      */
     public function execute(Field|Component $component): Field|Component
     {
         Assert::isInstanceOf($component, Field::class, 'Il componente deve essere un\'istanza di Field o Component');
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
+=======
+>>>>>>> d9307de (fix: auto resolve conflict)
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -112,7 +164,13 @@ class AutoLabelAction
         
 >>>>>>> origin/dev
 >>>>>>> origin/dev
+<<<<<<< HEAD
 >>>>>>> e5c56c3 (.)
+=======
+=======
+
+>>>>>>> 50bb41c (fix: auto resolve conflict)
+>>>>>>> d9307de (fix: auto resolve conflict)
         $backtrace = debug_backtrace(DEBUG_BACKTRACE_PROVIDE_OBJECT, 6);
 
         // Otteniamo il valore dalla backtrace
@@ -124,12 +182,18 @@ class AutoLabelAction
             $class = get_class($component);
         }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> origin/dev
+<<<<<<< HEAD
 >>>>>>> e5c56c3 (.)
+=======
+=======
+>>>>>>> 50bb41c (fix: auto resolve conflict)
+>>>>>>> d9307de (fix: auto resolve conflict)
 
         if (is_object($class)) {
             $class = get_class($class);
@@ -142,6 +206,7 @@ class AutoLabelAction
         $transKeyAction = app(GetTransKeyAction::class);
         Assert::isCallable([$transKeyAction, 'execute'], 'GetTransKeyAction::execute deve essere chiamabile');
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -161,7 +226,12 @@ class AutoLabelAction
         
 >>>>>>> origin/dev
 >>>>>>> origin/dev
+<<<<<<< HEAD
 >>>>>>> e5c56c3 (.)
+=======
+=======
+>>>>>>> 50bb41c (fix: auto resolve conflict)
+>>>>>>> d9307de (fix: auto resolve conflict)
         $trans_key = $transKeyAction->execute($class);
         Assert::stringNotEmpty($trans_key, 'La chiave di traduzione non può essere vuota');
 
@@ -170,6 +240,7 @@ class AutoLabelAction
         Assert::stringNotEmpty($componentName, 'Il nome del componente non può essere vuoto');
 
         // Costruiamo la chiave per l'etichetta
+<<<<<<< HEAD
 <<<<<<< HEAD
         $label_key = $trans_key . '.fields.' . $componentName . '.label';
         $label = trans($label_key);
@@ -190,23 +261,38 @@ class AutoLabelAction
         
 >>>>>>> origin/dev
 >>>>>>> origin/dev
+<<<<<<< HEAD
 >>>>>>> e5c56c3 (.)
+=======
+=======
+        $label_key = $trans_key . '.fields.' . $componentName . '.label';
+        $label = trans($label_key);
+
+>>>>>>> 50bb41c (fix: auto resolve conflict)
+>>>>>>> d9307de (fix: auto resolve conflict)
         if (is_string($label)) {
             if ($label_key === $label) {
                 // Se la traduzione non esiste, creiamone una utilizzando il nome del componente
                 $label_value = $componentName;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> origin/dev
+<<<<<<< HEAD
 >>>>>>> e5c56c3 (.)
+=======
+=======
+>>>>>>> 50bb41c (fix: auto resolve conflict)
+>>>>>>> d9307de (fix: auto resolve conflict)
 
                 // Proviamo a ottenere una traduzione più breve
                 $label_key1 = $trans_key . '.fields.' . $componentName;
                 $label1 = trans($label_key1);
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -219,7 +305,12 @@ class AutoLabelAction
                 
 >>>>>>> origin/dev
 >>>>>>> origin/dev
+<<<<<<< HEAD
 >>>>>>> e5c56c3 (.)
+=======
+=======
+>>>>>>> 50bb41c (fix: auto resolve conflict)
+>>>>>>> d9307de (fix: auto resolve conflict)
                 if ($label_key1 !== $label1 && is_string($label1)) {
                     $label_value = $label1;
                 }
@@ -228,16 +319,23 @@ class AutoLabelAction
                 $saveTransAction = app(SaveTransAction::class);
                 Assert::isCallable([$saveTransAction, 'execute'], 'SaveTransAction::execute deve essere chiamabile');
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> origin/dev
+<<<<<<< HEAD
 >>>>>>> e5c56c3 (.)
+=======
+=======
+>>>>>>> 50bb41c (fix: auto resolve conflict)
+>>>>>>> d9307de (fix: auto resolve conflict)
 
                 $saveTransAction->execute($label_key, $label_value);
             }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -252,6 +350,33 @@ class AutoLabelAction
 >>>>>>> e5c56c3 (.)
             // Applichiamo l'etichetta al componente
             // Field ha sempre un metodo label(), quindi possiamo chiamarlo direttamente
+=======
+            // Applichiamo l'etichetta al componente
+            // Field ha sempre un metodo label(), quindi possiamo chiamarlo direttamente
+=======
+     * Undocumented function.
+     * return number of input added.
+     */
+    public function execute($component)
+    {
+        $backtrace = debug_backtrace();
+        Assert::string($class = Arr::get($backtrace, '5.class'));
+        $trans_key = app(GetTransKeyAction::class)->execute($class);
+        $label_key = $trans_key.'.fields.'.$component->getName().'.label';
+        $label = trans($label_key);
+        if (is_string($label)) {
+            if ($label_key == $label) {
+                $label_value = $component->getName();
+                $label_key1 = $trans_key.'.fields.'.$component->getName();
+                $label1 = trans($label_key1);
+                if ($label_key1 != $label1) {
+                    $label_value = $label1;
+                }
+
+                app(SaveTransAction::class)->execute($label_key, $label_value);
+            }
+>>>>>>> e2a4c5d (.)
+>>>>>>> 50bb41c (fix: auto resolve conflict)
             $component->label($label);
         }
 

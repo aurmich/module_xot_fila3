@@ -1,4 +1,8 @@
 https://fly.io/laravel-bytes/console-applications-with-laravel-zero/
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 50bb41c (fix: auto resolve conflict)
 
 <<<<<<< HEAD
 
@@ -24,8 +28,11 @@ namespace Modules\Xot\Console\Commands;
 ### ❌ ERRATO
 ```php
 <<<<<<< HEAD
+<<<<<<< HEAD
 namespace Modules\Xot\app\Console\Commands;
 =======
+=======
+>>>>>>> d9307de (fix: auto resolve conflict)
 <<<<<<< HEAD
 namespace Modules\Xot\Console\Commands;
 namespace Modules\Xot\app\Console\Commands;
@@ -36,7 +43,13 @@ namespace Modules\Xot\Console\Commands;
 namespace Modules\Xot\app\Console\Commands;
 >>>>>>> origin/dev
 >>>>>>> origin/dev
+<<<<<<< HEAD
 >>>>>>> e5c56c3 (.)
+=======
+=======
+namespace Modules\Xot\app\Console\Commands;
+>>>>>>> 50bb41c (fix: auto resolve conflict)
+>>>>>>> d9307de (fix: auto resolve conflict)
 ```
 
 ## Esempio di Comando Console
@@ -84,7 +97,14 @@ class DatabaseSchemaExportCommand extends Command
 - [Laravel Artisan Console Documentation](https://laravel.com/docs/10.x/artisan)
 - [Console Applications with Laravel Zero](https://fly.io/laravel-bytes/console-applications-with-laravel-zero/)
 <<<<<<< HEAD
+<<<<<<< HEAD
 
  e2a4c5d (.)
 =======
 >>>>>>> e5c56c3 (.)
+=======
+=======
+=======
+>>>>>>> e2a4c5d (.)
+>>>>>>> 50bb41c (fix: auto resolve conflict)
+>>>>>>> d9307de (fix: auto resolve conflict)

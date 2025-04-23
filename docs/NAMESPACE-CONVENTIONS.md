@@ -32,8 +32,11 @@ Un errore particolarmente frequente riguarda le Actions. La convenzione corretta
 
 - ✅ **CORRETTO**: `namespace Modules\Xot\Actions;`
 <<<<<<< HEAD
+<<<<<<< HEAD
 - ❌ **ERRATO**: `namespace Modules\Xot\app\Actions;`
 =======
+=======
+>>>>>>> d9307de (fix: auto resolve conflict)
 <<<<<<< HEAD
 - ❌ **ERRATO**: `namespace Modules\Xot\Actions;`
 =======
@@ -43,15 +46,24 @@ Un errore particolarmente frequente riguarda le Actions. La convenzione corretta
 - ❌ **ERRATO**: `namespace Modules\Xot\app\Actions;`
 >>>>>>> origin/dev
 >>>>>>> origin/dev
+<<<<<<< HEAD
 >>>>>>> e5c56c3 (.)
+=======
+=======
+- ❌ **ERRATO**: `namespace Modules\Xot\app\Actions;`
+>>>>>>> 50bb41c (fix: auto resolve conflict)
+>>>>>>> d9307de (fix: auto resolve conflict)
 
 Anche se il file si trova nel percorso fisico `Modules/Xot/app/Actions/`, il namespace non deve mai includere il segmento `app`.
 
 Questo errore causa spesso problemi di PHPStan come:
 ```
 <<<<<<< HEAD
+<<<<<<< HEAD
 Class 'Modules\Xot\app\Actions\MyAction' not found.
 =======
+=======
+>>>>>>> d9307de (fix: auto resolve conflict)
 <<<<<<< HEAD
 Class 'Modules\Xot\Actions\MyAction' not found.
 =======
@@ -61,7 +73,13 @@ Class 'Modules\Xot\Actions\MyAction' not found.
 Class 'Modules\Xot\app\Actions\MyAction' not found.
 >>>>>>> origin/dev
 >>>>>>> origin/dev
+<<<<<<< HEAD
 >>>>>>> e5c56c3 (.)
+=======
+=======
+Class 'Modules\Xot\app\Actions\MyAction' not found.
+>>>>>>> 50bb41c (fix: auto resolve conflict)
+>>>>>>> d9307de (fix: auto resolve conflict)
 ```
 
 La correzione è sempre la stessa: rimuovere il segmento `app` dal namespace.
@@ -180,7 +198,10 @@ class RatingServiceProvider extends XotBaseServiceProvider
 ```
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> d9307de (fix: auto resolve conflict)
 ### Route Service Providers
 
 ```php
@@ -203,7 +224,12 @@ class RouteServiceProvider extends XotBaseRouteServiceProvider
 }
 ```
 
+<<<<<<< HEAD
 >>>>>>> e5c56c3 (.)
+=======
+=======
+>>>>>>> 50bb41c (fix: auto resolve conflict)
+>>>>>>> d9307de (fix: auto resolve conflict)
 ## Corrispondenza tra Struttura delle Directory e Namespace
 
 | Directory fisica                             | Namespace corretto                   |
@@ -245,6 +271,7 @@ use Modules\User\Models\User;
 use Modules\Rating\Models\Rating as RatingModel;
 ```
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 ## Test di Validazione Namespace
 
@@ -289,6 +316,8 @@ test('verifica correttezza namespace', function () {
         ->toBeEmpty();
 }); 
 =======
+=======
+>>>>>>> d9307de (fix: auto resolve conflict)
 ## Namespace in composer.json
 
 Quando si definisce l'autoloading in `composer.json`, assicurarsi che la mappatura rifletta questa convenzione:
@@ -344,4 +373,51 @@ namespace Modules\Rating\Console\Commands;
 5. **Standard Laravel**: Allineato alle convenzioni di Laravel
 
 Seguire queste convenzioni di namespace aiuterà a mantenere un codebase coerente e a evitare errori comuni durante l'analisi statica del codice con PHPStan. 
+<<<<<<< HEAD
 >>>>>>> e5c56c3 (.)
+=======
+=======
+## Test di Validazione Namespace
+
+Per verificare la correttezza dei namespace, utilizzare il seguente test Pest:
+
+```php
+test('verifica correttezza namespace', function () {
+    $basePath = base_path('Modules');
+    $modules = array_filter(scandir($basePath), fn($item) => 
+        is_dir($basePath . '/' . $item) && !in_array($item, ['.', '..'])
+    );
+    
+    $errors = [];
+    
+    foreach ($modules as $module) {
+        $appPath = $basePath . '/' . $module . '/app';
+        if (!is_dir($appPath)) continue;
+        
+        $iterator = new RecursiveIteratorIterator(
+            new RecursiveDirectoryIterator($appPath)
+        );
+        
+        foreach ($iterator as $file) {
+            if ($file->isFile() && $file->getExtension() === 'php') {
+                $content = file_get_contents($file->getRealPath());
+                if (preg_match('/namespace\s+[^;]+;/', $content, $matches)) {
+                    $namespace = $matches[0];
+                    if (strpos($namespace, '\app\\') !== false) {
+                        $errors[] = sprintf(
+                            'File %s contiene namespace non valido: %s',
+                            $file->getRealPath(),
+                            $namespace
+                        );
+                    }
+                }
+            }
+        }
+    }
+    
+    expect($errors)
+        ->withContext("I seguenti file contengono namespace non validi:\n" . implode("\n", $errors))
+        ->toBeEmpty();
+}); 
+>>>>>>> 50bb41c (fix: auto resolve conflict)
+>>>>>>> d9307de (fix: auto resolve conflict)

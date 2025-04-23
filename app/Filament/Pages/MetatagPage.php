@@ -17,15 +17,27 @@ use Filament\Forms\Get;
 use Filament\Notifications\Notification;
 use Filament\Pages\Page;
 <<<<<<< HEAD
+<<<<<<< HEAD
 use Filament\Support\Colors\Color;
 =======
 >>>>>>> e5c56c3 (.)
+=======
+=======
+<<<<<<< HEAD
+use Filament\Support\Colors\Color;
+=======
+>>>>>>> e2a4c5d (.)
+>>>>>>> 50bb41c (fix: auto resolve conflict)
+>>>>>>> d9307de (fix: auto resolve conflict)
 use Modules\Tenant\Services\TenantService;
 use Modules\Xot\Datas\MetatagData;
 use Modules\Xot\Filament\Traits\NavigationLabelTrait;
 use Webmozart\Assert\Assert;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> d9307de (fix: auto resolve conflict)
 <<<<<<< HEAD
 use Filament\Support\Colors\Color;
 =======
@@ -34,7 +46,12 @@ use Filament\Support\Colors\Color;
 =======
 >>>>>>> origin/dev
 >>>>>>> origin/dev
+<<<<<<< HEAD
 >>>>>>> e5c56c3 (.)
+=======
+=======
+>>>>>>> 50bb41c (fix: auto resolve conflict)
+>>>>>>> d9307de (fix: auto resolve conflict)
 
 /**
  * @property ComponentContainer $form
@@ -98,12 +115,18 @@ class MetatagPage extends Page implements HasForms
                         ->schema([
                             Select::make('key')
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> origin/dev
+<<<<<<< HEAD
 >>>>>>> e5c56c3 (.)
+=======
+=======
+>>>>>>> 50bb41c (fix: auto resolve conflict)
+>>>>>>> d9307de (fix: auto resolve conflict)
                                 ->label('Chiave')
                                 ->required()
                                 ->options($metatag->getFilamentColors()),
@@ -120,9 +143,12 @@ class MetatagPage extends Page implements HasForms
                                 ->required(),
                         ])
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> 50bb41c (fix: auto resolve conflict)
 =======
 
                                 ->required()
@@ -138,9 +164,16 @@ class MetatagPage extends Page implements HasForms
                                 ->required(), // e.g., '#0071b0'
                         ])
                     // ->keyValueArray(true) // Store as key-value pairs in the 'colors' array
+<<<<<<< HEAD
 >>>>>>> origin/dev
 >>>>>>> origin/dev
+<<<<<<< HEAD
 >>>>>>> e5c56c3 (.)
+=======
+=======
+>>>>>>> e2a4c5d (.)
+>>>>>>> 50bb41c (fix: auto resolve conflict)
+>>>>>>> d9307de (fix: auto resolve conflict)
                         ->columns(3),
                 ]
             )->columns(2)
@@ -165,13 +198,21 @@ class MetatagPage extends Page implements HasForms
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 
 >>>>>>> origin/dev
 >>>>>>> origin/dev
+<<<<<<< HEAD
 >>>>>>> e5c56c3 (.)
+=======
+=======
+
+>>>>>>> e2a4c5d (.)
+>>>>>>> 50bb41c (fix: auto resolve conflict)
+>>>>>>> d9307de (fix: auto resolve conflict)
                 ->submit('save'),
         ];
     }

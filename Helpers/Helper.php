@@ -166,10 +166,21 @@ if (! function_exists('dddx')) {
 
         Assert::string($doc_root = $_SERVER['DOCUMENT_ROOT']);
 <<<<<<< HEAD
+<<<<<<< HEAD
         $doc_root = str_replace('/', DIRECTORY_SEPARATOR, (string) $doc_root);
 =======
         $doc_root = str_replace('/', DIRECTORY_SEPARATOR, $doc_root);
 >>>>>>> e5c56c3 (.)
+=======
+        $doc_root = str_replace('/', DIRECTORY_SEPARATOR, $doc_root);
+=======
+<<<<<<< HEAD
+        $doc_root = str_replace('/', DIRECTORY_SEPARATOR, $doc_root);
+=======
+        $doc_root = str_replace('/', DIRECTORY_SEPARATOR, (string) $doc_root);
+>>>>>>> e2a4c5d (.)
+>>>>>>> 50bb41c (fix: auto resolve conflict)
+>>>>>>> d9307de (fix: auto resolve conflict)
 
         $dir_piece = explode(DIRECTORY_SEPARATOR, __DIR__);
         $dir_piece = array_slice($dir_piece, 0, -6);
@@ -408,10 +419,21 @@ if (! function_exists('params2ContainerItem')) {
             preg_match($pattern, $k, $matches);
 
 <<<<<<< HEAD
+<<<<<<< HEAD
             if (is_array($matches) && isset($matches[1]) && isset($matches[2])) {
 =======
             if (!empty($matches) && isset($matches[1]) && isset($matches[2]) && is_string($matches[1]) && is_string($matches[2])) {
 >>>>>>> e5c56c3 (.)
+=======
+            if (!empty($matches) && isset($matches[1]) && isset($matches[2]) && is_string($matches[1]) && is_string($matches[2])) {
+=======
+<<<<<<< HEAD
+            if (!empty($matches) && isset($matches[1]) && isset($matches[2]) && is_string($matches[1]) && is_string($matches[2])) {
+=======
+            if (is_array($matches) && isset($matches[1]) && isset($matches[2])) {
+>>>>>>> e2a4c5d (.)
+>>>>>>> 50bb41c (fix: auto resolve conflict)
+>>>>>>> d9307de (fix: auto resolve conflict)
                 $sk = $matches[1];
                 $sv = $matches[2];
                 // @phpstan-ignore offsetAccess.nonOffsetAccessible
@@ -424,10 +446,16 @@ if (! function_exists('params2ContainerItem')) {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 if (! function_exists('getModelFields')) {
     function getModelFields(Model $model): array
     {
 =======
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 50bb41c (fix: auto resolve conflict)
+>>>>>>> d9307de (fix: auto resolve conflict)
 
 if (! function_exists('getModelFields')) {
     function getModelFields(Model $model): array {
@@ -439,7 +467,24 @@ if (! function_exists('getModelFields')) {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 >>>>>>> e5c56c3 (.)
+=======
+<<<<<<< HEAD
+=======
+=======
+if (! function_exists('getModelFields')) {
+    function getModelFields(Model $model): array
+    {
+        return $model->getConnection()
+            ->getSchemaBuilder()
+            ->getColumnListing($model->getTable());
+    }
+}
+
+>>>>>>> e2a4c5d (.)
+>>>>>>> 50bb41c (fix: auto resolve conflict)
+>>>>>>> d9307de (fix: auto resolve conflict)
 if (! function_exists('getModelByName')) {
     function getModelByName(string $name): Model
     {
@@ -588,8 +633,18 @@ if (! function_exists('getAllModulesModels')) {
                 continue;
             }
 
+<<<<<<< HEAD
             $moduleName = $module->getName();
             if ($moduleName === '') {
+=======
+<<<<<<< HEAD
+            $moduleName = $module->getName();
+            if ($moduleName === '') {
+=======
+            $moduleName = $module->get('name');
+            if (! is_string($moduleName)) {
+>>>>>>> e2a4c5d (.)
+>>>>>>> 50bb41c (fix: auto resolve conflict)
                 continue;
             }
 
@@ -598,7 +653,15 @@ if (! function_exists('getAllModulesModels')) {
                 $moduleModels = getModuleModels($moduleName);
                 $res = array_merge($res, $moduleModels);
             } catch (Exception $e) {
+<<<<<<< HEAD
                 \Illuminate\Support\Facades\Log::error('[Module:'.$moduleName.'] Error getting models: '.$e->getMessage());
+=======
+<<<<<<< HEAD
+                \Illuminate\Support\Facades\Log::error('[Module:'.$moduleName.'] Error getting models: '.$e->getMessage());
+=======
+                Log::error('[Module:'.$moduleName.'] Error getting models: '.$e->getMessage());
+>>>>>>> e2a4c5d (.)
+>>>>>>> 50bb41c (fix: auto resolve conflict)
 
                 continue;
             }
@@ -969,6 +1032,10 @@ if (! function_exists('debugStack')) {
             throw new RuntimeException('XDebug must be installed to use this function');
         }
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 50bb41c (fix: auto resolve conflict)
         if (function_exists('xdebug_set_filter') && defined('XDEBUG_FILTER_TRACING') && defined('XDEBUG_PATH_EXCLUDE')) {
             @xdebug_set_filter(
                 @constant('XDEBUG_FILTER_TRACING'),
@@ -982,6 +1049,19 @@ if (! function_exists('debugStack')) {
         } else {
             debug_print_backtrace();
         }
+<<<<<<< HEAD
+=======
+=======
+        xdebug_set_filter(
+            XDEBUG_FILTER_TRACING,
+            XDEBUG_PATH_EXCLUDE,
+            // [LARAVEL_DIR.'/vendor/']
+            [__DIR__.'/../../vendor/']
+        );
+
+        xdebug_print_function_stack();
+>>>>>>> e2a4c5d (.)
+>>>>>>> 50bb41c (fix: auto resolve conflict)
     }
 }
 
@@ -1132,6 +1212,7 @@ if (! function_exists('cssInLine')) {
 
 if (! function_exists('authId')) {
 <<<<<<< HEAD
+<<<<<<< HEAD
     function authId(): ?string
     {
         try {
@@ -1149,6 +1230,11 @@ if (! function_exists('authId')) {
     }
 }
 =======
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 50bb41c (fix: auto resolve conflict)
+>>>>>>> d9307de (fix: auto resolve conflict)
     /**
      * Get the current authenticated user ID from Filament or Laravel auth.
      */
@@ -1192,4 +1278,28 @@ function safe_object_call($object, string $method, ...$args) {
     
     return $object->$method(...$args);
 }
+<<<<<<< HEAD
 >>>>>>> e5c56c3 (.)
+=======
+<<<<<<< HEAD
+=======
+=======
+    function authId(): ?string
+    {
+        try {
+            $id = Filament::auth()->id() ?? auth()->id();
+        } catch (Exception $e) {
+            return null;
+        } catch (Error $e) {
+            return null;
+        }
+        if (null === $id) {
+            return null;
+        }
+
+        return (string) $id;
+    }
+}
+>>>>>>> e2a4c5d (.)
+>>>>>>> 50bb41c (fix: auto resolve conflict)
+>>>>>>> d9307de (fix: auto resolve conflict)

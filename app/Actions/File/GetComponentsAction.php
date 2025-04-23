@@ -8,11 +8,25 @@ use Illuminate\Support\Facades\File;
 use Illuminate\Support\Str;
 use Modules\Xot\Datas\ComponentFileData;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 use function Safe\json_decode;
 
 >>>>>>> e5c56c3 (.)
+=======
+
+use function Safe\json_decode;
+
+=======
+<<<<<<< HEAD
+=======
+
+use function Safe\json_decode;
+
+>>>>>>> e2a4c5d (.)
+>>>>>>> 50bb41c (fix: auto resolve conflict)
+>>>>>>> d9307de (fix: auto resolve conflict)
 use Spatie\LaravelData\DataCollection;
 use Spatie\QueueableAction\QueueableAction;
 use Webmozart\Assert\Assert;
@@ -40,6 +54,7 @@ class GetComponentsAction
             }
         }
 <<<<<<< HEAD
+<<<<<<< HEAD
         //$force_recreate = true;
         $exists = File::exists($components_json);
         if ($exists && ! $force_recreate) {
@@ -51,12 +66,30 @@ class GetComponentsAction
             }
 
 =======
+=======
+>>>>>>> d9307de (fix: auto resolve conflict)
 
         $exists = File::exists($components_json);
         if ($exists && ! $force_recreate) {
             Assert::string($content = File::get($components_json), '['.__LINE__.']['.class_basename(static::class).']');
             $comps = json_decode($content, false);
+<<<<<<< HEAD
 >>>>>>> e5c56c3 (.)
+=======
+=======
+<<<<<<< HEAD
+        //$force_recreate = true;
+        $exists = File::exists($components_json);
+        if ($exists && ! $force_recreate) {
+            Assert::string($content = File::get($components_json), '['.__LINE__.']['.class_basename(static::class).']');
+            try {
+                $comps = json_decode($content, true, 512, JSON_THROW_ON_ERROR);
+            } catch (\JsonException $e) {
+                $comps = [];
+            }
+
+>>>>>>> 50bb41c (fix: auto resolve conflict)
+>>>>>>> d9307de (fix: auto resolve conflict)
             if (! is_array($comps)) {
                 $comps = [];
             }
@@ -66,14 +99,47 @@ class GetComponentsAction
         $files = File::allFiles($path);
         $comps = [];
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
         
 >>>>>>> e5c56c3 (.)
+=======
+        
+=======
+
+=======
+
+        $exists = File::exists($components_json);
+        // $force_recreate = true;
+        if ($exists && ! $force_recreate) {
+            Assert::string($content = File::get($components_json), '['.__LINE__.']['.class_basename(static::class).']');
+
+            // return (array) json_decode((string) $content, null, 512, JSON_THROW_ON_ERROR);
+            // return (array) json_decode($content, false, 512, JSON_THROW_ON_ERROR);
+            $comps = json_decode($content, false);
+            if (! is_array($comps)) {
+                $comps = [];
+            }
+            $res = ComponentFileData::collection($comps);
+
+            return $res;
+        }
+
+        $files = File::allFiles($path);
+
+        $comps = [];
+>>>>>>> e2a4c5d (.)
+>>>>>>> 50bb41c (fix: auto resolve conflict)
+>>>>>>> d9307de (fix: auto resolve conflict)
         foreach ($files as $file) {
             if ('php' !== $file->getExtension()) {
                 continue;
             }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 50bb41c (fix: auto resolve conflict)
 
             $class_name = $file->getFilenameWithoutExtension();
             $relative_path = $file->getRelativePath();
@@ -89,10 +155,17 @@ class GetComponentsAction
                     ->map(fn ($item) => Str::slug(Str::snake($item)))
                     ->implode('.');
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
                 
 >>>>>>> e5c56c3 (.)
+=======
+                
+=======
+
+>>>>>>> 50bb41c (fix: auto resolve conflict)
+>>>>>>> d9307de (fix: auto resolve conflict)
                 $comp_name = $prefix . $piece . '.' . Str::slug(Str::snake(Str::replace('\\', ' ', $class_name)));
                 $comp_ns = $namespace . '\\' . $relative_path . '\\' . $class_name;
                 $class_name = $relative_path . '\\' . $class_name;
@@ -103,10 +176,17 @@ class GetComponentsAction
                     throw new \Exception("La classe {$comp_ns} non esiste");
                 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
                 
 >>>>>>> e5c56c3 (.)
+=======
+                
+=======
+
+>>>>>>> 50bb41c (fix: auto resolve conflict)
+>>>>>>> d9307de (fix: auto resolve conflict)
                 /** @var class-string<object> $comp_ns */
                 $reflection = new \ReflectionClass($comp_ns);
                 if ($reflection->isAbstract()) {
@@ -133,6 +213,7 @@ class GetComponentsAction
         }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         try {
             $content = json_encode($comps, JSON_THROW_ON_ERROR | JSON_PRETTY_PRINT);
         } catch (\JsonException $e) {
@@ -140,14 +221,96 @@ class GetComponentsAction
         }
 
 =======
+=======
+>>>>>>> d9307de (fix: auto resolve conflict)
         $content = \Safe\json_encode($comps, JSON_THROW_ON_ERROR);
 >>>>>>> e5c56c3 (.)
         $old_content = File::exists($components_json) ? File::get($components_json) : '';
+=======
+        try {
+            $content = json_encode($comps, JSON_THROW_ON_ERROR | JSON_PRETTY_PRINT);
+        } catch (\JsonException $e) {
+            return ComponentFileData::collection($comps);
+        }
+
+        $old_content = File::exists($components_json) ? File::get($components_json) : '';
+=======
+            $tmp = (object) [];
+            $class_name = $file->getFilenameWithoutExtension();
+
+            $tmp->class_name = $class_name;
+            Assert::string($comp_name = Str::replace('\\', ' ', $class_name), '['.__LINE__.']['.class_basename(static::class).']');
+            $tmp->comp_name = Str::slug(Str::snake($comp_name));
+            $tmp->comp_name = $prefix.$tmp->comp_name;
+
+            $tmp->comp_ns = $namespace.'\\'.$class_name;
+            $relative_path = $file->getRelativePath();
+            Assert::string($relative_path = Str::replace('/', '\\', $relative_path), '['.__LINE__.']['.class_basename(static::class).']');
+
+            if ('' !== $relative_path) {
+                $tmp->comp_name = '';
+                $piece = collect(explode('\\', $relative_path))
+                    ->map(
+                        static fn ($item) => Str::slug(Str::snake($item))
+                    )
+                    ->implode('.');
+                $tmp->comp_name .= $piece;
+                Assert::string($comp_name = Str::replace('\\', ' ', $class_name), '['.__LINE__.']['.class_basename(static::class).']');
+
+                $tmp->comp_name .= '.'.Str::slug(Str::snake($comp_name));
+                $tmp->comp_name = $prefix.$tmp->comp_name;
+                $tmp->comp_ns = $namespace.'\\'.$relative_path.'\\'.$class_name;
+                $tmp->class_name = $relative_path.'\\'.$tmp->class_name;
+            }
+            try {
+                $reflection = new \ReflectionClass($tmp->comp_ns);
+                if ($reflection->isAbstract()) {
+                    continue;
+                }
+            } catch (\Exception $e) {
+                dddx([
+                    'tmp' => $tmp,
+                    'path' => $path,
+                    'namespace' => $namespace,
+                    'prefix' => $prefix,
+                    'e' => $e->getMessage(),
+                ]);
+            }
+
+            $tmp = ComponentFileData::from([
+                'name' => $tmp->comp_name,
+                'class' => $tmp->class_name,
+
+                // 'path'=>$path.DIRECTORY_SEPARATOR.$relative_path,
+                'ns' => $tmp->comp_ns,
+            ])->toArray();
+
+            $comps[] = $tmp;
+        }
+
+        $content = json_encode($comps, JSON_THROW_ON_ERROR);
+
+        $old_content = '';
+        if (File::exists($components_json)) {
+            $old_content = File::get($components_json);
+        }
+>>>>>>> e2a4c5d (.)
+>>>>>>> 50bb41c (fix: auto resolve conflict)
 
         if ($old_content !== $content) {
             File::put($components_json, $content);
         }
 
+<<<<<<< HEAD
         return ComponentFileData::collection($comps);
+=======
+<<<<<<< HEAD
+        return ComponentFileData::collection($comps);
+=======
+        $res = ComponentFileData::collection($comps);
+
+        return $res;
+>>>>>>> e2a4c5d (.)
+>>>>>>> 50bb41c (fix: auto resolve conflict)
     }
 }

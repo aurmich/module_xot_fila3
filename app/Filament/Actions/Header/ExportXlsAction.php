@@ -22,13 +22,30 @@ class ExportXlsAction extends Action
     {
         parent::setUp();
         $this->translateLabel()
+<<<<<<< HEAD
             ->tooltip(__('xot::actions.export_xls'))
+=======
+<<<<<<< HEAD
+            ->tooltip(__('xot::actions.export_xls'))
+=======
+
+            ->label('')
+            ->tooltip(__('xot::actions.export_xls'))
+
+            // ->icon('heroicon-o-cloud-arrow-down')
+            // ->icon('fas-file-excel')
+>>>>>>> e2a4c5d (.)
+>>>>>>> 50bb41c (fix: auto resolve conflict)
             ->icon('heroicon-o-arrow-down-tray')
             ->action(static function (ListRecords $livewire) {
                 $filename = class_basename($livewire).'-'.collect($livewire->tableFilters)->flatten()->implode('-').'.xlsx';
                 $transKey = app(GetTransKeyAction::class)->execute($livewire::class);
                 $transKey .= '.fields';
                 $query = $livewire->getFilteredTableQuery();
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 50bb41c (fix: auto resolve conflict)
                 $rows = $query->get();
                 $resource = $livewire->getResource();
 <<<<<<< HEAD
@@ -66,6 +83,20 @@ class ExportXlsAction extends Action
 >>>>>>> e5c56c3 (.)
                     array_values($fields)
                 );
+<<<<<<< HEAD
+=======
+=======
+                // ->getQuery(); // Staudenmeir\LaravelCte\Query\Builder
+                $rows = $query->get();
+                $resource = $livewire->getResource();
+                $fields = [];
+                if (method_exists($resource, 'getXlsFields')) {
+                    Assert::isArray($fields = $resource::getXlsFields($livewire->tableFilters));
+                }
+
+                return app(ExportXlsByCollection::class)->execute($rows, $filename, $transKey, $fields);
+>>>>>>> e2a4c5d (.)
+>>>>>>> 50bb41c (fix: auto resolve conflict)
             });
     }
 

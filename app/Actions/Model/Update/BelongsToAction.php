@@ -32,6 +32,10 @@ class BelongsToAction
         */
 
         if (! Arr::isAssoc($relationDTO->data) && 1 === \count($relationDTO->data)) {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 50bb41c (fix: auto resolve conflict)
             $related_id = Arr::first($relationDTO->data);
             if (null === $related_id) {
                 return;
@@ -40,7 +44,16 @@ class BelongsToAction
 
 =======
             
+<<<<<<< HEAD
 >>>>>>> e5c56c3 (.)
+=======
+<<<<<<< HEAD
+=======
+=======
+            $related_id = $relationDTO->data[0];
+>>>>>>> e2a4c5d (.)
+>>>>>>> 50bb41c (fix: auto resolve conflict)
+>>>>>>> d9307de (fix: auto resolve conflict)
             $related = $relationDTO->related->find($related_id);
             // Verifica che $related non sia una Collection, ma un singolo modello
             if ($related instanceof \Illuminate\Database\Eloquent\Collection) {

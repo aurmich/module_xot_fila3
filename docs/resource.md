@@ -344,6 +344,7 @@ class ListMyRecords extends XotBaseListRecords
     {
         abort_unless(
 <<<<<<< HEAD
+<<<<<<< HEAD
 
             Auth::user()->can('resource.read'),
 
@@ -352,6 +353,16 @@ class ListMyRecords extends XotBaseListRecords
 =======
             Auth::user()->can('resource.read'),
 >>>>>>> e5c56c3 (.)
+=======
+            Auth::user()->can('resource.read'),
+=======
+<<<<<<< HEAD
+            Auth::user()->can('resource.read'),
+=======
+            Auth::user()?->can('resource.read'),
+>>>>>>> e2a4c5d (.)
+>>>>>>> 50bb41c (fix: auto resolve conflict)
+>>>>>>> d9307de (fix: auto resolve conflict)
             403
         );
     }
@@ -361,6 +372,7 @@ class ListMyRecords extends XotBaseListRecords
         return [
             CreateAction::make()
 <<<<<<< HEAD
+<<<<<<< HEAD
 
                 ->visible(fn () => Auth::user()->can('resource.write')),
 
@@ -369,6 +381,16 @@ class ListMyRecords extends XotBaseListRecords
 =======
                 ->visible(fn () => Auth::user()->can('resource.write')),
 >>>>>>> e5c56c3 (.)
+=======
+                ->visible(fn () => Auth::user()->can('resource.write')),
+=======
+<<<<<<< HEAD
+                ->visible(fn () => Auth::user()->can('resource.write')),
+=======
+                ->visible(fn () => Auth::user()?->can('resource.write')),
+>>>>>>> e2a4c5d (.)
+>>>>>>> 50bb41c (fix: auto resolve conflict)
+>>>>>>> d9307de (fix: auto resolve conflict)
         ];
     }
 }
@@ -418,6 +440,7 @@ class ListRecords extends XotBaseListRecords
     {
         abort_unless(
 <<<<<<< HEAD
+<<<<<<< HEAD
 
             Auth::user()->can('resource.read'),
 
@@ -426,6 +449,16 @@ class ListRecords extends XotBaseListRecords
 =======
             Auth::user()->can('resource.read'),
 >>>>>>> e5c56c3 (.)
+=======
+            Auth::user()->can('resource.read'),
+=======
+<<<<<<< HEAD
+            Auth::user()->can('resource.read'),
+=======
+            Auth::user()?->can('resource.read'),
+>>>>>>> e2a4c5d (.)
+>>>>>>> 50bb41c (fix: auto resolve conflict)
+>>>>>>> d9307de (fix: auto resolve conflict)
             403
         );
     }
@@ -545,9 +578,15 @@ public function getTableColumns(): array
 4. Non aggiungere il prefisso "List" ai nomi dei metodi
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> e5c56c3 (.)
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 50bb41c (fix: auto resolve conflict)
+>>>>>>> d9307de (fix: auto resolve conflict)
 ## Tipizzazione degli Array
 
 È **OBBLIGATORIO** utilizzare chiavi di tipo stringa per tutti gli array restituiti dai seguenti metodi:
@@ -629,8 +668,15 @@ public function getTableBulkActions(): array
 - Utilizzare sempre la tipizzazione PHPDoc corretta
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
  e2a4c5d (.)
 =======
 >>>>>>> e5c56c3 (.)
+=======
+=======
+=======
+>>>>>>> e2a4c5d (.)
+>>>>>>> 50bb41c (fix: auto resolve conflict)
+>>>>>>> d9307de (fix: auto resolve conflict)
 // ... existing code ... 

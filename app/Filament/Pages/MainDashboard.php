@@ -8,10 +8,20 @@ use Filament\Pages\Dashboard;
 use Illuminate\Support\Str;
 use Webmozart\Assert\Assert;
 <<<<<<< HEAD
+<<<<<<< HEAD
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Foundation\Auth\User;
 =======
 >>>>>>> e5c56c3 (.)
+=======
+=======
+<<<<<<< HEAD
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Foundation\Auth\User;
+=======
+>>>>>>> e2a4c5d (.)
+>>>>>>> 50bb41c (fix: auto resolve conflict)
+>>>>>>> d9307de (fix: auto resolve conflict)
 
 /**
  * Class Modules\Xot\Filament\Pages\MainDashboard.
@@ -31,12 +41,25 @@ class MainDashboard extends Dashboard
     public function mount(): void
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
         $user = Auth::user();
         Assert::notNull($user, '['.__LINE__.']['.class_basename($this).']');
 
 =======
         Assert::notNull($user = auth()->user(), '['.__LINE__.']['.class_basename($this).']');
 >>>>>>> e5c56c3 (.)
+=======
+        Assert::notNull($user = auth()->user(), '['.__LINE__.']['.class_basename($this).']');
+=======
+<<<<<<< HEAD
+        $user = Auth::user();
+        Assert::notNull($user, '['.__LINE__.']['.class_basename($this).']');
+
+=======
+        Assert::notNull($user = auth()->user(), '['.__LINE__.']['.class_basename($this).']');
+>>>>>>> e2a4c5d (.)
+>>>>>>> 50bb41c (fix: auto resolve conflict)
+>>>>>>> d9307de (fix: auto resolve conflict)
         $modules = $user->roles->filter(
             static function ($item) {
                 return Str::endsWith($item->name, '::admin');
@@ -49,6 +72,7 @@ class MainDashboard extends Dashboard
             $panel_name = $module_first->name;
 =======
 <<<<<<< HEAD
+<<<<<<< HEAD
             Assert::notNull($module_first = $modules->first(), '['.__LINE__.']['.class_basename($this).']');
             $panel_name = $module_first->name;
 =======
@@ -60,7 +84,15 @@ class MainDashboard extends Dashboard
             $panel_name = $modules->first()?->name;
 >>>>>>> origin/dev
 >>>>>>> origin/dev
+<<<<<<< HEAD
 >>>>>>> e5c56c3 (.)
+=======
+=======
+            Assert::notNull($modules->first(), '['.__LINE__.']['.class_basename($this).']');
+            $panel_name = $modules->first()->name;
+>>>>>>> e2a4c5d (.)
+>>>>>>> 50bb41c (fix: auto resolve conflict)
+>>>>>>> d9307de (fix: auto resolve conflict)
             $module_name = Str::before($panel_name, '::admin');
             $url = '/'.$module_name.'/admin';
             redirect($url);

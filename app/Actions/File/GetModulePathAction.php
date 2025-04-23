@@ -16,6 +16,10 @@ class GetModulePathAction
 {
     use QueueableAction;
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 50bb41c (fix: auto resolve conflict)
     /**
      * Ottiene il percorso di un modulo.
      *
@@ -27,6 +31,11 @@ class GetModulePathAction
 >>>>>>> e5c56c3 (.)
      * @return string Il percorso completo del modulo
      */
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> e2a4c5d (.)
+>>>>>>> 50bb41c (fix: auto resolve conflict)
     public function execute(string $moduleName): string
     {
         try {
@@ -38,6 +47,10 @@ class GetModulePathAction
             }
 
             $files = scandir($modulesPath);
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 50bb41c (fix: auto resolve conflict)
             $moduleNameLower = Str::lower($moduleName);
 <<<<<<< HEAD
 
@@ -68,6 +81,16 @@ class GetModulePathAction
             
 >>>>>>> e5c56c3 (.)
             $module_path = base_path('Modules/'.$foundModule);
+<<<<<<< HEAD
+=======
+=======
+            $module_path = collect($files)
+                ->filter(
+                    static fn ($item): bool => Str::lower($item) === Str::lower($moduleName)
+                )->first();
+            $module_path = base_path('Modules/'.$module_path);
+>>>>>>> e2a4c5d (.)
+>>>>>>> 50bb41c (fix: auto resolve conflict)
         }
 
         return $module_path;

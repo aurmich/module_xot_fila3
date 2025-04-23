@@ -16,8 +16,18 @@ use Filament\Forms\Components\KeyValue;
 use Filament\Forms\Components\TextInput;
 use Modules\Xot\Filament\Resources\CacheResource\Pages;
 use Modules\Xot\Models\Cache;
+<<<<<<< HEAD
 use Modules\Xot\Filament\Resources\XotBaseResource\RelationManager\XotBaseRelationManager;
+<<<<<<< HEAD
 >>>>>>> e5c56c3 (.)
+=======
+=======
+<<<<<<< HEAD
+use Modules\Xot\Filament\Resources\XotBaseResource\RelationManager\XotBaseRelationManager;
+=======
+>>>>>>> e2a4c5d (.)
+>>>>>>> 50bb41c (fix: auto resolve conflict)
+>>>>>>> d9307de (fix: auto resolve conflict)
 
 class CacheResource extends XotBaseResource
 {
@@ -26,6 +36,10 @@ class CacheResource extends XotBaseResource
     public static function getFormSchema(): array
     {
         return [
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 50bb41c (fix: auto resolve conflict)
             'key' => TextInput::make('key')
                 ->required()
                 ->maxLength(255),
@@ -35,6 +49,20 @@ class CacheResource extends XotBaseResource
                 ->numeric(),
 
             'value' => KeyValue::make('value')
+<<<<<<< HEAD
+=======
+=======
+            TextInput::make('key')
+                ->required()
+                ->maxLength(255),
+
+            TextInput::make('expiration')
+                ->required()
+                ->numeric(),
+
+            KeyValue::make('value')
+>>>>>>> e2a4c5d (.)
+>>>>>>> 50bb41c (fix: auto resolve conflict)
                 ->columnSpanFull(),
         ];
     }

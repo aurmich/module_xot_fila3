@@ -9,10 +9,20 @@ use Filament\Forms\Components\TextInput;
 use Modules\Xot\Filament\Resources\SessionResource\Pages;
 use Modules\Xot\Models\Session;
 <<<<<<< HEAD
+<<<<<<< HEAD
 use Modules\Xot\Filament\Resources\XotBaseResource\RelationManagers\XotBaseRelationManager;
 =======
 use Modules\Xot\Filament\Resources\XotBaseResource\RelationManager\XotBaseRelationManager;
 >>>>>>> e5c56c3 (.)
+=======
+use Modules\Xot\Filament\Resources\XotBaseResource\RelationManager\XotBaseRelationManager;
+=======
+<<<<<<< HEAD
+use Modules\Xot\Filament\Resources\XotBaseResource\RelationManager\XotBaseRelationManager;
+=======
+>>>>>>> e2a4c5d (.)
+>>>>>>> 50bb41c (fix: auto resolve conflict)
+>>>>>>> d9307de (fix: auto resolve conflict)
 
 class SessionResource extends XotBaseResource
 {
@@ -21,6 +31,10 @@ class SessionResource extends XotBaseResource
     public static function getFormSchema(): array
     {
         return [
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 50bb41c (fix: auto resolve conflict)
             'id' => TextInput::make('id')
                 ->required()
                 ->maxLength(255),
@@ -38,13 +52,59 @@ class SessionResource extends XotBaseResource
                 ->columnSpanFull(),
 
             'last_activity' => TextInput::make('last_activity')
+<<<<<<< HEAD
+=======
+=======
+            TextInput::make('id')
+                ->required()
+                ->maxLength(255),
+
+            TextInput::make('user_id')
+                ->numeric(),
+
+            TextInput::make('ip_address')
+                ->maxLength(45),
+
+            TextInput::make('user_agent')
+                ->maxLength(255),
+
+            KeyValue::make('payload')
+                ->columnSpanFull(),
+
+            TextInput::make('last_activity')
+>>>>>>> e2a4c5d (.)
+>>>>>>> 50bb41c (fix: auto resolve conflict)
                 ->required()
                 ->numeric(),
         ];
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> e5c56c3 (.)
+=======
+
+=======
+<<<<<<< HEAD
+
+=======
+    public static function getRelations(): array
+    {
+        return [
+        ];
+    }
+
+    public static function getPages(): array
+    {
+        return [
+            'index' => Pages\ListSessions::route('/'),
+            'create' => Pages\CreateSession::route('/create'),
+            'edit' => Pages\EditSession::route('/{record}/edit'),
+        ];
+    }
+>>>>>>> e2a4c5d (.)
+>>>>>>> 50bb41c (fix: auto resolve conflict)
+>>>>>>> d9307de (fix: auto resolve conflict)
 }

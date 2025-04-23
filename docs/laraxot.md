@@ -420,6 +420,7 @@ class GeoLogger
                 'address' => $address,
                 'success' => $result !== null,
 <<<<<<< HEAD
+<<<<<<< HEAD
 
                 'coordinates' => $result->toArray()
 
@@ -428,6 +429,16 @@ class GeoLogger
 =======
                 'coordinates' => $result->toArray()
 >>>>>>> e5c56c3 (.)
+=======
+                'coordinates' => $result->toArray()
+=======
+<<<<<<< HEAD
+                'coordinates' => $result->toArray()
+=======
+                'coordinates' => $result?->toArray()
+>>>>>>> e2a4c5d (.)
+>>>>>>> 50bb41c (fix: auto resolve conflict)
+>>>>>>> d9307de (fix: auto resolve conflict)
             ]);
     }
 
@@ -562,6 +573,7 @@ class ModuleList extends Component
     public function delete(int $id): void
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
 
         Module::find($id)->delete();
 
@@ -570,6 +582,16 @@ class ModuleList extends Component
 =======
         Module::find($id)->delete();
 >>>>>>> e5c56c3 (.)
+=======
+        Module::find($id)->delete();
+=======
+<<<<<<< HEAD
+        Module::find($id)->delete();
+=======
+        Module::find($id)?->delete();
+>>>>>>> e2a4c5d (.)
+>>>>>>> 50bb41c (fix: auto resolve conflict)
+>>>>>>> d9307de (fix: auto resolve conflict)
         $this->emit('moduleDeleted');
     }
 }
@@ -862,6 +884,7 @@ class ClientMapWidget extends Widget
     {
         return [
 <<<<<<< HEAD
+<<<<<<< HEAD
 
             'clients' => $this->listClients->getTableQuery()
 
@@ -870,6 +893,16 @@ class ClientMapWidget extends Widget
 =======
             'clients' => $this->listClients->getTableQuery()
 >>>>>>> e5c56c3 (.)
+=======
+            'clients' => $this->listClients->getTableQuery()
+=======
+<<<<<<< HEAD
+            'clients' => $this->listClients->getTableQuery()
+=======
+            'clients' => $this->listClients?->getTableQuery()
+>>>>>>> e2a4c5d (.)
+>>>>>>> 50bb41c (fix: auto resolve conflict)
+>>>>>>> d9307de (fix: auto resolve conflict)
                 ->get(['latitude', 'longitude', 'name'])
                 ->toArray(),
         ];
@@ -916,6 +949,7 @@ class ClientMapWidget extends Widget
     {
         return [
 <<<<<<< HEAD
+<<<<<<< HEAD
 
             'clients' => $this->listClients->getTableQuery()
 
@@ -924,6 +958,16 @@ class ClientMapWidget extends Widget
 =======
             'clients' => $this->listClients->getTableQuery()
 >>>>>>> e5c56c3 (.)
+=======
+            'clients' => $this->listClients->getTableQuery()
+=======
+<<<<<<< HEAD
+            'clients' => $this->listClients->getTableQuery()
+=======
+            'clients' => $this->listClients?->getTableQuery()
+>>>>>>> e2a4c5d (.)
+>>>>>>> 50bb41c (fix: auto resolve conflict)
+>>>>>>> d9307de (fix: auto resolve conflict)
                 ->get(['latitude', 'longitude', 'name'])
                 ->toArray(),
         ];
@@ -1677,6 +1721,7 @@ return [
 - Un file di traduzione dedicato per ogni componente
 - Struttura standardizzata con chiave 'navigation'
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 - Definizione completa di gruppo, label, icona e ordinamento
 
@@ -1689,6 +1734,20 @@ return [
 =======
 - Definizione completa di gruppo, label, icona e ordinamento
 >>>>>>> e5c56c3 (.)
+=======
+- Definizione completa di gruppo, label, icona e ordinamento
+=======
+<<<<<<< HEAD
+- Definizione completa di gruppo, label, icona e ordinamento
+=======
+- Definizione completa di gruppo, label, icona e ordinamento 
+
+
+=======
+>>>>>>> origin/dev
+>>>>>>> e2a4c5d (.)
+>>>>>>> 50bb41c (fix: auto resolve conflict)
+>>>>>>> d9307de (fix: auto resolve conflict)
 # Laraxot Framework
 
 ## Panoramica
@@ -1997,6 +2056,10 @@ $query = sprintf('%s.%s', (string)$table, (string)$column);
 ```
 
 ## PHPStan Analisi Moduli
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 50bb41c (fix: auto resolve conflict)
 
 <<<<<<< HEAD
 
@@ -2044,6 +2107,17 @@ Il file di configurazione principale (`phpstan.neon`) è già impostato per il l
 - **Activity**: Validato a livello 7
 - **Gdpr**: Validato a livello 7
 - **User**: Validato a livello 7
+<<<<<<< HEAD
+=======
+=======
+Risultati dell'ultima analisi per modulo:
+- **Xot**: Risolti tutti gli errori critici
+- **Fixcity**: In fase di ottimizzazione
+- **Media**: Nessun errore critico
+- **UI**: Ottimizzato per PHPStan level 8
+- **Tenant**: Risolti problemi di tipizzazione
+>>>>>>> e2a4c5d (.)
+>>>>>>> 50bb41c (fix: auto resolve conflict)
 
 <<<<<<< HEAD
 Risultati dell'ultima analisi per modulo:
@@ -4175,6 +4249,7 @@ class MyRelationManager extends RelationManager
 
 // ✅ CORRETTO
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 use Modules\Xot\Filament\Resources\RelationManagers\XotBaseRelationManager;
 
@@ -4183,6 +4258,16 @@ use Modules\Xot\Filament\Resources\XotBaseResource\RelationManagers\XotBaseRelat
 =======
 use Modules\Xot\Filament\Resources\RelationManagers\XotBaseRelationManager;
 >>>>>>> e5c56c3 (.)
+=======
+use Modules\Xot\Filament\Resources\RelationManagers\XotBaseRelationManager;
+=======
+<<<<<<< HEAD
+use Modules\Xot\Filament\Resources\RelationManagers\XotBaseRelationManager;
+=======
+use Modules\Xot\Filament\Resources\XotBaseResource\RelationManager\XotBaseRelationManager;
+>>>>>>> e2a4c5d (.)
+>>>>>>> 50bb41c (fix: auto resolve conflict)
+>>>>>>> d9307de (fix: auto resolve conflict)
 class MyRelationManager extends XotBaseRelationManager
 ```
 
@@ -4744,8 +4829,18 @@ use Modules\Xot\Filament\Resources\Pages\XotBaseEditRecord;
 ```php
 // ❌ ERRATO: Namespace non corretto
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+>>>>>>> d9307de (fix: auto resolve conflict)
 use Modules\Xot\Filament\Resources\RelationManagers\XotBaseRelationManager;
+=======
+<<<<<<< HEAD
+use Modules\Xot\Filament\Resources\RelationManagers\XotBaseRelationManager;
+=======
+use Modules\Xot\Filament\Resources\XotBaseResource\RelationManager\XotBaseRelationManager;
+>>>>>>> e2a4c5d (.)
+>>>>>>> 50bb41c (fix: auto resolve conflict)
 
 use Modules\Xot\Filament\Resources\XotBaseResource\RelationManagers\XotBaseRelationManager;
  e2a4c5d (.)
@@ -4807,6 +4902,7 @@ class CommentsRelationManager extends XotBaseRelationManager
    
    // ❌ ERRATO: Import con namespace errato
 <<<<<<< HEAD
+<<<<<<< HEAD
 
    use Modules\Xot\Filament\Resources\RelationManagers\XotBaseRelationManager;
 
@@ -4815,6 +4911,16 @@ class CommentsRelationManager extends XotBaseRelationManager
 =======
    use Modules\Xot\Filament\Resources\RelationManagers\XotBaseRelationManager;
 >>>>>>> e5c56c3 (.)
+=======
+   use Modules\Xot\Filament\Resources\RelationManagers\XotBaseRelationManager;
+=======
+<<<<<<< HEAD
+   use Modules\Xot\Filament\Resources\RelationManagers\XotBaseRelationManager;
+=======
+   use Modules\Xot\Filament\Resources\XotBaseResource\RelationManager\XotBaseRelationManager;
+>>>>>>> e2a4c5d (.)
+>>>>>>> 50bb41c (fix: auto resolve conflict)
+>>>>>>> d9307de (fix: auto resolve conflict)
    ```
 
 2. **Organizzazione File**:
@@ -4863,6 +4969,7 @@ class CommentsRelationManager extends XotBaseRelationManager
 // ❌ ERRATO: Questi namespace non esistono
 use Modules\Xot\Filament\RelationManagers\XotBaseRelationManager;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 use Modules\Xot\Filament\Resources\RelationManagers\XotBaseRelationManager;
 
@@ -4871,6 +4978,16 @@ use Modules\Xot\Filament\Resources\XotBaseResource\RelationManagers\XotBaseRelat
 =======
 use Modules\Xot\Filament\Resources\RelationManagers\XotBaseRelationManager;
 >>>>>>> e5c56c3 (.)
+=======
+use Modules\Xot\Filament\Resources\RelationManagers\XotBaseRelationManager;
+=======
+<<<<<<< HEAD
+use Modules\Xot\Filament\Resources\RelationManagers\XotBaseRelationManager;
+=======
+use Modules\Xot\Filament\Resources\XotBaseResource\RelationManager\XotBaseRelationManager;
+>>>>>>> e2a4c5d (.)
+>>>>>>> 50bb41c (fix: auto resolve conflict)
+>>>>>>> d9307de (fix: auto resolve conflict)
 ```
 
 ### ✅ Namespace Corretti da Usare
@@ -6908,6 +7025,7 @@ class MyRelationManager extends RelationManager
 
 // ✅ CORRETTO
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 use Modules\Xot\Filament\Resources\RelationManagers\XotBaseRelationManager;
 
@@ -6916,6 +7034,16 @@ use Modules\Xot\Filament\Resources\XotBaseResource\RelationManagers\XotBaseRelat
 =======
 use Modules\Xot\Filament\Resources\RelationManagers\XotBaseRelationManager;
 >>>>>>> e5c56c3 (.)
+=======
+use Modules\Xot\Filament\Resources\RelationManagers\XotBaseRelationManager;
+=======
+<<<<<<< HEAD
+use Modules\Xot\Filament\Resources\RelationManagers\XotBaseRelationManager;
+=======
+use Modules\Xot\Filament\Resources\XotBaseResource\RelationManager\XotBaseRelationManager;
+>>>>>>> e2a4c5d (.)
+>>>>>>> 50bb41c (fix: auto resolve conflict)
+>>>>>>> d9307de (fix: auto resolve conflict)
 class MyRelationManager extends XotBaseRelationManager
 ```
 
@@ -7477,8 +7605,18 @@ use Modules\Xot\Filament\Resources\Pages\XotBaseEditRecord;
 ```php
 // ❌ ERRATO: Namespace non corretto
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+>>>>>>> d9307de (fix: auto resolve conflict)
 use Modules\Xot\Filament\Resources\RelationManagers\XotBaseRelationManager;
+=======
+<<<<<<< HEAD
+use Modules\Xot\Filament\Resources\RelationManagers\XotBaseRelationManager;
+=======
+use Modules\Xot\Filament\Resources\XotBaseResource\RelationManager\XotBaseRelationManager;
+>>>>>>> e2a4c5d (.)
+>>>>>>> 50bb41c (fix: auto resolve conflict)
 
 use Modules\Xot\Filament\Resources\XotBaseResource\RelationManagers\XotBaseRelationManager;
  e2a4c5d (.)
@@ -7540,6 +7678,7 @@ class CommentsRelationManager extends XotBaseRelationManager
    
    // ❌ ERRATO: Import con namespace errato
 <<<<<<< HEAD
+<<<<<<< HEAD
 
    use Modules\Xot\Filament\Resources\RelationManagers\XotBaseRelationManager;
 
@@ -7548,6 +7687,16 @@ class CommentsRelationManager extends XotBaseRelationManager
 =======
    use Modules\Xot\Filament\Resources\RelationManagers\XotBaseRelationManager;
 >>>>>>> e5c56c3 (.)
+=======
+   use Modules\Xot\Filament\Resources\RelationManagers\XotBaseRelationManager;
+=======
+<<<<<<< HEAD
+   use Modules\Xot\Filament\Resources\RelationManagers\XotBaseRelationManager;
+=======
+   use Modules\Xot\Filament\Resources\XotBaseResource\RelationManager\XotBaseRelationManager;
+>>>>>>> e2a4c5d (.)
+>>>>>>> 50bb41c (fix: auto resolve conflict)
+>>>>>>> d9307de (fix: auto resolve conflict)
    ```
 
 2. **Organizzazione File**:
@@ -7596,6 +7745,7 @@ class CommentsRelationManager extends XotBaseRelationManager
 // ❌ ERRATO: Questi namespace non esistono
 use Modules\Xot\Filament\RelationManagers\XotBaseRelationManager;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 use Modules\Xot\Filament\Resources\RelationManagers\XotBaseRelationManager;
 
@@ -7604,6 +7754,16 @@ use Modules\Xot\Filament\Resources\XotBaseResource\RelationManagers\XotBaseRelat
 =======
 use Modules\Xot\Filament\Resources\RelationManagers\XotBaseRelationManager;
 >>>>>>> e5c56c3 (.)
+=======
+use Modules\Xot\Filament\Resources\RelationManagers\XotBaseRelationManager;
+=======
+<<<<<<< HEAD
+use Modules\Xot\Filament\Resources\RelationManagers\XotBaseRelationManager;
+=======
+use Modules\Xot\Filament\Resources\XotBaseResource\RelationManager\XotBaseRelationManager;
+>>>>>>> e2a4c5d (.)
+>>>>>>> 50bb41c (fix: auto resolve conflict)
+>>>>>>> d9307de (fix: auto resolve conflict)
 ```
 
 ### ✅ Namespace Corretti da Usare
@@ -8941,6 +9101,7 @@ class ClientMapWidget extends Widget
 4. Gestire i casi di errore in modo graceful
 5. La reattività funziona automaticamente con Livewire 3
 <<<<<<< HEAD
+<<<<<<< HEAD
 
   - Contact section
 
@@ -8949,3 +9110,13 @@ class ClientMapWidget extends Widget
 =======
   - Contact section
 >>>>>>> e5c56c3 (.)
+=======
+  - Contact section
+=======
+<<<<<<< HEAD
+  - Contact section
+=======
+  - Contact section 
+>>>>>>> e2a4c5d (.)
+>>>>>>> 50bb41c (fix: auto resolve conflict)
+>>>>>>> d9307de (fix: auto resolve conflict)

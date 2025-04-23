@@ -10,7 +10,14 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Collection;
 use Spatie\QueueableAction\QueueableAction;
+<<<<<<< HEAD
 use Webmozart\Assert\Assert;
+=======
+<<<<<<< HEAD
+use Webmozart\Assert\Assert;
+=======
+>>>>>>> e2a4c5d (.)
+>>>>>>> 50bb41c (fix: auto resolve conflict)
 
 class FakeSeederAction
 {
@@ -103,6 +110,10 @@ class FakeSeederAction
             ->onQueue()
             ->execute($modelClass, $qty - self::MAX_RECORDS);
     }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 50bb41c (fix: auto resolve conflict)
 
     private function getTableName(string $modelClass): string
     {
@@ -120,4 +131,9 @@ class FakeSeederAction
 >>>>>>> e5c56c3 (.)
         return $model->getTable();
     }
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> e2a4c5d (.)
+>>>>>>> 50bb41c (fix: auto resolve conflict)
 }
