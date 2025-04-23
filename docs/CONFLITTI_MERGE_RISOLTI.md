@@ -2,7 +2,11 @@
 
 ## Problema
 
+<<<<<<< HEAD
 Durante lo sviluppo del progetto SaluteOra, sono stati identificati diversi file con conflitti di merge non risolti. Questi conflitti erano indicati dalla presenza di marcatori come `<<<<<<< HEAD`, `=======` e `>>>>>>> origin/dev` nel codice sorgente. I conflitti non risolti impedivano la corretta esecuzione del codice e causavano errori durante l'analisi statica con PHPStan.
+=======
+Durante lo sviluppo del progetto SaluteOra, sono stati identificati diversi file con conflitti di merge non risolti. Questi conflitti erano indicati dalla presenza di marcatori  nel codice sorgente. I conflitti non risolti impedivano la corretta esecuzione del codice e causavano errori durante l'analisi statica con PHPStan.
+>>>>>>> aurmich/dev
 
 I file principali con conflitti erano:
 - `Modules/Xot/app/Datas/MetatagData.php`
@@ -38,10 +42,14 @@ In `GetFieldnamesByTablenameAction.php`, c'erano conflitti relativi alla gestion
 
 ```php
 <<<<<<< HEAD
+<<<<<<< HEAD
 if (! $this->isValidConnection($connectionName)) {
 =======
 if (! $this->isValidConnection(is_string($connectionName) ? $connectionName : (string) $connectionName)) {
 >>>>>>> origin/dev
+=======
+if (! $this->isValidConnection($connectionName)) {
+>>>>>>> aurmich/dev
 ```
 
 #### 2. Conflitti nelle Annotazioni PHPDoc
@@ -50,11 +58,17 @@ In `TemporaryUploadPathGenerator.php`, c'erano conflitti nelle annotazioni PHPDo
 
 ```php
 <<<<<<< HEAD
+<<<<<<< HEAD
 /**
  * @param \Modules\Media\Models\Media $media
  */
 =======
 >>>>>>> origin/dev
+=======
+/**
+ * @param \Modules\Media\Models\Media $media
+ */
+>>>>>>> aurmich/dev
 ```
 
 #### 3. Conflitti nell'Implementazione dei Metodi
@@ -63,11 +77,16 @@ In `ApplyMetatagToPanelAction.php`, c'erano conflitti nell'implementazione del m
 
 ```php
 <<<<<<< HEAD
+<<<<<<< HEAD
 // @phpstan-ignore argument.type
 ->colors($metatag->getColors())
 =======
 //->colors($metatag->getColors())
 >>>>>>> origin/dev
+=======
+// @phpstan-ignore argument.type
+->colors($metatag->getColors())
+>>>>>>> aurmich/dev
 ```
 
 #### 4. Conflitti nella Gestione delle Eccezioni
@@ -75,6 +94,7 @@ In `ApplyMetatagToPanelAction.php`, c'erano conflitti nell'implementazione del m
 In `SaveJsonArrayAction.php`, c'erano conflitti nella gestione delle condizioni di errore:
 
 ```php
+<<<<<<< HEAD
 <<<<<<< HEAD
 //if ($content === false) {
 //    return false;
@@ -84,6 +104,11 @@ if ($content === false) {
     return false;
 }
 >>>>>>> origin/dev
+=======
+//if ($content === false) {
+//    return false;
+//}
+>>>>>>> aurmich/dev
 ```
 
 #### 5. Conflitti nelle API Fluenti
@@ -197,6 +222,7 @@ Per verificare la correttezza della soluzione, sono stati creati test Pest che v
 4. La gestione corretta delle eccezioni
 5. La compatibilità con PHPStan a livello massimo
 
+<<<<<<< HEAD
 ### Test per i File del Modulo Media
 
 ```php
@@ -215,6 +241,8 @@ it('verifica che i file corretti non contengano marcatori di conflitto', functio
     }
 });
 ```
+=======
+>>>>>>> aurmich/dev
 
 ### Test per i File del Modulo Xot
 
@@ -329,3 +357,48 @@ In particolare, le correzioni hanno portato i seguenti benefici:
 5. **Compatibilità con PHPStan**: Riduzione degli errori di analisi statica
 
 Questo lavoro di risoluzione dei conflitti ha inoltre contribuito a stabilire best practices per la gestione dei merge nel progetto SaluteOra, che potranno essere applicate in futuro per prevenire problemi simili.
+<<<<<<< HEAD
+=======
+
+## Conflitti Risolti - 2025-04-24
+
+### 1. GetViewByClassAction.php
+
+**File**: `Modules/Xot/app/Actions/View/GetViewByClassAction.php`
+
+**Problema**: Conflitto nella conversione di tipi scalari in stringa.
+
+**Risoluzione**: Mantenuta l'implementazione che utilizza `strval()` per la conversione, che è più concisa e diretta.
+
+**Documentazione**: [Dettagli](./actions/view/GetViewByClassAction_conflict.md)
+
+### 2. ExportXlsByView.php
+
+**File**: `Modules/Xot/app/Actions/Export/ExportXlsByView.php`
+
+**Problema**: Conflitto nella funzione di callback per la conversione dei campi in stringhe.
+
+**Risoluzione**: Mantenuta l'implementazione con `strval()` per garantire la corretta conversione dei tipi.
+
+**Documentazione**: [Dettagli](./actions/export/ExportXlsByView_conflict.md)
+
+### 3. ExportXlsByCollection.php
+
+**File**: `Modules/Xot/app/Actions/Export/ExportXlsByCollection.php`
+
+**Problema**: Conflitto nella documentazione PHPDoc del metodo `writeRows()`.
+
+**Risoluzione**: Rimossi spazi vuoti superflui e mantenuta la documentazione dei parametri ben formattata.
+
+**Documentazione**: [Dettagli](./actions/export/ExportXlsByCollection_conflict.md)
+
+### 4. PageContent.php
+
+**File**: `Modules/Cms/app/Models/PageContent.php`
+
+**Problema**: Duplicazione delle proprietà documentate nel PHPDoc e conflitto con il marker `>>>>>>> 49ebea7 (.)`.
+
+**Risoluzione**: Eliminate le proprietà duplicate e risolto il conflitto di tipo per la proprietà `blocks`.
+
+**Documentazione**: [Moduli Cms](../../../Cms/docs/models/PageContent_conflict.md)
+>>>>>>> aurmich/dev

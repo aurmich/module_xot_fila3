@@ -2,7 +2,11 @@
 
 ## Problema
 
+<<<<<<< HEAD
 Durante lo sviluppo del progetto SaluteOra, sono stati identificati diversi file con conflitti di merge non risolti. Questi conflitti erano indicati dalla presenza di marcatori come `<<<<<<< HEAD`, `=======` e `>>>>>>> origin/dev` nel codice sorgente. I conflitti non risolti causavano errori durante l'analisi statica con PHPStan e impedivano il corretto funzionamento del codice.
+=======
+Durante lo sviluppo del progetto SaluteOra, sono stati identificati diversi file con conflitti di merge non risolti. Questi conflitti erano indicati dalla presenza di marcatori  nel codice sorgente. I conflitti non risolti causavano errori durante l'analisi statica con PHPStan e impedivano il corretto funzionamento del codice.
+>>>>>>> aurmich/dev
 
 ## File Coinvolti
 
@@ -39,7 +43,11 @@ Per risolvere i conflitti, è stato seguito un approccio sistematico:
 
 ### 1. Rimozione dei Marcatori di Conflitto
 
+<<<<<<< HEAD
 In ogni file, sono stati rimossi tutti i marcatori di conflitto (`<<<<<<< HEAD`, `=======`, `>>>>>>> origin/dev`), mantenendo la versione più completa e corretta del codice.
+=======
+In ogni file, sono stati rimossi tutti i marcatori di conflitto, mantenendo la versione più completa e corretta del codice.
+>>>>>>> aurmich/dev
 
 ### 2. Correzione dei Problemi di Tipizzazione
 
@@ -208,6 +216,7 @@ Per prevenire problemi simili in futuro, si raccomanda di:
 - **Visual Merge Tools**: Utilizzare strumenti come VS Code, PhpStorm o GitKraken per gestire i conflitti di merge in modo visuale
 - **Merge Opzionali**: Considerare l'uso di `git merge --no-commit` per verificare il risultato prima di completare il merge
 
+<<<<<<< HEAD
 ### 2. Implementazione di Hook Git
 
 - Implementare un hook pre-commit che verifichi l'assenza di marcatori di conflitto:
@@ -222,6 +231,8 @@ Per prevenire problemi simili in futuro, si raccomanda di:
   
   exit 0
   ```
+=======
+>>>>>>> aurmich/dev
 
 ### 3. Esecuzione Regolare dei Test
 
