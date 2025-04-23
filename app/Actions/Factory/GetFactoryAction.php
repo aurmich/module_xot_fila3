@@ -41,25 +41,6 @@ class GetFactoryAction
     {
         Assert::stringNotEmpty($model_class, 'Model class non può essere vuota');
         Assert::classExists($model_class, "La classe del modello $model_class non esiste");
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-        $factory_class = $this->getFactoryClass($model_class);
-
-        if (class_exists($factory_class)) {
-            /** @var Factory $factory */
-            $factory = $factory_class::new();
-
-            // Verifichiamo che il risultato sia effettivamente un'istanza di Factory
-            Assert::isInstanceOf($factory, Factory::class,
-                "La classe $factory_class::new() non ha restituito un'istanza di Factory");
-
-=======
-=======
->>>>>>> 7b67053 (fix: auto resolve conflict)
-=======
->>>>>>> c2dac53 (.)
         
         $factory_class = $this->getFactoryClass($model_class);
         
@@ -71,7 +52,6 @@ class GetFactoryAction
             Assert::isInstanceOf($factory, Factory::class, 
                 "La classe $factory_class::new() non ha restituito un'istanza di Factory");
                 
->>>>>>> e5c56c3 (.)
             return $factory;
      * @return \Illuminate\Database\Eloquent\Factories\Factory
      */
@@ -115,21 +95,9 @@ class GetFactoryAction
     public function getFactoryClass(string $model_class): string
     {
         Assert::stringNotEmpty($model_class, 'Model class non può essere vuota');
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-        $model_name = class_basename($model_class);
-
-=======
-=======
->>>>>>> 7b67053 (fix: auto resolve conflict)
-=======
->>>>>>> c2dac53 (.)
         
         $model_name = class_basename($model_class);
         
->>>>>>> e5c56c3 (.)
         // Costruiamo il nome della classe factory seguendo le convenzioni di Laravel
         throw new \Exception('Generating Factory ['.$factory_class.'] press [F5] to refresh page ['.__LINE__.']['.class_basename($this).']');
     }
@@ -143,23 +111,6 @@ class GetFactoryAction
             ->append($model_name)
             ->append('Factory')
             ->toString();
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-        Assert::stringNotEmpty($factory_class, 'Factory class non può essere vuota');
-
-=======
-            
-        Assert::stringNotEmpty($factory_class, 'Factory class non può essere vuota');
-        
->>>>>>> e5c56c3 (.)
-=======
-=======
->>>>>>> 7b67053 (fix: auto resolve conflict)
-=======
->>>>>>> c2dac53 (.)
             
         Assert::stringNotEmpty($factory_class, 'Factory class non può essere vuota');
         
@@ -167,23 +118,9 @@ class GetFactoryAction
         Assert::stringNotEmpty($factory_class, 'Factory class non può essere vuota');
         
 
-<<<<<<< HEAD
->>>>>>> e2a4c5d (.)
->>>>>>> 50bb41c (fix: auto resolve conflict)
-<<<<<<< HEAD
->>>>>>> d9307de (fix: auto resolve conflict)
-=======
-=======
 
         Assert::stringNotEmpty($factory_class, 'Factory class non può essere vuota');
 
->>>>>>> 4ab3760 (.)
->>>>>>> 7b67053 (fix: auto resolve conflict)
-=======
-
-        Assert::stringNotEmpty($factory_class, 'Factory class non può essere vuota');
-
->>>>>>> c2dac53 (.)
         return $factory_class;
     }
 
@@ -198,59 +135,24 @@ class GetFactoryAction
     {
         Assert::stringNotEmpty($model_class, 'Model class non può essere vuota');
         Assert::classExists($model_class, "La classe del modello $model_class non esiste");
-<<<<<<< HEAD
-<<<<<<< HEAD
 
         $model_name = class_basename($model_class);
 
         // Estraiamo il nome del modulo dal namespace della classe
         $module_parts = Str::of($model_class)->between('Modules\\', '\Models\\');
 
-=======
-        
-=======
-
->>>>>>> 7b67053 (fix: auto resolve conflict)
-        $model_name = class_basename($model_class);
-
-        // Estraiamo il nome del modulo dal namespace della classe
-        $module_parts = Str::of($model_class)->between('Modules\\', '\Models\\');
-<<<<<<< HEAD
-        
->>>>>>> e5c56c3 (.)
-=======
-
->>>>>>> 7b67053 (fix: auto resolve conflict)
         if ($module_parts === '') {
             throw new \InvalidArgumentException(
                 "Impossibile determinare il nome del modulo dal namespace $model_class"
             );
         }
-<<<<<<< HEAD
-<<<<<<< HEAD
 
         $module_name = is_string($module_parts) ? $module_parts : (string) $module_parts;
 
         // Eseguiamo il comando Artisan per generare la factory
         $artisan_cmd = 'module:make-factory';
         $artisan_params = ['name' => $model_name, 'module' => $module_name];
-<<<<<<< HEAD
-
-=======
         
-=======
-
->>>>>>> 7b67053 (fix: auto resolve conflict)
-        $module_name = is_string($module_parts) ? $module_parts : (string) $module_parts;
-
-        // Eseguiamo il comando Artisan per generare la factory
-        $artisan_cmd = 'module:make-factory';
-        $artisan_params = ['name' => $model_name, 'module' => $module_name];
-<<<<<<< HEAD
-=======
->>>>>>> c2dac53 (.)
-        
->>>>>>> e5c56c3 (.)
         Artisan::call($artisan_cmd, $artisan_params);
     public function createFactory(string $model_class)
     {

@@ -131,15 +131,7 @@ abstract class XotBaseResource extends FilamentResource
         $edit = $edit;
         /** @var class-string<\Filament\Resources\Pages\Page> $view */
         $view = $view;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-        
->>>>>>> e5c56c3 (.)
-=======
-
->>>>>>> 7b67053 (fix: auto resolve conflict)
         /** @var array<string, \Filament\Resources\Pages\PageRegistration> $pages */
         $pages = [
             'index' => $index::route('/'),
@@ -166,37 +158,10 @@ abstract class XotBaseResource extends FilamentResource
         $reflector = new \ReflectionClass(static::class);
         $filename = $reflector->getFileName();
         Assert::string($filename);
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-=======
->>>>>>> 7b67053 (fix: auto resolve conflict)
-        
-<<<<<<< HEAD
->>>>>>> e5c56c3 (.)
-=======
-=======
-<<<<<<< HEAD
-        Assert::string($filename);
-        
-=======
->>>>>>> e2a4c5d (.)
->>>>>>> 50bb41c (fix: auto resolve conflict)
-<<<<<<< HEAD
->>>>>>> d9307de (fix: auto resolve conflict)
-=======
-=======
-
->>>>>>> 4ab3760 (.)
->>>>>>> 7b67053 (fix: auto resolve conflict)
-=======
         
         Assert::string($filename);
         
 
->>>>>>> c2dac53 (.)
         $path = Str::of($filename)
             ->before('.php')
             ->append(DIRECTORY_SEPARATOR)
@@ -205,15 +170,7 @@ abstract class XotBaseResource extends FilamentResource
 
         $files = glob($path.DIRECTORY_SEPARATOR.'*RelationManager.php');
         Assert::isArray($files);
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-        
->>>>>>> e5c56c3 (.)
-=======
-
->>>>>>> 7b67053 (fix: auto resolve conflict)
         /** @var array<class-string<\Filament\Resources\RelationManagers\RelationManager>> $res */
         $res = [];
         foreach ($files as $file) {
@@ -222,15 +179,7 @@ abstract class XotBaseResource extends FilamentResource
                 ->before('.php')
                 ->prepend(static::class.'\RelationManagers\\')
                 ->toString();
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-            
->>>>>>> e5c56c3 (.)
-=======
-
->>>>>>> 7b67053 (fix: auto resolve conflict)
             if (class_exists($className)) {
                 Assert::subclassOf($className, \Filament\Resources\RelationManagers\RelationManager::class);
                 $res[] = $className;

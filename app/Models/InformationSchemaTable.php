@@ -205,15 +205,7 @@ class InformationSchemaTable extends Model
      */
     public function getRows(): array
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
         $query = "SELECT
-=======
-        $query = "SELECT 
->>>>>>> e5c56c3 (.)
-=======
-        $query = "SELECT
->>>>>>> 7b67053 (fix: auto resolve conflict)
             TABLE_CATALOG,
             TABLE_SCHEMA,
             TABLE_NAME,
@@ -425,15 +417,7 @@ class InformationSchemaTable extends Model
         // Assicuriamo che i valori siano convertiti correttamente in intero
         $dataLengthInt = is_numeric($dataLength) ? (int) $dataLength : 0;
         $indexLengthInt = is_numeric($indexLength) ? (int) $indexLength : 0;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-        
->>>>>>> e5c56c3 (.)
-=======
-
->>>>>>> 7b67053 (fix: auto resolve conflict)
         return $dataLengthInt + $indexLengthInt;
     }
 

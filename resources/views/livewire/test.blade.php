@@ -56,194 +56,34 @@
     @foreach ($products as $product)
         <h3>{{ $product->title }}</h3>
         @foreach ($change_cats as $change_cat)
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
             <h4>[{{ $change_cat->id }}]{{ $change_cat->title }}</h4>
             @foreach ($changes->where('id_cat', $change_cat->id) as $change)
                 <h5>[{{ $change->id }}]{{ $change->title }}</h5>
-=======
-            <h4>[{{ $change_cat-> }}]{{ $change_cat->title }}</h4>
-            @foreach ($changes->where('id_cat', $change_cat->) as $change)
-                <h5>[{{ $change-> }}]{{ $change->title }}</h5>
->>>>>>> e5c56c3 (.)
-=======
-=======
->>>>>>> 7b67053 (fix: auto resolve conflict)
-            <h4>[{{ $change_cat-> }}]{{ $change_cat->title }}</h4>
-            @foreach ($changes->where('id_cat', $change_cat->) as $change)
-                <h5>[{{ $change-> }}]{{ $change->title }}</h5>
-=======
-<<<<<<< HEAD
-            <h4>[{{ $change_cat-> }}]{{ $change_cat->title }}</h4>
-            @foreach ($changes->where('id_cat', $change_cat->) as $change)
-                <h5>[{{ $change-> }}]{{ $change->title }}</h5>
-=======
-            <h4>[{{ $change_cat->id }}]{{ $change_cat->title }}</h4>
-            @foreach ($changes->where('id_cat', $change_cat->id) as $change)
-                <h5>[{{ $change->id }}]{{ $change->title }}</h5>
->>>>>>> e2a4c5d (.)
->>>>>>> 50bb41c (fix: auto resolve conflict)
-<<<<<<< HEAD
->>>>>>> d9307de (fix: auto resolve conflict)
-=======
-=======
-            <h4>[{{ $change_cat->id }}]{{ $change_cat->title }}</h4>
-            @foreach ($changes->where('id_cat', $change_cat->id) as $change)
-                <h5>[{{ $change->id }}]{{ $change->title }}</h5>
->>>>>>> 4ab3760 (.)
->>>>>>> 7b67053 (fix: auto resolve conflict)
-=======
-            <h4>[{{ $change_cat->id }}]{{ $change_cat->title }}</h4>
-            @foreach ($changes->where('id_cat', $change_cat->id) as $change)
-                <h5>[{{ $change->id }}]{{ $change->title }}</h5>
->>>>>>> c2dac53 (.)
 
 
                 <div class="btn-group btn-group-toggle">
                     <x-filament-forms::field-wrapper.label class="btn btn-danger">
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
                         <input type="radio" wire:model="qty.{{ $change_cat->id }}.{{ $change->id }}"
                             name="qty[{{ $change_cat->id }}][{{ $change->id }}]" autocomplete="off" value="-1">
                         @if (isset($qty[$change_cat->id][$change->id]) && $qty[$change_cat->id][$change->id] == -1)
-=======
-                        <input type="radio" wire:model="qty.{{ $change_cat-> }}.{{ $change-> }}"
-                            name="qty[{{ $change_cat-> }}][{{ $change-> }}]" autocomplete="off" value="-1">
-                        @if (isset($qty[$change_cat->][$change->]) && $qty[$change_cat->][$change->] == -1)
->>>>>>> e5c56c3 (.)
-=======
-=======
->>>>>>> 7b67053 (fix: auto resolve conflict)
-                        <input type="radio" wire:model="qty.{{ $change_cat-> }}.{{ $change-> }}"
-                            name="qty[{{ $change_cat-> }}][{{ $change-> }}]" autocomplete="off" value="-1">
-                        @if (isset($qty[$change_cat->][$change->]) && $qty[$change_cat->][$change->] == -1)
-=======
-<<<<<<< HEAD
-                        <input type="radio" wire:model="qty.{{ $change_cat-> }}.{{ $change-> }}"
-                            name="qty[{{ $change_cat-> }}][{{ $change-> }}]" autocomplete="off" value="-1">
-                        @if (isset($qty[$change_cat->][$change->]) && $qty[$change_cat->][$change->] == -1)
-=======
-                        <input type="radio" wire:model="qty.{{ $change_cat->id }}.{{ $change->id }}"
-                            name="qty[{{ $change_cat->id }}][{{ $change->id }}]" autocomplete="off" value="-1">
-                        @if (isset($qty[$change_cat->id][$change->id]) && $qty[$change_cat->id][$change->id] == -1)
->>>>>>> e2a4c5d (.)
->>>>>>> 50bb41c (fix: auto resolve conflict)
-<<<<<<< HEAD
->>>>>>> d9307de (fix: auto resolve conflict)
-=======
-=======
-                        <input type="radio" wire:model="qty.{{ $change_cat->id }}.{{ $change->id }}"
-                            name="qty[{{ $change_cat->id }}][{{ $change->id }}]" autocomplete="off" value="-1">
-                        @if (isset($qty[$change_cat->id][$change->id]) && $qty[$change_cat->id][$change->id] == -1)
->>>>>>> 4ab3760 (.)
->>>>>>> 7b67053 (fix: auto resolve conflict)
-=======
-                        <input type="radio" wire:model="qty.{{ $change_cat->id }}.{{ $change->id }}"
-                            name="qty[{{ $change_cat->id }}][{{ $change->id }}]" autocomplete="off" value="-1">
-                        @if (isset($qty[$change_cat->id][$change->id]) && $qty[$change_cat->id][$change->id] == -1)
->>>>>>> c2dac53 (.)
                             [-]
                         @else
                             -
                         @endif
                     </label>
                     <x-filament-forms::field-wrapper.label class="btn btn-secondary">
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
                         <input type="radio" wire:model="qty.{{ $change_cat->id }}.{{ $change->id }}"
                             name="qty[{{ $change_cat->id }}][{{ $change->id }}]" autocomplete="off" value="0">
                         @if (isset($qty[$change_cat->id][$change->id]) && $qty[$change_cat->id][$change->id] == 0)
-=======
-                        <input type="radio" wire:model="qty.{{ $change_cat-> }}.{{ $change-> }}"
-                            name="qty[{{ $change_cat-> }}][{{ $change-> }}]" autocomplete="off" value="0">
-                        @if (isset($qty[$change_cat->][$change->]) && $qty[$change_cat->][$change->] == 0)
->>>>>>> e5c56c3 (.)
-=======
-=======
->>>>>>> 7b67053 (fix: auto resolve conflict)
-                        <input type="radio" wire:model="qty.{{ $change_cat-> }}.{{ $change-> }}"
-                            name="qty[{{ $change_cat-> }}][{{ $change-> }}]" autocomplete="off" value="0">
-                        @if (isset($qty[$change_cat->][$change->]) && $qty[$change_cat->][$change->] == 0)
-=======
-<<<<<<< HEAD
-                        <input type="radio" wire:model="qty.{{ $change_cat-> }}.{{ $change-> }}"
-                            name="qty[{{ $change_cat-> }}][{{ $change-> }}]" autocomplete="off" value="0">
-                        @if (isset($qty[$change_cat->][$change->]) && $qty[$change_cat->][$change->] == 0)
-=======
-                        <input type="radio" wire:model="qty.{{ $change_cat->id }}.{{ $change->id }}"
-                            name="qty[{{ $change_cat->id }}][{{ $change->id }}]" autocomplete="off" value="0">
-                        @if (isset($qty[$change_cat->id][$change->id]) && $qty[$change_cat->id][$change->id] == 0)
->>>>>>> e2a4c5d (.)
->>>>>>> 50bb41c (fix: auto resolve conflict)
-<<<<<<< HEAD
->>>>>>> d9307de (fix: auto resolve conflict)
-=======
-=======
-                        <input type="radio" wire:model="qty.{{ $change_cat->id }}.{{ $change->id }}"
-                            name="qty[{{ $change_cat->id }}][{{ $change->id }}]" autocomplete="off" value="0">
-                        @if (isset($qty[$change_cat->id][$change->id]) && $qty[$change_cat->id][$change->id] == 0)
->>>>>>> 4ab3760 (.)
->>>>>>> 7b67053 (fix: auto resolve conflict)
-=======
-                        <input type="radio" wire:model="qty.{{ $change_cat->id }}.{{ $change->id }}"
-                            name="qty[{{ $change_cat->id }}][{{ $change->id }}]" autocomplete="off" value="0">
-                        @if (isset($qty[$change_cat->id][$change->id]) && $qty[$change_cat->id][$change->id] == 0)
->>>>>>> c2dac53 (.)
                             [&nbsp;]
                         @else
                             &nbsp;
                         @endif
                     </label>
                     <x-filament-forms::field-wrapper.label class="btn btn-primary active">
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
                         <input type="radio" wire:model="qty.{{ $change_cat->id }}.{{ $change->id }}"
                             name="qty[{{ $change_cat->id }}][{{ $change->id }}]" autocomplete="off" value="1">
                         @if (isset($qty[$change_cat->id][$change->id]) && $qty[$change_cat->id][$change->id] == 1)
-=======
-                        <input type="radio" wire:model="qty.{{ $change_cat-> }}.{{ $change-> }}"
-                            name="qty[{{ $change_cat-> }}][{{ $change-> }}]" autocomplete="off" value="1">
-                        @if (isset($qty[$change_cat->][$change->]) && $qty[$change_cat->][$change->] == 1)
->>>>>>> e5c56c3 (.)
-=======
-=======
->>>>>>> 7b67053 (fix: auto resolve conflict)
-                        <input type="radio" wire:model="qty.{{ $change_cat-> }}.{{ $change-> }}"
-                            name="qty[{{ $change_cat-> }}][{{ $change-> }}]" autocomplete="off" value="1">
-                        @if (isset($qty[$change_cat->][$change->]) && $qty[$change_cat->][$change->] == 1)
-=======
-<<<<<<< HEAD
-                        <input type="radio" wire:model="qty.{{ $change_cat-> }}.{{ $change-> }}"
-                            name="qty[{{ $change_cat-> }}][{{ $change-> }}]" autocomplete="off" value="1">
-                        @if (isset($qty[$change_cat->][$change->]) && $qty[$change_cat->][$change->] == 1)
-=======
-                        <input type="radio" wire:model="qty.{{ $change_cat->id }}.{{ $change->id }}"
-                            name="qty[{{ $change_cat->id }}][{{ $change->id }}]" autocomplete="off" value="1">
-                        @if (isset($qty[$change_cat->id][$change->id]) && $qty[$change_cat->id][$change->id] == 1)
->>>>>>> e2a4c5d (.)
->>>>>>> 50bb41c (fix: auto resolve conflict)
-<<<<<<< HEAD
->>>>>>> d9307de (fix: auto resolve conflict)
-=======
-=======
-                        <input type="radio" wire:model="qty.{{ $change_cat->id }}.{{ $change->id }}"
-                            name="qty[{{ $change_cat->id }}][{{ $change->id }}]" autocomplete="off" value="1">
-                        @if (isset($qty[$change_cat->id][$change->id]) && $qty[$change_cat->id][$change->id] == 1)
->>>>>>> 4ab3760 (.)
->>>>>>> 7b67053 (fix: auto resolve conflict)
-=======
-                        <input type="radio" wire:model="qty.{{ $change_cat->id }}.{{ $change->id }}"
-                            name="qty[{{ $change_cat->id }}][{{ $change->id }}]" autocomplete="off" value="1">
-                        @if (isset($qty[$change_cat->id][$change->id]) && $qty[$change_cat->id][$change->id] == 1)
->>>>>>> c2dac53 (.)
                             [+]
                         @else
                             +

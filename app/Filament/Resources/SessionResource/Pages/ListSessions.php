@@ -9,32 +9,8 @@ use Filament\Tables\Columns\TextColumn;
 use Modules\Xot\Filament\Resources\Pages\XotBaseListRecords;
 use Modules\Xot\Filament\Resources\SessionResource;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> e5c56c3 (.)
-=======
-=======
->>>>>>> 7b67053 (fix: auto resolve conflict)
-=======
->>>>>>> c2dac53 (.)
 
 
-<<<<<<< HEAD
-=======
->>>>>>> e2a4c5d (.)
->>>>>>> 50bb41c (fix: auto resolve conflict)
-<<<<<<< HEAD
->>>>>>> d9307de (fix: auto resolve conflict)
-=======
-=======
->>>>>>> 4ab3760 (.)
->>>>>>> 7b67053 (fix: auto resolve conflict)
-=======
->>>>>>> c2dac53 (.)
 /**
  * @see SessionResource
  */

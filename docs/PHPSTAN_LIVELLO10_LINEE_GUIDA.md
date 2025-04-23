@@ -102,21 +102,21 @@ Per le risorse PHP (file handles, connessioni di database, ecc.) che non possono
 private $fileHandle = null;
 ```
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/dev
-<<<<<<< HEAD
->>>>>>> e5c56c3 (.)
-=======
-=======
->>>>>>> 50bb41c (fix: auto resolve conflict)
->>>>>>> d9307de (fix: auto resolve conflict)
-=======
+
+
+
+
+
+
+
+ origin/dev
+
+ e5c56c3 (.)
+
+
+ 50bb41c (fix: auto resolve conflict)
+ d9307de (fix: auto resolve conflict)
+
 
 
 
@@ -124,7 +124,7 @@ private $fileHandle = null;
 
 
  50bb41c (fix: auto resolve conflict)
->>>>>>> c2dac53 (.)
+ c2dac53 (.)
 ### 4. Gestione delle API Fluenti di Librerie Esterne
 
 Le API fluenti (method chaining) di alcune librerie esterne come Laravel-FFMpeg possono causare problemi con PHPStan a livello 10, in particolare quando i metodi intermedi restituiscono tipi non standard o quando la catena è lunga e complessa.
@@ -172,36 +172,36 @@ Cannot call method lastMethod() on mixed
 Questo pattern è stato applicato con successo nei file `ConvertVideoByMediaConvertAction.php` e `ConvertVideoByConvertDataAction.php` del modulo Media per gestire l'API fluente di Laravel-FFMpeg.
 
 ### 5. Pattern per Controller
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> d9307de (fix: auto resolve conflict)
-<<<<<<< HEAD
-=======
 
 
->>>>>>> c2dac53 (.)
+
+
+
+ d9307de (fix: auto resolve conflict)
+
+
+
+
+ c2dac53 (.)
 ### 4. Pattern per Controller
 
 
 ### 4. Pattern per Controller
-<<<<<<< HEAD
->>>>>>> origin/dev
->>>>>>> origin/dev
-<<<<<<< HEAD
->>>>>>> e5c56c3 (.)
-=======
-=======
->>>>>>> 50bb41c (fix: auto resolve conflict)
->>>>>>> d9307de (fix: auto resolve conflict)
-=======
+
+ origin/dev
+ origin/dev
+
+ e5c56c3 (.)
+
+
+ 50bb41c (fix: auto resolve conflict)
+ d9307de (fix: auto resolve conflict)
+
 
 
 
  50bb41c (fix: auto resolve conflict)
->>>>>>> c2dac53 (.)
+ c2dac53 (.)
 
 Per i metodi dei controller, utilizzare tipi di ritorno espliciti che riflettono i possibili valori restituiti:
 
@@ -215,8 +215,8 @@ public function show(string $id): \Illuminate\View\View|\Illuminate\Http\Redirec
 
 
 ### 6. Gestione delle Proprietà Dinamiche
-=======
-<<<<<<< HEAD
+
+
 ### 6. Gestione delle Proprietà Dinamiche
 ### 5. Gestione delle Proprietà Dinamiche
 
@@ -224,23 +224,23 @@ public function show(string $id): \Illuminate\View\View|\Illuminate\Http\Redirec
 ### 6. Gestione delle Proprietà Dinamiche
 
 ### 5. Gestione delle Proprietà Dinamiche
-<<<<<<< HEAD
->>>>>>> origin/dev
->>>>>>> origin/dev
-<<<<<<< HEAD
->>>>>>> e5c56c3 (.)
-=======
-=======
+
+ origin/dev
+ origin/dev
+
+ e5c56c3 (.)
+
+
 ### 6. Gestione delle Proprietà Dinamiche
->>>>>>> 50bb41c (fix: auto resolve conflict)
->>>>>>> d9307de (fix: auto resolve conflict)
-=======
+ 50bb41c (fix: auto resolve conflict)
+ d9307de (fix: auto resolve conflict)
+
 
 
 
 ### 6. Gestione delle Proprietà Dinamiche
  50bb41c (fix: auto resolve conflict)
->>>>>>> c2dac53 (.)
+ c2dac53 (.)
 
 Per le proprietà dinamiche nei modelli, utilizzare annotazioni PHPDoc complete:
 
@@ -259,8 +259,8 @@ class User extends Model
 
 
 ### 7. Conversione Sicura da `mixed` a Tipi Scalari
-=======
-<<<<<<< HEAD
+
+
 ### 7. Conversione Sicura da `mixed` a Tipi Scalari
 ### 6. Conversione Sicura da `mixed` a Tipi Scalari
 
@@ -268,23 +268,23 @@ class User extends Model
 ### 7. Conversione Sicura da `mixed` a Tipi Scalari
 
 ### 6. Conversione Sicura da `mixed` a Tipi Scalari
-<<<<<<< HEAD
->>>>>>> origin/dev
->>>>>>> origin/dev
-<<<<<<< HEAD
->>>>>>> e5c56c3 (.)
-=======
-=======
+
+ origin/dev
+ origin/dev
+
+ e5c56c3 (.)
+
+
 ### 7. Conversione Sicura da `mixed` a Tipi Scalari
->>>>>>> 50bb41c (fix: auto resolve conflict)
->>>>>>> d9307de (fix: auto resolve conflict)
-=======
+ 50bb41c (fix: auto resolve conflict)
+ d9307de (fix: auto resolve conflict)
+
 
 
 
 ### 7. Conversione Sicura da `mixed` a Tipi Scalari
  50bb41c (fix: auto resolve conflict)
->>>>>>> c2dac53 (.)
+ c2dac53 (.)
 
 Quando si lavora con valori `mixed` da convertire in tipi scalari (string, int, float, bool), utilizzare controlli di tipo prima della conversione:
 
@@ -329,8 +329,8 @@ if ($value !== null) {
 
 
 ### 8. Gestione Sicura di Array con Chiavi Miste
-=======
-<<<<<<< HEAD
+
+
 ### 8. Gestione Sicura di Array con Chiavi Miste
 ### 7. Gestione Sicura di Array con Chiavi Miste
 
@@ -338,23 +338,23 @@ if ($value !== null) {
 ### 8. Gestione Sicura di Array con Chiavi Miste
 
 ### 7. Gestione Sicura di Array con Chiavi Miste
-<<<<<<< HEAD
->>>>>>> origin/dev
->>>>>>> origin/dev
-<<<<<<< HEAD
->>>>>>> e5c56c3 (.)
-=======
-=======
+
+ origin/dev
+ origin/dev
+
+ e5c56c3 (.)
+
+
 ### 8. Gestione Sicura di Array con Chiavi Miste
->>>>>>> 50bb41c (fix: auto resolve conflict)
->>>>>>> d9307de (fix: auto resolve conflict)
-=======
+ 50bb41c (fix: auto resolve conflict)
+ d9307de (fix: auto resolve conflict)
+
 
 
 
 ### 8. Gestione Sicura di Array con Chiavi Miste
  50bb41c (fix: auto resolve conflict)
->>>>>>> c2dac53 (.)
+ c2dac53 (.)
 
 Quando si ottengono array da fonti esterne (es. funzioni Laravel che restituiscono array con chiavi miste):
 
@@ -374,8 +374,8 @@ foreach ($componentsWithMixedKeys as $key => $component) {
 
 
 ### 9. Tipi Unione con Null
-=======
-<<<<<<< HEAD
+
+
 ### 9. Tipi Unione con Null
 ### 8. Tipi Unione con Null
 
@@ -383,23 +383,23 @@ foreach ($componentsWithMixedKeys as $key => $component) {
 ### 9. Tipi Unione con Null
 
 ### 8. Tipi Unione con Null
-<<<<<<< HEAD
->>>>>>> origin/dev
->>>>>>> origin/dev
-<<<<<<< HEAD
->>>>>>> e5c56c3 (.)
-=======
-=======
+
+ origin/dev
+ origin/dev
+
+ e5c56c3 (.)
+
+
 ### 9. Tipi Unione con Null
->>>>>>> 50bb41c (fix: auto resolve conflict)
->>>>>>> d9307de (fix: auto resolve conflict)
-=======
+ 50bb41c (fix: auto resolve conflict)
+ d9307de (fix: auto resolve conflict)
+
 
 
 
 ### 9. Tipi Unione con Null
  50bb41c (fix: auto resolve conflict)
->>>>>>> c2dac53 (.)
+ c2dac53 (.)
 
 Preferire la sintassi nullable (`?tipo`) per i tipi che possono essere null:
 
@@ -413,8 +413,8 @@ public function findById(?int $id): ?User
 
 
 ### 10. Parametri Variabili (Variadic)
-=======
-<<<<<<< HEAD
+
+
 ### 10. Parametri Variabili (Variadic)
 ### 9. Parametri Variabili (Variadic)
 
@@ -422,23 +422,23 @@ public function findById(?int $id): ?User
 ### 10. Parametri Variabili (Variadic)
 
 ### 9. Parametri Variabili (Variadic)
-<<<<<<< HEAD
->>>>>>> origin/dev
->>>>>>> origin/dev
-<<<<<<< HEAD
->>>>>>> e5c56c3 (.)
-=======
-=======
+
+ origin/dev
+ origin/dev
+
+ e5c56c3 (.)
+
+
 ### 10. Parametri Variabili (Variadic)
->>>>>>> 50bb41c (fix: auto resolve conflict)
->>>>>>> d9307de (fix: auto resolve conflict)
-=======
+ 50bb41c (fix: auto resolve conflict)
+ d9307de (fix: auto resolve conflict)
+
 
 
 
 ### 10. Parametri Variabili (Variadic)
  50bb41c (fix: auto resolve conflict)
->>>>>>> c2dac53 (.)
+ c2dac53 (.)
 
 Per i parametri variabili, specificare il tipo di ogni elemento nell'array risultante:
 
@@ -453,18 +453,18 @@ public function buildPath(string ...$segments): string
 }
 ```
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 ### 10. Callback e Closure
-=======
-=======
->>>>>>> d9307de (fix: auto resolve conflict)
-<<<<<<< HEAD
-=======
 
 
->>>>>>> c2dac53 (.)
+ d9307de (fix: auto resolve conflict)
+
+
+
+
+ c2dac53 (.)
 ### 11. Callback e Closure
 ### 10. Callback e Closure
 
@@ -472,23 +472,23 @@ public function buildPath(string ...$segments): string
 ### 11. Callback e Closure
 
 ### 10. Callback e Closure
-<<<<<<< HEAD
->>>>>>> origin/dev
->>>>>>> origin/dev
-<<<<<<< HEAD
->>>>>>> e5c56c3 (.)
-=======
-=======
+
+ origin/dev
+ origin/dev
+
+ e5c56c3 (.)
+
+
 ### 10. Callback e Closure
->>>>>>> 50bb41c (fix: auto resolve conflict)
->>>>>>> d9307de (fix: auto resolve conflict)
-=======
+ 50bb41c (fix: auto resolve conflict)
+ d9307de (fix: auto resolve conflict)
+
 
 
 
 ### 10. Callback e Closure
  50bb41c (fix: auto resolve conflict)
->>>>>>> c2dac53 (.)
+ c2dac53 (.)
 
 Per i callback e le closure, utilizzare `callable` con specifiche di tipo dettagliate:
 
@@ -720,18 +720,18 @@ Anche se i file sono fisicamente collocati nella directory `app` del modulo, il 
 Uno degli errori più frequenti riguarda il namespace delle Actions:
 
 - ✅ **CORRETTO**: `namespace Modules\Xot\Actions;`
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 - ❌ **ERRATO**: `namespace Modules\Xot\app\Actions;`
-=======
-=======
->>>>>>> d9307de (fix: auto resolve conflict)
-<<<<<<< HEAD
-=======
 
 
->>>>>>> c2dac53 (.)
+ d9307de (fix: auto resolve conflict)
+
+
+
+
+ c2dac53 (.)
 - ❌ **ERRATO**: `namespace Modules\Xot\Actions;`
 - ❌ **ERRATO**: `namespace Modules\Xot\app\Actions;`
 
@@ -739,31 +739,31 @@ Uno degli errori più frequenti riguarda il namespace delle Actions:
 - ❌ **ERRATO**: `namespace Modules\Xot\Actions;`
 
 - ❌ **ERRATO**: `namespace Modules\Xot\app\Actions;`
-<<<<<<< HEAD
->>>>>>> origin/dev
->>>>>>> origin/dev
-<<<<<<< HEAD
->>>>>>> e5c56c3 (.)
-=======
-=======
+
+ origin/dev
+ origin/dev
+
+ e5c56c3 (.)
+
+
 - ❌ **ERRATO**: `namespace Modules\Xot\app\Actions;`
->>>>>>> 50bb41c (fix: auto resolve conflict)
->>>>>>> d9307de (fix: auto resolve conflict)
-=======
+ 50bb41c (fix: auto resolve conflict)
+ d9307de (fix: auto resolve conflict)
+
 
 
 
 - ❌ **ERRATO**: `namespace Modules\Xot\app\Actions;`
  50bb41c (fix: auto resolve conflict)
->>>>>>> c2dac53 (.)
+ c2dac53 (.)
 
 Anche se il file Actions si trova fisicamente in `Modules/Xot/app/Actions/`, il namespace deve sempre essere `Modules\Xot\Actions` (senza il segmento `app`).
 
 Gli errori PHPStan relativi a questo problema sono spesso del tipo:
 ```
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 Class 'Modules\Xot\app\Actions\MyAction' not found.
 ```
 
@@ -779,14 +779,14 @@ namespace Modules\Xot\app\Console\Commands;
 
 Errori PHPStan come `Class Modules\Xot\app\Console\Commands\DatabaseSchemaExportCommand not found` indicano che è necessario rimuovere il segmento `app` dal namespace.
 
-=======
-=======
->>>>>>> d9307de (fix: auto resolve conflict)
-<<<<<<< HEAD
-=======
 
 
->>>>>>> c2dac53 (.)
+ d9307de (fix: auto resolve conflict)
+
+
+
+
+ c2dac53 (.)
 Class 'Modules\Xot\Actions\MyAction' not found.
 Class 'Modules\Xot\app\Actions\MyAction' not found.
 
@@ -798,14 +798,14 @@ Class 'Modules\Xot\app\Actions\MyAction' not found.
 
 ```
 
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> e5c56c3 (.)
-=======
-=======
-=======
 
->>>>>>> c2dac53 (.)
+
+ e5c56c3 (.)
+
+
+
+
+ c2dac53 (.)
 Class 'Modules\Xot\app\Actions\MyAction' not found.
 ```
 
@@ -821,12 +821,12 @@ namespace Modules\Xot\app\Console\Commands;
 
 Errori PHPStan come `Class Modules\Xot\app\Console\Commands\DatabaseSchemaExportCommand not found` indicano che è necessario rimuovere il segmento `app` dal namespace.
 
-<<<<<<< HEAD
->>>>>>> 50bb41c (fix: auto resolve conflict)
->>>>>>> d9307de (fix: auto resolve conflict)
-=======
+
  50bb41c (fix: auto resolve conflict)
->>>>>>> c2dac53 (.)
+ d9307de (fix: auto resolve conflict)
+
+ 50bb41c (fix: auto resolve conflict)
+ c2dac53 (.)
 #### Namespace Corretti per i Componenti Principali
 
 | Tipo di Componente       | Percorso Fisico                         | Namespace Corretto                 |
@@ -841,16 +841,16 @@ Errori PHPStan come `Class Modules\Xot\app\Console\Commands\DatabaseSchemaExport
 
 #### Esempio per i Comandi Console
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-```
-=======
-=======
->>>>>>> d9307de (fix: auto resolve conflict)
-=======
 
->>>>>>> c2dac53 (.)
+
+
+```
+
+
+ d9307de (fix: auto resolve conflict)
+
+
+ c2dac53 (.)
 ```php
 // CORRETTO
 namespace Modules\Xot\Console\Commands;
@@ -872,19 +872,19 @@ namespace Modules\Xot\app\Console\Commands;
 ```
 
 Errori PHPStan come `Class Modules\Xot\app\Console\Commands\DatabaseSchemaExportCommand not found` indicano che è necessario rimuovere il segmento `app` dal namespace.
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/dev
->>>>>>> origin/dev
-<<<<<<< HEAD
->>>>>>> e5c56c3 (.)
-=======
-=======
+
+
+
+ origin/dev
+ origin/dev
+
+ e5c56c3 (.)
+
+
 ```
->>>>>>> 50bb41c (fix: auto resolve conflict)
->>>>>>> d9307de (fix: auto resolve conflict)
-=======
+ 50bb41c (fix: auto resolve conflict)
+ d9307de (fix: auto resolve conflict)
+
 
 
 
@@ -892,4 +892,4 @@ Errori PHPStan come `Class Modules\Xot\app\Console\Commands\DatabaseSchemaExport
 
 ```
  50bb41c (fix: auto resolve conflict)
->>>>>>> c2dac53 (.)
+ c2dac53 (.)

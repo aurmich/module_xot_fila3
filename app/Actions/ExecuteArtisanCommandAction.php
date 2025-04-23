@@ -22,15 +22,7 @@ class ExecuteArtisanCommandAction
 
     /**
      * Lista dei comandi consentiti per motivi di sicurezza.
-<<<<<<< HEAD
-<<<<<<< HEAD
      *
-=======
-     * 
->>>>>>> e5c56c3 (.)
-=======
-     *
->>>>>>> 7b67053 (fix: auto resolve conflict)
      * @var array<int, string>
      */
     private array $allowedCommands = [
@@ -48,21 +40,9 @@ class ExecuteArtisanCommandAction
      * Esegue un comando Artisan e restituisce i risultati.
      *
      * @param string $command Il comando Artisan da eseguire (senza "php artisan")
-<<<<<<< HEAD
-<<<<<<< HEAD
      *
      * @throws \RuntimeException Se il comando non è consentito o si verifica un errore
      *
-=======
-     * 
-     * @throws \RuntimeException Se il comando non è consentito o si verifica un errore
-     * 
->>>>>>> e5c56c3 (.)
-=======
-     *
-     * @throws \RuntimeException Se il comando non è consentito o si verifica un errore
-     *
->>>>>>> 7b67053 (fix: auto resolve conflict)
      * @return array{
      *     command: string,
      *     output: array<int, string>,
@@ -73,37 +53,10 @@ class ExecuteArtisanCommandAction
     public function execute(string $command): array
     {
         Assert::stringNotEmpty($command, 'Il comando non può essere vuoto');
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-=======
->>>>>>> 7b67053 (fix: auto resolve conflict)
-        
-<<<<<<< HEAD
->>>>>>> e5c56c3 (.)
-=======
-<<<<<<< HEAD
-=======
-=======
-    public function execute(string $command, string $processId): array
-    {
->>>>>>> e2a4c5d (.)
->>>>>>> 50bb41c (fix: auto resolve conflict)
-<<<<<<< HEAD
->>>>>>> d9307de (fix: auto resolve conflict)
-=======
-=======
-
->>>>>>> 4ab3760 (.)
->>>>>>> 7b67053 (fix: auto resolve conflict)
-=======
         
     public function execute(string $command, string $processId): array
     {
 
->>>>>>> c2dac53 (.)
         if (! $this->isCommandAllowed($command)) {
             throw new \RuntimeException("Comando non consentito: {$command}");
         }
@@ -215,18 +168,8 @@ class ExecuteArtisanCommandAction
         } catch (\Throwable $e) {
             Event::dispatch('artisan-command.error', [$command, $e->getMessage()]);
             throw new \RuntimeException(
-<<<<<<< HEAD
-<<<<<<< HEAD
                 "Errore durante l'esecuzione del comando {$command}: {$e->getMessage()}",
                 (int) $e->getCode(),
-=======
-                "Errore durante l'esecuzione del comando {$command}: {$e->getMessage()}", 
-                (int) $e->getCode(), 
->>>>>>> e5c56c3 (.)
-=======
-                "Errore durante l'esecuzione del comando {$command}: {$e->getMessage()}",
-                (int) $e->getCode(),
->>>>>>> 7b67053 (fix: auto resolve conflict)
                 $e
             );
         }

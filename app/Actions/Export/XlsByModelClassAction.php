@@ -33,15 +33,7 @@ class XlsByModelClassAction
      * @param array<int, string> $includes Relazioni o campi da includere
      * @param array<int, string> $excludes Campi da escludere
      * @param callable|null $callback Callback per manipolare i dati
-<<<<<<< HEAD
-<<<<<<< HEAD
      *
-=======
-     * 
->>>>>>> e5c56c3 (.)
-=======
-     *
->>>>>>> 7b67053 (fix: auto resolve conflict)
      * @return BinaryFileResponse
      */
     public function execute(
@@ -54,30 +46,14 @@ class XlsByModelClassAction
         // Verifichiamo che la classe del modello esista
         Assert::classExists($modelClass);
         Assert::subclassOf($modelClass, Model::class);
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-        
->>>>>>> e5c56c3 (.)
-=======
-
->>>>>>> 7b67053 (fix: auto resolve conflict)
         $with = $this->getWithByIncludes($includes);
 
         // Creiamo l'istanza del modello e costruiamo la query
         /** @var Model $model */
         $model = app($modelClass);
         $query = $model->query()->with($with);
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-        
->>>>>>> e5c56c3 (.)
-=======
-
->>>>>>> 7b67053 (fix: auto resolve conflict)
         // Applichiamo le condizioni where
         foreach ($where as $key => $value) {
             $query->where($key, $value);
@@ -86,15 +62,7 @@ class XlsByModelClassAction
         // Otteniamo i risultati
         /** @var Collection $rows */
         $rows = $query->get();
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-        
->>>>>>> e5c56c3 (.)
-=======
-
->>>>>>> 7b67053 (fix: auto resolve conflict)
         // Filtriamo i campi se sono specificati gli includes
         $with = $this->getWithByIncludes($includes);
 
@@ -149,15 +117,7 @@ class XlsByModelClassAction
      * Ottiene le relazioni da caricare in base ai campi inclusi.
      *
      * @param array<int, string> $includes Campi da includere
-<<<<<<< HEAD
-<<<<<<< HEAD
      *
-=======
-     * 
->>>>>>> e5c56c3 (.)
-=======
-     *
->>>>>>> 7b67053 (fix: auto resolve conflict)
      * @return array<int, string>
      */
     private function getWithByIncludes(array $includes): array
@@ -166,28 +126,12 @@ class XlsByModelClassAction
         foreach ($includes as $include) {
             // Assicuriamo che $include sia una stringa
             $includeStr = is_string($include) ? $include : (string) $include;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-            
->>>>>>> e5c56c3 (.)
-=======
-
->>>>>>> 7b67053 (fix: auto resolve conflict)
             // Verifichiamo se contiene un punto (indicatore di relazione)
             if (!Str::contains($includeStr, '.')) {
                 continue;
             }
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-            
->>>>>>> e5c56c3 (.)
-=======
-
->>>>>>> 7b67053 (fix: auto resolve conflict)
             // Estraiamo il nome della relazione (prima parte prima del punto)
             $parts = explode('.', $includeStr);
             if (!empty($parts[0])) {
@@ -202,15 +146,7 @@ class XlsByModelClassAction
      * Genera il nome del file di export.
      *
      * @param string $modelClass Classe del modello
-<<<<<<< HEAD
-<<<<<<< HEAD
      *
-=======
-     * 
->>>>>>> e5c56c3 (.)
-=======
-     *
->>>>>>> 7b67053 (fix: auto resolve conflict)
      * @return string
      */
             $tmp = explode('.', (string) $include);

@@ -8,10 +8,10 @@ https://fly.io/laravel-bytes/console-applications-with-laravel-zero/
 
  4ab3760 (.)
 
-<<<<<<< HEAD
 
-=======
->>>>>>> e5c56c3 (.)
+
+
+ e5c56c3 (.)
 # Comandi Console in Moduli Laraxot
 
 ## Namespace Corretto per i Comandi Console
@@ -31,18 +31,18 @@ namespace Modules\Xot\Console\Commands;
 
 ### ❌ ERRATO
 ```php
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 namespace Modules\Xot\app\Console\Commands;
-=======
-=======
->>>>>>> d9307de (fix: auto resolve conflict)
-<<<<<<< HEAD
-=======
 
 
->>>>>>> c2dac53 (.)
+ d9307de (fix: auto resolve conflict)
+
+
+
+
+ c2dac53 (.)
 namespace Modules\Xot\Console\Commands;
 namespace Modules\Xot\app\Console\Commands;
 
@@ -50,23 +50,23 @@ namespace Modules\Xot\app\Console\Commands;
 namespace Modules\Xot\Console\Commands;
 
 namespace Modules\Xot\app\Console\Commands;
-<<<<<<< HEAD
->>>>>>> origin/dev
->>>>>>> origin/dev
-<<<<<<< HEAD
->>>>>>> e5c56c3 (.)
-=======
-=======
+
+ origin/dev
+ origin/dev
+
+ e5c56c3 (.)
+
+
 namespace Modules\Xot\app\Console\Commands;
->>>>>>> 50bb41c (fix: auto resolve conflict)
->>>>>>> d9307de (fix: auto resolve conflict)
-=======
+ 50bb41c (fix: auto resolve conflict)
+ d9307de (fix: auto resolve conflict)
+
 
 
 
 namespace Modules\Xot\app\Console\Commands;
  50bb41c (fix: auto resolve conflict)
->>>>>>> c2dac53 (.)
+ c2dac53 (.)
 ```
 
 ## Esempio di Comando Console
@@ -113,30 +113,30 @@ class DatabaseSchemaExportCommand extends Command
 ## Risorse Utili
 - [Laravel Artisan Console Documentation](https://laravel.com/docs/10.x/artisan)
 - [Console Applications with Laravel Zero](https://fly.io/laravel-bytes/console-applications-with-laravel-zero/)
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
+
 
  e2a4c5d (.)
-=======
->>>>>>> e5c56c3 (.)
-=======
-=======
->>>>>>> 7b67053 (fix: auto resolve conflict)
-=======
-=======
->>>>>>> e2a4c5d (.)
->>>>>>> 50bb41c (fix: auto resolve conflict)
-<<<<<<< HEAD
->>>>>>> d9307de (fix: auto resolve conflict)
-=======
-=======
+
+ e5c56c3 (.)
+
+
+ 7b67053 (fix: auto resolve conflict)
+
 
  e2a4c5d (.)
->>>>>>> 4ab3760 (.)
->>>>>>> 7b67053 (fix: auto resolve conflict)
-=======
+ 50bb41c (fix: auto resolve conflict)
+
+ d9307de (fix: auto resolve conflict)
+
+
+
+ e2a4c5d (.)
+ 4ab3760 (.)
+ 7b67053 (fix: auto resolve conflict)
+
 
 
 
@@ -147,4 +147,4 @@ class DatabaseSchemaExportCommand extends Command
 
  e2a4c5d (.)
  4ab3760 (.)
->>>>>>> c2dac53 (.)
+ c2dac53 (.)

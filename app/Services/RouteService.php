@@ -55,17 +55,10 @@ class RouteService
 
         // Verifichiamo un caso speciale per le richieste Livewire
         $segments = Request::segments();
-<<<<<<< HEAD
-
-        // Se abbiamo almeno un segmento, è 'livewire' e la sessione 'in_admin' è true
-        return (is_countable($segments) ? \count($segments) : 0) > 0 &&
-               'livewire' === $segments[0] &&
-=======
         
         // Se abbiamo almeno un segmento, è 'livewire' e la sessione 'in_admin' è true
         return (is_countable($segments) ? \count($segments) : 0) > 0 && 
                'livewire' === $segments[0] && 
->>>>>>> e5c56c3 (.)
                session('in_admin', false) === true;
         $segments = Request::segments();
 

@@ -93,24 +93,7 @@ class RouteDynService
         Assert::string($name = $v['name']);
         $as = mb_strtolower($name);
         $as = str_replace('/', '.', $as);
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-        /** @var string $tmp */
-        $tmp = preg_replace('/{.*}./', '', $as);
-        if (!is_string($tmp)) {
-            $tmp = $as; // Fallback se preg_replace fallisce
-        }
-        $as = $tmp;
-
-=======
-=======
->>>>>>> d9307de (fix: auto resolve conflict)
-=======
->>>>>>> c2dac53 (.)
         $as = preg_replace('/{.*}./', '', $as);
->>>>>>> e5c56c3 (.)
         $as = str_replace(['{', '}'], '', $as);
 
         /** @var string $tmp */
@@ -182,30 +165,6 @@ class RouteDynService
         }
 
         Assert::nullOrString($v['act'] = $v['name']);
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-        $act = '';
-        if (is_string($v['act'])) {
-            /** @var string|null $tmp */
-            $tmp = preg_replace('/{.*}\//', '', $v['act']);
-            $act = $tmp !== null ? $tmp : $v['act'];
-
-            $act = str_replace('/', '_', $act);
-            $act = Str::camel($act);
-            $act = str_replace(['{', '}'], '', $act);
-        }
-
-        return $act;
-=======
-=======
->>>>>>> d9307de (fix: auto resolve conflict)
-=======
->>>>>>> 7b67053 (fix: auto resolve conflict)
-=======
->>>>>>> c2dac53 (.)
         Assert::nullOrString($v['act']);
         $v['act'] = preg_replace('/{.*}\//', '', (string) $v['act']);
         if ($v['act'] === null) {
@@ -232,13 +191,6 @@ class RouteDynService
         $v['act'] = str_replace(['{', '}'], '', $v['act']);
 
         return Str::camel($v['act']);
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> e5c56c3 (.)
-=======
-=======
-=======
->>>>>>> c2dac53 (.)
         if (! \is_string($v['act'])) {
             throw new \Exception('act is not a string');
         }
@@ -250,17 +202,6 @@ class RouteDynService
         // camel_case foo_bar  => fooBar
         // studly_case foo_bar => FooBar
         return Str::camel($v['act']);
-<<<<<<< HEAD
->>>>>>> e2a4c5d (.)
->>>>>>> 50bb41c (fix: auto resolve conflict)
-<<<<<<< HEAD
->>>>>>> d9307de (fix: auto resolve conflict)
-=======
-=======
->>>>>>> 4ab3760 (.)
->>>>>>> 7b67053 (fix: auto resolve conflict)
-=======
->>>>>>> c2dac53 (.)
     }
 
     public static function getParamName(array $v, ?string $namespace): string
@@ -328,32 +269,8 @@ class RouteDynService
             'parameters' => [mb_strtolower((string) $v['name']) => implode('}/{', $params_name)],
             'names' => self::prefixedResourceNames(self::getAs($v, $namespace)),
         ];
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> e5c56c3 (.)
-=======
-=======
->>>>>>> 7b67053 (fix: auto resolve conflict)
-=======
->>>>>>> c2dac53 (.)
 
 
-<<<<<<< HEAD
-=======
->>>>>>> e2a4c5d (.)
->>>>>>> 50bb41c (fix: auto resolve conflict)
-<<<<<<< HEAD
->>>>>>> d9307de (fix: auto resolve conflict)
-=======
-=======
->>>>>>> 4ab3760 (.)
->>>>>>> 7b67053 (fix: auto resolve conflict)
-=======
->>>>>>> c2dac53 (.)
         if (isset($v['only'])) {
             $opts['only'] = $v['only'];
         }
@@ -386,18 +303,7 @@ class RouteDynService
 
         Assert::string($v['controller'] = $v['name']);
         Assert::string($v['controller'] = $v['name']);
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-        Assert::string($v['controller'] = $v['name']);
-=======
         Assert::nullOrString($v['controller'] = $v['name']);
->>>>>>> origin/dev
->>>>>>> origin/dev
->>>>>>> e5c56c3 (.)
-=======
-        Assert::nullOrString($v['controller'] = $v['name']);
->>>>>>> c2dac53 (.)
         $v['controller'] = str_replace(['/', '{', '}'], ['_', '', ''], $v['controller']);
         $v['controller'] = Str::studly($v['controller']);
         Assert::string($v['controller'] = $v['name']);
@@ -427,20 +333,6 @@ class RouteDynService
 
     public static function getUri(array $v, ?string $namespace): string
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-        Assert::string($name = $v['name']);
-        return $name;
-=======
-=======
->>>>>>> d9307de (fix: auto resolve conflict)
-=======
->>>>>>> 7b67053 (fix: auto resolve conflict)
-<<<<<<< HEAD
-=======
->>>>>>> c2dac53 (.)
         Assert::string($name= $v['name']);
         //return mb_strtolower(is_string($v) ? $v : (string) $v['name);
         return $name;
@@ -449,35 +341,13 @@ class RouteDynService
         return $name;
         Assert::nullOrString($v['name']);
         return mb_strtolower(is_string($v) ? $v : (string) $v['name']);
-<<<<<<< HEAD
->>>>>>> origin/dev
->>>>>>> origin/dev
-<<<<<<< HEAD
->>>>>>> e5c56c3 (.)
-=======
-=======
-=======
->>>>>>> c2dac53 (.)
         Assert::string($name = $v['name']);
         return $name;
         Assert::nullOrString($v['name']);
 
         return mb_strtolower((string) $v['name']);
-<<<<<<< HEAD
->>>>>>> e2a4c5d (.)
->>>>>>> 50bb41c (fix: auto resolve conflict)
-<<<<<<< HEAD
->>>>>>> d9307de (fix: auto resolve conflict)
-=======
-=======
         Assert::string($name = $v['name']);
         return $name;
->>>>>>> 4ab3760 (.)
->>>>>>> 7b67053 (fix: auto resolve conflict)
-=======
-        Assert::string($name = $v['name']);
-        return $name;
->>>>>>> c2dac53 (.)
     }
 
     public static function getMethod(array $v, ?string $namespace): array
@@ -560,23 +430,6 @@ class RouteDynService
         if ($v['name'] === null) {
             return;
         }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-        Assert::string($name = $v['name']);
-        $opts = self::getResourceOpts($v, $namespace);
-        $controller = self::getController($v, $namespace);
-
-=======
-=======
->>>>>>> d9307de (fix: auto resolve conflict)
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/dev
-=======
->>>>>>> c2dac53 (.)
         Assert::string($name= $v['name']);
         $opts = self::getResourceOpts($v, $namespace);
         $controller = self::getController($v, $namespace);
@@ -586,12 +439,6 @@ class RouteDynService
         $opts = self::getResourceOpts($v, $namespace);
         $controller = self::getController($v, $namespace);
         $name = mb_strtolower(is_string($v) ? $v : (string) $v['name']);
-<<<<<<< HEAD
->>>>>>> origin/dev
->>>>>>> origin/dev
->>>>>>> e5c56c3 (.)
-=======
->>>>>>> c2dac53 (.)
         Route::resource($name, $controller, $opts);
     }
 

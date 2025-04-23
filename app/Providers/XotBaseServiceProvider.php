@@ -150,22 +150,6 @@ abstract class XotBaseServiceProvider extends ServiceProvider
     protected function registerConfig(): void
     {
         try {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
->>>>>>> d9307de (fix: auto resolve conflict)
-=======
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 4ab3760 (.)
->>>>>>> 7b67053 (fix: auto resolve conflict)
-=======
->>>>>>> c2dac53 (.)
             $configPath = app(GetModulePathByGeneratorAction::class)->execute($this->name, 'config');
 
             /*
@@ -173,15 +157,6 @@ abstract class XotBaseServiceProvider extends ServiceProvider
                 $configPath => config_path($this->nameLower.'.php'),
             ], 'config');
             */
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 50bb41c (fix: auto resolve conflict)
->>>>>>> d9307de (fix: auto resolve conflict)
-=======
->>>>>>> c2dac53 (.)
             Assert::string($relativePath = config('modules.paths.generator.config.path'));
             $configPath = module_path($this->name, $relativePath);
             if (! is_string($configPath)) {
@@ -196,22 +171,6 @@ abstract class XotBaseServiceProvider extends ServiceProvider
                 $configPath => config_path($this->nameLower.'.php'),
             ], 'config');
 
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> e5c56c3 (.)
-=======
-<<<<<<< HEAD
-=======
->>>>>>> e2a4c5d (.)
->>>>>>> 50bb41c (fix: auto resolve conflict)
-<<<<<<< HEAD
->>>>>>> d9307de (fix: auto resolve conflict)
-=======
-=======
->>>>>>> 4ab3760 (.)
->>>>>>> 7b67053 (fix: auto resolve conflict)
-=======
->>>>>>> c2dac53 (.)
             $this->mergeConfigFrom($configPath, $this->nameLower);
         } catch (\Exception $e) {
             // Ignore missing configuration
@@ -221,28 +180,6 @@ abstract class XotBaseServiceProvider extends ServiceProvider
 
     public function registerBladeComponents(): void
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-        try{
-            $componentsViewPath = app(GetModulePathByGeneratorAction::class)->execute($this->name, 'component-view');
-            Blade::anonymousComponentPath($componentsViewPath);
-        } catch (\Exception $e) {
-            //return;
-        }
-        // $components_path = realpath(__DIR__.'/../resources/views/components');
-
-
-
-=======
->>>>>>> e5c56c3 (.)
-=======
->>>>>>> d9307de (fix: auto resolve conflict)
-=======
->>>>>>> 7b67053 (fix: auto resolve conflict)
-=======
->>>>>>> c2dac53 (.)
         $componentClassPath = app(GetModulePathByGeneratorAction::class)->execute($this->name, 'component-class');
 
         $namespace = $this->module_ns.'\View\Components';

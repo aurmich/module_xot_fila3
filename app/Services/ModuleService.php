@@ -81,65 +81,16 @@ class ModuleService
                 $tmp = new \stdClass();
 
                 $name = mb_substr($filename, 0, -mb_strlen($ext));
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-                // dddx(['name' => $name, 'name1' => $file->getFilenameWithoutExtension()]);
-=======
-=======
->>>>>>> d9307de (fix: auto resolve conflict)
-=======
->>>>>>> 7b67053 (fix: auto resolve conflict)
-=======
->>>>>>> c2dac53 (.)
 
                 
                 
                 // dddx(['name' => $name, 'name1' => $file->getFilenameWithoutExtension()]);
-<<<<<<< HEAD
->>>>>>> origin/dev
->>>>>>> origin/dev
-<<<<<<< HEAD
->>>>>>> e5c56c3 (.)
-=======
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> c2dac53 (.)
 
                 // dddx(['name' => $name, 'name1' => $file->getFilenameWithoutExtension()]);
-<<<<<<< HEAD
->>>>>>> 50bb41c (fix: auto resolve conflict)
->>>>>>> d9307de (fix: auto resolve conflict)
-=======
->>>>>>> c2dac53 (.)
                 /**
                  * @var class-string
                  */
                 $class = $ns.'\\'.$name;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-                //Strict comparison using === between stdClass and null will always evaluate to false.
-                //if ($tmp === null) {
-                //    continue;
-                //}
-
-=======
-=======
->>>>>>> d9307de (fix: auto resolve conflict)
-=======
->>>>>>> 7b67053 (fix: auto resolve conflict)
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/dev
-=======
->>>>>>> c2dac53 (.)
                 //Strict comparison using === between stdClass and null will always evaluate to false.
 
                 //if ($tmp === null) {
@@ -148,28 +99,12 @@ class ModuleService
                 if ($tmp === null) {
                     continue;
                 }
-<<<<<<< HEAD
->>>>>>> origin/dev
->>>>>>> origin/dev
-<<<<<<< HEAD
->>>>>>> e5c56c3 (.)
-=======
-=======
-=======
->>>>>>> 4ab3760 (.)
-=======
->>>>>>> c2dac53 (.)
 
                 //Strict comparison using === between stdClass and null will always evaluate to false.
                 //if ($tmp === null) {
                 //    continue;
                 //}
 
-<<<<<<< HEAD
->>>>>>> 50bb41c (fix: auto resolve conflict)
->>>>>>> d9307de (fix: auto resolve conflict)
-=======
->>>>>>> c2dac53 (.)
                 $tmp->class = $class;
                 $name = Str::snake($name);
                 $tmp->name = $name;

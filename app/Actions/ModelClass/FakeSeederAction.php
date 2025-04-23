@@ -108,24 +108,10 @@ class FakeSeederAction
     private function getTableName(string $modelClass): string
     {
         Assert::classExists($modelClass, 'La classe del modello deve esistere');
-<<<<<<< HEAD
-<<<<<<< HEAD
 
         /** @var \Illuminate\Database\Eloquent\Model */
         $model = app($modelClass);
 
-=======
-        
-        /** @var \Illuminate\Database\Eloquent\Model */
-        $model = app($modelClass);
-        
->>>>>>> e5c56c3 (.)
-=======
-
-        /** @var \Illuminate\Database\Eloquent\Model */
-        $model = app($modelClass);
-
->>>>>>> 7b67053 (fix: auto resolve conflict)
         return $model->getTable();
     }
 }

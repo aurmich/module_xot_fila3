@@ -2,26 +2,16 @@
 
 ## Helper.php
 
-Il conflitto nel file `Helper.php` è stato parzialmente risolto nella sezione più critica:
+### Intent
+- Garantire la corretta normalizzazione del percorso `doc_root` e tipizzazione forte senza casting ridondanti.
 
-```php
-Assert::string($doc_root = $_SERVER['DOCUMENT_ROOT']);
-$doc_root = str_replace('/', DIRECTORY_SEPARATOR, $doc_root);
-```
+### Cosa
+- Rimosso marker di conflitto e duplicazioni nella funzione `dddx`.
+- Utilizzato `Assert::string()` per garantire il tipo di `doc_root`.
+- Semplificata la logica di `str_replace` per la conversione dei separatori di percorso.
 
-La versione scelta:
-- Utilizza la tipizzazione già garantita da `Assert::string()`
-- Evita il casting ridondante a stringa con `(string)` 
-- Mantiene il codice pulito e conforme alle best practice
-
-Il file presenta ancora numerosi altri conflitti che richiedono un'analisi più approfondita per essere risolti completamente.
-
-### Nota Tecnica
-
-L'approccio generale per la risoluzione di questi conflitti è:
-1. Preferire le versioni con tipizzazione forte
-2. Evitare cast espliciti quando già garantiti da funzioni Assert
-3. Mantenere la consistenza con il resto del codice
+## Collegamenti
+- Documentazione principale: [Ris. conflitti Git - Modulo Xot](../../../docs/risoluzione_conflitti_git.md#modulo-xot)
 
 ## Collegamenti alla Documentazione Principale
 

@@ -14,17 +14,6 @@ use function Safe\json_encode;
 use Sushi\Sushi;
 
 /**
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
- *
-=======
-=======
->>>>>>> d9307de (fix: auto resolve conflict)
- * 
->>>>>>> e5c56c3 (.)
-=======
->>>>>>> 7b67053 (fix: auto resolve conflict)
  *
  * 
  *

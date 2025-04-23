@@ -22,44 +22,12 @@
         <template x-for="(line, index) in output" :key="index">
             <div class="whitespace-pre-wrap" x-text="line"></div>
         </template>
-<<<<<<< HEAD
-<<<<<<< HEAD
 
         <div x-show="$wire.isRunning" class="animate-pulse">
-<<<<<<< HEAD
-            <span class="text-green-400">></span>
-=======
-        
-=======
-
->>>>>>> 7b67053 (fix: auto resolve conflict)
-        <div x-show="$wire.isRunning" class="animate-pulse">
-<<<<<<< HEAD
-<<<<<<< HEAD
             <span class="text-green-400"</span>
-<<<<<<< HEAD
->>>>>>> e5c56c3 (.)
-=======
-=======
-<<<<<<< HEAD
-=======
-            <span class="text-green-400"</span>
->>>>>>> c2dac53 (.)
             <span class="text-green-400"</span>
             <span class="text-green-400">></span>
-<<<<<<< HEAD
->>>>>>> e2a4c5d (.)
->>>>>>> 50bb41c (fix: auto resolve conflict)
-<<<<<<< HEAD
->>>>>>> d9307de (fix: auto resolve conflict)
-=======
-=======
             <span class="text-green-400">></span>
->>>>>>> 4ab3760 (.)
->>>>>>> 7b67053 (fix: auto resolve conflict)
-=======
-            <span class="text-green-400">></span>
->>>>>>> c2dac53 (.)
             <span class="animate-blink">_</span>
         </div>
     </div>
@@ -72,15 +40,7 @@
         >
             Auto-scroll: <span x-text="autoScroll ? 'ON' : 'OFF'"></span>
         </button>
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-        
->>>>>>> e5c56c3 (.)
-=======
-
->>>>>>> 7b67053 (fix: auto resolve conflict)
         <button
             @click="$refs.terminal.scrollTop = $refs.terminal.scrollHeight"
             class="px-3 py-1 text-sm bg-gray-700 text-gray-300 rounded-md hover:bg-gray-600"
@@ -99,12 +59,4 @@
 .animate-blink {
     animation: blink 1s infinite;
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
 </style>
-=======
-</style> 
->>>>>>> e5c56c3 (.)
-=======
-</style>
->>>>>>> 7b67053 (fix: auto resolve conflict)

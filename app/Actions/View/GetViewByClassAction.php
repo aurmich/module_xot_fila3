@@ -36,44 +36,16 @@ class GetViewByClassAction
             if ($key > 0 && isset($after[$key - 1])) {
                 /** @var mixed $prevValue */
                 $prevValue = $after[$key - 1];
-<<<<<<< HEAD
-<<<<<<< HEAD
 
                 // Gestione sicura delle conversioni di tipo per PHPStan level 10
                 $prevValueStr = '';
 
-=======
-                
-                // Gestione sicura delle conversioni di tipo per PHPStan level 10
-                $prevValueStr = '';
-                
->>>>>>> e5c56c3 (.)
-=======
-
-                // Gestione sicura delle conversioni di tipo per PHPStan level 10
-                $prevValueStr = '';
-
->>>>>>> 7b67053 (fix: auto resolve conflict)
                 if (is_string($prevValue)) {
                     $prevValueStr = $prevValue;
                 } elseif ($prevValue === null) {
                     $prevValueStr = '';
                 } elseif (is_scalar($prevValue)) {
                     // Cast sicuro per valori scalari (int, float, bool)
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-                   // Utilizziamo il cast esplicito con controllo di tipo per PHPStan Level 9
-                   $prevValueStr = is_scalar($prevValue) ? (string) $prevValue : '';
-                }
-
-=======
-=======
->>>>>>> d9307de (fix: auto resolve conflict)
-<<<<<<< HEAD
-=======
->>>>>>> c2dac53 (.)
                    // $prevValueStr = is_string($prevValue) ? $prevValue : (string) $prevValue;
                    $prevValueStr = strval( $prevValue);
                    // $prevValueStr = is_string($prevValue) ? $prevValue : (string) $prevValue;
@@ -83,40 +55,19 @@ class GetViewByClassAction
                    // Utilizziamo il cast esplicito con controllo di tipo per PHPStan Level 9
                    $prevValueStr = is_scalar($prevValue) ? (string) $prevValue : '';
                 }
-<<<<<<< HEAD
-                
->>>>>>> e5c56c3 (.)
-=======
 
->>>>>>> 7b67053 (fix: auto resolve conflict)
                 $singular = Str::of($prevValueStr)->singular()->toString();
                 if (Str::endsWith($value, $singular)) {
                     $value = Str::of($value)->beforeLast($singular)->toString();
                 }
             }
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-            
->>>>>>> e5c56c3 (.)
-=======
-
->>>>>>> 7b67053 (fix: auto resolve conflict)
             return Str::of($value)->slug()->toString();
         });
 
         $implode = implode('.', $mapped);
         $view = $module_low.'::'.$implode.$suffix;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-        
->>>>>>> e5c56c3 (.)
-=======
-
->>>>>>> 7b67053 (fix: auto resolve conflict)
         if (!view()->exists($view)) {
             throw new \Exception('View not found: '.$view);
         }

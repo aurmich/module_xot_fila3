@@ -145,15 +145,7 @@ abstract class XotBaseRelationManager extends RelationManager
         } catch (\Exception $e) {
             // Fallback if parent method fails
         }
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-        
->>>>>>> e5c56c3 (.)
-=======
-
->>>>>>> 7b67053 (fix: auto resolve conflict)
         // Fallback: derive the resource class name from the relation manager name
         $class = get_class($this);
         $resource_name = Str::of(class_basename($this))
@@ -166,27 +158,11 @@ abstract class XotBaseRelationManager extends RelationManager
             ->append('Resources\\')
             ->toString();
         $resourceClass = $ns.'\\'.$resource_name;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
         if (!class_exists($resourceClass)) {
             throw new \Exception("Cannot find resource class {$resourceClass}");
         }
 
-=======
-        
-        if (!class_exists($resourceClass)) {
-            throw new \Exception("Cannot find resource class {$resourceClass}");
-        }
-        
->>>>>>> e5c56c3 (.)
-=======
-
-        if (!class_exists($resourceClass)) {
-            throw new \Exception("Cannot find resource class {$resourceClass}");
-        }
-
->>>>>>> 7b67053 (fix: auto resolve conflict)
         if (!is_subclass_of($resourceClass, \Modules\Xot\Filament\Resources\XotBaseResource::class)) {
             throw new \Exception("{$resourceClass} must extend XotBaseResource");
         }

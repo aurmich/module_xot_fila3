@@ -4,28 +4,6 @@ declare(strict_types=1);
 
 namespace Modules\Xot\Datas;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/dev
-<<<<<<< HEAD
->>>>>>> e5c56c3 (.)
-=======
-=======
->>>>>>> 50bb41c (fix: auto resolve conflict)
-<<<<<<< HEAD
->>>>>>> d9307de (fix: auto resolve conflict)
-=======
-=======
->>>>>>> 4ab3760 (.)
->>>>>>> 7b67053 (fix: auto resolve conflict)
-=======
->>>>>>> c2dac53 (.)
 use Livewire\Wireable;
 use Illuminate\Support\Arr;
 use Spatie\LaravelData\Data;
@@ -37,23 +15,8 @@ use Spatie\LaravelData\Concerns\WireableData;
 
 /**
  * Class MetatagData
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
- *
-=======
- * 
->>>>>>> e5c56c3 (.)
-=======
-=======
->>>>>>> c2dac53 (.)
  * 
  *
-<<<<<<< HEAD
->>>>>>> 50bb41c (fix: auto resolve conflict)
->>>>>>> d9307de (fix: auto resolve conflict)
-=======
->>>>>>> c2dac53 (.)
  * @property string $title
  * @property string $sitename
  * @property string $subtitle
@@ -85,18 +48,6 @@ use Spatie\LaravelData\Concerns\WireableData;
  * @property string $color_banner
  * @property string $favicon
  * @property array<string, array{key?: string, color: string, hex?: string}> $colors
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 50bb41c (fix: auto resolve conflict)
-=======
-=======
->>>>>>> c2dac53 (.)
 use Filament\Support\Colors\Color;
 use Illuminate\Support\Arr;
 use Livewire\Wireable;
@@ -107,56 +58,14 @@ use Modules\Xot\Actions\File\AssetAction;
 
 /**
  * Class MetatagData
-<<<<<<< HEAD
->>>>>>> origin/dev
->>>>>>> origin/dev
-<<<<<<< HEAD
->>>>>>> e5c56c3 (.)
-=======
-=======
 
 /**
  * Undocumented class.
->>>>>>> e2a4c5d (.)
->>>>>>> 50bb41c (fix: auto resolve conflict)
-<<<<<<< HEAD
->>>>>>> d9307de (fix: auto resolve conflict)
-=======
-=======
->>>>>>> 4ab3760 (.)
->>>>>>> 7b67053 (fix: auto resolve conflict)
-=======
-
-/**
- * Undocumented class.
->>>>>>> c2dac53 (.)
  */
 class MetatagData extends Data implements Wireable
 {
     use WireableData;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/dev
-<<<<<<< HEAD
->>>>>>> e5c56c3 (.)
-=======
-=======
->>>>>>> 50bb41c (fix: auto resolve conflict)
-<<<<<<< HEAD
->>>>>>> d9307de (fix: auto resolve conflict)
-=======
-=======
->>>>>>> 4ab3760 (.)
->>>>>>> 7b67053 (fix: auto resolve conflict)
-=======
->>>>>>> c2dac53 (.)
     /** @var string */
     public string $title = '';
 
@@ -246,18 +155,6 @@ class MetatagData extends Data implements Wireable
 
     /** @var string */
     public string $favicon = '/favicon.ico';
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-    /**
-     * @var array<string, array{key?: string, color: string, hex?: string}>
-     */
-=======
-=======
->>>>>>> d9307de (fix: auto resolve conflict)
-=======
->>>>>>> c2dac53 (.)
     
     /**
      * @var array<string, array{key?: string, color: string, hex?: string}>
@@ -292,24 +189,10 @@ class MetatagData extends Data implements Wireable
     public string $color_hamburger = '';
     public string $color_banner = '';
     public string $favicon = '/favicon.ico';
-<<<<<<< HEAD
->>>>>>> origin/dev
->>>>>>> origin/dev
-<<<<<<< HEAD
->>>>>>> e5c56c3 (.)
-=======
-=======
-=======
->>>>>>> c2dac53 (.)
 
     /**
      * @var array<string, array{key?: string, color: string, hex?: string}>
      */
-<<<<<<< HEAD
->>>>>>> 50bb41c (fix: auto resolve conflict)
->>>>>>> d9307de (fix: auto resolve conflict)
-=======
->>>>>>> c2dac53 (.)
     public array $colors = [];
 
     /**
@@ -323,26 +206,8 @@ class MetatagData extends Data implements Wireable
      * @return self
      *
      * @return self
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
      *
      * @return self
-=======
->>>>>>> origin/dev
->>>>>>> origin/dev
-<<<<<<< HEAD
->>>>>>> e5c56c3 (.)
-=======
-=======
-     *
-     * @return self
->>>>>>> 50bb41c (fix: auto resolve conflict)
->>>>>>> d9307de (fix: auto resolve conflict)
-=======
-     *
-     * @return self
->>>>>>> c2dac53 (.)
      */
     public static function make(): self
     {
@@ -422,28 +287,6 @@ class MetatagData extends Data implements Wireable
         return self::$instance;
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/dev
-<<<<<<< HEAD
->>>>>>> e5c56c3 (.)
-=======
-=======
->>>>>>> 50bb41c (fix: auto resolve conflict)
-<<<<<<< HEAD
->>>>>>> d9307de (fix: auto resolve conflict)
-=======
-=======
->>>>>>> 4ab3760 (.)
->>>>>>> 7b67053 (fix: auto resolve conflict)
-=======
->>>>>>> c2dac53 (.)
     /**
      * Get the header logo URL.
      *
@@ -456,51 +299,15 @@ class MetatagData extends Data implements Wireable
             $path = app(AssetAction::class)->execute($this->logo_header);
             return asset($path);
         } catch (\Throwable $e) {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
-=======
->>>>>>> c2dac53 (.)
     public function getLogoHeader(): string
     {
         try {
             return asset(app(AssetAction::class)->execute($this->logo_header));
         } catch (\Exception $e) {
-<<<<<<< HEAD
->>>>>>> origin/dev
->>>>>>> origin/dev
-<<<<<<< HEAD
->>>>>>> e5c56c3 (.)
-=======
-=======
->>>>>>> 50bb41c (fix: auto resolve conflict)
->>>>>>> d9307de (fix: auto resolve conflict)
-=======
->>>>>>> c2dac53 (.)
             return asset($this->logo_header);
         }
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/dev
-<<<<<<< HEAD
->>>>>>> e5c56c3 (.)
-=======
-=======
->>>>>>> 50bb41c (fix: auto resolve conflict)
->>>>>>> d9307de (fix: auto resolve conflict)
-=======
->>>>>>> c2dac53 (.)
     /**
      * Get the dark header logo URL.
      *
@@ -513,73 +320,20 @@ class MetatagData extends Data implements Wireable
             $path = app(AssetAction::class)->execute($this->logo_header_dark);
             return asset($path);
         } catch (\Throwable $e) {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
-=======
->>>>>>> c2dac53 (.)
     public function getLogoHeaderDark(): string
     {
         try {
             return asset(app(AssetAction::class)->execute($this->logo_header_dark));
         } catch (\Exception $e) {
-<<<<<<< HEAD
->>>>>>> origin/dev
->>>>>>> origin/dev
-<<<<<<< HEAD
->>>>>>> e5c56c3 (.)
-=======
-=======
->>>>>>> 50bb41c (fix: auto resolve conflict)
->>>>>>> d9307de (fix: auto resolve conflict)
-=======
->>>>>>> c2dac53 (.)
             return asset($this->logo_header_dark);
         }
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/dev
-<<<<<<< HEAD
->>>>>>> e5c56c3 (.)
-=======
-=======
->>>>>>> 50bb41c (fix: auto resolve conflict)
->>>>>>> d9307de (fix: auto resolve conflict)
-=======
->>>>>>> c2dac53 (.)
     /**
      * Get the logo height.
      *
      * @return string
      */
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/dev
->>>>>>> origin/dev
-<<<<<<< HEAD
->>>>>>> e5c56c3 (.)
-=======
-=======
-=======
-=======
->>>>>>> c2dac53 (.)
     public function getLogoHeader(): string
     {
         return asset(app(\Modules\Xot\Actions\File\AssetAction::class)->execute($this->logo_header));
@@ -590,44 +344,11 @@ class MetatagData extends Data implements Wireable
         return asset(app(\Modules\Xot\Actions\File\AssetAction::class)->execute($this->logo_header_dark));
     }
 
-<<<<<<< HEAD
->>>>>>> e2a4c5d (.)
->>>>>>> 50bb41c (fix: auto resolve conflict)
-<<<<<<< HEAD
->>>>>>> d9307de (fix: auto resolve conflict)
-=======
-=======
->>>>>>> 4ab3760 (.)
->>>>>>> 7b67053 (fix: auto resolve conflict)
-=======
->>>>>>> c2dac53 (.)
     public function getLogoHeight(): string
     {
         return $this->logo_height;
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/dev
-<<<<<<< HEAD
->>>>>>> e5c56c3 (.)
-=======
-=======
->>>>>>> 50bb41c (fix: auto resolve conflict)
-<<<<<<< HEAD
->>>>>>> d9307de (fix: auto resolve conflict)
-=======
-=======
->>>>>>> 4ab3760 (.)
->>>>>>> 7b67053 (fix: auto resolve conflict)
-=======
->>>>>>> c2dac53 (.)
     /**
      * Get the favicon URL.
      *
@@ -640,31 +361,11 @@ class MetatagData extends Data implements Wireable
             $path = app(AssetAction::class)->execute($this->favicon);
             return $path;
         } catch (\Throwable $e) {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
-=======
->>>>>>> c2dac53 (.)
     public function getFavicon(): string
     {
         try {
             return app(AssetAction::class)->execute($this->favicon);
         } catch (\Exception $e) {
-<<<<<<< HEAD
->>>>>>> origin/dev
->>>>>>> origin/dev
-<<<<<<< HEAD
->>>>>>> e5c56c3 (.)
-=======
-=======
->>>>>>> 50bb41c (fix: auto resolve conflict)
->>>>>>> d9307de (fix: auto resolve conflict)
-=======
->>>>>>> c2dac53 (.)
             return asset($this->favicon);
         }
     }
@@ -676,23 +377,7 @@ class MetatagData extends Data implements Wireable
      * Get the default Filament colors configuration.
      *
      * @return array<string, array<int, string>>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-     * Get the default Filament colors configuration.
-     *
-     * @return array<string, array<int, string>>
-=======
      * @return array<string, string>
->>>>>>> origin/dev
->>>>>>> origin/dev
-<<<<<<< HEAD
->>>>>>> e5c56c3 (.)
-=======
-=======
-=======
-     * @return array<string, string>
->>>>>>> c2dac53 (.)
     public function getFavicon(): string
     {
         return app(\Modules\Xot\Actions\File\AssetAction::class)->execute($this->favicon);
@@ -700,85 +385,22 @@ class MetatagData extends Data implements Wireable
 
     /**
      * @return array<array<string>|string>
-<<<<<<< HEAD
->>>>>>> e2a4c5d (.)
->>>>>>> 50bb41c (fix: auto resolve conflict)
-<<<<<<< HEAD
->>>>>>> d9307de (fix: auto resolve conflict)
-=======
-=======
->>>>>>> 4ab3760 (.)
->>>>>>> 7b67053 (fix: auto resolve conflict)
-=======
->>>>>>> c2dac53 (.)
      */
     public function getFilamentColors(): array
     {
         return [
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/dev
-<<<<<<< HEAD
->>>>>>> e5c56c3 (.)
-=======
-=======
->>>>>>> 50bb41c (fix: auto resolve conflict)
-<<<<<<< HEAD
->>>>>>> d9307de (fix: auto resolve conflict)
-=======
-=======
->>>>>>> 4ab3760 (.)
->>>>>>> 7b67053 (fix: auto resolve conflict)
-=======
->>>>>>> c2dac53 (.)
             'danger' => Color::Red,
             'gray' => Color::Zinc,
             'info' => Color::Blue,
             'primary' => Color::Amber,
             'success' => Color::Green,
             'warning' => Color::Amber,
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 50bb41c (fix: auto resolve conflict)
-=======
-=======
->>>>>>> c2dac53 (.)
             'danger' => 'danger',
             'gray' => 'gray',
             'info' => 'info',
             'primary' => 'primary',
             'success' => 'success',
             'warning' => 'warning',
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/dev
->>>>>>> origin/dev
-<<<<<<< HEAD
->>>>>>> e5c56c3 (.)
-=======
-=======
->>>>>>> e2a4c5d (.)
->>>>>>> 50bb41c (fix: auto resolve conflict)
-<<<<<<< HEAD
->>>>>>> d9307de (fix: auto resolve conflict)
-=======
-=======
->>>>>>> 4ab3760 (.)
->>>>>>> 7b67053 (fix: auto resolve conflict)
-=======
->>>>>>> c2dac53 (.)
         ];
     }
 
@@ -786,8 +408,9 @@ class MetatagData extends Data implements Wireable
      * Get the colors array with proper type handling.
      *
      * @return array<string, array<int, string>>
-<<<<<<< HEAD
-<<<<<<< HEAD
+     * Get the colors array with proper type handling.
+     *
+     * @return array<string, array<int, string>>
      */
     public function getColors(): array
     {
@@ -820,66 +443,6 @@ class MetatagData extends Data implements Wireable
     }
 
     /**
-=======
-<<<<<<< HEAD
->>>>>>> d9307de (fix: auto resolve conflict)
-=======
-<<<<<<< HEAD
-     * Get the colors array with proper type handling.
-     *
-     * @return array<string, array<int, string>>
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-     * Get the colors array with proper type handling.
-     *
-     * @return array<string, array<int, string>>
-=======
->>>>>>> e5c56c3 (.)
-=======
-=======
-=======
-     * Get the colors array with proper type handling.
-     *
-     * @return array<string, array<int, string>>
->>>>>>> c2dac53 (.)
-     */
-    public function getColors(): array
-    {
-        if (empty($this->colors)) {
-            return $this->getFilamentColors();
-        }
-
-        /** @var array<string, array<int, string>> $mapped */
-        $mapped = Arr::mapWithKeys(
-            $this->colors,
-            function (array $item, string|int $key): array {
-                $keyStr = isset($item['key'])
-                    ? $item['key']
-                    : (string) $key;
-
-                /** @var array<int, string> $value */
-                $value = match (true) {
-                    $item['color'] === 'custom' && isset($item['hex'])
-                        => Color::hex($item['hex']),
-                    isset(Color::all()[$item['color']])
-                        => Color::all()[$item['color']],
-                    default => Color::Gray,
-                };
-
-                return [$keyStr => $value];
-            }
-        );
-
-        return $mapped;
-    }
-
-    /**
-<<<<<<< HEAD
->>>>>>> 50bb41c (fix: auto resolve conflict)
->>>>>>> d9307de (fix: auto resolve conflict)
-=======
->>>>>>> c2dac53 (.)
      * @return array<string, string>
      */
     public function getAllColors(): array
@@ -887,17 +450,6 @@ class MetatagData extends Data implements Wireable
         $colors = array_keys(Color::all());
         return array_combine($colors, $colors);
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> d9307de (fix: auto resolve conflict)
-=======
->>>>>>> 7b67053 (fix: auto resolve conflict)
-=======
->>>>>>> c2dac53 (.)
 
     /**
      * @return array<string, string>
@@ -953,20 +505,4 @@ class MetatagData extends Data implements Wireable
 
         return $mapped;
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> e5c56c3 (.)
-=======
-=======
-=======
->>>>>>> e2a4c5d (.)
->>>>>>> 50bb41c (fix: auto resolve conflict)
-<<<<<<< HEAD
->>>>>>> d9307de (fix: auto resolve conflict)
-=======
-=======
->>>>>>> 4ab3760 (.)
->>>>>>> 7b67053 (fix: auto resolve conflict)
-=======
->>>>>>> c2dac53 (.)
 }

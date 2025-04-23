@@ -5,23 +5,7 @@ declare(strict_types=1);
 namespace Modules\Xot\Models;
 
 /**
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
- *
-=======
-=======
-=======
->>>>>>> 7b67053 (fix: auto resolve conflict)
-=======
-<<<<<<< HEAD
->>>>>>> 50bb41c (fix: auto resolve conflict)
->>>>>>> d9307de (fix: auto resolve conflict)
-=======
->>>>>>> c2dac53 (.)
  * 
->>>>>>> e5c56c3 (.)
  *
  * @property \Modules\Xot\Contracts\ProfileContract|null $creator
  * @property \Modules\Xot\Contracts\ProfileContract|null $updater

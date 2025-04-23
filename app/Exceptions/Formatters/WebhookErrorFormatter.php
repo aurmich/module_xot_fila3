@@ -8,112 +8,33 @@ use Illuminate\Support\Facades\Auth;
 
 class WebhookErrorFormatter
 {
-<<<<<<< HEAD
-<<<<<<< HEAD
-    public function __construct(
-        private readonly \Throwable $exception
-    ) {
-    }
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/dev
     public function __construct(
         private \Throwable $exception
     ) {}
-<<<<<<< HEAD
->>>>>>> e5c56c3 (.)
-=======
-=======
-<<<<<<< HEAD
-=======
-    public function __construct(
-        private \Throwable $exception
-    ) {}
->>>>>>> c2dac53 (.)
 class WebhookErrorFormatter
 {
     public function __construct(
         private readonly \Throwable $exception
     ) {
     }
-<<<<<<< HEAD
->>>>>>> 50bb41c (fix: auto resolve conflict)
->>>>>>> d9307de (fix: auto resolve conflict)
-=======
->>>>>>> c2dac53 (.)
 
     /**
      * @return array<string, mixed>
      */
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
-=======
->>>>>>> c2dac53 (.)
     public function __construct(private readonly \Throwable $exception)
     {
     }
 
-<<<<<<< HEAD
->>>>>>> origin/dev
->>>>>>> origin/dev
-<<<<<<< HEAD
->>>>>>> e5c56c3 (.)
-=======
-=======
->>>>>>> 50bb41c (fix: auto resolve conflict)
->>>>>>> d9307de (fix: auto resolve conflict)
-=======
->>>>>>> c2dac53 (.)
     public function format(): array
     {
         $user = Auth::user();
         $email = $user->email ?? 'CLI User';
 
         return [
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/dev
-<<<<<<< HEAD
->>>>>>> e5c56c3 (.)
-=======
-=======
->>>>>>> 50bb41c (fix: auto resolve conflict)
->>>>>>> d9307de (fix: auto resolve conflict)
-=======
->>>>>>> c2dac53 (.)
             'message' => $this->exception->getMessage(),
             'file' => $this->exception->getFile(),
             'line' => $this->exception->getLine(),
             'trace' => $this->exception->getTraceAsString(),
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/dev
->>>>>>> origin/dev
-<<<<<<< HEAD
->>>>>>> e5c56c3 (.)
-=======
-=======
->>>>>>> 50bb41c (fix: auto resolve conflict)
->>>>>>> d9307de (fix: auto resolve conflict)
-=======
->>>>>>> c2dac53 (.)
             'exception' => sprintf(
                 '`%s` (Code `%s`)',
                 get_class($this->exception),

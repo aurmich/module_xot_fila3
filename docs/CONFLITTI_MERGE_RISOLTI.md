@@ -122,18 +122,18 @@ $headers = [
     'Content-Disposition' => 'attachment; filename=' . $filename,
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
 ];
 
 
-=======
->>>>>>> d9307de (fix: auto resolve conflict)
-=======
+
+ d9307de (fix: auto resolve conflict)
+
 ];
 
 
->>>>>>> 7b67053 (fix: auto resolve conflict)
+ 7b67053 (fix: auto resolve conflict)
 ```
 
 E anche nella tipizzazione delle funzioni di callback:
@@ -367,10 +367,10 @@ In particolare, le correzioni hanno portato i seguenti benefici:
 5. **Compatibilità con PHPStan**: Riduzione degli errori di analisi statica
 
 Questo lavoro di risoluzione dei conflitti ha inoltre contribuito a stabilire best practices per la gestione dei merge nel progetto SaluteOra, che potranno essere applicate in futuro per prevenire problemi simili.
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 7b67053 (fix: auto resolve conflict)
+
+
+
+ 7b67053 (fix: auto resolve conflict)
 
 # Risoluzione Avanzata dei Conflitti Merge nel Modulo Xot
 
@@ -379,13 +379,13 @@ Questo lavoro di risoluzione dei conflitti ha inoltre contribuito a stabilire be
 Per una panoramica generale sulla risoluzione dei conflitti di merge nel progetto Quaeris, consulta:
 
 - [Linee Guida Generali per la Risoluzione dei Conflitti Git](../../../../docs/risoluzione_conflitti_git.md)
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> d9307de (fix: auto resolve conflict)
-=======
->>>>>>> 7b67053 (fix: auto resolve conflict)
-=======
+
+
+
+ d9307de (fix: auto resolve conflict)
+
+ 7b67053 (fix: auto resolve conflict)
+
 
 ## File Risolti
 
@@ -414,4 +414,4 @@ Per una panoramica generale sulla risoluzione dei conflitti di merge nel progett
     </div>
 @endforeach
 ```
->>>>>>> c2dac53 (.)
+ c2dac53 (.)

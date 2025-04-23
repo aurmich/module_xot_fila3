@@ -18,21 +18,9 @@ class AssetAction
      * Gestisce i percorsi degli asset, copiandoli nella directory pubblica se necessario.
      *
      * @param string $path Il percorso dell'asset
-<<<<<<< HEAD
-<<<<<<< HEAD
      *
      * @return string Il percorso pubblico dell'asset
      *
-=======
-     * 
-     * @return string Il percorso pubblico dell'asset
-     * 
->>>>>>> e5c56c3 (.)
-=======
-     *
-     * @return string Il percorso pubblico dell'asset
-     *
->>>>>>> 7b67053 (fix: auto resolve conflict)
      * @throws \Exception Se il file sorgente non esiste o non può essere copiato
      */
     public function execute(string $path): string
@@ -69,27 +57,11 @@ class AssetAction
             // Assicuriamoci che $theme sia una stringa
             $theme = $xot->{$ns};
             Assert::string($theme, 'Il tema deve essere una stringa');
-<<<<<<< HEAD
-<<<<<<< HEAD
 
             // Costruiamo i percorsi
             $themeResourcePath = 'Themes/'.$theme.'/resources/'.$ns_after;
             $filename_from = app(FixPathAction::class)->execute(base_path($themeResourcePath));
 
-=======
-            
-            // Costruiamo i percorsi
-            $themeResourcePath = 'Themes/'.$theme.'/resources/'.$ns_after;
-            $filename_from = app(FixPathAction::class)->execute(base_path($themeResourcePath));
-            
->>>>>>> e5c56c3 (.)
-=======
-
-            // Costruiamo i percorsi
-            $themeResourcePath = 'Themes/'.$theme.'/resources/'.$ns_after;
-            $filename_from = app(FixPathAction::class)->execute(base_path($themeResourcePath));
-
->>>>>>> 7b67053 (fix: auto resolve conflict)
             $themeAssetPath = 'themes/'.$theme.'/'.$ns_after;
             $asset = $themeAssetPath;
             $theme = $xot->{$ns};

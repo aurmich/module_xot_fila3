@@ -63,34 +63,9 @@ class XDebug extends Component
         $out1 = ob_get_contents();
         ob_end_clean();
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-        return (string) $out1;
-=======
-        return is_string($out1) ? $out1 : (string) $out1;
->>>>>>> e5c56c3 (.)
-=======
-=======
->>>>>>> 7b67053 (fix: auto resolve conflict)
-=======
->>>>>>> c2dac53 (.)
         return is_string($out1) ? $out1 : (string) $out1;
         return is_string($out1) ? $out1 : (string) $out1;
         return (string) $out1;
-<<<<<<< HEAD
->>>>>>> e2a4c5d (.)
->>>>>>> 50bb41c (fix: auto resolve conflict)
-<<<<<<< HEAD
->>>>>>> d9307de (fix: auto resolve conflict)
-=======
-=======
         return (string) $out1;
->>>>>>> 4ab3760 (.)
->>>>>>> 7b67053 (fix: auto resolve conflict)
-=======
-        return (string) $out1;
->>>>>>> c2dac53 (.)
     }
 }

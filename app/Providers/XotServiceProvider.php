@@ -16,97 +16,12 @@ use Filament\Support\Concerns\Configurable;
 use Filament\Tables\Columns\Column;
 use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Filters\BaseFilter;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 use Illuminate\Auth\AuthenticationException;
 use Illuminate\Contracts\Debug\ExceptionHandler;
-use Illuminate\Database\Eloquent\Model;
->>>>>>> e5c56c3 (.)
-=======
-=======
->>>>>>> 7b67053 (fix: auto resolve conflict)
-use Illuminate\Auth\AuthenticationException;
-use Illuminate\Contracts\Debug\ExceptionHandler;
-use Illuminate\Database\Eloquent\Model;
-=======
-<<<<<<< HEAD
-=======
-use Illuminate\Auth\AuthenticationException;
-use Illuminate\Contracts\Debug\ExceptionHandler;
-use Illuminate\Database\Eloquent\Model;
->>>>>>> e2a4c5d (.)
->>>>>>> 50bb41c (fix: auto resolve conflict)
-<<<<<<< HEAD
->>>>>>> d9307de (fix: auto resolve conflict)
-=======
-=======
->>>>>>> 4ab3760 (.)
->>>>>>> 7b67053 (fix: auto resolve conflict)
-=======
-use Illuminate\Auth\AuthenticationException;
-use Illuminate\Contracts\Debug\ExceptionHandler;
->>>>>>> c2dac53 (.)
 use Illuminate\Database\Events\MigrationsEnded;
 use Illuminate\Support\Carbon;
 use Illuminate\Support\Facades\Event;
 use Illuminate\Support\Facades\File;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-use Illuminate\Support\Facades\URL;
-use Illuminate\Support\Facades\View;
-use Modules\Xot\View\Composers\XotComposer;
-=======
-=======
->>>>>>> d9307de (fix: auto resolve conflict)
-=======
->>>>>>> 7b67053 (fix: auto resolve conflict)
-use Illuminate\Support\Facades\Log;
-use Illuminate\Support\Facades\URL;
-use Illuminate\Support\Facades\View;
-<<<<<<< HEAD
-use Modules\Xot\Exceptions\Handlers\HandlerDecorator;
-use Modules\Xot\Exceptions\Handlers\HandlersRepository;
-use Modules\Xot\Exceptions\Formatters\WebhookErrorFormatter;
-=======
-<<<<<<< HEAD
-use Modules\Xot\Exceptions\Handlers\HandlerDecorator;
-use Modules\Xot\Exceptions\Handlers\HandlersRepository;
-use Modules\Xot\Exceptions\Formatters\WebhookErrorFormatter;
-=======
-use Modules\Xot\Exceptions\Formatters\WebhookErrorFormatter;
-use Modules\Xot\Exceptions\Handlers\HandlerDecorator;
-use Modules\Xot\Exceptions\Handlers\HandlersRepository;
->>>>>>> origin/dev
->>>>>>> origin/dev
-use Modules\Xot\View\Composers\XotComposer;
-use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
-<<<<<<< HEAD
->>>>>>> e5c56c3 (.)
-=======
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 4ab3760 (.)
-use Illuminate\Support\Facades\URL;
-use Illuminate\Support\Facades\View;
-use Modules\Xot\View\Composers\XotComposer;
->>>>>>> 50bb41c (fix: auto resolve conflict)
->>>>>>> d9307de (fix: auto resolve conflict)
-use Webmozart\Assert\Assert;
-
-use function Safe\realpath;
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
-=======
->>>>>>> c2dac53 (.)
 use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\URL;
 use Illuminate\Support\Facades\View;
@@ -136,32 +51,6 @@ class XotServiceProvider extends XotBaseServiceProvider
         $this->redirectSSL();
         $this->registerViewComposers();
         $this->registerEvents();
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-        //$this->registerExceptionHandler(); // guardare come fa sentry
-=======
-<<<<<<< HEAD
-        //$this->registerExceptionHandler(); // guardare come fa sentry
-=======
-        $this->registerExceptionHandler();
->>>>>>> origin/dev
->>>>>>> origin/dev
->>>>>>> e5c56c3 (.)
-        $this->registerTimezone();
-=======
-<<<<<<< HEAD
-        $this->registerViewComposers();
-        $this->registerEvents();
-        $this->registerTimezone();
-<<<<<<< HEAD
-=======
-        // $this->registerTranslator(); to lang
-        $this->registerViewComposers(); // rompe filament
-        $this->registerEvents();
-=======
->>>>>>> c2dac53 (.)
         $this->registerExceptionHandler();
         $this->registerTimezone();
         $this->registerProviders();
@@ -171,26 +60,8 @@ class XotServiceProvider extends XotBaseServiceProvider
     {
         parent::register();
         $this->registerConfig();
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-        //$this->registerExceptionHandlersRepository();
-        //$this->extendExceptionHandler();
-=======
-<<<<<<< HEAD
-        //$this->registerExceptionHandlersRepository();
-        //$this->extendExceptionHandler();
-=======
         $this->registerExceptionHandlersRepository();
         $this->extendExceptionHandler();
->>>>>>> origin/dev
->>>>>>> origin/dev
->>>>>>> e5c56c3 (.)
-=======
-        $this->registerExceptionHandlersRepository();
-        $this->extendExceptionHandler();
->>>>>>> c2dac53 (.)
         $this->registerCommands();
     }
 
@@ -215,53 +86,6 @@ class XotServiceProvider extends XotBaseServiceProvider
         TextColumn::configureUsing(fn (TextColumn $column) => $column->timezone($timezone));
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/dev
-    /*
-     * @see https://github.com/cerbero90/exception-handler
-     --  guardare come fa sentry 
-    public function registerExceptionHandler(): void
-    {
-        $exceptionHandler = $this->app->make(ExceptionHandler::class);
-        if ($exceptionHandler instanceof HandlerDecorator) {
-            $exceptionHandler->reporter(
-                static function (\Throwable $e): void {
-                    $data = (new WebhookErrorFormatter($e))->format();
-                    if ($e instanceof AuthenticationException || $e instanceof NotFoundHttpException) {
-                        return;
-                    }
-
-                    if (is_string(config('logging.channels.slack_errors.url'))
-                        && mb_strlen(config('logging.channels.slack_errors.url')) > 5) {
-                        Log::channel('slack_errors')
-                            ->error($e->getMessage(), $data);
-                    }
-                }
-            );
-        }
-    }
-        */
-<<<<<<< HEAD
-=======
-=======
-=======
-<<<<<<< HEAD
-    }
-
-    public function registerConfig(): void
-<<<<<<< HEAD
-=======
-        // TextInput::configureUsing(fn (TextInput $component) => $component->validationMessages($validationMessages));
-    }
-
->>>>>>> 50bb41c (fix: auto resolve conflict)
-=======
->>>>>>> c2dac53 (.)
     /**
      * @see https://github.com/cerbero90/exception-handler
      */
@@ -284,7 +108,6 @@ class XotServiceProvider extends XotBaseServiceProvider
         }
     }
 
->>>>>>> e5c56c3 (.)
     public function registerConfig(): void
     {
         $config_file = realpath(__DIR__.'/../config/xot.php');
@@ -318,29 +141,6 @@ class XotServiceProvider extends XotBaseServiceProvider
         }
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> d9307de (fix: auto resolve conflict)
-=======
->>>>>>> 7b67053 (fix: auto resolve conflict)
-<<<<<<< HEAD
-    /*
-     * Register the custom exception handlers repository.
-     -- guardare come fa sentry
-=======
-<<<<<<< HEAD
-    /*
-     * Register the custom exception handlers repository.
-     -- guardare come fa sentry
-=======
->>>>>>> 50bb41c (fix: auto resolve conflict)
-=======
-=======
->>>>>>> c2dac53 (.)
     /**
      * Register the custom exception handlers repository.
      */
@@ -365,24 +165,6 @@ class XotServiceProvider extends XotBaseServiceProvider
         );
     }
 
-<<<<<<< HEAD
->>>>>>> origin/dev
->>>>>>> origin/dev
-<<<<<<< HEAD
->>>>>>> e5c56c3 (.)
-=======
-=======
-
->>>>>>> e2a4c5d (.)
->>>>>>> 50bb41c (fix: auto resolve conflict)
-<<<<<<< HEAD
->>>>>>> d9307de (fix: auto resolve conflict)
-=======
-=======
->>>>>>> 4ab3760 (.)
->>>>>>> 7b67053 (fix: auto resolve conflict)
-=======
->>>>>>> c2dac53 (.)
     private function redirectSSL(): void
     {
         // --- meglio ficcare un controllo anche sull'env
@@ -419,19 +201,4 @@ class XotServiceProvider extends XotBaseServiceProvider
     {
         View::composer('*', XotComposer::class);
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-
->>>>>>> e5c56c3 (.)
-=======
-
-
-=======
->>>>>>> 50bb41c (fix: auto resolve conflict)
->>>>>>> d9307de (fix: auto resolve conflict)
-=======
->>>>>>> c2dac53 (.)
 } // end class

@@ -11,65 +11,16 @@ use Modules\Xot\Datas\RelationData as RelationDTO;
 use Spatie\QueueableAction\QueueableAction;
 use Webmozart\Assert\Assert;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 7b67053 (fix: auto resolve conflict)
-=======
-<<<<<<< HEAD
->>>>>>> d9307de (fix: auto resolve conflict)
-/**
- * Azione per gestire le relazioni morphToOne nei modelli.
- */
-=======
-<<<<<<< HEAD
->>>>>>> e5c56c3 (.)
-=======
->>>>>>> e2a4c5d (.)
->>>>>>> 50bb41c (fix: auto resolve conflict)
-<<<<<<< HEAD
->>>>>>> d9307de (fix: auto resolve conflict)
-=======
-=======
-/**
- * Azione per gestire le relazioni morphToOne nei modelli.
- */
->>>>>>> 4ab3760 (.)
->>>>>>> 7b67053 (fix: auto resolve conflict)
-=======
 /**
  * Azione per gestire le relazioni morphToOne nei modelli.
  */
 /**
  * Azione per gestire le relazioni morphToOne nei modelli.
  */
->>>>>>> c2dac53 (.)
 class MorphToOneAction
 {
     use QueueableAction;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-    /**
-     * Esegue l'azione di creazione per una relazione morphToOne.
-     *
-     * @param Model $model Il modello su cui operare
-     * @param RelationDTO $relationDTO I dati della relazione da creare
-     */
-    public function execute(Model $model, RelationDTO $relationDTO): void
-    {
-=======
-=======
->>>>>>> d9307de (fix: auto resolve conflict)
-=======
->>>>>>> 7b67053 (fix: auto resolve conflict)
-=======
->>>>>>> c2dac53 (.)
     public function execute(Model $model, RelationDTO $relationDTO): void
     {
         //if ($relationDTO === null) {
@@ -82,7 +33,6 @@ class MorphToOneAction
             return;
         }
 
->>>>>>> e5c56c3 (.)
         Assert::isInstanceOf($rows = $relationDTO->rows, MorphToOne::class);
 
     /**
@@ -105,16 +55,6 @@ class MorphToOneAction
             $relationDTO->data['lang'] = App::getLocale();
         }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-        $rows->create($relationDTO->data);
-=======
-=======
->>>>>>> d9307de (fix: auto resolve conflict)
-<<<<<<< HEAD
-=======
->>>>>>> c2dac53 (.)
         //if ($rows !== null) {
         $rows->create($relationDTO->data);
         //}
@@ -140,21 +80,5 @@ class MorphToOneAction
 
         dddx('wip');
         */
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> e5c56c3 (.)
-=======
-<<<<<<< HEAD
-=======
->>>>>>> e2a4c5d (.)
->>>>>>> 50bb41c (fix: auto resolve conflict)
-<<<<<<< HEAD
->>>>>>> d9307de (fix: auto resolve conflict)
-=======
-=======
->>>>>>> 4ab3760 (.)
->>>>>>> 7b67053 (fix: auto resolve conflict)
-=======
->>>>>>> c2dac53 (.)
     }
 }

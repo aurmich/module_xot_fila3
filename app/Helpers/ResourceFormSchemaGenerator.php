@@ -61,19 +61,6 @@ class ResourceFormSchemaGenerator
 
             $formSchemaMethod = "\n    public function getFormSchema(): array\n    {\n        return [\n";
             $formSchemaMethod .= "            Forms\\Components\\TextInput::make('{$modelVariable}_name')\n";
-<<<<<<< HEAD
-            $formSchemaMethod .= "                ->label('".Str::headline($modelName)." Name')\n";
-            $formSchemaMethod .= "                ->required(),\n";
-            $formSchemaMethod .= "        ];\n    }\n";
-
-            // Detect if the class is in a Clusters directory
-            $isInClustersDir = strpos($filename, 'Clusters') !== false;
-
-            // Insert the method before the last closing brace
-            $modifiedContents = preg_replace(
-                '/}(\s*)$/',
-                $formSchemaMethod.($isInClustersDir ? '' : '}$1'),
-=======
             $formSchemaMethod .= "                ->required(),\n";
             $formSchemaMethod .= "        ];\n    }\n";
 
@@ -81,15 +68,6 @@ class ResourceFormSchemaGenerator
             $modifiedContents = preg_replace(
                 '/}(\s*)$/',
                 $formSchemaMethod.'}$1',
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> e5c56c3 (.)
-=======
-<<<<<<< HEAD
-=======
-=======
-=======
->>>>>>> c2dac53 (.)
 
             // Try to generate some basic form fields
             $formSchemaMethod .= "            Forms\\Components\\TextInput::make('{$modelVariable}_name')\n";
@@ -104,18 +82,6 @@ class ResourceFormSchemaGenerator
             $modifiedContents = preg_replace(
                 '/}(\s*)$/',
                 $formSchemaMethod.($isInClustersDir ? '' : '}$1'),
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> e2a4c5d (.)
->>>>>>> 50bb41c (fix: auto resolve conflict)
-<<<<<<< HEAD
->>>>>>> d9307de (fix: auto resolve conflict)
-=======
-=======
->>>>>>> 4ab3760 (.)
->>>>>>> 7b67053 (fix: auto resolve conflict)
-=======
->>>>>>> c2dac53 (.)
                 $fileContents
             );
 

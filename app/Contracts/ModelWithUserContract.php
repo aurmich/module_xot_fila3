@@ -40,31 +40,8 @@ use Illuminate\Support\Carbon;
  * @method mixed     save($params)
  * @method array     treeLabel()
  * @method array     treeSons()
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
- * @method int       treeSonsCount()
-=======
-=======
->>>>>>> d9307de (fix: auto resolve conflict)
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
- * @method int       treeSonsCount()
->>>>>>> origin/dev
->>>>>>> origin/dev
-<<<<<<< HEAD
->>>>>>> e5c56c3 (.)
-=======
-=======
- * @method int       treeSonsCount()
->>>>>>> 50bb41c (fix: auto resolve conflict)
->>>>>>> d9307de (fix: auto resolve conflict)
-=======
  * @method int       treeSonsCount()
  * @method int       treeSonsCount()
->>>>>>> c2dac53 (.)
  * @method array     toArray()
  * @method BelongsTo user()
  *
@@ -72,37 +49,11 @@ use Illuminate\Support\Carbon;
  *
  * @mixin \Eloquent
  */
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-interface ModelWithUserContract
-{
-}
-=======
-=======
->>>>>>> d9307de (fix: auto resolve conflict)
-<<<<<<< HEAD
-=======
->>>>>>> c2dac53 (.)
 interface ModelWithUserContract {}
 interface ModelWithUserContract {}
 interface ModelWithUserContract
 {
 }
-<<<<<<< HEAD
->>>>>>> origin/dev
->>>>>>> origin/dev
-<<<<<<< HEAD
->>>>>>> e5c56c3 (.)
-=======
-=======
 interface ModelWithUserContract
 {
 }
->>>>>>> 50bb41c (fix: auto resolve conflict)
->>>>>>> d9307de (fix: auto resolve conflict)
-=======
-interface ModelWithUserContract
-{
-}
->>>>>>> c2dac53 (.)

@@ -44,31 +44,8 @@ use Illuminate\Support\Carbon;
  * @method mixed     attach($params)
  * @method array     treeLabel()
  * @method array     treeSons()
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
- * @method int       treeSonsCount()
-=======
-=======
->>>>>>> d9307de (fix: auto resolve conflict)
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
- * @method int       treeSonsCount()
->>>>>>> origin/dev
->>>>>>> origin/dev
-<<<<<<< HEAD
->>>>>>> e5c56c3 (.)
-=======
-=======
- * @method int       treeSonsCount()
->>>>>>> 50bb41c (fix: auto resolve conflict)
->>>>>>> d9307de (fix: auto resolve conflict)
-=======
  * @method int       treeSonsCount()
  * @method int       treeSonsCount()
->>>>>>> c2dac53 (.)
  * @method array     toArray()
  * @method BelongsTo user()
  * @method mixed     getAttributeValue(string $key)

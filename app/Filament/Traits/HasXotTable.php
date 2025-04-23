@@ -16,23 +16,7 @@ use Illuminate\Database\Eloquent\Model;
 use Filament\Notifications\Notification;
 use Filament\Tables\Actions\Action;
 use Filament\Tables\Actions\Action;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 use Filament\Tables\Actions\Action;
-=======
->>>>>>> origin/dev
->>>>>>> origin/dev
-<<<<<<< HEAD
->>>>>>> e5c56c3 (.)
-=======
-=======
-use Filament\Tables\Actions\Action;
->>>>>>> 50bb41c (fix: auto resolve conflict)
->>>>>>> d9307de (fix: auto resolve conflict)
-=======
-use Filament\Tables\Actions\Action;
->>>>>>> c2dac53 (.)
 use Filament\Tables\Actions\ActionGroup;
 use Filament\Tables\Enums\FiltersLayout;
 use Filament\Tables\Columns\Layout\Stack;
@@ -345,18 +329,7 @@ trait HasXotTable
      *
      * @return array<string, Tables\Actions\Action|Tables\Actions\ActionGroup>
      * @return array<string, Tables\Actions\Action|Tables\Actions\ActionGroup>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-     * @return array<string, Tables\Actions\Action|Tables\Actions\ActionGroup>
-=======
      * @return array<string, Action|ActionGroup>
->>>>>>> origin/dev
->>>>>>> origin/dev
->>>>>>> e5c56c3 (.)
-=======
-     * @return array<string, Action|ActionGroup>
->>>>>>> c2dac53 (.)
      */
     public function getTableActions(): array
      */
