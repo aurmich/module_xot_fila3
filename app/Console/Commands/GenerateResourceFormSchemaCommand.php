@@ -39,7 +39,11 @@ class GenerateResourceFormSchemaCommand extends Command
 
         Assert::string($resourceName, 'Il nome della risorsa deve essere una stringa');
         Assert::string($modelName, 'Il nome del modello deve essere una stringa');
+<<<<<<< HEAD
         
+=======
+
+>>>>>>> aurmich/dev
         $this->info("Generazione schema form per la risorsa [{$resourceName}] basato sul modello [{$modelName}]");
 
         $pattern = $module
@@ -114,6 +118,7 @@ class GenerateResourceFormSchemaCommand extends Command
                     ->label(trans('{$variableName}.fields.name'))
                     ->required()
                     ->maxLength(255),
+<<<<<<< HEAD
                     
                 Forms\Components\Textarea::make('{$variableName}_description')
                     ->label(trans('{$variableName}.fields.description'))
@@ -123,6 +128,17 @@ class GenerateResourceFormSchemaCommand extends Command
                     ->label(trans('common.fields.is_active'))
                     ->default(true),
                     
+=======
+
+                Forms\Components\Textarea::make('{$variableName}_description')
+                    ->label(trans('{$variableName}.fields.description'))
+                    ->maxLength(65535),
+
+                Forms\Components\Toggle::make('is_active')
+                    ->label(trans('common.fields.is_active'))
+                    ->default(true),
+
+>>>>>>> aurmich/dev
                 Forms\Components\DateTimePicker::make('published_at')
                     ->label(trans('common.fields.published_at')),
             ]);

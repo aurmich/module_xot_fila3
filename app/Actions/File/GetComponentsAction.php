@@ -5,6 +5,11 @@ declare(strict_types=1);
 namespace Modules\Xot\Actions\File;
 
 use Illuminate\Support\Facades\File;
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> aurmich/dev
 use Illuminate\Support\Str;
 use Modules\Xot\Datas\ComponentFileData;
 use Spatie\LaravelData\DataCollection;
@@ -33,7 +38,11 @@ class GetComponentsAction
                 File::makeDirectory($path, 0755, true, true);
             }
         }
+<<<<<<< HEAD
         //$force_recreate = true;
+=======
+
+>>>>>>> aurmich/dev
         $exists = File::exists($components_json);
         if ($exists && ! $force_recreate) {
             Assert::string($content = File::get($components_json), '['.__LINE__.']['.class_basename(static::class).']');
@@ -94,7 +103,13 @@ class GetComponentsAction
                 ])->toArray();
 
             } catch (\Exception $e) {
+<<<<<<< HEAD
                 dddx([
+=======
+
+                dddx([
+
+>>>>>>> aurmich/dev
                     'comp_name' => $comp_name,
                     'class_name' => $class_name,
                     'comp_ns' => $comp_ns,
