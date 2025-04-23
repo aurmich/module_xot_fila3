@@ -246,36 +246,15 @@ class MetatagData extends Data implements Wireable
     /**
      * Get the colors array with proper type handling.
      *
-     * @return array<string, array<int, string>>
+     * @return array<string, string>
      */
     public function getColors(): array
     {
-        if (empty($this->colors)) {
-            return $this->getFilamentColors();
+        $result = [];
+        foreach ($this->colors as $key => $colorData) {
+            $result[$key] = $colorData['color'];
         }
-
-        /** @var array<string, array<int, string>> $mapped */
-        $mapped = Arr::mapWithKeys(
-            $this->colors,
-            function (array $item, string|int $key): array {
-                $keyStr = isset($item['key'])
-                    ? $item['key']
-                    : (string) $key;
-
-                /** @var array<int, string> $value */
-                $value = match (true) {
-                    $item['color'] === 'custom' && isset($item['hex'])
-                        => Color::hex($item['hex']),
-                    isset(Color::all()[$item['color']])
-                        => Color::all()[$item['color']],
-                    default => Color::Gray,
-                };
-
-                return [$keyStr => $value];
-            }
-        );
-
-        return $mapped;
+        return $result;
     }
 
     /**
@@ -285,5 +264,116 @@ class MetatagData extends Data implements Wireable
     {
         $colors = array_keys(Color::all());
         return array_combine($colors, $colors);
+    }
+
+    /**
+     * Get the icons configuration.
+     *
+     * @return array<string, string>
+     */
+    public function getIcons(): array
+    {
+        $config = TenantService::getConfig('metatag');
+        /** @var array<string, string> $icons */
+        $icons = Arr::get($config, 'icons', []);
+        return $icons;
+    }
+
+    /**
+     * Get the dimensions configuration.
+     *
+     * @return array<string, int|string>
+     */
+    public function getDimensions(): array
+    {
+        $config = TenantService::getConfig('metatag');
+        /** @var array<string, int|string> $dimensions */
+        $dimensions = Arr::get($config, 'dimensions', []);
+        return $dimensions;
+    }
+
+    /**
+     * Get the alignment configuration.
+     *
+     * @return array<string, string>
+     */
+    public function getAlignment(): array
+    {
+        $config = TenantService::getConfig('metatag');
+        /** @var array<string, string> $alignment */
+        $alignment = Arr::get($config, 'alignment', []);
+        return $alignment;
+    }
+
+    /**
+     * Get the settings configuration.
+     *
+     * @return array<string, mixed>
+     */
+    public function getSettings(): array
+    {
+        $config = TenantService::getConfig('metatag');
+        /** @var array<string, mixed> $settings */
+        $settings = Arr::get($config, 'settings', []);
+        return $settings;
+    }
+
+    /**
+     * Get the meta values configuration.
+     *
+     * @return array<string, string>
+     */
+    public function getMetaValues(): array
+    {
+        $result = [
+            'title' => $this->title,
+            'description' => $this->description ?? '',
+            'keywords' => $this->keywords ?? '',
+            'author' => $this->author ?? '',
+            'generator' => $this->generator ?? '',
+        ];
+
+        return array_filter($result);
+    }
+
+    /**
+     * Get the social cards configuration.
+     *
+     * @return array<string, mixed>
+     */
+    public function getSocialCards(): array
+    {
+        $config = TenantService::getConfig('metatag');
+        /** @var array<string, mixed> $socialCards */
+        $socialCards = Arr::get($config, 'social_cards', []);
+        return $socialCards;
+    }
+
+    /**
+     * Get the OpenGraph data.
+     *
+     * @return array<string, string>
+     */
+    public function getOpenGraph(): array
+    {
+        return [
+            'title' => $this->title,
+            'description' => $this->description ?? '',
+            'site_name' => $this->sitename,
+        ];
+    }
+
+    /**
+     * Get the Twitter Card data.
+     *
+     * @return array<string, string>
+     */
+    public function getTwitterCards(): array
+    {
+        return [
+            'title' => $this->title,
+            'description' => $this->description ?? '',
+            'site' => $this->twitter_href,
+        ];
     }
 }
