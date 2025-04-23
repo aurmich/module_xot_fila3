@@ -53,12 +53,9 @@
         "symfony/dom-crawler": "*",
         "thecodingmachine/safe": "^3.0",
         "spatie/laravel-tags": "*",
-        "livewire/volt": "*",
-        "tightenco/parental": "*",
-        "spatie/laravel-queueable-action": "*"
+        "tightenco/parental": "*"
     },
     "require-comment": {
-
     },
     "require-dev": {
         "barryvdh/laravel-debugbar": "^3.14",
@@ -75,7 +72,6 @@
         "orchestra/testbench": "*"
     },
     "require-dev-comment": {
-
     },
     "repositories": [
         {

@@ -76,7 +76,6 @@ trait NavigationLabelTrait
 
         return $default;
     }
-<<<<<<< HEAD
     /*
     public function getHeading(): string|Htmlable
     {
@@ -95,8 +94,6 @@ trait NavigationLabelTrait
         return JobsWaitingPlugin::make()->getNavigationIcon();
     }
     */
-=======
->>>>>>> aurmich/dev
 }
 
 /*

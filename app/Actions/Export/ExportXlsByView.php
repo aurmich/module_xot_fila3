@@ -22,17 +22,7 @@ class ExportXlsByView
      * @param View $view Vista da esportare
      * @param string $filename Nome del file Excel
      * @param array<string>|null $fields Campi da includere nell'export
-<<<<<<< HEAD
-<<<<<<< HEAD
-     * 
-=======
-
-     * 
-
->>>>>>> aurmich/dev
-=======
      *
->>>>>>> aurmich/dev
      * @return BinaryFileResponse
      */
     public function execute(
@@ -43,23 +33,8 @@ class ExportXlsByView
         // Se $fields non è null, assicuriamo che sia un array di stringhe
         $stringFields = null;
         if (is_array($fields)) {
-<<<<<<< HEAD
-            $stringFields = array_map(function ($field) {
-
-<<<<<<< HEAD
-                return strval($field);
-
->>>>>>> origin/dev
-=======
-
-                return strval($field);
-
-
->>>>>>> aurmich/dev
-=======
             $stringFields = array_map(static function ($field) {
                 return strval($field);
->>>>>>> aurmich/dev
             }, array_values($fields));
         }
 

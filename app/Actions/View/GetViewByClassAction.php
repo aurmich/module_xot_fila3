@@ -30,85 +30,31 @@ class GetViewByClassAction
             if ($key > 0 && isset($after[$key - 1])) {
                 /** @var mixed $prevValue */
                 $prevValue = $after[$key - 1];
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> aurmich/dev
-                
-                // Gestione sicura delle conversioni di tipo per PHPStan level 10
-                $prevValueStr = '';
-                
-<<<<<<< HEAD
-=======
-
->>>>>>> aurmich/dev
-=======
 
                 // Gestione sicura delle conversioni di tipo per PHPStan level 10
                 $prevValueStr = '';
->>>>>>> aurmich/dev
+
                 if (is_string($prevValue)) {
                     $prevValueStr = $prevValue;
                 } elseif ($prevValue === null) {
                     $prevValueStr = '';
                 } elseif (is_scalar($prevValue)) {
                     // Cast sicuro per valori scalari (int, float, bool)
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-                   // $prevValueStr = is_string($prevValue) ? $prevValue : (string) $prevValue;
-                   $prevValueStr = strval( $prevValue);
-
->>>>>>> origin/dev
-                }
-                
-=======
-
-                   // $prevValueStr = is_string($prevValue) ? $prevValue : (string) $prevValue;
-                   $prevValueStr = strval( $prevValue);
-
-                }
-                
-
->>>>>>> aurmich/dev
-=======
                     $prevValueStr = strval($prevValue);
                 }
 
->>>>>>> aurmich/dev
                 $singular = Str::of($prevValueStr)->singular()->toString();
                 if (Str::endsWith($value, $singular)) {
                     $value = Str::of($value)->beforeLast($singular)->toString();
                 }
             }
-<<<<<<< HEAD
-<<<<<<< HEAD
-            
-=======
 
-            
-
->>>>>>> aurmich/dev
-=======
-
->>>>>>> aurmich/dev
             return Str::of($value)->slug()->toString();
         });
 
         $implode = implode('.', $mapped);
         $view = $module_low.'::'.$implode.$suffix;
-<<<<<<< HEAD
-<<<<<<< HEAD
-        
-=======
 
-        
-
->>>>>>> aurmich/dev
-=======
-
->>>>>>> aurmich/dev
         if (!view()->exists($view)) {
             throw new \Exception('View not found: '.$view);
         }
