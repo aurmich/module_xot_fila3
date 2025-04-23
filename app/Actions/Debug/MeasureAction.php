@@ -6,13 +6,6 @@ namespace Modules\Xot\Actions\Debug;
 
 use Filament\Notifications\Notification;
 use Illuminate\Support\Facades\Log;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 50bb41c (fix: auto resolve conflict)
-=======
->>>>>>> 4ab3760 (.)
 use Webmozart\Assert\Assert;
 
 /**
@@ -62,10 +55,6 @@ class MeasureAction
         $memory_start = memory_get_usage();
 
         // Eseguiamo la closure e otteniamo il risultato
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
 
 class MeasureAction
 {
@@ -74,10 +63,6 @@ class MeasureAction
         $start = microtime(true);
         $memory_start = memory_get_usage();
 
->>>>>>> e2a4c5d (.)
->>>>>>> 50bb41c (fix: auto resolve conflict)
-=======
->>>>>>> 4ab3760 (.)
         $result = $closure();
 
         $end = microtime(true);
@@ -86,19 +71,11 @@ class MeasureAction
         // Calcoliamo le metriche di performance
         $execution_time = ($end - $start) * 1000; // Conversione in millisecondi
         $memory_usage = ($memory_end - $memory_start) / 1024; // Conversione in KB
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
         // Calcoliamo le metriche di performance
         $execution_time = ($end - $start) * 1000; // Conversione in millisecondi
         $memory_usage = ($memory_end - $memory_start) / 1024; // Conversione in KB
-=======
         $execution_time = ($end - $start) * 1000; // Convert to milliseconds
         $memory_usage = ($memory_end - $memory_start) / 1024; // Convert to KB
->>>>>>> e2a4c5d (.)
->>>>>>> 50bb41c (fix: auto resolve conflict)
-=======
->>>>>>> 4ab3760 (.)
 
         $metrics = [
             'label' => $label,
@@ -110,19 +87,11 @@ class MeasureAction
         // Mostriamo una notifica con le metriche
         Notification::make()
             ->title('Performance Metrics '.($label !== '' ? $label : 'Unnamed'))
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
         // Mostriamo una notifica con le metriche
         Notification::make()
             ->title('Performance Metrics '.($label !== '' ? $label : 'Unnamed'))
-=======
         Notification::make()
             ->title('Performance Metrics '.$label)
->>>>>>> e2a4c5d (.)
->>>>>>> 50bb41c (fix: auto resolve conflict)
-=======
->>>>>>> 4ab3760 (.)
             ->body($metrics['execution_time'].'  '.$metrics['memory_usage'])
             ->success()
             ->persistent()
@@ -131,15 +100,7 @@ class MeasureAction
         // Log::debug('Performance Metrics', $metrics);
 
         /** @var T $result */
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
         /** @var T $result */
-=======
->>>>>>> e2a4c5d (.)
->>>>>>> 50bb41c (fix: auto resolve conflict)
-=======
->>>>>>> 4ab3760 (.)
         return $result;
     }
 }

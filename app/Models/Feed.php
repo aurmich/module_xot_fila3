@@ -16,20 +16,12 @@ namespace Modules\Xot\Models;
  * @method static \Illuminate\Database\Eloquent\Builder|Feed  query()
  * @property \Modules\Xot\Contracts\ProfileContract|null $creator
  * @property \Modules\Xot\Contracts\ProfileContract|null $updater
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
  * @property \Modules\Xot\Contracts\ProfileContract|null $creator
  * @property \Modules\Xot\Contracts\ProfileContract|null $updater
-=======
  *
  * @property \Modules\Xot\Contracts\ProfileContract|null $creator
  * @property \Modules\Xot\Contracts\ProfileContract|null $updater
  *
->>>>>>> e2a4c5d (.)
->>>>>>> 50bb41c (fix: auto resolve conflict)
-=======
->>>>>>> 4ab3760 (.)
  * @mixin \Eloquent
  */
 class Feed extends BaseModel

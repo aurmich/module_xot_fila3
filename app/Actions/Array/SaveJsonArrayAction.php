@@ -14,6 +14,7 @@ class SaveJsonArrayAction
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     /**
      * Salva un array come file JSON.
      *
@@ -32,28 +33,29 @@ class SaveJsonArrayAction
 =======
 =======
 >>>>>>> d9307de (fix: auto resolve conflict)
+=======
+>>>>>>> c2dac53 (.)
     public function execute(array $data, string $filename): bool
     {
         $content = \Safe\json_encode($data, JSON_PRETTY_PRINT);
-<<<<<<< HEAD
         //if ($content === false) {
         //    return false;
         //}
-=======
-<<<<<<< HEAD
         //if ($content === false) {
         //    return false;
         //}
-=======
         if ($content === false) {
             return false;
         }
+<<<<<<< HEAD
 >>>>>>> origin/dev
 >>>>>>> origin/dev
 <<<<<<< HEAD
 >>>>>>> e5c56c3 (.)
 =======
 =======
+=======
+>>>>>>> c2dac53 (.)
     /**
      * Salva un array come file JSON.
      *
@@ -69,8 +71,11 @@ class SaveJsonArrayAction
         // Non è necessario verificare se $content è false perché \Safe\json_encode
         // lancia un'eccezione in caso di errore invece di restituire false
         
+<<<<<<< HEAD
 >>>>>>> 50bb41c (fix: auto resolve conflict)
 >>>>>>> d9307de (fix: auto resolve conflict)
+=======
+>>>>>>> c2dac53 (.)
         return (bool) \Safe\file_put_contents($filename, $content);
     }
 }

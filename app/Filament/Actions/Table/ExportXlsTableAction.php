@@ -25,6 +25,7 @@ class ExportXlsTableAction extends Action
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
             
@@ -32,12 +33,12 @@ class ExportXlsTableAction extends Action
 =======
 =======
 >>>>>>> 7b67053 (fix: auto resolve conflict)
-            
 =======
-<<<<<<< HEAD
+>>>>>>> c2dac53 (.)
             
-=======
+            
             ->label('')
+<<<<<<< HEAD
 >>>>>>> e2a4c5d (.)
 >>>>>>> 50bb41c (fix: auto resolve conflict)
 <<<<<<< HEAD
@@ -47,6 +48,9 @@ class ExportXlsTableAction extends Action
 
 >>>>>>> 4ab3760 (.)
 >>>>>>> 7b67053 (fix: auto resolve conflict)
+=======
+
+>>>>>>> c2dac53 (.)
             ->tooltip(__('xot::actions.export_xls'))
              // ->icon('fas-file-excel')
             ->icon('heroicon-o-arrow-down-tray')
@@ -58,13 +62,6 @@ class ExportXlsTableAction extends Action
                 $query = $livewire->getFilteredTableQuery();
                 // ->getQuery(); // Staudenmeir\LaravelCte\Query\Builder
                 $rows = $query->get();
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 50bb41c (fix: auto resolve conflict)
-=======
->>>>>>> 4ab3760 (.)
                 /** @var array<int, string> $fields */
                 $fields = [];
                 if (method_exists($livewire_class, 'getXlsFields')) {
@@ -88,17 +85,9 @@ class ExportXlsTableAction extends Action
                             $fields[] = $field['name'];
                         }
                     }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
                 $fields = [];
                 if (method_exists($livewire_class, 'getXlsFields')) {
                     Assert::isArray($fields = $livewire_class::getXlsFields($livewire->tableFilters));
->>>>>>> e2a4c5d (.)
->>>>>>> 50bb41c (fix: auto resolve conflict)
-=======
->>>>>>> 4ab3760 (.)
                 }
 
                 return app(ExportXlsByCollection::class)->execute($rows, $filename, $transKey, $fields);

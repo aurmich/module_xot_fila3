@@ -14,13 +14,6 @@ class AssetAction
 {
     use QueueableAction;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 50bb41c (fix: auto resolve conflict)
-=======
->>>>>>> 4ab3760 (.)
     /**
      * Gestisce i percorsi degli asset, copiandoli nella directory pubblica se necessario.
      *
@@ -42,14 +35,6 @@ class AssetAction
 >>>>>>> 7b67053 (fix: auto resolve conflict)
      * @throws \Exception Se il file sorgente non esiste o non può essere copiato
      */
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> e2a4c5d (.)
->>>>>>> 50bb41c (fix: auto resolve conflict)
-=======
->>>>>>> 4ab3760 (.)
     public function execute(string $path): string
     {
         $xot = XotData::make();
@@ -73,29 +58,14 @@ class AssetAction
         $ns_after0 = Str::before($ns_after, '/');
         $ns_after1 = Str::after($ns_after, '/');
         $ns_after = str_replace('.', '/', is_string($ns_after0) ? $ns_after0 : (string) $ns_after0).'/'.$ns_after1;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
         $ns_after = str_replace('.', '/', is_string($ns_after0) ? $ns_after0 : (string) $ns_after0).'/'.$ns_after1;
-=======
         $ns_after = str_replace('.', '/', (string) $ns_after0).'/'.$ns_after1;
->>>>>>> e2a4c5d (.)
->>>>>>> 50bb41c (fix: auto resolve conflict)
-=======
->>>>>>> 4ab3760 (.)
 
         if (Str::startsWith($ns_after, '/')) {
             $ns_after = Str::after($ns_after, '/');
         }
 
         if (\in_array($ns, ['pub_theme', 'adm_theme'], false)) {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 50bb41c (fix: auto resolve conflict)
-=======
->>>>>>> 4ab3760 (.)
             // Assicuriamoci che $theme sia una stringa
             $theme = $xot->{$ns};
             Assert::string($theme, 'Il tema deve essere una stringa');
@@ -122,19 +92,11 @@ class AssetAction
 >>>>>>> 7b67053 (fix: auto resolve conflict)
             $themeAssetPath = 'themes/'.$theme.'/'.$ns_after;
             $asset = $themeAssetPath;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
             $theme = $xot->{$ns};
 
             $filename_from = app(FixPathAction::class)->execute(base_path('Themes/'.$theme.'/resources/'.$ns_after));
             // $filename_from = Str::replace('/resources//', '/resources/', $filename_from);
             $asset = 'themes/'.$theme.'/'.$ns_after;
->>>>>>> e2a4c5d (.)
->>>>>>> 50bb41c (fix: auto resolve conflict)
-=======
->>>>>>> 4ab3760 (.)
             $filename_to = app(FixPathAction::class)->execute(public_path($asset));
             $asset = Str::replace(url(''), '', asset($asset));
 
@@ -149,17 +111,9 @@ class AssetAction
                     throw new \Exception('message:['.$e->getMessage().']
                         public_path ['.public_path().']
                         path ['.$path.']
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
                         public_path ['.public_path().']
                         path ['.$path.']
-=======
                         path :['.$path.']
->>>>>>> e2a4c5d (.)
->>>>>>> 50bb41c (fix: auto resolve conflict)
-=======
->>>>>>> 4ab3760 (.)
                         file from ['.$filename_from.']
                         file to ['.$filename_to.']', $e->getCode(), $e);
                 }

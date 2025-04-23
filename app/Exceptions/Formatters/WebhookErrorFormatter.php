@@ -9,6 +9,7 @@ use Illuminate\Support\Facades\Auth;
 class WebhookErrorFormatter
 {
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function __construct(
         private readonly \Throwable $exception
     ) {
@@ -26,28 +27,40 @@ class WebhookErrorFormatter
 =======
 =======
 <<<<<<< HEAD
+=======
+    public function __construct(
+        private \Throwable $exception
+    ) {}
+>>>>>>> c2dac53 (.)
 class WebhookErrorFormatter
 {
     public function __construct(
         private readonly \Throwable $exception
     ) {
     }
+<<<<<<< HEAD
 >>>>>>> 50bb41c (fix: auto resolve conflict)
 >>>>>>> d9307de (fix: auto resolve conflict)
+=======
+>>>>>>> c2dac53 (.)
 
     /**
      * @return array<string, mixed>
      */
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 =======
+=======
+>>>>>>> c2dac53 (.)
     public function __construct(private readonly \Throwable $exception)
     {
     }
 
+<<<<<<< HEAD
 >>>>>>> origin/dev
 >>>>>>> origin/dev
 <<<<<<< HEAD
@@ -56,6 +69,8 @@ class WebhookErrorFormatter
 =======
 >>>>>>> 50bb41c (fix: auto resolve conflict)
 >>>>>>> d9307de (fix: auto resolve conflict)
+=======
+>>>>>>> c2dac53 (.)
     public function format(): array
     {
         $user = Auth::user();
@@ -64,6 +79,7 @@ class WebhookErrorFormatter
         return [
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -75,12 +91,15 @@ class WebhookErrorFormatter
 =======
 >>>>>>> 50bb41c (fix: auto resolve conflict)
 >>>>>>> d9307de (fix: auto resolve conflict)
+=======
+>>>>>>> c2dac53 (.)
             'message' => $this->exception->getMessage(),
             'file' => $this->exception->getFile(),
             'line' => $this->exception->getLine(),
             'trace' => $this->exception->getTraceAsString(),
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -93,6 +112,8 @@ class WebhookErrorFormatter
 =======
 >>>>>>> 50bb41c (fix: auto resolve conflict)
 >>>>>>> d9307de (fix: auto resolve conflict)
+=======
+>>>>>>> c2dac53 (.)
             'exception' => sprintf(
                 '`%s` (Code `%s`)',
                 get_class($this->exception),
@@ -105,10 +126,6 @@ class WebhookErrorFormatter
             ),
             'user' => sprintf('%d <%s>', Auth::id() ?? 0, $email),
             'ip' => request()->ip(),
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
 // use Symfony\Component\HttpFoundation\Request;
 
 class WebhookErrorFormatter
@@ -138,10 +155,6 @@ class WebhookErrorFormatter
             ),
             'ip' => request()->ip(),
             // Request::ip();
->>>>>>> e2a4c5d (.)
->>>>>>> 50bb41c (fix: auto resolve conflict)
-=======
->>>>>>> 4ab3760 (.)
             'thrown_while_calling' => sprintf(
                 '[%s] %s',
                 request()->getMethod(),
@@ -153,16 +166,8 @@ class WebhookErrorFormatter
                 "Trace:\n```json \n %s \n ```\n\n Previous: \n `%s`",
                 json_encode($this->exception->getTrace(), JSON_PRETTY_PRINT),
                 $this->exception->getPrevious() ? ('`' . get_class($this->exception->getPrevious()) . '`') : 'None'
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
                 $this->exception->getPrevious() ? ('`' . get_class($this->exception->getPrevious()) . '`') : 'None'
-=======
                 $this->exception->getPrevious() ? ('`'.get_class($this->exception->getPrevious()).'`') : 'None'
->>>>>>> e2a4c5d (.)
->>>>>>> 50bb41c (fix: auto resolve conflict)
-=======
->>>>>>> 4ab3760 (.)
             ),
             */
         ];

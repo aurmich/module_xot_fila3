@@ -168,6 +168,7 @@ if (! function_exists('dddx')) {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         $doc_root = str_replace('/', DIRECTORY_SEPARATOR, (string) $doc_root);
 =======
         $doc_root = str_replace('/', DIRECTORY_SEPARATOR, $doc_root);
@@ -190,6 +191,9 @@ if (! function_exists('dddx')) {
         $doc_root = str_replace('/', DIRECTORY_SEPARATOR, (string) $doc_root);
 >>>>>>> 4ab3760 (.)
 >>>>>>> 7b67053 (fix: auto resolve conflict)
+=======
+        $doc_root = str_replace('/', DIRECTORY_SEPARATOR, $doc_root);
+>>>>>>> c2dac53 (.)
 
         $dir_piece = explode(DIRECTORY_SEPARATOR, __DIR__);
         $dir_piece = array_slice($dir_piece, 0, -6);
@@ -430,6 +434,7 @@ if (! function_exists('params2ContainerItem')) {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             if (is_array($matches) && isset($matches[1]) && isset($matches[2])) {
 =======
             if (!empty($matches) && isset($matches[1]) && isset($matches[2]) && is_string($matches[1]) && is_string($matches[2])) {
@@ -452,6 +457,9 @@ if (! function_exists('params2ContainerItem')) {
             if (is_array($matches) && isset($matches[1]) && isset($matches[2])) {
 >>>>>>> 4ab3760 (.)
 >>>>>>> 7b67053 (fix: auto resolve conflict)
+=======
+            if (!empty($matches) && isset($matches[1]) && isset($matches[2]) && is_string($matches[1]) && is_string($matches[2])) {
+>>>>>>> c2dac53 (.)
                 $sk = $matches[1];
                 $sv = $matches[2];
                 // @phpstan-ignore offsetAccess.nonOffsetAccessible
@@ -463,6 +471,7 @@ if (! function_exists('params2ContainerItem')) {
     }
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -480,6 +489,8 @@ if (! function_exists('getModelFields')) {
 
 =======
 >>>>>>> 4ab3760 (.)
+=======
+>>>>>>> c2dac53 (.)
 if (! function_exists('getModelFields')) {
 <<<<<<< HEAD
     function getModelFields(Model $model): array {
@@ -492,6 +503,7 @@ if (! function_exists('getModelFields')) {
     }
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -521,6 +533,8 @@ if (! function_exists('getModelFields')) {
 =======
 >>>>>>> 4ab3760 (.)
 >>>>>>> 7b67053 (fix: auto resolve conflict)
+=======
+>>>>>>> c2dac53 (.)
 if (! function_exists('getModelByName')) {
     function getModelByName(string $name): Model
     {
@@ -671,18 +685,6 @@ if (! function_exists('getAllModulesModels')) {
 
             $moduleName = $module->getName();
             if ($moduleName === '') {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-            $moduleName = $module->getName();
-            if ($moduleName === '') {
-=======
-            $moduleName = $module->get('name');
-            if (! is_string($moduleName)) {
->>>>>>> e2a4c5d (.)
->>>>>>> 50bb41c (fix: auto resolve conflict)
-=======
->>>>>>> 4ab3760 (.)
                 continue;
             }
 
@@ -692,16 +694,6 @@ if (! function_exists('getAllModulesModels')) {
                 $res = array_merge($res, $moduleModels);
             } catch (Exception $e) {
                 \Illuminate\Support\Facades\Log::error('[Module:'.$moduleName.'] Error getting models: '.$e->getMessage());
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-                \Illuminate\Support\Facades\Log::error('[Module:'.$moduleName.'] Error getting models: '.$e->getMessage());
-=======
-                Log::error('[Module:'.$moduleName.'] Error getting models: '.$e->getMessage());
->>>>>>> e2a4c5d (.)
->>>>>>> 50bb41c (fix: auto resolve conflict)
-=======
->>>>>>> 4ab3760 (.)
 
                 continue;
             }
@@ -1072,13 +1064,6 @@ if (! function_exists('debugStack')) {
             throw new RuntimeException('XDebug must be installed to use this function');
         }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 50bb41c (fix: auto resolve conflict)
-=======
->>>>>>> 4ab3760 (.)
         if (function_exists('xdebug_set_filter') && defined('XDEBUG_FILTER_TRACING') && defined('XDEBUG_PATH_EXCLUDE')) {
             @xdebug_set_filter(
                 @constant('XDEBUG_FILTER_TRACING'),
@@ -1092,22 +1077,6 @@ if (! function_exists('debugStack')) {
         } else {
             debug_print_backtrace();
         }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
-        xdebug_set_filter(
-            XDEBUG_FILTER_TRACING,
-            XDEBUG_PATH_EXCLUDE,
-            // [LARAVEL_DIR.'/vendor/']
-            [__DIR__.'/../../vendor/']
-        );
-
-        xdebug_print_function_stack();
->>>>>>> e2a4c5d (.)
->>>>>>> 50bb41c (fix: auto resolve conflict)
-=======
->>>>>>> 4ab3760 (.)
     }
 }
 
@@ -1260,6 +1229,7 @@ if (! function_exists('authId')) {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     function authId(): ?string
     {
         try {
@@ -1284,6 +1254,8 @@ if (! function_exists('authId')) {
 <<<<<<< HEAD
 >>>>>>> 50bb41c (fix: auto resolve conflict)
 >>>>>>> d9307de (fix: auto resolve conflict)
+=======
+>>>>>>> c2dac53 (.)
     /**
      * Get the current authenticated user ID from Filament or Laravel auth.
      */
@@ -1292,11 +1264,11 @@ if (! function_exists('authId')) {
         try {
             $filamentAuth = Filament::auth();
             $id = null;
-            
+
             if ($filamentAuth && method_exists($filamentAuth, 'id')) {
                 $id = $filamentAuth->id();
             }
-            
+
             if ($id === null && auth()->check()) {
                 $id = auth()->id();
             }
@@ -1320,13 +1292,14 @@ function safe_object_call($object, string $method, ...$args) {
     if (!is_object($object)) {
         return null;
     }
-    
+
     if (!method_exists($object, $method)) {
         return null;
     }
-    
+
     return $object->$method(...$args);
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> e5c56c3 (.)
 =======
@@ -1360,3 +1333,5 @@ function safe_object_call($object, string $method, ...$args) {
 =======
 >>>>>>> 4ab3760 (.)
 >>>>>>> 7b67053 (fix: auto resolve conflict)
+=======
+>>>>>>> c2dac53 (.)

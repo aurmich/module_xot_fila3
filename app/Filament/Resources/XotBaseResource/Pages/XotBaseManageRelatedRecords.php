@@ -4,13 +4,6 @@ declare(strict_types=1);
 
 namespace Modules\Xot\Filament\Resources\XotBaseResource\Pages;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 50bb41c (fix: auto resolve conflict)
-=======
->>>>>>> 4ab3760 (.)
 use Filament\Forms\Form;
 use Filament\Tables\Table;
 use Illuminate\Support\Str;
@@ -32,10 +25,6 @@ use Filament\Resources\Pages\ManageRelatedRecords as FilamentManageRelatedRecord
 abstract class XotBaseManageRelatedRecords extends FilamentManageRelatedRecords
 {
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
 use Filament\Forms\Concerns\InteractsWithForms;
 use Filament\Forms\Contracts\HasForms;
 use Filament\Forms\Form;
@@ -46,10 +35,6 @@ use Modules\Xot\Filament\Traits\NavigationLabelTrait;
 
 abstract class XotBaseManageRelatedRecords extends ManageRelatedRecords implements HasForms
 {
->>>>>>> e2a4c5d (.)
->>>>>>> 50bb41c (fix: auto resolve conflict)
-=======
->>>>>>> 4ab3760 (.)
     use HasXotTable;
     use InteractsWithForms;
     use NavigationLabelTrait;
@@ -61,13 +46,6 @@ abstract class XotBaseManageRelatedRecords extends ManageRelatedRecords implemen
         return '';
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 50bb41c (fix: auto resolve conflict)
-=======
->>>>>>> 4ab3760 (.)
     /*
      * @return array<\Filament\Forms\Components\Component>
      */
@@ -180,10 +158,6 @@ abstract class XotBaseManageRelatedRecords extends ManageRelatedRecords implemen
             ->title()
             ->prepend($titleString.' - ')
             ->toString();
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
     /**
      * @return array<\Filament\Forms\Components\Component>
      */
@@ -222,9 +196,5 @@ abstract class XotBaseManageRelatedRecords extends ManageRelatedRecords implemen
             // ->form($this->getFormSchema())
             ,
         ];
->>>>>>> e2a4c5d (.)
->>>>>>> 50bb41c (fix: auto resolve conflict)
-=======
->>>>>>> 4ab3760 (.)
     }
 }

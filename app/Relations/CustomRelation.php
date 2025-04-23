@@ -151,16 +151,8 @@ class CustomRelation extends Relation
      * @param mixed                                                       $operator
      * @param mixed                                                       $value
      * @param string $boolean
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
      * @param string $boolean
-=======
      * @param string                                                      $boolean
->>>>>>> e2a4c5d (.)
->>>>>>> 50bb41c (fix: auto resolve conflict)
-=======
->>>>>>> 4ab3760 (.)
      *
      * @return \Illuminate\Database\Eloquent\Builder
      */

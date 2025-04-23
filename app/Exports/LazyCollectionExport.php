@@ -53,6 +53,7 @@ class LazyCollectionExport implements FromIterator, ShouldQueue, WithHeadings, W
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             $item->id,
 =======
             $item->,
@@ -75,6 +76,9 @@ class LazyCollectionExport implements FromIterator, ShouldQueue, WithHeadings, W
             $item->id,
 >>>>>>> 4ab3760 (.)
 >>>>>>> 7b67053 (fix: auto resolve conflict)
+=======
+            $item->id,
+>>>>>>> c2dac53 (.)
         ];
         */
     }

@@ -33,17 +33,23 @@ Un errore particolarmente frequente riguarda le Actions. La convenzione corretta
 - ✅ **CORRETTO**: `namespace Modules\Xot\Actions;`
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 - ❌ **ERRATO**: `namespace Modules\Xot\app\Actions;`
 =======
 =======
 >>>>>>> d9307de (fix: auto resolve conflict)
 <<<<<<< HEAD
-- ❌ **ERRATO**: `namespace Modules\Xot\Actions;`
 =======
-<<<<<<< HEAD
+
+
+>>>>>>> c2dac53 (.)
 - ❌ **ERRATO**: `namespace Modules\Xot\Actions;`
-=======
+
+
+- ❌ **ERRATO**: `namespace Modules\Xot\Actions;`
+
 - ❌ **ERRATO**: `namespace Modules\Xot\app\Actions;`
+<<<<<<< HEAD
 >>>>>>> origin/dev
 >>>>>>> origin/dev
 <<<<<<< HEAD
@@ -53,6 +59,13 @@ Un errore particolarmente frequente riguarda le Actions. La convenzione corretta
 - ❌ **ERRATO**: `namespace Modules\Xot\app\Actions;`
 >>>>>>> 50bb41c (fix: auto resolve conflict)
 >>>>>>> d9307de (fix: auto resolve conflict)
+=======
+
+
+
+- ❌ **ERRATO**: `namespace Modules\Xot\app\Actions;`
+ 50bb41c (fix: auto resolve conflict)
+>>>>>>> c2dac53 (.)
 
 Anche se il file si trova nel percorso fisico `Modules/Xot/app/Actions/`, il namespace non deve mai includere il segmento `app`.
 
@@ -60,17 +73,23 @@ Questo errore causa spesso problemi di PHPStan come:
 ```
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 Class 'Modules\Xot\app\Actions\MyAction' not found.
 =======
 =======
 >>>>>>> d9307de (fix: auto resolve conflict)
 <<<<<<< HEAD
-Class 'Modules\Xot\Actions\MyAction' not found.
 =======
-<<<<<<< HEAD
+
+
+>>>>>>> c2dac53 (.)
 Class 'Modules\Xot\Actions\MyAction' not found.
-=======
+
+
+Class 'Modules\Xot\Actions\MyAction' not found.
+
 Class 'Modules\Xot\app\Actions\MyAction' not found.
+<<<<<<< HEAD
 >>>>>>> origin/dev
 >>>>>>> origin/dev
 <<<<<<< HEAD
@@ -80,6 +99,13 @@ Class 'Modules\Xot\app\Actions\MyAction' not found.
 Class 'Modules\Xot\app\Actions\MyAction' not found.
 >>>>>>> 50bb41c (fix: auto resolve conflict)
 >>>>>>> d9307de (fix: auto resolve conflict)
+=======
+
+
+
+Class 'Modules\Xot\app\Actions\MyAction' not found.
+ 50bb41c (fix: auto resolve conflict)
+>>>>>>> c2dac53 (.)
 ```
 
 La correzione è sempre la stessa: rimuovere il segmento `app` dal namespace.
@@ -199,9 +225,13 @@ class RatingServiceProvider extends XotBaseServiceProvider
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> d9307de (fix: auto resolve conflict)
+=======
+
+>>>>>>> c2dac53 (.)
 ### Route Service Providers
 
 ```php
@@ -225,11 +255,16 @@ class RouteServiceProvider extends XotBaseRouteServiceProvider
 ```
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> e5c56c3 (.)
 =======
 =======
 >>>>>>> 50bb41c (fix: auto resolve conflict)
 >>>>>>> d9307de (fix: auto resolve conflict)
+=======
+
+ 50bb41c (fix: auto resolve conflict)
+>>>>>>> c2dac53 (.)
 ## Corrispondenza tra Struttura delle Directory e Namespace
 
 | Directory fisica                             | Namespace corretto                   |
@@ -271,6 +306,7 @@ use Modules\User\Models\User;
 use Modules\Rating\Models\Rating as RatingModel;
 ```
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 ## Test di Validazione Namespace
@@ -318,6 +354,9 @@ test('verifica correttezza namespace', function () {
 =======
 =======
 >>>>>>> d9307de (fix: auto resolve conflict)
+=======
+
+>>>>>>> c2dac53 (.)
 ## Namespace in composer.json
 
 Quando si definisce l'autoloading in `composer.json`, assicurarsi che la mappatura rifletta questa convenzione:
@@ -374,9 +413,13 @@ namespace Modules\Rating\Console\Commands;
 
 Seguire queste convenzioni di namespace aiuterà a mantenere un codebase coerente e a evitare errori comuni durante l'analisi statica del codice con PHPStan. 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> e5c56c3 (.)
 =======
 =======
+=======
+
+>>>>>>> c2dac53 (.)
 ## Test di Validazione Namespace
 
 Per verificare la correttezza dei namespace, utilizzare il seguente test Pest:
@@ -419,5 +462,9 @@ test('verifica correttezza namespace', function () {
         ->withContext("I seguenti file contengono namespace non validi:\n" . implode("\n", $errors))
         ->toBeEmpty();
 }); 
+<<<<<<< HEAD
 >>>>>>> 50bb41c (fix: auto resolve conflict)
 >>>>>>> d9307de (fix: auto resolve conflict)
+=======
+ 50bb41c (fix: auto resolve conflict)
+>>>>>>> c2dac53 (.)

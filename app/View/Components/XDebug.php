@@ -66,6 +66,7 @@ class XDebug extends Component
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         return (string) $out1;
 =======
         return is_string($out1) ? $out1 : (string) $out1;
@@ -73,12 +74,12 @@ class XDebug extends Component
 =======
 =======
 >>>>>>> 7b67053 (fix: auto resolve conflict)
-        return is_string($out1) ? $out1 : (string) $out1;
 =======
-<<<<<<< HEAD
+>>>>>>> c2dac53 (.)
         return is_string($out1) ? $out1 : (string) $out1;
-=======
+        return is_string($out1) ? $out1 : (string) $out1;
         return (string) $out1;
+<<<<<<< HEAD
 >>>>>>> e2a4c5d (.)
 >>>>>>> 50bb41c (fix: auto resolve conflict)
 <<<<<<< HEAD
@@ -88,5 +89,8 @@ class XDebug extends Component
         return (string) $out1;
 >>>>>>> 4ab3760 (.)
 >>>>>>> 7b67053 (fix: auto resolve conflict)
+=======
+        return (string) $out1;
+>>>>>>> c2dac53 (.)
     }
 }

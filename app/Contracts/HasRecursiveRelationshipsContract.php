@@ -18,17 +18,7 @@ use Staudenmeir\LaravelAdjacencyList\Eloquent\Relations\Siblings;
  * Modules\Xot\Contracts\HasRecursiveRelationshipsContract.
  *
  * @property int                $id
- * @property string $name
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
- * @property string $name
-=======
  * @property string             $name
->>>>>>> e2a4c5d (.)
->>>>>>> 50bb41c (fix: auto resolve conflict)
-=======
->>>>>>> 4ab3760 (.)
  * @property int                $depth
  * @property Collection<static> $children
  * @property int|null           $children_count
@@ -248,7 +238,70 @@ interface HasRecursiveRelationshipsContract
      *
      * @return bool
      */
-    public function hasNestedPath();
+    public function isNestedPath();
+
+    /**
+     * Determine whether the model is a child of a given parent.
+     *
+     * @param \Illuminate\Database\Eloquent\Model $parent
+     *
+     * @return bool
+     */
+    public function isChildOf($parent);
+
+    /**
+     * Determine whether the model is a descendant of a given ancestor.
+     *
+     * @param \Illuminate\Database\Eloquent\Model $ancestor
+     *
+     * @return bool
+     */
+    public function isDescendantOf($ancestor);
+
+    /**
+     * Determine whether the model is a descendant of a given ancestor or is the ancestor itself.
+     *
+     * @param \Illuminate\Database\Eloquent\Model $ancestor
+     *
+     * @return bool
+     */
+    public function isDescendantOfOrSelf($ancestor);
+
+    /**
+     * Determine whether the model is a parent of a given child.
+     *
+     * @param \Illuminate\Database\Eloquent\Model $child
+     *
+     * @return bool
+     */
+    public function isParentOf($child);
+
+    /**
+     * Determine whether the model is an ancestor of a given descendant.
+     *
+     * @param \Illuminate\Database\Eloquent\Model $descendant
+     *
+     * @return bool
+     */
+    public function isAncestorOf($descendant);
+
+    /**
+     * Determine whether the model is an ancestor of a given descendant or is the descendant itself.
+     *
+     * @param \Illuminate\Database\Eloquent\Model $descendant
+     *
+     * @return bool
+     */
+    public function isAncestorOfOrSelf($descendant);
+
+    /**
+     * Determine whether the model is a sibling of a given model.
+     *
+     * @param \Illuminate\Database\Eloquent\Model $sibling
+     *
+     * @return bool
+     */
+    public function isSiblingOf($sibling);
 
     /**
      * Determine if an attribute is an integer.

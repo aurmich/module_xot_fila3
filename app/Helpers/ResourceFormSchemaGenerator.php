@@ -5,13 +5,6 @@ declare(strict_types=1);
 namespace Modules\Xot\Helpers;
 
 use Illuminate\Support\Str;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 50bb41c (fix: auto resolve conflict)
-=======
->>>>>>> 4ab3760 (.)
 use Webmozart\Assert\Assert;
 
 use function Safe\glob;
@@ -40,10 +33,6 @@ class ResourceFormSchemaGenerator
                 throw new \RuntimeException("Failed to get filename for class: {$resourceClass}");
             }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
 
 class ResourceFormSchemaGenerator
 {
@@ -53,48 +42,24 @@ class ResourceFormSchemaGenerator
             $reflection = new \ReflectionClass($resourceClass);
             $filename = $reflection->getFileName();
 
->>>>>>> e2a4c5d (.)
->>>>>>> 50bb41c (fix: auto resolve conflict)
-=======
->>>>>>> 4ab3760 (.)
             // Read the file contents
             $fileContents = file_get_contents($filename);
 
             // Check if getFormSchema method already exists
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 50bb41c (fix: auto resolve conflict)
-=======
->>>>>>> 4ab3760 (.)
             if (strpos($fileContents, 'public function getFormSchema') !== false) {
                 return false;
             }
 
             // Generate form schema
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
             if (false !== strpos($fileContents, 'public function getFormSchema')) {
                 return false;
             }
 
             // Generate a basic form schema based on the class name
->>>>>>> e2a4c5d (.)
->>>>>>> 50bb41c (fix: auto resolve conflict)
-=======
->>>>>>> 4ab3760 (.)
             $modelName = str_replace('Resource', '', $reflection->getShortName());
             $modelVariable = Str::camel($modelName);
 
             $formSchemaMethod = "\n    public function getFormSchema(): array\n    {\n        return [\n";
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 50bb41c (fix: auto resolve conflict)
             $formSchemaMethod .= "            Forms\\Components\\TextInput::make('{$modelVariable}_name')\n";
 <<<<<<< HEAD
             $formSchemaMethod .= "                ->label('".Str::headline($modelName)." Name')\n";
@@ -117,15 +82,16 @@ class ResourceFormSchemaGenerator
                 '/}(\s*)$/',
                 $formSchemaMethod.'}$1',
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> e5c56c3 (.)
 =======
 <<<<<<< HEAD
 =======
 =======
+=======
+>>>>>>> c2dac53 (.)
 
             // Try to generate some basic form fields
-=======
->>>>>>> 4ab3760 (.)
             $formSchemaMethod .= "            Forms\\Components\\TextInput::make('{$modelVariable}_name')\n";
             $formSchemaMethod .= "                ->label('".Str::headline($modelName)." Name')\n";
             $formSchemaMethod .= "                ->required(),\n";
@@ -139,6 +105,7 @@ class ResourceFormSchemaGenerator
                 '/}(\s*)$/',
                 $formSchemaMethod.($isInClustersDir ? '' : '}$1'),
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> e2a4c5d (.)
 >>>>>>> 50bb41c (fix: auto resolve conflict)
 <<<<<<< HEAD
@@ -147,6 +114,8 @@ class ResourceFormSchemaGenerator
 =======
 >>>>>>> 4ab3760 (.)
 >>>>>>> 7b67053 (fix: auto resolve conflict)
+=======
+>>>>>>> c2dac53 (.)
                 $fileContents
             );
 
@@ -156,29 +125,14 @@ class ResourceFormSchemaGenerator
             return true;
         } catch (\Exception $e) {
             error_log("Error generating form schema for {$resourceClass}: ".$e->getMessage());
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
             error_log("Error generating form schema for {$resourceClass}: ".$e->getMessage());
-=======
             // Log the error or handle it appropriately
             error_log("Error generating form schema for {$resourceClass}: ".$e->getMessage());
 
->>>>>>> e2a4c5d (.)
->>>>>>> 50bb41c (fix: auto resolve conflict)
-=======
->>>>>>> 4ab3760 (.)
             return false;
         }
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 50bb41c (fix: auto resolve conflict)
-=======
->>>>>>> 4ab3760 (.)
     /**
      * @return array{updated: array<string>, skipped: array<string>}
      */
@@ -213,10 +167,6 @@ class ResourceFormSchemaGenerator
         }
 
         return $results;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
     public static function generateForAllResources()
     {
         $resourceFiles = glob('/var/www/html/base_techplanner_fila3/laravel/Modules/*/app/Filament/Resources/*Resource.php');
@@ -251,9 +201,5 @@ class ResourceFormSchemaGenerator
             'updated' => $updatedResources,
             'skipped' => $skippedResources,
         ];
->>>>>>> e2a4c5d (.)
->>>>>>> 50bb41c (fix: auto resolve conflict)
-=======
->>>>>>> 4ab3760 (.)
     }
 }

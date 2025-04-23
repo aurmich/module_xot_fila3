@@ -90,6 +90,7 @@ class DummyClassName extends XotBasePanel {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         //return $query->where('user_id', $request->user()?->id);
 =======
         //return $query->where('user_id', $request->user()->);
@@ -97,12 +98,12 @@ class DummyClassName extends XotBasePanel {
 =======
 =======
 >>>>>>> 7b67053 (fix: auto resolve conflict)
-        //return $query->where('user_id', $request->user()->);
 =======
-<<<<<<< HEAD
+>>>>>>> c2dac53 (.)
         //return $query->where('user_id', $request->user()->);
-=======
+        //return $query->where('user_id', $request->user()->);
         //return $query->where('user_id', $request->user()?->id);
+<<<<<<< HEAD
 >>>>>>> e2a4c5d (.)
 >>>>>>> 50bb41c (fix: auto resolve conflict)
 <<<<<<< HEAD
@@ -112,6 +113,9 @@ class DummyClassName extends XotBasePanel {
         //return $query->where('user_id', $request->user()?->id);
 >>>>>>> 4ab3760 (.)
 >>>>>>> 7b67053 (fix: auto resolve conflict)
+=======
+        //return $query->where('user_id', $request->user()?->id);
+>>>>>>> c2dac53 (.)
         return $query;
     }
 

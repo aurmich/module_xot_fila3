@@ -17,6 +17,7 @@ use Modules\Xot\Models\Log;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 use Modules\Xot\Filament\Resources\XotBaseResource\RelationManagers\XotBaseRelationManager;
 =======
 use Modules\Xot\Filament\Resources\XotBaseResource\RelationManager\XotBaseRelationManager;
@@ -24,10 +25,11 @@ use Modules\Xot\Filament\Resources\XotBaseResource\RelationManager\XotBaseRelati
 =======
 =======
 >>>>>>> 7b67053 (fix: auto resolve conflict)
-use Modules\Xot\Filament\Resources\XotBaseResource\RelationManager\XotBaseRelationManager;
 =======
-<<<<<<< HEAD
+>>>>>>> c2dac53 (.)
 use Modules\Xot\Filament\Resources\XotBaseResource\RelationManager\XotBaseRelationManager;
+use Modules\Xot\Filament\Resources\XotBaseResource\RelationManager\XotBaseRelationManager;
+<<<<<<< HEAD
 =======
 >>>>>>> e2a4c5d (.)
 >>>>>>> 50bb41c (fix: auto resolve conflict)
@@ -38,6 +40,9 @@ use Modules\Xot\Filament\Resources\XotBaseResource\RelationManager\XotBaseRelati
 use Modules\Xot\Filament\Resources\XotBaseResource\RelationManagers\XotBaseRelationManager;
 >>>>>>> 4ab3760 (.)
 >>>>>>> 7b67053 (fix: auto resolve conflict)
+=======
+use Modules\Xot\Filament\Resources\XotBaseResource\RelationManagers\XotBaseRelationManager;
+>>>>>>> c2dac53 (.)
 
 class LogResource extends XotBaseResource
 {
@@ -48,13 +53,6 @@ class LogResource extends XotBaseResource
     public static function getFormSchema(): array
     {
         return [
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 50bb41c (fix: auto resolve conflict)
-=======
->>>>>>> 4ab3760 (.)
             'name' => TextInput::make('name')
                 ->required()
                 ->maxLength(255),
@@ -64,10 +62,6 @@ class LogResource extends XotBaseResource
                 ->maxLength(255),
 
             'content' => Textarea::make('content')
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
             TextInput::make('name')
                 ->required()
                 ->maxLength(255),
@@ -77,10 +71,6 @@ class LogResource extends XotBaseResource
                 ->maxLength(255),
 
             Textarea::make('content')
->>>>>>> e2a4c5d (.)
->>>>>>> 50bb41c (fix: auto resolve conflict)
-=======
->>>>>>> 4ab3760 (.)
                 ->columnSpanFull(),
         ];
     }

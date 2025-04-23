@@ -11,13 +11,6 @@ namespace Modules\Xot\Actions\Filament\Block;
 use Illuminate\Support\Arr;
 use Illuminate\Support\Facades\File;
 use Illuminate\Support\Str;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 50bb41c (fix: auto resolve conflict)
-=======
->>>>>>> 4ab3760 (.)
 use Modules\Xot\Actions\File\AssetAction;
 use Modules\Xot\Actions\File\FixPathAction;
 use Spatie\QueueableAction\QueueableAction;
@@ -26,29 +19,14 @@ use Webmozart\Assert\Assert;
 /**
  * Classe per ottenere le opzioni dei blocchi di vista per un tipo specifico.
  */
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
 use Modules\Xot\Actions\File\FixPathAction;
 use Spatie\QueueableAction\QueueableAction;
 
->>>>>>> e2a4c5d (.)
->>>>>>> 50bb41c (fix: auto resolve conflict)
-=======
->>>>>>> 4ab3760 (.)
 class GetViewBlocksOptionsByTypeAction
 {
     use QueueableAction;
 
     /**
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 50bb41c (fix: auto resolve conflict)
-=======
->>>>>>> 4ab3760 (.)
      * Ottiene le opzioni dei blocchi di vista per un determinato tipo.
      *
      * @param string $type Il tipo di blocco da cercare
@@ -204,10 +182,6 @@ class GetViewBlocksOptionsByTypeAction
                     $imgPath = $module_low.'::img/screenshots/'.$name.'.png';
                     $img_path = $assetAction->execute($imgPath);
                     Assert::stringNotEmpty($img_path, 'Il percorso dell\'immagine non può essere vuoto');
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
      * Undocumented function.
      * return number of input added.
      *
@@ -231,10 +205,6 @@ class GetViewBlocksOptionsByTypeAction
                 if ($img) {
                     $img_path = app(\Modules\Xot\Actions\File\AssetAction::class)
                         ->execute($module_low.'::img/screenshots/'.$name.'.png');
->>>>>>> e2a4c5d (.)
->>>>>>> 50bb41c (fix: auto resolve conflict)
-=======
->>>>>>> 4ab3760 (.)
 
                     return [$view => $img_path];
                 }
@@ -243,13 +213,6 @@ class GetViewBlocksOptionsByTypeAction
             }
         );
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 50bb41c (fix: auto resolve conflict)
-=======
->>>>>>> 4ab3760 (.)
         // Assicuriamo che il risultato sia un array di stringhe
         /** @var array<string, string> $result */
         $result = $opts;
@@ -277,14 +240,6 @@ class GetViewBlocksOptionsByTypeAction
 
 >>>>>>> 7b67053 (fix: auto resolve conflict)
         return $result;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
         return $opts;
->>>>>>> e2a4c5d (.)
->>>>>>> 50bb41c (fix: auto resolve conflict)
-=======
->>>>>>> 4ab3760 (.)
     }
 }

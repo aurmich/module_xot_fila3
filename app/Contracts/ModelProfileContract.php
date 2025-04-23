@@ -16,18 +16,10 @@ use Spatie\Permission\Exceptions\PermissionDoesNotExist;
  *
  * @property string $id
  * @property string $email
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
  * @property string $id
  * @property string $email
-=======
  * @property string                $id
  * @property string                $email
->>>>>>> e2a4c5d (.)
->>>>>>> 50bb41c (fix: auto resolve conflict)
-=======
->>>>>>> 4ab3760 (.)
  * @property Collection<int, Role> $roles
  * @property int|null              $roles_count
  *

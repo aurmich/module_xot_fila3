@@ -171,12 +171,13 @@ protected $middlewareGroups = [
 È buona pratica utilizzare un Enum per gestire le lingue supportate:
 
 ```php
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
 namespace Modules\Xot\Enums;
-=======
-<<<<<<< HEAD
+
+
 namespace Modules\Xot\Enums;
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 namespace Modules\Xot\Enums;
@@ -191,6 +192,15 @@ namespace Modules\Xot\app\Enums;
 namespace Modules\Xot\Enums;
 >>>>>>> 50bb41c (fix: auto resolve conflict)
 >>>>>>> d9307de (fix: auto resolve conflict)
+=======
+
+namespace Modules\Xot\app\Enums;
+
+
+
+namespace Modules\Xot\Enums;
+ 50bb41c (fix: auto resolve conflict)
+>>>>>>> c2dac53 (.)
 
 enum SupportedLocale: string
 {
@@ -313,12 +323,16 @@ php artisan lang:clear
 
 ## Conclusione
 
+
+Seguendo queste linee guida, potrai implementare un sistema di localizzazione robusto e manutenibile all'interno del framework Laraxot PTVX. Ricorda che i file di localizzazione devono rimanere nella directory `lang` alla radice del modulo, rispettando le convenzioni standard di Laravel. 
+
+Seguendo queste linee guida, potrai implementare un sistema di localizzazione robusto e manutenibile all'interno del framework Laraxot PTVX. Ricorda che i file di localizzazione devono rimanere nella directory `lang` alla radice del modulo, rispettando le convenzioni standard di Laravel. 
 <<<<<<< HEAD
-Seguendo queste linee guida, potrai implementare un sistema di localizzazione robusto e manutenibile all'interno del framework Laraxot PTVX. Ricorda che i file di localizzazione devono rimanere nella directory `lang` alla radice del modulo, rispettando le convenzioni standard di Laravel. 
-=======
-Seguendo queste linee guida, potrai implementare un sistema di localizzazione robusto e manutenibile all'interno del framework Laraxot PTVX. Ricorda che i file di localizzazione devono rimanere nella directory `lang` alla radice del modulo, rispettando le convenzioni standard di Laravel. 
 <<<<<<< HEAD
 >>>>>>> e5c56c3 (.)
 =======
 >>>>>>> 50bb41c (fix: auto resolve conflict)
 >>>>>>> d9307de (fix: auto resolve conflict)
+=======
+ 50bb41c (fix: auto resolve conflict)
+>>>>>>> c2dac53 (.)

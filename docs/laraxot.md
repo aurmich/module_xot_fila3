@@ -425,6 +425,7 @@ class GeoLogger
 
                 'coordinates' => $result->toArray()
 
+<<<<<<< HEAD
                 'coordinates' => $result?->toArray()
  e2a4c5d (.)
 =======
@@ -452,6 +453,20 @@ class GeoLogger
  e2a4c5d (.)
 >>>>>>> 4ab3760 (.)
 >>>>>>> 7b67053 (fix: auto resolve conflict)
+=======
+
+
+                'coordinates' => $result->toArray()
+
+                'coordinates' => $result?->toArray()
+ e2a4c5d (.)
+ 50bb41c (fix: auto resolve conflict)
+
+
+                'coordinates' => $result?->toArray()
+ e2a4c5d (.)
+ 4ab3760 (.)
+>>>>>>> c2dac53 (.)
             ]);
     }
 
@@ -591,6 +606,7 @@ class ModuleList extends Component
 
         Module::find($id)->delete();
 
+<<<<<<< HEAD
         Module::find($id)?->delete();
  e2a4c5d (.)
 =======
@@ -618,6 +634,20 @@ class ModuleList extends Component
  e2a4c5d (.)
 >>>>>>> 4ab3760 (.)
 >>>>>>> 7b67053 (fix: auto resolve conflict)
+=======
+
+
+        Module::find($id)->delete();
+
+        Module::find($id)?->delete();
+ e2a4c5d (.)
+ 50bb41c (fix: auto resolve conflict)
+
+
+        Module::find($id)?->delete();
+ e2a4c5d (.)
+ 4ab3760 (.)
+>>>>>>> c2dac53 (.)
         $this->emit('moduleDeleted');
     }
 }
@@ -915,6 +945,7 @@ class ClientMapWidget extends Widget
 
             'clients' => $this->listClients->getTableQuery()
 
+<<<<<<< HEAD
             'clients' => $this->listClients?->getTableQuery()
  e2a4c5d (.)
 =======
@@ -942,6 +973,20 @@ class ClientMapWidget extends Widget
  e2a4c5d (.)
 >>>>>>> 4ab3760 (.)
 >>>>>>> 7b67053 (fix: auto resolve conflict)
+=======
+
+
+            'clients' => $this->listClients->getTableQuery()
+
+            'clients' => $this->listClients?->getTableQuery()
+ e2a4c5d (.)
+ 50bb41c (fix: auto resolve conflict)
+
+
+            'clients' => $this->listClients?->getTableQuery()
+ e2a4c5d (.)
+ 4ab3760 (.)
+>>>>>>> c2dac53 (.)
                 ->get(['latitude', 'longitude', 'name'])
                 ->toArray(),
         ];
@@ -993,6 +1038,7 @@ class ClientMapWidget extends Widget
 
             'clients' => $this->listClients->getTableQuery()
 
+<<<<<<< HEAD
             'clients' => $this->listClients?->getTableQuery()
  e2a4c5d (.)
 =======
@@ -1020,6 +1066,20 @@ class ClientMapWidget extends Widget
  e2a4c5d (.)
 >>>>>>> 4ab3760 (.)
 >>>>>>> 7b67053 (fix: auto resolve conflict)
+=======
+
+
+            'clients' => $this->listClients->getTableQuery()
+
+            'clients' => $this->listClients?->getTableQuery()
+ e2a4c5d (.)
+ 50bb41c (fix: auto resolve conflict)
+
+
+            'clients' => $this->listClients?->getTableQuery()
+ e2a4c5d (.)
+ 4ab3760 (.)
+>>>>>>> c2dac53 (.)
                 ->get(['latitude', 'longitude', 'name'])
                 ->toArray(),
         ];
@@ -1778,6 +1838,7 @@ return [
 
 - Definizione completa di gruppo, label, icona e ordinamento
 
+<<<<<<< HEAD
 - Definizione completa di gruppo, label, icona e ordinamento 
 
 
@@ -1808,15 +1869,33 @@ return [
 >>>>>>> d9307de (fix: auto resolve conflict)
 =======
 =======
+=======
+
+
+- Definizione completa di gruppo, label, icona e ordinamento
+>>>>>>> c2dac53 (.)
 
 - Definizione completa di gruppo, label, icona e ordinamento 
 
 
 
- origin/dev
+
  e2a4c5d (.)
+<<<<<<< HEAD
 >>>>>>> 4ab3760 (.)
 >>>>>>> 7b67053 (fix: auto resolve conflict)
+=======
+ 50bb41c (fix: auto resolve conflict)
+
+
+- Definizione completa di gruppo, label, icona e ordinamento 
+
+
+
+
+ e2a4c5d (.)
+ 4ab3760 (.)
+>>>>>>> c2dac53 (.)
 # Laraxot Framework
 
 ## Panoramica
@@ -2125,14 +2204,14 @@ $query = sprintf('%s.%s', (string)$table, (string)$column);
 ```
 
 ## PHPStan Analisi Moduli
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 50bb41c (fix: auto resolve conflict)
-=======
 
->>>>>>> 4ab3760 (.)
+
+
+
+ 50bb41c (fix: auto resolve conflict)
+
+
+ 4ab3760 (.)
 
 <<<<<<< HEAD
 
@@ -2180,25 +2259,25 @@ Il file di configurazione principale (`phpstan.neon`) è già impostato per il l
 - **Activity**: Validato a livello 7
 - **Gdpr**: Validato a livello 7
 - **User**: Validato a livello 7
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
-=======
 
->>>>>>> 4ab3760 (.)
+
+
+
+
+
+ 4ab3760 (.)
 Risultati dell'ultima analisi per modulo:
 - **Xot**: Risolti tutti gli errori critici
 - **Fixcity**: In fase di ottimizzazione
 - **Media**: Nessun errore critico
 - **UI**: Ottimizzato per PHPStan level 8
 - **Tenant**: Risolti problemi di tipizzazione
-<<<<<<< HEAD
->>>>>>> e2a4c5d (.)
->>>>>>> 50bb41c (fix: auto resolve conflict)
-=======
+
  e2a4c5d (.)
->>>>>>> 4ab3760 (.)
+ 50bb41c (fix: auto resolve conflict)
+
+ e2a4c5d (.)
+ 4ab3760 (.)
 
 <<<<<<< HEAD
 Risultati dell'ultima analisi per modulo:
@@ -4335,6 +4414,7 @@ class MyRelationManager extends RelationManager
 
 use Modules\Xot\Filament\Resources\RelationManagers\XotBaseRelationManager;
 
+<<<<<<< HEAD
 use Modules\Xot\Filament\Resources\XotBaseResource\RelationManagers\XotBaseRelationManager;
  e2a4c5d (.)
 =======
@@ -4348,9 +4428,14 @@ use Modules\Xot\Filament\Resources\RelationManagers\XotBaseRelationManager;
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
-use Modules\Xot\Filament\Resources\RelationManagers\XotBaseRelationManager;
 =======
+
+
+>>>>>>> c2dac53 (.)
+use Modules\Xot\Filament\Resources\RelationManagers\XotBaseRelationManager;
+
 use Modules\Xot\Filament\Resources\XotBaseResource\RelationManager\XotBaseRelationManager;
+<<<<<<< HEAD
 >>>>>>> e2a4c5d (.)
 >>>>>>> 50bb41c (fix: auto resolve conflict)
 <<<<<<< HEAD
@@ -4362,6 +4447,15 @@ use Modules\Xot\Filament\Resources\XotBaseResource\RelationManagers\XotBaseRelat
  e2a4c5d (.)
 >>>>>>> 4ab3760 (.)
 >>>>>>> 7b67053 (fix: auto resolve conflict)
+=======
+ e2a4c5d (.)
+ 50bb41c (fix: auto resolve conflict)
+
+
+use Modules\Xot\Filament\Resources\XotBaseResource\RelationManagers\XotBaseRelationManager;
+ e2a4c5d (.)
+ 4ab3760 (.)
+>>>>>>> c2dac53 (.)
 class MyRelationManager extends XotBaseRelationManager
 ```
 
@@ -4932,19 +5026,19 @@ use Modules\Xot\Filament\Resources\Pages\XotBaseEditRecord;
 
 >>>>>>> 7b67053 (fix: auto resolve conflict)
 use Modules\Xot\Filament\Resources\RelationManagers\XotBaseRelationManager;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
+
+
+
 use Modules\Xot\Filament\Resources\RelationManagers\XotBaseRelationManager;
-=======
+
 use Modules\Xot\Filament\Resources\XotBaseResource\RelationManager\XotBaseRelationManager;
->>>>>>> e2a4c5d (.)
->>>>>>> 50bb41c (fix: auto resolve conflict)
-=======
+ e2a4c5d (.)
+ 50bb41c (fix: auto resolve conflict)
+
 
 use Modules\Xot\Filament\Resources\XotBaseResource\RelationManagers\XotBaseRelationManager;
  e2a4c5d (.)
->>>>>>> 4ab3760 (.)
+ 4ab3760 (.)
 
 use Modules\Xot\Filament\Resources\XotBaseResource\RelationManagers\XotBaseRelationManager;
  e2a4c5d (.)
@@ -5011,6 +5105,7 @@ class CommentsRelationManager extends XotBaseRelationManager
 
    use Modules\Xot\Filament\Resources\RelationManagers\XotBaseRelationManager;
 
+<<<<<<< HEAD
    use Modules\Xot\Filament\Resources\XotBaseResource\RelationManagers\XotBaseRelationManager;
  e2a4c5d (.)
 =======
@@ -5024,9 +5119,14 @@ class CommentsRelationManager extends XotBaseRelationManager
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
-   use Modules\Xot\Filament\Resources\RelationManagers\XotBaseRelationManager;
 =======
+
+
+>>>>>>> c2dac53 (.)
+   use Modules\Xot\Filament\Resources\RelationManagers\XotBaseRelationManager;
+
    use Modules\Xot\Filament\Resources\XotBaseResource\RelationManager\XotBaseRelationManager;
+<<<<<<< HEAD
 >>>>>>> e2a4c5d (.)
 >>>>>>> 50bb41c (fix: auto resolve conflict)
 <<<<<<< HEAD
@@ -5038,6 +5138,15 @@ class CommentsRelationManager extends XotBaseRelationManager
  e2a4c5d (.)
 >>>>>>> 4ab3760 (.)
 >>>>>>> 7b67053 (fix: auto resolve conflict)
+=======
+ e2a4c5d (.)
+ 50bb41c (fix: auto resolve conflict)
+
+
+   use Modules\Xot\Filament\Resources\XotBaseResource\RelationManagers\XotBaseRelationManager;
+ e2a4c5d (.)
+ 4ab3760 (.)
+>>>>>>> c2dac53 (.)
    ```
 
 2. **Organizzazione File**:
@@ -5091,6 +5200,7 @@ use Modules\Xot\Filament\RelationManagers\XotBaseRelationManager;
 
 use Modules\Xot\Filament\Resources\RelationManagers\XotBaseRelationManager;
 
+<<<<<<< HEAD
 use Modules\Xot\Filament\Resources\XotBaseResource\RelationManagers\XotBaseRelationManager;
  e2a4c5d (.)
 =======
@@ -5104,9 +5214,14 @@ use Modules\Xot\Filament\Resources\RelationManagers\XotBaseRelationManager;
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
-use Modules\Xot\Filament\Resources\RelationManagers\XotBaseRelationManager;
 =======
+
+
+>>>>>>> c2dac53 (.)
+use Modules\Xot\Filament\Resources\RelationManagers\XotBaseRelationManager;
+
 use Modules\Xot\Filament\Resources\XotBaseResource\RelationManager\XotBaseRelationManager;
+<<<<<<< HEAD
 >>>>>>> e2a4c5d (.)
 >>>>>>> 50bb41c (fix: auto resolve conflict)
 <<<<<<< HEAD
@@ -5118,6 +5233,15 @@ use Modules\Xot\Filament\Resources\XotBaseResource\RelationManagers\XotBaseRelat
  e2a4c5d (.)
 >>>>>>> 4ab3760 (.)
 >>>>>>> 7b67053 (fix: auto resolve conflict)
+=======
+ e2a4c5d (.)
+ 50bb41c (fix: auto resolve conflict)
+
+
+use Modules\Xot\Filament\Resources\XotBaseResource\RelationManagers\XotBaseRelationManager;
+ e2a4c5d (.)
+ 4ab3760 (.)
+>>>>>>> c2dac53 (.)
 ```
 
 ### ✅ Namespace Corretti da Usare
@@ -7160,6 +7284,7 @@ class MyRelationManager extends RelationManager
 
 use Modules\Xot\Filament\Resources\RelationManagers\XotBaseRelationManager;
 
+<<<<<<< HEAD
 use Modules\Xot\Filament\Resources\XotBaseResource\RelationManagers\XotBaseRelationManager;
  e2a4c5d (.)
 =======
@@ -7173,9 +7298,14 @@ use Modules\Xot\Filament\Resources\RelationManagers\XotBaseRelationManager;
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
-use Modules\Xot\Filament\Resources\RelationManagers\XotBaseRelationManager;
 =======
+
+
+>>>>>>> c2dac53 (.)
+use Modules\Xot\Filament\Resources\RelationManagers\XotBaseRelationManager;
+
 use Modules\Xot\Filament\Resources\XotBaseResource\RelationManager\XotBaseRelationManager;
+<<<<<<< HEAD
 >>>>>>> e2a4c5d (.)
 >>>>>>> 50bb41c (fix: auto resolve conflict)
 <<<<<<< HEAD
@@ -7187,6 +7317,15 @@ use Modules\Xot\Filament\Resources\XotBaseResource\RelationManagers\XotBaseRelat
  e2a4c5d (.)
 >>>>>>> 4ab3760 (.)
 >>>>>>> 7b67053 (fix: auto resolve conflict)
+=======
+ e2a4c5d (.)
+ 50bb41c (fix: auto resolve conflict)
+
+
+use Modules\Xot\Filament\Resources\XotBaseResource\RelationManagers\XotBaseRelationManager;
+ e2a4c5d (.)
+ 4ab3760 (.)
+>>>>>>> c2dac53 (.)
 class MyRelationManager extends XotBaseRelationManager
 ```
 
@@ -7757,19 +7896,19 @@ use Modules\Xot\Filament\Resources\Pages\XotBaseEditRecord;
 
 >>>>>>> 7b67053 (fix: auto resolve conflict)
 use Modules\Xot\Filament\Resources\RelationManagers\XotBaseRelationManager;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
+
+
+
 use Modules\Xot\Filament\Resources\RelationManagers\XotBaseRelationManager;
-=======
+
 use Modules\Xot\Filament\Resources\XotBaseResource\RelationManager\XotBaseRelationManager;
->>>>>>> e2a4c5d (.)
->>>>>>> 50bb41c (fix: auto resolve conflict)
-=======
+ e2a4c5d (.)
+ 50bb41c (fix: auto resolve conflict)
+
 
 use Modules\Xot\Filament\Resources\XotBaseResource\RelationManagers\XotBaseRelationManager;
  e2a4c5d (.)
->>>>>>> 4ab3760 (.)
+ 4ab3760 (.)
 
 use Modules\Xot\Filament\Resources\XotBaseResource\RelationManagers\XotBaseRelationManager;
  e2a4c5d (.)
@@ -7836,6 +7975,7 @@ class CommentsRelationManager extends XotBaseRelationManager
 
    use Modules\Xot\Filament\Resources\RelationManagers\XotBaseRelationManager;
 
+<<<<<<< HEAD
    use Modules\Xot\Filament\Resources\XotBaseResource\RelationManagers\XotBaseRelationManager;
  e2a4c5d (.)
 =======
@@ -7849,9 +7989,14 @@ class CommentsRelationManager extends XotBaseRelationManager
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
-   use Modules\Xot\Filament\Resources\RelationManagers\XotBaseRelationManager;
 =======
+
+
+>>>>>>> c2dac53 (.)
+   use Modules\Xot\Filament\Resources\RelationManagers\XotBaseRelationManager;
+
    use Modules\Xot\Filament\Resources\XotBaseResource\RelationManager\XotBaseRelationManager;
+<<<<<<< HEAD
 >>>>>>> e2a4c5d (.)
 >>>>>>> 50bb41c (fix: auto resolve conflict)
 <<<<<<< HEAD
@@ -7863,6 +8008,15 @@ class CommentsRelationManager extends XotBaseRelationManager
  e2a4c5d (.)
 >>>>>>> 4ab3760 (.)
 >>>>>>> 7b67053 (fix: auto resolve conflict)
+=======
+ e2a4c5d (.)
+ 50bb41c (fix: auto resolve conflict)
+
+
+   use Modules\Xot\Filament\Resources\XotBaseResource\RelationManagers\XotBaseRelationManager;
+ e2a4c5d (.)
+ 4ab3760 (.)
+>>>>>>> c2dac53 (.)
    ```
 
 2. **Organizzazione File**:
@@ -7916,6 +8070,7 @@ use Modules\Xot\Filament\RelationManagers\XotBaseRelationManager;
 
 use Modules\Xot\Filament\Resources\RelationManagers\XotBaseRelationManager;
 
+<<<<<<< HEAD
 use Modules\Xot\Filament\Resources\XotBaseResource\RelationManagers\XotBaseRelationManager;
  e2a4c5d (.)
 =======
@@ -7929,9 +8084,14 @@ use Modules\Xot\Filament\Resources\RelationManagers\XotBaseRelationManager;
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
-use Modules\Xot\Filament\Resources\RelationManagers\XotBaseRelationManager;
 =======
+
+
+>>>>>>> c2dac53 (.)
+use Modules\Xot\Filament\Resources\RelationManagers\XotBaseRelationManager;
+
 use Modules\Xot\Filament\Resources\XotBaseResource\RelationManager\XotBaseRelationManager;
+<<<<<<< HEAD
 >>>>>>> e2a4c5d (.)
 >>>>>>> 50bb41c (fix: auto resolve conflict)
 <<<<<<< HEAD
@@ -7943,6 +8103,15 @@ use Modules\Xot\Filament\Resources\XotBaseResource\RelationManagers\XotBaseRelat
  e2a4c5d (.)
 >>>>>>> 4ab3760 (.)
 >>>>>>> 7b67053 (fix: auto resolve conflict)
+=======
+ e2a4c5d (.)
+ 50bb41c (fix: auto resolve conflict)
+
+
+use Modules\Xot\Filament\Resources\XotBaseResource\RelationManagers\XotBaseRelationManager;
+ e2a4c5d (.)
+ 4ab3760 (.)
+>>>>>>> c2dac53 (.)
 ```
 
 ### ✅ Namespace Corretti da Usare
@@ -9285,6 +9454,7 @@ class ClientMapWidget extends Widget
 
   - Contact section
 
+<<<<<<< HEAD
   - Contact section 
  e2a4c5d (.)
 =======
@@ -9312,3 +9482,17 @@ class ClientMapWidget extends Widget
  e2a4c5d (.)
 >>>>>>> 4ab3760 (.)
 >>>>>>> 7b67053 (fix: auto resolve conflict)
+=======
+
+
+  - Contact section
+
+  - Contact section 
+ e2a4c5d (.)
+ 50bb41c (fix: auto resolve conflict)
+
+
+  - Contact section 
+ e2a4c5d (.)
+ 4ab3760 (.)
+>>>>>>> c2dac53 (.)

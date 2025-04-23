@@ -4,6 +4,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
  * Azione per ottenere tutti i modelli di un determinato modulo.
 =======
  * @see https://github.com/protonemedia/laravel-ffmpeg
@@ -11,12 +12,12 @@
 =======
 =======
 >>>>>>> 7b67053 (fix: auto resolve conflict)
- * @see https://github.com/protonemedia/laravel-ffmpeg
 =======
-<<<<<<< HEAD
+>>>>>>> c2dac53 (.)
+ * @see https://github.com/protonemedia/laravel-ffmpeg
  * Azione per ottenere tutti i modelli di un determinato modulo.
-=======
  * @see https://github.com/protonemedia/laravel-ffmpeg
+<<<<<<< HEAD
 >>>>>>> e2a4c5d (.)
 >>>>>>> 50bb41c (fix: auto resolve conflict)
 <<<<<<< HEAD
@@ -26,6 +27,9 @@
  * Azione per ottenere tutti i modelli di un determinato modulo.
 >>>>>>> 4ab3760 (.)
 >>>>>>> 7b67053 (fix: auto resolve conflict)
+=======
+ * Azione per ottenere tutti i modelli di un determinato modulo.
+>>>>>>> c2dac53 (.)
  */
 
 declare(strict_types=1);
@@ -46,6 +50,7 @@ class GetAllModelsByModuleNameAction
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
      * Ottiene tutti i modelli di un modulo specifico.
      *
      * @param string $moduleName Nome del modulo
@@ -57,19 +62,16 @@ class GetAllModelsByModuleNameAction
 =======
 =======
 >>>>>>> 7b67053 (fix: auto resolve conflict)
+=======
+>>>>>>> c2dac53 (.)
      * Execute the action.
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 4ab3760 (.)
      * Ottiene tutti i modelli di un modulo specifico.
      *
      * @param string $moduleName Nome del modulo
      *
      * @return array<string, class-string> Array di modelli del modulo
-<<<<<<< HEAD
-=======
      * Execute the action.
+<<<<<<< HEAD
 >>>>>>> e2a4c5d (.)
 >>>>>>> 50bb41c (fix: auto resolve conflict)
 <<<<<<< HEAD
@@ -78,6 +80,8 @@ class GetAllModelsByModuleNameAction
 =======
 >>>>>>> 4ab3760 (.)
 >>>>>>> 7b67053 (fix: auto resolve conflict)
+=======
+>>>>>>> c2dac53 (.)
      */
     public function execute(string $moduleName): array
     {
@@ -87,11 +91,8 @@ class GetAllModelsByModuleNameAction
         }
 
         $mod_path = $mod->getPath() . '/Models';
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
         $mod_path = $mod->getPath() . '/Models';
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
         $mod_path = $mod->getPath() . '/Models';
@@ -112,12 +113,17 @@ class GetAllModelsByModuleNameAction
 =======
 >>>>>>> 4ab3760 (.)
 >>>>>>> 7b67053 (fix: auto resolve conflict)
+=======
+        $mod_path = $mod->getPath().'/Models';
+        $mod_path = $mod->getPath().'/Models';
+>>>>>>> c2dac53 (.)
         $mod_path = str_replace(['\\', '/'], [\DIRECTORY_SEPARATOR, \DIRECTORY_SEPARATOR], $mod_path);
 
         $files = File::files($mod_path);
         $data = [];
         $ns = 'Modules\\' . $mod->getName() . '\\Models';
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
@@ -127,19 +133,22 @@ class GetAllModelsByModuleNameAction
 >>>>>>> d9307de (fix: auto resolve conflict)
 =======
 <<<<<<< HEAD
-        $ns = 'Modules\\' . $mod->getName() . '\\Models';
 =======
+>>>>>>> c2dac53 (.)
+        $ns = 'Modules\\' . $mod->getName() . '\\Models';
         $ns = 'Modules\\'.$mod->getName().'\\Models';
+<<<<<<< HEAD
 >>>>>>> origin/dev
 >>>>>>> origin/dev
 <<<<<<< HEAD
 >>>>>>> e5c56c3 (.)
 =======
 =======
-
-<<<<<<< HEAD
 =======
+>>>>>>> c2dac53 (.)
+
         $ns = 'Modules\\'.$mod->getName().'\\Models';
+<<<<<<< HEAD
 >>>>>>> e2a4c5d (.)
 >>>>>>> 50bb41c (fix: auto resolve conflict)
 <<<<<<< HEAD
@@ -148,6 +157,8 @@ class GetAllModelsByModuleNameAction
 =======
 >>>>>>> 4ab3760 (.)
 >>>>>>> 7b67053 (fix: auto resolve conflict)
+=======
+>>>>>>> c2dac53 (.)
         // con la barra davanti non va il search ?
         foreach ($files as $file) {
             $filename = $file->getRelativePathname();
@@ -155,6 +166,7 @@ class GetAllModelsByModuleNameAction
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 <<<<<<< HEAD
@@ -165,6 +177,8 @@ class GetAllModelsByModuleNameAction
 =======
 >>>>>>> 4ab3760 (.)
 >>>>>>> 7b67053 (fix: auto resolve conflict)
+=======
+>>>>>>> c2dac53 (.)
 
             if (Str::endsWith($filename, $ext)) {
                 $tmp = new \stdClass();
@@ -181,11 +195,14 @@ class GetAllModelsByModuleNameAction
 
                 // 434 Parameter #1 $argument of class ReflectionClass constructor expects class-string<T of object>|T of object, string given.
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 >>>>>>> 50bb41c (fix: auto resolve conflict)
 >>>>>>> d9307de (fix: auto resolve conflict)
+=======
+>>>>>>> c2dac53 (.)
             // dddx(['ext' => $file->getExtension(), get_class_methods($file)]);
             if (Str::endsWith($filename, $ext)) {
                 $tmp = new \stdClass();
@@ -194,38 +211,32 @@ class GetAllModelsByModuleNameAction
                 /**
                  * @var class-string
                  */
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/dev
                 $class = $ns . '\\' . $name;
                 //if ($tmp !== null) {
                 $tmp->class = $class;
                 $name = Str::snake($name);
                 $tmp->name = $name;
                 //}
-<<<<<<< HEAD
-=======
-=======
                 $class = $ns.'\\'.$name;
                 if ($tmp !== null) {
                     $tmp->class = $class;
                     $name = Str::snake($name);
                     $tmp->name = $name;
                 }
->>>>>>> origin/dev
->>>>>>> origin/dev
                 // 434    Parameter #1 $argument of class ReflectionClass constructor expects class-string<T of object>|T of object, string given.
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> e5c56c3 (.)
 =======
 =======
+=======
+>>>>>>> c2dac53 (.)
                 $class = $ns.'\\'.$name;
                 $tmp->class = $class;
                 $name = Str::snake($name);
                 $tmp->name = $name;
                 // 434    Parameter #1 $argument of class ReflectionClass constructor expects class-string<T of object>|T of object, string given.
+<<<<<<< HEAD
 >>>>>>> e2a4c5d (.)
 >>>>>>> 50bb41c (fix: auto resolve conflict)
 <<<<<<< HEAD
@@ -234,6 +245,8 @@ class GetAllModelsByModuleNameAction
 =======
 >>>>>>> 4ab3760 (.)
 >>>>>>> 7b67053 (fix: auto resolve conflict)
+=======
+>>>>>>> c2dac53 (.)
                 try {
                     $reflection_class = new \ReflectionClass($tmp->class);
                     if (! $reflection_class->isAbstract()) {
@@ -243,6 +256,7 @@ class GetAllModelsByModuleNameAction
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
                     // Ignoriamo le classi che non possono essere riflesse
 =======
 >>>>>>> e5c56c3 (.)
@@ -262,6 +276,10 @@ class GetAllModelsByModuleNameAction
                     // Ignoriamo le classi che non possono essere riflesse
 >>>>>>> 4ab3760 (.)
 >>>>>>> 7b67053 (fix: auto resolve conflict)
+=======
+                    // Ignoriamo le classi che non possono essere riflesse
+                    // Ignoriamo le classi che non possono essere riflesse
+>>>>>>> c2dac53 (.)
                 }
             }
         }

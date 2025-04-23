@@ -17,6 +17,7 @@ class ExportButton
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
             
@@ -24,12 +25,12 @@ class ExportButton
 =======
 =======
 >>>>>>> 7b67053 (fix: auto resolve conflict)
-            
 =======
-<<<<<<< HEAD
+>>>>>>> c2dac53 (.)
             
-=======
+            
             ->label('')
+<<<<<<< HEAD
 >>>>>>> e2a4c5d (.)
 >>>>>>> 50bb41c (fix: auto resolve conflict)
 <<<<<<< HEAD
@@ -39,6 +40,9 @@ class ExportButton
 
 >>>>>>> 4ab3760 (.)
 >>>>>>> 7b67053 (fix: auto resolve conflict)
+=======
+
+>>>>>>> c2dac53 (.)
             ->tooltip('export XLS')
             ->icon('heroicon-o-inbox-arrow-down')
             // ->visible(null != $year)

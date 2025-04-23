@@ -17,16 +17,8 @@ use Webmozart\Assert\Assert;
 
 /**
  * @property class-string<\Modules\Xot\Filament\Resources\XotBaseResource> $resource
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
  * @property class-string<\Modules\Xot\Filament\Resources\XotBaseResource> $resource
-=======
  * @property class-string<Model> $resource
->>>>>>> e2a4c5d (.)
->>>>>>> 50bb41c (fix: auto resolve conflict)
-=======
->>>>>>> 4ab3760 (.)
  */
 abstract class XotBaseRelationManager extends RelationManager
 {
@@ -37,18 +29,10 @@ abstract class XotBaseRelationManager extends RelationManager
     /**
      * @var class-string<\Modules\Xot\Filament\Resources\XotBaseResource>
      */
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
     /**
      * @var class-string<\Modules\Xot\Filament\Resources\XotBaseResource>
      */
-=======
     /** @var class-string<XotBaseResource> */
->>>>>>> e2a4c5d (.)
->>>>>>> 50bb41c (fix: auto resolve conflict)
-=======
->>>>>>> 4ab3760 (.)
     protected static string $resource;
 
     public static function getModuleName(): string
@@ -72,16 +56,8 @@ abstract class XotBaseRelationManager extends RelationManager
     }
 
     final public function form(Form $form): Form
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
     final public function form(Form $form): Form
-=======
     public function form(Form $form): Form
->>>>>>> e2a4c5d (.)
->>>>>>> 50bb41c (fix: auto resolve conflict)
-=======
->>>>>>> 4ab3760 (.)
     {
         return $form
             ->schema($this->getFormSchema());
@@ -91,16 +67,8 @@ abstract class XotBaseRelationManager extends RelationManager
      * Get form schema.
      *
      * @return array<string|int, \Filament\Forms\Components\Component>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
      * @return array<string|int, \Filament\Forms\Components\Component>
-=======
      * @return array<string, \Filament\Forms\Components\Component>
->>>>>>> e2a4c5d (.)
->>>>>>> 50bb41c (fix: auto resolve conflict)
-=======
->>>>>>> 4ab3760 (.)
      */
     public function getFormSchema(): array
     {
@@ -109,13 +77,6 @@ abstract class XotBaseRelationManager extends RelationManager
 
     public function getListTableColumns(): array
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 50bb41c (fix: auto resolve conflict)
-=======
->>>>>>> 4ab3760 (.)
         $pages = $this->getResource()::getPages();
         if (!is_array($pages) || !isset($pages['index'])) {
             return [];
@@ -131,16 +92,8 @@ abstract class XotBaseRelationManager extends RelationManager
             return [];
         }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
         $index = Arr::get($this->getResource()::getPages(), 'index');
         $index_page = $index->getPage();
->>>>>>> e2a4c5d (.)
->>>>>>> 50bb41c (fix: auto resolve conflict)
-=======
->>>>>>> 4ab3760 (.)
         $columns = app($index_page)->getListTableColumns();
 
         return $columns;
@@ -173,13 +126,6 @@ abstract class XotBaseRelationManager extends RelationManager
     //     return [];
     // }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 50bb41c (fix: auto resolve conflict)
-=======
->>>>>>> 4ab3760 (.)
 
     /**
      * Get the resource class.
@@ -246,10 +192,6 @@ abstract class XotBaseRelationManager extends RelationManager
         }
 
         return $resourceClass;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
     /**
      * Get the resource class.
      *
@@ -276,9 +218,5 @@ abstract class XotBaseRelationManager extends RelationManager
 
             return $resource_class;
         }
->>>>>>> e2a4c5d (.)
->>>>>>> 50bb41c (fix: auto resolve conflict)
-=======
->>>>>>> 4ab3760 (.)
     }
 }

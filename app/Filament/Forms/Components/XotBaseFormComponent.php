@@ -33,31 +33,14 @@ abstract class XotBaseFormComponent extends Field
     {
         $label = parent::getLabel();
         if ($label === null) {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
         if ($label === null) {
-=======
         if (null === $label) {
->>>>>>> e2a4c5d (.)
->>>>>>> 50bb41c (fix: auto resolve conflict)
-=======
->>>>>>> 4ab3760 (.)
             return Str::title($this->getName());
         }
         if ($label instanceof \Illuminate\Contracts\Support\Htmlable) {
             return $label->toHtml();
         }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
 
->>>>>>> e2a4c5d (.)
->>>>>>> 50bb41c (fix: auto resolve conflict)
-=======
->>>>>>> 4ab3760 (.)
         return (string) $label;
     }
 

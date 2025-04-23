@@ -19,17 +19,11 @@ use Illuminate\Support\Str;
 use function Safe\preg_replace;
 
 use Spatie\QueueableAction\QueueableAction;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 50bb41c (fix: auto resolve conflict)
-=======
->>>>>>> 4ab3760 (.)
 use Webmozart\Assert\Assert;
 
 /**
  * Classe per estrarre proprietà dai metodi di relazione di un modello.
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
  *
@@ -54,19 +48,18 @@ use Webmozart\Assert\Assert;
  *
 >>>>>>> 4ab3760 (.)
 >>>>>>> 7b67053 (fix: auto resolve conflict)
+=======
+ * 
+
+/**
+ *
+>>>>>>> c2dac53 (.)
  * @see https://github.com/mpociot/laravel-test-factory-helper/blob/master/src/Console/GenerateCommand.php#L213
  */
 class GetPropertiesFromMethodsByModelAction
 {
     use QueueableAction;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 50bb41c (fix: auto resolve conflict)
-=======
->>>>>>> 4ab3760 (.)
     /**
      * Estrae le proprietà dai metodi di relazione del modello.
      *
@@ -250,10 +243,6 @@ class GetPropertiesFromMethodsByModelAction
             } catch (\Exception $e) {
                 // Se c'è un errore nell'analisi del metodo, lo ignoriamo e passiamo al successivo
                 continue;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
     public function execute(Model $model): array
     {
         $methods = get_class_methods($model);
@@ -291,15 +280,12 @@ class GetPropertiesFromMethodsByModelAction
                         }
                     }
                 }
->>>>>>> e2a4c5d (.)
->>>>>>> 50bb41c (fix: auto resolve conflict)
-=======
->>>>>>> 4ab3760 (.)
             }
         }
 
         return $data;
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -320,6 +306,10 @@ class GetPropertiesFromMethodsByModelAction
 
 >>>>>>> 4ab3760 (.)
 >>>>>>> 7b67053 (fix: auto resolve conflict)
+=======
+    
+
+>>>>>>> c2dac53 (.)
     /**
      * Estrae le relazioni belongsTo dal codice.
      *
@@ -440,12 +430,4 @@ class GetPropertiesFromMethodsByModelAction
             return;
         }
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> e2a4c5d (.)
->>>>>>> 50bb41c (fix: auto resolve conflict)
-=======
->>>>>>> 4ab3760 (.)
 }

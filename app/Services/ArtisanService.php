@@ -145,18 +145,10 @@ class ArtisanService
 
         //$urls = is_array($matches[1]) ? array_unique($matches[1]) : [];
         $urls = array_unique($matches[1]);
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
         //$urls = is_array($matches[1]) ? array_unique($matches[1]) : [];
         $urls = array_unique($matches[1]);
-=======
         $urls = isset($matches[1]) && is_array($matches[1]) ? array_unique($matches[1]) : [];
 
->>>>>>> e2a4c5d (.)
->>>>>>> 50bb41c (fix: auto resolve conflict)
-=======
->>>>>>> 4ab3760 (.)
         $view_params = [
             'view' => $view,
             'lang' => app()->getLocale(),

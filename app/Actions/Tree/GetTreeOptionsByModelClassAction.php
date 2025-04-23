@@ -35,16 +35,8 @@ class GetTreeOptionsByModelClassAction
         foreach ($rows as $row) {
             /* @var HasRecursiveRelationshipsContract $row */
             $this->options[$row->getKey()] = is_string($row) ? $row : (string) $row->getLabel();
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
             $this->options[$row->getKey()] = is_string($row) ? $row : (string) $row->getLabel();
-=======
             $this->options[$row->getKey()] = (string) $row->getLabel();
->>>>>>> e2a4c5d (.)
->>>>>>> 50bb41c (fix: auto resolve conflict)
-=======
->>>>>>> 4ab3760 (.)
             $this->parse($row);
         }
 

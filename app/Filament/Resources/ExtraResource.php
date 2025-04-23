@@ -9,13 +9,6 @@ use Filament\Forms\Components\TextInput;
 use Modules\Xot\Filament\Resources\ExtraResource\Pages;
 use Modules\Xot\Models\Extra;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 50bb41c (fix: auto resolve conflict)
-=======
->>>>>>> 4ab3760 (.)
 
 
 
@@ -33,25 +26,10 @@ use Modules\Xot\Filament\Resources\XotBaseResource\RelationManagers\XotBaseRelat
 
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> e2a4c5d (.)
->>>>>>> 50bb41c (fix: auto resolve conflict)
-=======
->>>>>>> 4ab3760 (.)
 class ExtraResource extends XotBaseResource
 {
     protected static ?string $model = Extra::class;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 50bb41c (fix: auto resolve conflict)
-=======
->>>>>>> 4ab3760 (.)
     /**
      * Get the form schema for the resource.
 <<<<<<< HEAD
@@ -81,10 +59,6 @@ class ExtraResource extends XotBaseResource
                 ->numeric(),
 
             'value' => KeyValue::make('value')
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
     public static function getFormSchema(): array
     {
         return [
@@ -101,10 +75,6 @@ class ExtraResource extends XotBaseResource
                 ->numeric(),
 
             KeyValue::make('value')
->>>>>>> e2a4c5d (.)
->>>>>>> 50bb41c (fix: auto resolve conflict)
-=======
->>>>>>> 4ab3760 (.)
                 ->keyLabel('Chiave')
                 ->valueLabel('Valore')
                 ->reorderable()

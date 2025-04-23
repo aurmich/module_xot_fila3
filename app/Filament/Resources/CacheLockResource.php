@@ -8,13 +8,6 @@ use Filament\Forms\Components\TextInput;
 use Modules\Xot\Filament\Resources\CacheLockResource\Pages;
 use Modules\Xot\Models\CacheLock;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 50bb41c (fix: auto resolve conflict)
-=======
->>>>>>> 4ab3760 (.)
 
 
 
@@ -32,25 +25,10 @@ use Modules\Xot\Filament\Resources\XotBaseResource\RelationManagers\XotBaseRelat
 
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> e2a4c5d (.)
->>>>>>> 50bb41c (fix: auto resolve conflict)
-=======
->>>>>>> 4ab3760 (.)
 class CacheLockResource extends XotBaseResource
 {
     protected static ?string $model = CacheLock::class;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 50bb41c (fix: auto resolve conflict)
-=======
->>>>>>> 4ab3760 (.)
     /**
      * Get the form schema for the resource.
      *
@@ -68,10 +46,6 @@ class CacheLockResource extends XotBaseResource
                 ->maxLength(255),
 
             'expiration' => TextInput::make('expiration')
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
     public static function getFormSchema(): array
     {
         return [
@@ -84,10 +58,6 @@ class CacheLockResource extends XotBaseResource
                 ->maxLength(255),
 
             TextInput::make('expiration')
->>>>>>> e2a4c5d (.)
->>>>>>> 50bb41c (fix: auto resolve conflict)
-=======
->>>>>>> 4ab3760 (.)
                 ->required()
                 ->numeric(),
         ];

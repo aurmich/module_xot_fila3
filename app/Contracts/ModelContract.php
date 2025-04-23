@@ -27,16 +27,8 @@ use Illuminate\Support\Carbon;
  * @property bool               $table_enable
  * @property PivotContract|null $pivot
  * @property string $tennant_name
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
  * @property string $tennant_name
-=======
  * @property string             $tennant_name
->>>>>>> e2a4c5d (.)
->>>>>>> 50bb41c (fix: auto resolve conflict)
-=======
->>>>>>> 4ab3760 (.)
  *
  * @method mixed     getKey()
  * @method string    getRouteKey()
@@ -52,6 +44,7 @@ use Illuminate\Support\Carbon;
  * @method mixed     attach($params)
  * @method array     treeLabel()
  * @method array     treeSons()
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
  * @method int       treeSonsCount()
@@ -72,6 +65,10 @@ use Illuminate\Support\Carbon;
  * @method int       treeSonsCount()
 >>>>>>> 50bb41c (fix: auto resolve conflict)
 >>>>>>> d9307de (fix: auto resolve conflict)
+=======
+ * @method int       treeSonsCount()
+ * @method int       treeSonsCount()
+>>>>>>> c2dac53 (.)
  * @method array     toArray()
  * @method BelongsTo user()
  * @method mixed     getAttributeValue(string $key)
@@ -131,16 +128,8 @@ interface ModelContract
      * @param  mixed  $operator
      * @param  mixed  $value
      * @param  string $boolean
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
      * @param  string $boolean
-=======
      * @param  string  $boolean
->>>>>>> e2a4c5d (.)
->>>>>>> 50bb41c (fix: auto resolve conflict)
-=======
->>>>>>> 4ab3760 (.)
      * @return $this
 
     public function where($column, $operator = null, $value = null, $boolean = 'and');
@@ -150,16 +139,8 @@ interface ModelContract
      * Execute the query and get the first result or throw an exception.
      *
      * @param  array|string $columns
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
      * @param  array|string $columns
-=======
      * @param  array|string  $columns
->>>>>>> e2a4c5d (.)
->>>>>>> 50bb41c (fix: auto resolve conflict)
-=======
->>>>>>> 4ab3760 (.)
      * @return \Illuminate\Database\Eloquent\Model|static
      *
      * @throws \Illuminate\Database\Eloquent\ModelNotFoundException<\Illuminate\Database\Eloquent\Model>

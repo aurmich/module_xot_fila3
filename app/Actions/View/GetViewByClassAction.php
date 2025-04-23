@@ -15,13 +15,6 @@ class GetViewByClassAction
 
     /**
      * "Modules\UI\Filament\Widgets\GroupWidget" => "ui::filament.widgets.group"
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 50bb41c (fix: auto resolve conflict)
-=======
->>>>>>> 4ab3760 (.)
      * @return view-string
      */
     public function execute(string $class, string $suffix = ''): string
@@ -29,32 +22,17 @@ class GetViewByClassAction
         $module = Str::of($class)->betweenFirst('Modules\\', '\\')->toString();
         $module_low = Str::of($module)->lower()->toString();
         $after = Str::of($class)
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
      */
     public function execute(string $class, string $suffix=''): string
     {
         $module = Str::of($class)->betweenFirst('Modules\\', '\\')->toString();
         $module_low = Str::of($module)->lower()->toString();
         $after=Str::of($class)
->>>>>>> e2a4c5d (.)
->>>>>>> 50bb41c (fix: auto resolve conflict)
-=======
->>>>>>> 4ab3760 (.)
             ->after('Modules\\'.$module.'\\')
             ->explode('\\')
             ->toArray();
 
         $mapped = Arr::map($after, function (string $value, int $key) use ($after) {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 50bb41c (fix: auto resolve conflict)
-=======
->>>>>>> 4ab3760 (.)
             if ($key > 0 && isset($after[$key - 1])) {
                 /** @var mixed $prevValue */
                 $prevValue = $after[$key - 1];
@@ -84,6 +62,7 @@ class GetViewByClassAction
                     // Cast sicuro per valori scalari (int, float, bool)
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
                    // Utilizziamo il cast esplicito con controllo di tipo per PHPStan Level 9
                    $prevValueStr = is_scalar($prevValue) ? (string) $prevValue : '';
@@ -93,21 +72,16 @@ class GetViewByClassAction
 =======
 >>>>>>> d9307de (fix: auto resolve conflict)
 <<<<<<< HEAD
+=======
+>>>>>>> c2dac53 (.)
                    // $prevValueStr = is_string($prevValue) ? $prevValue : (string) $prevValue;
                    $prevValueStr = strval( $prevValue);
-=======
-<<<<<<< HEAD
                    // $prevValueStr = is_string($prevValue) ? $prevValue : (string) $prevValue;
                    $prevValueStr = strval( $prevValue);
-=======
                     $prevValueStr = is_string($prevValue) ? $prevValue : (string) $prevValue;
->>>>>>> origin/dev
->>>>>>> origin/dev
-=======
 
                    // Utilizziamo il cast esplicito con controllo di tipo per PHPStan Level 9
                    $prevValueStr = is_scalar($prevValue) ? (string) $prevValue : '';
->>>>>>> 50bb41c (fix: auto resolve conflict)
                 }
 <<<<<<< HEAD
                 
@@ -148,10 +122,6 @@ class GetViewByClassAction
         }
 
         return $view;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
             if($key>0 && isset($after[$key-1])) {
                 $singular = Str::of($after[$key-1])->singular()->toString();
                 if(Str::endsWith($value, $singular)) {
@@ -166,9 +136,5 @@ class GetViewByClassAction
 
         return $view;
         
->>>>>>> e2a4c5d (.)
->>>>>>> 50bb41c (fix: auto resolve conflict)
-=======
->>>>>>> 4ab3760 (.)
     }
 }

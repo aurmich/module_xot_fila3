@@ -23,16 +23,8 @@ class GenerateModelByModelClass
      * @param string $model_class the class name of the model
      *
      * @return string
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
      * @return string
-=======
      * @return void
->>>>>>> e2a4c5d (.)
->>>>>>> 50bb41c (fix: auto resolve conflict)
-=======
->>>>>>> 4ab3760 (.)
      */
     public function execute(string $model_class): string
     {
@@ -85,16 +77,8 @@ class GenerateModelByModelClass
      * @return void
      */
     public function generate(string $model_class): void
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
     public function generate(string $model_class): void
-=======
     public function generate(string $model_class)
->>>>>>> e2a4c5d (.)
->>>>>>> 50bb41c (fix: auto resolve conflict)
-=======
->>>>>>> 4ab3760 (.)
     {
         $model_name = class_basename($model_class);
         $module_name = Str::of($model_class)->between('Modules\\', '\Models\\')->toString();

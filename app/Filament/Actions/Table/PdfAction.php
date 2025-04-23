@@ -23,6 +23,7 @@ class PdfAction extends Action
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
             
@@ -30,12 +31,12 @@ class PdfAction extends Action
 =======
 =======
 >>>>>>> 7b67053 (fix: auto resolve conflict)
-            
 =======
-<<<<<<< HEAD
+>>>>>>> c2dac53 (.)
             
-=======
+            
             ->label('')
+<<<<<<< HEAD
 >>>>>>> e2a4c5d (.)
 >>>>>>> 50bb41c (fix: auto resolve conflict)
 <<<<<<< HEAD
@@ -45,6 +46,9 @@ class PdfAction extends Action
 
 >>>>>>> 4ab3760 (.)
 >>>>>>> 7b67053 (fix: auto resolve conflict)
+=======
+
+>>>>>>> c2dac53 (.)
             ->tooltip('pdf')
             ->openUrlInNewTab()
             // ->icon('heroicon-o-cloud-arrow-down')

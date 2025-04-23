@@ -18,6 +18,7 @@ class CopyFromLastYearButton
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
             
@@ -25,12 +26,12 @@ class CopyFromLastYearButton
 =======
 =======
 >>>>>>> 7b67053 (fix: auto resolve conflict)
-            
 =======
-<<<<<<< HEAD
+>>>>>>> c2dac53 (.)
             
-=======
+            
             ->label('')
+<<<<<<< HEAD
 >>>>>>> e2a4c5d (.)
 >>>>>>> 50bb41c (fix: auto resolve conflict)
 <<<<<<< HEAD
@@ -40,6 +41,9 @@ class CopyFromLastYearButton
 
 >>>>>>> 4ab3760 (.)
 >>>>>>> 7b67053 (fix: auto resolve conflict)
+=======
+
+>>>>>>> c2dac53 (.)
             ->tooltip('copy from last year')
             ->icon('heroicon-o-document-duplicate')
             ->visible(null !== $year)

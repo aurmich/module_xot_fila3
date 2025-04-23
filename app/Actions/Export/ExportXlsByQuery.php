@@ -6,19 +6,11 @@ namespace Modules\Xot\Actions\Export;
 
 use Illuminate\Database\Eloquent\Builder;
 use Maatwebsite\Excel\Facades\Excel;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 use Illuminate\Database\Eloquent\Builder;
 use Maatwebsite\Excel\Facades\Excel;
-=======
 use Illuminate\Database\Eloquent\Builder as EloquentBuilder;
 use Illuminate\Database\Query\Builder as QueryBuilder;
 use Illuminate\Http\Response;
->>>>>>> e2a4c5d (.)
->>>>>>> 50bb41c (fix: auto resolve conflict)
-=======
->>>>>>> 4ab3760 (.)
 use Modules\Xot\Exports\QueryExport;
 use Spatie\QueueableAction\QueueableAction;
 // use Staudenmeir\LaravelCte\Query\Builder as CteBuilder;
@@ -28,13 +20,6 @@ class ExportXlsByQuery
 {
     use QueueableAction;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 50bb41c (fix: auto resolve conflict)
-=======
->>>>>>> 4ab3760 (.)
     /**
      * Esporta i risultati di una query in Excel.
      *
@@ -63,18 +48,19 @@ class ExportXlsByQuery
         $stringFields = array_map(function ($field) {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
             return strval($field);
 =======
 =======
 >>>>>>> d9307de (fix: auto resolve conflict)
 <<<<<<< HEAD
-            return strval($field);
 =======
-<<<<<<< HEAD
+>>>>>>> c2dac53 (.)
             return strval($field);
-=======
+            return strval($field);
             return is_string($field) ? $field : (string) $field;
+<<<<<<< HEAD
 >>>>>>> origin/dev
 >>>>>>> origin/dev
 <<<<<<< HEAD
@@ -85,6 +71,10 @@ class ExportXlsByQuery
             return strval($field);
 >>>>>>> 50bb41c (fix: auto resolve conflict)
 >>>>>>> d9307de (fix: auto resolve conflict)
+=======
+
+            return strval($field);
+>>>>>>> c2dac53 (.)
         }, array_values($fields));
 
         $export = new QueryExport(
@@ -94,13 +84,16 @@ class ExportXlsByQuery
         );
 <<<<<<< HEAD
 <<<<<<< HEAD
-=======
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> c2dac53 (.)
 
-=======
         
+<<<<<<< HEAD
 >>>>>>> origin/dev
 >>>>>>> origin/dev
 <<<<<<< HEAD
@@ -109,6 +102,8 @@ class ExportXlsByQuery
 =======
 >>>>>>> 50bb41c (fix: auto resolve conflict)
 >>>>>>> d9307de (fix: auto resolve conflict)
+=======
+>>>>>>> c2dac53 (.)
         // Note: QueryExport doesn't accept a limit parameter directly
         // If limit is needed, apply it to the query before passing to the exporter
         if ($limit !== null) {
@@ -116,10 +111,6 @@ class ExportXlsByQuery
         }
 
         return Excel::download($export, $filename);
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
     public function execute(
         QueryBuilder|EloquentBuilder $query,
         string $filename = 'test.xlsx',
@@ -130,9 +121,5 @@ class ExportXlsByQuery
         // $queryExport->queue($filename); // Serialization of 'PDO' is not allowed
 
         return $queryExport->download($filename);
->>>>>>> e2a4c5d (.)
->>>>>>> 50bb41c (fix: auto resolve conflict)
-=======
->>>>>>> 4ab3760 (.)
     }
 }

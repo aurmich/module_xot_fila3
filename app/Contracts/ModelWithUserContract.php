@@ -21,16 +21,8 @@ use Illuminate\Support\Carbon;
  * @property string|null        $title
  * @property PivotContract|null $pivot
  * @property string $tennant_name
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
  * @property string $tennant_name
-=======
  * @property string             $tennant_name
->>>>>>> e2a4c5d (.)
->>>>>>> 50bb41c (fix: auto resolve conflict)
-=======
->>>>>>> 4ab3760 (.)
  * @property UserContract|null  $user
  *
  * @method mixed     getKey()
@@ -50,6 +42,7 @@ use Illuminate\Support\Carbon;
  * @method array     treeSons()
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
  * @method int       treeSonsCount()
 =======
 =======
@@ -68,6 +61,10 @@ use Illuminate\Support\Carbon;
  * @method int       treeSonsCount()
 >>>>>>> 50bb41c (fix: auto resolve conflict)
 >>>>>>> d9307de (fix: auto resolve conflict)
+=======
+ * @method int       treeSonsCount()
+ * @method int       treeSonsCount()
+>>>>>>> c2dac53 (.)
  * @method array     toArray()
  * @method BelongsTo user()
  *
@@ -77,6 +74,7 @@ use Illuminate\Support\Carbon;
  */
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 interface ModelWithUserContract
 {
 }
@@ -84,14 +82,14 @@ interface ModelWithUserContract
 =======
 >>>>>>> d9307de (fix: auto resolve conflict)
 <<<<<<< HEAD
-interface ModelWithUserContract {}
 =======
-<<<<<<< HEAD
+>>>>>>> c2dac53 (.)
 interface ModelWithUserContract {}
-=======
+interface ModelWithUserContract {}
 interface ModelWithUserContract
 {
 }
+<<<<<<< HEAD
 >>>>>>> origin/dev
 >>>>>>> origin/dev
 <<<<<<< HEAD
@@ -103,3 +101,8 @@ interface ModelWithUserContract
 }
 >>>>>>> 50bb41c (fix: auto resolve conflict)
 >>>>>>> d9307de (fix: auto resolve conflict)
+=======
+interface ModelWithUserContract
+{
+}
+>>>>>>> c2dac53 (.)

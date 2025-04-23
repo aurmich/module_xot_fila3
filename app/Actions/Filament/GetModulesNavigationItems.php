@@ -15,17 +15,9 @@ use Webmozart\Assert\Assert;
 /**
  * Classe per gestire gli elementi di navigazione per i moduli.
  */
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 /**
  * Classe per gestire gli elementi di navigazione per i moduli.
  */
-=======
->>>>>>> e2a4c5d (.)
->>>>>>> 50bb41c (fix: auto resolve conflict)
-=======
->>>>>>> 4ab3760 (.)
 class GetModulesNavigationItems
 {
     use QueueableAction;
@@ -34,33 +26,18 @@ class GetModulesNavigationItems
      * Ottiene gli elementi di navigazione per i moduli.
      *
      * @return array<int, NavigationItem> Array di elementi di navigazione
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
      * Ottiene gli elementi di navigazione per i moduli.
      *
      * @return array<int, NavigationItem> Array di elementi di navigazione
-=======
      * Undocumented function.
      *
      * @return array<NavigationItem>
->>>>>>> e2a4c5d (.)
->>>>>>> 50bb41c (fix: auto resolve conflict)
-=======
->>>>>>> 4ab3760 (.)
      */
     public function execute(): array
     {
         $navs = [];
 
         $modules = TenantService::allModules();
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 50bb41c (fix: auto resolve conflict)
-=======
->>>>>>> 4ab3760 (.)
         Assert::isArray($modules, 'TenantService::allModules() deve restituire un array');
 
         foreach ($modules as $module) {
@@ -180,10 +157,6 @@ class GetModulesNavigationItems
 
 >>>>>>> 7b67053 (fix: auto resolve conflict)
             // Creiamo l'elemento di navigazione
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
 
         foreach ($modules as $module) {
             // if (! Filament::auth()->check()) {
@@ -207,10 +180,6 @@ class GetModulesNavigationItems
             Assert::string($icon = $config['icon'] ?? 'heroicon-o-question-mark-circle');
             $role = $module_low.'::admin';
             Assert::integer($navigation_sort = $config['navigation_sort'] ?? 1);
->>>>>>> e2a4c5d (.)
->>>>>>> 50bb41c (fix: auto resolve conflict)
-=======
->>>>>>> 4ab3760 (.)
             $nav = NavigationItem::make($module)
                 ->url('/'.$module_low.'/admin')
                 ->icon($icon)
@@ -218,44 +187,21 @@ class GetModulesNavigationItems
                 ->sort($navigation_sort)
                 ->visible(
                     static function () use ($role): bool {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
                     static function () use ($role): bool {
-=======
                     static function () use ($role) {
->>>>>>> e2a4c5d (.)
->>>>>>> 50bb41c (fix: auto resolve conflict)
-=======
->>>>>>> 4ab3760 (.)
                         $user = Filament::auth()->user();
                         if (null === $user) {
                             return false;
                         }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 50bb41c (fix: auto resolve conflict)
-=======
->>>>>>> 4ab3760 (.)
                         // Verifichiamo che il metodo hasRole esista
                         if (!method_exists($user, 'hasRole')) {
                             return false;
                         }
 
                         return (bool) $user->hasRole($role);
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
                         // Call to an undefined method Illuminate\Foundation\Auth\User::hasRole()
                         return $user->hasRole($role);
->>>>>>> e2a4c5d (.)
->>>>>>> 50bb41c (fix: auto resolve conflict)
-=======
->>>>>>> 4ab3760 (.)
                     }
                 );
 

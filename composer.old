@@ -21,16 +21,8 @@
         "doctrine/dbal": "*",
         "fidum/laravel-eloquent-morph-to-one": "*",
         "filament/filament": "^3.3",
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
         "filament/filament": "^3.3",
-=======
         "filament/filament": "^3.2",
->>>>>>> e2a4c5d (.)
->>>>>>> 50bb41c (fix: auto resolve conflict)
-=======
->>>>>>> 4ab3760 (.)
         "filament/spatie-laravel-media-library-plugin": "^3.2",
         "filament/spatie-laravel-translatable-plugin": "^3.2",
         "guzzlehttp/guzzle": "*",

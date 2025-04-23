@@ -26,6 +26,7 @@
 <<<<<<< HEAD
 
         <div x-show="$wire.isRunning" class="animate-pulse">
+<<<<<<< HEAD
             <span class="text-green-400">></span>
 =======
         
@@ -41,9 +42,12 @@
 =======
 =======
 <<<<<<< HEAD
-            <span class="text-green-400"</span>
 =======
+            <span class="text-green-400"</span>
+>>>>>>> c2dac53 (.)
+            <span class="text-green-400"</span>
             <span class="text-green-400">></span>
+<<<<<<< HEAD
 >>>>>>> e2a4c5d (.)
 >>>>>>> 50bb41c (fix: auto resolve conflict)
 <<<<<<< HEAD
@@ -53,6 +57,9 @@
             <span class="text-green-400">></span>
 >>>>>>> 4ab3760 (.)
 >>>>>>> 7b67053 (fix: auto resolve conflict)
+=======
+            <span class="text-green-400">></span>
+>>>>>>> c2dac53 (.)
             <span class="animate-blink">_</span>
         </div>
     </div>

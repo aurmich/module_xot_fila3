@@ -20,20 +20,12 @@ use Webmozart\Assert\Assert;
  * @property string $currency
  * @property float              $price
  * @property string $price_complete
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
  * @property string $currency
  * @property float              $price
  * @property string $price_complete
-=======
  * @property string             $currency
  * @property float              $price
  * @property string             $price_complete
->>>>>>> e2a4c5d (.)
->>>>>>> 50bb41c (fix: auto resolve conflict)
-=======
->>>>>>> 4ab3760 (.)
  * @property int                $qty
  * @property ExtraContract|null $extra
  */
@@ -63,27 +55,12 @@ trait HasExtraTrait
      */
     public function getExtra(string $name)
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 50bb41c (fix: auto resolve conflict)
-=======
->>>>>>> 4ab3760 (.)
 
         if($this->extra==null){
             return null;
         }
         $value = $this->extra->extra_attributes->get($name);
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
         $value = $this->extra?->extra_attributes->get($name);
->>>>>>> e2a4c5d (.)
->>>>>>> 50bb41c (fix: auto resolve conflict)
-=======
->>>>>>> 4ab3760 (.)
         if (
             is_array($value) || is_int($value)
             // || is_float($value)
@@ -112,19 +89,11 @@ trait HasExtraTrait
         Assert::notNull($extra);
         $extra->extra_attributes->set($name, $value);
         $extra->save();
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
         Assert::notNull($extra);
         $extra->extra_attributes->set($name, $value);
         $extra->save();
-=======
 
         $extra?->extra_attributes->set($name, $value);
         $extra?->save();
->>>>>>> e2a4c5d (.)
->>>>>>> 50bb41c (fix: auto resolve conflict)
-=======
->>>>>>> 4ab3760 (.)
     }
 }

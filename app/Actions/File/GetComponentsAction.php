@@ -10,6 +10,7 @@ use Modules\Xot\Datas\ComponentFileData;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 use function Safe\json_decode;
@@ -18,15 +19,15 @@ use function Safe\json_decode;
 =======
 =======
 >>>>>>> 7b67053 (fix: auto resolve conflict)
+=======
+>>>>>>> c2dac53 (.)
 
 use function Safe\json_decode;
 
-=======
+
+use function Safe\json_decode;
+
 <<<<<<< HEAD
-=======
-
-use function Safe\json_decode;
-
 >>>>>>> e2a4c5d (.)
 >>>>>>> 50bb41c (fix: auto resolve conflict)
 <<<<<<< HEAD
@@ -35,6 +36,8 @@ use function Safe\json_decode;
 =======
 >>>>>>> 4ab3760 (.)
 >>>>>>> 7b67053 (fix: auto resolve conflict)
+=======
+>>>>>>> c2dac53 (.)
 use Spatie\LaravelData\DataCollection;
 use Spatie\QueueableAction\QueueableAction;
 use Webmozart\Assert\Assert;
@@ -64,6 +67,7 @@ class GetComponentsAction
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         //$force_recreate = true;
         $exists = File::exists($components_json);
         if ($exists && ! $force_recreate) {
@@ -79,11 +83,14 @@ class GetComponentsAction
 >>>>>>> d9307de (fix: auto resolve conflict)
 =======
 >>>>>>> 7b67053 (fix: auto resolve conflict)
+=======
+>>>>>>> c2dac53 (.)
 
         $exists = File::exists($components_json);
         if ($exists && ! $force_recreate) {
             Assert::string($content = File::get($components_json), '['.__LINE__.']['.class_basename(static::class).']');
             $comps = json_decode($content, false);
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> e5c56c3 (.)
 =======
@@ -91,6 +98,8 @@ class GetComponentsAction
 <<<<<<< HEAD
 =======
 >>>>>>> 4ab3760 (.)
+=======
+>>>>>>> c2dac53 (.)
         //$force_recreate = true;
         $exists = File::exists($components_json);
         if ($exists && ! $force_recreate) {
@@ -101,8 +110,11 @@ class GetComponentsAction
                 $comps = [];
             }
 
+<<<<<<< HEAD
 >>>>>>> 50bb41c (fix: auto resolve conflict)
 >>>>>>> d9307de (fix: auto resolve conflict)
+=======
+>>>>>>> c2dac53 (.)
             if (! is_array($comps)) {
                 $comps = [];
             }
@@ -113,16 +125,16 @@ class GetComponentsAction
         $comps = [];
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
         
 >>>>>>> e5c56c3 (.)
 =======
+=======
+>>>>>>> c2dac53 (.)
         
-=======
 
-<<<<<<< HEAD
-=======
 
         $exists = File::exists($components_json);
         // $force_recreate = true;
@@ -143,6 +155,7 @@ class GetComponentsAction
         $files = File::allFiles($path);
 
         $comps = [];
+<<<<<<< HEAD
 >>>>>>> e2a4c5d (.)
 >>>>>>> 50bb41c (fix: auto resolve conflict)
 <<<<<<< HEAD
@@ -151,17 +164,12 @@ class GetComponentsAction
 =======
 >>>>>>> 4ab3760 (.)
 >>>>>>> 7b67053 (fix: auto resolve conflict)
+=======
+>>>>>>> c2dac53 (.)
         foreach ($files as $file) {
             if ('php' !== $file->getExtension()) {
                 continue;
             }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 50bb41c (fix: auto resolve conflict)
-=======
->>>>>>> 4ab3760 (.)
 
             $class_name = $file->getFilenameWithoutExtension();
             $relative_path = $file->getRelativePath();
@@ -178,16 +186,21 @@ class GetComponentsAction
                     ->implode('.');
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
                 
 >>>>>>> e5c56c3 (.)
 =======
-                
 =======
+>>>>>>> c2dac53 (.)
+                
 
+<<<<<<< HEAD
 >>>>>>> 50bb41c (fix: auto resolve conflict)
 >>>>>>> d9307de (fix: auto resolve conflict)
+=======
+>>>>>>> c2dac53 (.)
                 $comp_name = $prefix . $piece . '.' . Str::slug(Str::snake(Str::replace('\\', ' ', $class_name)));
                 $comp_ns = $namespace . '\\' . $relative_path . '\\' . $class_name;
                 $class_name = $relative_path . '\\' . $class_name;
@@ -199,16 +212,21 @@ class GetComponentsAction
                 }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
                 
 >>>>>>> e5c56c3 (.)
 =======
-                
 =======
+>>>>>>> c2dac53 (.)
+                
 
+<<<<<<< HEAD
 >>>>>>> 50bb41c (fix: auto resolve conflict)
 >>>>>>> d9307de (fix: auto resolve conflict)
+=======
+>>>>>>> c2dac53 (.)
                 /** @var class-string<object> $comp_ns */
                 $reflection = new \ReflectionClass($comp_ns);
                 if ($reflection->isAbstract()) {
@@ -236,6 +254,7 @@ class GetComponentsAction
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         try {
             $content = json_encode($comps, JSON_THROW_ON_ERROR | JSON_PRETTY_PRINT);
         } catch (\JsonException $e) {
@@ -245,10 +264,11 @@ class GetComponentsAction
 =======
 =======
 >>>>>>> d9307de (fix: auto resolve conflict)
+=======
+>>>>>>> c2dac53 (.)
         $content = \Safe\json_encode($comps, JSON_THROW_ON_ERROR);
 >>>>>>> e5c56c3 (.)
         $old_content = File::exists($components_json) ? File::get($components_json) : '';
-=======
         try {
             $content = json_encode($comps, JSON_THROW_ON_ERROR | JSON_PRETTY_PRINT);
         } catch (\JsonException $e) {
@@ -256,8 +276,6 @@ class GetComponentsAction
         }
 
         $old_content = File::exists($components_json) ? File::get($components_json) : '';
-<<<<<<< HEAD
-=======
             $tmp = (object) [];
             $class_name = $file->getFilenameWithoutExtension();
 
@@ -317,27 +335,15 @@ class GetComponentsAction
         if (File::exists($components_json)) {
             $old_content = File::get($components_json);
         }
->>>>>>> e2a4c5d (.)
->>>>>>> 50bb41c (fix: auto resolve conflict)
-=======
->>>>>>> 4ab3760 (.)
 
         if ($old_content !== $content) {
             File::put($components_json, $content);
         }
 
         return ComponentFileData::collection($comps);
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
         return ComponentFileData::collection($comps);
-=======
         $res = ComponentFileData::collection($comps);
 
         return $res;
->>>>>>> e2a4c5d (.)
->>>>>>> 50bb41c (fix: auto resolve conflict)
-=======
->>>>>>> 4ab3760 (.)
     }
 }

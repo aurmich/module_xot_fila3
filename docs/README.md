@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
@@ -15,6 +16,15 @@
 
 >>>>>>> 4ab3760 (.)
 >>>>>>> 7b67053 (fix: auto resolve conflict)
+=======
+
+
+
+
+
+
+ 4ab3760 (.)
+>>>>>>> c2dac53 (.)
 ## 🎯 Perché Xot?
 
 Xot è il modulo core del framework che fornisce le funzionalità fondamentali e le astrazioni necessarie per l'architettura modulare. È stato creato per:
@@ -96,6 +106,7 @@ Vedi [[contributing.md|CONTRIBUTING]] per le linee guida sulla contribuzione.
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
  e2a4c5d (.)
 =======
@@ -114,6 +125,16 @@ Vedi [[contributing.md|CONTRIBUTING]] per le linee guida sulla contribuzione.
  e2a4c5d (.)
 >>>>>>> 4ab3760 (.)
 >>>>>>> 7b67053 (fix: auto resolve conflict)
+=======
+
+
+ e2a4c5d (.)
+ 50bb41c (fix: auto resolve conflict)
+
+
+ e2a4c5d (.)
+ 4ab3760 (.)
+>>>>>>> c2dac53 (.)
 ## Panoramica
 Il modulo Xot fornisce le funzionalità base e le utilities utilizzate da tutti gli altri moduli dell'applicazione.
 
@@ -220,6 +241,7 @@ Il modulo è configurabile tramite:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> e5c56c3 (.)
@@ -236,6 +258,16 @@ Il modulo è configurabile tramite:
 
 >>>>>>> 4ab3760 (.)
 >>>>>>> 7b67053 (fix: auto resolve conflict)
+=======
+
+
+
+
+ 50bb41c (fix: auto resolve conflict)
+
+
+ 4ab3760 (.)
+>>>>>>> c2dac53 (.)
 - `/docs/activity/`: Sistema di logging
 
 ## Documentazione PHPStan
@@ -244,8 +276,9 @@ Il modulo è configurabile tramite:
 
 ## Documentazione Filament
 
-<<<<<<< HEAD
+
 - [Linee Guida per getInfolistSchema](./filament/INFOLIST_SCHEMA_GUIDELINES.md) - Guida completa per l'implementazione corretta del metodo getInfolistSchema, con focus sull'uso delle chiavi stringa negli array 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 - `/docs/activity/`: Sistema di logging 
@@ -268,3 +301,15 @@ Il modulo è configurabile tramite:
  e2a4c5d (.)
 >>>>>>> 4ab3760 (.)
 >>>>>>> 7b67053 (fix: auto resolve conflict)
+=======
+
+- [Linee Guida per getInfolistSchema](./filament/INFOLIST_SCHEMA_GUIDELINES.md) - Guida completa per l'implementazione corretta del metodo getInfolistSchema, con focus sull'uso delle chiavi stringa negli array 
+
+- `/docs/activity/`: Sistema di logging 
+
+ e2a4c5d (.)
+ 50bb41c (fix: auto resolve conflict)
+
+ e2a4c5d (.)
+ 4ab3760 (.)
+>>>>>>> c2dac53 (.)

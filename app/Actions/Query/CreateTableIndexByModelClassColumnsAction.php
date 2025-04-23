@@ -68,18 +68,10 @@ class CreateTableIndexByModelClassColumnsAction
      *
      * @param string $connectionName database connection name
      * @param string $tableName      name of the table
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
      * @param string $connectionName database connection name
      * @param string $tableName      name of the table
-=======
      * @param string   $connectionName database connection name
      * @param string   $tableName      name of the table
->>>>>>> e2a4c5d (.)
->>>>>>> 50bb41c (fix: auto resolve conflict)
-=======
->>>>>>> 4ab3760 (.)
      * @param string[] $columns        columns to validate
      *
      * @throws \RuntimeException
@@ -149,16 +141,8 @@ class CreateTableIndexByModelClassColumnsAction
      * Generate a unique index name based on the table and columns.
      *
      * @param string $tableName name of the table
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
      * @param string $tableName name of the table
-=======
      * @param string   $tableName name of the table
->>>>>>> e2a4c5d (.)
->>>>>>> 50bb41c (fix: auto resolve conflict)
-=======
->>>>>>> 4ab3760 (.)
      * @param string[] $columns   columns to include in the index
      */
     private function generateIndexName(string $tableName, array $columns): string

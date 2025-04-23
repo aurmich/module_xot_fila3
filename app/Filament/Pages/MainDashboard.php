@@ -10,6 +10,7 @@ use Webmozart\Assert\Assert;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Foundation\Auth\User;
 =======
@@ -32,6 +33,12 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Foundation\Auth\User;
 >>>>>>> 4ab3760 (.)
 >>>>>>> 7b67053 (fix: auto resolve conflict)
+=======
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Foundation\Auth\User;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Foundation\Auth\User;
+>>>>>>> c2dac53 (.)
 
 /**
  * Class Modules\Xot\Filament\Pages\MainDashboard.
@@ -53,6 +60,7 @@ class MainDashboard extends Dashboard
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         $user = Auth::user();
         Assert::notNull($user, '['.__LINE__.']['.class_basename($this).']');
 
@@ -62,14 +70,14 @@ class MainDashboard extends Dashboard
 =======
 =======
 >>>>>>> 7b67053 (fix: auto resolve conflict)
-        Assert::notNull($user = auth()->user(), '['.__LINE__.']['.class_basename($this).']');
 =======
-<<<<<<< HEAD
+>>>>>>> c2dac53 (.)
+        Assert::notNull($user = auth()->user(), '['.__LINE__.']['.class_basename($this).']');
         $user = Auth::user();
         Assert::notNull($user, '['.__LINE__.']['.class_basename($this).']');
 
-=======
         Assert::notNull($user = auth()->user(), '['.__LINE__.']['.class_basename($this).']');
+<<<<<<< HEAD
 >>>>>>> e2a4c5d (.)
 >>>>>>> 50bb41c (fix: auto resolve conflict)
 <<<<<<< HEAD
@@ -81,6 +89,11 @@ class MainDashboard extends Dashboard
 
 >>>>>>> 4ab3760 (.)
 >>>>>>> 7b67053 (fix: auto resolve conflict)
+=======
+        $user = Auth::user();
+        Assert::notNull($user, '['.__LINE__.']['.class_basename($this).']');
+
+>>>>>>> c2dac53 (.)
         $modules = $user->roles->filter(
             static function ($item) {
                 return Str::endsWith($item->name, '::admin');
@@ -90,12 +103,9 @@ class MainDashboard extends Dashboard
         if (1 === $modules->count()) {
             Assert::notNull($module_first = $modules->first(), '['.__LINE__.']['.class_basename($this).']');
             $panel_name = $module_first->name;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
             Assert::notNull($module_first = $modules->first(), '['.__LINE__.']['.class_basename($this).']');
             $panel_name = $module_first->name;
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
             Assert::notNull($module_first = $modules->first(), '['.__LINE__.']['.class_basename($this).']');
@@ -119,6 +129,12 @@ class MainDashboard extends Dashboard
 =======
 >>>>>>> 4ab3760 (.)
 >>>>>>> 7b67053 (fix: auto resolve conflict)
+=======
+            Assert::notNull($modules->first(), '['.__LINE__.']['.class_basename($this).']');
+            $panel_name = $modules->first()?->name;
+            Assert::notNull($modules->first(), '['.__LINE__.']['.class_basename($this).']');
+            $panel_name = $modules->first()->name;
+>>>>>>> c2dac53 (.)
             $module_name = Str::before($panel_name, '::admin');
             $url = '/'.$module_name.'/admin';
             redirect($url);

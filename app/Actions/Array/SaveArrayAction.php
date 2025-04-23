@@ -12,13 +12,6 @@ class SaveArrayAction
 {
     use QueueableAction;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 50bb41c (fix: auto resolve conflict)
-=======
->>>>>>> 4ab3760 (.)
     public function execute(array $data, string $filename, string $format = 'php'): bool
     {
         return match ($format) {
@@ -26,10 +19,6 @@ class SaveArrayAction
             'php' => app(SavePhpArrayAction::class)->execute($data, $filename),
             default => throw new \InvalidArgumentException("Formato non supportato: {$format}")
         };
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
     public function execute(array $data, string $filename): void
     {
         $content = var_export($data, true);
@@ -41,9 +30,5 @@ class SaveArrayAction
         // $content = str_replace('stdClass::__set_state', '(object)', $content);
         File::makeDirectory(\dirname((string) $filename), 0775, true, true);
         File::put($filename, $content);
->>>>>>> e2a4c5d (.)
->>>>>>> 50bb41c (fix: auto resolve conflict)
-=======
->>>>>>> 4ab3760 (.)
     }
 }

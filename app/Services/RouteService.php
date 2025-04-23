@@ -19,13 +19,6 @@ use Illuminate\Support\Str;
 class RouteService
 {
     /**
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 50bb41c (fix: auto resolve conflict)
-=======
->>>>>>> 4ab3760 (.)
      * Verifica se l'utente è in modalità amministrazione.
      *
      * @param array<string,string> $params Parametri aggiuntivi
@@ -40,10 +33,6 @@ class RouteService
         }
 
         // Se il primo segmento dell'URL è 'admin', siamo in modalità amministrazione
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
      * Summary of inAdmin.
      *
      * @param array<string,string> $params
@@ -60,19 +49,10 @@ class RouteService
             return config()->get('in_admin');
         }
         */
->>>>>>> e2a4c5d (.)
->>>>>>> 50bb41c (fix: auto resolve conflict)
-=======
->>>>>>> 4ab3760 (.)
         if ('admin' === Request::segment(1)) {
             return true;
         }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 50bb41c (fix: auto resolve conflict)
         // Verifichiamo un caso speciale per le richieste Livewire
         $segments = Request::segments();
 <<<<<<< HEAD
@@ -87,15 +67,9 @@ class RouteService
                'livewire' === $segments[0] && 
 >>>>>>> e5c56c3 (.)
                session('in_admin', false) === true;
-<<<<<<< HEAD
-=======
-=======
         $segments = Request::segments();
 
         return (is_countable($segments) ? \count($segments) : 0) > 0 && 'livewire' === $segments[0] && true === session('in_admin');
->>>>>>> e2a4c5d (.)
->>>>>>> 50bb41c (fix: auto resolve conflict)
-=======
         // Verifichiamo un caso speciale per le richieste Livewire
         $segments = Request::segments();
 
@@ -103,7 +77,6 @@ class RouteService
         return (is_countable($segments) ? \count($segments) : 0) > 0 &&
                'livewire' === $segments[0] &&
                session('in_admin', false) === true;
->>>>>>> 4ab3760 (.)
     }
 
     /**
@@ -214,16 +187,8 @@ class RouteService
             //return $tmp;
 
             $container_root = $parents->first()?->row;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
             $container_root = $parents->first()?->row;
-=======
             $container_root = $parents->first()->row;
->>>>>>> e2a4c5d (.)
->>>>>>> 50bb41c (fix: auto resolve conflict)
-=======
->>>>>>> 4ab3760 (.)
         }
 
         //$containers_class = self::getContainersClass();

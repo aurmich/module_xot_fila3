@@ -10,17 +10,9 @@ use Illuminate\Support\Facades\File;
 =======
 >>>>>>> e5c56c3 (.)
 
-=======
-<<<<<<< HEAD
 use Webmozart\Assert\Assert;
 use Illuminate\Support\Facades\File;
 
-<<<<<<< HEAD
-=======
->>>>>>> e2a4c5d (.)
->>>>>>> 50bb41c (fix: auto resolve conflict)
-=======
->>>>>>> 4ab3760 (.)
 class GetModulePathByGeneratorAction
 {
     public function execute(string $moduleName, string $generatorPath): string
@@ -43,8 +35,6 @@ class GetModulePathByGeneratorAction
 =======
 >>>>>>> e5c56c3 (.)
         return $res;
-=======
-<<<<<<< HEAD
         $res = module_path($moduleName, $relativePath);
         Assert::string($res);
 
@@ -58,12 +48,6 @@ class GetModulePathByGeneratorAction
         }
         */
         return $res;
-<<<<<<< HEAD
-=======
         return module_path($moduleName, $relativePath);
->>>>>>> e2a4c5d (.)
->>>>>>> 50bb41c (fix: auto resolve conflict)
-=======
->>>>>>> 4ab3760 (.)
     }
 }

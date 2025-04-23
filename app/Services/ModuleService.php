@@ -84,20 +84,20 @@ class ModuleService
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
                 // dddx(['name' => $name, 'name1' => $file->getFilenameWithoutExtension()]);
 =======
 =======
 >>>>>>> d9307de (fix: auto resolve conflict)
 =======
 >>>>>>> 7b67053 (fix: auto resolve conflict)
+=======
+>>>>>>> c2dac53 (.)
 
-<<<<<<< HEAD
                 
-=======
-<<<<<<< HEAD
                 
-=======
                 // dddx(['name' => $name, 'name1' => $file->getFilenameWithoutExtension()]);
+<<<<<<< HEAD
 >>>>>>> origin/dev
 >>>>>>> origin/dev
 <<<<<<< HEAD
@@ -106,13 +106,15 @@ class ModuleService
 =======
 <<<<<<< HEAD
 =======
-
->>>>>>> e2a4c5d (.)
 =======
->>>>>>> 4ab3760 (.)
+>>>>>>> c2dac53 (.)
+
                 // dddx(['name' => $name, 'name1' => $file->getFilenameWithoutExtension()]);
+<<<<<<< HEAD
 >>>>>>> 50bb41c (fix: auto resolve conflict)
 >>>>>>> d9307de (fix: auto resolve conflict)
+=======
+>>>>>>> c2dac53 (.)
                 /**
                  * @var class-string
                  */
@@ -120,6 +122,7 @@ class ModuleService
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
                 //Strict comparison using === between stdClass and null will always evaluate to false.
                 //if ($tmp === null) {
@@ -135,17 +138,17 @@ class ModuleService
 =======
 <<<<<<< HEAD
 >>>>>>> origin/dev
+=======
+>>>>>>> c2dac53 (.)
                 //Strict comparison using === between stdClass and null will always evaluate to false.
 
                 //if ($tmp === null) {
                 //    continue;
                 //}
-<<<<<<< HEAD
-=======
-=======
                 if ($tmp === null) {
                     continue;
                 }
+<<<<<<< HEAD
 >>>>>>> origin/dev
 >>>>>>> origin/dev
 <<<<<<< HEAD
@@ -154,31 +157,28 @@ class ModuleService
 =======
 =======
 >>>>>>> 4ab3760 (.)
+=======
+>>>>>>> c2dac53 (.)
 
                 //Strict comparison using === between stdClass and null will always evaluate to false.
                 //if ($tmp === null) {
                 //    continue;
                 //}
 
+<<<<<<< HEAD
 >>>>>>> 50bb41c (fix: auto resolve conflict)
 >>>>>>> d9307de (fix: auto resolve conflict)
+=======
+>>>>>>> c2dac53 (.)
                 $tmp->class = $class;
                 $name = Str::snake($name);
                 $tmp->name = $name;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
                 $tmp->class = $class;
 
                 $name = Str::snake($name);
                 $tmp->name = $name;
                 // 434    Parameter #1 $argument of class ReflectionClass constructor expects class-string<T of object>|T of object, string given.
->>>>>>> e2a4c5d (.)
->>>>>>> 50bb41c (fix: auto resolve conflict)
-=======
->>>>>>> 4ab3760 (.)
                 try {
                     $reflection_class = new \ReflectionClass($tmp->class);
                     if (! $reflection_class->isAbstract()) {
@@ -186,15 +186,7 @@ class ModuleService
                     }
                 } catch (\Exception) {
                     // Ignore reflection errors
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
                     // Ignore reflection errors
-=======
->>>>>>> e2a4c5d (.)
->>>>>>> 50bb41c (fix: auto resolve conflict)
-=======
->>>>>>> 4ab3760 (.)
                 }
             }
         }

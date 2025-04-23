@@ -4,13 +4,6 @@ declare(strict_types=1);
 
 namespace Modules\Xot\Models;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 50bb41c (fix: auto resolve conflict)
-=======
->>>>>>> 4ab3760 (.)
 use Sushi\Sushi;
 use Webmozart\Assert\Assert;
 use InvalidArgumentException;
@@ -71,10 +64,6 @@ use Illuminate\Database\Eloquent\Model;
  * @method static \Illuminate\Database\Eloquent\Builder<static>|InformationSchemaTable whereUPDATETIME($value)
  * @method static \Illuminate\Database\Eloquent\Builder<static>|InformationSchemaTable whereVERSION($value)
  * @mixin \Eloquent
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Schema;
@@ -84,10 +73,6 @@ use Sushi\Sushi;
 /**
  * Represents a table in the INFORMATION_SCHEMA.TABLES.
  * Provides metadata and statistics about database tables.
->>>>>>> e2a4c5d (.)
->>>>>>> 50bb41c (fix: auto resolve conflict)
-=======
->>>>>>> 4ab3760 (.)
  */
 class InformationSchemaTable extends Model
 {
@@ -97,31 +82,15 @@ class InformationSchemaTable extends Model
      * The connection name for the model.
      */
     protected $connection = 'information_schema';
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
     protected $connection = 'information_schema';
-=======
     protected $connection = 'mysql';
->>>>>>> e2a4c5d (.)
->>>>>>> 50bb41c (fix: auto resolve conflict)
-=======
->>>>>>> 4ab3760 (.)
 
     /**
      * The table associated with the model.
      */
     protected $table = 'tables';
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
     protected $table = 'tables';
-=======
     protected $table = 'information_schema_tables';
->>>>>>> e2a4c5d (.)
->>>>>>> 50bb41c (fix: auto resolve conflict)
-=======
->>>>>>> 4ab3760 (.)
 
     /**
      * Indicates if the model should be timestamped.
@@ -131,13 +100,6 @@ class InformationSchemaTable extends Model
     /**
      * The attributes that are mass assignable.
      *
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 50bb41c (fix: auto resolve conflict)
-=======
->>>>>>> 4ab3760 (.)
      * @var list<string>
      */
     protected $fillable = [
@@ -159,10 +121,6 @@ class InformationSchemaTable extends Model
         'checksum',
         'create_options',
         'table_comment',
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
      * @var array<string>
      */
     protected $fillable = [
@@ -187,10 +145,6 @@ class InformationSchemaTable extends Model
         'CHECKSUM',
         'CREATE_OPTIONS',
         'TABLE_COMMENT',
->>>>>>> e2a4c5d (.)
->>>>>>> 50bb41c (fix: auto resolve conflict)
-=======
->>>>>>> 4ab3760 (.)
     ];
 
     /**
@@ -293,28 +247,13 @@ class InformationSchemaTable extends Model
             ->toArray();
 
         /** @var array<int, array<string, mixed>> */
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
         /** @var array<int, array<string, mixed>> */
-=======
->>>>>>> e2a4c5d (.)
->>>>>>> 50bb41c (fix: auto resolve conflict)
-=======
->>>>>>> 4ab3760 (.)
         return $results;
     }
 
     /**
      * Get table statistics from Sushi or information_schema as fallback.
      *
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 50bb41c (fix: auto resolve conflict)
-=======
->>>>>>> 4ab3760 (.)
      * @param string $schema The schema name
      * @param string $table The table name
      */
@@ -349,10 +288,6 @@ class InformationSchemaTable extends Model
             ->where('TABLE_NAME', '=', $table)
             ->first();
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
      * @param string $tableName The name of the table
      * @param string $database The database name
      */
@@ -375,37 +310,18 @@ class InformationSchemaTable extends Model
         
         $result = DB::selectOne($query, [$database, $tableName]);
 
->>>>>>> e2a4c5d (.)
->>>>>>> 50bb41c (fix: auto resolve conflict)
-=======
->>>>>>> 4ab3760 (.)
         if (!$result) {
             return null;
         }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 50bb41c (fix: auto resolve conflict)
-=======
->>>>>>> 4ab3760 (.)
         // Creiamo una nuova istanza e popoliamola manualmente
         $instance = new self();
         foreach ((array) $result as $key => $value) {
             $instance->setAttribute($key, $value);
         }
         return $instance;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
         // Crea una nuova istanza del modello con i dati
         return static::newFromBuilder((array) $result);
->>>>>>> e2a4c5d (.)
->>>>>>> 50bb41c (fix: auto resolve conflict)
-=======
->>>>>>> 4ab3760 (.)
     }
 
     /**
@@ -455,13 +371,6 @@ class InformationSchemaTable extends Model
      */
     public static function getAccurateRowCount(string $tableName, string $database): int
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 50bb41c (fix: auto resolve conflict)
-=======
->>>>>>> 4ab3760 (.)
         $stats = static::getTableStats($database, $tableName);
         if ($stats === null) {
             return 0;
@@ -473,10 +382,6 @@ class InformationSchemaTable extends Model
         }
         Assert::numeric($rows);
         return (int) $rows;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
         $stats = static::getTableStats($tableName, $database);
         
         if (!$stats) {
@@ -495,10 +400,6 @@ class InformationSchemaTable extends Model
         }
 
         return (int) $stats->TABLE_ROWS;
->>>>>>> e2a4c5d (.)
->>>>>>> 50bb41c (fix: auto resolve conflict)
-=======
->>>>>>> 4ab3760 (.)
     }
 
     /**
@@ -509,13 +410,6 @@ class InformationSchemaTable extends Model
      */
     public static function getTableSize(string $tableName, string $database): int
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 50bb41c (fix: auto resolve conflict)
-=======
->>>>>>> 4ab3760 (.)
         $stats = static::getTableStats($database, $tableName);
         if ($stats === null) {
             return 0;
@@ -545,10 +439,6 @@ class InformationSchemaTable extends Model
 
     /**
      * Refresh the cache for a specific table.
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
         $stats = static::getTableStats($tableName, $database);
         
         if (!$stats) {
@@ -560,31 +450,16 @@ class InformationSchemaTable extends Model
 
     /**
      * Refresh the Sushi cache for a specific table.
->>>>>>> e2a4c5d (.)
->>>>>>> 50bb41c (fix: auto resolve conflict)
-=======
->>>>>>> 4ab3760 (.)
      *
      * @param string $tableName The name of the table
      * @param string $database The database name
      */
     public static function refreshCache(string $tableName, string $database): void
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 50bb41c (fix: auto resolve conflict)
-=======
->>>>>>> 4ab3760 (.)
         DB::connection('mysql')
             ->statement("ANALYZE TABLE `{$database}`.`{$tableName}`");
     }
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
         $query = "SELECT * FROM information_schema.TABLES 
                  WHERE TABLE_SCHEMA = ? AND TABLE_NAME = ?";
         
@@ -602,7 +477,3 @@ class InformationSchemaTable extends Model
         }
     }
 } 
->>>>>>> e2a4c5d (.)
->>>>>>> 50bb41c (fix: auto resolve conflict)
-=======
->>>>>>> 4ab3760 (.)

@@ -1,12 +1,12 @@
 https://fly.io/laravel-bytes/console-applications-with-laravel-zero/
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 50bb41c (fix: auto resolve conflict)
-=======
 
->>>>>>> 4ab3760 (.)
+
+
+
+ 50bb41c (fix: auto resolve conflict)
+
+
+ 4ab3760 (.)
 
 <<<<<<< HEAD
 
@@ -33,18 +33,24 @@ namespace Modules\Xot\Console\Commands;
 ```php
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 namespace Modules\Xot\app\Console\Commands;
 =======
 =======
 >>>>>>> d9307de (fix: auto resolve conflict)
 <<<<<<< HEAD
+=======
+
+
+>>>>>>> c2dac53 (.)
 namespace Modules\Xot\Console\Commands;
 namespace Modules\Xot\app\Console\Commands;
-=======
+
+
+namespace Modules\Xot\Console\Commands;
+
+namespace Modules\Xot\app\Console\Commands;
 <<<<<<< HEAD
-namespace Modules\Xot\Console\Commands;
-=======
-namespace Modules\Xot\app\Console\Commands;
 >>>>>>> origin/dev
 >>>>>>> origin/dev
 <<<<<<< HEAD
@@ -54,6 +60,13 @@ namespace Modules\Xot\app\Console\Commands;
 namespace Modules\Xot\app\Console\Commands;
 >>>>>>> 50bb41c (fix: auto resolve conflict)
 >>>>>>> d9307de (fix: auto resolve conflict)
+=======
+
+
+
+namespace Modules\Xot\app\Console\Commands;
+ 50bb41c (fix: auto resolve conflict)
+>>>>>>> c2dac53 (.)
 ```
 
 ## Esempio di Comando Console
@@ -103,6 +116,7 @@ class DatabaseSchemaExportCommand extends Command
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
  e2a4c5d (.)
 =======
@@ -122,3 +136,15 @@ class DatabaseSchemaExportCommand extends Command
  e2a4c5d (.)
 >>>>>>> 4ab3760 (.)
 >>>>>>> 7b67053 (fix: auto resolve conflict)
+=======
+
+
+
+
+ e2a4c5d (.)
+ 50bb41c (fix: auto resolve conflict)
+
+
+ e2a4c5d (.)
+ 4ab3760 (.)
+>>>>>>> c2dac53 (.)

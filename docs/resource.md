@@ -349,6 +349,7 @@ class ListMyRecords extends XotBaseListRecords
 
             Auth::user()->can('resource.read'),
 
+<<<<<<< HEAD
             Auth::user()?->can('resource.read'),
  e2a4c5d (.)
 =======
@@ -376,6 +377,20 @@ class ListMyRecords extends XotBaseListRecords
  e2a4c5d (.)
 >>>>>>> 4ab3760 (.)
 >>>>>>> 7b67053 (fix: auto resolve conflict)
+=======
+
+
+            Auth::user()->can('resource.read'),
+
+            Auth::user()?->can('resource.read'),
+ e2a4c5d (.)
+ 50bb41c (fix: auto resolve conflict)
+
+
+            Auth::user()?->can('resource.read'),
+ e2a4c5d (.)
+ 4ab3760 (.)
+>>>>>>> c2dac53 (.)
             403
         );
     }
@@ -390,6 +405,7 @@ class ListMyRecords extends XotBaseListRecords
 
                 ->visible(fn () => Auth::user()->can('resource.write')),
 
+<<<<<<< HEAD
                 ->visible(fn () => Auth::user()?->can('resource.write')),
  e2a4c5d (.)
 =======
@@ -417,6 +433,20 @@ class ListMyRecords extends XotBaseListRecords
  e2a4c5d (.)
 >>>>>>> 4ab3760 (.)
 >>>>>>> 7b67053 (fix: auto resolve conflict)
+=======
+
+
+                ->visible(fn () => Auth::user()->can('resource.write')),
+
+                ->visible(fn () => Auth::user()?->can('resource.write')),
+ e2a4c5d (.)
+ 50bb41c (fix: auto resolve conflict)
+
+
+                ->visible(fn () => Auth::user()?->can('resource.write')),
+ e2a4c5d (.)
+ 4ab3760 (.)
+>>>>>>> c2dac53 (.)
         ];
     }
 }
@@ -471,6 +501,7 @@ class ListRecords extends XotBaseListRecords
 
             Auth::user()->can('resource.read'),
 
+<<<<<<< HEAD
             Auth::user()?->can('resource.read'),
  e2a4c5d (.)
 =======
@@ -498,6 +529,20 @@ class ListRecords extends XotBaseListRecords
  e2a4c5d (.)
 >>>>>>> 4ab3760 (.)
 >>>>>>> 7b67053 (fix: auto resolve conflict)
+=======
+
+
+            Auth::user()->can('resource.read'),
+
+            Auth::user()?->can('resource.read'),
+ e2a4c5d (.)
+ 50bb41c (fix: auto resolve conflict)
+
+
+            Auth::user()?->can('resource.read'),
+ e2a4c5d (.)
+ 4ab3760 (.)
+>>>>>>> c2dac53 (.)
             403
         );
     }
@@ -619,6 +664,7 @@ public function getTableColumns(): array
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> e5c56c3 (.)
@@ -635,6 +681,16 @@ public function getTableColumns(): array
 
 >>>>>>> 4ab3760 (.)
 >>>>>>> 7b67053 (fix: auto resolve conflict)
+=======
+
+
+
+
+ 50bb41c (fix: auto resolve conflict)
+
+
+ 4ab3760 (.)
+>>>>>>> c2dac53 (.)
 ## Tipizzazione degli Array
 
 È **OBBLIGATORIO** utilizzare chiavi di tipo stringa per tutti gli array restituiti dai seguenti metodi:
@@ -718,6 +774,7 @@ public function getTableBulkActions(): array
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
  e2a4c5d (.)
 =======
@@ -738,3 +795,16 @@ public function getTableBulkActions(): array
 >>>>>>> 4ab3760 (.)
 >>>>>>> 7b67053 (fix: auto resolve conflict)
 // ... existing code ... 
+=======
+
+
+
+
+ e2a4c5d (.)
+ 50bb41c (fix: auto resolve conflict)
+
+
+ e2a4c5d (.)
+ 4ab3760 (.)
+// ... existing code ... 
+>>>>>>> c2dac53 (.)

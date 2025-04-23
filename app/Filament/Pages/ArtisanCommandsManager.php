@@ -9,27 +9,12 @@ use Filament\Notifications\Notification;
 use Filament\Pages\Page;
 use Filament\Support\Enums\IconPosition;
 use Livewire\Attributes\On;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 use Livewire\Attributes\On;
-=======
->>>>>>> e2a4c5d (.)
->>>>>>> 50bb41c (fix: auto resolve conflict)
-=======
->>>>>>> 4ab3760 (.)
 use Modules\Xot\Actions\ExecuteArtisanCommandAction;
 
 /**
  * ---.
  */
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 50bb41c (fix: auto resolve conflict)
-=======
->>>>>>> 4ab3760 (.)
 class ArtisanCommandsManager extends XotBasePage
 {
     public array $output = [];
@@ -63,10 +48,6 @@ class ArtisanCommandsManager extends XotBasePage
         'artisan-command.error' => 'handleCommandError',
     ];
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
 class ArtisanCommandsManager extends Page
 {
     protected static ?string $navigationIcon = 'heroicon-o-command-line';
@@ -90,10 +71,6 @@ class ArtisanCommandsManager extends Page
         return $this->isRunning ? '1s' : null;
     }
 
->>>>>>> e2a4c5d (.)
->>>>>>> 50bb41c (fix: auto resolve conflict)
-=======
->>>>>>> 4ab3760 (.)
     protected function getHeaderActions(): array
     {
         return [
@@ -179,17 +156,9 @@ class ArtisanCommandsManager extends Page
 
         try {
             app(ExecuteArtisanCommandAction::class)->execute($command);
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
             app(ExecuteArtisanCommandAction::class)->execute($command);
-=======
             $this->processId = uniqid('cmd_');
             app(ExecuteArtisanCommandAction::class)->execute($command, $this->processId);
->>>>>>> e2a4c5d (.)
->>>>>>> 50bb41c (fix: auto resolve conflict)
-=======
->>>>>>> 4ab3760 (.)
         } catch (\Exception $e) {
             Notification::make()
                 ->title(__('xot::artisan-commands-manager.notifications.error'))
@@ -201,13 +170,6 @@ class ArtisanCommandsManager extends Page
         }
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 50bb41c (fix: auto resolve conflict)
-=======
->>>>>>> 4ab3760 (.)
     #[On('artisan-command.started')]
     public function handleCommandStarted(string $command): void
     {
@@ -259,10 +221,6 @@ class ArtisanCommandsManager extends Page
             ->body($error)
             ->danger()
             ->send();
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
     public function getListeners()
     {
         return array_merge(parent::getListeners(), [
@@ -301,9 +259,5 @@ class ArtisanCommandsManager extends Page
             'isRunning' => $this->isRunning,
             'currentCommand' => $this->currentCommand,
         ]);
->>>>>>> e2a4c5d (.)
->>>>>>> 50bb41c (fix: auto resolve conflict)
-=======
->>>>>>> 4ab3760 (.)
     }
 }

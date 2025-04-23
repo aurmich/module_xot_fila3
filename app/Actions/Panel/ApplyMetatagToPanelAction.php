@@ -15,6 +15,7 @@ class ApplyMetatagToPanelAction
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 <<<<<<< HEAD
@@ -25,6 +26,8 @@ class ApplyMetatagToPanelAction
 =======
 >>>>>>> 4ab3760 (.)
 >>>>>>> 7b67053 (fix: auto resolve conflict)
+=======
+>>>>>>> c2dac53 (.)
     /**
      * Applica i metatag al pannello Filament.
      *
@@ -34,6 +37,7 @@ class ApplyMetatagToPanelAction
      *
      * @return Panel Il pannello con i metatag applicati
      */
+<<<<<<< HEAD
 =======
 >>>>>>> e5c56c3 (.)
 =======
@@ -45,20 +49,19 @@ class ApplyMetatagToPanelAction
      */
 >>>>>>> 50bb41c (fix: auto resolve conflict)
 >>>>>>> d9307de (fix: auto resolve conflict)
+=======
+>>>>>>> c2dac53 (.)
     public function execute(Panel &$panel): Panel
     {
         try {
             $metatag = MetatagData::make();
 
             return $panel
-<<<<<<< HEAD
-<<<<<<< HEAD
                 // @phpstan-ignore argument.type
                 ->colors($metatag->getColors())
-=======
-<<<<<<< HEAD
                 // @phpstan-ignore argument.type
                 ->colors($metatag->getColors())
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
                 // @phpstan-ignore argument.type
@@ -75,6 +78,11 @@ class ApplyMetatagToPanelAction
                 ->colors($metatag->getColors())
 >>>>>>> 50bb41c (fix: auto resolve conflict)
 >>>>>>> d9307de (fix: auto resolve conflict)
+=======
+                //->colors($metatag->getColors())
+                // @phpstan-ignore argument.type
+                ->colors($metatag->getColors())
+>>>>>>> c2dac53 (.)
                 ->brandLogo($metatag->getLogoHeader())
                 ->brandName($metatag->title)
                 ->darkModeBrandLogo($metatag->getLogoHeaderDark())
@@ -82,24 +90,25 @@ class ApplyMetatagToPanelAction
                 ->favicon($metatag->getFavicon());
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         } catch (\Throwable $e) {
 =======
         } catch (\Exception $e) {
 >>>>>>> e5c56c3 (.)
 =======
-        } catch (\Exception $e) {
 =======
+>>>>>>> c2dac53 (.)
+        } catch (\Exception $e) {
         } catch (\Throwable $e) {
+<<<<<<< HEAD
 >>>>>>> 50bb41c (fix: auto resolve conflict)
 >>>>>>> d9307de (fix: auto resolve conflict)
+=======
+>>>>>>> c2dac53 (.)
             // Log l'errore ma non bloccare l'applicazione
             \Illuminate\Support\Facades\Log::error('Error applying metatag to panel: ' . $e->getMessage());
             return $panel;
         }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
     public function execute(Panel &$panel): Panel
     {
         $metatag = MetatagData::make();
@@ -112,9 +121,5 @@ class ApplyMetatagToPanelAction
             ->darkModeBrandLogo($metatag->getLogoHeaderDark())
             ->brandLogoHeight($metatag->getLogoHeight())
             ->favicon($metatag->getFavicon());
->>>>>>> e2a4c5d (.)
->>>>>>> 50bb41c (fix: auto resolve conflict)
-=======
->>>>>>> 4ab3760 (.)
     }
 }

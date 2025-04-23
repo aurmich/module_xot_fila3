@@ -14,6 +14,7 @@ use Webmozart\Assert\Assert;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 7b67053 (fix: auto resolve conflict)
@@ -38,6 +39,14 @@ use Webmozart\Assert\Assert;
  */
 >>>>>>> 4ab3760 (.)
 >>>>>>> 7b67053 (fix: auto resolve conflict)
+=======
+/**
+ * Azione per gestire le relazioni morphToOne nei modelli.
+ */
+/**
+ * Azione per gestire le relazioni morphToOne nei modelli.
+ */
+>>>>>>> c2dac53 (.)
 class MorphToOneAction
 {
     use QueueableAction;
@@ -45,6 +54,7 @@ class MorphToOneAction
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     /**
      * Esegue l'azione di creazione per una relazione morphToOne.
      *
@@ -58,31 +68,23 @@ class MorphToOneAction
 >>>>>>> d9307de (fix: auto resolve conflict)
 =======
 >>>>>>> 7b67053 (fix: auto resolve conflict)
+=======
+>>>>>>> c2dac53 (.)
     public function execute(Model $model, RelationDTO $relationDTO): void
     {
-<<<<<<< HEAD
         //if ($relationDTO === null) {
         //    return;
         //}
-=======
-<<<<<<< HEAD
         //if ($relationDTO === null) {
         //    return;
         //}
-=======
         if ($relationDTO === null) {
             return;
         }
->>>>>>> origin/dev
->>>>>>> origin/dev
 
 >>>>>>> e5c56c3 (.)
         Assert::isInstanceOf($rows = $relationDTO->rows, MorphToOne::class);
 
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 4ab3760 (.)
     /**
      * Esegue l'azione di creazione per una relazione morphToOne.
      *
@@ -93,22 +95,17 @@ class MorphToOneAction
     {
         Assert::isInstanceOf($rows = $relationDTO->rows, MorphToOne::class);
 
-<<<<<<< HEAD
-=======
     public function execute(Model $model, RelationDTO $relationDTO): void
     {
         Assert::isInstanceOf($rows = $relationDTO->rows, MorphToOne::class);
         // dddx(['row' => $row, 'relation' => $relation, 'relation_data' => $relation->data]);
 
         // if (is_array($relation->data)) {
->>>>>>> e2a4c5d (.)
->>>>>>> 50bb41c (fix: auto resolve conflict)
-=======
->>>>>>> 4ab3760 (.)
         if (! isset($relationDTO->data['lang'])) {
             $relationDTO->data['lang'] = App::getLocale();
         }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
         $rows->create($relationDTO->data);
@@ -116,26 +113,18 @@ class MorphToOneAction
 =======
 >>>>>>> d9307de (fix: auto resolve conflict)
 <<<<<<< HEAD
+=======
+>>>>>>> c2dac53 (.)
         //if ($rows !== null) {
         $rows->create($relationDTO->data);
         //}
-=======
-<<<<<<< HEAD
         //if ($rows !== null) {
         $rows->create($relationDTO->data);
         //}
-=======
         if ($rows !== null) {
             $rows->create($relationDTO->data);
         }
->>>>>>> origin/dev
->>>>>>> origin/dev
-=======
         $rows->create($relationDTO->data);
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 50bb41c (fix: auto resolve conflict)
         // } else {
         //    $rows->sync($relation->data);
         // }
@@ -152,6 +141,7 @@ class MorphToOneAction
         dddx('wip');
         */
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> e5c56c3 (.)
 =======
 <<<<<<< HEAD
@@ -164,5 +154,7 @@ class MorphToOneAction
 =======
 >>>>>>> 4ab3760 (.)
 >>>>>>> 7b67053 (fix: auto resolve conflict)
+=======
+>>>>>>> c2dac53 (.)
     }
 }

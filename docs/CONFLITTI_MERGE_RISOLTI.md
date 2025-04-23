@@ -380,7 +380,38 @@ Per una panoramica generale sulla risoluzione dei conflitti di merge nel progett
 
 - [Linee Guida Generali per la Risoluzione dei Conflitti Git](../../../../docs/risoluzione_conflitti_git.md)
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> d9307de (fix: auto resolve conflict)
 =======
 >>>>>>> 7b67053 (fix: auto resolve conflict)
+=======
+
+## File Risolti
+
+### resources/views/livewire/test.blade.php
+
+**Problema**: Conflitto nelle variabili utilizzate nel template Blade per accedere alle proprietà degli oggetti, con errori di sintassi nelle proprietà.
+
+**Soluzione**: È stata adottata la versione che utilizza correttamente le proprietà dell'oggetto con il riferimento `->id` invece della versione incompleta `->` che causava errori di sintassi. Questo garantisce che il template funzioni correttamente con i modelli Livewire.
+
+```blade
+<h4>[{{ $change_cat->id }}]{{ $change_cat->title }}</h4>
+@foreach ($changes->where('id_cat', $change_cat->id) as $change)
+    <h5>[{{ $change->id }}]{{ $change->title }}</h5>
+    
+    <div class="btn-group btn-group-toggle">
+        <x-filament-forms::field-wrapper.label class="btn btn-danger">
+            <input type="radio" wire:model="qty.{{ $change_cat->id }}.{{ $change->id }}"
+                name="qty[{{ $change_cat->id }}][{{ $change->id }}]" autocomplete="off" value="-1">
+            @if (isset($qty[$change_cat->id][$change->id]) && $qty[$change_cat->id][$change->id] == -1)
+                [-]
+            @else
+                -
+            @endif
+        </label>
+        <!-- Resto dell'implementazione... -->
+    </div>
+@endforeach
+```
+>>>>>>> c2dac53 (.)

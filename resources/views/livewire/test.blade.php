@@ -59,6 +59,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             <h4>[{{ $change_cat->id }}]{{ $change_cat->title }}</h4>
             @foreach ($changes->where('id_cat', $change_cat->id) as $change)
                 <h5>[{{ $change->id }}]{{ $change->title }}</h5>
@@ -93,6 +94,11 @@
                 <h5>[{{ $change->id }}]{{ $change->title }}</h5>
 >>>>>>> 4ab3760 (.)
 >>>>>>> 7b67053 (fix: auto resolve conflict)
+=======
+            <h4>[{{ $change_cat->id }}]{{ $change_cat->title }}</h4>
+            @foreach ($changes->where('id_cat', $change_cat->id) as $change)
+                <h5>[{{ $change->id }}]{{ $change->title }}</h5>
+>>>>>>> c2dac53 (.)
 
 
                 <div class="btn-group btn-group-toggle">
@@ -100,6 +106,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
                         <input type="radio" wire:model="qty.{{ $change_cat->id }}.{{ $change->id }}"
                             name="qty[{{ $change_cat->id }}][{{ $change->id }}]" autocomplete="off" value="-1">
                         @if (isset($qty[$change_cat->id][$change->id]) && $qty[$change_cat->id][$change->id] == -1)
@@ -134,6 +141,11 @@
                         @if (isset($qty[$change_cat->id][$change->id]) && $qty[$change_cat->id][$change->id] == -1)
 >>>>>>> 4ab3760 (.)
 >>>>>>> 7b67053 (fix: auto resolve conflict)
+=======
+                        <input type="radio" wire:model="qty.{{ $change_cat->id }}.{{ $change->id }}"
+                            name="qty[{{ $change_cat->id }}][{{ $change->id }}]" autocomplete="off" value="-1">
+                        @if (isset($qty[$change_cat->id][$change->id]) && $qty[$change_cat->id][$change->id] == -1)
+>>>>>>> c2dac53 (.)
                             [-]
                         @else
                             -
@@ -143,6 +155,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
                         <input type="radio" wire:model="qty.{{ $change_cat->id }}.{{ $change->id }}"
                             name="qty[{{ $change_cat->id }}][{{ $change->id }}]" autocomplete="off" value="0">
                         @if (isset($qty[$change_cat->id][$change->id]) && $qty[$change_cat->id][$change->id] == 0)
@@ -177,6 +190,11 @@
                         @if (isset($qty[$change_cat->id][$change->id]) && $qty[$change_cat->id][$change->id] == 0)
 >>>>>>> 4ab3760 (.)
 >>>>>>> 7b67053 (fix: auto resolve conflict)
+=======
+                        <input type="radio" wire:model="qty.{{ $change_cat->id }}.{{ $change->id }}"
+                            name="qty[{{ $change_cat->id }}][{{ $change->id }}]" autocomplete="off" value="0">
+                        @if (isset($qty[$change_cat->id][$change->id]) && $qty[$change_cat->id][$change->id] == 0)
+>>>>>>> c2dac53 (.)
                             [&nbsp;]
                         @else
                             &nbsp;
@@ -186,6 +204,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
                         <input type="radio" wire:model="qty.{{ $change_cat->id }}.{{ $change->id }}"
                             name="qty[{{ $change_cat->id }}][{{ $change->id }}]" autocomplete="off" value="1">
                         @if (isset($qty[$change_cat->id][$change->id]) && $qty[$change_cat->id][$change->id] == 1)
@@ -220,6 +239,11 @@
                         @if (isset($qty[$change_cat->id][$change->id]) && $qty[$change_cat->id][$change->id] == 1)
 >>>>>>> 4ab3760 (.)
 >>>>>>> 7b67053 (fix: auto resolve conflict)
+=======
+                        <input type="radio" wire:model="qty.{{ $change_cat->id }}.{{ $change->id }}"
+                            name="qty[{{ $change_cat->id }}][{{ $change->id }}]" autocomplete="off" value="1">
+                        @if (isset($qty[$change_cat->id][$change->id]) && $qty[$change_cat->id][$change->id] == 1)
+>>>>>>> c2dac53 (.)
                             [+]
                         @else
                             +

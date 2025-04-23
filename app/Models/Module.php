@@ -26,33 +26,16 @@ use Sushi\Sushi;
 =======
 >>>>>>> 7b67053 (fix: auto resolve conflict)
  *
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
  * 
  *
-=======
->>>>>>> e2a4c5d (.)
->>>>>>> 50bb41c (fix: auto resolve conflict)
-=======
  *
->>>>>>> 4ab3760 (.)
  * @property int         $id
  * @property string|null $name
  * @property string|null $description
  * @property bool|null   $status
  * @property int|null    $priority
  * @property string|null $path
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
  *
->>>>>>> e2a4c5d (.)
->>>>>>> 50bb41c (fix: auto resolve conflict)
-=======
->>>>>>> 4ab3760 (.)
  * @method static \Illuminate\Database\Eloquent\Builder|Module newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|Module newQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|Module query()
@@ -62,21 +45,10 @@ use Sushi\Sushi;
  * @method static \Illuminate\Database\Eloquent\Builder|Module wherePath($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Module wherePriority($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Module whereStatus($value)
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 50bb41c (fix: auto resolve conflict)
-=======
->>>>>>> 4ab3760 (.)
  * @property string|null $icon
  * @property array|null  $colors
  * @method static \Illuminate\Database\Eloquent\Builder|Module whereColors($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Module whereIcon($value)
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
  *
  * @property string|null $icon
  * @property array|null  $colors
@@ -84,10 +56,6 @@ use Sushi\Sushi;
  * @method static \Illuminate\Database\Eloquent\Builder|Module whereColors($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Module whereIcon($value)
  *
->>>>>>> e2a4c5d (.)
->>>>>>> 50bb41c (fix: auto resolve conflict)
-=======
->>>>>>> 4ab3760 (.)
  * @mixin \Eloquent
  */
 class Module extends Model

@@ -28,6 +28,7 @@ class SanitizeFieldsHeaderAction extends Action
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
             
@@ -35,12 +36,12 @@ class SanitizeFieldsHeaderAction extends Action
 =======
 =======
 >>>>>>> 7b67053 (fix: auto resolve conflict)
-            
 =======
-<<<<<<< HEAD
+>>>>>>> c2dac53 (.)
             
-=======
+            
             ->label('')
+<<<<<<< HEAD
 >>>>>>> e2a4c5d (.)
 >>>>>>> 50bb41c (fix: auto resolve conflict)
 <<<<<<< HEAD
@@ -50,6 +51,9 @@ class SanitizeFieldsHeaderAction extends Action
 
 >>>>>>> 4ab3760 (.)
 >>>>>>> 7b67053 (fix: auto resolve conflict)
+=======
+
+>>>>>>> c2dac53 (.)
             ->tooltip('sanitize')
             ->icon('heroicon-o-shield-exclamation')
             ->action(function (ListRecords $livewire) {

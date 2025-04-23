@@ -7,15 +7,7 @@ namespace Modules\Xot\Actions\Export;
 use Illuminate\Http\Response;
 use Illuminate\Support\LazyCollection;
 use Maatwebsite\Excel\Facades\Excel;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 use Maatwebsite\Excel\Facades\Excel;
-=======
->>>>>>> e2a4c5d (.)
->>>>>>> 50bb41c (fix: auto resolve conflict)
-=======
->>>>>>> 4ab3760 (.)
 use Modules\Xot\Exports\LazyCollectionExport;
 use Spatie\QueueableAction\QueueableAction;
 use Symfony\Component\HttpFoundation\BinaryFileResponse;
@@ -24,13 +16,6 @@ class ExportXlsByLazyCollection
 {
     use QueueableAction;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 50bb41c (fix: auto resolve conflict)
-=======
->>>>>>> 4ab3760 (.)
     /**
      * Esporta una lazy collection in Excel.
      *
@@ -57,18 +42,19 @@ class ExportXlsByLazyCollection
         $stringFields = array_map(function ($field) {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
             return strval($field);
 =======
 =======
 >>>>>>> d9307de (fix: auto resolve conflict)
 <<<<<<< HEAD
-            return strval($field);
 =======
-<<<<<<< HEAD
+>>>>>>> c2dac53 (.)
             return strval($field);
-=======
+            return strval($field);
             return is_string($field) ? $field : (string) $field;
+<<<<<<< HEAD
 >>>>>>> origin/dev
 >>>>>>> origin/dev
 <<<<<<< HEAD
@@ -79,6 +65,10 @@ class ExportXlsByLazyCollection
             return strval($field);
 >>>>>>> 50bb41c (fix: auto resolve conflict)
 >>>>>>> d9307de (fix: auto resolve conflict)
+=======
+
+            return strval($field);
+>>>>>>> c2dac53 (.)
         }, array_values($fields));
 
         $export = new LazyCollectionExport(
@@ -88,10 +78,6 @@ class ExportXlsByLazyCollection
         );
 
         return Excel::download($export, $filename);
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
     public function execute(
         LazyCollection $collection,
         string $filename = 'test.xlsx',
@@ -101,9 +87,5 @@ class ExportXlsByLazyCollection
         $export = new LazyCollectionExport($collection, $transKey, $fields);
 
         return $export->download($filename);
->>>>>>> e2a4c5d (.)
->>>>>>> 50bb41c (fix: auto resolve conflict)
-=======
->>>>>>> 4ab3760 (.)
     }
 }

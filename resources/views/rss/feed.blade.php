@@ -22,6 +22,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
                 <guid>{{ $item->id }}</guid>
 =======
                 <guid>{{ $item-> }}</guid>
@@ -44,6 +45,9 @@
                 <guid>{{ $item->id }}</guid>
 >>>>>>> 4ab3760 (.)
 >>>>>>> 7b67053 (fix: auto resolve conflict)
+=======
+                <guid>{{ $item->id }}</guid>
+>>>>>>> c2dac53 (.)
                 <pubDate>{{ $item->created_at->toRssString() }}</pubDate>
             </item>
         @endforeach

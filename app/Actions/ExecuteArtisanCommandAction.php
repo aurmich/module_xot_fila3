@@ -4,13 +4,6 @@ declare(strict_types=1);
 
 namespace Modules\Xot\Actions;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 50bb41c (fix: auto resolve conflict)
-=======
->>>>>>> 4ab3760 (.)
 use Illuminate\Support\Facades\Event;
 use Illuminate\Support\Facades\Process;
 use Spatie\QueueableAction\QueueableAction;
@@ -19,29 +12,14 @@ use Webmozart\Assert\Assert;
 /**
  * Classe per eseguire comandi Artisan in modo sicuro.
  */
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
 use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\Process;
 use Spatie\QueueableAction\QueueableAction;
 
->>>>>>> e2a4c5d (.)
->>>>>>> 50bb41c (fix: auto resolve conflict)
-=======
->>>>>>> 4ab3760 (.)
 class ExecuteArtisanCommandAction
 {
     use QueueableAction;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 50bb41c (fix: auto resolve conflict)
-=======
->>>>>>> 4ab3760 (.)
     /**
      * Lista dei comandi consentiti per motivi di sicurezza.
 <<<<<<< HEAD
@@ -55,14 +33,6 @@ class ExecuteArtisanCommandAction
 >>>>>>> 7b67053 (fix: auto resolve conflict)
      * @var array<int, string>
      */
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> e2a4c5d (.)
->>>>>>> 50bb41c (fix: auto resolve conflict)
-=======
->>>>>>> 4ab3760 (.)
     private array $allowedCommands = [
         'migrate',
         'filament:upgrade',
@@ -74,13 +44,6 @@ class ExecuteArtisanCommandAction
         'queue:restart',
     ];
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 50bb41c (fix: auto resolve conflict)
-=======
->>>>>>> 4ab3760 (.)
     /**
      * Esegue un comando Artisan e restituisce i risultati.
      *
@@ -112,6 +75,7 @@ class ExecuteArtisanCommandAction
         Assert::stringNotEmpty($command, 'Il comando non può essere vuoto');
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
@@ -134,26 +98,21 @@ class ExecuteArtisanCommandAction
 
 >>>>>>> 4ab3760 (.)
 >>>>>>> 7b67053 (fix: auto resolve conflict)
+=======
+        
+    public function execute(string $command, string $processId): array
+    {
+
+>>>>>>> c2dac53 (.)
         if (! $this->isCommandAllowed($command)) {
             throw new \RuntimeException("Comando non consentito: {$command}");
         }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 50bb41c (fix: auto resolve conflict)
-=======
->>>>>>> 4ab3760 (.)
         /** @var array<int, string> $output */
         $output = [];
         $status = 'running';
 
         Event::dispatch('artisan-command.started', [$command]);
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
         $output = [];
         $status = 'running';
 
@@ -163,10 +122,6 @@ class ExecuteArtisanCommandAction
             'status' => $status,
             'output' => [],
         ], now()->addHours(1));
->>>>>>> e2a4c5d (.)
->>>>>>> 50bb41c (fix: auto resolve conflict)
-=======
->>>>>>> 4ab3760 (.)
 
         try {
             $process = Process::path(base_path())
@@ -182,17 +137,9 @@ class ExecuteArtisanCommandAction
                     if (! empty($formattedData)) {
                         $output[] = $formattedData;
                         Event::dispatch('artisan-command.output', [$command, $formattedData]);
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
                         Event::dispatch('artisan-command.output', [$command, $formattedData]);
-=======
                         $this->broadcastOutput($processId, $formattedData);
                         $this->updateCache($processId, $formattedData);
->>>>>>> e2a4c5d (.)
->>>>>>> 50bb41c (fix: auto resolve conflict)
-=======
->>>>>>> 4ab3760 (.)
                     }
                 }
 
@@ -201,100 +148,51 @@ class ExecuteArtisanCommandAction
                     $formattedError = trim($errorData);
                     if (! empty($formattedError)) {
                         $output[] = '[ERROR] '.$formattedError;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 50bb41c (fix: auto resolve conflict)
-=======
->>>>>>> 4ab3760 (.)
                         Event::dispatch('artisan-command.output', [$command, '[ERROR] '.$formattedError]);
                     }
                 }
 
                 usleep(50000); // 50ms di pausa per evitare sovraccarico della CPU
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
                         $this->broadcastOutput($processId, '[ERROR] '.$formattedError, 'error');
                         $this->updateCache($processId, '[ERROR] '.$formattedError);
                     }
                 }
 
                 usleep(100000); // 100ms pause to prevent CPU overload
->>>>>>> e2a4c5d (.)
->>>>>>> 50bb41c (fix: auto resolve conflict)
-=======
->>>>>>> 4ab3760 (.)
             }
 
             $result = $process->wait();
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 50bb41c (fix: auto resolve conflict)
-=======
->>>>>>> 4ab3760 (.)
             // Cattura qualsiasi output residuo
             $finalOutput = trim($result->output());
             if (! empty($finalOutput)) {
                 $output[] = $finalOutput;
                 Event::dispatch('artisan-command.output', [$command, $finalOutput]);
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
             // Capture any remaining output
             $finalOutput = trim($result->output());
             if (! empty($finalOutput)) {
                 $output[] = $finalOutput;
                 $this->broadcastOutput($processId, $finalOutput);
                 $this->updateCache($processId, $finalOutput);
->>>>>>> e2a4c5d (.)
->>>>>>> 50bb41c (fix: auto resolve conflict)
-=======
->>>>>>> 4ab3760 (.)
             }
 
             $finalErrorOutput = trim($result->errorOutput());
             if (! empty($finalErrorOutput)) {
                 $output[] = '[ERROR] '.$finalErrorOutput;
                 Event::dispatch('artisan-command.output', [$command, '[ERROR] '.$finalErrorOutput]);
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
                 Event::dispatch('artisan-command.output', [$command, '[ERROR] '.$finalErrorOutput]);
-=======
                 $this->broadcastOutput($processId, '[ERROR] '.$finalErrorOutput, 'error');
                 $this->updateCache($processId, '[ERROR] '.$finalErrorOutput);
->>>>>>> e2a4c5d (.)
->>>>>>> 50bb41c (fix: auto resolve conflict)
-=======
->>>>>>> 4ab3760 (.)
             }
 
             if ($result->successful()) {
                 $status = 'completed';
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 50bb41c (fix: auto resolve conflict)
-=======
->>>>>>> 4ab3760 (.)
                 Event::dispatch('artisan-command.completed', [$command]);
             } else {
                 $status = 'failed';
                 Event::dispatch('artisan-command.failed', [$command, $finalErrorOutput]);
             }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
                 $this->broadcastOutput($processId, 'Comando completato con successo', 'completed');
             } else {
                 $status = 'failed';
@@ -308,21 +206,10 @@ class ExecuteArtisanCommandAction
                 'output' => $output,
             ], now()->addHours(1));
 
->>>>>>> e2a4c5d (.)
->>>>>>> 50bb41c (fix: auto resolve conflict)
-=======
->>>>>>> 4ab3760 (.)
             return [
                 'command' => $command,
                 'output' => $output,
                 'status' => $status,
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 50bb41c (fix: auto resolve conflict)
-=======
->>>>>>> 4ab3760 (.)
                 'exitCode' => $result->exitCode() ?? 0,
             ];
         } catch (\Throwable $e) {
@@ -356,10 +243,6 @@ class ExecuteArtisanCommandAction
         Assert::stringNotEmpty($command, 'Il comando non può essere vuoto');
         return in_array($command, $this->allowedCommands, true);
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
                 'exitCode' => $result->exitCode(),
             ];
         } catch (\Throwable $e) {
@@ -384,8 +267,4 @@ class ExecuteArtisanCommandAction
         $data['output'][] = $output;
         Cache::put("artisan.command.{$processId}", $data, now()->addHours(1));
     }
->>>>>>> e2a4c5d (.)
->>>>>>> 50bb41c (fix: auto resolve conflict)
-=======
->>>>>>> 4ab3760 (.)
 }

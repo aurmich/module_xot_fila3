@@ -22,13 +22,6 @@ use Illuminate\Support\Carbon;
  * @property bool               $is_reclamed
  * @property bool               $table_enable
  * @property PivotContract|null $pivot
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 50bb41c (fix: auto resolve conflict)
-=======
->>>>>>> 4ab3760 (.)
  * @property string $tennant_name
  * @property string $mail_subject
  * @property string $mail_body
@@ -36,10 +29,6 @@ use Illuminate\Support\Carbon;
  * @property string $mobile_phone
  * @property string $sms_body
  * @property string $sms_count
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
  * @property string             $tennant_name
  * @property string             $mail_subject
  * @property string             $mail_body
@@ -47,10 +36,6 @@ use Illuminate\Support\Carbon;
  * @property string             $mobile_phone
  * @property string             $sms_body
  * @property string             $sms_count
->>>>>>> e2a4c5d (.)
->>>>>>> 50bb41c (fix: auto resolve conflict)
-=======
->>>>>>> 4ab3760 (.)
  *
  * @method mixed     getKey()
  * @method string    getRouteKey()
@@ -67,6 +52,7 @@ use Illuminate\Support\Carbon;
  * @method mixed     save($params)
  * @method array     treeLabel()
  * @method array     treeSons()
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
  * @method int       treeSonsCount()
@@ -87,6 +73,10 @@ use Illuminate\Support\Carbon;
  * @method int       treeSonsCount()
 >>>>>>> 50bb41c (fix: auto resolve conflict)
 >>>>>>> d9307de (fix: auto resolve conflict)
+=======
+ * @method int       treeSonsCount()
+ * @method int       treeSonsCount()
+>>>>>>> c2dac53 (.)
  * @method array     toArray()
  * @method BelongsTo user()
  *

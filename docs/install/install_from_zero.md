@@ -94,6 +94,7 @@ edit file composer.json
 
         "filament/filament": "^3.3",
 
+<<<<<<< HEAD
         "filament/filament": "^3.2",
  e2a4c5d (.)
 =======
@@ -121,6 +122,20 @@ edit file composer.json
  e2a4c5d (.)
 >>>>>>> 4ab3760 (.)
 >>>>>>> 7b67053 (fix: auto resolve conflict)
+=======
+
+
+        "filament/filament": "^3.3",
+
+        "filament/filament": "^3.2",
+ e2a4c5d (.)
+ 50bb41c (fix: auto resolve conflict)
+
+
+        "filament/filament": "^3.2",
+ e2a4c5d (.)
+ 4ab3760 (.)
+>>>>>>> c2dac53 (.)
         "laravel/framework": "^11.9",
         "nwidart/laravel-modules": "^11.0"
     },
