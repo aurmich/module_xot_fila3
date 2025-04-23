@@ -4,12 +4,20 @@ declare(strict_types=1);
 
 namespace Modules\Xot\Filament\Resources;
 
+<<<<<<< HEAD
 use Modules\Xot\Models\Cache;
 use Filament\Forms\Components\KeyValue;
 use Filament\Forms\Components\TextInput;
 use Modules\Xot\Filament\Resources\XotBaseResource;
 use Modules\Xot\Filament\Resources\CacheResource\Pages;
 use Modules\Xot\Filament\Resources\XotBaseResource\RelationManagers\XotBaseRelationManager;
+=======
+use Filament\Forms\Components\KeyValue;
+use Filament\Forms\Components\TextInput;
+use Modules\Xot\Filament\Resources\CacheResource\Pages;
+use Modules\Xot\Models\Cache;
+use Modules\Xot\Filament\Resources\XotBaseResource\RelationManager\XotBaseRelationManager;
+>>>>>>> e5c56c3 (.)
 
 class CacheResource extends XotBaseResource
 {

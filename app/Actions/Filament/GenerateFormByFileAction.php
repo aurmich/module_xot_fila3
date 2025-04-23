@@ -26,7 +26,11 @@ class GenerateFormByFileAction
      * Genera un form Filament basato su un file di risorsa.
      *
      * @param File $file Il file della risorsa Filament
+<<<<<<< HEAD
      *
+=======
+     * 
+>>>>>>> e5c56c3 (.)
      * @return int Numero di input aggiunti
      */
     public function execute(File $file): int
@@ -41,6 +45,7 @@ class GenerateFormByFileAction
         $class_name = Str::replace(base_path('Modules/'), 'Modules/', $file->getPathname());
         Assert::string($class_name = Str::replace('/', '\\', $class_name), '['.__LINE__.']['.class_basename($this).']');
         $class_name = Str::substr($class_name, 0, -4);
+<<<<<<< HEAD
 
         // Verifichiamo che la classe esista e sia una risorsa Filament
         Assert::classExists($class_name);
@@ -48,10 +53,20 @@ class GenerateFormByFileAction
         /** @var Resource $resourceInstance */
         $resourceInstance = app($class_name);
 
+=======
+        
+        // Verifichiamo che la classe esista e sia una risorsa Filament
+        Assert::classExists($class_name);
+        
+        /** @var Resource $resourceInstance */
+        $resourceInstance = app($class_name);
+        
+>>>>>>> e5c56c3 (.)
         // Verifichiamo che il metodo getModel esista
         if (!method_exists($resourceInstance, 'getModel')) {
             return 0;
         }
+<<<<<<< HEAD
 
         /** @var string $modelClass */
         $modelClass = $resourceInstance->getModel();
@@ -62,20 +77,44 @@ class GenerateFormByFileAction
         /** @var Model $modelInstance */
         $modelInstance = app($modelClass);
 
+=======
+        
+        /** @var string $modelClass */
+        $modelClass = $resourceInstance->getModel();
+        
+        // Verifichiamo che la classe del modello esista
+        Assert::classExists($modelClass);
+        
+        /** @var Model $modelInstance */
+        $modelInstance = app($modelClass);
+        
+>>>>>>> e5c56c3 (.)
         // Verifichiamo che il metodo getFillable esista
         if (!method_exists($modelInstance, 'getFillable')) {
             return 0;
         }
+<<<<<<< HEAD
 
         $fillable = $modelInstance->getFillable();
 
         $reflection_class = new \ReflectionClass($class_name);
 
+=======
+        
+        $fillable = $modelInstance->getFillable();
+        
+        $reflection_class = new \ReflectionClass($class_name);
+        
+>>>>>>> e5c56c3 (.)
         // Verifichiamo che il metodo form esista
         if (!$reflection_class->hasMethod('form')) {
             return 0;
         }
+<<<<<<< HEAD
 
+=======
+        
+>>>>>>> e5c56c3 (.)
         $form_method = $reflection_class->getMethod('form');
         $start_line = $form_method->getStartLine() - 1;
         // it's actually - 1, otherwise you wont get the function() block
@@ -85,10 +124,17 @@ class GenerateFormByFileAction
         // $contents= $file->getContents();
         $source = file($file_name);
         $body = implode('', \array_slice($source, $start_line, $length));
+<<<<<<< HEAD
 
         // Otteniamo i metodi della classe risorsa
         $resourceMethods = get_class_methods($resourceInstance);
 
+=======
+        
+        // Otteniamo i metodi della classe risorsa
+        $resourceMethods = get_class_methods($resourceInstance);
+        
+>>>>>>> e5c56c3 (.)
         dd([
             'class_name' => $class_name,
             'model_name' => $modelClass,
@@ -105,7 +151,11 @@ class GenerateFormByFileAction
      * Mostra informazioni di debug su un file.
      *
      * @param File $file Il file da analizzare
+<<<<<<< HEAD
      *
+=======
+     * 
+>>>>>>> e5c56c3 (.)
      * @return void
      */
     public function ddFile(File $file): void

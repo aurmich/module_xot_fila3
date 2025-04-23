@@ -12,6 +12,7 @@ class SaveJsonArrayAction
 {
     use QueueableAction;
 
+<<<<<<< HEAD
     /**
      * Salva un array come file JSON.
      *
@@ -27,6 +28,26 @@ class SaveJsonArrayAction
         // Non è necessario verificare se $content è false perché \Safe\json_encode
         // lancia un'eccezione in caso di errore invece di restituire false
         
+=======
+    public function execute(array $data, string $filename): bool
+    {
+        $content = \Safe\json_encode($data, JSON_PRETTY_PRINT);
+<<<<<<< HEAD
+        //if ($content === false) {
+        //    return false;
+        //}
+=======
+<<<<<<< HEAD
+        //if ($content === false) {
+        //    return false;
+        //}
+=======
+        if ($content === false) {
+            return false;
+        }
+>>>>>>> origin/dev
+>>>>>>> origin/dev
+>>>>>>> e5c56c3 (.)
         return (bool) \Safe\file_put_contents($filename, $content);
     }
 }

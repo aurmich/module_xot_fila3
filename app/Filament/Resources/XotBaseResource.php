@@ -118,7 +118,11 @@ abstract class XotBaseResource extends FilamentResource
         $edit = $edit;
         /** @var class-string<\Filament\Resources\Pages\Page> $view */
         $view = $view;
+<<<<<<< HEAD
 
+=======
+        
+>>>>>>> e5c56c3 (.)
         /** @var array<string, \Filament\Resources\Pages\PageRegistration> $pages */
         $pages = [
             'index' => $index::route('/'),
@@ -142,7 +146,11 @@ abstract class XotBaseResource extends FilamentResource
         $reflector = new \ReflectionClass(static::class);
         $filename = $reflector->getFileName();
         Assert::string($filename);
+<<<<<<< HEAD
 
+=======
+        
+>>>>>>> e5c56c3 (.)
         $path = Str::of($filename)
             ->before('.php')
             ->append(DIRECTORY_SEPARATOR)
@@ -151,7 +159,11 @@ abstract class XotBaseResource extends FilamentResource
 
         $files = glob($path.DIRECTORY_SEPARATOR.'*RelationManager.php');
         Assert::isArray($files);
+<<<<<<< HEAD
 
+=======
+        
+>>>>>>> e5c56c3 (.)
         /** @var array<class-string<\Filament\Resources\RelationManagers\RelationManager>> $res */
         $res = [];
         foreach ($files as $file) {
@@ -160,7 +172,11 @@ abstract class XotBaseResource extends FilamentResource
                 ->before('.php')
                 ->prepend(static::class.'\RelationManagers\\')
                 ->toString();
+<<<<<<< HEAD
 
+=======
+            
+>>>>>>> e5c56c3 (.)
             if (class_exists($className)) {
                 Assert::subclassOf($className, \Filament\Resources\RelationManagers\RelationManager::class);
                 $res[] = $className;

@@ -13,6 +13,10 @@ use Modules\Xot\Filament\Resources\CacheResource;
 use Modules\Xot\Filament\Resources\Pages\XotBaseListRecords;
 use Modules\Xot\Filament\Widgets\Clock;
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> e5c56c3 (.)
 /**
  * @see CacheResource
  */

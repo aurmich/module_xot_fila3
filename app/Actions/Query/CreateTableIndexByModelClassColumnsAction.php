@@ -96,10 +96,17 @@ class CreateTableIndexByModelClassColumnsAction
 
         // Query to check if the index exists
         $query = '
+<<<<<<< HEAD
         SELECT COUNT(*)
         FROM information_schema.statistics
         WHERE table_schema = ?
         AND table_name = ?
+=======
+        SELECT COUNT(*) 
+        FROM information_schema.statistics 
+        WHERE table_schema = ? 
+        AND table_name = ? 
+>>>>>>> e5c56c3 (.)
         AND index_name = ?;
     ';
 

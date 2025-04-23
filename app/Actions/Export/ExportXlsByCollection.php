@@ -23,7 +23,11 @@ class ExportXlsByCollection
      * @param string $filename Nome del file Excel
      * @param string|null $transKey Chiave di traduzione per i campi
      * @param array<int, string> $fields Campi da includere nell'export
+<<<<<<< HEAD
      *
+=======
+     * 
+>>>>>>> e5c56c3 (.)
      * @return BinaryFileResponse
      */
     public function execute(
@@ -52,7 +56,11 @@ class ExportXlsByCollection
      * @param Collection $rows La collezione da esportare
      * @param array<string> $fields Campi da includere nell'export
      * @param string $filename Nome del file Excel
+<<<<<<< HEAD
      *
+=======
+     * 
+>>>>>>> e5c56c3 (.)
      * @return string Il percorso del file generato
      */
     public function executeWithSpreadsheet(Collection $rows, array $fields, string $filename): string
@@ -83,10 +91,29 @@ class ExportXlsByCollection
     }
 
     /**
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/dev
+>>>>>>> e5c56c3 (.)
      * Scrive le righe nel foglio di lavoro.
      *
      * @param \PhpOffice\PhpSpreadsheet\Worksheet\Worksheet $sheet Il foglio di lavoro
      * @param \Illuminate\Support\Collection $rows I dati da scrivere
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+=======
+     * Scrive le righe di dati nel foglio Excel.
+     *
+     * @param \PhpOffice\PhpSpreadsheet\Worksheet\Worksheet $sheet Il foglio Excel
+     * @param Collection $rows Le righe di dati da scrivere
+>>>>>>> origin/dev
+>>>>>>> origin/dev
+>>>>>>> e5c56c3 (.)
      * @param array<string> $fields I campi da utilizzare per le colonne
      */
     protected function writeRows(\PhpOffice\PhpSpreadsheet\Worksheet\Worksheet $sheet, Collection $rows, array $fields): void
@@ -94,8 +121,15 @@ class ExportXlsByCollection
         $row = 2;
         foreach ($rows as $data) {
             foreach ($fields as $col => $field) {
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/dev
+>>>>>>> e5c56c3 (.)
                 $value = '';
 
                 // Verifica che $data supporti il metodo get
@@ -106,6 +140,16 @@ class ExportXlsByCollection
                 } elseif (is_object($data) && property_exists($data, $field)) {
                     $value = $data->{$field} ?? '';
                 }
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+=======
+=======
+                $value = $data->get($field) ?? '';
+>>>>>>> origin/dev
+>>>>>>> origin/dev
+>>>>>>> e5c56c3 (.)
                 $sheet->setCellValueByColumnAndRow($col + 1, $row, $value);
             }
             $row++;

@@ -1,6 +1,9 @@
 https://fly.io/laravel-bytes/console-applications-with-laravel-zero/
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> e5c56c3 (.)
 # Comandi Console in Moduli Laraxot
 
 ## Namespace Corretto per i Comandi Console
@@ -20,7 +23,20 @@ namespace Modules\Xot\Console\Commands;
 
 ### ❌ ERRATO
 ```php
+<<<<<<< HEAD
 namespace Modules\Xot\app\Console\Commands;
+=======
+<<<<<<< HEAD
+namespace Modules\Xot\Console\Commands;
+namespace Modules\Xot\app\Console\Commands;
+=======
+<<<<<<< HEAD
+namespace Modules\Xot\Console\Commands;
+=======
+namespace Modules\Xot\app\Console\Commands;
+>>>>>>> origin/dev
+>>>>>>> origin/dev
+>>>>>>> e5c56c3 (.)
 ```
 
 ## Esempio di Comando Console
@@ -67,5 +83,8 @@ class DatabaseSchemaExportCommand extends Command
 ## Risorse Utili
 - [Laravel Artisan Console Documentation](https://laravel.com/docs/10.x/artisan)
 - [Console Applications with Laravel Zero](https://fly.io/laravel-bytes/console-applications-with-laravel-zero/)
+<<<<<<< HEAD
 
  e2a4c5d (.)
+=======
+>>>>>>> e5c56c3 (.)

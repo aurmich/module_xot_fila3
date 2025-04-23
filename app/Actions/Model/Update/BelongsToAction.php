@@ -36,7 +36,11 @@ class BelongsToAction
             if (null === $related_id) {
                 return;
             }
+<<<<<<< HEAD
 
+=======
+            
+>>>>>>> e5c56c3 (.)
             $related = $relationDTO->related->find($related_id);
             // Verifica che $related non sia una Collection, ma un singolo modello
             if ($related instanceof \Illuminate\Database\Eloquent\Collection) {

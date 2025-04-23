@@ -56,10 +56,17 @@
         "livewire/volt": "*",
         "tightenco/parental": "*",
         "spatie/laravel-queueable-action": "*"
+<<<<<<< HEAD
 
     },
     "require-comment": {
 
+=======
+        
+    },
+    "require-comment": {
+       
+>>>>>>> e5c56c3 (.)
     },
     "require-dev": {
         "barryvdh/laravel-debugbar": "^3.14",
@@ -76,7 +83,11 @@
         "orchestra/testbench": "*"
     },
     "require-dev-comment": {
+<<<<<<< HEAD
 
+=======
+        
+>>>>>>> e5c56c3 (.)
     },
     "repositories": [
         {

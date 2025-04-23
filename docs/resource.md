@@ -343,11 +343,15 @@ class ListMyRecords extends XotBaseListRecords
     public function mount(): void
     {
         abort_unless(
+<<<<<<< HEAD
 
             Auth::user()->can('resource.read'),
 
             Auth::user()?->can('resource.read'),
  e2a4c5d (.)
+=======
+            Auth::user()->can('resource.read'),
+>>>>>>> e5c56c3 (.)
             403
         );
     }
@@ -356,11 +360,15 @@ class ListMyRecords extends XotBaseListRecords
     {
         return [
             CreateAction::make()
+<<<<<<< HEAD
 
                 ->visible(fn () => Auth::user()->can('resource.write')),
 
                 ->visible(fn () => Auth::user()?->can('resource.write')),
  e2a4c5d (.)
+=======
+                ->visible(fn () => Auth::user()->can('resource.write')),
+>>>>>>> e5c56c3 (.)
         ];
     }
 }
@@ -409,11 +417,15 @@ class ListRecords extends XotBaseListRecords
     public function mount(): void
     {
         abort_unless(
+<<<<<<< HEAD
 
             Auth::user()->can('resource.read'),
 
             Auth::user()?->can('resource.read'),
  e2a4c5d (.)
+=======
+            Auth::user()->can('resource.read'),
+>>>>>>> e5c56c3 (.)
             403
         );
     }
@@ -532,7 +544,10 @@ public function getTableColumns(): array
 3. Mantieni la visibilità pubblica dei metodi
 4. Non aggiungere il prefisso "List" ai nomi dei metodi
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> e5c56c3 (.)
 ## Tipizzazione degli Array
 
 È **OBBLIGATORIO** utilizzare chiavi di tipo stringa per tutti gli array restituiti dai seguenti metodi:
@@ -613,6 +628,9 @@ public function getTableBulkActions(): array
 - Mantenere consistenza nei nomi delle chiavi tra diverse risorse
 - Utilizzare sempre la tipizzazione PHPDoc corretta
 
+<<<<<<< HEAD
 
  e2a4c5d (.)
+=======
+>>>>>>> e5c56c3 (.)
 // ... existing code ... 

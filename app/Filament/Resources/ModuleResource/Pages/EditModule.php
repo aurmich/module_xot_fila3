@@ -10,6 +10,10 @@ use Modules\Xot\Actions\Array\SaveArrayAction;
 use Modules\Xot\Filament\Resources\ModuleResource;
 use Modules\Xot\Models\Module;
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> e5c56c3 (.)
 /**
  * @property Module $record
  */

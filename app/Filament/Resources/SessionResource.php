@@ -8,7 +8,11 @@ use Filament\Forms\Components\KeyValue;
 use Filament\Forms\Components\TextInput;
 use Modules\Xot\Filament\Resources\SessionResource\Pages;
 use Modules\Xot\Models\Session;
+<<<<<<< HEAD
 use Modules\Xot\Filament\Resources\XotBaseResource\RelationManagers\XotBaseRelationManager;
+=======
+use Modules\Xot\Filament\Resources\XotBaseResource\RelationManager\XotBaseRelationManager;
+>>>>>>> e5c56c3 (.)
 
 class SessionResource extends XotBaseResource
 {
@@ -39,4 +43,8 @@ class SessionResource extends XotBaseResource
         ];
     }
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> e5c56c3 (.)
 }

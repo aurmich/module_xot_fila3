@@ -22,7 +22,11 @@ class ExportXlsByQuery
      * @param string $filename Nome del file Excel
      * @param array<int, string> $fields Campi da includere nell'export
      * @param int|null $limit Limite di righe da esportare
+<<<<<<< HEAD
      *
+=======
+     * 
+>>>>>>> e5c56c3 (.)
      * @return BinaryFileResponse
      */
     public function execute(
@@ -33,8 +37,20 @@ class ExportXlsByQuery
     ): BinaryFileResponse {
         // Assicuriamo che $fields sia un array di stringhe
         $stringFields = array_map(function ($field) {
+<<<<<<< HEAD
 
             return strval($field);
+=======
+<<<<<<< HEAD
+            return strval($field);
+=======
+<<<<<<< HEAD
+            return strval($field);
+=======
+            return is_string($field) ? $field : (string) $field;
+>>>>>>> origin/dev
+>>>>>>> origin/dev
+>>>>>>> e5c56c3 (.)
         }, array_values($fields));
 
         $export = new QueryExport(
@@ -42,6 +58,17 @@ class ExportXlsByQuery
             transKey: null,
             fields: $stringFields
         );
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+=======
+        
+>>>>>>> origin/dev
+>>>>>>> origin/dev
+>>>>>>> e5c56c3 (.)
         // Note: QueryExport doesn't accept a limit parameter directly
         // If limit is needed, apply it to the query before passing to the exporter
         if ($limit !== null) {

@@ -196,6 +196,7 @@ class XotData extends Data implements Wireable
     public function getProfileClass(): string
     {
         $class = 'Modules\\'.$this->main_module.'\Models\Profile';
+<<<<<<< HEAD
 
         // Verifica che la classe esista
         Assert::classExists($class, '['.$class.']['.__LINE__.']['.class_basename($this).']');
@@ -204,6 +205,16 @@ class XotData extends Data implements Wireable
         Assert::isAOf($class, Model::class, '['.__LINE__.']['.class_basename($this).']['.$class.']');
         Assert::implementsInterface($class, ProfileContract::class, '['.__LINE__.']['.class_basename($this).']['.$class.']');
 
+=======
+        
+        // Verifica che la classe esista
+        Assert::classExists($class, '['.$class.']['.__LINE__.']['.class_basename($this).']');
+        
+        // Verifica che sia un Model e implementi ProfileContract
+        Assert::isAOf($class, Model::class, '['.__LINE__.']['.class_basename($this).']['.$class.']');
+        Assert::implementsInterface($class, ProfileContract::class, '['.__LINE__.']['.class_basename($this).']['.$class.']');
+        
+>>>>>>> e5c56c3 (.)
         /** @var class-string<Model&ProfileContract> */
         return $class;
     }
@@ -257,7 +268,11 @@ class XotData extends Data implements Wireable
 
         // Utilizziamo un'asserzione per garantire che hasRole restituisca un booleano
         $result = $user->hasRole('super-admin');
+<<<<<<< HEAD
 
+=======
+        
+>>>>>>> e5c56c3 (.)
         return $result === true;
     }
 
@@ -266,7 +281,11 @@ class XotData extends Data implements Wireable
         if (null !== $this->profile) {
             return $this->profile;
         }
+<<<<<<< HEAD
 
+=======
+        
+>>>>>>> e5c56c3 (.)
         $user_id = (string) authId();
         $this->profile = $this->getProfileModelByUserId($user_id);
         Assert::implementsInterface($this->profile, ProfileContract::class, '['.__LINE__.']['.class_basename($this).']');
@@ -294,7 +313,11 @@ class XotData extends Data implements Wireable
         $path0 = base_path('Themes/'.$this->pub_theme.'/resources/views/'.$key);
         try {
             $path = realpath($path0);
+<<<<<<< HEAD
 
+=======
+            
+>>>>>>> e5c56c3 (.)
             return $path;
         } catch (\Exception $e) {
             throw new \Exception('realpath not find dir['.$path0.']'.PHP_EOL.'['.$e->getMessage().']');

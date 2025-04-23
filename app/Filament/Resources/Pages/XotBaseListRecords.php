@@ -27,6 +27,10 @@ abstract class XotBaseListRecords extends FilamentListRecords
 {
     use HasXotTable;
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> e5c56c3 (.)
     /**
      * Get the table columns.
      *

@@ -15,7 +15,11 @@ class CopyFromLastYearButton
     public function execute(string $modelClass, string $fieldName, ?string $year): Action
     {
         return Action::make('copy_from_last_year')
+<<<<<<< HEAD
 
+=======
+            
+>>>>>>> e5c56c3 (.)
             ->tooltip('copy from last year')
             ->icon('heroicon-o-document-duplicate')
             ->visible(null !== $year)

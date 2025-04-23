@@ -29,7 +29,11 @@ class GetProductsArrayDummyAction
             if (!is_array($item)) {
                 return []; // Restituiamo un array vuoto se $item non è un array
             }
+<<<<<<< HEAD
 
+=======
+            
+>>>>>>> e5c56c3 (.)
             return Arr::only(
                 $item,
                 [

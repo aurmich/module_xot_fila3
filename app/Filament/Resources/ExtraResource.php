@@ -12,7 +12,11 @@ use Modules\Xot\Models\Extra;
 
 
 
+<<<<<<< HEAD
 use Modules\Xot\Filament\Resources\XotBaseResource\RelationManagers\XotBaseRelationManager;
+=======
+use Modules\Xot\Filament\Resources\XotBaseResource\RelationManager\XotBaseRelationManager;
+>>>>>>> e5c56c3 (.)
 
 
 
@@ -24,7 +28,11 @@ class ExtraResource extends XotBaseResource
 
     /**
      * Get the form schema for the resource.
+<<<<<<< HEAD
      *
+=======
+     * 
+>>>>>>> e5c56c3 (.)
      * @return array<string, \Filament\Forms\Components\Component>
      */
     public static function getFormSchema(): array

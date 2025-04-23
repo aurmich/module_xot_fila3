@@ -33,14 +33,22 @@ class GetModulesNavigationItems
 
         foreach ($modules as $module) {
             Assert::string($module, 'Il nome del modulo deve essere una stringa');
+<<<<<<< HEAD
 
+=======
+            
+>>>>>>> e5c56c3 (.)
             $module_low = Str::lower($module);
             Assert::stringNotEmpty($module_low, 'Il nome del modulo convertito in minuscolo non può essere vuoto');
 
             // Otteniamo il percorso relativo della configurazione
             $relativeConfigPath = config('modules.paths.generator.config.path');
             $relativeConfigPathStr = is_string($relativeConfigPath) ? $relativeConfigPath : 'Config';
+<<<<<<< HEAD
 
+=======
+            
+>>>>>>> e5c56c3 (.)
             try {
                 // Proviamo a ottenere il percorso del modulo
                 $configPath = module_path($module, $relativeConfigPathStr);
@@ -49,6 +57,7 @@ class GetModulesNavigationItems
                 // Se fallisce, costruiamo manualmente il percorso
                 $configPath = base_path('Modules/'.$module.'/'.$relativeConfigPathStr);
             }
+<<<<<<< HEAD
 
             // Verifichiamo che $configPath sia una stringa valida
             Assert::stringNotEmpty($configPath, 'Il percorso di configurazione non può essere vuoto');
@@ -56,11 +65,24 @@ class GetModulesNavigationItems
             // Costruiamo il percorso completo del file di configurazione
             $configFilePath = $configPath.'/config.php';
 
+=======
+            
+            // Verifichiamo che $configPath sia una stringa valida
+            Assert::stringNotEmpty($configPath, 'Il percorso di configurazione non può essere vuoto');
+            
+            // Costruiamo il percorso completo del file di configurazione
+            $configFilePath = $configPath.'/config.php';
+            
+>>>>>>> e5c56c3 (.)
             // Verifichiamo che il file esista
             if (!File::exists($configFilePath)) {
                 continue; // Saltiamo questo modulo se il file di configurazione non esiste
             }
+<<<<<<< HEAD
 
+=======
+            
+>>>>>>> e5c56c3 (.)
             // Carichiamo la configurazione
             try {
                 /** @var array<string, mixed> $config */
@@ -70,6 +92,7 @@ class GetModulesNavigationItems
                 // Se non riusciamo a caricare la configurazione, passiamo al modulo successivo
                 continue;
             }
+<<<<<<< HEAD
 
             // Estraiamo i valori di configurazione con valori predefiniti
             $icon = $config['icon'] ?? 'heroicon-o-question-mark-circle';
@@ -82,6 +105,20 @@ class GetModulesNavigationItems
             Assert::integerish($navigation_sort, 'navigation_sort deve essere un intero');
             $navigation_sort = (int) $navigation_sort;
 
+=======
+            
+            // Estraiamo i valori di configurazione con valori predefiniti
+            $icon = $config['icon'] ?? 'heroicon-o-question-mark-circle';
+            Assert::string($icon, "L'icona deve essere una stringa");
+            
+            $role = $module_low.'::admin';
+            Assert::stringNotEmpty($role, 'Il ruolo non può essere vuoto');
+            
+            $navigation_sort = $config['navigation_sort'] ?? 1;
+            Assert::integerish($navigation_sort, 'navigation_sort deve essere un intero');
+            $navigation_sort = (int) $navigation_sort;
+            
+>>>>>>> e5c56c3 (.)
             // Creiamo l'elemento di navigazione
             $nav = NavigationItem::make($module)
                 ->url('/'.$module_low.'/admin')

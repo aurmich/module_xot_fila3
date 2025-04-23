@@ -26,7 +26,11 @@ class ArtisanCommandsManager extends XotBasePage
 
     /**
      * Livewire event listeners for this component.
+<<<<<<< HEAD
      *
+=======
+     * 
+>>>>>>> e5c56c3 (.)
      * @var array<string, string>
      * @phpstan-var array<string, string>
      */

@@ -21,7 +21,11 @@ class ExportXlsByLazyCollection
      * @param LazyCollection $collection La lazy collection da esportare
      * @param string $filename Nome del file Excel
      * @param array<int, string> $fields Campi da includere nell'export
+<<<<<<< HEAD
      *
+=======
+     * 
+>>>>>>> e5c56c3 (.)
      * @return BinaryFileResponse
      */
     public function execute(
@@ -31,8 +35,20 @@ class ExportXlsByLazyCollection
     ): BinaryFileResponse {
         // Assicuriamo che $fields sia un array di stringhe
         $stringFields = array_map(function ($field) {
+<<<<<<< HEAD
 
             return strval($field);
+=======
+<<<<<<< HEAD
+            return strval($field);
+=======
+<<<<<<< HEAD
+            return strval($field);
+=======
+            return is_string($field) ? $field : (string) $field;
+>>>>>>> origin/dev
+>>>>>>> origin/dev
+>>>>>>> e5c56c3 (.)
         }, array_values($fields));
 
         $export = new LazyCollectionExport(

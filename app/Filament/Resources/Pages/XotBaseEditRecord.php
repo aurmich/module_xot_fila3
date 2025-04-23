@@ -20,11 +20,16 @@ abstract class XotBaseEditRecord extends FilamentEditRecord
     public function form(Form $form): Form
     {
         $schema = $this->getFormSchema();
+<<<<<<< HEAD
 
+=======
+        
+>>>>>>> e5c56c3 (.)
         if (empty($schema)) {
             $resource = $this->getResource();
             $schema = $resource::getFormSchema();
         }
+<<<<<<< HEAD
 
         // Ensure schema is properly typed for PHPStan level 10
         /** @var array<string|int, \Filament\Forms\Components\Component>|array<\Filament\Forms\Components\Component> $validSchema */
@@ -33,6 +38,16 @@ abstract class XotBaseEditRecord extends FilamentEditRecord
         return $form->schema($validSchema);
     }
 
+=======
+        
+        // Ensure schema is properly typed for PHPStan level 10
+        /** @var array<string|int, \Filament\Forms\Components\Component>|array<\Filament\Forms\Components\Component> $validSchema */
+        $validSchema = $schema;
+        
+        return $form->schema($validSchema);
+    }
+    
+>>>>>>> e5c56c3 (.)
     /**
      * Get the form schema.
      *

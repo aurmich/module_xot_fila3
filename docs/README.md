@@ -1,5 +1,6 @@
 # Modulo Xot
 
+<<<<<<< HEAD
 
 ## 🎯 Perché Xot?
 
@@ -82,6 +83,8 @@ Vedi [[contributing.md|CONTRIBUTING]] per le linee guida sulla contribuzione.
 
 
  e2a4c5d (.)
+=======
+>>>>>>> e5c56c3 (.)
 ## Panoramica
 Il modulo Xot fornisce le funzionalità base e le utilities utilizzate da tutti gli altri moduli dell'applicazione.
 
@@ -185,7 +188,10 @@ Il modulo è configurabile tramite:
 - `/docs/filament/`: Integrazione Filament
 - `/docs/model/`: Gestione modelli
 - `/docs/service/`: Servizi disponibili
+<<<<<<< HEAD
 
+=======
+>>>>>>> e5c56c3 (.)
 - `/docs/activity/`: Sistema di logging
 
 ## Documentazione PHPStan
@@ -194,7 +200,11 @@ Il modulo è configurabile tramite:
 
 ## Documentazione Filament
 
+<<<<<<< HEAD
 - [Linee Guida per getInfolistSchema](./filament/INFOLIST_SCHEMA_GUIDELINES.md) - Guida completa per l'implementazione corretta del metodo getInfolistSchema, con focus sull'uso delle chiavi stringa negli array 
 
 - `/docs/activity/`: Sistema di logging 
  e2a4c5d (.)
+=======
+- [Linee Guida per getInfolistSchema](./filament/INFOLIST_SCHEMA_GUIDELINES.md) - Guida completa per l'implementazione corretta del metodo getInfolistSchema, con focus sull'uso delle chiavi stringa negli array 
+>>>>>>> e5c56c3 (.)

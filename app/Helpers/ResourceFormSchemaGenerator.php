@@ -47,6 +47,7 @@ class ResourceFormSchemaGenerator
 
             $formSchemaMethod = "\n    public function getFormSchema(): array\n    {\n        return [\n";
             $formSchemaMethod .= "            Forms\\Components\\TextInput::make('{$modelVariable}_name')\n";
+<<<<<<< HEAD
             $formSchemaMethod .= "                ->label('".Str::headline($modelName)." Name')\n";
             $formSchemaMethod .= "                ->required(),\n";
             $formSchemaMethod .= "        ];\n    }\n";
@@ -58,6 +59,15 @@ class ResourceFormSchemaGenerator
             $modifiedContents = preg_replace(
                 '/}(\s*)$/',
                 $formSchemaMethod.($isInClustersDir ? '' : '}$1'),
+=======
+            $formSchemaMethod .= "                ->required(),\n";
+            $formSchemaMethod .= "        ];\n    }\n";
+
+            // Insert the method before the last closing brace
+            $modifiedContents = preg_replace(
+                '/}(\s*)$/',
+                $formSchemaMethod.'}$1',
+>>>>>>> e5c56c3 (.)
                 $fileContents
             );
 

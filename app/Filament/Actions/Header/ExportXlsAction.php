@@ -31,7 +31,11 @@ class ExportXlsAction extends Action
                 $query = $livewire->getFilteredTableQuery();
                 $rows = $query->get();
                 $resource = $livewire->getResource();
+<<<<<<< HEAD
 
+=======
+                
+>>>>>>> e5c56c3 (.)
                 /** @var array<int, string> $fields */
                 $fields = [];
                 if (method_exists($resource, 'getXlsFields')) {
@@ -51,9 +55,15 @@ class ExportXlsAction extends Action
                 }
 
                 return app(ExportXlsByCollection::class)->execute(
+<<<<<<< HEAD
                     $rows,
                     $filename,
                     $transKey,
+=======
+                    $rows, 
+                    $filename, 
+                    $transKey, 
+>>>>>>> e5c56c3 (.)
                     array_values($fields)
                 );
             });

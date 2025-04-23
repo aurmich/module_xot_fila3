@@ -165,7 +165,11 @@ if (! function_exists('dddx')) {
         $file = str_replace('/', DIRECTORY_SEPARATOR, $file);
 
         Assert::string($doc_root = $_SERVER['DOCUMENT_ROOT']);
+<<<<<<< HEAD
         $doc_root = str_replace('/', DIRECTORY_SEPARATOR, (string) $doc_root);
+=======
+        $doc_root = str_replace('/', DIRECTORY_SEPARATOR, $doc_root);
+>>>>>>> e5c56c3 (.)
 
         $dir_piece = explode(DIRECTORY_SEPARATOR, __DIR__);
         $dir_piece = array_slice($dir_piece, 0, -6);
@@ -403,7 +407,11 @@ if (! function_exists('params2ContainerItem')) {
             $pattern = '/(container|item)(\d+)/';
             preg_match($pattern, $k, $matches);
 
+<<<<<<< HEAD
             if (is_array($matches) && isset($matches[1]) && isset($matches[2])) {
+=======
+            if (!empty($matches) && isset($matches[1]) && isset($matches[2]) && is_string($matches[1]) && is_string($matches[2])) {
+>>>>>>> e5c56c3 (.)
                 $sk = $matches[1];
                 $sv = $matches[2];
                 // @phpstan-ignore offsetAccess.nonOffsetAccessible
@@ -415,13 +423,23 @@ if (! function_exists('params2ContainerItem')) {
     }
 }
 
+<<<<<<< HEAD
 if (! function_exists('getModelFields')) {
     function getModelFields(Model $model): array
     {
+=======
+
+if (! function_exists('getModelFields')) {
+    function getModelFields(Model $model): array {
+>>>>>>> e5c56c3 (.)
         return $model->getConnection()->getSchemaBuilder()->getColumnListing($model->getTable());
     }
 }
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> e5c56c3 (.)
 if (! function_exists('getModelByName')) {
     function getModelByName(string $name): Model
     {
@@ -1113,6 +1131,7 @@ if (! function_exists('cssInLine')) {
 }
 
 if (! function_exists('authId')) {
+<<<<<<< HEAD
     function authId(): ?string
     {
         try {
@@ -1129,3 +1148,48 @@ if (! function_exists('authId')) {
         return (string) $id;
     }
 }
+=======
+    /**
+     * Get the current authenticated user ID from Filament or Laravel auth.
+     */
+    function authId(): ?string
+    {
+        try {
+            $filamentAuth = Filament::auth();
+            $id = null;
+            
+            if ($filamentAuth && method_exists($filamentAuth, 'id')) {
+                $id = $filamentAuth->id();
+            }
+            
+            if ($id === null && auth()->check()) {
+                $id = auth()->id();
+            }
+
+            return $id === null ? null : (is_string($id) ? $id : (string) $id);
+        } catch (\Exception|\Error $e) {
+            return null;
+        }
+    }
+}
+/**
+ * Esegue un controllo sicuro su un oggetto e chiama un metodo se l'oggetto esiste
+ *
+ * @template T
+ * @param T|null $object L'oggetto da controllare
+ * @param string $method Il nome del metodo da chiamare
+ * @param mixed ...$args Gli argomenti da passare al metodo
+ * @return mixed|null
+ */
+function safe_object_call($object, string $method, ...$args) {
+    if (!is_object($object)) {
+        return null;
+    }
+    
+    if (!method_exists($object, $method)) {
+        return null;
+    }
+    
+    return $object->$method(...$args);
+}
+>>>>>>> e5c56c3 (.)

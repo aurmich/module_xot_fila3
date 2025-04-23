@@ -25,7 +25,11 @@ class ExportXlsLazyAction extends Action
     {
         parent::setUp();
         $this->translateLabel()
+<<<<<<< HEAD
 
+=======
+            
+>>>>>>> e5c56c3 (.)
             ->tooltip(__('xot::actions.export_xls'))
             ->icon('heroicon-o-arrow-down-tray')
             ->action(static function (ListRecords $livewire) {
@@ -53,6 +57,7 @@ class ExportXlsLazyAction extends Action
                 }
 
                 $lazy = $livewire->getFilteredTableQuery();
+<<<<<<< HEAD
 
                 if ($lazy->count() < 7) {
                     Assert::isInstanceOf($lazy, Builder::class);
@@ -64,6 +69,19 @@ class ExportXlsLazyAction extends Action
                         $lazy,
                         $filename,
                         $stringFields,
+=======
+                
+                if ($lazy->count() < 7) {
+                    Assert::isInstanceOf($lazy, Builder::class);
+                    
+                    /** @var array<int, string> $stringFields */
+                    $stringFields = array_values($fields);
+                    
+                    return app(ExportXlsByQuery::class)->execute(
+                        $lazy, 
+                        $filename, 
+                        $stringFields, 
+>>>>>>> e5c56c3 (.)
                         null
                     );
                 }
@@ -72,16 +90,27 @@ class ExportXlsLazyAction extends Action
 
                 if ($lazyCursor->count() > 3000) {
                     return app(ExportXlsStreamByLazyCollection::class)->execute(
+<<<<<<< HEAD
                         $lazyCursor,
                         $filename,
                         $transKey,
+=======
+                        $lazyCursor, 
+                        $filename, 
+                        $transKey, 
+>>>>>>> e5c56c3 (.)
                         array_values($fields)
                     );
                 }
 
                 return app(ExportXlsByLazyCollection::class)->execute(
+<<<<<<< HEAD
                     $lazyCursor,
                     $filename,
+=======
+                    $lazyCursor, 
+                    $filename, 
+>>>>>>> e5c56c3 (.)
                     array_values($fields)
                 );
             });

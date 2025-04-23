@@ -50,7 +50,11 @@ class LazyCollectionExport implements FromIterator, ShouldQueue, WithHeadings, W
         return $data->toArray();
         /*
         return [
+<<<<<<< HEAD
             $item->id,
+=======
+            $item->,
+>>>>>>> e5c56c3 (.)
         ];
         */
     }

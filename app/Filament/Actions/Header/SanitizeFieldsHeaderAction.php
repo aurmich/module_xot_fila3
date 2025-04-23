@@ -25,7 +25,11 @@ class SanitizeFieldsHeaderAction extends Action
     {
         parent::setUp();
         $this->translateLabel()
+<<<<<<< HEAD
 
+=======
+            
+>>>>>>> e5c56c3 (.)
             ->tooltip('sanitize')
             ->icon('heroicon-o-shield-exclamation')
             ->action(function (ListRecords $livewire) {

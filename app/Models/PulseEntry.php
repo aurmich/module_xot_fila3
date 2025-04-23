@@ -5,7 +5,11 @@ declare(strict_types=1);
 namespace Modules\Xot\Models;
 
 /**
+<<<<<<< HEAD
  *
+=======
+ * 
+>>>>>>> e5c56c3 (.)
  *
  * @property \Modules\Xot\Contracts\ProfileContract|null $creator
  * @property \Modules\Xot\Contracts\ProfileContract|null $updater

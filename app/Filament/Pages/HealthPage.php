@@ -83,7 +83,11 @@ class HealthPage extends Page
     {
         return [
             Action::make('refresh')
+<<<<<<< HEAD
 
+=======
+                
+>>>>>>> e5c56c3 (.)
                 ->tooltip('refresh')
                 ->icon('heroicon-o-arrow-path')
                 ->button()

@@ -16,13 +16,42 @@ use Filament\Support\Concerns\Configurable;
 use Filament\Tables\Columns\Column;
 use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Filters\BaseFilter;
+<<<<<<< HEAD
+=======
+use Illuminate\Auth\AuthenticationException;
+use Illuminate\Contracts\Debug\ExceptionHandler;
+use Illuminate\Database\Eloquent\Model;
+>>>>>>> e5c56c3 (.)
 use Illuminate\Database\Events\MigrationsEnded;
 use Illuminate\Support\Carbon;
 use Illuminate\Support\Facades\Event;
 use Illuminate\Support\Facades\File;
+<<<<<<< HEAD
 use Illuminate\Support\Facades\URL;
 use Illuminate\Support\Facades\View;
 use Modules\Xot\View\Composers\XotComposer;
+=======
+use Illuminate\Support\Facades\Log;
+use Illuminate\Support\Facades\URL;
+use Illuminate\Support\Facades\View;
+<<<<<<< HEAD
+use Modules\Xot\Exceptions\Handlers\HandlerDecorator;
+use Modules\Xot\Exceptions\Handlers\HandlersRepository;
+use Modules\Xot\Exceptions\Formatters\WebhookErrorFormatter;
+=======
+<<<<<<< HEAD
+use Modules\Xot\Exceptions\Handlers\HandlerDecorator;
+use Modules\Xot\Exceptions\Handlers\HandlersRepository;
+use Modules\Xot\Exceptions\Formatters\WebhookErrorFormatter;
+=======
+use Modules\Xot\Exceptions\Formatters\WebhookErrorFormatter;
+use Modules\Xot\Exceptions\Handlers\HandlerDecorator;
+use Modules\Xot\Exceptions\Handlers\HandlersRepository;
+>>>>>>> origin/dev
+>>>>>>> origin/dev
+use Modules\Xot\View\Composers\XotComposer;
+use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
+>>>>>>> e5c56c3 (.)
 use Webmozart\Assert\Assert;
 
 use function Safe\realpath;
@@ -44,6 +73,18 @@ class XotServiceProvider extends XotBaseServiceProvider
         $this->redirectSSL();
         $this->registerViewComposers();
         $this->registerEvents();
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+        //$this->registerExceptionHandler(); // guardare come fa sentry
+=======
+<<<<<<< HEAD
+        //$this->registerExceptionHandler(); // guardare come fa sentry
+=======
+        $this->registerExceptionHandler();
+>>>>>>> origin/dev
+>>>>>>> origin/dev
+>>>>>>> e5c56c3 (.)
         $this->registerTimezone();
         $this->registerProviders();
     }
@@ -52,6 +93,21 @@ class XotServiceProvider extends XotBaseServiceProvider
     {
         parent::register();
         $this->registerConfig();
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+        //$this->registerExceptionHandlersRepository();
+        //$this->extendExceptionHandler();
+=======
+<<<<<<< HEAD
+        //$this->registerExceptionHandlersRepository();
+        //$this->extendExceptionHandler();
+=======
+        $this->registerExceptionHandlersRepository();
+        $this->extendExceptionHandler();
+>>>>>>> origin/dev
+>>>>>>> origin/dev
+>>>>>>> e5c56c3 (.)
         $this->registerCommands();
     }
 
@@ -76,6 +132,82 @@ class XotServiceProvider extends XotBaseServiceProvider
         TextColumn::configureUsing(fn (TextColumn $column) => $column->timezone($timezone));
     }
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/dev
+    /*
+     * @see https://github.com/cerbero90/exception-handler
+     --  guardare come fa sentry 
+    public function registerExceptionHandler(): void
+    {
+        $exceptionHandler = $this->app->make(ExceptionHandler::class);
+        if ($exceptionHandler instanceof HandlerDecorator) {
+            $exceptionHandler->reporter(
+                static function (\Throwable $e): void {
+                    $data = (new WebhookErrorFormatter($e))->format();
+                    if ($e instanceof AuthenticationException || $e instanceof NotFoundHttpException) {
+                        return;
+                    }
+
+                    if (is_string(config('logging.channels.slack_errors.url'))
+                        && mb_strlen(config('logging.channels.slack_errors.url')) > 5) {
+                        Log::channel('slack_errors')
+                            ->error($e->getMessage(), $data);
+                    }
+                }
+            );
+        }
+    }
+        */
+<<<<<<< HEAD
+=======
+=======
+    /**
+     * @see https://github.com/cerbero90/exception-handler
+     */
+    public function registerExceptionHandler(): void
+    {
+        $exceptionHandler = $this->app->make(ExceptionHandler::class);
+
+        $exceptionHandler->reporter(
+            static function (\Throwable $e): void {
+                $data = (new WebhookErrorFormatter($e))->format();
+                if ($e instanceof AuthenticationException || $e instanceof NotFoundHttpException) {
+                    return;
+                }
+
+                if (is_string(config('logging.channels.slack_errors.url'))
+                    && mb_strlen(config('logging.channels.slack_errors.url')) > 5) {
+                    Log::channel('slack_errors')
+                        ->error($e->getMessage(), $data);
+                }
+            }
+        );
+
+        // $exceptionHandler->renderer(function ($e, $request) {
+        //    dddx([$e, $request]);
+        // });
+
+        /*
+        ->reporter(function ($e) {
+            // $this->app['log']->debug($e->getMessage());
+
+        });
+
+        // register a custom renderer to redirect the user back and show validation errors
+        $this->app->make(ExceptionHandler::class)->renderer(function ($e, $request) {
+            // return back()->withInput()->withErrors($e->errors());
+
+        });
+        */
+    }
+>>>>>>> origin/dev
+>>>>>>> origin/dev
+
+>>>>>>> e5c56c3 (.)
     public function registerConfig(): void
     {
         // $config_file = realpath(__DIR__.'/../config/metatag.php');
@@ -111,6 +243,67 @@ class XotServiceProvider extends XotBaseServiceProvider
         }
     }
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    /*
+     * Register the custom exception handlers repository.
+     -- guardare come fa sentry
+=======
+<<<<<<< HEAD
+    /*
+     * Register the custom exception handlers repository.
+     -- guardare come fa sentry
+=======
+    /**
+     * Register the custom exception handlers repository.
+     */
+>>>>>>> origin/dev
+>>>>>>> origin/dev
+    private function registerExceptionHandlersRepository(): void
+    {
+        $this->app->singleton(HandlersRepository::class, HandlersRepository::class);
+    }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/dev
+    */
+    /*
+     * Extend the Laravel default exception handler.
+     *
+     * @see https://github.com/cerbero90/exception-handler/blob/master/src/Providers/ExceptionHandlerServiceProvider.php
+     -- guardare come fa sentry
+<<<<<<< HEAD
+=======
+=======
+
+    /**
+     * Extend the Laravel default exception handler.
+     *
+     * @see https://github.com/cerbero90/exception-handler/blob/master/src/Providers/ExceptionHandlerServiceProvider.php
+     */
+>>>>>>> origin/dev
+>>>>>>> origin/dev
+    private function extendExceptionHandler(): void
+    {
+        $this->app->extend(
+            ExceptionHandler::class,
+            static function (ExceptionHandler $handler, $app) {
+                return new HandlerDecorator($handler, $app[HandlersRepository::class]);
+            }
+        );
+    }
+<<<<<<< HEAD
+    */
+=======
+<<<<<<< HEAD
+    */
+=======
+
+>>>>>>> origin/dev
+>>>>>>> origin/dev
+>>>>>>> e5c56c3 (.)
     private function redirectSSL(): void
     {
         // --- meglio ficcare un controllo anche sull'env
@@ -147,4 +340,9 @@ class XotServiceProvider extends XotBaseServiceProvider
     {
         View::composer('*', XotComposer::class);
     }
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> e5c56c3 (.)
 } // end class

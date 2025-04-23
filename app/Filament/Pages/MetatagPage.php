@@ -16,11 +16,25 @@ use Filament\Forms\Form;
 use Filament\Forms\Get;
 use Filament\Notifications\Notification;
 use Filament\Pages\Page;
+<<<<<<< HEAD
 use Filament\Support\Colors\Color;
+=======
+>>>>>>> e5c56c3 (.)
 use Modules\Tenant\Services\TenantService;
 use Modules\Xot\Datas\MetatagData;
 use Modules\Xot\Filament\Traits\NavigationLabelTrait;
 use Webmozart\Assert\Assert;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+use Filament\Support\Colors\Color;
+=======
+<<<<<<< HEAD
+use Filament\Support\Colors\Color;
+=======
+>>>>>>> origin/dev
+>>>>>>> origin/dev
+>>>>>>> e5c56c3 (.)
 
 /**
  * @property ComponentContainer $form
@@ -83,6 +97,13 @@ class MetatagPage extends Page implements HasForms
                     Repeater::make('colors')
                         ->schema([
                             Select::make('key')
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/dev
+>>>>>>> e5c56c3 (.)
                                 ->label('Chiave')
                                 ->required()
                                 ->options($metatag->getFilamentColors()),
@@ -98,6 +119,28 @@ class MetatagPage extends Page implements HasForms
                                 ->visible(fn (Get $get) => $get('color') === 'custom')
                                 ->required(),
                         ])
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+=======
+
+                                ->required()
+                                ->options($metatag->getFilamentColors()),
+                            Select::make('color')
+
+                                ->required()
+                                ->reactive()
+                                ->options(array_merge(['custom' => '--- custom ---'], $metatag->getAllColors())),
+                            ColorPicker::make('hex')
+
+                                ->visible(fn (Get $get): bool => 'custom' == $get('color'))
+                                ->required(), // e.g., '#0071b0'
+                        ])
+                    // ->keyValueArray(true) // Store as key-value pairs in the 'colors' array
+>>>>>>> origin/dev
+>>>>>>> origin/dev
+>>>>>>> e5c56c3 (.)
                         ->columns(3),
                 ]
             )->columns(2)
@@ -119,6 +162,16 @@ class MetatagPage extends Page implements HasForms
     {
         return [
             Action::make('save')
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/dev
+>>>>>>> origin/dev
+>>>>>>> e5c56c3 (.)
                 ->submit('save'),
         ];
     }

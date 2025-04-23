@@ -20,7 +20,11 @@ class GetModulePathAction
      * Ottiene il percorso di un modulo.
      *
      * @param string $moduleName Il nome del modulo
+<<<<<<< HEAD
      *
+=======
+     * 
+>>>>>>> e5c56c3 (.)
      * @return string Il percorso completo del modulo
      */
     public function execute(string $moduleName): string
@@ -35,7 +39,11 @@ class GetModulePathAction
 
             $files = scandir($modulesPath);
             $moduleNameLower = Str::lower($moduleName);
+<<<<<<< HEAD
 
+=======
+            
+>>>>>>> e5c56c3 (.)
             $foundModule = collect($files)
                 ->filter(
                     static function ($item) use ($moduleNameLower): bool {
@@ -45,12 +53,20 @@ class GetModulePathAction
                         return Str::lower($item) === $moduleNameLower;
                     }
                 )->first();
+<<<<<<< HEAD
 
+=======
+            
+>>>>>>> e5c56c3 (.)
             // Se non troviamo il modulo, restituiamo un percorso di fallback
             if ($foundModule === null || !is_string($foundModule)) {
                 return base_path('Modules/'.$moduleName);
             }
+<<<<<<< HEAD
 
+=======
+            
+>>>>>>> e5c56c3 (.)
             $module_path = base_path('Modules/'.$foundModule);
         }
 
