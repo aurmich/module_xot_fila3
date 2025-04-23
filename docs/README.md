@@ -1,6 +1,16 @@
+<<<<<<< HEAD
 
 # Modulo Xot
 aurmich/dev
+=======
+<<<<<<< HEAD
+# Modulo Xot
+=======
+
+# Modulo Xot
+aurmich/dev
+>>>>>>> aurmich/dev
+>>>>>>> aurmich/dev
 
 ## Panoramica
 Il modulo Xot fornisce le funzionalità base e le utilities utilizzate da tutti gli altri moduli dell'applicazione.
@@ -107,12 +117,26 @@ Il modulo è configurabile tramite:
 - `/docs/service/`: Servizi disponibili
 - `/docs/activity/`: Sistema di logging
 
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+=======
+
+>>>>>>> aurmich/dev
+>>>>>>> aurmich/dev
 ## Documentazione PHPStan
 
 - [Linee Guida PHPStan Livello 10](./PHPStan/LEVEL10_LINEE_GUIDA.md) - Linee guida dettagliate per rispettare le regole di PHPStan a livello 10
 
+<<<<<<< HEAD
 aurmich/dev
+=======
+<<<<<<< HEAD
+=======
+aurmich/dev
+>>>>>>> aurmich/dev
+>>>>>>> aurmich/dev
 ## Documentazione Filament
 
 - [Linee Guida per getInfolistSchema](./filament/INFOLIST_SCHEMA_GUIDELINES.md) - Guida completa per l'implementazione corretta del metodo getInfolistSchema, con focus sull'uso delle chiavi stringa negli array 

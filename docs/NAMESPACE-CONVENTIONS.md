@@ -31,23 +31,83 @@ namespace Modules\Rating\App\Console\Commands;
 Un errore particolarmente frequente riguarda le Actions. La convenzione corretta è la seguente:
 
 - ✅ **CORRETTO**: `namespace Modules\Xot\Actions;`
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+- ❌ **ERRATO**: `namespace Modules\Xot\Actions;`
+
+
+- ❌ **ERRATO**: `namespace Modules\Xot\Actions;`
+
+- ❌ **ERRATO**: `namespace Modules\Xot\app\Actions;`
+
+
+=======
+<<<<<<< HEAD
+- ❌ **ERRATO**: `namespace Modules\Xot\Actions;`
+=======
+<<<<<<< HEAD
+- ❌ **ERRATO**: `namespace Modules\Xot\Actions;`
+=======
+- ❌ **ERRATO**: `namespace Modules\Xot\app\Actions;`
+>>>>>>> origin/dev
+>>>>>>> origin/dev
+>>>>>>> origin/dev
+=======
+>>>>>>> aurmich/dev
 
 
 - ❌ **ERRATO**: `namespace Modules\Xot\Actions;`
 origin/dev
 >>>>>>> origin/dev
 aurmich/dev
+<<<<<<< HEAD
+=======
+>>>>>>> aurmich/dev
+>>>>>>> aurmich/dev
 
 Anche se il file si trova nel percorso fisico `Modules/Xot/app/Actions/`, il namespace non deve mai includere il segmento `app`.
 
 Questo errore causa spesso problemi di PHPStan come:
 ```
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+Class 'Modules\Xot\Actions\MyAction' not found.
+
+
+Class 'Modules\Xot\Actions\MyAction' not found.
+
+Class 'Modules\Xot\app\Actions\MyAction' not found.
+
+
+=======
+<<<<<<< HEAD
+Class 'Modules\Xot\Actions\MyAction' not found.
+=======
+<<<<<<< HEAD
+Class 'Modules\Xot\Actions\MyAction' not found.
+=======
+Class 'Modules\Xot\app\Actions\MyAction' not found.
+>>>>>>> origin/dev
+>>>>>>> origin/dev
+>>>>>>> origin/dev
+=======
+>>>>>>> aurmich/dev
 
 
 Class 'Modules\Xot\Actions\MyAction' not found.
 origin/dev
 >>>>>>> origin/dev
 aurmich/dev
+<<<<<<< HEAD
+=======
+>>>>>>> aurmich/dev
+>>>>>>> aurmich/dev
 ```
 
 La correzione è sempre la stessa: rimuovere il segmento `app` dal namespace.
@@ -282,6 +342,16 @@ namespace Modules\Rating\Console\Commands;
 4. **Riflettività**: Il namespace riflette la struttura logica del modulo, non la sua struttura fisica
 5. **Standard Laravel**: Allineato alle convenzioni di Laravel
 
+<<<<<<< HEAD
 
 Seguire queste convenzioni di namespace aiuterà a mantenere un codebase coerente e a evitare errori comuni durante l'analisi statica del codice con PHPStan. 
 aurmich/dev
+=======
+<<<<<<< HEAD
+Seguire queste convenzioni di namespace aiuterà a mantenere un codebase coerente e a evitare errori comuni durante l'analisi statica del codice con PHPStan. 
+=======
+
+Seguire queste convenzioni di namespace aiuterà a mantenere un codebase coerente e a evitare errori comuni durante l'analisi statica del codice con PHPStan. 
+aurmich/dev
+>>>>>>> aurmich/dev
+>>>>>>> aurmich/dev
