@@ -55,21 +55,10 @@
         "spatie/laravel-tags": "*",
         "livewire/volt": "*",
         "tightenco/parental": "*",
-<<<<<<< HEAD
-        "spatie/laravel-queueable-action": "*",
         "spatie/laravel-queueable-action": "*"
     },
     "require-comment": {
 
-=======
-        "spatie/laravel-queueable-action": "*"
-
-        
-    },
-    "require-comment": {
-       
-aurmich/dev
->>>>>>> aurmich/dev
     },
     "require-dev": {
         "barryvdh/laravel-debugbar": "^3.14",
@@ -87,11 +76,6 @@ aurmich/dev
     },
     "require-dev-comment": {
 
-<<<<<<< HEAD
-=======
-        
-aurmich/dev
->>>>>>> aurmich/dev
     },
     "repositories": [
         {
