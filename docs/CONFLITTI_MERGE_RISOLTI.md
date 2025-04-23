@@ -294,3 +294,45 @@ In particolare, le correzioni hanno portato i seguenti benefici:
 5. **Compatibilità con PHPStan**: Riduzione degli errori di analisi statica
 
 Questo lavoro di risoluzione dei conflitti ha inoltre contribuito a stabilire best practices per la gestione dei merge nel progetto SaluteOra, che potranno essere applicate in futuro per prevenire problemi simili.
+
+## Conflitti Risolti - 2025-04-24
+
+### 1. GetViewByClassAction.php
+
+**File**: `Modules/Xot/app/Actions/View/GetViewByClassAction.php`
+
+**Problema**: Conflitto nella conversione di tipi scalari in stringa.
+
+**Risoluzione**: Mantenuta l'implementazione che utilizza `strval()` per la conversione, che è più concisa e diretta.
+
+**Documentazione**: [Dettagli](./actions/view/GetViewByClassAction_conflict.md)
+
+### 2. ExportXlsByView.php
+
+**File**: `Modules/Xot/app/Actions/Export/ExportXlsByView.php`
+
+**Problema**: Conflitto nella funzione di callback per la conversione dei campi in stringhe.
+
+**Risoluzione**: Mantenuta l'implementazione con `strval()` per garantire la corretta conversione dei tipi.
+
+**Documentazione**: [Dettagli](./actions/export/ExportXlsByView_conflict.md)
+
+### 3. ExportXlsByCollection.php
+
+**File**: `Modules/Xot/app/Actions/Export/ExportXlsByCollection.php`
+
+**Problema**: Conflitto nella documentazione PHPDoc del metodo `writeRows()`.
+
+**Risoluzione**: Rimossi spazi vuoti superflui e mantenuta la documentazione dei parametri ben formattata.
+
+**Documentazione**: [Dettagli](./actions/export/ExportXlsByCollection_conflict.md)
+
+### 4. PageContent.php
+
+**File**: `Modules/Cms/app/Models/PageContent.php`
+
+**Problema**: Duplicazione delle proprietà documentate nel PHPDoc e conflitto con il marker `>>>>>>> 49ebea7 (.)`.
+
+**Risoluzione**: Eliminate le proprietà duplicate e risolto il conflitto di tipo per la proprietà `blocks`.
+
+**Documentazione**: [Moduli Cms](../../../Cms/docs/models/PageContent_conflict.md)
