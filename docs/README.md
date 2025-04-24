@@ -1,18 +1,13 @@
-<<<<<<< HEAD
 # Modulo Xot
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-# Modulo Xot
-=======
 
-# Modulo Xot
-aurmich/dev
->>>>>>> aurmich/dev
-=======
-# Modulo Xot
->>>>>>> aurmich/dev
->>>>>>> aurmich/dev
+Il modulo Xot è il core del sistema SaluteOra, fornendo le funzionalità di base e le classi astratte utilizzate dagli altri moduli.
+
+## Collegamenti Documentazione
+
+- [Architettura Generale dei Moduli](../../../../docs/architecture/modules.md)
+- [Struttura dei Moduli](./MODULE-STRUCTURE.md)
+- [Convenzioni di Namespace](./NAMESPACE-CONVENTIONS.md)
+- [Best Practices](./BEST-PRACTICES.md)
 
 ## Panoramica
 Il modulo Xot fornisce le funzionalità base e le utilities utilizzate da tutti gli altri moduli dell'applicazione.
@@ -118,27 +113,15 @@ Il modulo è configurabile tramite:
 - `/docs/model/`: Gestione modelli
 - `/docs/service/`: Servizi disponibili
 - `/docs/activity/`: Sistema di logging
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-=======
-
->>>>>>> aurmich/dev
 ## Documentazione PHPStan
 
 - [Linee Guida PHPStan Livello 10](./PHPStan/LEVEL10_LINEE_GUIDA.md) - Linee guida dettagliate per rispettare le regole di PHPStan a livello 10
 
-<<<<<<< HEAD
-=======
-aurmich/dev
->>>>>>> aurmich/dev
 ## Documentazione Filament
 
 - [Linee Guida per getInfolistSchema](./filament/INFOLIST_SCHEMA_GUIDELINES.md) - Guida completa per l'implementazione corretta del metodo getInfolistSchema, con focus sull'uso delle chiavi stringa negli array 
-=======
->>>>>>> aurmich/dev
+
 - `/docs/providers/`: Service Provider e loro utilizzo
 
 ## Documentazione Service Provider
@@ -149,7 +132,3 @@ aurmich/dev
 
 ## Documentazione Filament
 - [Linee Guida per getInfolistSchema](./filament/INFOLIST_SCHEMA_GUIDELINES.md) - Guida completa per l'implementazione corretta del metodo getInfolistSchema, con focus sull'uso delle chiavi stringa negli array 
-<<<<<<< HEAD
-=======
->>>>>>> aurmich/dev
->>>>>>> aurmich/dev
