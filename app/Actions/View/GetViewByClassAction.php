@@ -33,10 +33,6 @@ class GetViewByClassAction
 
                 // Gestione sicura delle conversioni di tipo per PHPStan level 10
                 $prevValueStr = '';
-<<<<<<< HEAD
-=======
-
->>>>>>> aurmich/dev
                 if (is_string($prevValue)) {
                     $prevValueStr = $prevValue;
                 } elseif ($prevValue === null) {

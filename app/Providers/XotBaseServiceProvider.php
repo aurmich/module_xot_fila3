@@ -214,18 +214,10 @@ abstract class XotBaseServiceProvider extends ServiceProvider
             static function (mixed $item): string {
                 Assert::isArray($item);
                 Assert::keyExists($item, 'ns');
-<<<<<<< HEAD
-
-=======
->>>>>>> aurmich/dev
                 return $item['ns'];
             },
             $commands
         );
-<<<<<<< HEAD
-
-=======
->>>>>>> aurmich/dev
         $this->commands($commands);
     }
 
