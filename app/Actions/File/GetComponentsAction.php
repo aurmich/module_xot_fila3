@@ -33,7 +33,11 @@ class GetComponentsAction
                 File::makeDirectory($path, 0755, true, true);
             }
         }
+<<<<<<< HEAD
 
+=======
+        //$force_recreate = true;
+>>>>>>> c93e31b (.)
         $exists = File::exists($components_json);
         if ($exists && ! $force_recreate) {
             Assert::string($content = File::get($components_json), '['.__LINE__.']['.class_basename(static::class).']');

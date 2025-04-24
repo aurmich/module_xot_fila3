@@ -16,8 +16,20 @@ class GetModulePathByGeneratorAction
         $res = module_path($moduleName, $relativePath);
         Assert::string($res);
 
+<<<<<<< HEAD
         Assert::directory($res, 'The path '.$res.' is not a directory ['.$moduleName.']['.$generatorPath.']');
 
+=======
+            Assert::directory($res,'The path '.$res.' is not a directory ['.$moduleName.']['.$generatorPath.']');
+
+            //File::makeDirectory($res, 0755, true, true);
+
+        /*
+        if (! file_exists($res)) {
+            return;
+        }
+        */
+>>>>>>> c93e31b (.)
         return $res;
     }
 }

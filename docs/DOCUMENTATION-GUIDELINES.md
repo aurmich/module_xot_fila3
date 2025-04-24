@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> c93e31b (.)
 # Linee Guida per la Documentazione in Laraxot
 
 Questo documento definisce le best practices per la creazione e la manutenzione della documentazione all'interno del framework Laraxot.
@@ -280,6 +283,7 @@ Per implementare queste linee guida:
 - [Markdown Guide](https://www.markdownguide.org/)
 - [Documentazione Laravel](https://laravel.com/docs)
 - [Documentazione PHPDoc](https://docs.phpdoc.org/)
+<<<<<<< HEAD
 =======
 # Linee Guida per la Documentazione
 
@@ -428,3 +432,5 @@ Per garantire la riutilizzabilità dei moduli, la documentazione all'interno dei
 
 - [Linee Guida per la Documentazione di SaluteOra](../../../../docs/linee-guida-documentazione.md)
 >>>>>>> aurmich/dev
+=======
+>>>>>>> c93e31b (.)

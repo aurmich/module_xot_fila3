@@ -77,11 +77,20 @@ trait NavigationLabelTrait
         return $default;
     }
     /*
+<<<<<<< HEAD
+=======
+
+>>>>>>> c93e31b (.)
     public function getHeading(): string|Htmlable
     {
         return 'AAAAAAAAAA';
     }
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> c93e31b (.)
     public static function getBreadcrumb(): string {
         return JobsWaitingPlugin::make()->getBreadcrumb();
     }
@@ -93,6 +102,10 @@ trait NavigationLabelTrait
     public static function getNavigationIcon(): string {
         return JobsWaitingPlugin::make()->getNavigationIcon();
     }
+<<<<<<< HEAD
+=======
+
+>>>>>>> c93e31b (.)
     */
 }
 

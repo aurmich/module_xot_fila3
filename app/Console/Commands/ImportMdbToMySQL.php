@@ -21,10 +21,17 @@ class ImportMdbToMySQL extends Command
      *
      * @var string
      */
+<<<<<<< HEAD
     protected $signature = 'xot:import-mdb-to-mysql
                             {source : Percorso del file MDB sorgente}
                             {connection : Nome della connessione MySQL}
                             {--tables=* : Tabelle specifiche da importare}
+=======
+    protected $signature = 'xot:import-mdb-to-mysql 
+                            {source : Percorso del file MDB sorgente} 
+                            {connection : Nome della connessione MySQL} 
+                            {--tables=* : Tabelle specifiche da importare} 
+>>>>>>> c93e31b (.)
                             {--skip-data : Salta l\'importazione dei dati}';
 
     /**
@@ -50,6 +57,7 @@ class ImportMdbToMySQL extends Command
         }
 
         try {
+<<<<<<< HEAD
             // Ottieni le credenziali dalla configurazione di connessione
             $config = config("database.connections.{$connection}");
             if (!$config) {
@@ -65,6 +73,12 @@ class ImportMdbToMySQL extends Command
 
             if (! $skipData) {
                 $this->importData($source, $mysqlUser, $mysqlPassword, $mysqlDb, $tables);
+=======
+            $this->importSchema($source, $connection, $tables);
+            
+            if (! $skipData) {
+                $this->importData($source, $connection, $tables);
+>>>>>>> c93e31b (.)
             }
 
             $this->info('Importazione completata con successo!');
@@ -73,22 +87,35 @@ class ImportMdbToMySQL extends Command
             $this->error('Errore durante l\'importazione: ' . $e->getMessage());
             return 1;
         }
+<<<<<<< HEAD
+=======
+        
+        return $tables;
+>>>>>>> c93e31b (.)
     }
 
     /**
      * Importa lo schema del database.
      */
+<<<<<<< HEAD
     protected function importSchema(string $source, string $mysqlUser, string $mysqlPassword, string $mysqlDb, ?array $tables = null): void
     {
         $this->info('Importazione schema in corso...');
 
         $this->createDatabase($mysqlUser, $mysqlPassword, $mysqlDb);
         $this->createTablesInMySQL($source, $mysqlUser, $mysqlPassword, $mysqlDb, $tables);
+=======
+    protected function importSchema(string $source, string $connection, ?array $tables = null): void
+    {
+        // Implementazione dell'importazione dello schema
+        $this->info('Importazione schema in corso...');
+>>>>>>> c93e31b (.)
     }
 
     /**
      * Importa i dati del database.
      */
+<<<<<<< HEAD
     protected function importData(string $source, string $mysqlUser, string $mysqlPassword, string $mysqlDb, ?array $tables = null): void
     {
         $this->info('Importazione dati in corso...');
@@ -186,5 +213,11 @@ class ImportMdbToMySQL extends Command
             shell_exec($command);
             $this->info("Dati importati per la tabella: $table");
         }
+=======
+    protected function importData(string $source, string $connection, ?array $tables = null): void
+    {
+        // Implementazione dell'importazione dei dati
+        $this->info('Importazione dati in corso...');
+>>>>>>> c93e31b (.)
     }
 }

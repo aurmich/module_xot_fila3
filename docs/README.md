@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 # Modulo Xot
 =======
 
@@ -22,6 +23,88 @@ Il modulo Xot è il core del sistema SaluteOra, fornendo le funzionalità di bas
 - [Convenzioni di Namespace](./NAMESPACE-CONVENTIONS.md)
 - [Best Practices](./BEST-PRACTICES.md)
 >>>>>>> aurmich/dev
+=======
+# Modulo Xot
+
+## 🎯 Perché Xot?
+
+Xot è il modulo core del framework che fornisce le funzionalità fondamentali e le astrazioni necessarie per l'architettura modulare. È stato creato per:
+
+- Standardizzare lo sviluppo dei moduli
+- Fornire utilities e helper comuni
+- Implementare pattern architetturali consistenti
+- Gestire l'interoperabilità tra moduli
+
+## 📋 Funzionalità Principali
+
+### Service Provider Base
+- Perché: Standardizzazione della registrazione dei moduli
+- Cosa: `XotBaseServiceProvider` fornisce l'infrastruttura per il caricamento dei moduli
+
+### Data Transfer Objects
+- Perché: Tipizzazione forte e validazione dei dati
+- Cosa: Implementazione di Spatie Data per la gestione type-safe dei DTO
+
+### Actions
+- Perché: Logica di business atomica e testabile
+- Cosa: Pattern Action implementato con Spatie QueueableAction
+
+## 🔗 Dipendenze Chiave
+
+- Spatie Laravel Data
+- Spatie QueueableAction
+- Laravel Framework
+
+## 📚 Guide
+
+- [[guides/creating-module.md|Creare un Nuovo Modulo]]
+- [[guides/implementing-actions.md|Implementare Actions]]
+- [[guides/data-transfer-objects.md|Lavorare con i DTO]]
+
+## 🏗 Architettura
+
+- [[architecture/service-provider.md|Service Provider]]
+- [[architecture/actions.md|Actions Pattern]]
+- [[architecture/data-objects.md|Data Objects]]
+
+## 🧪 Testing
+
+- [[testing/unit-tests.md|Unit Testing]]
+- [[testing/feature-tests.md|Feature Testing]]
+- [[testing/test-data.md|Test Data Factories]]
+
+## 📈 Performance
+
+- [[performance/caching.md|Strategie di Caching]]
+- [[performance/optimization.md|Ottimizzazioni]]
+
+## 🔒 Sicurezza
+
+- [[security/validation.md|Validazione Input]]
+- [[security/authorization.md|Autorizzazioni]]
+
+## 📝 Note di Sviluppo
+
+### Convenzioni
+- Usa sempre type hints
+- Implementa interfacce per i contratti
+- Documenta le eccezioni
+- Segui il principio SOLID
+
+### Best Practices
+- Preferisci DTO a array associativi
+- Usa Actions per logica di business
+- Implementa test per ogni feature
+- Mantieni la documentazione aggiornata
+
+## 🔄 Changelog
+
+Vedi [[changelog.md|CHANGELOG]] per la storia completa delle modifiche.
+
+## 🤝 Contribuire
+
+Vedi [[contributing.md|CONTRIBUTING]] per le linee guida sulla contribuzione.
+>>>>>>> c93e31b (.)
 
 ## Panoramica
 Il modulo Xot fornisce le funzionalità base e le utilities utilizzate da tutti gli altri moduli dell'applicazione.
@@ -129,6 +212,7 @@ Il modulo è configurabile tramite:
 - `/docs/activity/`: Sistema di logging
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -137,10 +221,14 @@ Il modulo è configurabile tramite:
 =======
 
 >>>>>>> aurmich/dev
+=======
+
+>>>>>>> c93e31b (.)
 ## Documentazione PHPStan
 
 - [Linee Guida PHPStan Livello 10](./PHPStan/LEVEL10_LINEE_GUIDA.md) - Linee guida dettagliate per rispettare le regole di PHPStan a livello 10
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -170,3 +258,8 @@ aurmich/dev
 >>>>>>> aurmich/dev
 =======
 >>>>>>> aurmich/dev
+=======
+## Documentazione Filament
+
+- [Linee Guida per getInfolistSchema](./filament/INFOLIST_SCHEMA_GUIDELINES.md) - Guida completa per l'implementazione corretta del metodo getInfolistSchema, con focus sull'uso delle chiavi stringa negli array 
+>>>>>>> c93e31b (.)

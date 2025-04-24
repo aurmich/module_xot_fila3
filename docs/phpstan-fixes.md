@@ -1,9 +1,12 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 <<<<<<< HEAD
 >>>>>>> aurmich/dev
+=======
+>>>>>>> c93e31b (.)
 # Correzioni PHPStan nel Modulo Xot
 
 ## Correzioni Implementate
@@ -109,6 +112,7 @@ public function execute(string $modelClass): AbstractSchemaManager
 {
     Assert::classExists($modelClass);
     Assert::subclassOf($modelClass, Model::class);
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -220,16 +224,21 @@ class XotBaseModel extends Model
 >>>>>>> aurmich/dev
 >>>>>>> aurmich/dev
 >>>>>>> aurmich/dev
+=======
+>>>>>>> c93e31b (.)
     // ...
 }
 ```
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 <<<<<<< HEAD
 >>>>>>> aurmich/dev
+=======
+>>>>>>> c93e31b (.)
 ### 2. Validazione Dati
 ```php
 /**
@@ -240,6 +249,7 @@ private function validateData(array $data): void
 {
     Assert::keyExists($data, 'required_field');
     Assert::string($data['required_field']);
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -268,16 +278,21 @@ public function process(ServiceInterface $service): ResponseInterface
 >>>>>>> aurmich/dev
 >>>>>>> aurmich/dev
 >>>>>>> aurmich/dev
+=======
+>>>>>>> c93e31b (.)
     // ...
 }
 ```
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 <<<<<<< HEAD
 >>>>>>> aurmich/dev
+=======
+>>>>>>> c93e31b (.)
 ### 3. Gestione Relazioni
 ```php
 /**
@@ -371,25 +386,6 @@ public function execute(Model $model, array $data): array
 
 ### 2. Metodo Final Override in UsersRelationManager
 <<<<<<< HEAD
-- ❌ Errore: Cannot override final method `Modules\Xot\Filament\Resources\XotBaseResource\RelationManager\XotBaseRelationManager::form()`
-=======
-
-
-- ❌ Errore: Cannot override final method `Modules\Xot\Filament\Resources\XotBaseResource\RelationManagers\XotBaseRelationManager::form()`
-
-- ❌ Errore: Cannot override final method `Modules\Xot\Filament\Resources\XotBaseResource\RelationManager\XotBaseRelationManager::form()`
- d9307de (fix: auto resolve conflict)
-
-- ❌ Errore: Cannot override final method `Modules\Xot\Filament\Resources\XotBaseResource\RelationManagers\XotBaseRelationManager::form()`
- 7b67053 (fix: auto resolve conflict)
->>>>>>> aurmich/dev
-- 📍 Posizione: `Modules/User/app/Filament/Resources/TeamResource/RelationManagers/UsersRelationManager.php:21`
-- 🔧 Soluzione necessaria:
-  - Rimuovere l'override del metodo `form()`
-  - Utilizzare `getFormSchema()` per personalizzare il form
-  - Implementare la logica corretta per la gestione delle relazioni
-
-### 3. Metodo Final Override in DomainsRelationManager
 <<<<<<< HEAD
 - ❌ Errore: Cannot override final method `Modules\Xot\Filament\Resources\XotBaseResource\RelationManager\XotBaseRelationManager::form()`
 =======
@@ -403,6 +399,33 @@ public function execute(Model $model, array $data): array
 - ❌ Errore: Cannot override final method `Modules\Xot\Filament\Resources\XotBaseResource\RelationManagers\XotBaseRelationManager::form()`
  7b67053 (fix: auto resolve conflict)
 >>>>>>> aurmich/dev
+=======
+- ❌ Errore: Cannot override final method `Modules\Xot\Filament\Resources\XotBaseResource\RelationManager\XotBaseRelationManager::form()`
+>>>>>>> c93e31b (.)
+- 📍 Posizione: `Modules/User/app/Filament/Resources/TeamResource/RelationManagers/UsersRelationManager.php:21`
+- 🔧 Soluzione necessaria:
+  - Rimuovere l'override del metodo `form()`
+  - Utilizzare `getFormSchema()` per personalizzare il form
+  - Implementare la logica corretta per la gestione delle relazioni
+
+### 3. Metodo Final Override in DomainsRelationManager
+<<<<<<< HEAD
+<<<<<<< HEAD
+- ❌ Errore: Cannot override final method `Modules\Xot\Filament\Resources\XotBaseResource\RelationManager\XotBaseRelationManager::form()`
+=======
+
+
+- ❌ Errore: Cannot override final method `Modules\Xot\Filament\Resources\XotBaseResource\RelationManagers\XotBaseRelationManager::form()`
+
+- ❌ Errore: Cannot override final method `Modules\Xot\Filament\Resources\XotBaseResource\RelationManager\XotBaseRelationManager::form()`
+ d9307de (fix: auto resolve conflict)
+
+- ❌ Errore: Cannot override final method `Modules\Xot\Filament\Resources\XotBaseResource\RelationManagers\XotBaseRelationManager::form()`
+ 7b67053 (fix: auto resolve conflict)
+>>>>>>> aurmich/dev
+=======
+- ❌ Errore: Cannot override final method `Modules\Xot\Filament\Resources\XotBaseResource\RelationManager\XotBaseRelationManager::form()`
+>>>>>>> c93e31b (.)
 - 📍 Posizione: `Modules/User/app/Filament/Resources/TenantResource/RelationManagers/DomainsRelationManager.php:20`
 - 🔧 Soluzione necessaria:
   - Rimuovere l'override del metodo `form()`
@@ -573,6 +596,7 @@ Questo permette a phpstan di trovare correttamente il file durante l'analisi sta
 - Aggiunta tipizzazione per i metodi getColumns, getIndexes e getForeignKeys
 - Aggiunta asserzione per la codifica JSON
 - Aggiunta tipizzazione per il DoctrineSchemaManager
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -741,3 +765,5 @@ interface AuthenticatableRequest
 >>>>>>> aurmich/dev
 >>>>>>> aurmich/dev
 >>>>>>> aurmich/dev
+=======
+>>>>>>> c93e31b (.)

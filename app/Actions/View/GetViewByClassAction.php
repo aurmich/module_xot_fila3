@@ -30,6 +30,7 @@ class GetViewByClassAction
             if ($key > 0 && isset($after[$key - 1])) {
                 /** @var mixed $prevValue */
                 $prevValue = $after[$key - 1];
+<<<<<<< HEAD
 
                 // Gestione sicura delle conversioni di tipo per PHPStan level 10
                 $prevValueStr = '';
@@ -37,27 +38,49 @@ class GetViewByClassAction
 
 =======
 >>>>>>> aurmich/dev
+=======
+                
+                // Gestione sicura delle conversioni di tipo per PHPStan level 10
+                $prevValueStr = '';
+                
+>>>>>>> c93e31b (.)
                 if (is_string($prevValue)) {
                     $prevValueStr = $prevValue;
                 } elseif ($prevValue === null) {
                     $prevValueStr = '';
                 } elseif (is_scalar($prevValue)) {
                     // Cast sicuro per valori scalari (int, float, bool)
+<<<<<<< HEAD
                     $prevValueStr = strval($prevValue);
                 }
 
+=======
+
+                   // Utilizziamo il cast esplicito con controllo di tipo per PHPStan Level 9
+                   $prevValueStr = is_scalar($prevValue) ? (string) $prevValue : '';
+                }
+                
+>>>>>>> c93e31b (.)
                 $singular = Str::of($prevValueStr)->singular()->toString();
                 if (Str::endsWith($value, $singular)) {
                     $value = Str::of($value)->beforeLast($singular)->toString();
                 }
             }
+<<<<<<< HEAD
 
+=======
+            
+>>>>>>> c93e31b (.)
             return Str::of($value)->slug()->toString();
         });
 
         $implode = implode('.', $mapped);
         $view = $module_low.'::'.$implode.$suffix;
+<<<<<<< HEAD
 
+=======
+        
+>>>>>>> c93e31b (.)
         if (!view()->exists($view)) {
             throw new \Exception('View not found: '.$view);
         }

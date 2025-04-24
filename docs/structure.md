@@ -1,6 +1,9 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> c93e31b (.)
 # Struttura del Modulo Xot
 
 ## Struttura delle Directory
@@ -37,6 +40,7 @@ Modules/Xot/
 3. **Best Practices**
    - Mantenere una struttura di directory pulita e organizzata
    - Seguire le convenzioni di Laravel per la struttura delle directory
+<<<<<<< HEAD
    - Utilizzare i namespace appropriati che riflettono la struttura delle directory 
 =======
 >>>>>>> aurmich/dev
@@ -829,3 +833,6 @@ tests_old
 =======
 >>>>>>> aurmich/dev
 >>>>>>> aurmich/dev
+=======
+   - Utilizzare i namespace appropriati che riflettono la struttura delle directory 
+>>>>>>> c93e31b (.)

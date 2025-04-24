@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 =======
@@ -16,6 +17,8 @@
 =======
 >>>>>>> aurmich/dev
 >>>>>>> aurmich/dev
+=======
+>>>>>>> c93e31b (.)
 # Rapporto PHPStan Livello 5 per il modulo Xot
 
 Data analisi: 2025-04-15 21:54:17
@@ -69,6 +72,7 @@ Trovati 4 errori al livello 5.
 - [PSR-12: Standard di codifica](https://www.php-fig.org/psr/psr-12/)
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 aurmich/dev
 =======
@@ -85,3 +89,5 @@ aurmich/dev
 =======
 >>>>>>> aurmich/dev
 >>>>>>> aurmich/dev
+=======
+>>>>>>> c93e31b (.)

@@ -13,7 +13,10 @@ use Illuminate\Support\ServiceProvider;
 use Modules\Xot\Datas\ComponentFileData;
 use Nwidart\Modules\Traits\PathNamespace;
 use Modules\Xot\Actions\Blade\RegisterBladeComponentsAction;
+<<<<<<< HEAD
 use Modules\Xot\Actions\File\GetComponentsAction;
+=======
+>>>>>>> c93e31b (.)
 use Modules\Xot\Actions\Module\GetModulePathByGeneratorAction;
 use Modules\Xot\Actions\Livewire\RegisterLivewireComponentsAction;
 
@@ -153,10 +156,19 @@ abstract class XotBaseServiceProvider extends ServiceProvider
         try {
             $configPath = app(GetModulePathByGeneratorAction::class)->execute($this->name, 'config');
 
+<<<<<<< HEAD
             $this->publishes([
                 $configPath => config_path($this->nameLower.'.php'),
             ], 'config');
 
+=======
+
+            /*
+            $this->publishes([
+                $configPath => config_path($this->nameLower.'.php'),
+            ], 'config');
+            */
+>>>>>>> c93e31b (.)
             $this->mergeConfigFrom($configPath, $this->nameLower);
         } catch (\Exception $e) {
             // Ignore missing configuration
@@ -166,12 +178,28 @@ abstract class XotBaseServiceProvider extends ServiceProvider
 
     public function registerBladeComponents(): void
     {
+<<<<<<< HEAD
         $componentsViewPath = app(GetModulePathByGeneratorAction::class)->execute($this->name, 'component-view');
         Blade::anonymousComponentPath($componentsViewPath);
 
         $componentClassPath = app(GetModulePathByGeneratorAction::class)->execute($this->name, 'component-class');
 
         $namespace = $this->module_ns.'\\View\\Components';
+=======
+        try{
+            $componentsViewPath = app(GetModulePathByGeneratorAction::class)->execute($this->name, 'component-view');
+            Blade::anonymousComponentPath($componentsViewPath);
+        } catch (\Exception $e) {
+            //return;
+        }
+        // $components_path = realpath(__DIR__.'/../resources/views/components');
+
+
+
+        $componentClassPath = app(GetModulePathByGeneratorAction::class)->execute($this->name, 'component-class');
+
+        $namespace = $this->module_ns.'\View\Components';
+>>>>>>> c93e31b (.)
         Blade::componentNamespace($namespace, $this->nameLower);
 
         app(RegisterBladeComponentsAction::class)
@@ -214,6 +242,10 @@ abstract class XotBaseServiceProvider extends ServiceProvider
             static function (mixed $item): string {
                 Assert::isArray($item);
                 Assert::keyExists($item, 'ns');
+<<<<<<< HEAD
+=======
+                Assert::string($item['ns']);
+>>>>>>> c93e31b (.)
                 return $item['ns'];
             },
             $commands
