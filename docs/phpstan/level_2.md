@@ -2,9 +2,19 @@
 <<<<<<< HEAD
 =======
 
+=======
+<<<<<<< HEAD
+>>>>>>> aurmich/dev
+<<<<<<< HEAD
+=======
+
 >>>>>>> aurmich/dev
 =======
 
+>>>>>>> aurmich/dev
+<<<<<<< HEAD
+=======
+>>>>>>> aurmich/dev
 >>>>>>> aurmich/dev
 # Rapporto PHPStan Livello 2 per il modulo Xot
 
@@ -61,7 +71,17 @@ Trovati 4 errori al livello 2.
 <<<<<<< HEAD
 =======
 aurmich/dev
+=======
+<<<<<<< HEAD
+>>>>>>> aurmich/dev
+<<<<<<< HEAD
+=======
+aurmich/dev
 >>>>>>> aurmich/dev
 =======
 aurmich/dev
+>>>>>>> aurmich/dev
+<<<<<<< HEAD
+=======
+>>>>>>> aurmich/dev
 >>>>>>> aurmich/dev

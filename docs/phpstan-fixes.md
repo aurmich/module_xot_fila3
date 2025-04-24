@@ -1,4 +1,9 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> aurmich/dev
 # Correzioni PHPStan nel Modulo Xot
 
 ## Correzioni Implementate
@@ -105,6 +110,10 @@ public function execute(string $modelClass): AbstractSchemaManager
     Assert::classExists($modelClass);
     Assert::subclassOf($modelClass, Model::class);
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> aurmich/dev
+>>>>>>> aurmich/dev
 # Risoluzione Problemi PHPStan nel Modulo Xot
 
 Questo documento descrive i principali problemi PHPStan risolti nel modulo Xot e le strategie adottate per la loro risoluzione.
@@ -204,12 +213,23 @@ Questo documento descrive i principali problemi PHPStan risolti nel modulo Xot e
  */
 class XotBaseModel extends Model
 {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> aurmich/dev
+>>>>>>> aurmich/dev
 >>>>>>> aurmich/dev
     // ...
 }
 ```
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> aurmich/dev
 ### 2. Validazione Dati
 ```php
 /**
@@ -221,6 +241,10 @@ private function validateData(array $data): void
     Assert::keyExists($data, 'required_field');
     Assert::string($data['required_field']);
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> aurmich/dev
+>>>>>>> aurmich/dev
 ### Servizi e Dependency Injection
 
 **Problema**: Metodi che utilizzano dependency injection non avevano tipi ben definiti.
@@ -237,12 +261,23 @@ private function validateData(array $data): void
  */
 public function process(ServiceInterface $service): ResponseInterface
 {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> aurmich/dev
+>>>>>>> aurmich/dev
 >>>>>>> aurmich/dev
     // ...
 }
 ```
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> aurmich/dev
 ### 3. Gestione Relazioni
 ```php
 /**
@@ -539,6 +574,10 @@ Questo permette a phpstan di trovare correttamente il file durante l'analisi sta
 - Aggiunta asserzione per la codifica JSON
 - Aggiunta tipizzazione per il DoctrineSchemaManager
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> aurmich/dev
+>>>>>>> aurmich/dev
 ### Problemi con le Relazioni Eloquent
 
 **Problema**: PHPStan non riconosceva correttamente i tipi restituiti dalle relazioni Eloquent.
@@ -695,4 +734,10 @@ interface AuthenticatableRequest
 - [Tipi generici in PHP](https://phpstan.org/blog/generics-in-php-using-phpdocs)
 - [Larastan](https://github.com/nunomaduro/larastan)
 - [Guida PHPStan Livello 10](PHPSTAN_LIVELLO10_LINEE_GUIDA.md)
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> aurmich/dev
+>>>>>>> aurmich/dev
 >>>>>>> aurmich/dev

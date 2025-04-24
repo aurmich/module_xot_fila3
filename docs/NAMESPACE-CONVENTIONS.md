@@ -1,4 +1,9 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> aurmich/dev
 # Convenzioni per i Namespace nei Moduli Laraxot
 
 Questo documento definisce le convenzioni per i namespace nei moduli del framework Laraxot PTVX, un aspetto fondamentale per garantire la compatibilità con PHPStan livello 9 e la coerenza del codice.
@@ -154,6 +159,10 @@ class RatingData extends Data
     // Implementazione
 }
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> aurmich/dev
+>>>>>>> aurmich/dev
 # Convenzioni Namespace in SaluteOra
 
 Questo documento descrive le convenzioni di namespace adottate nel progetto SaluteOra, con particolare attenzione alla struttura modulare basata su Laravel.
@@ -236,12 +245,23 @@ Modules\{ModuleName}\Http\Controllers\{ControllerName}
 I controllers API dovrebbero essere in:
 ```
 Modules\{ModuleName}\Http\Controllers\Api\{ControllerName}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> aurmich/dev
+>>>>>>> aurmich/dev
 >>>>>>> aurmich/dev
 ```
 
 ### Actions
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> aurmich/dev
 ```php
 <?php
 
@@ -277,6 +297,10 @@ class RatingCommand extends Command
     // Implementazione
 }
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> aurmich/dev
+>>>>>>> aurmich/dev
 ```
 Modules\{ModuleName}\Actions\{Subtype?}\{ActionName}
 ```
@@ -299,12 +323,23 @@ Modules\{ModuleName}\Filament\Resources\{ResourceName}Resource\RelationManagers\
 
 ```
 Modules\{ModuleName}\Listeners\{ListenerName}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> aurmich/dev
+>>>>>>> aurmich/dev
 >>>>>>> aurmich/dev
 ```
 
 ### Service Providers
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> aurmich/dev
 ```php
 <?php
 
@@ -391,6 +426,10 @@ use Modules\Rating\Models\Rating as RatingModel;
 
 Quando si definisce l'autoloading in `composer.json`, assicurarsi che la mappatura rifletta questa convenzione:
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> aurmich/dev
+>>>>>>> aurmich/dev
 ```
 Modules\{ModuleName}\Providers\{ServiceName}ServiceProvider
 ```
@@ -398,22 +437,44 @@ Modules\{ModuleName}\Providers\{ServiceName}ServiceProvider
 ## Compatibilità con l'Autoloading
 
 La configurazione dell'autoloading in `composer.json` deve riflettere questa struttura di namespace:
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> aurmich/dev
+>>>>>>> aurmich/dev
 >>>>>>> aurmich/dev
 
 ```json
 "autoload": {
     "psr-4": {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+        "App\\": "app/",
+        "Modules\\": "Modules/"
+=======
+<<<<<<< HEAD
+>>>>>>> aurmich/dev
         "Modules\\Rating\\": "Modules/Rating/app/"
 =======
         "App\\": "app/",
         "Modules\\": "Modules/"
+>>>>>>> aurmich/dev
+<<<<<<< HEAD
+=======
+>>>>>>> aurmich/dev
 >>>>>>> aurmich/dev
     }
 }
 ```
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> aurmich/dev
 ## Risoluzione dei Problemi PHPStan con i Namespace
 
 I problemi PHPStan relativi ai namespace possono essere identificati da messaggi come:
@@ -464,6 +525,10 @@ Seguire queste convenzioni di namespace aiuterà a mantenere un codebase coerent
 aurmich/dev
 >>>>>>> aurmich/dev
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> aurmich/dev
+>>>>>>> aurmich/dev
 ## Casi Speciali
 
 ### Traits
@@ -538,4 +603,10 @@ php scripts/check-namespaces.php
 - [PSR-4: Autoloader Standard](https://www.php-fig.org/psr/psr-4/)
 - [Laravel Namespacing Conventions](https://laravel.com/docs/master/structure)
 - [Nwidart/Laravel-Modules Documentation](https://nwidart.com/laravel-modules/v6/introduction)
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> aurmich/dev
+>>>>>>> aurmich/dev
 >>>>>>> aurmich/dev

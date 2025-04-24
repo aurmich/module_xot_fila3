@@ -4,6 +4,14 @@
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+
+Durante lo sviluppo del progetto SaluteOra, sono stati identificati diversi file con conflitti di merge non risolti. Questi conflitti erano indicati dalla presenza di marcatori come ``, `origin/dev` nel codice sorgente. I conflitti non risolti impedivano la corretta esecuzione del codice e causavano errori durante l'analisi statica con PHPStan.
+aurmich/dev
+=======
+<<<<<<< HEAD
+>>>>>>> aurmich/dev
+<<<<<<< HEAD
 Durante lo sviluppo del progetto SaluteOra, sono stati identificati diversi file con conflitti di merge non risolti. Questi conflitti erano indicati dalla presenza di marcatori come ``, `` e `` nel codice sorgente. I conflitti non risolti impedivano la corretta esecuzione del codice e causavano errori durante l'analisi statica con PHPStan.
 =======
 
@@ -14,6 +22,10 @@ aurmich/dev
 
 Durante lo sviluppo del progetto SaluteOra, sono stati identificati diversi file con conflitti di merge non risolti. Questi conflitti erano indicati dalla presenza di marcatori come ``, `origin/dev` nel codice sorgente. I conflitti non risolti impedivano la corretta esecuzione del codice e causavano errori durante l'analisi statica con PHPStan.
 aurmich/dev
+>>>>>>> aurmich/dev
+<<<<<<< HEAD
+=======
+>>>>>>> aurmich/dev
 >>>>>>> aurmich/dev
 
 I file principali con conflitti erano:
@@ -52,6 +64,11 @@ In `GetFieldnamesByTablenameAction.php`, c'erano conflitti relativi alla gestion
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> aurmich/dev
+<<<<<<< HEAD
 if (! $this->isValidConnection($connectionName)) {
 if (! $this->isValidConnection(is_string($connectionName) ? $connectionName : (string) $connectionName)) {
 
@@ -63,14 +80,27 @@ if (! $this->isValidConnection(is_string($connectionName) ? $connectionName : (s
 
 =======
 =======
+>>>>>>> aurmich/dev
+<<<<<<< HEAD
+=======
+>>>>>>> aurmich/dev
 >>>>>>> aurmich/dev
 
 if (! $this->isValidConnection($connectionName)) {
 origin/dev
 aurmich/dev
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> aurmich/dev
 =======
+>>>>>>> aurmich/dev
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> aurmich/dev
+=======
+>>>>>>> aurmich/dev
+>>>>>>> aurmich/dev
 >>>>>>> aurmich/dev
 ```
 
@@ -82,6 +112,11 @@ In `TemporaryUploadPathGenerator.php`, c'erano conflitti nelle annotazioni PHPDo
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> aurmich/dev
+<<<<<<< HEAD
 /**
  * @param \Modules\Media\Models\Media $media
  */
@@ -89,12 +124,23 @@ In `TemporaryUploadPathGenerator.php`, c'erano conflitti nelle annotazioni PHPDo
 =======
 >>>>>>> aurmich/dev
 =======
+>>>>>>> aurmich/dev
+<<<<<<< HEAD
+=======
+>>>>>>> aurmich/dev
 >>>>>>> aurmich/dev
 
 /**
  * @param \Modules\Media\Models\Media $media
  */
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+origin/dev
+aurmich/dev
+=======
+<<<<<<< HEAD
+>>>>>>> aurmich/dev
 <<<<<<< HEAD
 
 
@@ -106,6 +152,10 @@ aurmich/dev
 =======
 origin/dev
 aurmich/dev
+>>>>>>> aurmich/dev
+<<<<<<< HEAD
+=======
+>>>>>>> aurmich/dev
 >>>>>>> aurmich/dev
 ```
 
@@ -117,6 +167,11 @@ In `ApplyMetatagToPanelAction.php`, c'erano conflitti nell'implementazione del m
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> aurmich/dev
+<<<<<<< HEAD
 // @phpstan-ignore argument.type
 ->colors($metatag->getColors())
 //->colors($metatag->getColors())
@@ -130,6 +185,10 @@ In `ApplyMetatagToPanelAction.php`, c'erano conflitti nell'implementazione del m
 
 =======
 =======
+>>>>>>> aurmich/dev
+<<<<<<< HEAD
+=======
+>>>>>>> aurmich/dev
 >>>>>>> aurmich/dev
 
 // @phpstan-ignore argument.type
@@ -137,8 +196,17 @@ In `ApplyMetatagToPanelAction.php`, c'erano conflitti nell'implementazione del m
 origin/dev
 aurmich/dev
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> aurmich/dev
 =======
+>>>>>>> aurmich/dev
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> aurmich/dev
+=======
+>>>>>>> aurmich/dev
+>>>>>>> aurmich/dev
 >>>>>>> aurmich/dev
 ```
 
@@ -150,6 +218,11 @@ In `SaveJsonArrayAction.php`, c'erano conflitti nella gestione delle condizioni 
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> aurmich/dev
+<<<<<<< HEAD
 //if ($content === false) {
 //    return false;
 //}
@@ -161,11 +234,22 @@ if ($content === false) {
 >>>>>>> aurmich/dev
 =======
 >>>>>>> aurmich/dev
+<<<<<<< HEAD
+=======
+>>>>>>> aurmich/dev
+>>>>>>> aurmich/dev
 
 //if ($content === false) {
 //    return false;
 //}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+origin/dev
+aurmich/dev
+=======
+<<<<<<< HEAD
+>>>>>>> aurmich/dev
 <<<<<<< HEAD
 
 if ($content === false) {
@@ -180,6 +264,10 @@ aurmich/dev
 =======
 origin/dev
 aurmich/dev
+>>>>>>> aurmich/dev
+<<<<<<< HEAD
+=======
+>>>>>>> aurmich/dev
 >>>>>>> aurmich/dev
 ```
 
@@ -194,11 +282,20 @@ $headers = [
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> aurmich/dev
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/dev
 >>>>>>> aurmich/dev
 =======
+>>>>>>> aurmich/dev
+<<<<<<< HEAD
+=======
+>>>>>>> aurmich/dev
 >>>>>>> aurmich/dev
 ```
 
@@ -215,11 +312,20 @@ $headStrings = array_map(function ($item) {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> aurmich/dev
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/dev
 >>>>>>> aurmich/dev
 =======
+>>>>>>> aurmich/dev
+<<<<<<< HEAD
+=======
+>>>>>>> aurmich/dev
 >>>>>>> aurmich/dev
 ```
 
@@ -312,9 +418,19 @@ Per verificare la correttezza della soluzione, sono stati creati test Pest che v
 <<<<<<< HEAD
 =======
 
+=======
+<<<<<<< HEAD
+>>>>>>> aurmich/dev
+<<<<<<< HEAD
+=======
+
 >>>>>>> aurmich/dev
 =======
 
+>>>>>>> aurmich/dev
+<<<<<<< HEAD
+=======
+>>>>>>> aurmich/dev
 >>>>>>> aurmich/dev
 ### Test per i File del Modulo Media
 
@@ -331,6 +447,11 @@ it('verifica che i file corretti non contengano marcatori di conflitto', functio
         expect($content)->not->toContain('')
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> aurmich/dev
+<<<<<<< HEAD
             ->and($content)->not->toContain('')
             ->and($content)->not->toContain('');
     }
@@ -339,14 +460,27 @@ it('verifica che i file corretti non contengano marcatori di conflitto', functio
 =======
 =======
 >>>>>>> aurmich/dev
+<<<<<<< HEAD
+=======
+>>>>>>> aurmich/dev
+>>>>>>> aurmich/dev
             ->and($content)->not->toContain('origin/dev');
     }
 });
 ```
 aurmich/dev
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> aurmich/dev
 =======
+>>>>>>> aurmich/dev
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> aurmich/dev
+=======
+>>>>>>> aurmich/dev
+>>>>>>> aurmich/dev
 >>>>>>> aurmich/dev
 
 ### Test per i File del Modulo Xot
@@ -373,11 +507,20 @@ $headers = [
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> aurmich/dev
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/dev
 >>>>>>> aurmich/dev
 =======
+>>>>>>> aurmich/dev
+<<<<<<< HEAD
+=======
+>>>>>>> aurmich/dev
 >>>>>>> aurmich/dev
 ];
 
@@ -473,6 +616,15 @@ Questo lavoro di risoluzione dei conflitti ha inoltre contribuito a stabilire be
 <<<<<<< HEAD
 =======
 =======
+<<<<<<< HEAD
+>>>>>>> aurmich/dev
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> aurmich/dev
+<<<<<<< HEAD
+=======
+>>>>>>> aurmich/dev
 >>>>>>> aurmich/dev
 
 49ebea7 (.)`.
@@ -481,7 +633,16 @@ Questo lavoro di risoluzione dei conflitti ha inoltre contribuito a stabilire be
 
 **Documentazione**: [Moduli Cms](../../../Cms/docs/models/PageContent_conflict.md)
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> aurmich/dev
 >>>>>>> aurmich/dev
 >>>>>>> aurmich/dev
 =======
+>>>>>>> aurmich/dev
+<<<<<<< HEAD
+=======
+>>>>>>> aurmich/dev
 >>>>>>> aurmich/dev

@@ -53,9 +53,27 @@
         "symfony/dom-crawler": "*",
         "thecodingmachine/safe": "^3.0",
         "spatie/laravel-tags": "*",
+<<<<<<< HEAD
         "tightenco/parental": "*"
     },
     "require-comment": {
+=======
+<<<<<<< HEAD
+        "livewire/volt": "*",
+        "tightenco/parental": "*",
+        "spatie/laravel-queueable-action": "*"
+
+        
+    },
+    "require-comment": {
+       
+aurmich/dev
+=======
+        "tightenco/parental": "*"
+    },
+    "require-comment": {
+>>>>>>> aurmich/dev
+>>>>>>> aurmich/dev
     },
     "require-dev": {
         "barryvdh/laravel-debugbar": "^3.14",
@@ -72,6 +90,15 @@
         "orchestra/testbench": "*"
     },
     "require-dev-comment": {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+        
+aurmich/dev
+=======
+>>>>>>> aurmich/dev
+>>>>>>> aurmich/dev
     },
     "repositories": [
         {

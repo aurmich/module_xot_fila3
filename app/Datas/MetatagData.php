@@ -246,6 +246,7 @@ class MetatagData extends Data implements Wireable
     /**
      * Get the colors array with proper type handling.
      *
+<<<<<<< HEAD
      * @return array<string, string>
      */
     public function getColors(): array
@@ -255,6 +256,38 @@ class MetatagData extends Data implements Wireable
             $result[$key] = $colorData['color'];
         }
         return $result;
+=======
+     * @return array<string, array<int, string>>
+     */
+    public function getColors(): array
+    {
+        if (empty($this->colors)) {
+            return $this->getFilamentColors();
+        }
+
+        /** @var array<string, array<int, string>> $mapped */
+        $mapped = Arr::mapWithKeys(
+            $this->colors,
+            function (array $item, string|int $key): array {
+                $keyStr = isset($item['key'])
+                    ? $item['key']
+                    : (string) $key;
+
+                /** @var array<int, string> $value */
+                $value = match (true) {
+                    $item['color'] === 'custom' && isset($item['hex'])
+                        => Color::hex($item['hex']),
+                    isset(Color::all()[$item['color']])
+                        => Color::all()[$item['color']],
+                    default => Color::Gray,
+                };
+
+                return [$keyStr => $value];
+            }
+        );
+
+        return $mapped;
+>>>>>>> aurmich/dev
     }
 
     /**
