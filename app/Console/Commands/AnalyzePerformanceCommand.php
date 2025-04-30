@@ -1,6 +1,6 @@
 <?php
 
-namespace Modules\Xot\app\Console\Commands;
+namespace Modules\Xot\Console\Commands;
 
 use Illuminate\Console\Command;
 use Illuminate\Support\Facades\DB;

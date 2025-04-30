@@ -4,6 +4,11 @@
 
 Durante lo sviluppo del progetto, sono stati identificati diversi file con conflitti di merge non risolti. Questi conflitti erano indicati dalla presenza di marcatori nel codice sorgente. I conflitti non risolti causavano errori durante l'analisi statica con PHPStan e impedivano il corretto funzionamento del codice.
 
+## Collegamenti Bidirezionali
+
+- [Linee Guida Generali per la Risoluzione dei Conflitti Git](../../../../docs/risoluzione_conflitti_git.md)
+- [Documentazione Conflitti Git nei Moduli](../../../../docs/conflitti_git_moduli.md)
+
 ## File Coinvolti
 
 I file principali con conflitti di merge erano:
