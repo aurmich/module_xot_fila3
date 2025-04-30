@@ -77,7 +77,11 @@ class GetTransKeyAction
         $arr = explode('_', $class_snake);
         $first = $arr[0];
         $last = $arr[count($arr) - 1];
+<<<<<<< HEAD
         if (in_array($first, ['dashboard', 'list', 'get', 'manage','edit','create','view'])) {
+=======
+        if (in_array($first, ['dashboard', 'list', 'get', 'manage'])) {
+>>>>>>> aurmich/dev
             $class_snake = implode('_', array_slice($arr, 1));
         }
         if (in_array($last, ['action'])) {

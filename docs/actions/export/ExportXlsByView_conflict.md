@@ -4,13 +4,28 @@
 È stato rilevato un conflitto di merge nel file `Modules/Xot/app/Actions/Export/ExportXlsByView.php` alla riga relativa alla conversione di campi in stringa all'interno della funzione di callback di `array_map`.
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 Il file presenta un marker di conflitto `
 =======
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+Il file presenta un marker di conflitto `
+=======
+<<<<<<< HEAD
+>>>>>>> aurmich/dev
+>>>>>>> aurmich/dev
 Il file presenta un marker di conflitto `>>>>>>> origin/dev` che indica un merge non completato tra due rami di sviluppo.
 
 =======
 Il file presenta un marker di conflitto `
+>>>>>>> aurmich/dev
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> aurmich/dev
 >>>>>>> aurmich/dev
 >>>>>>> aurmich/dev
 ## Analisi del Contesto

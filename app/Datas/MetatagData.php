@@ -246,6 +246,23 @@ class MetatagData extends Data implements Wireable
     /**
      * Get the colors array with proper type handling.
      *
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+     * @return array<string, string>
+     */
+    public function getColors(): array
+    {
+        $result = [];
+        foreach ($this->colors as $key => $colorData) {
+            $result[$key] = $colorData['color'];
+        }
+        return $result;
+=======
+=======
+>>>>>>> c93e31b (.)
+>>>>>>> aurmich/dev
      * @return array<string, array<int, string>>
      */
     public function getColors(): array
@@ -276,6 +293,13 @@ class MetatagData extends Data implements Wireable
         );
 
         return $mapped;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> aurmich/dev
+=======
+>>>>>>> c93e31b (.)
+>>>>>>> aurmich/dev
     }
 
     /**
@@ -286,6 +310,10 @@ class MetatagData extends Data implements Wireable
         $colors = array_keys(Color::all());
         return array_combine($colors, $colors);
     }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> aurmich/dev
 
     /**
      * Get the icons configuration.
@@ -397,4 +425,9 @@ class MetatagData extends Data implements Wireable
             'site' => $this->twitter_href,
         ];
     }
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> c93e31b (.)
+>>>>>>> aurmich/dev
 }

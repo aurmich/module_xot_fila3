@@ -54,6 +54,15 @@ class GetViewNameSpacePathAction
             return null; // Restituiamo null se il tema non è una stringa
         }
 
+<<<<<<< HEAD
         return base_path('Themes/'.$theme_name);
+=======
+<<<<<<< HEAD
+        return base_path('Themes/'.$theme_name);
+=======
+        // return base_path('Themes/'.$theme_name);
+        return base_path('Themes/'.$theme_name.'/resources/views');
+>>>>>>> c93e31b (.)
+>>>>>>> aurmich/dev
     }
 }

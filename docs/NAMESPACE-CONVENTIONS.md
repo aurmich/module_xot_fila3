@@ -1,6 +1,17 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> aurmich/dev
+=======
+>>>>>>> c93e31b (.)
+>>>>>>> aurmich/dev
 # Convenzioni per i Namespace nei Moduli Laraxot
 
 Questo documento definisce le convenzioni per i namespace nei moduli del framework Laraxot PTVX, un aspetto fondamentale per garantire la compatibilità con PHPStan livello 9 e la coerenza del codice.
@@ -36,6 +47,10 @@ Un errore particolarmente frequente riguarda le Actions. La convenzione corretta
 - ✅ **CORRETTO**: `namespace Modules\Xot\Actions;`
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> aurmich/dev
 
 - ❌ **ERRATO**: `namespace Modules\Xot\Actions;`
 
@@ -65,12 +80,23 @@ origin/dev
 aurmich/dev
 >>>>>>> aurmich/dev
 
+<<<<<<< HEAD
+=======
+=======
+- ❌ **ERRATO**: `namespace Modules\Xot\app\Actions;`
+
+>>>>>>> c93e31b (.)
+>>>>>>> aurmich/dev
 Anche se il file si trova nel percorso fisico `Modules/Xot/app/Actions/`, il namespace non deve mai includere il segmento `app`.
 
 Questo errore causa spesso problemi di PHPStan come:
 ```
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> aurmich/dev
 
 Class 'Modules\Xot\Actions\MyAction' not found.
 
@@ -98,6 +124,12 @@ Class 'Modules\Xot\Actions\MyAction' not found.
 origin/dev
 >>>>>>> origin/dev
 aurmich/dev
+>>>>>>> aurmich/dev
+<<<<<<< HEAD
+=======
+=======
+Class 'Modules\Xot\app\Actions\MyAction' not found.
+>>>>>>> c93e31b (.)
 >>>>>>> aurmich/dev
 ```
 
@@ -155,7 +187,15 @@ class RatingData extends Data
 {
     // Implementazione
 }
+<<<<<<< HEAD
 =======
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> aurmich/dev
+>>>>>>> aurmich/dev
 >>>>>>> aurmich/dev
 # Convenzioni Namespace in SaluteOra
 
@@ -241,15 +281,36 @@ I controllers API dovrebbero essere in:
 Modules\{ModuleName}\Http\Controllers\Api\{ControllerName}
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
 >>>>>>> aurmich/dev
+>>>>>>> aurmich/dev
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> aurmich/dev
+>>>>>>> aurmich/dev
+>>>>>>> aurmich/dev
+=======
+>>>>>>> c93e31b (.)
 >>>>>>> aurmich/dev
 ```
 
 ### Actions
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> aurmich/dev
+=======
+>>>>>>> c93e31b (.)
+>>>>>>> aurmich/dev
 ```php
 <?php
 
@@ -284,7 +345,15 @@ class RatingCommand extends Command
     
     // Implementazione
 }
+<<<<<<< HEAD
 =======
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> aurmich/dev
+>>>>>>> aurmich/dev
 >>>>>>> aurmich/dev
 ```
 Modules\{ModuleName}\Actions\{Subtype?}\{ActionName}
@@ -310,15 +379,36 @@ Modules\{ModuleName}\Filament\Resources\{ResourceName}Resource\RelationManagers\
 Modules\{ModuleName}\Listeners\{ListenerName}
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
 >>>>>>> aurmich/dev
+>>>>>>> aurmich/dev
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> aurmich/dev
+>>>>>>> aurmich/dev
+>>>>>>> aurmich/dev
+=======
+>>>>>>> c93e31b (.)
 >>>>>>> aurmich/dev
 ```
 
 ### Service Providers
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> aurmich/dev
+=======
+>>>>>>> c93e31b (.)
+>>>>>>> aurmich/dev
 ```php
 <?php
 
@@ -338,6 +428,10 @@ class RatingServiceProvider extends XotBaseServiceProvider
 }
 ```
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> aurmich/dev
 ### Route Service Providers
 
 ```php
@@ -360,6 +454,11 @@ class RouteServiceProvider extends XotBaseRouteServiceProvider
 }
 ```
 
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> c93e31b (.)
+>>>>>>> aurmich/dev
 ## Corrispondenza tra Struttura delle Directory e Namespace
 
 | Directory fisica                             | Namespace corretto                   |
@@ -401,10 +500,20 @@ use Modules\User\Models\User;
 use Modules\Rating\Models\Rating as RatingModel;
 ```
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> aurmich/dev
 ## Namespace in composer.json
 
 Quando si definisce l'autoloading in `composer.json`, assicurarsi che la mappatura rifletta questa convenzione:
 =======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> aurmich/dev
+>>>>>>> aurmich/dev
 >>>>>>> aurmich/dev
 ```
 Modules\{ModuleName}\Providers\{ServiceName}ServiceProvider
@@ -415,6 +524,12 @@ Modules\{ModuleName}\Providers\{ServiceName}ServiceProvider
 La configurazione dell'autoloading in `composer.json` deve riflettere questa struttura di namespace:
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> aurmich/dev
+>>>>>>> aurmich/dev
 >>>>>>> aurmich/dev
 >>>>>>> aurmich/dev
 
@@ -422,14 +537,29 @@ La configurazione dell'autoloading in `composer.json` deve riflettere questa str
 "autoload": {
     "psr-4": {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> aurmich/dev
         "App\\": "app/",
         "Modules\\": "Modules/"
 =======
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> aurmich/dev
+>>>>>>> aurmich/dev
         "Modules\\Rating\\": "Modules/Rating/app/"
 =======
         "App\\": "app/",
         "Modules\\": "Modules/"
+>>>>>>> aurmich/dev
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> aurmich/dev
 >>>>>>> aurmich/dev
 >>>>>>> aurmich/dev
     }
@@ -437,8 +567,16 @@ La configurazione dell'autoloading in `composer.json` deve riflettere questa str
 ```
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> aurmich/dev
+>>>>>>> aurmich/dev
 ## Risoluzione dei Problemi PHPStan con i Namespace
 
 I problemi PHPStan relativi ai namespace possono essere identificati da messaggi come:
@@ -489,6 +627,12 @@ Seguire queste convenzioni di namespace aiuterà a mantenere un codebase coerent
 aurmich/dev
 >>>>>>> aurmich/dev
 =======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> aurmich/dev
+>>>>>>> aurmich/dev
 >>>>>>> aurmich/dev
 ## Casi Speciali
 
@@ -566,5 +710,57 @@ php scripts/check-namespaces.php
 - [Nwidart/Laravel-Modules Documentation](https://nwidart.com/laravel-modules/v6/introduction)
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
 >>>>>>> aurmich/dev
+>>>>>>> aurmich/dev
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> aurmich/dev
+>>>>>>> aurmich/dev
+>>>>>>> aurmich/dev
+=======
+## Test di Validazione Namespace
+
+Per verificare la correttezza dei namespace, utilizzare il seguente test Pest:
+
+```php
+test('verifica correttezza namespace', function () {
+    $basePath = base_path('Modules');
+    $modules = array_filter(scandir($basePath), fn($item) => 
+        is_dir($basePath . '/' . $item) && !in_array($item, ['.', '..'])
+    );
+    
+    $errors = [];
+    
+    foreach ($modules as $module) {
+        $appPath = $basePath . '/' . $module . '/app';
+        if (!is_dir($appPath)) continue;
+        
+        $iterator = new RecursiveIteratorIterator(
+            new RecursiveDirectoryIterator($appPath)
+        );
+        
+        foreach ($iterator as $file) {
+            if ($file->isFile() && $file->getExtension() === 'php') {
+                $content = file_get_contents($file->getRealPath());
+                if (preg_match('/namespace\s+[^;]+;/', $content, $matches)) {
+                    $namespace = $matches[0];
+                    if (strpos($namespace, '\app\\') !== false) {
+                        $errors[] = sprintf(
+                            'File %s contiene namespace non valido: %s',
+                            $file->getRealPath(),
+                            $namespace
+                        );
+                    }
+                }
+            }
+        }
+    }
+    
+    expect($errors)
+        ->withContext("I seguenti file contengono namespace non validi:\n" . implode("\n", $errors))
+        ->toBeEmpty();
+}); 
+>>>>>>> c93e31b (.)
 >>>>>>> aurmich/dev

@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Modules\Xot\Actions\Filament;
 
+<<<<<<< HEAD
 use Illuminate\Support\Str;
 use Webmozart\Assert\Assert;
 use Filament\Facades\Filament;
@@ -12,13 +13,26 @@ use Filament\Navigation\NavigationItem;
 use Modules\Tenant\Services\TenantService;
 use Spatie\QueueableAction\QueueableAction;
 use Modules\Xot\Actions\Module\GetModulePathByGeneratorAction;
+=======
+use Filament\Facades\Filament;
+use Filament\Navigation\NavigationItem;
+use Illuminate\Support\Facades\File;
+use Illuminate\Support\Str;
+use Modules\Tenant\Services\TenantService;
+use Spatie\QueueableAction\QueueableAction;
+use Webmozart\Assert\Assert;
+>>>>>>> aurmich/dev
 
 /**
  * Classe per gestire gli elementi di navigazione per i moduli.
  */
 class GetModulesNavigationItems
 {
+<<<<<<< HEAD
     // use QueueableAction;
+=======
+    use QueueableAction;
+>>>>>>> aurmich/dev
 
     /**
      * Ottiene gli elementi di navigazione per i moduli.
@@ -31,15 +45,38 @@ class GetModulesNavigationItems
 
         $modules = TenantService::allModules();
         Assert::isArray($modules, 'TenantService::allModules() deve restituire un array');
+<<<<<<< HEAD
         
+=======
+
+>>>>>>> aurmich/dev
         foreach ($modules as $module) {
             Assert::string($module, 'Il nome del modulo deve essere una stringa');
             
             $module_low = Str::lower($module);
             Assert::stringNotEmpty($module_low, 'Il nome del modulo convertito in minuscolo non può essere vuoto');
 
+<<<<<<< HEAD
            
             $configPath = app(GetModulePathByGeneratorAction::class)->execute($module, 'config');
+=======
+            // Otteniamo il percorso relativo della configurazione
+            $relativeConfigPath = config('modules.paths.generator.config.path');
+            $relativeConfigPathStr = is_string($relativeConfigPath) ? $relativeConfigPath : 'Config';
+            
+            try {
+                // Proviamo a ottenere il percorso del modulo
+                $configPath = module_path($module, $relativeConfigPathStr);
+                Assert::string($configPath, 'Il percorso di configurazione deve essere una stringa');
+            } catch (\Exception | \Error $e) {
+                // Se fallisce, costruiamo manualmente il percorso
+                $configPath = base_path('Modules/'.$module.'/'.$relativeConfigPathStr);
+            }
+            
+            // Verifichiamo che $configPath sia una stringa valida
+            Assert::stringNotEmpty($configPath, 'Il percorso di configurazione non può essere vuoto');
+            
+>>>>>>> aurmich/dev
             // Costruiamo il percorso completo del file di configurazione
             $configFilePath = $configPath.'/config.php';
             

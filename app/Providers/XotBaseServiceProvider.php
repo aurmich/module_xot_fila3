@@ -4,22 +4,40 @@ declare(strict_types=1);
 
 namespace Modules\Xot\Providers;
 
+<<<<<<< HEAD
 use function Safe\realpath;
 use Illuminate\Support\Arr;
 use Illuminate\Support\Str;
 use Webmozart\Assert\Assert;
 use Illuminate\Support\Facades\File;
+=======
+use Illuminate\Support\Arr;
+use Illuminate\Support\Str;
+use Webmozart\Assert\Assert;
+>>>>>>> aurmich/dev
 use Illuminate\Support\Facades\Blade;
 use Illuminate\Support\Facades\Config;
 use Illuminate\Support\ServiceProvider;
 use Modules\Xot\Datas\ComponentFileData;
 use Nwidart\Modules\Traits\PathNamespace;
+<<<<<<< HEAD
 use Modules\Xot\Actions\File\GetComponentsAction;
 use Modules\Xot\Actions\Blade\RegisterBladeComponentsAction;
 
 use Modules\Xot\Actions\Module\GetModulePathByGeneratorAction;
 use Modules\Xot\Actions\Livewire\RegisterLivewireComponentsAction;
 use BladeUI\Icons\Factory as IconFactory;
+=======
+use Modules\Xot\Actions\Blade\RegisterBladeComponentsAction;
+<<<<<<< HEAD
+use Modules\Xot\Actions\File\GetComponentsAction;
+=======
+>>>>>>> c93e31b (.)
+use Modules\Xot\Actions\Module\GetModulePathByGeneratorAction;
+use Modules\Xot\Actions\Livewire\RegisterLivewireComponentsAction;
+
+use function Safe\realpath;
+>>>>>>> aurmich/dev
 
 /**
  * Class XotBaseServiceProvider.
@@ -29,9 +47,19 @@ abstract class XotBaseServiceProvider extends ServiceProvider
     use PathNamespace;
 
     public string $name = '';
+<<<<<<< HEAD
     public string $nameLower = '';
     protected string $module_dir = __DIR__;
     protected string $module_ns = __NAMESPACE__;
+=======
+
+    public string $nameLower = '';
+
+    protected string $module_dir = __DIR__;
+
+    protected string $module_ns = __NAMESPACE__;
+
+>>>>>>> aurmich/dev
     protected string $module_base_ns;
 
     /**
@@ -40,14 +68,21 @@ abstract class XotBaseServiceProvider extends ServiceProvider
     public function boot(): void
     {
         $this->registerTranslations();
+<<<<<<< HEAD
         //$this->registerConfig(); // to register   
+=======
+        $this->registerConfig();
+>>>>>>> aurmich/dev
         $this->registerViews();
         $this->loadMigrationsFrom($this->module_dir.'/../Database/Migrations');
         $this->registerLivewireComponents();
         $this->registerBladeComponents();
         $this->registerCommands();
+<<<<<<< HEAD
 
         //$this->registerBladeIcons(); deve stare in register
+=======
+>>>>>>> aurmich/dev
     }
 
     /**
@@ -59,8 +94,12 @@ abstract class XotBaseServiceProvider extends ServiceProvider
         $this->module_ns = collect(explode('\\', $this->module_ns))->slice(0, -1)->implode('\\');
         $this->app->register($this->module_ns.'\Providers\RouteServiceProvider');
         $this->app->register($this->module_ns.'\Providers\EventServiceProvider');
+<<<<<<< HEAD
         $this->registerConfig();
         $this->registerBladeIcons(); // to boot
+=======
+        $this->registerBladeIcons();
+>>>>>>> aurmich/dev
     }
 
     public function registerBladeIcons(): void
@@ -68,6 +107,7 @@ abstract class XotBaseServiceProvider extends ServiceProvider
         if ('' === $this->name) {
             throw new \Exception('name is empty on ['.static::class.']');
         }
+<<<<<<< HEAD
         
         $svgPath = app(GetModulePathByGeneratorAction::class)->execute($this->name, 'svg');
         /*
@@ -86,6 +126,30 @@ abstract class XotBaseServiceProvider extends ServiceProvider
             ]);
         });
         
+=======
+
+        Assert::string($relativePath = config('modules.paths.generator.assets.path'));
+
+        try {
+            $svgPath = module_path($this->name, $relativePath.'/../svg');
+            if (! is_string($svgPath)) {
+                throw new \Exception('Invalid SVG path');
+            }
+            $resolvedPath = $svgPath;
+            $svgPath = $resolvedPath;
+        } catch (\Error $e) {
+            $svgPath = base_path('Modules/'.$this->name.'/'.$relativePath.'/../svg');
+            if (! is_string($svgPath)) {
+                throw new \Exception('Invalid fallback SVG path');
+            }
+        }
+
+        $basePath = base_path(DIRECTORY_SEPARATOR);
+        $svgPath = str_replace($basePath, '', $svgPath);
+
+        Config::set('blade-icons.sets.'.$this->nameLower.'.path', $svgPath);
+        Config::set('blade-icons.sets.'.$this->nameLower.'.prefix', $this->nameLower);
+>>>>>>> aurmich/dev
     }
 
     /**
@@ -149,6 +213,7 @@ abstract class XotBaseServiceProvider extends ServiceProvider
     {
         try {
             $configPath = app(GetModulePathByGeneratorAction::class)->execute($this->name, 'config');
+<<<<<<< HEAD
             $files = File::glob($configPath.'/*.php');
             foreach($files as $file){
                 $info=pathinfo($file);
@@ -162,6 +227,22 @@ abstract class XotBaseServiceProvider extends ServiceProvider
                 $configPath => config_path($this->nameLower),
             ], 'config');
             */
+=======
+
+<<<<<<< HEAD
+            $this->publishes([
+                $configPath => config_path($this->nameLower.'.php'),
+            ], 'config');
+
+=======
+
+            /*
+            $this->publishes([
+                $configPath => config_path($this->nameLower.'.php'),
+            ], 'config');
+            */
+>>>>>>> c93e31b (.)
+>>>>>>> aurmich/dev
             $this->mergeConfigFrom($configPath, $this->nameLower);
         } catch (\Exception $e) {
             // Ignore missing configuration
@@ -171,12 +252,34 @@ abstract class XotBaseServiceProvider extends ServiceProvider
 
     public function registerBladeComponents(): void
     {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> aurmich/dev
         $componentsViewPath = app(GetModulePathByGeneratorAction::class)->execute($this->name, 'component-view');
         Blade::anonymousComponentPath($componentsViewPath);
 
         $componentClassPath = app(GetModulePathByGeneratorAction::class)->execute($this->name, 'component-class');
 
         $namespace = $this->module_ns.'\\View\\Components';
+<<<<<<< HEAD
+=======
+=======
+        try{
+            $componentsViewPath = app(GetModulePathByGeneratorAction::class)->execute($this->name, 'component-view');
+            Blade::anonymousComponentPath($componentsViewPath);
+        } catch (\Exception $e) {
+            //return;
+        }
+        // $components_path = realpath(__DIR__.'/../resources/views/components');
+
+
+
+        $componentClassPath = app(GetModulePathByGeneratorAction::class)->execute($this->name, 'component-class');
+
+        $namespace = $this->module_ns.'\View\Components';
+>>>>>>> c93e31b (.)
+>>>>>>> aurmich/dev
         Blade::componentNamespace($namespace, $this->nameLower);
 
         app(RegisterBladeComponentsAction::class)
@@ -219,6 +322,13 @@ abstract class XotBaseServiceProvider extends ServiceProvider
             static function (mixed $item): string {
                 Assert::isArray($item);
                 Assert::keyExists($item, 'ns');
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+                Assert::string($item['ns']);
+>>>>>>> c93e31b (.)
+>>>>>>> aurmich/dev
                 return $item['ns'];
             },
             $commands

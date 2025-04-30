@@ -1,6 +1,12 @@
+<<<<<<< HEAD
 # Regole per i Namespace nei Moduli SaluteOra
 
 Questo documento definisce le regole ufficiali per l'utilizzo dei namespace all'interno dei moduli SaluteOra, con particolare attenzione alla struttura corretta e alle convenzioni di naming.
+=======
+# Regole per i Namespace nei Moduli Laraxot
+
+Questo documento definisce le regole ufficiali per l'utilizzo dei namespace all'interno dei moduli Laraxot.
+>>>>>>> aurmich/dev
 
 ## Struttura Corretta dei Namespace
 
@@ -11,8 +17,11 @@ La struttura corretta dei namespace nei moduli **NON** include il segmento `app`
 ```php
 namespace Modules\NomeModulo\Providers;
 namespace Modules\NomeModulo\Http\Controllers;
+<<<<<<< HEAD
 namespace Modules\NomeModulo\Filament\Widgets;
 namespace Modules\NomeModulo\Livewire\Auth;
+=======
+>>>>>>> aurmich/dev
 ```
 
 ### ❌ ERRATO
@@ -20,8 +29,11 @@ namespace Modules\NomeModulo\Livewire\Auth;
 ```php
 namespace Modules\NomeModulo\app\Providers;
 namespace Modules\NomeModulo\app\Http\Controllers;
+<<<<<<< HEAD
 namespace Modules\NomeModulo\app\Filament\Widgets;
 namespace Modules\NomeModulo\app\Livewire\Auth;
+=======
+>>>>>>> aurmich/dev
 ```
 
 ## Regole per RouteServiceProvider
@@ -57,15 +69,21 @@ class RouteServiceProvider extends XotBaseRouteServiceProvider
 1. I namespace NON devono includere il segmento `app` anche se i file sono fisicamente nella directory `app`
 2. I controller devono avere il namespace `Modules\NomeModulo\Http\Controllers`
 3. I provider devono avere il namespace `Modules\NomeModulo\Providers`
+<<<<<<< HEAD
 4. I widget Filament devono avere il namespace `Modules\NomeModulo\Filament\Widgets`
 5. I componenti Livewire/Volt devono avere il namespace `Modules\NomeModulo\Livewire`
 6. La proprietà `$name` nel RouteServiceProvider è obbligatoria e deve essere impostata al nome del modulo
 7. La proprietà `$moduleNamespace` deve puntare a `Modules\NomeModulo\Http\Controllers`
+=======
+4. La proprietà `$name` nel RouteServiceProvider è obbligatoria e deve essere impostata al nome del modulo
+5. La proprietà `$moduleNamespace` deve puntare a `Modules\NomeModulo\Http\Controllers`
+>>>>>>> aurmich/dev
 
 ## Motivo di questa regola
 
 Questa struttura di namespace mantiene compatibilità con la convenzione di Laravel e il sistema di moduli Nwidart, anche se i file sono fisicamente organizzati in modo diverso.
 
+<<<<<<< HEAD
 ## Esempi di Namespace per Componenti Comuni
 
 ### Filament Widgets
@@ -123,12 +141,15 @@ return redirect()->route('home');
 ?>
 ```
 
+=======
+>>>>>>> aurmich/dev
 ## Verifica e correzione
 
 Se incontri errori come `name is empty on [Modules\NomeModulo\Providers\RouteServiceProvider]`, verifica:
 
 1. Che il namespace sia corretto (senza `app`)
 2. Che la proprietà `$name` sia definita e valorizzata
+<<<<<<< HEAD
 3. Che il `$moduleNamespace` punti alla posizione corretta dei controller
 
 ## Regole Specifiche per Filament
@@ -162,3 +183,6 @@ Se incontri errori come `name is empty on [Modules\NomeModulo\Providers\RouteSer
 - [MODULE_STRUCTURE.md](./MODULE_STRUCTURE.md) - Struttura standard dei moduli
 - [FOLIO_VOLT_FILAMENT_INTEGRATION.md](./FOLIO_VOLT_FILAMENT_INTEGRATION.md) - Integrazione Folio, Volt e Filament
 - [filament/widgets/xot-base-widget.md](./filament/widgets/xot-base-widget.md) - Documentazione su XotBaseWidget 
+=======
+3. Che il `$moduleNamespace` punti alla posizione corretta dei controller 
+>>>>>>> aurmich/dev

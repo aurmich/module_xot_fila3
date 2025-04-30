@@ -73,6 +73,7 @@ class AssetAction
                 try {
                     File::copy($filename_from, $filename_to);
                 } catch (\Exception $e) {
+<<<<<<< HEAD
                     if (Str::contains($e->getMessage(), 'Permission denied')) {
                         throw new \Exception(sprintf(
                             "Permesso negato durante la copia dell'asset %s in %s. Assicurati che la directory %s sia scrivibile (chmod). Original error: %s",
@@ -82,6 +83,8 @@ class AssetAction
                             $e->getMessage()
                         ), $e->getCode(), $e);
                     }
+=======
+>>>>>>> aurmich/dev
                     throw new \Exception('message:['.$e->getMessage().']
                         public_path ['.public_path().']
                         path ['.$path.']
@@ -120,6 +123,7 @@ class AssetAction
             try {
                 File::copy($filename_from, $filename_to);
             } catch (\Exception $e) {
+<<<<<<< HEAD
                 if (Str::contains($e->getMessage(), 'Permission denied')) {
                     throw new \Exception(sprintf(
                         "Permesso negato durante la copia dell'asset %s in %s. Assicurati che la directory %s sia scrivibile (chmod). Original error: %s",
@@ -129,6 +133,8 @@ class AssetAction
                         $e->getMessage()
                     ), $e->getCode(), $e);
                 }
+=======
+>>>>>>> aurmich/dev
                 throw new \Exception('message:['.$e->getMessage().']
                     public_path ['.public_path().']
                     path ['.$path.']

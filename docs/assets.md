@@ -7,6 +7,7 @@ Gli assets sono le risorse statiche (CSS, JavaScript, immagini, font) utilizzate
 Gli assets sono organizzati in:
 
 ```
+<<<<<<< HEAD
 laravel/
 ├── Modules/
 │   └── [Module]/
@@ -20,6 +21,26 @@ laravel/
             ├── images/
             ├── css/
             └── js/
+=======
+assets/
+├── css/
+│   ├── app.css
+│   └── components/
+│       ├── blocks.css
+│       ├── forms.css
+│       └── ui.css
+├── js/
+│   ├── app.js
+│   └── components/
+│       ├── blocks.js
+│       ├── forms.js
+│       └── ui.js
+├── images/
+│   ├── logo.svg
+│   └── icons/
+└── fonts/
+    └── custom/
+>>>>>>> aurmich/dev
 ```
 
 ## CSS
@@ -200,6 +221,7 @@ document.addEventListener('alpine:init', () => {
 5. **Consistenza**: Mantieni uno stile coerente
 6. **Accessibilità**: Assicurati che gli assets siano accessibili
 7. **Responsive**: Rendi gli assets responsive
+<<<<<<< HEAD
 8. **Versioning**: Gestisci correttamente le versioni degli assets
 
 ## Gestione degli Asset
@@ -248,3 +270,6 @@ document.addEventListener('alpine:init', () => {
      alt="{{ $alt }}"
      class="h-8 w-auto">
 ``` 
+=======
+8. **Versioning**: Gestisci correttamente le versioni degli assets 
+>>>>>>> aurmich/dev

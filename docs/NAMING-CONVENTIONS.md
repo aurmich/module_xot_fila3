@@ -142,6 +142,7 @@ Descrizione dettagliata se necessaria
 ```
 
 Tipi: `feat`, `fix`, `docs`, `style`, `refactor`, `test`, `chore`
+<<<<<<< HEAD
 
 ## Regole Fondamentali
 
@@ -253,3 +254,5 @@ class Patients extends Model  // Non usare plurale
 - [Database Schema Guidelines](./database/schema.md)
 - [Coding Standards](./standards/coding.md)
 - [Best Practices](./BEST-PRACTICES.md)
+=======
+>>>>>>> aurmich/dev
