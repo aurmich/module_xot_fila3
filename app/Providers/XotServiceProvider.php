@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 namespace Modules\Xot\Providers;
 
-<<<<<<< HEAD
 use function Safe\realpath;
 use Webmozart\Assert\Assert;
 use Illuminate\Support\Carbon;
@@ -28,30 +27,6 @@ use Modules\Xot\View\Composers\XotComposer;
 
 use Filament\Forms\Components\DateTimePicker;
 use Illuminate\Database\Events\MigrationsEnded;
-=======
-use Filament\Forms\Components\DatePicker;
-use Filament\Forms\Components\DateTimePicker;
-use Filament\Forms\Components\Field;
-use Filament\Forms\Components\Placeholder;
-use Filament\Forms\Components\TextInput;
-use Filament\Forms\Components\TimePicker;
-use Filament\Infolists\Components\Entry;
-use Filament\Support\Components\Component;
-use Filament\Support\Concerns\Configurable;
-use Filament\Tables\Columns\Column;
-use Filament\Tables\Columns\TextColumn;
-use Filament\Tables\Filters\BaseFilter;
-use Illuminate\Database\Events\MigrationsEnded;
-use Illuminate\Support\Carbon;
-use Illuminate\Support\Facades\Event;
-use Illuminate\Support\Facades\File;
-use Illuminate\Support\Facades\URL;
-use Illuminate\Support\Facades\View;
-use Modules\Xot\View\Composers\XotComposer;
-use Webmozart\Assert\Assert;
-
-use function Safe\realpath;
->>>>>>> aurmich/dev
 
 /**
  * Class XotServiceProvider.
@@ -69,20 +44,12 @@ class XotServiceProvider extends XotBaseServiceProvider
         parent::boot();
         $this->redirectSSL();
         $this->registerViewComposers();
-<<<<<<< HEAD
         //$this->registerEvents(); to EventServiceProvider
         $this->registerTimezone();
         //$this->registerProviders(); Vuoto
     }
 
 
-=======
-        $this->registerEvents();
-        $this->registerTimezone();
-        $this->registerProviders();
-    }
-
->>>>>>> aurmich/dev
     public function register(): void
     {
         parent::register();
@@ -90,17 +57,10 @@ class XotServiceProvider extends XotBaseServiceProvider
         $this->registerCommands();
     }
 
-<<<<<<< HEAD
     //public function registerProviders(): void
     //{
     //    // $this->app->register(Filament\ModulesServiceProvider::class);
     //}
-=======
-    public function registerProviders(): void
-    {
-        // $this->app->register(Filament\ModulesServiceProvider::class);
-    }
->>>>>>> aurmich/dev
 
     public function registerTimezone(): void
     {
@@ -124,10 +84,7 @@ class XotServiceProvider extends XotBaseServiceProvider
         // $this->mergeConfigFrom($config_file, 'metatag');
     }
 
-<<<<<<< HEAD
     /*
-=======
->>>>>>> aurmich/dev
     public function loadHelpersFrom(string $path): void
     {
         $files = File::files($path);
@@ -144,40 +101,23 @@ class XotServiceProvider extends XotBaseServiceProvider
             include_once $realPath;
         }
     }
-<<<<<<< HEAD
     */
     /* to LANG
-=======
-
->>>>>>> aurmich/dev
     protected function translatableComponents(): void
     {
         $components = [Field::class, BaseFilter::class, Placeholder::class, Column::class, Entry::class];
         foreach ($components as $component) {
-<<<<<<< HEAD
             // @var Configurable $component 
             $component::configureUsing(function (Component $translatable): void {
                 // @phpstan-ignore method.notFound 
-=======
-            /* @var Configurable $component */
-            $component::configureUsing(function (Component $translatable): void {
-                /* @phpstan-ignore method.notFound */
->>>>>>> aurmich/dev
                 $translatable->translateLabel();
             });
         }
     }
-<<<<<<< HEAD
     */
 
     private function redirectSSL(): void
     {
-=======
-
-    private function redirectSSL(): void
-    {
-        // --- meglio ficcare un controllo anche sull'env
->>>>>>> aurmich/dev
         if (
             config('xra.forcessl') && (isset($_SERVER['SERVER_NAME']) && 'localhost' !== $_SERVER['SERVER_NAME']
             && isset($_SERVER['REQUEST_SCHEME']) && 'http' === $_SERVER['REQUEST_SCHEME'])
@@ -192,19 +132,11 @@ class XotServiceProvider extends XotBaseServiceProvider
         }
     }
 
-<<<<<<< HEAD
     /*
      * Undocumented function.
      *
      * @see https://medium.com/@dobron/running-laravel-ide-helper-generator-automatically-b909e75849d0
        to EventServiceProvider
-=======
-    /**
-     * Undocumented function.
-     *
-     * @see https://medium.com/@dobron/running-laravel-ide-helper-generator-automatically-b909e75849d0
-     */
->>>>>>> aurmich/dev
     private function registerEvents(): void
     {
         Event::listen(
@@ -214,10 +146,7 @@ class XotServiceProvider extends XotBaseServiceProvider
             }
         );
     }
-<<<<<<< HEAD
     */
-=======
->>>>>>> aurmich/dev
 
     private function registerViewComposers(): void
     {

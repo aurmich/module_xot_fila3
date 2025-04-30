@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 namespace Modules\Xot\Datas;
 
-<<<<<<< HEAD
 use Livewire\Wireable;
 use function Safe\realpath;
 use Illuminate\Support\Arr;
@@ -21,23 +20,6 @@ use Modules\User\Contracts\TenantContract;
 
 use Modules\Xot\Contracts\ProfileContract;
 use Spatie\LaravelData\Concerns\WireableData;
-=======
-use Illuminate\Database\Eloquent\Model;
-use Illuminate\Support\Str;
-use Livewire\Wireable;
-use Modules\Tenant\Services\TenantService;
-use Modules\User\Contracts\TeamContract;
-use Modules\User\Contracts\TenantContract;
-use Modules\User\Models\Membership;
-use Modules\User\Models\Team;
-use Modules\Xot\Contracts\ProfileContract;
-use Modules\Xot\Contracts\UserContract;
-use Spatie\LaravelData\Concerns\WireableData;
-use Spatie\LaravelData\Data;
-use Webmozart\Assert\Assert;
-
-use function Safe\realpath;
->>>>>>> aurmich/dev
 
 /**
  * Class Modules\Xot\Datas\XotData.
@@ -136,7 +118,6 @@ class XotData extends Data implements Wireable
         return $class;
     }
 
-<<<<<<< HEAD
     /**
      * @return class-string<Model&UserContract>
      */
@@ -161,8 +142,6 @@ class XotData extends Data implements Wireable
     }
 
 
-=======
->>>>>>> aurmich/dev
     public function getUserByEmail(string $email): UserContract
     {
         $user_class = $this->getUserClass();
@@ -242,7 +221,6 @@ class XotData extends Data implements Wireable
     public function getProfileClass(): string
     {
         $class = 'Modules\\'.$this->main_module.'\Models\Profile';
-<<<<<<< HEAD
 
         // Verifica che la classe esista
         Assert::classExists($class, '['.$class.']['.__LINE__.']['.class_basename($this).']');
@@ -251,16 +229,6 @@ class XotData extends Data implements Wireable
         Assert::isAOf($class, Model::class, '['.__LINE__.']['.class_basename($this).']['.$class.']');
         Assert::implementsInterface($class, ProfileContract::class, '['.__LINE__.']['.class_basename($this).']['.$class.']');
 
-=======
-        
-        // Verifica che la classe esista
-        Assert::classExists($class, '['.$class.']['.__LINE__.']['.class_basename($this).']');
-        
-        // Verifica che sia un Model e implementi ProfileContract
-        Assert::isAOf($class, Model::class, '['.__LINE__.']['.class_basename($this).']['.$class.']');
-        Assert::implementsInterface($class, ProfileContract::class, '['.__LINE__.']['.class_basename($this).']['.$class.']');
-        
->>>>>>> aurmich/dev
         /** @var class-string<Model&ProfileContract> */
         return $class;
     }
@@ -314,11 +282,7 @@ class XotData extends Data implements Wireable
 
         // Utilizziamo un'asserzione per garantire che hasRole restituisca un booleano
         $result = $user->hasRole('super-admin');
-<<<<<<< HEAD
 
-=======
-        
->>>>>>> aurmich/dev
         return $result === true;
     }
 
@@ -327,11 +291,7 @@ class XotData extends Data implements Wireable
         if (null !== $this->profile) {
             return $this->profile;
         }
-<<<<<<< HEAD
 
-=======
-        
->>>>>>> aurmich/dev
         $user_id = (string) authId();
         $this->profile = $this->getProfileModelByUserId($user_id);
         Assert::implementsInterface($this->profile, ProfileContract::class, '['.__LINE__.']['.class_basename($this).']');
@@ -359,11 +319,7 @@ class XotData extends Data implements Wireable
         $path0 = base_path('Themes/'.$this->pub_theme.'/resources/views/'.$key);
         try {
             $path = realpath($path0);
-<<<<<<< HEAD
 
-=======
-            
->>>>>>> aurmich/dev
             return $path;
         } catch (\Exception $e) {
             throw new \Exception('realpath not find dir['.$path0.']'.PHP_EOL.'['.$e->getMessage().']');

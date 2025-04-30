@@ -36,11 +36,8 @@ git diff --name-only --diff-filter=U
 ```bash
 # Apri i file in conflitto
 # Cerca i marcatori di conflitto:
-<<<<<<< HEAD
 codice nel tuo branch
-=======
 codice nel branch da mergeare
->>>>>>> branch-name
 
 # Decidi quale codice mantenere
 # Rimuovi i marcatori di conflitto

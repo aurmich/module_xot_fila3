@@ -4,17 +4,11 @@ declare(strict_types=1);
 
 namespace Modules\Xot\Filament\Widgets;
 
-<<<<<<< HEAD
 use Filament\Forms\Form;
 use Illuminate\Support\Facades\Cache;
 use Filament\Forms\Contracts\HasForms;
 use Filament\Widgets\WidgetConfiguration;
 use Filament\Widgets\Widget as FilamentWidget;
-=======
-use Filament\Widgets\Widget as FilamentWidget;
-use Illuminate\Support\Facades\Cache;
-use Filament\Widgets\WidgetConfiguration;
->>>>>>> aurmich/dev
 use Filament\Widgets\Concerns\InteractsWithPageFilters;
 use Modules\Xot\Actions\View\GetViewByClassAction;
 
@@ -22,7 +16,6 @@ use Modules\Xot\Actions\View\GetViewByClassAction;
  * @property bool $shouldRender
  *
  */
-<<<<<<< HEAD
 abstract class XotBaseWidget extends FilamentWidget implements HasForms
 {
     use \Filament\Widgets\Concerns\InteractsWithPageFilters;
@@ -31,13 +24,6 @@ abstract class XotBaseWidget extends FilamentWidget implements HasForms
     public string $title = '';
     public string $icon = '';
     public ?array $data = [];
-=======
-abstract class XotBaseWidget extends FilamentWidget
-{
-    use InteractsWithPageFilters;
-    public string $title = '';
-    public string $icon = '';
->>>>>>> aurmich/dev
     /**
      * The view that should be rendered for the widget.
      *
@@ -47,17 +33,12 @@ abstract class XotBaseWidget extends FilamentWidget
      *
      * @var view-string
      */
-<<<<<<< HEAD
     protected static string $view='';
-=======
-    protected static string $view;
->>>>>>> aurmich/dev
 
 
     public function __construct()
     {
         //parent::__construct();//Cannot call constructor
-<<<<<<< HEAD
         if(static::$view ==''){
             $view = app(GetViewByClassAction::class)->execute(static::class);
             static::$view = $view;
@@ -77,10 +58,4 @@ abstract class XotBaseWidget extends FilamentWidget
     {
         return [];
     }
-=======
-        $view = app(GetViewByClassAction::class)->execute(static::class);
-        static::$view = $view;
-
-    }
->>>>>>> aurmich/dev
 }

@@ -1,766 +1,300 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
->>>>>>> aurmich/dev
-=======
->>>>>>> c93e31b (.)
->>>>>>> aurmich/dev
-# Convenzioni per i Namespace nei Moduli Laraxot
+# Regole di Namespace in SaluteOra
 
-Questo documento definisce le convenzioni per i namespace nei moduli del framework Laraxot PTVX, un aspetto fondamentale per garantire la compatibilità con PHPStan livello 9 e la coerenza del codice.
+## Struttura dei Namespace
 
-## Regola Fondamentale: Omettere "app" nel Namespace
+In SaluteOra, tutti i namespace dei moduli seguono questa convenzione:
 
-Anche se i file sono fisicamente collocati nella directory `app` del modulo, il namespace **NON** deve includere questo segmento.
-
-### ✅ CORRETTO
-```php
-namespace Modules\Rating\Models;
-namespace Modules\Rating\Http\Controllers;
-namespace Modules\Rating\Providers;
-namespace Modules\Rating\Datas;
-namespace Modules\Rating\Actions;
-namespace Modules\Rating\Console\Commands;
+```
+Modules\{NomeModulo}\{Categoria}
 ```
 
-### ❌ ERRATO
-```php
-namespace Modules\Rating\App\Models;
-namespace Modules\Rating\App\Http\Controllers;
-namespace Modules\Rating\App\Providers;
-namespace Modules\Rating\App\Datas;
-namespace Modules\Rating\App\Actions;
-namespace Modules\Rating\App\Console\Commands;
-```
+### Importante
 
-## Attenzione: Errore comune con il namespace delle Actions
+Nonostante le classi possano risiedere fisicamente nella sottodirectory `app/` di un modulo, il namespace NON deve includere il segmento "app".
 
-Un errore particolarmente frequente riguarda le Actions. La convenzione corretta è la seguente:
-
-- ✅ **CORRETTO**: `namespace Modules\Xot\Actions;`
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> aurmich/dev
-
-- ❌ **ERRATO**: `namespace Modules\Xot\Actions;`
-
-
-- ❌ **ERRATO**: `namespace Modules\Xot\Actions;`
-
-- ❌ **ERRATO**: `namespace Modules\Xot\app\Actions;`
-
-
-=======
-<<<<<<< HEAD
-- ❌ **ERRATO**: `namespace Modules\Xot\Actions;`
-=======
-<<<<<<< HEAD
-- ❌ **ERRATO**: `namespace Modules\Xot\Actions;`
-=======
-- ❌ **ERRATO**: `namespace Modules\Xot\app\Actions;`
->>>>>>> origin/dev
->>>>>>> origin/dev
->>>>>>> origin/dev
-=======
-
-
-- ❌ **ERRATO**: `namespace Modules\Xot\Actions;`
-origin/dev
->>>>>>> origin/dev
-aurmich/dev
->>>>>>> aurmich/dev
-
-<<<<<<< HEAD
-=======
-=======
-- ❌ **ERRATO**: `namespace Modules\Xot\app\Actions;`
-
->>>>>>> c93e31b (.)
->>>>>>> aurmich/dev
-Anche se il file si trova nel percorso fisico `Modules/Xot/app/Actions/`, il namespace non deve mai includere il segmento `app`.
-
-Questo errore causa spesso problemi di PHPStan come:
-```
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> aurmich/dev
-
-Class 'Modules\Xot\Actions\MyAction' not found.
-
-
-Class 'Modules\Xot\Actions\MyAction' not found.
-
-Class 'Modules\Xot\app\Actions\MyAction' not found.
-
-
-=======
-<<<<<<< HEAD
-Class 'Modules\Xot\Actions\MyAction' not found.
-=======
-<<<<<<< HEAD
-Class 'Modules\Xot\Actions\MyAction' not found.
-=======
-Class 'Modules\Xot\app\Actions\MyAction' not found.
->>>>>>> origin/dev
->>>>>>> origin/dev
->>>>>>> origin/dev
-=======
-
-
-Class 'Modules\Xot\Actions\MyAction' not found.
-origin/dev
->>>>>>> origin/dev
-aurmich/dev
->>>>>>> aurmich/dev
-<<<<<<< HEAD
-=======
-=======
-Class 'Modules\Xot\app\Actions\MyAction' not found.
->>>>>>> c93e31b (.)
->>>>>>> aurmich/dev
-```
-
-La correzione è sempre la stessa: rimuovere il segmento `app` dal namespace.
-
-## Struttura Completa dei Namespace per Componenti Comuni
-
-### Modelli
+## Esempi Corretti
 
 ```php
-<?php
+// File in: /var/www/html/saluteora/laravel/Modules/Patient/app/Models/Patient.php
+namespace Modules\Patient\Models;
 
-declare(strict_types=1);
-
-namespace Modules\Rating\Models;
-
-use Illuminate\Database\Eloquent\Model;
-
-class Rating extends Model
-{
-    // Implementazione
-}
+// File in: /var/www/html/saluteora/laravel/Modules/Dental/app/Services/AppointmentService.php
+namespace Modules\Dental\Services;
 ```
 
-### Controller
+## Esempi Errati
 
 ```php
-<?php
-
-declare(strict_types=1);
-
-namespace Modules\Rating\Http\Controllers;
-
-use Illuminate\Http\Request;
-use Illuminate\Routing\Controller;
-
-class RatingController extends Controller
-{
-    // Implementazione
-}
+// ❌ NON UTILIZZARE
+namespace Modules\Patient\app\Models;
+namespace Modules\Dental\App\Services;
 ```
 
-### Data Objects
+## Mapping PSR-4 nei file composer.json
 
-```php
-<?php
-
-declare(strict_types=1);
-
-namespace Modules\Rating\Datas;
-
-use Spatie\LaravelData\Data;
-
-class RatingData extends Data
-{
-    // Implementazione
-}
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> aurmich/dev
->>>>>>> aurmich/dev
->>>>>>> aurmich/dev
-# Convenzioni Namespace in SaluteOra
-
-Questo documento descrive le convenzioni di namespace adottate nel progetto SaluteOra, con particolare attenzione alla struttura modulare basata su Laravel.
-
-## Struttura Base
-
-La struttura dei namespace segue una convenzione ben definita basata sulla struttura fisica dei file e sulla loro funzione logica all'interno dell'applicazione.
-
-### Regola Generale
-
-```
-Modules\{ModuleName}\{Type}\{Subtype?}\{ClassName}
-```
-
-Dove:
-- `{ModuleName}`: Nome del modulo (es. User, Tenant, Cms)
-- `{Type}`: Tipo di componente (es. Models, Controllers, Actions)
-- `{Subtype}`: (Opzionale) Sottotipo o raggruppamento (es. File, Auth)
-- `{ClassName}`: Nome della classe
-
-### Esempi
-
-```php
-namespace Modules\User\Models;
-class User {}
-
-namespace Modules\Tenant\Actions\Domain;
-class GetDomainByIdAction {}
-
-namespace Modules\Cms\Http\Controllers\Api;
-class PageController {}
-```
-
-## Struttura delle Directory
-
-La struttura fisica delle directory deve corrispondere alla struttura dei namespace per garantire coerenza e facilità di navigazione nel codice.
-
-### Esempio di Struttura Directory
-
-```
-laravel/
-└── Modules/
-    ├── User/
-    │   ├── app/
-    │   │   ├── Models/
-    │   │   │   └── User.php
-    │   │   └── Http/
-    │   │       └── Controllers/
-    │   │           └── UserController.php
-    │   ├── database/
-    │   │   └── migrations/
-    │   └── routes/
-    │       └── web.php
-    └── Tenant/
-        ├── app/
-        │   ├── Models/
-        │   │   └── Domain.php
-        │   └── Actions/
-        │       └── Domain/
-        │           └── GetDomainByIdAction.php
-        └── ...
-```
-
-## Convenzioni Specifiche per Tipo
-
-### Models
-
-```
-Modules\{ModuleName}\Models\{ModelName}
-```
-
-Tutti i modelli devono estendere `Modules\Xot\Models\XotBaseModel` o altra classe base appropriata.
-
-### Controllers
-
-```
-Modules\{ModuleName}\Http\Controllers\{ControllerName}
-```
-
-I controllers API dovrebbero essere in:
-```
-Modules\{ModuleName}\Http\Controllers\Api\{ControllerName}
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> aurmich/dev
->>>>>>> aurmich/dev
-=======
-<<<<<<< HEAD
-=======
->>>>>>> aurmich/dev
->>>>>>> aurmich/dev
->>>>>>> aurmich/dev
-=======
->>>>>>> c93e31b (.)
->>>>>>> aurmich/dev
-```
-
-### Actions
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
->>>>>>> aurmich/dev
-=======
->>>>>>> c93e31b (.)
->>>>>>> aurmich/dev
-```php
-<?php
-
-declare(strict_types=1);
-
-namespace Modules\Rating\Actions;
-
-use Spatie\QueueableAction\QueueableAction;
-
-class CreateRatingAction
-{
-    use QueueableAction;
-    
-    // Implementazione
-}
-```
-
-### Console Commands
-
-```php
-<?php
-
-declare(strict_types=1);
-
-namespace Modules\Rating\Console\Commands;
-
-use Illuminate\Console\Command;
-
-class RatingCommand extends Command
-{
-    protected $signature = 'rating:process';
-    
-    // Implementazione
-}
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> aurmich/dev
->>>>>>> aurmich/dev
->>>>>>> aurmich/dev
-```
-Modules\{ModuleName}\Actions\{Subtype?}\{ActionName}
-```
-
-Le azioni seguono il pattern "Action" e sono classi con un metodo `execute()` che implementa una singola responsabilità.
-
-### Filament Resources
-
-```
-Modules\{ModuleName}\Filament\Resources\{ResourceName}Resource
-```
-
-Pages e RelationManagers associati:
-```
-Modules\{ModuleName}\Filament\Resources\{ResourceName}Resource\Pages\{PageName}
-Modules\{ModuleName}\Filament\Resources\{ResourceName}Resource\RelationManagers\{RelationName}RelationManager
-```
-
-### Listeners
-
-```
-Modules\{ModuleName}\Listeners\{ListenerName}
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> aurmich/dev
->>>>>>> aurmich/dev
-=======
-<<<<<<< HEAD
-=======
->>>>>>> aurmich/dev
->>>>>>> aurmich/dev
->>>>>>> aurmich/dev
-=======
->>>>>>> c93e31b (.)
->>>>>>> aurmich/dev
-```
-
-### Service Providers
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
->>>>>>> aurmich/dev
-=======
->>>>>>> c93e31b (.)
->>>>>>> aurmich/dev
-```php
-<?php
-
-declare(strict_types=1);
-
-namespace Modules\Rating\Providers;
-
-use Modules\Xot\Providers\XotBaseServiceProvider;
-
-class RatingServiceProvider extends XotBaseServiceProvider
-{
-    public string $name = 'Rating';
-    protected string $module_dir = __DIR__;
-    protected string $module_ns = __NAMESPACE__;
-    
-    // Implementazione
-}
-```
-
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> aurmich/dev
-### Route Service Providers
-
-```php
-<?php
-
-declare(strict_types=1);
-
-namespace Modules\Rating\Providers;
-
-use Modules\Xot\Providers\XotBaseRouteServiceProvider;
-
-class RouteServiceProvider extends XotBaseRouteServiceProvider 
-{
-    protected string $moduleNamespace = 'Modules\Rating\Http\Controllers';
-    protected string $module_dir = __DIR__;
-    protected string $module_ns = __NAMESPACE__;
-    public string $name = 'Rating';
-    
-    // Implementazione
-}
-```
-
-<<<<<<< HEAD
-=======
-=======
->>>>>>> c93e31b (.)
->>>>>>> aurmich/dev
-## Corrispondenza tra Struttura delle Directory e Namespace
-
-| Directory fisica                             | Namespace corretto                   |
-|---------------------------------------------|-------------------------------------|
-| `Modules/Rating/app/Models/`                | `Modules\Rating\Models`             |
-| `Modules/Rating/app/Http/Controllers/`      | `Modules\Rating\Http\Controllers`   |
-| `Modules/Rating/app/Providers/`             | `Modules\Rating\Providers`          |
-| `Modules/Rating/app/Datas/`                 | `Modules\Rating\Datas`              |
-| `Modules/Rating/app/Actions/`               | `Modules\Rating\Actions`            |
-| `Modules/Rating/app/Console/Commands/`      | `Modules\Rating\Console\Commands`   |
-| `Modules/Rating/app/Filament/Resources/`    | `Modules\Rating\Filament\Resources` |
-| `Modules/Rating/app/Filament/Pages/`        | `Modules\Rating\Filament\Pages`     |
-
-## Namespace nei Moduli con Sottodirectory
-
-Per moduli con strutture più complesse che utilizzano sottodirectory, mantenere la coerenza dei namespace:
-
-```php
-// File fisico: Modules/Rating/app/Models/Concerns/HasRatings.php
-namespace Modules\Rating\Models\Concerns;
-
-// File fisico: Modules/Rating/app/Http/Controllers/Api/RatingController.php
-namespace Modules\Rating\Http\Controllers\Api;
-
-// File fisico: Modules/Rating/app/Console/Commands/Generators/MakeRatingCommand.php
-namespace Modules\Rating\Console\Commands\Generators;
-```
-
-## Import e Use Statements
-
-Utilizzare sempre import completi e qualificati per evitare ambiguità:
-
-```php
-// CORRETTO
-use Modules\Rating\Models\Rating;
-use Modules\User\Models\User;
-
-// EVITARE
-use Modules\Rating\Models\Rating as RatingModel;
-```
-
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> aurmich/dev
-## Namespace in composer.json
-
-Quando si definisce l'autoloading in `composer.json`, assicurarsi che la mappatura rifletta questa convenzione:
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> aurmich/dev
->>>>>>> aurmich/dev
->>>>>>> aurmich/dev
-```
-Modules\{ModuleName}\Providers\{ServiceName}ServiceProvider
-```
-
-## Compatibilità con l'Autoloading
-
-La configurazione dell'autoloading in `composer.json` deve riflettere questa struttura di namespace:
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> aurmich/dev
->>>>>>> aurmich/dev
->>>>>>> aurmich/dev
->>>>>>> aurmich/dev
+Il mapping PSR-4 nei file `composer.json` dei moduli è configurato come:
 
 ```json
 "autoload": {
     "psr-4": {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> aurmich/dev
-        "App\\": "app/",
-        "Modules\\": "Modules/"
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> aurmich/dev
->>>>>>> aurmich/dev
-        "Modules\\Rating\\": "Modules/Rating/app/"
-=======
-        "App\\": "app/",
-        "Modules\\": "Modules/"
->>>>>>> aurmich/dev
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> aurmich/dev
->>>>>>> aurmich/dev
->>>>>>> aurmich/dev
+        "Modules\\NomeModulo\\": "app/"
     }
 }
 ```
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
->>>>>>> aurmich/dev
->>>>>>> aurmich/dev
-## Risoluzione dei Problemi PHPStan con i Namespace
+## Validazione dei Namespace
 
-I problemi PHPStan relativi ai namespace possono essere identificati da messaggi come:
+Quando si sviluppano nuove classi o si modificano classi esistenti:
 
-```
-Class Modules\Rating\App\Models\Rating not found.
+1. Verificare che il namespace sia nel formato `Modules\NomeModulo\{Categoria}`
+2. Assicurarsi che non sia presente il segmento "app" o "App" nel namespace
+3. Controllare che tutti i riferimenti alle classi (use statements) seguano la stessa convenzione
+
+## Strumenti di Validazione
+
+Per verificare la conformità dei namespace, utilizzare:
+
+```bash
+php artisan module:check-namespaces {NomeModulo}
 ```
 
-La soluzione è sempre correggere il namespace rimuovendo il segmento `App`:
+Questo comando analizzerà tutti i file PHP nel modulo e segnalerà eventuali namespace non conformi.
+
+## Riferimento a Classi di Altri Moduli
+
+Quando si fa riferimento a classi di altri moduli, utilizzare sempre il namespace completo:
 
 ```php
-// Da
-namespace Modules\Rating\App\Models;
+// Corretto
+use Modules\Patient\Models\Patient;
 
-// A
-namespace Modules\Rating\Models;
+// Errato
+use Modules\Patient\app\Models\Patient;
 ```
 
-Per i comandi console, un errore comune è:
+## Troubleshooting
 
+Se si verificano errori "Class not found" o problemi di autoloading:
+
+1. Verificare che il namespace della classe corrisponda alla convenzione (senza "app")
+2. Controllare che i riferimenti alla classe (use statements) utilizzino il namespace corretto
+3. Eseguire `composer dump-autoload` per ricaricare il mapping delle classi
+
+Ultima modifica: 31/03/2025
+
+# Convenzioni di Nomenclatura
+
+## Struttura delle Cartelle
+
+### Regole Base
+- Tutte le cartelle devono essere in minuscolo
+- Usare il singolare per i nomi delle cartelle
+- Seguire la struttura standard dei moduli
+
+### Struttura Standard
 ```
-Class Modules\Rating\App\Console\Commands\RatingCommand not found.
+ModuleName/
+├── app/
+│   ├── Filament/
+│   │   ├── Resources/
+│   │   │   ├── pages/      # Per Folio
+│   │   │   │   ├── auth/
+│   │   │   │   └── ...
+│   │   │   └── components/ # Per Volt
+│   │   ├── Http/
+│   │   ├── Models/
+│   │   └── ...
+│   ├── config/
+│   ├── database/
+│   ├── docs/
+│   ├── resources/
+│   │   ├── views/
+│   │   │   ├── pages/      # Per Folio
+│   │   │   │   ├── auth/
+│   │   │   │   └── ...
+│   │   │   └── components/ # Per Volt
+│   │   ├── lang/
+│   │   └── ...
+│   ├── routes/
+│   ├── tests/
+│   └── composer.json
 ```
 
-La correzione è:
+## Nomenclatura dei File
 
+### Views
+- `pages/`: Per le pagine Folio
+  - `auth/login.blade.php`
+  - `auth/register.blade.php`
+  - `auth/logout.blade.php`
+- `components/`: Per i componenti Volt
+  - `auth/login-form.blade.php`
+  - `auth/register-form.blade.php`
+
+### Componenti Volt
 ```php
-// Da
-namespace Modules\Rating\App\Console\Commands;
+// Esempio di nomenclatura per un componente Volt
+<?php
 
-// A
-namespace Modules\Rating\Console\Commands;
+use function Livewire\Volt\{state, mount};
+
+state([
+    'property' => 'value',
+]);
+
+$method = function() {
+    // logica
+};
+
+?>
 ```
 
-## Vantaggi di questa Convenzione
-
-1. **Coerenza**: Uniformità in tutto il codebase
-2. **Compatibilità PHPStan**: Evita errori di classe non trovata
-3. **Semplicità**: Namespace più brevi e leggibili
-4. **Riflettività**: Il namespace riflette la struttura logica del modulo, non la sua struttura fisica
-5. **Standard Laravel**: Allineato alle convenzioni di Laravel
-
-<<<<<<< HEAD
-Seguire queste convenzioni di namespace aiuterà a mantenere un codebase coerente e a evitare errori comuni durante l'analisi statica del codice con PHPStan. 
-=======
-
-Seguire queste convenzioni di namespace aiuterà a mantenere un codebase coerente e a evitare errori comuni durante l'analisi statica del codice con PHPStan. 
-aurmich/dev
->>>>>>> aurmich/dev
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> aurmich/dev
->>>>>>> aurmich/dev
->>>>>>> aurmich/dev
-## Casi Speciali
-
-### Traits
-
-I traits dovrebbero essere collocati in una sottocartella `Traits` all'interno del tipo principale a cui si applicano:
-
-```
-Modules\{ModuleName}\Models\Traits\{TraitName}
-```
-
-### Interfaces
-
-Le interfacce dovrebbero utilizzare il suffisso `Interface` e essere collocate in:
-
-```
-Modules\{ModuleName}\Contracts\{InterfaceName}Interface
-```
-
-### Enums
-
-Gli enum dovrebbero essere collocati in:
-
-```
-Modules\{ModuleName}\Enums\{EnumName}
-```
+### Classi
+- `XotBase[ClassName]`: Per le classi base
+- `[ClassName]`: Per le classi specifiche del modulo
 
 ## Best Practices
 
-1. **Mantenere la coerenza**: Seguire sempre la stessa struttura di namespace in tutti i moduli
-2. **Evitare namespace troppo profondi**: Limitare a un massimo di 4-5 livelli
-3. **Nomi significativi**: Utilizzare nomi che riflettono chiaramente lo scopo e la funzione
-4. **Allineamento con Laravel**: Mantenere compatibilità con le convenzioni Laravel dove possibile
+1. **Folio**
+   - Usare nomi descrittivi per le pagine
+   - Organizzare le pagine in sottocartelle logiche
+   - Mantenere la struttura piatta quando possibile
 
-## Esempio Completo
+2. **Volt**
+   - Usare nomi specifici per i componenti
+   - Separare la logica in metodi chiari
+   - Documentare gli stati e i metodi
 
+3. **Generale**
+   - Mantenere la coerenza tra i moduli
+   - Documentare le eccezioni
+   - Seguire le convenzioni Laravel
+
+## Esempi
+
+### Pagina Folio
 ```php
-// Model
-namespace Modules\User\Models;
-class User extends \Modules\Xot\Models\XotBaseModel {}
+// resources/views/pages/auth/login.blade.php
+<?php
 
-// Controller
-namespace Modules\User\Http\Controllers;
-class UserController extends \Modules\Xot\Http\Controllers\XotBaseController {}
+use function Livewire\Volt\{state, mount};
 
-// Action
-namespace Modules\User\Actions\Auth;
-class LoginAction {
-    public function execute(string $username, string $password): bool {
-        // implementation
-    }
-}
+state([
+    'email' => '',
+    'password' => '',
+]);
 
-// Filament Resource
+$login = function() {
+    // logica di login
+};
+
+?>
+```
+
+### Componente Volt
+```php
+// resources/views/components/auth/login-form.blade.php
+<?php
+
+use function Livewire\Volt\{state, mount};
+
+state([
+    'email' => '',
+    'password' => '',
+    'remember' => false,
+]);
+
+$submit = function() {
+    // logica di submit
+};
+
+?>
+```
+
+# Convenzioni di Namespace
+
+## Struttura Base
+
+```
+Modules\[NomeModulo]\
+    ├── app\
+    │   ├── Filament\         # PascalCase
+    │   │   ├── Resources\    # PascalCase
+    │   │   ├── Pages\        # PascalCase
+    │   │   └── Widgets\      # PascalCase
+    │   └── ...              # lowercase
+    └── resources\
+        └── views\
+            └── pages\        # lowercase per Folio
+```
+
+## Regole Principali
+
+1. **Namespace Filament**:
+   ```php
+   namespace Modules\User\Filament\Resources;
+   namespace Modules\User\Filament\Pages;
+   namespace Modules\User\Filament\Widgets;
+   ```
+
+2. **Namespace Views**:
+   ```php
+   // Per Folio
+   view('user::pages.auth.login')
+   // Per Volt
+   view('user::components.forms.login')
+   ```
+
+3. **Namespace Models**:
+   ```php
+   namespace Modules\User\Models;
+   ```
+
+## Best Practices
+
+1. **Estensione Classi**:
+   ```php
+   // ❌ Non fare
+   class UserResource extends Resource
+   
+   // ✅ Fare
+   class UserResource extends XotBaseResource
+   ```
+
+2. **Organizzazione**:
+   - Usare namespace chiari e descrittivi
+   - Seguire la gerarchia del modulo
+   - Mantenere coerenza tra namespace e struttura cartelle
+
+3. **Documentazione**:
+   - Documentare namespace non standard
+   - Aggiornare README.md con namespace principali
+   - Mantenere coerenza tra moduli
+
+## Esempi
+
+### Corretto
+```php
 namespace Modules\User\Filament\Resources;
-class UserResource extends \Modules\Xot\Filament\Resources\XotBaseResource {}
 
-// Service Provider
-namespace Modules\User\Providers;
-class UserServiceProvider extends \Modules\Xot\Providers\XotBaseServiceProvider {}
+class UserResource extends XotBaseResource
+{
+    // ...
+}
 ```
 
-## Verifica di Conformità
-
-Per verificare che tutti i file rispettino queste convenzioni, sono disponibili script automatici nella cartella `scripts` che analizzano la struttura del progetto e segnalano eventuali anomalie.
-
-```bash
-php scripts/check-namespaces.php
-```
-
-## Riferimenti
-
-- [PSR-4: Autoloader Standard](https://www.php-fig.org/psr/psr-4/)
-- [Laravel Namespacing Conventions](https://laravel.com/docs/master/structure)
-- [Nwidart/Laravel-Modules Documentation](https://nwidart.com/laravel-modules/v6/introduction)
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> aurmich/dev
->>>>>>> aurmich/dev
-=======
-<<<<<<< HEAD
-=======
->>>>>>> aurmich/dev
->>>>>>> aurmich/dev
->>>>>>> aurmich/dev
-=======
-## Test di Validazione Namespace
-
-Per verificare la correttezza dei namespace, utilizzare il seguente test Pest:
-
+### Errato
 ```php
-test('verifica correttezza namespace', function () {
-    $basePath = base_path('Modules');
-    $modules = array_filter(scandir($basePath), fn($item) => 
-        is_dir($basePath . '/' . $item) && !in_array($item, ['.', '..'])
-    );
-    
-    $errors = [];
-    
-    foreach ($modules as $module) {
-        $appPath = $basePath . '/' . $module . '/app';
-        if (!is_dir($appPath)) continue;
-        
-        $iterator = new RecursiveIteratorIterator(
-            new RecursiveDirectoryIterator($appPath)
-        );
-        
-        foreach ($iterator as $file) {
-            if ($file->isFile() && $file->getExtension() === 'php') {
-                $content = file_get_contents($file->getRealPath());
-                if (preg_match('/namespace\s+[^;]+;/', $content, $matches)) {
-                    $namespace = $matches[0];
-                    if (strpos($namespace, '\app\\') !== false) {
-                        $errors[] = sprintf(
-                            'File %s contiene namespace non valido: %s',
-                            $file->getRealPath(),
-                            $namespace
-                        );
-                    }
-                }
-            }
-        }
-    }
-    
-    expect($errors)
-        ->withContext("I seguenti file contengono namespace non validi:\n" . implode("\n", $errors))
-        ->toBeEmpty();
-}); 
->>>>>>> c93e31b (.)
->>>>>>> aurmich/dev
+namespace Modules\User\Resources;
+
+class UserResource extends Resource
+{
+    // ...
+}
+```
+
+## Note Importanti
+- Usare sempre namespace completi
+- Seguire le convenzioni di naming
+- Documentare eccezioni
+- Aggiornare moduli esistenti

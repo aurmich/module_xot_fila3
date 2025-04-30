@@ -1,150 +1,68 @@
-# Configurazione
+# Configurazione del Sistema
 
-## Configurazione Base
+## Struttura delle Configurazioni
 
-### 1. Ambiente
-```env
-APP_NAME="SaluteOra"
-APP_ENV=local
-APP_DEBUG=true
-APP_URL=http://localhost
-```
+### Configurazioni Globali
+- Le configurazioni globali si trovano in `laravel/config/`
+- Sono applicate a tutti i domini
+- Possono essere sovrascritte da configurazioni specifiche per dominio
 
-### 2. Database
-```env
-DB_CONNECTION=mysql
-DB_HOST=127.0.0.1
-DB_PORT=3306
-DB_DATABASE=saluteora
-DB_USERNAME=root
-DB_PASSWORD=password
-```
+### Configurazioni per Dominio
+- Le configurazioni specifiche per dominio si trovano in `laravel/config/<dominio_inverso>/`
+- Il formato del dominio è invertito (es: `local/example` per `http://example.local`)
+- Sovrascrivono le configurazioni globali quando necessario
 
-### 3. Cache
-```env
-CACHE_DRIVER=file
-QUEUE_CONNECTION=sync
-SESSION_DRIVER=file
-```
+## Gestione delle Risorse
 
-## Configurazione dei Moduli
+### Percorsi delle Risorse
+- Le risorse sono organizzate per modulo
+- Utilizzare il formato `module::path` per riferirsi alle risorse
+- Il percorso si traduce in `laravel/Modules/Module/resources/path`
 
-### 1. Xot Module
+### Esempi di Configurazione
 ```php
-// config/xot.php
+// Configurazione globale (laravel/config/metatag.php)
 return [
-    'name' => 'Xot',
-    'description' => 'Modulo base per la gestione delle funzionalità comuni',
-    'version' => '1.0.0',
-    'providers' => [
-        \Modules\Xot\Providers\XotServiceProvider::class,
-    ],
+    'default_logo' => 'xot::images/logo.svg',
+];
+
+// Configurazione specifica per dominio (laravel/config/local/example/metatag.php)
+return [
+    'logo_header' => 'patient::images/logo.svg',
+    'logo_header_dark' => 'patient::images/logo.svg',
 ];
 ```
 
-### 2. CMS Module
-```php
-// config/cms.php
-return [
-    'name' => 'CMS',
-    'description' => 'Sistema di gestione dei contenuti',
-    'version' => '1.0.0',
-    'providers' => [
-        \Modules\Cms\Providers\CmsServiceProvider::class,
-    ],
-];
-```
+## Best Practices
 
-## Configurazione dei Temi
+### Organizzazione
+1. **Configurazioni Globali**:
+   - Mantenere le configurazioni di base in `laravel/config/`
+   - Documentare tutte le opzioni disponibili
+   - Fornire valori predefiniti appropriati
 
-### 1. Tema One
-```php
-// config/theme-one.php
-return [
-    'name' => 'One',
-    'description' => 'Tema base per il frontend',
-    'version' => '1.0.0',
-    'assets' => [
-        'path' => 'public/themes/one',
-        'url' => '/themes/one',
-    ],
-    'views' => [
-        'path' => 'resources/views',
-        'namespace' => 'one',
-    ],
-];
-```
+2. **Configurazioni per Dominio**:
+   - Creare una cartella per ogni dominio
+   - Mantenere solo le configurazioni che differiscono da quelle globali
+   - Documentare le differenze specifiche per dominio
 
-### 2. Configurazione Vite
-```javascript
-// vite.config.js
-import { defineConfig } from 'vite';
-import laravel from 'laravel-vite-plugin';
+3. **Risorse**:
+   - Organizzare le risorse per modulo
+   - Utilizzare nomi descrittivi per i file
+   - Mantenere una struttura coerente
 
-export default defineConfig({
-    plugins: [
-        laravel({
-            input: [
-                'resources/css/app.css',
-                'resources/js/app.js',
-                'themes/one/assets/css/app.css',
-                'themes/one/assets/js/app.js',
-            ],
-            refresh: true,
-        }),
-    ],
-});
-```
+### Manutenzione
+1. **Versionamento**:
+   - Tenere traccia delle modifiche alle configurazioni
+   - Documentare le modifiche significative
+   - Mantenere la compatibilità con le versioni precedenti
 
-## Configurazione di Filament
-
-### 1. Admin Panel
-```php
-// config/filament.php
-return [
-    'default_filesystem_disk' => 'public',
-    'auth' => [
-        'guard' => 'web',
-        'pages' => [
-            'login' => \Filament\Pages\Auth\Login::class,
-        ],
-    ],
-];
-```
-
-### 2. Widgets
-```php
-// config/filament/widgets.php
-return [
-    'default' => [
-        'account' => \Filament\Widgets\AccountWidget::class,
-        'info' => \Filament\Widgets\InfoWidget::class,
-    ],
-];
-```
-
-## Configurazione di Volt
-
-### 1. Componenti
-```php
-// config/volt.php
-return [
-    'path' => 'resources/views/components',
-    'namespace' => 'App\\View\\Components',
-];
-```
-
-### 2. Livewire
-```php
-// config/livewire.php
-return [
-    'class_namespace' => 'App\\Http\\Livewire',
-    'view_path' => 'resources/views/livewire',
-];
-```
+2. **Documentazione**:
+   - Documentare tutte le opzioni di configurazione
+   - Fornire esempi di utilizzo
+   - Mantenere aggiornata la documentazione
 
 ## Collegamenti
-
-- [Installazione](installation.md)
-- [Troubleshooting](troubleshooting.md)
-- [Regole di Documentazione](documentation-rules.md) 
+- [Gestione Domini](DOMAIN_CONFIGURATION.md)
+- [Struttura del Progetto](PROJECT_STRUCTURE.md)
+- [Documentazione Principale](../README.md) 

@@ -8,27 +8,13 @@ use Filament\Tables;
 use Filament\Actions;
 use Filament\Tables\Table;
 use Webmozart\Assert\Assert;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-use Filament\Tables\Actions\Action;
->>>>>>> c93e31b (.)
->>>>>>> aurmich/dev
 use Modules\UI\Enums\TableLayoutEnum;
 use Filament\Tables\Actions\BulkAction;
 use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Filters\BaseFilter;
 use Illuminate\Database\Eloquent\Model;
 use Filament\Notifications\Notification;
-<<<<<<< HEAD
 use Filament\Tables\Actions\Action;
-=======
-<<<<<<< HEAD
-use Filament\Tables\Actions\Action;
-=======
->>>>>>> c93e31b (.)
->>>>>>> aurmich/dev
 use Filament\Tables\Actions\ActionGroup;
 use Filament\Tables\Enums\FiltersLayout;
 use Filament\Tables\Columns\Layout\Stack;
@@ -38,15 +24,7 @@ use Filament\Tables\Filters\TernaryFilter;
 use Filament\Tables\Actions\DeleteBulkAction;
 use Illuminate\Database\Eloquent\Relations\Relation;
 use Modules\Xot\Actions\Model\TableExistsByModelClassActions;
-<<<<<<< HEAD
 use Modules\UI\Filament\Actions\Table\TableLayoutToggleTableAction;
-=======
-<<<<<<< HEAD
-use Modules\UI\Filament\Actions\Table\TableLayoutToggleTableAction;
-=======
-use Modules\UI\app\Filament\Actions\Table\TableLayoutToggleTableAction;
->>>>>>> c93e31b (.)
->>>>>>> aurmich/dev
 
 /**
  * Trait HasXotTable.

@@ -10,7 +10,6 @@ use Modules\Xot\Actions\Filament\Block\GetViewBlocksOptionsByTypeAction;
 
 abstract class XotBaseBlock
 {
-<<<<<<< HEAD
 
     public static string $name;
     public static string $context;
@@ -22,12 +21,6 @@ abstract class XotBaseBlock
 
         static::$name = $name;
         static::$context = $context;
-=======
-    public static function make(
-        string $name = 'article_list',
-        string $context = 'form',
-    ): Block {
->>>>>>> aurmich/dev
         /**
          * @var array<\Filament\Forms\Components\Component>
          */
@@ -44,14 +37,7 @@ abstract class XotBaseBlock
      *
      * @return array<\Filament\Forms\Components\Component>
      */
-<<<<<<< HEAD
     abstract public static function getBlockSchema(): array;
-=======
-    public static function getBlockSchema(): array
-    {
-        return [];
-    }
->>>>>>> aurmich/dev
 
     /**
      * Undocumented function.

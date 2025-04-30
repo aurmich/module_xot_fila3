@@ -11,8 +11,8 @@ Questo documento unifica tutte le convenzioni di naming utilizzate nel progetto 
 - [Architettura Folio + Volt + Filament](./FOLIO_VOLT_ARCHITECTURE.md) - Architettura frontend
 
 ### Documentazione nella Root
-- [Convenzioni di Naming dei Campi](/var/www/html/base_saluteora/docs/convenzioni-naming-campi.md) - Versione semplificata
-- [Flusso di Registrazione](/var/www/html/base_saluteora/docs/flusso-registrazione.md) - Implementazione che segue queste convenzioni
+- [Convenzioni di Naming dei Campi](../../../docs/convenzioni-naming-campi.md) - Versione semplificata
+- [Flusso di Registrazione](../../../docs/flusso-registrazione.md) - Implementazione che segue queste convenzioni
 
 ## 1. Nomi dei Campi Personali
 

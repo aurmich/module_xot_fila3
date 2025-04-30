@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Best Practices
 
 ## Architettura
@@ -156,8 +155,6 @@ class LoginTest extends TestCase
 }
 ```
 
-=======
->>>>>>> aurmich/dev
 # Best Practices per Laraxot
 
 ## Riferimenti al modello User

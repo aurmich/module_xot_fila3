@@ -17,23 +17,10 @@ class ImportMdbToSQLite extends Command
      *
      * @var string
      */
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> aurmich/dev
     protected $signature = 'xot:import-mdb-to-sqlite
                             {source : Percorso del file MDB sorgente}
                             {destination : Percorso del file SQLite di destinazione}
                             {--tables=* : Tabelle specifiche da importare}
-<<<<<<< HEAD
-=======
-=======
-    protected $signature = 'xot:import-mdb-to-sqlite 
-                            {source : Percorso del file MDB sorgente} 
-                            {destination : Percorso del file SQLite di destinazione} 
-                            {--tables=* : Tabelle specifiche da importare} 
->>>>>>> c93e31b (.)
->>>>>>> aurmich/dev
                             {--skip-data : Salta l\'importazione dei dati}';
 
     /**
@@ -60,15 +47,7 @@ class ImportMdbToSQLite extends Command
 
         try {
             $this->importSchema($source, $destination, $tables);
-<<<<<<< HEAD
 
-=======
-<<<<<<< HEAD
-
-=======
-            
->>>>>>> c93e31b (.)
->>>>>>> aurmich/dev
             if (! $skipData) {
                 $this->importData($source, $destination, $tables);
             }
