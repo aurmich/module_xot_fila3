@@ -42,3 +42,16 @@ protected function getResource(): string
 - Elimination of dead code
 - Improved type safety
 - Better performance without unnecessary exception handling
+
+## Collegamenti tra versioni di STATIC_ACCESS_FIXES.md
+* [STATIC_ACCESS_FIXES.md](laravel/Modules/Xot/docs/phpstan/STATIC_ACCESS_FIXES.md)
+* [STATIC_ACCESS_FIXES.md](laravel/Modules/Xot/docs/PHPStan/STATIC_ACCESS_FIXES.md)
+
+
+## Collegamenti tra versioni di static_access_fixes.md
+<<<<<<< HEAD
+* [static_access_fixes.md](../phpstan/static_access_fixes.md)
+=======
+* [static_access_fixes.md](../PHPStan/static_access_fixes.md)
+>>>>>>> 6a221c0 (.)
+

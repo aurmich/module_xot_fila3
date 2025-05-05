@@ -144,3 +144,15 @@ Modules/User/resources/views/pages/Auth/Logout.blade.php  # NO: maiuscole
 - I componenti Filament devono sempre essere in `app/Filament/`
 - Le cartelle standard Laravel devono sempre essere in lowercase
 - Le pagine Folio devono seguire la struttura `resources/views/pages/` 
+## Collegamenti tra versioni di CONVENTIONS.md
+* [CONVENTIONS.md](laravel/Modules/Xot/docs/CONVENTIONS.md)
+* [CONVENTIONS.md](laravel/Modules/Dental/docs/CONVENTIONS.md)
+* [CONVENTIONS.md](laravel/Modules/Patient/docs/CONVENTIONS.md)
+
+
+## Collegamenti tra versioni di conventions.md
+* [conventions.md](../../../../docs/tecnico/filament/conventions.md)
+* [conventions.md](../../../../docs/conventions.md)
+* [conventions.md](../../Dental/docs/conventions.md)
+* [conventions.md](../../Patient/docs/conventions.md)
+

@@ -25,3 +25,12 @@ The `getProfileClass()` method is currently returning a simple string, but PHPSt
 - Ensures type safety throughout the codebase
 - Improves IDE code completion and static analysis
 - Prevents potential runtime errors when the class name is used
+
+## Collegamenti tra versioni di CLASS_STRING_FIXES.md
+* [CLASS_STRING_FIXES.md](laravel/Modules/Xot/docs/phpstan/CLASS_STRING_FIXES.md)
+* [CLASS_STRING_FIXES.md](laravel/Modules/Xot/docs/PHPStan/CLASS_STRING_FIXES.md)
+
+
+## Collegamenti tra versioni di class_string_fixes.md
+* [class_string_fixes.md](../phpstan/class_string_fixes.md)
+

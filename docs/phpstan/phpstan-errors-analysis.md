@@ -44,3 +44,11 @@ Per correggere questi errori, seguiremo un approccio sistematico:
 3. **Modulo Notify** - Errori nelle relazioni e nei metodi dei modelli.
 
 Procederemo analizzando e correggendo gli errori modulo per modulo, partendo dai casi più semplici e ripetitivi per poi affrontare quelli più complessi. 
+## Collegamenti tra versioni di PHPSTAN-ERRORS-ANALYSIS.md
+* [PHPSTAN-ERRORS-ANALYSIS.md](laravel/Modules/Xot/docs/phpstan/PHPSTAN-ERRORS-ANALYSIS.md)
+* [PHPSTAN-ERRORS-ANALYSIS.md](laravel/Modules/Xot/docs/PHPStan/PHPSTAN-ERRORS-ANALYSIS.md)
+
+
+## Collegamenti tra versioni di phpstan-errors-analysis.md
+* [phpstan-errors-analysis.md](../PHPStan/phpstan-errors-analysis.md)
+

@@ -225,3 +225,8 @@
 - [Performance Guidelines](../../performance/guidelines.md)
 - [Integration Standards](../../integration/standards.md)
 - [Testing Best Practices](../../testing/best-practices.md) 
+## Collegamenti tra versioni di patient.md
+* [patient.md](docs/moduli/patient.md)
+* [patient.md](docs/roadmap/moduli/patient.md)
+* [patient.md](laravel/Modules/Xot/docs/roadmap/bottlenecks/patient.md)
+

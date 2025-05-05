@@ -84,3 +84,9 @@ it('uses correct namespace for view models', function () {
 - [Laravel Module Development](https://laravel.com/docs/10.x/packages)
 - [Best Practices](../best-practices/README.md)
 - [Architettura Modulare](../architecture.md) 
+
+## Collegamenti tra versioni di namespaces.md
+* [namespaces.md](docs/conventions/namespaces.md)
+* [namespaces.md](laravel/Modules/Xot/docs/conventions/namespaces.md)
+* [namespaces.md](laravel/Modules/Cms/docs/conventions/namespaces.md)
+

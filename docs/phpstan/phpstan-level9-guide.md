@@ -171,3 +171,15 @@ Per categorie specifiche:
 /** @phpstan-ignore offsetAccess.nonOffsetAccessible */
 $value = $data['key'];
 ``` 
+## Collegamenti tra versioni di PHPSTAN-LEVEL9-GUIDE.md
+* [PHPSTAN-LEVEL9-GUIDE.md](laravel/Modules/Xot/docs/phpstan/PHPSTAN-LEVEL9-GUIDE.md)
+* [PHPSTAN-LEVEL9-GUIDE.md](laravel/Modules/Xot/docs/PHPSTAN-LEVEL9-GUIDE.md)
+
+
+## Collegamenti tra versioni di phpstan-level9-guide.md
+<<<<<<< HEAD
+* [phpstan-level9-guide.md](phpstan/phpstan-level9-guide.md)
+=======
+* [phpstan-level9-guide.md](../phpstan-level9-guide.md)
+>>>>>>> 6a221c0 (.)
+

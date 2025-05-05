@@ -49,3 +49,7 @@ Tabelle trovate: users, migrations, password_resets
 - Migliorata la gestione degli errori
 - Aggiunta validazione input
 - Ottimizzata la query di estrazione tabelle 
+## Collegamenti tra versioni di database-schema-exporter.md
+* [database-schema-exporter.md](laravel/Modules/Xot/docs/commands/database-schema-exporter.md)
+* [database-schema-exporter.md](laravel/Modules/Xot/docs/console/commands/database-schema-exporter.md)
+

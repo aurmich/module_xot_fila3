@@ -80,3 +80,7 @@ Le classi base forniscono l'infrastruttura fondamentale per tutti i moduli del s
 - Aggiornare con nuove feature Laravel
 - Monitorare performance
 - Aggiornare documentazione 
+## Collegamenti tra versioni di base-classes.md
+* [base-classes.md](laravel/Modules/Xot/docs/base-classes.md)
+* [base-classes.md](laravel/Modules/Xot/docs/roadmap/base-classes.md)
+

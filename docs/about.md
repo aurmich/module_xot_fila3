@@ -11,3 +11,8 @@ Modulo principale con cui si può utilizzare la struttura multitenant del proget
 Senza di esso tutta l'organizzazione della struttura della base su cui si lavora non può funzionare.
 
 E' la libreria di estensione di tutte le altre librerie.
+## Collegamenti tra versioni di about.md
+* [about.md](laravel/Modules/Xot/docs/about.md)
+* [about.md](laravel/Modules/Tenant/docs/en/about.md)
+* [about.md](laravel/Modules/Tenant/docs/it/about.md)
+

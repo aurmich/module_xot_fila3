@@ -1,7 +1,7 @@
-# Architettura Folio + Volt + Filament in SaluteOra
+# Architettura Folio + Volt + Filament in il progetto
 
 ## Panoramica
-Questo documento descrive l'architettura frontend basata su Folio, Volt e Filament nel progetto SaluteOra, con particolare attenzione alle convenzioni di naming, all'integrazione tra componenti e alle best practice.
+Questo documento descrive l'architettura frontend basata su Folio, Volt e Filament nel progetto il progetto, con particolare attenzione alle convenzioni di naming, all'integrazione tra componenti e alle best practice.
 
 ## Collegamenti
 
@@ -21,7 +21,7 @@ Questo documento descrive l'architettura frontend basata su Folio, Volt e Filame
 
 ### Case Sensitivity e Struttura delle Directory
 
-In SaluteOra, è fondamentale rispettare le seguenti regole:
+In il progetto, è fondamentale rispettare le seguenti regole:
 
 1. **Case Sensitivity**: Rispettare rigorosamente la case sensitivity nelle directory
    - `resources/` è CORRETTO, `Resources/` è ERRATO
@@ -140,7 +140,7 @@ $update = function() {
 
 ### Pattern per Form Complessi
 
-Per i form complessi in SaluteOra (come registrazione, wizard multi-step, ecc.), utilizzare **sempre** i widget Filament tramite Livewire, invece di implementare la logica direttamente nelle viste Blade con Volt.
+Per i form complessi in il progetto (come registrazione, wizard multi-step, ecc.), utilizzare **sempre** i widget Filament tramite Livewire, invece di implementare la logica direttamente nelle viste Blade con Volt.
 
 ```php
 // In una vista Blade (es. register.blade.php)

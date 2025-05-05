@@ -1,8 +1,8 @@
-# Architettura del Sistema SaluteOra
+# Architettura del Sistema il progetto
 
 ## Panoramica dell'Architettura
 
-SaluteOra è basato su un'architettura modulare che utilizza Laravel come framework principale e Laraxot come sistema di moduli. L'architettura è progettata per garantire:
+il progetto è basato su un'architettura modulare che utilizza Laravel come framework principale e Laraxot come sistema di moduli. L'architettura è progettata per garantire:
 
 - **Modularità**: Ogni funzionalità è incapsulata in moduli indipendenti
 - **Estensibilità**: Facile aggiunta di nuove funzionalità

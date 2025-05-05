@@ -126,7 +126,7 @@ mv /var/www/html/base_saluteora/laravel/Modules/User/Filament/Widgets /var/www/h
 
 ## Conclusione
 
-Rispettare la struttura corretta delle directory è fondamentale per garantire la portabilità e il corretto funzionamento dell'applicazione su tutti i sistemi operativi. Queste regole vanno applicate rigorosamente in tutti i moduli del progetto SaluteOra.
+Rispettare la struttura corretta delle directory è fondamentale per garantire la portabilità e il corretto funzionamento dell'applicazione su tutti i sistemi operativi. Queste regole vanno applicate rigorosamente in tutti i moduli del progetto il progetto.
 
 ## Collegamenti Bidirezionali
 

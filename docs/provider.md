@@ -1,4 +1,4 @@
-# Service Provider in SaluteOra
+# Service Provider in il progetto
 
 Il service provider è responsabile della registrazione e configurazione del tema. Ogni tema deve avere il proprio service provider.
 

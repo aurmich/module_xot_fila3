@@ -45,3 +45,11 @@ In caso di errore durante l'applicazione dei metatag:
 - Questa azione utilizza il trait `QueueableAction` di Spatie
 - Tutti i metodi sono fortemente tipizzati per PHPStan livello 10
 - La documentazione è mantenuta aggiornata nella cartella docs 
+## Collegamenti tra versioni di ApplyMetatagToPanelAction.md
+* [ApplyMetatagToPanelAction.md](laravel/Modules/Xot/docs/actions/ApplyMetatagToPanelAction.md)
+* [ApplyMetatagToPanelAction.md](laravel/Modules/Xot/docs/actions/panel/ApplyMetatagToPanelAction.md)
+
+
+## Collegamenti tra versioni di applymetatagtopanelaction.md
+* [applymetatagtopanelaction.md](panel/applymetatagtopanelaction.md)
+

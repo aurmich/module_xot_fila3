@@ -223,3 +223,9 @@ public function process(\Modules\User\Models\User $user) {
     // Codice
 }
 ``` 
+## Collegamenti tra versioni di best-practices.md
+* [best-practices.md](../../../../docs/tecnico/filament/best-practices.md)
+* [best-practices.md](laraxot/best-practices.md)
+* [best-practices.md](../../UI/docs/best-practices.md)
+* [best-practices.md](../../../Themes/One/docs/best-practices.md)
+

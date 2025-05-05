@@ -1,8 +1,10 @@
-# Struttura del Progetto SaluteOra
+# Struttura del Progetto il progetto
 
 ## Panoramica
 
-Il progetto SaluteOra segue una struttura ben definita che separa chiaramente i componenti funzionali (moduli) dai componenti di presentazione (temi). Questa documentazione descrive la struttura corretta del progetto e le convenzioni da seguire.
+Il progetto il progetto segue una struttura ben definita che separa chiaramente i componenti funzionali (moduli) dai componenti di presentazione (temi). Questa documentazione descrive la struttura corretta del progetto e le convenzioni da seguire.
+
+> ⚠️ **IMPORTANTE**: Tutti i percorsi all'interno dell'applicazione Laravel DEVONO includere il segmento `laravel/`. Ad esempio, il percorso corretto per un file nel tema One è `/var/www/html/base_saluteora/laravel/Themes/One/...` e NON `/var/www/html/base_saluteora/Themes/One/...`
 
 ## Struttura Directory Principale
 
@@ -122,3 +124,15 @@ Tutte le migrazioni sono contenute all'interno dei moduli. Prima di eseguire qua
 ```bash
 rm -rf database/migrations
 ```
+
+## Collegamenti Bidirezionali
+
+- [Documentazione Generale](../../../../docs/README.md) - Indice della documentazione
+- [Convenzioni di Naming](../namespace-conventions.md) - Convenzioni per i namespace
+- [Architettura Folio+Volt](../folio_volt_architecture.md) - Architettura frontend
+- [Struttura dei Percorsi - Tema One](../../../Themes/One/docs/project-paths.md) - Guida dettagliata sui percorsi corretti nel progetto
+## Collegamenti tra versioni di struttura-progetto.md
+* [struttura-progetto.md](docs/tecnico/struttura/struttura-progetto.md)
+* [struttura-progetto.md](docs/tecnico/struttura-progetto.md)
+* [struttura-progetto.md](laravel/Modules/Xot/docs/architecture/struttura-progetto.md)
+

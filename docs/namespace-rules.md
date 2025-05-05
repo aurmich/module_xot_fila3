@@ -1,6 +1,6 @@
-# Regole per i Namespace nei Moduli SaluteOra
+# Regole per i Namespace nei Moduli il progetto
 
-Questo documento definisce le regole ufficiali per l'utilizzo dei namespace all'interno dei moduli SaluteOra, con particolare attenzione alla struttura corretta e alle convenzioni di naming.
+Questo documento definisce le regole ufficiali per l'utilizzo dei namespace all'interno dei moduli il progetto, con particolare attenzione alla struttura corretta e alle convenzioni di naming.
 
 ## Struttura Corretta dei Namespace
 

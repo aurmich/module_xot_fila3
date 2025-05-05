@@ -88,3 +88,11 @@ Errore che si verifica quando una funzione restituisce un tipo specifico ma è d
 3. Risolvere prima gli errori più comuni e semplici
 4. Documentare ogni soluzione nella cartella `docs` del modulo corrispondente
 5. Verificare che le soluzioni non introducano nuovi errori 
+## Collegamenti tra versioni di LEVEL10_LINEE_GUIDA.md
+* [LEVEL10_LINEE_GUIDA.md](laravel/Modules/Xot/docs/phpstan/LEVEL10_LINEE_GUIDA.md)
+* [LEVEL10_LINEE_GUIDA.md](laravel/Modules/Xot/docs/PHPStan/LEVEL10_LINEE_GUIDA.md)
+
+
+## Collegamenti tra versioni di level10_linee_guida.md
+* [level10_linee_guida.md](../PHPStan/level10_linee_guida.md)
+

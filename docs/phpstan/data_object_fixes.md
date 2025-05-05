@@ -46,3 +46,16 @@ L'approccio più in linea con le convenzioni di Laraxot è l'aggiunta di un meto
 2. **Facilità di test:** I metodi factory statici sono più facili da sostituire nei test
 3. **Chiarezza del codice:** Rende l'intento più chiaro (creare una nuova istanza configurata)
 4. **Compatibilità:** Mantiene la compatibilità con il codice esistente che si aspetta questo pattern
+
+## Collegamenti tra versioni di DATA_OBJECT_FIXES.md
+* [DATA_OBJECT_FIXES.md](laravel/Modules/Xot/docs/phpstan/DATA_OBJECT_FIXES.md)
+* [DATA_OBJECT_FIXES.md](laravel/Modules/Xot/docs/PHPStan/DATA_OBJECT_FIXES.md)
+
+
+## Collegamenti tra versioni di data_object_fixes.md
+<<<<<<< HEAD
+* [data_object_fixes.md](../phpstan/data_object_fixes.md)
+=======
+* [data_object_fixes.md](../PHPStan/data_object_fixes.md)
+>>>>>>> 6a221c0 (.)
+

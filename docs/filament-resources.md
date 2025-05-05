@@ -88,3 +88,10 @@ return [
 - Implementato il sistema di traduzioni per le label
 - Allineate le chiavi del form schema con il file di traduzioni
 - Mantenute le validazioni e la struttura del form 
+## Collegamenti tra versioni di filament-resources.md
+* [filament-resources.md](docs/tecnico/filament/filament-resources.md)
+* [filament-resources.md](docs/regole/filament-resources.md)
+* [filament-resources.md](laravel/Modules/Gdpr/docs/filament-resources.md)
+* [filament-resources.md](laravel/Modules/Xot/docs/filament-resources.md)
+* [filament-resources.md](laravel/Modules/Cms/docs/filament-resources.md)
+

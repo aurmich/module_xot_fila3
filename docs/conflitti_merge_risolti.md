@@ -1,17 +1,17 @@
-# Risoluzione Conflitti di Merge in SaluteOra
+# Risoluzione Conflitti di Merge in il progetto
 
 ## Problema
 
 
-Durante lo sviluppo del progetto SaluteOra, sono stati identificati diversi file con conflitti di merge non risolti. Questi conflitti erano indicati dalla presenza di marcatori come ``, `origin/dev` nel codice sorgente. I conflitti non risolti impedivano la corretta esecuzione del codice e causavano errori durante l'analisi statica con PHPStan.
+Durante lo sviluppo del progetto il progetto, sono stati identificati diversi file con conflitti di merge non risolti. Questi conflitti erano indicati dalla presenza di marcatori come ``, `origin/dev` nel codice sorgente. I conflitti non risolti impedivano la corretta esecuzione del codice e causavano errori durante l'analisi statica con PHPStan.
 aurmich/dev
-Durante lo sviluppo del progetto SaluteOra, sono stati identificati diversi file con conflitti di merge non risolti. Questi conflitti erano indicati dalla presenza di marcatori come ``, `` e `` nel codice sorgente. I conflitti non risolti impedivano la corretta esecuzione del codice e causavano errori durante l'analisi statica con PHPStan.
+Durante lo sviluppo del progetto il progetto, sono stati identificati diversi file con conflitti di merge non risolti. Questi conflitti erano indicati dalla presenza di marcatori come ``, `` e `` nel codice sorgente. I conflitti non risolti impedivano la corretta esecuzione del codice e causavano errori durante l'analisi statica con PHPStan.
 
-Durante lo sviluppo del progetto SaluteOra, sono stati identificati diversi file con conflitti di merge non risolti. Questi conflitti erano indicati dalla presenza di marcatori come ``, `origin/dev` nel codice sorgente. I conflitti non risolti impedivano la corretta esecuzione del codice e causavano errori durante l'analisi statica con PHPStan.
+Durante lo sviluppo del progetto il progetto, sono stati identificati diversi file con conflitti di merge non risolti. Questi conflitti erano indicati dalla presenza di marcatori come ``, `origin/dev` nel codice sorgente. I conflitti non risolti impedivano la corretta esecuzione del codice e causavano errori durante l'analisi statica con PHPStan.
 aurmich/dev
 =======
 
-Durante lo sviluppo del progetto SaluteOra, sono stati identificati diversi file con conflitti di merge non risolti. Questi conflitti erano indicati dalla presenza di marcatori come ``, `origin/dev` nel codice sorgente. I conflitti non risolti impedivano la corretta esecuzione del codice e causavano errori durante l'analisi statica con PHPStan.
+Durante lo sviluppo del progetto il progetto, sono stati identificati diversi file con conflitti di merge non risolti. Questi conflitti erano indicati dalla presenza di marcatori come ``, `origin/dev` nel codice sorgente. I conflitti non risolti impedivano la corretta esecuzione del codice e causavano errori durante l'analisi statica con PHPStan.
 aurmich/dev
 
 I file principali con conflitti erano:
@@ -404,7 +404,7 @@ In particolare, le correzioni hanno portato i seguenti benefici:
 4. **Maggiore Coerenza**: Uniformità nell'implementazione dei metodi e nella gestione dei tipi
 5. **Compatibilità con PHPStan**: Riduzione degli errori di analisi statica
 
-Questo lavoro di risoluzione dei conflitti ha inoltre contribuito a stabilire best practices per la gestione dei merge nel progetto SaluteOra, che potranno essere applicate in futuro per prevenire problemi simili.
+Questo lavoro di risoluzione dei conflitti ha inoltre contribuito a stabilire best practices per la gestione dei merge nel progetto il progetto, che potranno essere applicate in futuro per prevenire problemi simili.
 =======
 
 49ebea7 (.)`.
@@ -412,3 +412,16 @@ Questo lavoro di risoluzione dei conflitti ha inoltre contribuito a stabilire be
 **Risoluzione**: Eliminate le proprietà duplicate e risolto il conflitto di tipo per la proprietà `blocks`.
 
 **Documentazione**: [Moduli Cms](../../../Cms/docs/models/PageContent_conflict.md)
+
+## Collegamenti tra versioni di CONFLITTI_MERGE_RISOLTI.md
+* [CONFLITTI_MERGE_RISOLTI.md](laravel/Modules/Gdpr/docs/CONFLITTI_MERGE_RISOLTI.md)
+* [CONFLITTI_MERGE_RISOLTI.md](laravel/Modules/Xot/docs/CONFLITTI_MERGE_RISOLTI.md)
+* [CONFLITTI_MERGE_RISOLTI.md](laravel/Modules/UI/docs/CONFLITTI_MERGE_RISOLTI.md)
+* [CONFLITTI_MERGE_RISOLTI.md](laravel/Modules/Media/docs/CONFLITTI_MERGE_RISOLTI.md)
+
+
+## Collegamenti tra versioni di conflitti_merge_risolti.md
+* [conflitti_merge_risolti.md](../../Gdpr/docs/conflitti_merge_risolti.md)
+* [conflitti_merge_risolti.md](../../UI/docs/conflitti_merge_risolti.md)
+* [conflitti_merge_risolti.md](../../Media/docs/conflitti_merge_risolti.md)
+

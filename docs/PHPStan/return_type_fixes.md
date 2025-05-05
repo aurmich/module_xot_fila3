@@ -32,3 +32,16 @@ While the docblock indicates the correct return type, the actual implementation 
 - Improved type safety at a high PHPStan level
 - Better code reliability and maintainability
 - Clear expectations for extending classes
+
+## Collegamenti tra versioni di RETURN_TYPE_FIXES.md
+* [RETURN_TYPE_FIXES.md](laravel/Modules/Xot/docs/phpstan/RETURN_TYPE_FIXES.md)
+* [RETURN_TYPE_FIXES.md](laravel/Modules/Xot/docs/PHPStan/RETURN_TYPE_FIXES.md)
+
+
+## Collegamenti tra versioni di return_type_fixes.md
+<<<<<<< HEAD
+* [return_type_fixes.md](../PHPStan/return_type_fixes.md)
+=======
+* [return_type_fixes.md](../phpstan/return_type_fixes.md)
+>>>>>>> 6a221c0 (.)
+

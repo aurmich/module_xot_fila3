@@ -1,8 +1,8 @@
-# Moduli Laraxot per SaluteOra
+# Moduli Laraxot per il progetto
 
 ## Panoramica
 
-I moduli Laraxot sono componenti fondamentali del progetto SaluteOra, fornendo funzionalità modulari e riutilizzabili. Questa documentazione descrive la struttura, l'installazione e l'utilizzo dei moduli Laraxot nel contesto del progetto.
+I moduli Laraxot sono componenti fondamentali del progetto il progetto, fornendo funzionalità modulari e riutilizzabili. Questa documentazione descrive la struttura, l'installazione e l'utilizzo dei moduli Laraxot nel contesto del progetto.
 
 ## Elenco Moduli Essenziali
 
@@ -97,7 +97,7 @@ Laravel 12 introduce un cambiamento architetturale nella gestione dei service pr
 
 ## Configurazione Composer
 
-Nel progetto SaluteOra, è fondamentale NON includere la riga `"Modules\\": "Modules/"` nel file composer.json:
+Nel progetto il progetto, è fondamentale NON includere la riga `"Modules\\": "Modules/"` nel file composer.json:
 
 ```json
 "autoload": {

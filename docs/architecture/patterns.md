@@ -77,3 +77,9 @@ Elenco di pratiche da evitare nello sviluppo.
 - Magic Numbers
 - Duplicate Code
 - Tight Coupling
+
+## Collegamenti tra versioni di patterns.md
+* [patterns.md](laravel/Modules/Xot/docs/en/patterns.md)
+* [patterns.md](laravel/Modules/Xot/docs/it/patterns.md)
+* [patterns.md](laravel/Modules/Xot/docs/architecture/patterns.md)
+

@@ -260,3 +260,11 @@ public function user()
 8. **Configurare .phpstan.neon per ignorare errori non risolvibili**
 
 Implementando queste soluzioni sistematicamente, sarà possibile risolvere la maggior parte degli errori PHPStan di livello 9. 
+## Collegamenti tra versioni di PHPSTAN-SOLUTIONS.md
+* [PHPSTAN-SOLUTIONS.md](laravel/Modules/Xot/docs/phpstan/PHPSTAN-SOLUTIONS.md)
+* [PHPSTAN-SOLUTIONS.md](laravel/Modules/Xot/docs/PHPStan/PHPSTAN-SOLUTIONS.md)
+
+
+## Collegamenti tra versioni di phpstan-solutions.md
+* [phpstan-solutions.md](../PHPStan/phpstan-solutions.md)
+

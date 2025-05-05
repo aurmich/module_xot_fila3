@@ -1,7 +1,7 @@
-# Struttura dei Moduli in SaluteOra
+# Struttura dei Moduli in il progetto
 
 ## Panoramica
-Questo documento descrive la struttura standard dei moduli nel progetto SaluteOra.
+Questo documento descrive la struttura standard dei moduli nel progetto il progetto.
 
 ## Struttura Base
 ```
@@ -109,7 +109,7 @@ ModuleName/
 
 ### Regole Fondamentali
 
-In SaluteOra, è fondamentale seguire queste convenzioni di naming per i campi del database e dei modelli:
+In il progetto, è fondamentale seguire queste convenzioni di naming per i campi del database e dei modelli:
 
 #### Campi Utente e Persona
 
@@ -406,3 +406,7 @@ Se trovi una directory con case errato:
 4. Rinomina la directory
 5. Testa approfonditamente
 6. Committa le modifiche
+
+## Collegamenti tra versioni di module_structure.md
+* [module_structure.md](../../../../docs/error_analysis/module_structure.md)
+

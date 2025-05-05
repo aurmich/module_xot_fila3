@@ -246,3 +246,8 @@ class CacheTest extends TestCase {
 3. Monitorare costantemente le metriche di performance
 4. Aggiornare la documentazione per ogni modifica
 5. Mantenere compatibilità con le versioni precedenti 
+## Collegamenti tra versioni di solutions.md
+* [solutions.md](laravel/Modules/Gdpr/docs/solutions.md)
+* [solutions.md](laravel/Modules/Xot/docs/solutions.md)
+* [solutions.md](laravel/Modules/Job/docs/solutions.md)
+

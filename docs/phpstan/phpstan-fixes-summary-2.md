@@ -128,3 +128,11 @@ Questo approccio incrementale permette di ridurre gradualmente gli errori, mante
 - [Documentazione PHPStan sui Generics](https://phpstan.org/blog/generics-in-php-using-phpdocs)
 - [Guida Risoluzione Problemi di Proprietà Undefined](https://phpstan.org/blog/solving-phpstan-access-to-undefined-property)
 - [Solving Template Type Issues](https://phpstan.org/blog/solving-phpstan-error-unable-to-resolve-template-type) 
+## Collegamenti tra versioni di PHPSTAN-FIXES-SUMMARY-2.md
+* [PHPSTAN-FIXES-SUMMARY-2.md](laravel/Modules/Xot/docs/phpstan/PHPSTAN-FIXES-SUMMARY-2.md)
+* [PHPSTAN-FIXES-SUMMARY-2.md](laravel/Modules/Xot/docs/PHPSTAN-FIXES-SUMMARY-2.md)
+
+
+## Collegamenti tra versioni di phpstan-fixes-summary-2.md
+* [phpstan-fixes-summary-2.md](../phpstan-fixes-summary-2.md)
+

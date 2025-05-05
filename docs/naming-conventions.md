@@ -147,7 +147,7 @@ Tipi: `feat`, `fix`, `docs`, `style`, `refactor`, `test`, `chore`
 
 ### 1. Campi Database
 - Usare snake_case per i nomi delle colonne
-- Usare sempre `first_name` e `last_name` per i nomi personali, MAI `surname` o `name`
+- **Usare sempre `first_name` e `last_name` per i nomi personali, MAI `surname` o `name`** (vedi [documentazione dettagliata](./conventions/personal-name-fields.md))
 - Usare `_id` come suffisso per le chiavi esterne
 - Usare `_at` come suffisso per i timestamp
 - Usare `is_` come prefisso per i booleani
@@ -253,3 +253,8 @@ class Patients extends Model  // Non usare plurale
 - [Database Schema Guidelines](./database/schema.md)
 - [Coding Standards](./standards/coding.md)
 - [Best Practices](./BEST-PRACTICES.md)
+
+## Collegamenti tra versioni di naming-conventions.md
+* [naming-conventions.md](docs/naming-conventions.md)
+* [naming-conventions.md](laravel/Modules/Xot/docs/naming-conventions.md)
+

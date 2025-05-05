@@ -1,6 +1,6 @@
 # Polling nei Widget Filament
 
-Questo documento descrive come implementare il polling automatico nei widget Filament utilizzando il trait `CanPoll` nel progetto SaluteOra.
+Questo documento descrive come implementare il polling automatico nei widget Filament utilizzando il trait `CanPoll` nel progetto il progetto.
 
 ## Introduzione
 

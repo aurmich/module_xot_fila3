@@ -87,3 +87,16 @@ For maximum efficiency, we'll implement fixes in the following order:
 - [ ] Fix SocioResource.php method call on mixed issues
 - [ ] Fix ListSoci.php method call on mixed issues
 - [ ] Run PHPStan after each batch of fixes to verify improvements
+
+## Collegamenti tra versioni di FIX_IMPLEMENTATION_PLAN.md
+* [FIX_IMPLEMENTATION_PLAN.md](laravel/Modules/Xot/docs/phpstan/FIX_IMPLEMENTATION_PLAN.md)
+* [FIX_IMPLEMENTATION_PLAN.md](laravel/Modules/Xot/docs/PHPStan/FIX_IMPLEMENTATION_PLAN.md)
+
+
+## Collegamenti tra versioni di fix_implementation_plan.md
+<<<<<<< HEAD
+* [fix_implementation_plan.md](../phpstan/fix_implementation_plan.md)
+=======
+* [fix_implementation_plan.md](../PHPStan/fix_implementation_plan.md)
+>>>>>>> 6a221c0 (.)
+

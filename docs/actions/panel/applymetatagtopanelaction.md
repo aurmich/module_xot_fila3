@@ -35,3 +35,11 @@ La correzione dell'errore PHPStan richiede la modifica del metodo chiamato da `g
 - [MetatagData](../../datas/MetatagData.md)
 - [Filament Best Practices](../../FILAMENT-BEST-PRACTICES.md)
 - [PHPStan Common Exceptions](../../PHPSTAN-COMMON-EXCEPTIONS.md) 
+## Collegamenti tra versioni di ApplyMetatagToPanelAction.md
+* [ApplyMetatagToPanelAction.md](laravel/Modules/Xot/docs/actions/ApplyMetatagToPanelAction.md)
+* [ApplyMetatagToPanelAction.md](laravel/Modules/Xot/docs/actions/panel/ApplyMetatagToPanelAction.md)
+
+
+## Collegamenti tra versioni di applymetatagtopanelaction.md
+* [applymetatagtopanelaction.md](../applymetatagtopanelaction.md)
+

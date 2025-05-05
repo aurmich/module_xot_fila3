@@ -66,3 +66,8 @@ return [
 - [Gestione Domini](DOMAIN_CONFIGURATION.md)
 - [Struttura del Progetto](PROJECT_STRUCTURE.md)
 - [Documentazione Principale](../README.md) 
+## Collegamenti tra versioni di configuration.md
+* [configuration.md](docs/configuration.md)
+* [configuration.md](laravel/Modules/Xot/docs/configuration.md)
+* [configuration.md](laravel/Modules/Cms/docs/configuration.md)
+

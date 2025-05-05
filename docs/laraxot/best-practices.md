@@ -102,3 +102,10 @@ class MyResource extends XotBaseResource
 - Utilizzare Blade components per la riusabilità
 - Implementare la localizzazione per tutti i testi
 - Seguire una struttura modulare
+
+## Collegamenti tra versioni di best-practices.md
+* [best-practices.md](docs/tecnico/filament/best-practices.md)
+* [best-practices.md](laravel/Modules/Xot/docs/laraxot/best-practices.md)
+* [best-practices.md](laravel/Modules/UI/docs/best-practices.md)
+* [best-practices.md](laravel/Themes/One/docs/best-practices.md)
+

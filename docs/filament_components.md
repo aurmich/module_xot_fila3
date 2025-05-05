@@ -91,3 +91,7 @@ DatePicker::make('field_name')
 2. Usa l'autocompletamento dell'IDE per verificare i metodi disponibili
 3. Mantieni consistenza nei nomi dei metodi in tutto il progetto
 4. Aggiorna questa documentazione quando trovi nuovi metodi o pattern utili 
+## Collegamenti tra versioni di FILAMENT_COMPONENTS.md
+* [FILAMENT_COMPONENTS.md](laravel/Modules/Xot/docs/FILAMENT_COMPONENTS.md)
+* [FILAMENT_COMPONENTS.md](laravel/Themes/One/docs/FILAMENT_COMPONENTS.md)
+

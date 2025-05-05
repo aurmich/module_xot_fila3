@@ -1,8 +1,8 @@
-# Filosofia di Sviluppo SaluteOra
+# Filosofia di Sviluppo il progetto
 
 ## Principi Fondamentali
 
-Lo sviluppo del progetto SaluteOra è guidato dai seguenti principi fondamentali:
+Lo sviluppo del progetto il progetto è guidato dai seguenti principi fondamentali:
 
 ### Leggibilità e Manutenibilità
 
@@ -116,3 +116,8 @@ Lo sviluppo del progetto SaluteOra è guidato dai seguenti principi fondamentali
 - Scrivere messaggi di commit chiari e descrittivi
 - Spiegare il "perché" delle modifiche
 - Riferirsi a ticket o issue quando applicabile
+
+## Collegamenti tra versioni di filosofia.md
+* [filosofia.md](docs/filosofia.md)
+* [filosofia.md](laravel/Modules/Xot/docs/development/filosofia.md)
+

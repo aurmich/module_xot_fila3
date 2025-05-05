@@ -1,6 +1,6 @@
-# Temi in SaluteOra
+# Temi in il progetto
 
-SaluteOra utilizza un sistema di temi basato su Filament 3.3. Ogni tema è un pacchetto Laravel indipendente che può essere installato e configurato separatamente.
+il progetto utilizza un sistema di temi basato su Filament 3.3. Ogni tema è un pacchetto Laravel indipendente che può essere installato e configurato separatamente.
 
 ## Struttura dei Temi
 
@@ -46,7 +46,7 @@ Le viste devono essere organizzate in:
 
 ## Tema One
 
-Il tema One è il tema predefinito di SaluteOra. È basato su Filament 3.3 e include:
+Il tema One è il tema predefinito di il progetto. È basato su Filament 3.3 e include:
 
 ### Blocchi Disponibili
 - Hero
@@ -82,3 +82,8 @@ Per personalizzare un tema:
 6. **Blocchi**: Crea blocchi riutilizzabili
 7. **Layout**: Mantieni i layout flessibili
 8. **Documentazione**: Documenta tutto accuratamente 
+## Collegamenti tra versioni di themes.md
+* [themes.md](docs/rules/themes.md)
+* [themes.md](laravel/Modules/Xot/docs/themes.md)
+* [themes.md](laravel/Modules/Cms/docs/frontoffice/themes.md)
+

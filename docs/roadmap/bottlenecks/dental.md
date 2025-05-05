@@ -209,3 +209,8 @@
 - [WebGL Best Practices](../../performance/webgl.md)
 - [Integration Guidelines](../../integration/guidelines.md)
 - [3D Optimization Guide](../../3d/optimization.md) 
+## Collegamenti tra versioni di dental.md
+* [dental.md](docs/moduli/dental.md)
+* [dental.md](docs/roadmap/moduli/dental.md)
+* [dental.md](laravel/Modules/Xot/docs/roadmap/bottlenecks/dental.md)
+

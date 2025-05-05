@@ -1,8 +1,8 @@
-# Filament in SaluteOra
+# Filament in il progetto
 
 ## Panoramica
 
-Filament è il framework di amministrazione utilizzato in SaluteOra per creare interfacce di gestione potenti e intuitive. Questa documentazione descrive l'implementazione e le best practices per l'utilizzo di Filament nel contesto del progetto.
+Filament è il framework di amministrazione utilizzato in il progetto per creare interfacce di gestione potenti e intuitive. Questa documentazione descrive l'implementazione e le best practices per l'utilizzo di Filament nel contesto del progetto.
 
 ## Regole Fondamentali
 
@@ -176,3 +176,15 @@ class PatientResource extends XotBaseResource
 3. **Accessibilità**: Garantire che l'interfaccia sia accessibile a tutti gli utenti
 4. **Performance**: Ottimizzare per velocità e reattività
 5. **Manutenibilità**: Scrivere codice chiaro e ben documentato
+
+## Collegamenti tra versioni di filament.md
+* [filament.md](docs/tecnico/filament/filament.md)
+* [filament.md](laravel/Modules/Chart/docs/filament.md)
+* [filament.md](laravel/Modules/Gdpr/docs/filament.md)
+* [filament.md](laravel/Modules/Xot/docs/technical/filament.md)
+* [filament.md](laravel/Modules/Xot/docs/roadmap/integration/filament.md)
+* [filament.md](laravel/Modules/Lang/docs/filament.md)
+* [filament.md](laravel/Modules/Job/docs/filament.md)
+* [filament.md](laravel/Modules/Activity/docs/filament.md)
+* [filament.md](laravel/Modules/Cms/docs/filament.md)
+

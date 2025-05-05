@@ -20,3 +20,8 @@ source ~/.zshrc
 usefull links:
 - https://zsh-prompt-generator.site/
 
+
+## Collegamenti tra versioni di zsh.md
+* [zsh.md](laravel/Modules/Xot/docs/install/zsh.md)
+* [zsh.md](laravel/Modules/Xot/docs/ubuntu/zsh.md)
+

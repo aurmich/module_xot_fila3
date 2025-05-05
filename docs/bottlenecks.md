@@ -679,3 +679,16 @@ Implementando queste soluzioni, il modulo Xot potrà superare i principali colli
 - [Roadmap Principale](./roadmap.md)
 - [Best Practices Performance](./BEST-PRACTICES.md#performance)
 - [Struttura Moduli](./MODULE_STRUCTURE.md)
+
+## Collegamenti tra versioni di bottlenecks.md
+* [bottlenecks.md](laravel/Modules/Gdpr/docs/performance/bottlenecks.md)
+* [bottlenecks.md](laravel/Modules/Xot/docs/bottlenecks.md)
+* [bottlenecks.md](laravel/Modules/Xot/docs/performance/bottlenecks.md)
+* [bottlenecks.md](laravel/Modules/Xot/docs/roadmap/bottlenecks.md)
+* [bottlenecks.md](laravel/Modules/User/docs/roadmap/bottlenecks.md)
+* [bottlenecks.md](laravel/Modules/UI/docs/roadmap/bottlenecks.md)
+* [bottlenecks.md](laravel/Modules/Lang/docs/performance/bottlenecks.md)
+* [bottlenecks.md](laravel/Modules/Job/docs/performance/bottlenecks.md)
+* [bottlenecks.md](laravel/Modules/Media/docs/performance/bottlenecks.md)
+* [bottlenecks.md](laravel/Modules/Patient/docs/roadmap/bottlenecks.md)
+

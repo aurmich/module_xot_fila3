@@ -1,4 +1,4 @@
-# Routing nel Progetto SaluteOra
+# Routing nel Progetto il progetto
 
 ## Indice
 1. [Architettura del Routing](#architettura-del-routing)
@@ -101,7 +101,7 @@ Folio segue convenzioni specifiche per la nomenclatura dei file:
 
 ### Regola Fondamentale
 
-Tutti gli URL in SaluteOra devono includere il prefisso della lingua come primo segmento del percorso:
+Tutti gli URL in il progetto devono includere il prefisso della lingua come primo segmento del percorso:
 
 ```
 /{locale}/{sezione}/{risorsa}
@@ -150,7 +150,7 @@ render(function (View $view) {
 
 ### Pattern per Form Complessi
 
-Per i form complessi in SaluteOra (come registrazione, wizard multi-step, ecc.), utilizzare **sempre** i widget Filament tramite Livewire, invece di implementare la logica direttamente nelle viste Blade con Volt.
+Per i form complessi in il progetto (come registrazione, wizard multi-step, ecc.), utilizzare **sempre** i widget Filament tramite Livewire, invece di implementare la logica direttamente nelle viste Blade con Volt.
 
 ```php
 // In una vista Blade (es. register.blade.php)
@@ -277,3 +277,7 @@ Per migrare le rotte esistenti:
 - [Collegamenti al Modulo Cms](../../Cms/docs/frontoffice/routing.md)
 - [Collegamenti al Modulo Lang](../../Lang/docs/packages/localization.md)
 - [Collegamenti alla Root](../../../docs/routing.md)
+## Collegamenti tra versioni di routing.md
+* [routing.md](../../../../docs/routing.md)
+* [routing.md](../../Cms/docs/frontoffice/routing.md)
+

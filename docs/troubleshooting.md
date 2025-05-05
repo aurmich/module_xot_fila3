@@ -136,6 +136,8 @@ php artisan filament:check
 ## Volt e Livewire
 
 ### 1. Errori dei Componenti
+
+#### Pubblicazione Assets e Configurazioni
 ```bash
 # Pubblicare gli assets
 php artisan livewire:publish --assets
@@ -143,6 +145,40 @@ php artisan livewire:publish --assets
 # Pubblicare le configurazioni
 php artisan livewire:publish --config
 ```
+
+#### Errore: Multiple Root Elements Detected
+
+Se riscontri questo errore:
+```
+Livewire\Features\SupportMultipleRootElementDetection\MultipleRootElementsDetectedException
+Livewire only supports one HTML element per component. Multiple root elements detected.
+```
+
+Soluzione:
+1. Ogni componente Volt deve avere un singolo elemento HTML radice
+2. Racchiudi tutti gli elementi del componente in un unico `<div>` o altro elemento contenitore
+
+**Esempio corretto:**
+```php
+@volt('register')
+<div>
+    <!-- Tutti gli elementi qui -->
+    <div class="header">...</div>
+    <div class="content">...</div>
+</div>
+@endvolt
+```
+
+**Esempio errato:**
+```php
+@volt('register')
+<!-- Errore: elementi multipli a livello radice -->
+<div class="header">...</div>
+<div class="content">...</div>
+@endvolt
+```
+
+Per ulteriori dettagli, consulta la [documentazione sui componenti Volt](../../Themes/One/docs/volt-components.md).
 
 ### 2. Errori di Compilazione
 ```bash
@@ -178,3 +214,8 @@ APP_DEBUG=false
 - [Installazione](installation.md)
 - [Configurazione](configuration.md)
 - [Regole di Documentazione](documentation-rules.md) 
+
+## Collegamenti tra versioni di troubleshooting.md
+* [troubleshooting.md](laravel/Modules/Xot/docs/troubleshooting.md)
+* [troubleshooting.md](laravel/Modules/Cms/docs/frontoffice/troubleshooting.md)
+

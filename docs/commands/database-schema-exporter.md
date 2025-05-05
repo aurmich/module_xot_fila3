@@ -51,3 +51,7 @@ Il file JSON generato contiene:
 - [Database Guidelines](../DATABASE-GUIDELINES.md)
 - [Schema Documentation](../DIRECTORY-STRUCTURE-GUIDE.md)
 - [PHPStan Level 9 Guide](../PHPSTAN-LEVEL9-GUIDE.md)
+## Collegamenti tra versioni di database-schema-exporter.md
+* [database-schema-exporter.md](laravel/Modules/Xot/docs/commands/database-schema-exporter.md)
+* [database-schema-exporter.md](laravel/Modules/Xot/docs/console/commands/database-schema-exporter.md)
+

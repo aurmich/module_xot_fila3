@@ -123,3 +123,8 @@ Tutti i moduli devono seguire i principi DDD:
 - [Best Practices](../BEST-PRACTICES.md)
 - [Testing](../testing/README.md)
 - [Documentazione](../documentation-rules.md) 
+
+## Collegamenti tra versioni di module-structure.md
+* [module-structure.md](laravel/Modules/Xot/docs/laraxot/module-structure.md)
+* [module-structure.md](laravel/Modules/Xot/docs/architecture/module-structure.md)
+

@@ -113,8 +113,8 @@ Per la versione dark:
 ### Collegamenti alla Root del Progetto
 - [Linee Guida per i Loghi](../../../docs/standards/logo_guidelines.md)
 - [Configurazione e Risoluzione dei Loghi](../../../docs/configurazione-logo.md)
-- [Struttura dei Moduli in SaluteOra](../../../docs/struttura-moduli.md)
-- [Architettura Folio + Volt in SaluteOra](../../../docs/architettura-folio-volt.md)
+- [Struttura dei Moduli in il progetto](../../../docs/struttura-moduli.md)
+- [Architettura Folio + Volt in il progetto](../../../docs/architettura-folio-volt.md)
 
 ---
 

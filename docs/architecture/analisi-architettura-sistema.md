@@ -1,8 +1,8 @@
-# Analisi dell'Architettura del Sistema SaluteOra
+# Analisi dell'Architettura del Sistema il progetto
 
 ## Panoramica Architetturale
 
-Il progetto SaluteOra rappresenta un ecosistema complesso che integra diversi attori e flussi di dati all'interno di un'architettura multi-tenant. Dall'analisi del documento di progetto emergono elementi chiave che definiscono l'architettura del sistema.
+Il progetto il progetto rappresenta un ecosistema complesso che integra diversi attori e flussi di dati all'interno di un'architettura multi-tenant. Dall'analisi del documento di progetto emergono elementi chiave che definiscono l'architettura del sistema.
 
 ### Componenti Principali del Sistema
 
@@ -88,3 +88,8 @@ L'architettura evidenzia un approccio misto alla separazione dei dati:
    - Privilegiare gli investimenti nelle aree a maggior rischio seguendo un approccio risk-based
 
 L'architettura proposta dovrà evolvere attraverso iterazioni successive, validando ogni implementazione contro i requisiti funzionali e non funzionali, con particolare attenzione agli aspetti di privacy, sicurezza e user experience.
+
+## Collegamenti tra versioni di analisi-architettura-sistema.md
+* [analisi-architettura-sistema.md](docs/analisi/architettura/analisi-architettura-sistema.md)
+* [analisi-architettura-sistema.md](laravel/Modules/Xot/docs/architecture/analisi-architettura-sistema.md)
+

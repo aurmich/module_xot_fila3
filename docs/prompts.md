@@ -35,3 +35,8 @@ Per la regola universale sui prompt condivisi (come quelli in bashscripts/prompt
 ## Collegamenti
 - [Documentazione Generale](./documentation.md)
 - [Regole del Progetto](./rules.md)
+
+## Collegamenti tra versioni di prompts.md
+* [prompts.md](docs/prompts.md)
+* [prompts.md](laravel/Modules/Xot/docs/prompts.md)
+

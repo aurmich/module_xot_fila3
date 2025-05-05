@@ -217,3 +217,8 @@ public function store(Request $request): Response
 - [PHPStan Documentation](https://phpstan.org/user-guide/getting-started)
 - [Laravel Best Practices](https://laravel.com/docs/master/best-practices)
 - [Security Best Practices](../security/README.md) 
+
+## Collegamenti tra versioni di coding-standards.md
+* [coding-standards.md](laravel/Modules/Xot/docs/standards/coding-standards.md)
+* [coding-standards.md](laravel/Modules/Xot/docs/conventions/coding-standards.md)
+

@@ -33,3 +33,8 @@ return [
     'color_banner' => '#000',
 ];
 ~~~
+
+## Collegamenti tra versioni di metatag.md
+* [metatag.md](laravel/Modules/Xot/docs/install/metatag.md)
+* [metatag.md](laravel/Modules/Tenant/docs/it/config/metatag.md)
+

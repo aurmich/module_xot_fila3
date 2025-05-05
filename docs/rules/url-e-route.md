@@ -1,8 +1,8 @@
-# Regole per URL e Route in SaluteOra
+# Regole per URL e Route in il progetto
 
 ## Introduzione
 
-Questo documento definisce le convenzioni e le best practice per la creazione e la gestione di URL e route all'interno del progetto SaluteOra.
+Questo documento definisce le convenzioni e le best practice per la creazione e la gestione di URL e route all'interno del progetto il progetto.
 
 > **Nota:** Per le regole specifiche sui collegamenti nella documentazione, consulta [Regole per i Collegamenti nella Documentazione](collegamenti-relativi.md).
 
@@ -17,7 +17,7 @@ Questo documento definisce le convenzioni e le best practice per la creazione e 
 
 ## Struttura degli URL
 
-SaluteOra segue una struttura uniforme per tutti gli URL:
+il progetto segue una struttura uniforme per tutti gli URL:
 
 ```
 /{locale}/{sezione}/{risorsa}/{azione?}/{id?}
@@ -33,7 +33,7 @@ Dove:
 
 ### Prefissi di Lingua Obbligatori
 
-Tutti gli URL in SaluteOra **devono** includere il prefisso della lingua come primo segmento del percorso.
+Tutti gli URL in il progetto **devono** includere il prefisso della lingua come primo segmento del percorso.
 
 Esempi corretti:
 - `/it/pages/chi-siamo`

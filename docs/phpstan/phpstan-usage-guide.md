@@ -237,3 +237,15 @@ cd /percorso/al/progetto/laravel
 # Analisi con output dettagliato
 ./vendor/bin/phpstan analyse Modules/NomeModulo --level=9 --verbose
 ``` 
+## Collegamenti tra versioni di PHPSTAN-USAGE-GUIDE.md
+* [PHPSTAN-USAGE-GUIDE.md](laravel/Modules/Xot/docs/phpstan/PHPSTAN-USAGE-GUIDE.md)
+* [PHPSTAN-USAGE-GUIDE.md](laravel/Modules/Xot/docs/PHPSTAN-USAGE-GUIDE.md)
+
+
+## Collegamenti tra versioni di phpstan-usage-guide.md
+<<<<<<< HEAD
+* [phpstan-usage-guide.md](phpstan/phpstan-usage-guide.md)
+=======
+* [phpstan-usage-guide.md](../phpstan-usage-guide.md)
+>>>>>>> 6a221c0 (.)
+

@@ -35,3 +35,7 @@ ${cat /mnt/f/var/www/quaeris/laravel/Modules/Xot/_docs/type_hinting.txt}
 ```txt
 ${cat /mnt/f/var/www/quaeris/laravel/Modules/Xot/_docs/scope.txt}
 ```
+
+## Collegamenti tra versioni di models.md
+* [models.md](../../../Notify/docs/models.md)
+

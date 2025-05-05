@@ -1,4 +1,4 @@
-# Configurazione in SaluteOra
+# Configurazione in il progetto
 
 La configurazione del tema è gestita attraverso file di configurazione che definiscono le impostazioni del tema.
 
@@ -40,7 +40,7 @@ return [
     | Breve descrizione del tema.
     |
     */
-    'description' => 'Tema One per SaluteOra',
+    'description' => 'Tema One per il progetto',
 
     /*
     |--------------------------------------------------------------------------
@@ -60,7 +60,7 @@ return [
     | Nome dell'autore del tema.
     |
     */
-    'author' => 'SaluteOra Team',
+    'author' => 'il progetto Team',
 
     /*
     |--------------------------------------------------------------------------
@@ -283,3 +283,7 @@ return [
 6. **Sicurezza**: Proteggi le informazioni sensibili
 7. **Performance**: Ottimizza la configurazione
 8. **Versioning**: Gestisci correttamente le versioni 
+## Collegamenti tra versioni di config.md
+* [config.md](laravel/Modules/Xot/docs/config.md)
+* [config.md](laravel/Themes/One/docs/config.md)
+

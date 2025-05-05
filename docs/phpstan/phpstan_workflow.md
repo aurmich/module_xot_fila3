@@ -166,3 +166,15 @@ class MyModel extends BaseModel
      - .cursor/rules per Cursor AI
      - .windsurfrules per Windsurf
    - Mantenere coerenza tra le diverse documentazioni 
+## Collegamenti tra versioni di PHPSTAN_WORKFLOW.md
+* [PHPSTAN_WORKFLOW.md](laravel/Modules/Xot/docs/phpstan/PHPSTAN_WORKFLOW.md)
+* [PHPSTAN_WORKFLOW.md](laravel/Modules/Xot/docs/PHPSTAN_WORKFLOW.md)
+
+
+## Collegamenti tra versioni di phpstan_workflow.md
+<<<<<<< HEAD
+* [phpstan_workflow.md](phpstan/phpstan_workflow.md)
+=======
+* [phpstan_workflow.md](../phpstan_workflow.md)
+>>>>>>> 6a221c0 (.)
+

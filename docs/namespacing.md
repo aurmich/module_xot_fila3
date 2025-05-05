@@ -1,8 +1,8 @@
-# Convenzioni Namespace in SaluteOra
+# Convenzioni Namespace in il progetto
 
 ## Struttura Namespace Standard
 
-Nel progetto SaluteOra, tutti i namespace dei moduli devono seguire questa convenzione:
+Nel progetto il progetto, tutti i namespace dei moduli devono seguire questa convenzione:
 
 ```
 Modules\NomeModulo\{Categoria}

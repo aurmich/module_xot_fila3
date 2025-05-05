@@ -1,7 +1,7 @@
-# Convenzioni di Naming in SaluteOra
+# Convenzioni di Naming in il progetto
 
 ## Panoramica
-Questo documento unifica tutte le convenzioni di naming utilizzate nel progetto SaluteOra, coprendo campi database, classi, directory e documentazione. Seguire queste convenzioni è fondamentale per mantenere coerenza, facilitare l'internazionalizzazione e garantire compatibilità con API esterne.
+Questo documento unifica tutte le convenzioni di naming utilizzate nel progetto il progetto, coprendo campi database, classi, directory e documentazione. Seguire queste convenzioni è fondamentale per mantenere coerenza, facilitare l'internazionalizzazione e garantire compatibilità con API esterne.
 
 ## Collegamenti
 
@@ -179,7 +179,7 @@ public static function getFormSchema(): array
 ### Case Sensitivity delle Directory
 
 #### Regola Fondamentale
-In SaluteOra, la case sensitivity dei nomi delle directory è cruciale e deve essere rispettata rigorosamente:
+In il progetto, la case sensitivity dei nomi delle directory è cruciale e deve essere rispettata rigorosamente:
 
 | Nome Corretto (✅) | Nome Errato (❌) | Note |
 |-------------------|-----------------|------|
@@ -242,3 +242,12 @@ Questa convenzione è importante perché:
 - Vengono verificate automaticamente dai controlli di qualità
 - Sono documentate nei contratti API
 - Fanno parte delle linee guida per i nuovi sviluppatori
+
+## Collegamenti tra versioni di NAMING_CONVENTIONS.md
+* [NAMING_CONVENTIONS.md](laravel/Modules/Xot/docs/NAMING_CONVENTIONS.md)
+* [NAMING_CONVENTIONS.md](laravel/docs/NAMING_CONVENTIONS.md)
+
+
+## Collegamenti tra versioni di naming_conventions.md
+* [naming_conventions.md](../../../../bashscripts/docs/naming_conventions.md)
+

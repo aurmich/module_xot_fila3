@@ -220,3 +220,7 @@
 - [Upload Guidelines](../../media/upload.md)
 - [Image Processing](../../media/processing.md)
 - [Search Configuration](../../media/search.md) 
+## Collegamenti tra versioni di media.md
+* [media.md](laravel/Modules/Xot/docs/features/media.md)
+* [media.md](laravel/Modules/Xot/docs/roadmap/bottlenecks/media.md)
+

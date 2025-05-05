@@ -120,3 +120,16 @@ Based on the volume and impact of issues, we will address them in the following 
 - [ ] Parameter type issues
 - [ ] Template type covariance fixes
 - [ ] Final verification
+
+## Collegamenti tra versioni di LEVEL_10_ANALYSIS.md
+* [LEVEL_10_ANALYSIS.md](laravel/Modules/Xot/docs/phpstan/LEVEL_10_ANALYSIS.md)
+* [LEVEL_10_ANALYSIS.md](laravel/Modules/Xot/docs/PHPStan/LEVEL_10_ANALYSIS.md)
+
+
+## Collegamenti tra versioni di level_10_analysis.md
+<<<<<<< HEAD
+* [level_10_analysis.md](../phpstan/level_10_analysis.md)
+=======
+* [level_10_analysis.md](../PHPStan/level_10_analysis.md)
+>>>>>>> 6a221c0 (.)
+

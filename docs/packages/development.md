@@ -77,3 +77,8 @@ Ignition::editor('vscode');
 - [Performance](performance.md)
 - [Debug](debug.md)
 - [Panoramica](../packages.md) 
+
+## Collegamenti tra versioni di development.md
+* [development.md](laravel/Modules/Gdpr/docs/development.md)
+* [development.md](laravel/Modules/Xot/docs/packages/development.md)
+

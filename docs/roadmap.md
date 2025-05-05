@@ -419,3 +419,24 @@
 - [Bottlenecks](bottlenecks.md)
 - [Best Practices](BEST-PRACTICES.md)
 - [Testing](testing.md)
+<<<<<<< HEAD
+=======
+## Collegamenti tra versioni di roadmap.md
+* [roadmap.md](bashscripts/docs/roadmap.md)
+* [roadmap.md](docs/roadmap.md)
+* [roadmap.md](laravel/Modules/Gdpr/docs/roadmap.md)
+* [roadmap.md](laravel/Modules/Notify/docs/roadmap.md)
+* [roadmap.md](laravel/Modules/Xot/docs/roadmap.md)
+* [roadmap.md](laravel/Modules/Dental/docs/roadmap.md)
+* [roadmap.md](laravel/Modules/User/docs/roadmap.md)
+* [roadmap.md](laravel/Modules/UI/docs/roadmap.md)
+* [roadmap.md](laravel/Modules/Lang/docs/roadmap.md)
+* [roadmap.md](laravel/Modules/Job/docs/roadmap.md)
+* [roadmap.md](laravel/Modules/Media/docs/roadmap.md)
+* [roadmap.md](laravel/Modules/Tenant/docs/roadmap.md)
+* [roadmap.md](laravel/Modules/Activity/docs/roadmap.md)
+* [roadmap.md](laravel/Modules/Patient/docs/roadmap.md)
+* [roadmap.md](laravel/Modules/Cms/docs/roadmap.md)
+* [roadmap.md](laravel/Themes/One/docs/roadmap.md)
+
+>>>>>>> 6a221c0 (.)

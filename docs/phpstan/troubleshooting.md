@@ -75,3 +75,8 @@ npm run dev
 - [PHPStan Documentation](https://phpstan.org/user-guide/getting-started)
 - [Larastan Documentation](https://github.com/nunomaduro/larastan)
 - [Vite Configuration](../development/vite-configuration.md) 
+## Collegamenti tra versioni di troubleshooting.md
+* [troubleshooting.md](../../../Gdpr/docs/troubleshooting.md)
+* [troubleshooting.md](../troubleshooting.md)
+* [troubleshooting.md](../../../Cms/docs/frontoffice/troubleshooting.md)
+

@@ -145,3 +145,15 @@ function processData(array $data): string {
 ```
 
 Seguendo queste linee guida, sarà possibile risolvere la maggior parte degli errori legati al tipo `mixed` segnalati da PHPStan al livello 9. 
+## Collegamenti tra versioni di MIXED-TYPE-SOLUTIONS.md
+* [MIXED-TYPE-SOLUTIONS.md](laravel/Modules/Xot/docs/phpstan/MIXED-TYPE-SOLUTIONS.md)
+* [MIXED-TYPE-SOLUTIONS.md](laravel/Modules/Xot/docs/PHPStan/MIXED-TYPE-SOLUTIONS.md)
+
+
+## Collegamenti tra versioni di mixed-type-solutions.md
+<<<<<<< HEAD
+* [mixed-type-solutions.md](../phpstan/mixed-type-solutions.md)
+=======
+* [mixed-type-solutions.md](../PHPStan/mixed-type-solutions.md)
+>>>>>>> 6a221c0 (.)
+

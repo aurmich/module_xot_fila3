@@ -162,7 +162,7 @@ Themes/
 ```php
 // ❌ Sbagliato - Riferimento hardcoded al progetto
 <div class="saluteora-footer">
-    SaluteOra © 2024
+    il progetto © 2024
 </div>
 
 // ✅ Corretto - Configurabile
@@ -225,3 +225,8 @@ resources/views/
 - [Regole di Namespacing](namespacing.md)
 - [Standard del Codice](code-standards.md)
 - [Regole di Documentazione](documentation-rules.md) 
+
+## Collegamenti tra versioni di themes-structure.md
+* [themes-structure.md](docs/tecnico/themes-structure.md)
+* [themes-structure.md](laravel/Modules/Xot/docs/themes-structure.md)
+

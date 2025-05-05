@@ -1,4 +1,4 @@
-# Blocchi UI in SaluteOra
+# Blocchi UI in il progetto
 
 I blocchi UI sono componenti riutilizzabili per la costruzione delle pagine. Ogni blocco è un componente Blade che può essere utilizzato in qualsiasi vista del tema.
 
@@ -99,3 +99,12 @@ Ogni blocco deve seguire questa struttura:
 6. **Responsive**: Rendi i blocchi responsive
 7. **Performance**: Ottimizza le performance
 8. **Codice**: Mantieni il codice pulito e documentato
+
+## Collegamenti tra versioni di blocks.md
+* [blocks.md](laravel/Modules/Xot/docs/blocks.md)
+* [blocks.md](laravel/Modules/User/resources/views/docs/blocks.md)
+* [blocks.md](laravel/Modules/UI/docs/blocks.md)
+* [blocks.md](laravel/Modules/Cms/docs/blocks.md)
+* [blocks.md](laravel/Themes/One/docs/blocks.md)
+* [blocks.md](laravel/Themes/One/docs/components/blocks.md)
+

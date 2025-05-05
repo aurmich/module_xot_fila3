@@ -167,3 +167,9 @@
    - Tradurre contenuti
    - Verificare collegamenti
    - Aggiornare metadati 
+
+## Collegamenti tra versioni di search.md
+* [search.md](docs/rules/search.md)
+* [search.md](laravel/Modules/Xot/docs/features/search.md)
+* [search.md](laravel/Modules/Xot/docs/rules/search.md)
+

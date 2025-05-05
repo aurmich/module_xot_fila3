@@ -115,3 +115,8 @@ La risoluzione dei conflitti rimanenti dovrebbe seguire questi principi:
 3. **Conservare la funzionalità a livello di API**: Assicurarsi che i metodi mantengano la stessa firma e comportamento.
 4. **Uniformare lo stile di codice**: Seguire le convenzioni di formattazione PSR-12 e mantenerle coerenti nel progetto.
 5. **Documentare le decisioni**: Per ogni conflitto risolto, documentare l'intento e il motivo della scelta effettuata.
+
+## Collegamenti tra versioni di risoluzione_conflitti.md
+* [risoluzione_conflitti.md](laravel/Modules/Xot/docs/risoluzione_conflitti.md)
+* [risoluzione_conflitti.md](laravel/Modules/Tenant/docs/risoluzione_conflitti.md)
+

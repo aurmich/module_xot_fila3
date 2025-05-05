@@ -1,4 +1,4 @@
-# Assets in SaluteOra
+# Assets in il progetto
 
 Gli assets sono le risorse statiche (CSS, JavaScript, immagini, font) utilizzate dal tema. Ogni tema può definire i propri assets.
 
@@ -248,3 +248,8 @@ document.addEventListener('alpine:init', () => {
      alt="{{ $alt }}"
      class="h-8 w-auto">
 ``` 
+## Collegamenti tra versioni di assets.md
+* [assets.md](laravel/Modules/Xot/docs/assets.md)
+* [assets.md](laravel/Modules/Cms/docs/themes/assets.md)
+* [assets.md](laravel/Themes/One/docs/assets.md)
+

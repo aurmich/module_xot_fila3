@@ -1,8 +1,111 @@
-# Regole di Namespace in SaluteOra
+# Convenzioni Namespace in il progetto
+
+## Regole Fondamentali
+
+### 1. Struttura Base
+```
+Modules\{ModuleName}\              # Namespace base del modulo
+├── Models\                        # Modelli
+├── Services\                      # Servizi
+├── Providers\                     # Service Provider
+└── Filament\                     # Componenti Filament
+    ├── Resources\                # Resources
+    └── Pages\                    # Pagine Filament
+```
+
+### 2. Filament Resources
+- **Percorso File**: `app/Filament/Resources/`
+- **Namespace**: `Modules\{ModuleName}\Filament\Resources`
+- **NON Usare**: `Modules\{ModuleName}\App\Filament\Resources`
+
+Esempio:
+```php
+// ✅ CORRETTO
+namespace Modules\Patient\Filament\Resources;
+
+// ❌ ERRATO
+namespace Modules\Patient\App\Filament\Resources;
+```
+
+### 3. Models
+```php
+namespace Modules\Patient\Models;
+
+class Doctor extends XotBaseModel
+{
+    // Implementazione
+}
+```
+
+### 4. Services
+```php
+namespace Modules\Patient\Services;
+
+class AppointmentService
+{
+    // Implementazione
+}
+```
+
+## Regole Specifiche
+
+### 1. Controllers
+- **Namespace**: `Modules\{ModuleName}\Http\Controllers`
+- **NON Usare**: `App\Http\Controllers`
+
+### 2. Requests
+- **Namespace**: `Modules\{ModuleName}\Http\Requests`
+- **NON Usare**: `App\Http\Requests`
+
+### 3. Resources
+- **Namespace**: `Modules\{ModuleName}\Http\Resources`
+- **NON Usare**: `App\Http\Resources`
+
+## Composer.json
+
+```json
+{
+    "autoload": {
+        "psr-4": {
+            "Modules\\ModuleName\\": "",
+            "Modules\\ModuleName\\Filament\\": "app/Filament/"
+        }
+    }
+}
+```
+
+## Best Practices
+
+1. **Coerenza**
+   - Mantenere la stessa struttura in tutti i moduli
+   - Seguire le convenzioni PSR-4
+   - Evitare namespace personalizzati
+
+2. **Organizzazione**
+   - Raggruppare file correlati
+   - Usare sottodirectory logiche
+   - Mantenere la gerarchia chiara
+
+3. **Importazioni**
+   - Usare alias per nomi lunghi
+   - Evitare conflitti di nome
+   - Documentare dipendenze
+
+## Collegamenti Bidirezionali
+- [README](README.md)
+- [Struttura Moduli](module-structure.md)
+- [Classi Base](base-classes.md)
+
+## Vedi Anche
+- [PSR-4 Autoloading](https://www.php-fig.org/psr/psr-4/)
+- [Laravel Best Practices](https://github.com/alexeymezenin/laravel-best-practices)
+- [Filament Documentation](https://filamentphp.com/docs)
+
+# Regole di Namespace in il progetto
 
 ## Struttura dei Namespace
 
-In SaluteOra, tutti i namespace dei moduli seguono questa convenzione:
+In il progetto, tutti i namespace dei moduli seguono questa convenzione:
 
 ```
 Modules\{NomeModulo}\{Categoria}
@@ -298,3 +401,9 @@ class UserResource extends Resource
 - Seguire le convenzioni di naming
 - Documentare eccezioni
 - Aggiornare moduli esistenti
+
+## Collegamenti tra versioni di namespace-conventions.md
+* [namespace-conventions.md](laravel/Modules/Xot/docs/namespace-conventions.md)
+* [namespace-conventions.md](laravel/Modules/User/docs/namespace-conventions.md)
+* [namespace-conventions.md](laravel/Modules/Cms/docs/best-practices/namespace-conventions.md)
+

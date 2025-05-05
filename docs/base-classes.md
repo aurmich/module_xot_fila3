@@ -1,5 +1,113 @@
 # Classi Base del Modulo Xot
 
+## Panoramica
+Il modulo Xot fornisce una serie di classi base che devono essere estese dagli altri moduli. Questo garantisce coerenza e funzionalità comuni in tutta l'applicazione.
+
+## Classi Base Principali
+
+### 1. XotBaseResource
+```php
+namespace Modules\Xot\Filament\Resources;
+
+class XotBaseResource
+{
+    public static function getFormSchema(): array;
+    public static function getListTableColumns(): array;
+}
+```
+
+**Uso**:
+```php
+use Modules\Xot\Filament\Resources\XotBaseResource;
+
+class DoctorResource extends XotBaseResource
+{
+    // Implementazione specifica
+}
+```
+
+### 2. XotBaseServiceProvider
+```php
+namespace Modules\Xot\Providers;
+
+class XotBaseServiceProvider
+{
+    protected function registerConfig();
+    protected function registerViews();
+    protected function registerTranslations();
+}
+```
+
+### 3. XotBaseModel
+```php
+namespace Modules\Xot\Models;
+
+class XotBaseModel
+{
+    protected $fillable = [];
+    protected $casts = [];
+}
+```
+
+## Pages Filament
+
+### XotBaseListRecords
+```php
+namespace Modules\Xot\Filament\Resources\Pages;
+
+class XotBaseListRecords
+{
+    public function getListTableColumns(): array;
+}
+```
+
+### XotBaseCreateRecord
+```php
+namespace Modules\Xot\Filament\Resources\Pages;
+
+class XotBaseCreateRecord
+{
+    // Implementazione base
+}
+```
+
+### XotBaseEditRecord
+```php
+namespace Modules\Xot\Filament\Resources\Pages;
+
+class XotBaseEditRecord
+{
+    // Implementazione base
+}
+```
+
+## Best Practices
+
+1. **Estensione Classi**
+   - Sempre estendere le classi base appropriate
+   - Non saltare la gerarchia di ereditarietà
+   - Mantenere la coerenza nei namespace
+
+2. **Override Metodi**
+   - Rispettare i contratti delle interfacce
+   - Documentare le modifiche al comportamento
+   - Mantenere la compatibilità
+
+3. **Namespace**
+   - Usare i namespace corretti
+   - Mantenere la struttura standard
+   - Seguire le convenzioni PSR-4
+
+## Collegamenti Bidirezionali
+- [README](README.md)
+- [Struttura Moduli](module-structure.md)
+- [Convenzioni Namespace](namespace-conventions.md)
+
+## Vedi Anche
+- [Filament Best Practices](filament-best-practices.md)
+- [Service Provider](service-provider-best-practices.md)
+- [Convenzioni](conventions.md)
+
 ## XotBaseResource
 
 Classe base per tutte le risorse Filament dell'applicazione.
@@ -139,6 +247,7 @@ class PolizzaConvenzioneController extends XotBaseController
 - Gestione autorizzazioni integrata
 - Metodi di utilità comuni
 - Gestione errori standardizzata
+- Risposte JSON predefinite 
 - Risposte JSON predefinite
 
 ## Best Practices
@@ -162,3 +271,7 @@ class PolizzaConvenzioneController extends XotBaseController
    - Estendere le funzionalità tramite trait
    - Mantenere la retrocompatibilità
    - Documentare le modifiche significative 
+## Collegamenti tra versioni di base-classes.md
+* [base-classes.md](laravel/Modules/Xot/docs/base-classes.md)
+* [base-classes.md](laravel/Modules/Xot/docs/roadmap/base-classes.md)
+

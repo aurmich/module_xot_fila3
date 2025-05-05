@@ -36,7 +36,7 @@ class AnalyzePerformanceCommand extends Command
         $module = $this->option('module');
         $type = $this->option('type');
 
-        $this->info('Analisi Performance SaluteOra');
+        $this->info('Analisi Performance il progetto');
         $this->newLine();
 
         if ($module) {

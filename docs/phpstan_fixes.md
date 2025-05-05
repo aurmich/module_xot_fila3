@@ -818,3 +818,14 @@ protected array $listeners = [
 ```
 
 L'aggiunta dell'annotazione `@phpstan-var` fornisce a PHPStan un'informazione più specifica sul tipo della proprietà, permettendogli di verificare correttamente che tutti gli elementi dell'array siano stringhe. Questo è particolarmente utile quando si lavora con Livewire, dove i listener sono definiti come un array associativo di eventi e metodi da chiamare.
+<<<<<<< HEAD
+=======
+Le correzioni apportate al modulo Xot hanno migliorato significativamente la qualità del codice e ridotto la possibilità di errori runtime. Queste modifiche sono in linea con le best practice moderne di PHP e contribuiscono a un codebase più robusto e manutenibile. 
+
+## Collegamenti tra versioni di phpstan_fixes.md
+* [phpstan_fixes.md](laravel/Modules/Xot/docs/phpstan_fixes.md)
+* [phpstan_fixes.md](laravel/Modules/User/docs/phpstan_fixes.md)
+* [phpstan_fixes.md](laravel/Modules/User/docs/fixes/phpstan_fixes.md)
+* [phpstan_fixes.md](laravel/Modules/Activity/docs/phpstan_fixes.md)
+
+>>>>>>> 6a221c0 (.)

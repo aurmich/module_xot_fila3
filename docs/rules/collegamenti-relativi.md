@@ -2,7 +2,7 @@
 
 ## Utilizzo Esclusivo di Collegamenti Relativi
 
-Nella documentazione di SaluteOra, **tutti i collegamenti devono essere relativi** e mai assoluti. Questo è un requisito fondamentale per garantire la portabilità e la manutenibilità della documentazione.
+Nella documentazione di il progetto, **tutti i collegamenti devono essere relativi** e mai assoluti. Questo è un requisito fondamentale per garantire la portabilità e la manutenibilità della documentazione.
 
 ### Motivazione
 
@@ -69,3 +69,8 @@ Anche per le risorse e le immagini, è necessario utilizzare percorsi relativi:
 ## Integrazione con il Sistema di Documentazione
 
 Questa regola si integra con il sistema di documentazione centralizzato descritto in [Collegamenti alla Documentazione](../collegamenti-documentazione.md), che fornisce una mappa dei collegamenti tra i vari documenti e moduli del progetto. 
+
+## Collegamenti tra versioni di collegamenti-relativi.md
+* [collegamenti-relativi.md](docs/regole/collegamenti-relativi.md)
+* [collegamenti-relativi.md](laravel/Modules/Xot/docs/rules/collegamenti-relativi.md)
+

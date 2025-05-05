@@ -601,3 +601,7 @@ public function getTableBulkActions(): array
 - Utilizzare sempre la tipizzazione PHPDoc corretta
 
 // ... existing code ... 
+## Collegamenti tra versioni di resource.md
+* [resource.md](laravel/Modules/Xot/docs/filament/resource.md)
+* [resource.md](laravel/Modules/Xot/docs/resource.md)
+

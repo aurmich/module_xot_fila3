@@ -25,3 +25,10 @@ Secondo le regole di organizzazione della documentazione:
 Questo documento è collegato bidirezionalmente con [xot-link.md](../../Cms/docs/xot-link.md) nel modulo Cms.
 
 > Aggiorna entrambi i riferimenti se modifichi la struttura della documentazione o aggiungi nuove sezioni.
+
+## Collegamenti tra versioni di cms-link.md
+* [cms-link.md](laravel/Modules/Xot/docs/cms-link.md)
+* [cms-link.md](laravel/Modules/User/docs/cms-link.md)
+* [cms-link.md](laravel/Modules/UI/docs/cms-link.md)
+* [cms-link.md](laravel/Modules/Lang/docs/cms-link.md)
+

@@ -38,3 +38,12 @@ La documentazione dei componenti UI deve essere sempre inserita nella cartella `
 - [Struttura dei Prompt](./prompts.md)
 - [Collegamenti al Modulo Cms](./cms-link.md)
 - [Collegamenti alla Root](../../../docs/prompts.md)
+
+## Collegamenti tra versioni di PROMPT_RULES.md
+* [PROMPT_RULES.md](laravel/Modules/Xot/docs/PROMPT_RULES.md)
+* [PROMPT_RULES.md](laravel/Modules/Xot/docs/rules/PROMPT_RULES.md)
+
+
+## Collegamenti tra versioni di prompt_rules.md
+* [prompt_rules.md](rules/prompt_rules.md)
+

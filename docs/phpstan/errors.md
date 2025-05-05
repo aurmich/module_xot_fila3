@@ -64,3 +64,7 @@ Questa sezione documenta tutti gli errori rilevati da PHPStan nel modulo Xot.
 - Documentare ogni correzione con una spiegazione
 - Aggiornare il file baseline dopo ogni correzione
 - Testare le correzioni prima di applicarle 
+## Collegamenti tra versioni di errors.md
+* [errors.md](docs/errors.md)
+* [errors.md](laravel/Modules/Xot/docs/phpstan/errors.md)
+

@@ -1,8 +1,8 @@
-# Standard di Codice per SaluteOra
+# Standard di Codice per il progetto
 
 ## Principi Fondamentali
 
-Il codice del progetto SaluteOra **deve** aderire ai seguenti principi fondamentali:
+Il codice del progetto il progetto **deve** aderire ai seguenti principi fondamentali:
 
 1. **Robustezza**: Funzionamento corretto anche in condizioni impreviste
 2. **Solidità**: Struttura manutenibile, scalabile e testabile
@@ -154,3 +154,8 @@ class MyResource extends XotBaseResource
     }
 }
 ```
+
+## Collegamenti tra versioni di standard-codice.md
+* [standard-codice.md](docs/standard-codice.md)
+* [standard-codice.md](laravel/Modules/Xot/docs/development/standard-codice.md)
+

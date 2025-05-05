@@ -1,4 +1,4 @@
-# Risoluzione dei Conflitti di Merge in SaluteOra
+# Risoluzione dei Conflitti di Merge in il progetto
 
 ## Problema
 

@@ -159,3 +159,10 @@ php artisan api:generate
 - [Architettura](../architecture/README.md)
 - [Best Practices](../best-practices/README.md)
 - [Markdown Guide](https://www.markdownguide.org) 
+
+## Collegamenti tra versioni di documentation.md
+* [documentation.md](docs/rules/documentation.md)
+* [documentation.md](laravel/Modules/Xot/docs/documentation.md)
+* [documentation.md](laravel/Modules/Xot/docs/guidelines/documentation.md)
+* [documentation.md](laravel/Modules/Cms/docs/roadmap/features/documentation.md)
+

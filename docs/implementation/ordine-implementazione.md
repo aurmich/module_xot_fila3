@@ -1,8 +1,8 @@
-# Ordine di Implementazione SaluteOra
+# Ordine di Implementazione il progetto
 
 ## Sequenza di Installazione e Configurazione
 
-Questa guida definisce l'ordine corretto per l'implementazione del progetto SaluteOra, garantendo che tutte le dipendenze siano soddisfatte e che il sistema funzioni correttamente.
+Questa guida definisce l'ordine corretto per l'implementazione del progetto il progetto, garantendo che tutte le dipendenze siano soddisfatte e che il sistema funzioni correttamente.
 
 ### 1. Installazione Base Laravel
 
@@ -91,7 +91,7 @@ php artisan module:migrate
 
 ### 6. Implementazione Moduli Specifici del Progetto
 
-Dopo l'installazione dei moduli base Laraxot, procedere con l'implementazione dei moduli specifici del progetto SaluteOra:
+Dopo l'installazione dei moduli base Laraxot, procedere con l'implementazione dei moduli specifici del progetto il progetto:
 
 1. **Modulo Patient**: Gestione pazienti (gestanti)
 2. **Modulo Dental**: Gestione visite odontoiatriche

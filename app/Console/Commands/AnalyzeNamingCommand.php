@@ -25,7 +25,7 @@ class AnalyzeNamingCommand extends Command
      *
      * @var string
      */
-    protected $description = 'Analizza la conformità alle convenzioni di naming in SaluteOra';
+    protected $description = 'Analizza la conformità alle convenzioni di naming in il progetto';
 
     /**
      * Convenzioni di naming da verificare.
@@ -60,7 +60,7 @@ class AnalyzeNamingCommand extends Command
         $module = $this->option('module');
         $type = $this->option('type');
 
-        $this->info('Analisi Convenzioni di Naming SaluteOra');
+        $this->info('Analisi Convenzioni di Naming il progetto');
         $this->newLine();
 
         if ($module) {

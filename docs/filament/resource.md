@@ -37,3 +37,8 @@ class UserResource extends \Modules\Xot\Filament\Resources\XotBaseResource
     //
 }
 ```
+
+## Collegamenti tra versioni di resource.md
+* [resource.md](laravel/Modules/Xot/docs/filament/resource.md)
+* [resource.md](laravel/Modules/Xot/docs/resource.md)
+
