@@ -1,6 +1,6 @@
 # Convenzioni per i Namespace nei Moduli Laraxot
 
-Questo documento definisce le convenzioni per i namespace nei moduli del framework Laraxot PTVX, un aspetto fondamentale per garantire la compatibilità con PHPStan livello 9 e la coerenza del codice.
+Questo documento definisce le convenzioni per i namespace nei moduli del framework Laraxot <nome progetto>, un aspetto fondamentale per garantire la compatibilità con PHPStan livello 9 e la coerenza del codice.
 
 ## Regola Fondamentale: Omettere "app" nel Namespace
 

@@ -33,7 +33,7 @@ php artisan xot:generate-db-documentation {schema_file} {output_dir?}
 2. Gestione errori robusta
 3. Documentazione PHPDoc completa
 4. Supporto per PHPStan livello 9
-5. Conforme alle convenzioni Laraxot/PTVX
+5. Conforme alle convenzioni Laraxot/<nome progetto>
 
 ## Collegamenti
 - [Database Guidelines](../DATABASE-GUIDELINES.md)

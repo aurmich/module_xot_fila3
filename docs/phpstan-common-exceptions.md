@@ -2,7 +2,7 @@
 
 ## Introduzione
 
-Questo documento descrive i problemi più comuni riscontrati durante l'analisi del codice con PHPStan a livello 10 nei moduli Laraxot PTVX e fornisce soluzioni concrete per risolverli.
+Questo documento descrive i problemi più comuni riscontrati durante l'analisi del codice con PHPStan a livello 10 nei moduli Laraxot <nome progetto> e fornisce soluzioni concrete per risolverli.
 
 ## 1. Accesso a Proprietà di un Oggetto Potenzialmente `mixed`
 

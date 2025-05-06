@@ -1,8 +1,8 @@
-# Eccezioni alla Regola della Directory app in Laraxot PTVX
+# Eccezioni alla Regola della Directory app in Laraxot <nome progetto>
 
 ## Panoramica
 
-Mentre la regola principale in Laraxot PTVX richiede che tutto il codice PHP *dell'applicazione* sia posizionato all'interno della sottodirectory `app` del modulo, esistono eccezioni legittime a questa regola che non devono essere spostate.
+Mentre la regola principale in Laraxot <nome progetto> richiede che tutto il codice PHP *dell'applicazione* sia posizionato all'interno della sottodirectory `app` del modulo, esistono eccezioni legittime a questa regola che non devono essere spostate.
 
 ## Eccezioni Standard (NON spostare in app/)
 
@@ -52,12 +52,12 @@ I file di localizzazione **devono rimanere nella directory principale**:
 
 ✅ CORRETTO:
 ```
-/var/www/html/_bases/base_ptvx_fila3/laravel/Modules/Rating/lang/it/rating.php
+/var/www/html/_bases/base_<nome progetto>_fila3/laravel/Modules/Rating/lang/it/rating.php
 ```
 
 ❌ ERRATO:
 ```
-/var/www/html/_bases/base_ptvx_fila3/laravel/Modules/Rating/app/lang/it/rating.php
+/var/www/html/_bases/base_<nome progetto>_fila3/laravel/Modules/Rating/app/lang/it/rating.php
 ```
 
 ## Eccezioni Tecniche (NON spostare in app/)

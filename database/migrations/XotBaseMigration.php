@@ -350,20 +350,8 @@ abstract class XotBaseMigration extends Migration
 
     /**
      * Determine if the migration should run.
-<<<<<<< HEAD
-     *
-     * Questo metodo deve essere public per rispettare il contratto
-     * della classe padre Illuminate\Database\Migrations\Migration.
-     * In PHP, non si può ridurre la visibilità dei metodi ereditati
-     * (principio di sostituzione di Liskov).
-     *
-     * @return bool
-     */
-    public function shouldRun(): bool
-=======
      */
     protected function shouldRun(): bool
->>>>>>> 9746d62 (.)
     {
         if (in_array($this->driver(), ['mariadb', 'mysql', 'pgsql', 'sqlite'])) {
             return true;

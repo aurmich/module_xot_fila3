@@ -4,24 +4,6 @@ declare(strict_types=1);
 
 namespace Modules\Xot\Datas;
 
-<<<<<<< HEAD
-use Livewire\Wireable;
-use function Safe\realpath;
-use Illuminate\Support\Arr;
-use Illuminate\Support\Str;
-use Spatie\LaravelData\Data;
-use Webmozart\Assert\Assert;
-use Modules\User\Models\Team;
-use Modules\User\Models\Membership;
-use Illuminate\Database\Eloquent\Model;
-use Modules\Xot\Contracts\UserContract;
-use Modules\User\Contracts\TeamContract;
-use Modules\Tenant\Services\TenantService;
-use Modules\User\Contracts\TenantContract;
-
-use Modules\Xot\Contracts\ProfileContract;
-use Spatie\LaravelData\Concerns\WireableData;
-=======
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Str;
 use Livewire\Wireable;
@@ -37,7 +19,6 @@ use Spatie\LaravelData\Data;
 use Webmozart\Assert\Assert;
 
 use function Safe\realpath;
->>>>>>> 9746d62 (.)
 
 /**
  * Class Modules\Xot\Datas\XotData.
@@ -136,33 +117,6 @@ class XotData extends Data implements Wireable
         return $class;
     }
 
-<<<<<<< HEAD
-    /**
-     * @return class-string<Model&UserContract>
-     */
-    public function getUserTypeClass(string $type): string{
-        $user_class = $this->getUserClass();
-        $userInstance = app($user_class);
-        $types=$userInstance->getChildTypes();
-        $class=Arr::get($types, $type);
-        if(is_null($class)){
-            throw new \Exception('type '.$type.' not found in class '.$user_class);
-        }
-        return $class;
-    }
-
-    public function getUserTypeResourceClass(string $type): string{
-        $class=$this->getUserTypeClass($type);
-        $resourceClass=Str::of($class)
-            ->replace('\Models\\', '\Filament\Resources\\')
-            ->append('Resource')
-            ->toString();
-        return $resourceClass;
-    }
-
-
-=======
->>>>>>> 9746d62 (.)
     public function getUserByEmail(string $email): UserContract
     {
         $user_class = $this->getUserClass();
@@ -242,16 +196,6 @@ class XotData extends Data implements Wireable
     public function getProfileClass(): string
     {
         $class = 'Modules\\'.$this->main_module.'\Models\Profile';
-<<<<<<< HEAD
-
-        // Verifica che la classe esista
-        Assert::classExists($class, '['.$class.']['.__LINE__.']['.class_basename($this).']');
-
-        // Verifica che sia un Model e implementi ProfileContract
-        Assert::isAOf($class, Model::class, '['.__LINE__.']['.class_basename($this).']['.$class.']');
-        Assert::implementsInterface($class, ProfileContract::class, '['.__LINE__.']['.class_basename($this).']['.$class.']');
-
-=======
         
         // Verifica che la classe esista
         Assert::classExists($class, '['.$class.']['.__LINE__.']['.class_basename($this).']');
@@ -260,7 +204,6 @@ class XotData extends Data implements Wireable
         Assert::isAOf($class, Model::class, '['.__LINE__.']['.class_basename($this).']['.$class.']');
         Assert::implementsInterface($class, ProfileContract::class, '['.__LINE__.']['.class_basename($this).']['.$class.']');
         
->>>>>>> 9746d62 (.)
         /** @var class-string<Model&ProfileContract> */
         return $class;
     }
@@ -314,11 +257,7 @@ class XotData extends Data implements Wireable
 
         // Utilizziamo un'asserzione per garantire che hasRole restituisca un booleano
         $result = $user->hasRole('super-admin');
-<<<<<<< HEAD
-
-=======
         
->>>>>>> 9746d62 (.)
         return $result === true;
     }
 
@@ -327,11 +266,7 @@ class XotData extends Data implements Wireable
         if (null !== $this->profile) {
             return $this->profile;
         }
-<<<<<<< HEAD
-
-=======
         
->>>>>>> 9746d62 (.)
         $user_id = (string) authId();
         $this->profile = $this->getProfileModelByUserId($user_id);
         Assert::implementsInterface($this->profile, ProfileContract::class, '['.__LINE__.']['.class_basename($this).']');
@@ -359,11 +294,7 @@ class XotData extends Data implements Wireable
         $path0 = base_path('Themes/'.$this->pub_theme.'/resources/views/'.$key);
         try {
             $path = realpath($path0);
-<<<<<<< HEAD
-
-=======
             
->>>>>>> 9746d62 (.)
             return $path;
         } catch (\Exception $e) {
             throw new \Exception('realpath not find dir['.$path0.']'.PHP_EOL.'['.$e->getMessage().']');

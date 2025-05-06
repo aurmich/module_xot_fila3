@@ -4,16 +4,6 @@ declare(strict_types=1);
 
 namespace Modules\Xot\Actions\Filament;
 
-<<<<<<< HEAD
-use Illuminate\Support\Str;
-use Webmozart\Assert\Assert;
-use Filament\Facades\Filament;
-use Illuminate\Support\Facades\File;
-use Filament\Navigation\NavigationItem;
-use Modules\Tenant\Services\TenantService;
-use Spatie\QueueableAction\QueueableAction;
-use Modules\Xot\Actions\Module\GetModulePathByGeneratorAction;
-=======
 use Filament\Facades\Filament;
 use Filament\Navigation\NavigationItem;
 use Illuminate\Support\Facades\File;
@@ -21,18 +11,13 @@ use Illuminate\Support\Str;
 use Modules\Tenant\Services\TenantService;
 use Spatie\QueueableAction\QueueableAction;
 use Webmozart\Assert\Assert;
->>>>>>> 9746d62 (.)
 
 /**
  * Classe per gestire gli elementi di navigazione per i moduli.
  */
 class GetModulesNavigationItems
 {
-<<<<<<< HEAD
-    // use QueueableAction;
-=======
     use QueueableAction;
->>>>>>> 9746d62 (.)
 
     /**
      * Ottiene gli elementi di navigazione per i moduli.
@@ -45,21 +30,13 @@ class GetModulesNavigationItems
 
         $modules = TenantService::allModules();
         Assert::isArray($modules, 'TenantService::allModules() deve restituire un array');
-<<<<<<< HEAD
-        
-=======
 
->>>>>>> 9746d62 (.)
         foreach ($modules as $module) {
             Assert::string($module, 'Il nome del modulo deve essere una stringa');
             
             $module_low = Str::lower($module);
             Assert::stringNotEmpty($module_low, 'Il nome del modulo convertito in minuscolo non può essere vuoto');
 
-<<<<<<< HEAD
-           
-            $configPath = app(GetModulePathByGeneratorAction::class)->execute($module, 'config');
-=======
             // Otteniamo il percorso relativo della configurazione
             $relativeConfigPath = config('modules.paths.generator.config.path');
             $relativeConfigPathStr = is_string($relativeConfigPath) ? $relativeConfigPath : 'Config';
@@ -76,7 +53,6 @@ class GetModulesNavigationItems
             // Verifichiamo che $configPath sia una stringa valida
             Assert::stringNotEmpty($configPath, 'Il percorso di configurazione non può essere vuoto');
             
->>>>>>> 9746d62 (.)
             // Costruiamo il percorso completo del file di configurazione
             $configFilePath = $configPath.'/config.php';
             

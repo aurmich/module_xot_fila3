@@ -32,7 +32,7 @@ interface ErrorFormatterContract
 1. Utilizzo di strict types
 2. Documentazione PHPDoc completa
 3. Supporto per PHPStan livello 9
-4. Conforme alle convenzioni Laraxot/PTVX
+4. Conforme alle convenzioni Laraxot/<nome progetto>
 
 ## Collegamenti
 - [Error Handling Guidelines](../EXCEPTION-HANDLING-GUIDE.md)

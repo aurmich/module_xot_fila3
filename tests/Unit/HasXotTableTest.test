@@ -7,11 +7,7 @@ namespace Modules\Xot\Tests\Unit;
 use Filament\Tables\Contracts\HasTable;
 use Filament\Tables\Table;
 use Mockery;
-<<<<<<< HEAD
-use Modules\Xot\Filament\Traits\HasXotTable;
-=======
 use Modules\Xot\App\Filament\Traits\HasXotTable;
->>>>>>> 9746d62 (.)
 use PHPUnit\Framework\TestCase;
 
 class HasXotTableTest extends TestCase

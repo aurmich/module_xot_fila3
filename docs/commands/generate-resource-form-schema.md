@@ -49,7 +49,7 @@ return [
 1. Utilizzo di strict types
 2. Gestione errori robusta
 3. Supporto per PHPStan livello 9
-4. Conforme alle convenzioni Laraxot/PTVX
+4. Conforme alle convenzioni Laraxot/<nome progetto>
 5. Documentazione inline completa
 
 ## Collegamenti

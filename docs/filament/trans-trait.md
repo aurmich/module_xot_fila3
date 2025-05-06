@@ -26,7 +26,7 @@ trait TransTrait
 2. Gestione cache efficiente
 3. Supporto per PHPStan livello 9
 4. Integrazione con Filament
-5. Conforme alle convenzioni Laraxot/PTVX
+5. Conforme alle convenzioni Laraxot/<nome progetto>
 
 ## Esempi di Utilizzo
 ```php

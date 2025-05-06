@@ -10,33 +10,12 @@ use Illuminate\Support\Facades\Storage;
 use Spatie\QueueableAction\QueueableAction;
 use Symfony\Component\HttpFoundation\BinaryFileResponse;
 
-<<<<<<< HEAD
-/**
- * Classe per la generazione di PDF da HTML.
- */
-=======
->>>>>>> 9746d62 (.)
 class PdfByHtmlAction
 {
     use QueueableAction;
 
     public PdfEngineEnum $engine;
 
-<<<<<<< HEAD
-    /**
-     * Genera un PDF da HTML.
-     *
-     * @param string $html Il contenuto HTML da convertire
-     * @param string $filename Il nome del file PDF
-     * @param string $disk Il disco di storage da utilizzare
-     * @param string $out Il tipo di output (download/save)
-     * @param string $orientation L'orientamento del PDF (P/L)
-     * @param PdfEngineEnum $engine Il motore di rendering da utilizzare
-     *
-     * @return string|BinaryFileResponse Il percorso del file o la risposta di download
-     */
-=======
->>>>>>> 9746d62 (.)
     public function execute(
         string $html,
         string $filename = 'my_doc.pdf',
@@ -45,24 +24,6 @@ class PdfByHtmlAction
         string $orientation = 'P',
         PdfEngineEnum $engine = PdfEngineEnum::SPIPU,
     ): string|BinaryFileResponse {
-<<<<<<< HEAD
-        $data = PdfData::from([
-            'html' => $html,
-            'filename' => $filename,
-            'disk' => $disk,
-            'out' => $out,
-            'orientation' => $orientation,
-            'engine' => $engine,
-        ]);
-
-        // Generiamo il PDF
-        $data->fromHtml($html);
-
-        return match ($out) {
-            'download' => $data->download(),
-            default => $data->getPath(),
-        };
-=======
         return $data = PdfData::from([
             'html'->$html,
             'filename' -> $filename,
@@ -71,6 +32,5 @@ class PdfByHtmlAction
             'orientation' -> $orientation,
             'engine' -> $engine,
             ]);
->>>>>>> 9746d62 (.)
     }
 }

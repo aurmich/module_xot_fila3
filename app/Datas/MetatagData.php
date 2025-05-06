@@ -15,11 +15,7 @@ use Spatie\LaravelData\Concerns\WireableData;
 
 /**
  * Class MetatagData
-<<<<<<< HEAD
- *
-=======
  * 
->>>>>>> 9746d62 (.)
  * @property string $title
  * @property string $sitename
  * @property string $subtitle
@@ -145,11 +141,7 @@ class MetatagData extends Data implements Wireable
 
     /** @var string */
     public string $favicon = '/favicon.ico';
-<<<<<<< HEAD
-
-=======
     
->>>>>>> 9746d62 (.)
     /**
      * @var array<string, array{key?: string, color: string, hex?: string}>
      */
@@ -259,37 +251,22 @@ class MetatagData extends Data implements Wireable
     public function getColors(): array
     {
         if (empty($this->colors)) {
-<<<<<<< HEAD
-            return $this->getFilamentColors();
-=======
             return $this->getFilamentColors();    
->>>>>>> 9746d62 (.)
         }
 
         /** @var array<string, array<int, string>> $mapped */
         $mapped = Arr::mapWithKeys(
             $this->colors,
             function (array $item, string|int $key): array {
-<<<<<<< HEAD
-                $keyStr = isset($item['key'])
-                    ? $item['key']
-=======
                 $keyStr = isset($item['key']) 
                     ? $item['key'] 
->>>>>>> 9746d62 (.)
                     : (string) $key;
 
                 /** @var array<int, string> $value */
                 $value = match (true) {
-<<<<<<< HEAD
-                    $item['color'] === 'custom' && isset($item['hex'])
-                        => Color::hex($item['hex']),
-                    isset(Color::all()[$item['color']])
-=======
                     $item['color'] === 'custom' && isset($item['hex']) 
                         => Color::hex($item['hex']),
                     isset(Color::all()[$item['color']]) 
->>>>>>> 9746d62 (.)
                         => Color::all()[$item['color']],
                     default => Color::Gray,
                 };
@@ -297,133 +274,7 @@ class MetatagData extends Data implements Wireable
                 return [$keyStr => $value];
             }
         );
-<<<<<<< HEAD
-
-        return $mapped;
-    }
-
-    /**
-     * @return array<string, string>
-     */
-    public function getAllColors(): array
-    {
-        $colors = array_keys(Color::all());
-        return array_combine($colors, $colors);
-    }
-
-    /**
-     * Get the icons configuration.
-     *
-     * @return array<string, string>
-     */
-    public function getIcons(): array
-    {
-        $config = TenantService::getConfig('metatag');
-        /** @var array<string, string> $icons */
-        $icons = Arr::get($config, 'icons', []);
-        return $icons;
-    }
-
-    /**
-     * Get the dimensions configuration.
-     *
-     * @return array<string, int|string>
-     */
-    public function getDimensions(): array
-    {
-        $config = TenantService::getConfig('metatag');
-        /** @var array<string, int|string> $dimensions */
-        $dimensions = Arr::get($config, 'dimensions', []);
-        return $dimensions;
-    }
-
-    /**
-     * Get the alignment configuration.
-     *
-     * @return array<string, string>
-     */
-    public function getAlignment(): array
-    {
-        $config = TenantService::getConfig('metatag');
-        /** @var array<string, string> $alignment */
-        $alignment = Arr::get($config, 'alignment', []);
-        return $alignment;
-    }
-
-    /**
-     * Get the settings configuration.
-     *
-     * @return array<string, mixed>
-     */
-    public function getSettings(): array
-    {
-        $config = TenantService::getConfig('metatag');
-        /** @var array<string, mixed> $settings */
-        $settings = Arr::get($config, 'settings', []);
-        return $settings;
-    }
-
-    /**
-     * Get the meta values configuration.
-     *
-     * @return array<string, string>
-     */
-    public function getMetaValues(): array
-    {
-        $result = [
-            'title' => $this->title,
-            'description' => $this->description ?? '',
-            'keywords' => $this->keywords ?? '',
-            'author' => $this->author ?? '',
-            'generator' => $this->generator ?? '',
-        ];
-
-        return array_filter($result);
-    }
-
-    /**
-     * Get the social cards configuration.
-     *
-     * @return array<string, mixed>
-     */
-    public function getSocialCards(): array
-    {
-        $config = TenantService::getConfig('metatag');
-        /** @var array<string, mixed> $socialCards */
-        $socialCards = Arr::get($config, 'social_cards', []);
-        return $socialCards;
-    }
-
-    /**
-     * Get the OpenGraph data.
-     *
-     * @return array<string, string>
-     */
-    public function getOpenGraph(): array
-    {
-        return [
-            'title' => $this->title,
-            'description' => $this->description ?? '',
-            'site_name' => $this->sitename,
-        ];
-    }
-
-    /**
-     * Get the Twitter Card data.
-     *
-     * @return array<string, string>
-     */
-    public function getTwitterCards(): array
-    {
-        return [
-            'title' => $this->title,
-            'description' => $this->description ?? '',
-            'site' => $this->twitter_href,
-        ];
-    }
-=======
         
         return $mapped;
     }
->>>>>>> 9746d62 (.)
 }

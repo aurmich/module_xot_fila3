@@ -7,12 +7,9 @@ namespace Modules\Xot\Actions\File;
 use Illuminate\Support\Facades\File;
 use Illuminate\Support\Str;
 use Modules\Xot\Datas\ComponentFileData;
-<<<<<<< HEAD
-=======
 
 use function Safe\json_decode;
 
->>>>>>> 9746d62 (.)
 use Spatie\LaravelData\DataCollection;
 use Spatie\QueueableAction\QueueableAction;
 use Webmozart\Assert\Assert;
@@ -43,16 +40,7 @@ class GetComponentsAction
         $exists = File::exists($components_json);
         if ($exists && ! $force_recreate) {
             Assert::string($content = File::get($components_json), '['.__LINE__.']['.class_basename(static::class).']');
-<<<<<<< HEAD
-            try {
-                $comps = json_decode($content, true, 512, JSON_THROW_ON_ERROR);
-            } catch (\JsonException $e) {
-                $comps = [];
-            }
-
-=======
             $comps = json_decode($content, false);
->>>>>>> 9746d62 (.)
             if (! is_array($comps)) {
                 $comps = [];
             }
@@ -61,11 +49,7 @@ class GetComponentsAction
 
         $files = File::allFiles($path);
         $comps = [];
-<<<<<<< HEAD
-
-=======
         
->>>>>>> 9746d62 (.)
         foreach ($files as $file) {
             if ('php' !== $file->getExtension()) {
                 continue;
@@ -84,11 +68,7 @@ class GetComponentsAction
                 $piece = collect(explode('\\', $relative_path))
                     ->map(fn ($item) => Str::slug(Str::snake($item)))
                     ->implode('.');
-<<<<<<< HEAD
-
-=======
                 
->>>>>>> 9746d62 (.)
                 $comp_name = $prefix . $piece . '.' . Str::slug(Str::snake(Str::replace('\\', ' ', $class_name)));
                 $comp_ns = $namespace . '\\' . $relative_path . '\\' . $class_name;
                 $class_name = $relative_path . '\\' . $class_name;
@@ -98,11 +78,7 @@ class GetComponentsAction
                 if (!class_exists($comp_ns)) {
                     throw new \Exception("La classe {$comp_ns} non esiste");
                 }
-<<<<<<< HEAD
-
-=======
                 
->>>>>>> 9746d62 (.)
                 /** @var class-string<object> $comp_ns */
                 $reflection = new \ReflectionClass($comp_ns);
                 if ($reflection->isAbstract()) {
@@ -128,16 +104,7 @@ class GetComponentsAction
             }
         }
 
-<<<<<<< HEAD
-        try {
-            $content = json_encode($comps, JSON_THROW_ON_ERROR | JSON_PRETTY_PRINT);
-        } catch (\JsonException $e) {
-            return ComponentFileData::collection($comps);
-        }
-
-=======
         $content = \Safe\json_encode($comps, JSON_THROW_ON_ERROR);
->>>>>>> 9746d62 (.)
         $old_content = File::exists($components_json) ? File::get($components_json) : '';
 
         if ($old_content !== $content) {

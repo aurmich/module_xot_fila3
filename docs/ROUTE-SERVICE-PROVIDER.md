@@ -1,6 +1,6 @@
-# RouteServiceProvider nei Moduli PTVX
+# RouteServiceProvider nei Moduli <nome progetto>
 
-Questo documento descrive le linee guida per l'implementazione corretta del RouteServiceProvider nei moduli PTVX.
+Questo documento descrive le linee guida per l'implementazione corretta del RouteServiceProvider nei moduli <nome progetto>.
 
 ## Struttura Base
 

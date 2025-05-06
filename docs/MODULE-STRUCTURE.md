@@ -1,6 +1,6 @@
-# Struttura dei Moduli in PTVX
+# Struttura dei Moduli in <nome progetto>
 
-Questo documento definisce le linee guida ufficiali per la struttura dei moduli all'interno del framework PTVX.
+Questo documento definisce le linee guida ufficiali per la struttura dei moduli all'interno del framework <nome progetto>.
 
 ## Service Provider
 

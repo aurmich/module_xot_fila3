@@ -4,31 +4,6 @@ declare(strict_types=1);
 
 namespace Modules\Xot\Providers;
 
-<<<<<<< HEAD
-use function Safe\realpath;
-use Webmozart\Assert\Assert;
-use Illuminate\Support\Carbon;
-use Filament\Tables\Columns\Column;
-use Illuminate\Support\Facades\URL;
-use Filament\Forms\Components\Field;
-use Illuminate\Routing\UrlGenerator;
-use Illuminate\Support\Facades\File;
-use Illuminate\Support\Facades\View;
-use Illuminate\Support\Facades\Event;
-use Filament\Tables\Columns\TextColumn;
-use Filament\Tables\Filters\BaseFilter;
-use Filament\Forms\Components\TextInput;
-use Filament\Infolists\Components\Entry;
-use Filament\Forms\Components\DatePicker;
-use Filament\Forms\Components\TimePicker;
-use Filament\Forms\Components\Placeholder;
-use Filament\Support\Components\Component;
-use Filament\Support\Concerns\Configurable;
-use Modules\Xot\View\Composers\XotComposer;
-
-use Filament\Forms\Components\DateTimePicker;
-use Illuminate\Database\Events\MigrationsEnded;
-=======
 use Filament\Forms\Components\DatePicker;
 use Filament\Forms\Components\DateTimePicker;
 use Filament\Forms\Components\Field;
@@ -59,7 +34,6 @@ use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 use Webmozart\Assert\Assert;
 
 use function Safe\realpath;
->>>>>>> 9746d62 (.)
 
 /**
  * Class XotServiceProvider.
@@ -77,34 +51,16 @@ class XotServiceProvider extends XotBaseServiceProvider
         parent::boot();
         $this->redirectSSL();
         $this->registerViewComposers();
-<<<<<<< HEAD
-        //$this->registerEvents(); to EventServiceProvider
-        $this->registerTimezone();
-        //$this->registerProviders(); Vuoto
-    }
-
-
-=======
         $this->registerEvents();
         //$this->registerExceptionHandler(); // guardare come fa sentry
         $this->registerTimezone();
         $this->registerProviders();
     }
 
->>>>>>> 9746d62 (.)
     public function register(): void
     {
         parent::register();
         $this->registerConfig();
-<<<<<<< HEAD
-        $this->registerCommands();
-    }
-
-    //public function registerProviders(): void
-    //{
-    //    // $this->app->register(Filament\ModulesServiceProvider::class);
-    //}
-=======
         //$this->registerExceptionHandlersRepository();
         //$this->extendExceptionHandler();
         $this->registerCommands();
@@ -114,7 +70,6 @@ class XotServiceProvider extends XotBaseServiceProvider
     {
         // $this->app->register(Filament\ModulesServiceProvider::class);
     }
->>>>>>> 9746d62 (.)
 
     public function registerTimezone(): void
     {
@@ -132,8 +87,6 @@ class XotServiceProvider extends XotBaseServiceProvider
         TextColumn::configureUsing(fn (TextColumn $column) => $column->timezone($timezone));
     }
 
-<<<<<<< HEAD
-=======
     /*
      * @see https://github.com/cerbero90/exception-handler
      --  guardare come fa sentry 
@@ -159,17 +112,12 @@ class XotServiceProvider extends XotBaseServiceProvider
     }
         */
 
->>>>>>> 9746d62 (.)
     public function registerConfig(): void
     {
         // $config_file = realpath(__DIR__.'/../config/metatag.php');
         // $this->mergeConfigFrom($config_file, 'metatag');
     }
 
-<<<<<<< HEAD
-    /*
-=======
->>>>>>> 9746d62 (.)
     public function loadHelpersFrom(string $path): void
     {
         $files = File::files($path);
@@ -186,35 +134,18 @@ class XotServiceProvider extends XotBaseServiceProvider
             include_once $realPath;
         }
     }
-<<<<<<< HEAD
-    */
-    /* to LANG
-=======
 
->>>>>>> 9746d62 (.)
     protected function translatableComponents(): void
     {
         $components = [Field::class, BaseFilter::class, Placeholder::class, Column::class, Entry::class];
         foreach ($components as $component) {
-<<<<<<< HEAD
-            // @var Configurable $component 
-            $component::configureUsing(function (Component $translatable): void {
-                // @phpstan-ignore method.notFound 
-=======
             /* @var Configurable $component */
             $component::configureUsing(function (Component $translatable): void {
                 /* @phpstan-ignore method.notFound */
->>>>>>> 9746d62 (.)
                 $translatable->translateLabel();
             });
         }
     }
-<<<<<<< HEAD
-    */
-
-    private function redirectSSL(): void
-    {
-=======
 
     /*
      * Register the custom exception handlers repository.
@@ -242,7 +173,6 @@ class XotServiceProvider extends XotBaseServiceProvider
     private function redirectSSL(): void
     {
         // --- meglio ficcare un controllo anche sull'env
->>>>>>> 9746d62 (.)
         if (
             config('xra.forcessl') && (isset($_SERVER['SERVER_NAME']) && 'localhost' !== $_SERVER['SERVER_NAME']
             && isset($_SERVER['REQUEST_SCHEME']) && 'http' === $_SERVER['REQUEST_SCHEME'])
@@ -257,19 +187,11 @@ class XotServiceProvider extends XotBaseServiceProvider
         }
     }
 
-<<<<<<< HEAD
-    /*
-     * Undocumented function.
-     *
-     * @see https://medium.com/@dobron/running-laravel-ide-helper-generator-automatically-b909e75849d0
-       to EventServiceProvider
-=======
     /**
      * Undocumented function.
      *
      * @see https://medium.com/@dobron/running-laravel-ide-helper-generator-automatically-b909e75849d0
      */
->>>>>>> 9746d62 (.)
     private function registerEvents(): void
     {
         Event::listen(
@@ -279,18 +201,11 @@ class XotServiceProvider extends XotBaseServiceProvider
             }
         );
     }
-<<<<<<< HEAD
-    */
-=======
->>>>>>> 9746d62 (.)
 
     private function registerViewComposers(): void
     {
         View::composer('*', XotComposer::class);
     }
-<<<<<<< HEAD
-=======
 
 
->>>>>>> 9746d62 (.)
 } // end class

@@ -16,11 +16,7 @@ use Modules\Xot\Filament\Resources\ModuleResource;
 use Modules\Xot\Filament\Resources\Pages\XotBaseListRecords;
 use Nwidart\Modules\Facades\Module;
 
-<<<<<<< HEAD
-use Modules\Xot\Filament\Resources\XotBaseResource\RelationManager\XotBaseRelationManager;
-=======
 use Modules\Xot\Filament\Resources\XotBaseResource\RelationManagers\XotBaseRelationManager;
->>>>>>> 9746d62 (.)
 
 class ListModules extends XotBaseListRecords
 {

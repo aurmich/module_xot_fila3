@@ -27,7 +27,7 @@ Questo documento fornisce una panoramica del sistema di gestione delle eccezioni
 2. Logging strutturato e dettagliato
 3. Gestione errori robusta
 4. Supporto per PHPStan livello 9
-5. Conforme alle convenzioni Laraxot/PTVX
+5. Conforme alle convenzioni Laraxot/<nome progetto>
 
 ## Collegamenti
 - [Exception Handling Guidelines](../EXCEPTION-HANDLING-GUIDE.md)

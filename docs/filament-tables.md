@@ -1,6 +1,6 @@
 # Gestione delle Tabelle in Filament
 
-Questo documento definisce le linee guida per l'implementazione delle tabelle Filament nel progetto PTVX, utilizzando il trait `HasXotTable`.
+Questo documento definisce le linee guida per l'implementazione delle tabelle Filament nel progetto <nome progetto>, utilizzando il trait `HasXotTable`.
 
 ## Introduzione
 
@@ -193,9 +193,14 @@ Il trait include meccanismi di gestione degli errori, ad esempio:
 
 
 ## Collegamenti tra versioni di filament-tables.md
-<<<<<<< HEAD
+### Versione HEAD
+
 * [filament-tables.md](../filament-tables.md)
-=======
+
+### Versione Incoming
+
 * [filament-tables.md](filament/filament-tables.md)
->>>>>>> 6a221c0 (.)
+
+---
+
 

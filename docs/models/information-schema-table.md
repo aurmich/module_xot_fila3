@@ -38,7 +38,7 @@ class InformationSchemaTable extends Model
 2. Gestione efficiente delle query
 3. Caching appropriato
 4. Supporto per PHPStan livello 9
-5. Conforme alle convenzioni Laraxot/PTVX
+5. Conforme alle convenzioni Laraxot/<nome progetto>
 
 ## Collegamenti
 - [Database Guidelines](../DATABASE-GUIDELINES.md)

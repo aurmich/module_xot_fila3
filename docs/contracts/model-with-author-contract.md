@@ -22,7 +22,7 @@ interface ModelWithAuthorContract extends ModelContract
 - Implementare la logica di tracciamento utente in ogni modello che estende questo contract.
 
 ## Fix/Modifiche recenti
-- [2025-04-16] Correzione conflitti git, uniformazione tipizzazione, aggiunta firme metodi autore/editor, aggiornamento PHPDoc e struttura secondo convenzioni Laraxot/PTVX.
+- [2025-04-16] Correzione conflitti git, uniformazione tipizzazione, aggiunta firme metodi autore/editor, aggiornamento PHPDoc e struttura secondo convenzioni Laraxot/<nome progetto>.
 - Link bidirezionale: [Vai a PHPSTAN-FIXES-SUMMARY.md](../../../docs/PHPSTAN-FIXES-SUMMARY.md)
 
 ## Collegamenti

@@ -1,8 +1,8 @@
-# Guida alla Struttura Corretta delle Directory nei Moduli Laraxot PTVX
+# Guida alla Struttura Corretta delle Directory nei Moduli Laraxot <nome progetto>
 
 ## Panoramica
 
-In Laraxot PTVX, la struttura delle directory di ogni modulo è cruciale per il corretto funzionamento dell'autoloading, la compatibilità con PHPStan e la manutenibilità del codice.
+In Laraxot <nome progetto>, la struttura delle directory di ogni modulo è cruciale per il corretto funzionamento dell'autoloading, la compatibilità con PHPStan e la manutenibilità del codice.
 
 ## Regola Fondamentale
 
