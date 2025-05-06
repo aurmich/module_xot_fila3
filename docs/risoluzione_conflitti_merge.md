@@ -264,6 +264,7 @@ Per prevenire problemi simili in futuro, si raccomanda di:
 - **Visual Merge Tools**: Utilizzare strumenti come VS Code, PhpStorm o GitKraken per gestire i conflitti di merge in modo visuale
 - **Merge Opzionali**: Considerare l'uso di `git merge --no-commit` per verificare il risultato prima di completare il merge
 
+<<<<<<< HEAD
 
 
 
@@ -337,6 +338,9 @@ aurmich/dev
 =======
 ### 2. Esecuzione Regolare dei Test
 >>>>>>> 6dc688d (.)
+=======
+### 2. Esecuzione Regolare dei Test
+>>>>>>> 1abc8f7 (.)
 
 - Eseguire regolarmente i test che verificano l'assenza di marcatori di conflitto
 - Includere questi test nella pipeline CI/CD
