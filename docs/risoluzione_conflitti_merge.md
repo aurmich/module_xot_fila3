@@ -69,7 +69,6 @@ Per risolvere i conflitti, è stato seguito un approccio sistematico:
 
 ### 1. Rimozione dei Marcatori di Conflitto
 
-
 In ogni file, sono stati rimossi tutti i marcatori di conflitto (``, `origin/dev`), mantenendo la versione più completa e corretta del codice.
 aurmich/dev
 In ogni file, sono stati rimossi tutti i marcatori di conflitto , mantenendo la versione più completa e corretta del codice.
@@ -265,6 +264,7 @@ Per prevenire problemi simili in futuro, si raccomanda di:
 - **Visual Merge Tools**: Utilizzare strumenti come VS Code, PhpStorm o GitKraken per gestire i conflitti di merge in modo visuale
 - **Merge Opzionali**: Considerare l'uso di `git merge --no-commit` per verificare il risultato prima di completare il merge
 
+<<<<<<< HEAD
 
 
 
@@ -337,11 +337,14 @@ aurmich/dev
 >>>>>>> 5693302 (.):docs/RISOLUZIONE_CONFLITTI_MERGE.md
 
 ### 3. Esecuzione Regolare dei Test
+=======
+### 2. Esecuzione Regolare dei Test
+>>>>>>> 6dc688d (.)
 
 - Eseguire regolarmente i test che verificano l'assenza di marcatori di conflitto
 - Includere questi test nella pipeline CI/CD
 
-### 4. Documentazione e Standardizzazione
+### 3. Documentazione e Standardizzazione
 
 - Documentare le convenzioni per la risoluzione dei conflitti
 - Standardizzare l'approccio alla tipizzazione e alle annotazioni PHPDoc
@@ -358,4 +361,78 @@ L'integrazione con PHPStan è cruciale per identificare problemi di tipizzazione
 
 La risoluzione dei conflitti di merge ha ripristinato la corretta funzionalità dei file coinvolti, permettendo l'analisi statica con PHPStan e garantendo il corretto funzionamento dell'applicazione. Le soluzioni implementate hanno mantenuto la coerenza del codice e migliorato la robustezza delle classi.
 
-L'implementazione di procedure preventive e la standardizzazione del processo di risoluzione dei conflitti contribuiranno a evitare problemi simili in futuro e a mantenere un codice di alta qualità. 
+L'implementazione di procedure preventive e la standardizzazione del processo di risoluzione dei conflitti contribuiranno a evitare problemi simili in futuro e a mantenere un codice di alta qualità.
+
+## Best Practices
+Per le best practices complete, consultare il file [best_practices.md](conflicts/best_practices.md).
+
+## Casi Risolti Recentemente
+
+### 1. Namespace e Convenzioni
+- [Convenzioni Namespace](NAMESPACE-CONVENTIONS.md)
+- Risoluzione conflitti nelle convenzioni di namespace
+- Mantenimento della compatibilità con PHPStan
+
+### 2. Actions e Export
+- [ExportXlsByCollection](actions/export/exportxlsbycollection_conflict.md)
+  - Risoluzione conflitti nella documentazione PHPDoc
+  - Miglioramento della compatibilità con PHPStan
+  - Documentazione più completa e chiara
+
+- [GetViewByClassAction](actions/view/getviewbyclassaction_conflict.md)
+  - Implementazione conversione tipi con `strval()`
+  - Mantenimento compatibilità PHPStan livello 10
+  - Documentazione delle decisioni prese
+
+### 3. Autenticazione e UI
+- [Componenti Filament](../../Themes/One/docs/FILAMENT_COMPONENTS.md)
+- [Registrazione Utenti](../../Themes/One/docs/AUTH.md)
+  - Implementazione completa sistema registrazione
+  - Gestione tipi utente dinamica
+  - UI moderna con Filament
+
+## Processo di Risoluzione
+
+1. **Analisi**
+   - Identificare la natura del conflitto
+   - Valutare l'impatto delle modifiche
+   - Consultare la documentazione esistente
+
+2. **Decisione**
+   - Scegliere la versione più completa
+   - Mantenere la compatibilità con gli standard
+   - Considerare la manutenibilità futura
+
+3. **Implementazione**
+   - Applicare le modifiche in modo coerente
+   - Aggiornare la documentazione
+   - Verificare la compatibilità
+
+4. **Documentazione**
+   - Creare file di documentazione dedicati
+   - Aggiornare i collegamenti
+   - Mantenere traccia delle decisioni
+
+## Collegamenti Correlati
+
+- [Best Practices](conflicts/best_practices.md)
+- [PHPStan Livello 10](phpstan_livello10_linee_guida.md)
+- [Struttura Moduli](module-structure.md)
+- [Risoluzione Conflitti](risoluzione_conflitti.md)
+
+## Note Importanti
+
+1. **Compatibilità**
+   - Mantenere la compatibilità con PHPStan
+   - Seguire le convenzioni di Laravel
+   - Rispettare gli standard di codifica
+
+2. **Documentazione**
+   - Aggiornare sempre la documentazione
+   - Mantenere collegamenti bidirezionali
+   - Documentare le decisioni prese
+
+3. **Testing**
+   - Verificare le modifiche con PHPStan
+   - Testare la compatibilità
+   - Validare le funzionalità 
