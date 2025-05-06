@@ -15,6 +15,8 @@ use Nwidart\Modules\Traits\PathNamespace;
 use Modules\Xot\Actions\Blade\RegisterBladeComponentsAction;
 use Modules\Xot\Actions\Module\GetModulePathByGeneratorAction;
 use Modules\Xot\Actions\Livewire\RegisterLivewireComponentsAction;
+use BladeUI\Icons\Factory as BladeIconsFactory;
+use Illuminate\Contracts\Container\Container;
 
 use function Safe\realpath;
 
@@ -66,8 +68,14 @@ abstract class XotBaseServiceProvider extends ServiceProvider
         if ('' === $this->name) {
             throw new \Exception('name is empty on ['.static::class.']');
         }
-        //$svgPath = app(GetModulePathByGeneratorAction::class)->execute($this->name, 'svg');
 
+        $this->callAfterResolving(BladeIconsFactory::class, function (BladeIconsFactory $factory) {
+            $assetsPath = app(GetModulePathByGeneratorAction::class)->execute($this->name, 'assets');
+            $svgPath=$assetsPath.'/../svg';
+            $factory->add( $this->nameLower, ['path' => $svgPath,'prefix' => $this->nameLower]);
+        });
+        //$svgPath = app(GetModulePathByGeneratorAction::class)->execute($this->name, 'svg');
+        /*
         Assert::string($relativePath = config('modules.paths.generator.assets.path'));
 
         try {
@@ -89,6 +97,7 @@ abstract class XotBaseServiceProvider extends ServiceProvider
 
         Config::set('blade-icons.sets.'.$this->nameLower.'.path', $svgPath);
         Config::set('blade-icons.sets.'.$this->nameLower.'.prefix', $this->nameLower);
+        */
     }
 
     /**
