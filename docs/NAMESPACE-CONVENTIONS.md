@@ -1,6 +1,10 @@
 # Convenzioni per i Namespace nei Moduli Laraxot
 
+<<<<<<< HEAD
 Questo documento definisce le convenzioni per i namespace nei moduli del framework Laraxot <nome progetto>, un aspetto fondamentale per garantire la compatibilità con PHPStan livello 9 e la coerenza del codice.
+=======
+Questo documento definisce le convenzioni per i namespace nei moduli del framework Laraxot PTVX, un aspetto fondamentale per garantire la compatibilità con PHPStan livello 9 e la coerenza del codice.
+>>>>>>> bb08ed4 (.)
 
 ## Regola Fondamentale: Omettere "app" nel Namespace
 
@@ -31,15 +35,39 @@ namespace Modules\Rating\App\Console\Commands;
 Un errore particolarmente frequente riguarda le Actions. La convenzione corretta è la seguente:
 
 - ✅ **CORRETTO**: `namespace Modules\Xot\Actions;`
+<<<<<<< HEAD
 - ❌ **ERRATO**: `namespace Modules\Xot\app\Actions;`
 - ❌ **ERRATO**: `namespace Modules\Xot\Actions;`
+=======
+<<<<<<< HEAD
+- ❌ **ERRATO**: `namespace Modules\Xot\Actions;`
+=======
+<<<<<<< HEAD
+- ❌ **ERRATO**: `namespace Modules\Xot\Actions;`
+=======
+- ❌ **ERRATO**: `namespace Modules\Xot\app\Actions;`
+>>>>>>> origin/dev
+>>>>>>> origin/dev
+>>>>>>> bb08ed4 (.)
 
 Anche se il file si trova nel percorso fisico `Modules/Xot/app/Actions/`, il namespace non deve mai includere il segmento `app`.
 
 Questo errore causa spesso problemi di PHPStan come:
 ```
+<<<<<<< HEAD
 Class 'Modules\Xot\app\Actions\MyAction' not found.
 Class 'Modules\Xot\Actions\MyAction' not found.
+=======
+<<<<<<< HEAD
+Class 'Modules\Xot\Actions\MyAction' not found.
+=======
+<<<<<<< HEAD
+Class 'Modules\Xot\Actions\MyAction' not found.
+=======
+Class 'Modules\Xot\app\Actions\MyAction' not found.
+>>>>>>> origin/dev
+>>>>>>> origin/dev
+>>>>>>> bb08ed4 (.)
 ```
 
 La correzione è sempre la stessa: rimuovere il segmento `app` dal namespace.
