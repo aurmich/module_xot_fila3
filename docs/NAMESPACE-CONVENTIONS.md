@@ -8665,7 +8665,6 @@ namespace Modules\Rating\App\Console\Commands;
 Un errore particolarmente frequente riguarda le Actions. La convenzione corretta è la seguente:
 
 - ✅ **CORRETTO**: `namespace Modules\Xot\Actions;`
-<<<<<<< HEAD
 
 
 
@@ -8688,15 +8687,12 @@ Un errore particolarmente frequente riguarda le Actions. La convenzione corretta
 
 - ❌ **ERRATO**: `namespace Modules\Xot\app\Actions;`
  bb08ed4 (.)
-=======
 - ❌ **ERRATO**: `namespace Modules\Xot\app\Actions;`
->>>>>>> 6dc688d (.)
 
 Anche se il file si trova nel percorso fisico `Modules/Xot/app/Actions/`, il namespace non deve mai includere il segmento `app`.
 
 Questo errore causa spesso problemi di PHPStan come:
 ```
-<<<<<<< HEAD
 
 
 
@@ -8719,9 +8715,7 @@ Class 'Modules\Xot\Actions\MyAction' not found.
 
 Class 'Modules\Xot\app\Actions\MyAction' not found.
  bb08ed4 (.)
-=======
 Class 'Modules\Xot\app\Actions\MyAction' not found.
->>>>>>> 6dc688d (.)
 ```
 
 La correzione è sempre la stessa: rimuovere il segmento `app` dal namespace.
@@ -9152,7 +9146,6 @@ namespace Modules\Rating\Console\Commands;
 4. **Riflettività**: Il namespace riflette la struttura logica del modulo, non la sua struttura fisica
 5. **Standard Laravel**: Allineato alle convenzioni di Laravel
 
-<<<<<<< HEAD
 
 Seguire queste convenzioni di namespace aiuterà a mantenere un codebase coerente e a evitare errori comuni durante l'analisi statica del codice con PHPStan. 
 
@@ -9249,6 +9242,4 @@ php scripts/check-namespaces.php
  aurmich/dev
  aurmich/dev
  aurmich/dev
-=======
 Seguire queste convenzioni di namespace aiuterà a mantenere un codebase coerente e a evitare errori comuni durante l'analisi statica del codice con PHPStan. 
->>>>>>> 6dc688d (.)

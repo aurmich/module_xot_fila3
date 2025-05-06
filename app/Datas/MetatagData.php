@@ -169,11 +169,25 @@ class MetatagData extends Data implements Wireable
     }
 
     /**
-     * Get the header logo URL.
+     * Get the brand name.
+     * This method reflects the semantic purpose of getting the brand name,
+     * which is the title of the page.
      *
      * @return string
      */
-    public function getLogoHeader(): string
+    public function getBrandName(): string
+    {
+        return $this->title;
+    }
+
+    /**
+     * Get the brand logo.
+     * This method reflects the semantic purpose of getting the brand logo,
+     * rather than exposing implementation details about where the logo is used.
+     *
+     * @return string
+     */
+    public function getBrandLogo(): string
     {
         try {
             /** @var string $path */
@@ -185,11 +199,12 @@ class MetatagData extends Data implements Wireable
     }
 
     /**
-     * Get the dark header logo URL.
+     * Get the dark mode brand logo.
+     * This method reflects the semantic purpose of getting the dark mode brand logo.
      *
      * @return string
      */
-    public function getLogoHeaderDark(): string
+    public function getDarkModeBrandLogo(): string
     {
         try {
             /** @var string $path */
@@ -201,13 +216,104 @@ class MetatagData extends Data implements Wireable
     }
 
     /**
-     * Get the logo height.
+     * Get the brand logo height.
+     * This method reflects the semantic purpose of getting the brand logo height.
      *
      * @return string
      */
-    public function getLogoHeight(): string
+    public function getBrandLogoHeight(): string
     {
         return $this->logo_height;
+    }
+
+    /**
+     * Get the theme colors.
+     * This method reflects the semantic purpose of getting theme colors,
+     * rather than exposing the raw color data structure.
+     *
+     * @return array<string, string>
+     */
+    public function getThemeColors(): array
+    {
+        $defaults = $this->getFilamentColors();
+        $custom = [];
+        foreach ($this->colors as $key => $value) {
+            if (Arr::has($value, 'color')) {
+                $custom[$key] = (string) $value['color'];
+            }
+        }
+        return array_merge($defaults, $custom);
+    }
+
+    /**
+     * Get the theme settings.
+     * This method reflects the semantic purpose of getting theme settings.
+     *
+     * @return array<string, string>
+     */
+    public function getThemeSettings(): array
+    {
+        return [
+            'color_primary' => $this->color_primary,
+            'color_title' => $this->color_title,
+            'color_megamenu' => $this->color_megamenu,
+            'color_hamburger' => $this->color_hamburger,
+            'color_banner' => $this->color_banner,
+        ];
+    }
+
+    /**
+     * Get the brand description.
+     * This method reflects the semantic purpose of getting the brand description.
+     *
+     * @return string|null
+     */
+    public function getBrandDescription(): ?string
+    {
+        return $this->description;
+    }
+
+    /**
+     * Get the brand social links.
+     * This method reflects the semantic purpose of getting social media links.
+     *
+     * @return array<string, string>
+     */
+    public function getBrandSocialLinks(): array
+    {
+        return [
+            'facebook' => $this->facebook_href,
+            'twitter' => $this->twitter_href,
+            'youtube' => $this->youtube_href,
+        ];
+    }
+
+    /**
+     * Get the brand dimensions.
+     * This method reflects the semantic purpose of getting brand-related dimensions.
+     *
+     * @return array<string, string>
+     */
+    public function getBrandDimensions(): array
+    {
+        return [
+            'logo_height' => $this->logo_height,
+        ];
+    }
+
+    /**
+     * Get the brand settings.
+     * This method reflects the semantic purpose of getting brand-related settings.
+     *
+     * @return array<string, string>
+     */
+    public function getBrandSettings(): array
+    {
+        return [
+            'fastlink' => $this->fastlink,
+            'hide_megamenu' => $this->hide_megamenu,
+            'hero_type' => $this->hero_type,
+        ];
     }
 
     /**
@@ -224,6 +330,14 @@ class MetatagData extends Data implements Wireable
         } catch (\Throwable $e) {
             return asset($this->favicon);
         }
+    }
+
+    /**
+     * @deprecated Use getThemeColors() instead as it better reflects the semantic purpose
+     */
+    public function getColors(): array
+    {
+        return $this->getThemeColors();
     }
 
     /**
@@ -271,18 +385,6 @@ class MetatagData extends Data implements Wireable
     }
 
     /**
-     * Get the dimensions array.
-     *
-     * @return array<string, string>
-     */
-    public function getDimensions(): array
-    {
-        return [
-            'logo_height' => $this->logo_height,
-        ];
-    }
-
-    /**
      * Get the alignment array.
      *
      * @return array<string, string>
@@ -302,9 +404,7 @@ class MetatagData extends Data implements Wireable
      */
     public function getSettings(): array
     {
-        return [
-            'fastlink' => $this->fastlink,
-        ];
+        return $this->getBrandSettings();
     }
 
     /**
@@ -336,11 +436,7 @@ class MetatagData extends Data implements Wireable
      */
     public function getSocialCards(): array
     {
-        return [
-            'facebook_href' => $this->facebook_href,
-            'twitter_href' => $this->twitter_href,
-            'youtube_href' => $this->youtube_href,
-        ];
+        return $this->getBrandSocialLinks();
     }
 
     /**
@@ -372,5 +468,37 @@ class MetatagData extends Data implements Wireable
             'description' => $this->description,
             'site' => $this->twitter_href,
         ];
+    }
+
+    /**
+     * @deprecated Use getBrandName() instead as it better reflects the semantic purpose
+     */
+    public function getTitle(): string
+    {
+        return $this->getBrandName();
+    }
+
+    /**
+     * @deprecated Use getBrandLogo() instead as it better reflects the semantic purpose
+     */
+    public function getLogoHeader(): string
+    {
+        return $this->getBrandLogo();
+    }
+
+    /**
+     * @deprecated Use getDarkModeBrandLogo() instead as it better reflects the semantic purpose
+     */
+    public function getLogoHeaderDark(): string
+    {
+        return $this->getDarkModeBrandLogo();
+    }
+
+    /**
+     * @deprecated Use getBrandLogoHeight() instead as it better reflects the semantic purpose
+     */
+    public function getLogoHeight(): string
+    {
+        return $this->getBrandLogoHeight();
     }
 }

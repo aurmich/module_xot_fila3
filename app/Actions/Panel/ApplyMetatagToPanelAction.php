@@ -20,10 +20,10 @@ class ApplyMetatagToPanelAction
             return $panel
                 // @phpstan-ignore argument.type
                 ->colors($metatag->getColors())
-                ->brandLogo($metatag->getLogoHeader())
-                ->brandName($metatag->title)
-                ->darkModeBrandLogo($metatag->getLogoHeaderDark())
-                ->brandLogoHeight($metatag->getLogoHeight())
+                ->brandLogo($metatag->getBrandLogo())
+                ->brandName($metatag->getBrandName())
+                ->darkModeBrandLogo($metatag->getDarkModeBrandLogo())
+                ->brandLogoHeight($metatag->getBrandLogoHeight())
                 ->favicon($metatag->getFavicon());
         } catch (\Exception $e) {
             // Log l'errore ma non bloccare l'applicazione
