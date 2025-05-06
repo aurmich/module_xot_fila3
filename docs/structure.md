@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ### Versione HEAD
 
 # Analisi della Discrepanza tra Namespace e Struttura Directory nei Moduli Laraxot
@@ -238,6 +239,10 @@ laravel/Themes/[Nome]/
 
 
 ---
+=======
+
+=======
+>>>>>>> 5693302 (.)
 
 # Struttura del Modulo Xot
 
@@ -1064,6 +1069,7 @@ tests_old
 - [Report PHPStan](/docs/phpstan/)
 
 
+<<<<<<< HEAD
 ### Versione Incoming
 
    - Utilizzare i namespace appropriati che riflettono la struttura delle directory 
@@ -1096,3 +1102,8 @@ tests_old
 
 ---
 
+=======
+=======
+>>>>>>> aurmich/dev
+>>>>>>> aurmich/dev
+>>>>>>> 5693302 (.)

@@ -39,8 +39,21 @@ Il conflitto nel file `XotBaseServiceProvider.php` è stato risolto mantenendo:
 - La struttura compatta del metodo `boot()` che richiama in sequenza i metodi di registrazione
 - La versione più pulita di `register()` che non include registrazioni duplicate
 - La versione avanzata del metodo `registerBladeIcons()` con la gestione delle eccezioni
+<<<<<<< HEAD
 - Il metodo `registerConfig()` è stato aggiornato per utilizzare il percorso corretto da `modules.paths.generator.config.path`
 - È stato rimosso il codice commentato non necessario per `registerBladeComponents()`
+=======
+
+- Il metodo `registerConfig()` è stato aggiornato per utilizzare il percorso corretto da `modules.paths.generator.config.path`
+- È stato rimosso il codice commentato non necessario per `registerBladeComponents()`
+=======
+
+=======
+- Il metodo `registerConfig()` è stato aggiornato per utilizzare il percorso corretto da `modules.paths.generator.config.path`
+- È stato rimosso il codice commentato non necessario per `registerBladeComponents()`
+>>>>>>> aurmich/dev
+>>>>>>> aurmich/dev
+>>>>>>> 5693302 (.)
 
 La soluzione adottata privilegia la chiarezza del codice e l'organizzazione logica dei metodi, eliminando commenti non necessari e duplicazioni.
 
@@ -64,6 +77,14 @@ Il file `XotBasePanelProvider.php` presentava conflitti nella configurazione dei
 La soluzione adottata ha mantenuto la versione più semplice e pulita senza la configurazione dei colori, poiché questa configurazione è commentata e non attiva. Inoltre, il tentativo di caricare il file di configurazione avrebbe potuto introdurre dipendenze inutili.
 
 Mantenere il codice più semplice è preferibile, soprattutto quando le funzionalità aggiuntive non sono attualmente utilizzate.
+<<<<<<< HEAD
+=======
+
+=======
+
+=======
+>>>>>>> aurmich/dev
+>>>>>>> 5693302 (.)
 
 ## Conflitti risolti (14/06/2024)
 
@@ -116,7 +137,13 @@ La risoluzione dei conflitti rimanenti dovrebbe seguire questi principi:
 4. **Uniformare lo stile di codice**: Seguire le convenzioni di formattazione PSR-12 e mantenerle coerenti nel progetto.
 5. **Documentare le decisioni**: Per ogni conflitto risolto, documentare l'intento e il motivo della scelta effettuata.
 
+<<<<<<< HEAD
 ## Collegamenti tra versioni di risoluzione_conflitti.md
 * [risoluzione_conflitti.md](../../../Xot/docs/risoluzione_conflitti.md)
 * [risoluzione_conflitti.md](../../../Tenant/docs/risoluzione_conflitti.md)
 
+=======
+=======
+>>>>>>> aurmich/dev
+>>>>>>> aurmich/dev
+>>>>>>> 5693302 (.)

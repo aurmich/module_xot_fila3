@@ -1,6 +1,26 @@
+<<<<<<< HEAD
+
+=======
 
 
+=======
 
+=======
+
+>>>>>>> aurmich/dev
+
+=======
+>>>>>>> 5693302 (.)
+
+
+<<<<<<< HEAD
+=======
+>>>>>>> aurmich/dev
+
+=======
+>>>>>>> aurmich/dev
+>>>>>>> aurmich/dev
+>>>>>>> 5693302 (.)
 # Rapporto PHPStan Livello 1 per il modulo Xot
 
 Data analisi: 2025-04-15 21:52:32
@@ -52,9 +72,22 @@ Trovati 4 errori al livello 1.
 - [Documentazione PHPStan](https://phpstan.org/user-guide/getting-started)
 - [Tipi in PHP](https://www.php.net/manual/en/language.types.declarations.php)
 - [PSR-12: Standard di codifica](https://www.php-fig.org/psr/psr-12/)
+<<<<<<< HEAD
+aurmich/dev
+=======
+
+
+=======
+aurmich/dev
+=======
+
+>>>>>>> aurmich/dev
+
+=======
+>>>>>>> 5693302 (.)
 aurmich/dev
 aurmich/dev
-aurmich/dev
+<<<<<<< HEAD
 
 ## Collegamenti tra versioni di level_1.md
 * [level_1.md](../../../Chart/docs/phpstan/level_1.md)
@@ -73,3 +106,10 @@ aurmich/dev
 * [level_1.md](../../../Patient/docs/phpstan/level_1.md)
 * [level_1.md](../../../Cms/docs/phpstan/level_1.md)
 
+=======
+>>>>>>> aurmich/dev
+
+=======
+>>>>>>> aurmich/dev
+>>>>>>> aurmich/dev
+>>>>>>> 5693302 (.)

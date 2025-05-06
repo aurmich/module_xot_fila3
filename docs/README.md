@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Modulo Xot
 
 ### Versione HEAD
@@ -346,6 +347,42 @@ class User extends XotBaseModel { ... }
 
 
 ### Versione Incoming
+=======
+# Modulo Xot - Documentazione Core
+
+## Introduzione
+Il modulo Xot è il cuore dell'architettura modulare del sistema. Fornisce le funzionalità di base e le convenzioni utilizzate da tutti gli altri moduli.
+
+## Indice
+
+### Architettura
+- [Struttura del Modulo](./MODULE-STRUCTURE.md)
+- [Convenzioni dei Namespace](./NAMESPACE-CONVENTIONS.md)
+- [Convenzioni di Naming](./NAMING-CONVENTIONS.md)
+- [Struttura delle Directory](./DIRECTORY-STRUCTURE-GUIDE.md)
+
+### Sviluppo
+- [Guida PHPStan](./phpstan/README.md)
+- [Gestione Traduzioni](./TRANSLATIONS-BEST-PRACTICES.md)
+- [Gestione Conflitti](./conflicts/README.md)
+- [Filament Tables](./FILAMENT-TABLES.md)
+
+### Integrazione
+- [Service Provider](./provider.md)
+- [Route Service Provider](./ROUTE-SERVICE-PROVIDER.md)
+- [Assets](./assets.md)
+- [Configurazione](./config.md)
+
+### Best Practices
+- [Documentazione](./DOCUMENTATION-GUIDELINES.md)
+- [Code Standards](./CODE-STANDARDS.md)
+- [Gestione Pacchetti](./packages.md)
+
+## Collegamenti alla Documentazione Root
+- [Roadmap Generale](/docs/roadmap.md)
+- [Architettura Generale](/docs/ARCHITECTURE.md)
+- [Documentazione Tecnica](/docs/TECHNICAL.md)
+>>>>>>> 5693302 (.)
 
 ## Panoramica
 Il modulo Xot fornisce le funzionalità base e le utilities utilizzate da tutti gli altri moduli dell'applicazione.
@@ -460,5 +497,20 @@ Il modulo è configurabile tramite:
 
 - [Linee Guida per getInfolistSchema](./filament/INFOLIST_SCHEMA_GUIDELINES.md) - Guida completa per l'implementazione corretta del metodo getInfolistSchema, con focus sull'uso delle chiavi stringa negli array 
 
+<<<<<<< HEAD
 ---
 
+=======
+## Documentazione Filament
+
+- [Linee Guida per getInfolistSchema](./filament/INFOLIST_SCHEMA_GUIDELINES.md) - Guida completa per l'implementazione corretta del metodo getInfolistSchema, con focus sull'uso delle chiavi stringa negli array 
+
+## Documentazione Service Provider
+- [Best Practices nei Service Provider](./providers/service_provider_best_practices.md) - Linee guida sull'utilizzo di GetModulePathByGeneratorAction per una gestione robusta dei percorsi
+
+## Documentazione PHPStan
+- [Linee Guida PHPStan Livello 10](./PHPStan/LEVEL10_LINEE_GUIDA.md) - Linee guida dettagliate per rispettare le regole di PHPStan a livello 10
+
+## Documentazione Filament
+- [Linee Guida per getInfolistSchema](./filament/INFOLIST_SCHEMA_GUIDELINES.md) - Guida completa per l'implementazione corretta del metodo getInfolistSchema, con focus sull'uso delle chiavi stringa negli array 
+>>>>>>> 5693302 (.)

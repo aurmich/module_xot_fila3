@@ -2,10 +2,25 @@
 
 ## Problema
 
+<<<<<<< HEAD:docs/conflitti_merge_risolti.md
+=======
+
+
+=======
+>>>>>>> 5693302 (.):docs/CONFLITTI_MERGE_RISOLTI.md
 
 Durante lo sviluppo del progetto il progetto, sono stati identificati diversi file con conflitti di merge non risolti. Questi conflitti erano indicati dalla presenza di marcatori come ``, `origin/dev` nel codice sorgente. I conflitti non risolti impedivano la corretta esecuzione del codice e causavano errori durante l'analisi statica con PHPStan.
 aurmich/dev
+<<<<<<< HEAD:docs/conflitti_merge_risolti.md
 Durante lo sviluppo del progetto il progetto, sono stati identificati diversi file con conflitti di merge non risolti. Questi conflitti erano indicati dalla presenza di marcatori come ``, `` e `` nel codice sorgente. I conflitti non risolti impedivano la corretta esecuzione del codice e causavano errori durante l'analisi statica con PHPStan.
+=======
+=======
+
+>>>>>>> aurmich/dev
+
+Durante lo sviluppo del progetto SaluteOra, sono stati identificati diversi file con conflitti di merge non risolti. Questi conflitti erano indicati dalla presenza di marcatori come ``, `` e `` nel codice sorgente. I conflitti non risolti impedivano la corretta esecuzione del codice e causavano errori durante l'analisi statica con PHPStan.
+=======
+>>>>>>> 5693302 (.):docs/CONFLITTI_MERGE_RISOLTI.md
 
 Durante lo sviluppo del progetto il progetto, sono stati identificati diversi file con conflitti di merge non risolti. Questi conflitti erano indicati dalla presenza di marcatori come ``, `origin/dev` nel codice sorgente. I conflitti non risolti impedivano la corretta esecuzione del codice e causavano errori durante l'analisi statica con PHPStan.
 aurmich/dev
@@ -13,6 +28,14 @@ aurmich/dev
 
 Durante lo sviluppo del progetto il progetto, sono stati identificati diversi file con conflitti di merge non risolti. Questi conflitti erano indicati dalla presenza di marcatori come ``, `origin/dev` nel codice sorgente. I conflitti non risolti impedivano la corretta esecuzione del codice e causavano errori durante l'analisi statica con PHPStan.
 aurmich/dev
+<<<<<<< HEAD:docs/conflitti_merge_risolti.md
+=======
+>>>>>>> aurmich/dev
+
+=======
+>>>>>>> aurmich/dev
+>>>>>>> aurmich/dev
+>>>>>>> 5693302 (.):docs/CONFLITTI_MERGE_RISOLTI.md
 
 I file principali con conflitti erano:
 - `Modules/Xot/app/Datas/MetatagData.php`
@@ -48,6 +71,16 @@ In `GetFieldnamesByTablenameAction.php`, c'erano conflitti relativi alla gestion
 
 ```php
 
+<<<<<<< HEAD:docs/conflitti_merge_risolti.md
+=======
+
+
+=======
+=======
+
+>>>>>>> aurmich/dev
+
+>>>>>>> 5693302 (.):docs/CONFLITTI_MERGE_RISOLTI.md
 if (! $this->isValidConnection($connectionName)) {
 if (! $this->isValidConnection(is_string($connectionName) ? $connectionName : (string) $connectionName)) {
 
@@ -57,11 +90,37 @@ if (! $this->isValidConnection($connectionName)) {
 if (! $this->isValidConnection(is_string($connectionName) ? $connectionName : (string) $connectionName)) {
 
 
+<<<<<<< HEAD:docs/conflitti_merge_risolti.md
 
+=======
+=======
+=======
+>>>>>>> aurmich/dev
+
+=======
+>>>>>>> aurmich/dev
+>>>>>>> aurmich/dev
+>>>>>>> 5693302 (.):docs/CONFLITTI_MERGE_RISOLTI.md
 
 if (! $this->isValidConnection($connectionName)) {
 origin/dev
 aurmich/dev
+<<<<<<< HEAD:docs/conflitti_merge_risolti.md
+=======
+
+
+>>>>>>> aurmich/dev
+=======
+>>>>>>> aurmich/dev
+=======
+=======
+
+>>>>>>> aurmich/dev
+=======
+>>>>>>> aurmich/dev
+>>>>>>> aurmich/dev
+>>>>>>> aurmich/dev
+>>>>>>> 5693302 (.):docs/CONFLITTI_MERGE_RISOLTI.md
 ```
 
 #### 2. Conflitti nelle Annotazioni PHPDoc
@@ -70,25 +129,66 @@ In `TemporaryUploadPathGenerator.php`, c'erano conflitti nelle annotazioni PHPDo
 
 ```php
 
+<<<<<<< HEAD:docs/conflitti_merge_risolti.md
+=======
+
+
+=======
+=======
+
+>>>>>>> aurmich/dev
+
+>>>>>>> 5693302 (.):docs/CONFLITTI_MERGE_RISOLTI.md
 /**
  * @param \Modules\Media\Models\Media $media
  */
 
+<<<<<<< HEAD:docs/conflitti_merge_risolti.md
 
+=======
+=======
+>>>>>>> aurmich/dev
+=======
+>>>>>>> aurmich/dev
+
+=======
+>>>>>>> aurmich/dev
+>>>>>>> aurmich/dev
+>>>>>>> 5693302 (.):docs/CONFLITTI_MERGE_RISOLTI.md
 
 /**
  * @param \Modules\Media\Models\Media $media
  */
+<<<<<<< HEAD:docs/conflitti_merge_risolti.md
+origin/dev
+aurmich/dev
+=======
+
+
+=======
+origin/dev
+aurmich/dev
+=======
+
+>>>>>>> aurmich/dev
+
+>>>>>>> 5693302 (.):docs/CONFLITTI_MERGE_RISOLTI.md
+
+
+
 origin/dev
 aurmich/dev
 
-
-
 origin/dev
 aurmich/dev
+<<<<<<< HEAD:docs/conflitti_merge_risolti.md
+=======
+>>>>>>> aurmich/dev
 
-origin/dev
-aurmich/dev
+=======
+>>>>>>> aurmich/dev
+>>>>>>> aurmich/dev
+>>>>>>> 5693302 (.):docs/CONFLITTI_MERGE_RISOLTI.md
 ```
 
 #### 3. Conflitti nell'Implementazione dei Metodi
@@ -97,6 +197,16 @@ In `ApplyMetatagToPanelAction.php`, c'erano conflitti nell'implementazione del m
 
 ```php
 
+<<<<<<< HEAD:docs/conflitti_merge_risolti.md
+=======
+
+
+=======
+=======
+
+>>>>>>> aurmich/dev
+
+>>>>>>> 5693302 (.):docs/CONFLITTI_MERGE_RISOLTI.md
 // @phpstan-ignore argument.type
 ->colors($metatag->getColors())
 //->colors($metatag->getColors())
@@ -108,12 +218,38 @@ In `ApplyMetatagToPanelAction.php`, c'erano conflitti nell'implementazione del m
 //->colors($metatag->getColors())
 
 
+<<<<<<< HEAD:docs/conflitti_merge_risolti.md
 
+=======
+=======
+=======
+>>>>>>> aurmich/dev
+
+=======
+>>>>>>> aurmich/dev
+>>>>>>> aurmich/dev
+>>>>>>> 5693302 (.):docs/CONFLITTI_MERGE_RISOLTI.md
 
 // @phpstan-ignore argument.type
 ->colors($metatag->getColors())
 origin/dev
 aurmich/dev
+<<<<<<< HEAD:docs/conflitti_merge_risolti.md
+=======
+
+
+>>>>>>> aurmich/dev
+=======
+>>>>>>> aurmich/dev
+=======
+=======
+
+>>>>>>> aurmich/dev
+=======
+>>>>>>> aurmich/dev
+>>>>>>> aurmich/dev
+>>>>>>> aurmich/dev
+>>>>>>> 5693302 (.):docs/CONFLITTI_MERGE_RISOLTI.md
 ```
 
 #### 4. Conflitti nella Gestione delle Eccezioni
@@ -122,6 +258,16 @@ In `SaveJsonArrayAction.php`, c'erano conflitti nella gestione delle condizioni 
 
 ```php
 
+<<<<<<< HEAD:docs/conflitti_merge_risolti.md
+=======
+
+
+=======
+=======
+
+>>>>>>> aurmich/dev
+
+>>>>>>> 5693302 (.):docs/CONFLITTI_MERGE_RISOLTI.md
 //if ($content === false) {
 //    return false;
 //}
@@ -129,13 +275,36 @@ if ($content === false) {
     return false;
 }
 
+<<<<<<< HEAD:docs/conflitti_merge_risolti.md
 
+=======
+=======
+>>>>>>> aurmich/dev
+=======
+>>>>>>> aurmich/dev
+
+=======
+>>>>>>> aurmich/dev
+>>>>>>> aurmich/dev
+>>>>>>> 5693302 (.):docs/CONFLITTI_MERGE_RISOLTI.md
 
 //if ($content === false) {
 //    return false;
 //}
+<<<<<<< HEAD:docs/conflitti_merge_risolti.md
 origin/dev
 aurmich/dev
+=======
+
+
+=======
+origin/dev
+aurmich/dev
+=======
+
+>>>>>>> aurmich/dev
+
+>>>>>>> 5693302 (.):docs/CONFLITTI_MERGE_RISOLTI.md
 
 if ($content === false) {
     return false;
@@ -147,6 +316,14 @@ aurmich/dev
 
 origin/dev
 aurmich/dev
+<<<<<<< HEAD:docs/conflitti_merge_risolti.md
+=======
+>>>>>>> aurmich/dev
+
+=======
+>>>>>>> aurmich/dev
+>>>>>>> aurmich/dev
+>>>>>>> 5693302 (.):docs/CONFLITTI_MERGE_RISOLTI.md
 ```
 
 #### 5. Conflitti nelle API Fluenti
@@ -158,8 +335,28 @@ $headers = [
 
     'Content-Disposition' => 'attachment; filename=' . $filename,
 
+<<<<<<< HEAD:docs/conflitti_merge_risolti.md
 
 
+=======
+
+
+=======
+=======
+
+>>>>>>> aurmich/dev
+
+
+=======
+>>>>>>> origin/dev
+>>>>>>> aurmich/dev
+=======
+>>>>>>> aurmich/dev
+
+=======
+>>>>>>> aurmich/dev
+>>>>>>> aurmich/dev
+>>>>>>> 5693302 (.):docs/CONFLITTI_MERGE_RISOLTI.md
 ```
 
 E anche nella tipizzazione delle funzioni di callback:
@@ -173,8 +370,28 @@ $headStrings = array_map(function ($item) {
 
 
 
+<<<<<<< HEAD:docs/conflitti_merge_risolti.md
 
 
+=======
+
+
+=======
+=======
+
+>>>>>>> aurmich/dev
+
+
+=======
+>>>>>>> origin/dev
+>>>>>>> aurmich/dev
+=======
+>>>>>>> aurmich/dev
+
+=======
+>>>>>>> aurmich/dev
+>>>>>>> aurmich/dev
+>>>>>>> 5693302 (.):docs/CONFLITTI_MERGE_RISOLTI.md
 ```
 
 ## Soluzione Implementata
@@ -262,10 +479,30 @@ Per verificare la correttezza della soluzione, sono stati creati test Pest che v
 4. La gestione corretta delle eccezioni
 5. La compatibilità con PHPStan a livello massimo
 
+<<<<<<< HEAD:docs/conflitti_merge_risolti.md
+
+=======
 
 
+=======
+
+=======
+
+>>>>>>> aurmich/dev
+
+=======
+>>>>>>> 5693302 (.):docs/CONFLITTI_MERGE_RISOLTI.md
 
 
+<<<<<<< HEAD:docs/conflitti_merge_risolti.md
+
+=======
+>>>>>>> aurmich/dev
+
+=======
+>>>>>>> aurmich/dev
+>>>>>>> aurmich/dev
+>>>>>>> 5693302 (.):docs/CONFLITTI_MERGE_RISOLTI.md
 ### Test per i File del Modulo Media
 
 ```php
@@ -279,17 +516,53 @@ it('verifica che i file corretti non contengano marcatori di conflitto', functio
     foreach ($files as $file) {
         $content = File::get($file);
         expect($content)->not->toContain('')
+<<<<<<< HEAD:docs/conflitti_merge_risolti.md
+=======
+
+
+=======
+=======
+
+>>>>>>> aurmich/dev
+
+>>>>>>> 5693302 (.):docs/CONFLITTI_MERGE_RISOLTI.md
             ->and($content)->not->toContain('')
             ->and($content)->not->toContain('');
     }
 });
 ```
+<<<<<<< HEAD:docs/conflitti_merge_risolti.md
 
+=======
+=======
+=======
+>>>>>>> aurmich/dev
+
+=======
+>>>>>>> aurmich/dev
+>>>>>>> aurmich/dev
+>>>>>>> 5693302 (.):docs/CONFLITTI_MERGE_RISOLTI.md
             ->and($content)->not->toContain('origin/dev');
     }
 });
 ```
 aurmich/dev
+<<<<<<< HEAD:docs/conflitti_merge_risolti.md
+=======
+
+
+>>>>>>> aurmich/dev
+=======
+>>>>>>> aurmich/dev
+=======
+=======
+
+>>>>>>> aurmich/dev
+=======
+>>>>>>> aurmich/dev
+>>>>>>> aurmich/dev
+>>>>>>> aurmich/dev
+>>>>>>> 5693302 (.):docs/CONFLITTI_MERGE_RISOLTI.md
 
 ### Test per i File del Modulo Xot
 
@@ -313,8 +586,28 @@ $headers = [
 
     'Content-Disposition' => 'attachment; filename=' . $filename,
 
+<<<<<<< HEAD:docs/conflitti_merge_risolti.md
 
 
+=======
+
+
+=======
+=======
+
+>>>>>>> aurmich/dev
+
+
+=======
+>>>>>>> origin/dev
+>>>>>>> aurmich/dev
+=======
+>>>>>>> aurmich/dev
+
+=======
+>>>>>>> aurmich/dev
+>>>>>>> aurmich/dev
+>>>>>>> 5693302 (.):docs/CONFLITTI_MERGE_RISOLTI.md
 ];
 
 // Dopo
@@ -404,8 +697,26 @@ In particolare, le correzioni hanno portato i seguenti benefici:
 4. **Maggiore Coerenza**: Uniformità nell'implementazione dei metodi e nella gestione dei tipi
 5. **Compatibilità con PHPStan**: Riduzione degli errori di analisi statica
 
+<<<<<<< HEAD:docs/conflitti_merge_risolti.md
 Questo lavoro di risoluzione dei conflitti ha inoltre contribuito a stabilire best practices per la gestione dei merge nel progetto il progetto, che potranno essere applicate in futuro per prevenire problemi simili.
 
+=======
+Questo lavoro di risoluzione dei conflitti ha inoltre contribuito a stabilire best practices per la gestione dei merge nel progetto SaluteOra, che potranno essere applicate in futuro per prevenire problemi simili.
+
+
+=======
+=======
+
+>>>>>>> aurmich/dev
+
+=======
+=======
+>>>>>>> aurmich/dev
+
+=======
+>>>>>>> aurmich/dev
+>>>>>>> aurmich/dev
+>>>>>>> 5693302 (.):docs/CONFLITTI_MERGE_RISOLTI.md
 
 49ebea7 (.)`.
 
@@ -413,6 +724,7 @@ Questo lavoro di risoluzione dei conflitti ha inoltre contribuito a stabilire be
 
 **Documentazione**: [Moduli Cms](../../../Cms/docs/models/PageContent_conflict.md)
 
+<<<<<<< HEAD:docs/conflitti_merge_risolti.md
 ## Collegamenti tra versioni di CONFLITTI_MERGE_RISOLTI.md
 * [CONFLITTI_MERGE_RISOLTI.md](../../../Gdpr/docs/CONFLITTI_MERGE_RISOLTI.md)
 * [CONFLITTI_MERGE_RISOLTI.md](../../../Xot/docs/CONFLITTI_MERGE_RISOLTI.md)
@@ -425,3 +737,18 @@ Questo lavoro di risoluzione dei conflitti ha inoltre contribuito a stabilire be
 * [conflitti_merge_risolti.md](../../UI/docs/conflitti_merge_risolti.md)
 * [conflitti_merge_risolti.md](../../Media/docs/conflitti_merge_risolti.md)
 
+=======
+
+=======
+=======
+
+>>>>>>> aurmich/dev
+>>>>>>> aurmich/dev
+>>>>>>> aurmich/dev
+=======
+>>>>>>> aurmich/dev
+
+=======
+>>>>>>> aurmich/dev
+>>>>>>> aurmich/dev
+>>>>>>> 5693302 (.):docs/CONFLITTI_MERGE_RISOLTI.md
