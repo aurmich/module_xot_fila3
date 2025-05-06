@@ -244,7 +244,7 @@ Questa convenzione è importante perché:
 - Fanno parte delle linee guida per i nuovi sviluppatori
 
 ## Collegamenti tra versioni di NAMING_CONVENTIONS.md
-* [NAMING_CONVENTIONS.md](laravel/Modules/Xot/docs/NAMING_CONVENTIONS.md)
+* [NAMING_CONVENTIONS.md](../../../Xot/docs/NAMING_CONVENTIONS.md)
 * [NAMING_CONVENTIONS.md](laravel/docs/NAMING_CONVENTIONS.md)
 
 

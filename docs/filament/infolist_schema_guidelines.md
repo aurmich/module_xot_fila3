@@ -225,8 +225,8 @@ Il `LangServiceProvider` gestisce automaticamente le traduzioni delle label basa
 
 Infatti, il servizio `AutoLabelAction` intercetta la creazione dei componenti e applica automaticamente le traduzioni corrette, rendendo superfluo (e dannoso) l'uso esplicito del metodo `->label()`. 
 ## Collegamenti tra versioni di INFOLIST_SCHEMA_GUIDELINES.md
-* [INFOLIST_SCHEMA_GUIDELINES.md](laravel/Modules/Xot/docs/filament/INFOLIST_SCHEMA_GUIDELINES.md)
-* [INFOLIST_SCHEMA_GUIDELINES.md](laravel/Modules/UI/docs/INFOLIST_SCHEMA_GUIDELINES.md)
+* [INFOLIST_SCHEMA_GUIDELINES.md](../../../Xot/docs/filament/INFOLIST_SCHEMA_GUIDELINES.md)
+* [INFOLIST_SCHEMA_GUIDELINES.md](../../../UI/docs/INFOLIST_SCHEMA_GUIDELINES.md)
 
 
 ## Collegamenti tra versioni di infolist_schema_guidelines.md

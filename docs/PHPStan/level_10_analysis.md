@@ -122,8 +122,8 @@ Based on the volume and impact of issues, we will address them in the following 
 - [ ] Final verification
 
 ## Collegamenti tra versioni di LEVEL_10_ANALYSIS.md
-* [LEVEL_10_ANALYSIS.md](laravel/Modules/Xot/docs/phpstan/LEVEL_10_ANALYSIS.md)
-* [LEVEL_10_ANALYSIS.md](laravel/Modules/Xot/docs/PHPStan/LEVEL_10_ANALYSIS.md)
+* [LEVEL_10_ANALYSIS.md](../../../Xot/docs/phpstan/LEVEL_10_ANALYSIS.md)
+* [LEVEL_10_ANALYSIS.md](../../../Xot/docs/PHPStan/LEVEL_10_ANALYSIS.md)
 
 
 ## Collegamenti tra versioni di level_10_analysis.md

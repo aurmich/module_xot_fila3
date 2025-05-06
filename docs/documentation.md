@@ -45,7 +45,7 @@ Modules/[Nome]/
 - [Struttura dei Moduli](../docs/STRUCTURE.md) 
 ## Collegamenti tra versioni di documentation.md
 * [documentation.md](docs/rules/documentation.md)
-* [documentation.md](laravel/Modules/Xot/docs/documentation.md)
-* [documentation.md](laravel/Modules/Xot/docs/guidelines/documentation.md)
-* [documentation.md](laravel/Modules/Cms/docs/roadmap/features/documentation.md)
+* [documentation.md](../../../Xot/docs/documentation.md)
+* [documentation.md](../../../Xot/docs/guidelines/documentation.md)
+* [documentation.md](../../../Cms/docs/roadmap/features/documentation.md)
 

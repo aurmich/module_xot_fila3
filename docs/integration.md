@@ -68,9 +68,9 @@
 
 
 ## Collegamenti tra versioni di integration.md
-* [integration.md](laravel/Modules/Gdpr/docs/integration.md)
-* [integration.md](laravel/Modules/Xot/docs/integration.md)
-* [integration.md](laravel/Modules/Job/docs/integration.md)
+* [integration.md](../../../Gdpr/docs/integration.md)
+* [integration.md](../../../Xot/docs/integration.md)
+* [integration.md](../../../Job/docs/integration.md)
 
 
 ### Versione Incoming

@@ -169,6 +169,6 @@
 - [Accessibility Standards](../../accessibility/standards.md)
 - [Testing Protocols](../../testing/protocols.md) 
 ## Collegamenti tra versioni di ui.md
-* [ui.md](laravel/Modules/Xot/docs/roadmap/bottlenecks/ui.md)
-* [ui.md](laravel/Modules/UI/docs/ui.md)
+* [ui.md](../../../Xot/docs/roadmap/bottlenecks/ui.md)
+* [ui.md](../../../UI/docs/ui.md)
 

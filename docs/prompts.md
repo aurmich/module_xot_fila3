@@ -38,5 +38,5 @@ Per la regola universale sui prompt condivisi (come quelli in bashscripts/prompt
 
 ## Collegamenti tra versioni di prompts.md
 * [prompts.md](docs/prompts.md)
-* [prompts.md](laravel/Modules/Xot/docs/prompts.md)
+* [prompts.md](../../../Xot/docs/prompts.md)
 

@@ -188,8 +188,8 @@ Il trait include meccanismi di gestione degli errori, ad esempio:
 - Non definire azioni duplicate con lo stesso nome
 
 ## Collegamenti tra versioni di FILAMENT-TABLES.md
-* [FILAMENT-TABLES.md](laravel/Modules/Xot/docs/filament/FILAMENT-TABLES.md)
-* [FILAMENT-TABLES.md](laravel/Modules/Xot/docs/FILAMENT-TABLES.md)
+* [FILAMENT-TABLES.md](../../../Xot/docs/filament/FILAMENT-TABLES.md)
+* [FILAMENT-TABLES.md](../../../Xot/docs/FILAMENT-TABLES.md)
 
 
 ## Collegamenti tra versioni di filament-tables.md

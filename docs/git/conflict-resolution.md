@@ -174,6 +174,6 @@ php artisan test --filter=TestClass
 ## Collegamenti
 
 - [Git Documentation](https://git-scm.com/doc)
-- [Workflow Git](/laravel/Modules/Xot/docs/git/workflow.md)
-- [Best Practices](/laravel/Modules/Xot/docs/best-practices/git.md)
-- [CI/CD Pipeline](/laravel/Modules/Xot/docs/ci-cd/README.md) 
+- [Workflow Git](../../../Xot/docs/git/workflow.md)
+- [Best Practices](../../../Xot/docs/best-practices/git.md)
+- [CI/CD Pipeline](../../../Xot/docs/ci-cd/README.md) 

@@ -48,8 +48,8 @@ L'approccio più in linea con le convenzioni di Laraxot è l'aggiunta di un meto
 4. **Compatibilità:** Mantiene la compatibilità con il codice esistente che si aspetta questo pattern
 
 ## Collegamenti tra versioni di DATA_OBJECT_FIXES.md
-* [DATA_OBJECT_FIXES.md](laravel/Modules/Xot/docs/phpstan/DATA_OBJECT_FIXES.md)
-* [DATA_OBJECT_FIXES.md](laravel/Modules/Xot/docs/PHPStan/DATA_OBJECT_FIXES.md)
+* [DATA_OBJECT_FIXES.md](../../../Xot/docs/phpstan/DATA_OBJECT_FIXES.md)
+* [DATA_OBJECT_FIXES.md](../../../Xot/docs/PHPStan/DATA_OBJECT_FIXES.md)
 
 
 ## Collegamenti tra versioni di data_object_fixes.md

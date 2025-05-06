@@ -48,7 +48,7 @@
 - [Linee Guida Documentazione](../../DOCUMENTATION-GUIDELINES.md)
 - [Best Practices](../../BEST-PRACTICES.md) 
 ## Collegamenti tra versioni di status.md
-* [status.md](laravel/Modules/Xot/docs/roadmap/docs/status.md)
-* [status.md](laravel/Modules/Xot/docs/roadmap/testing/status.md)
-* [status.md](laravel/Modules/Xot/docs/roadmap/security/status.md)
+* [status.md](../../../Xot/docs/roadmap/docs/status.md)
+* [status.md](../../../Xot/docs/roadmap/testing/status.md)
+* [status.md](../../../Xot/docs/roadmap/security/status.md)
 

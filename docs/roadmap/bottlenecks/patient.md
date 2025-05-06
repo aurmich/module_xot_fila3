@@ -228,5 +228,5 @@
 ## Collegamenti tra versioni di patient.md
 * [patient.md](docs/moduli/patient.md)
 * [patient.md](docs/roadmap/moduli/patient.md)
-* [patient.md](laravel/Modules/Xot/docs/roadmap/bottlenecks/patient.md)
+* [patient.md](../../../Xot/docs/roadmap/bottlenecks/patient.md)
 

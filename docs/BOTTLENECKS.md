@@ -681,8 +681,8 @@ Implementando queste soluzioni, il modulo Xot potrà superare i principali colli
 - [Struttura Moduli](./MODULE_STRUCTURE.md)
 
 ## Collegamenti tra versioni di BOTTLENECKS.md
-* [BOTTLENECKS.md](laravel/Modules/Xot/docs/BOTTLENECKS.md)
-* [BOTTLENECKS.md](laravel/Modules/User/docs/BOTTLENECKS.md)
-* [BOTTLENECKS.md](laravel/Modules/Media/docs/BOTTLENECKS.md)
-* [BOTTLENECKS.md](laravel/Modules/Cms/docs/BOTTLENECKS.md)
+* [BOTTLENECKS.md](../../../Xot/docs/BOTTLENECKS.md)
+* [BOTTLENECKS.md](../../../User/docs/BOTTLENECKS.md)
+* [BOTTLENECKS.md](../../../Media/docs/BOTTLENECKS.md)
+* [BOTTLENECKS.md](../../../Cms/docs/BOTTLENECKS.md)
 

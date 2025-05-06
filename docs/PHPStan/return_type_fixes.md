@@ -34,8 +34,8 @@ While the docblock indicates the correct return type, the actual implementation 
 - Clear expectations for extending classes
 
 ## Collegamenti tra versioni di RETURN_TYPE_FIXES.md
-* [RETURN_TYPE_FIXES.md](laravel/Modules/Xot/docs/phpstan/RETURN_TYPE_FIXES.md)
-* [RETURN_TYPE_FIXES.md](laravel/Modules/Xot/docs/PHPStan/RETURN_TYPE_FIXES.md)
+* [RETURN_TYPE_FIXES.md](../../../Xot/docs/phpstan/RETURN_TYPE_FIXES.md)
+* [RETURN_TYPE_FIXES.md](../../../Xot/docs/PHPStan/RETURN_TYPE_FIXES.md)
 
 
 ## Collegamenti tra versioni di return_type_fixes.md

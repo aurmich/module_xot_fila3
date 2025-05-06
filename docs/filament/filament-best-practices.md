@@ -665,8 +665,8 @@ Consulta l'esempio completo all'inizio di questo documento per una implementazio
 - [Best Practices Laraxot](/var/www/html/exa/base_orisbroker_fila3/laravel/Modules/Xot/docs/best-practices.md)
 
 ## Collegamenti tra versioni di FILAMENT-BEST-PRACTICES.md
-* [FILAMENT-BEST-PRACTICES.md](laravel/Modules/Xot/docs/filament/FILAMENT-BEST-PRACTICES.md)
-* [FILAMENT-BEST-PRACTICES.md](laravel/Modules/Xot/docs/FILAMENT-BEST-PRACTICES.md)
+* [FILAMENT-BEST-PRACTICES.md](../../../Xot/docs/filament/FILAMENT-BEST-PRACTICES.md)
+* [FILAMENT-BEST-PRACTICES.md](../../../Xot/docs/FILAMENT-BEST-PRACTICES.md)
 
 
 ## Collegamenti tra versioni di filament-best-practices.md

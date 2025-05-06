@@ -89,8 +89,8 @@ For maximum efficiency, we'll implement fixes in the following order:
 - [ ] Run PHPStan after each batch of fixes to verify improvements
 
 ## Collegamenti tra versioni di FIX_IMPLEMENTATION_PLAN.md
-* [FIX_IMPLEMENTATION_PLAN.md](laravel/Modules/Xot/docs/phpstan/FIX_IMPLEMENTATION_PLAN.md)
-* [FIX_IMPLEMENTATION_PLAN.md](laravel/Modules/Xot/docs/PHPStan/FIX_IMPLEMENTATION_PLAN.md)
+* [FIX_IMPLEMENTATION_PLAN.md](../../../Xot/docs/phpstan/FIX_IMPLEMENTATION_PLAN.md)
+* [FIX_IMPLEMENTATION_PLAN.md](../../../Xot/docs/PHPStan/FIX_IMPLEMENTATION_PLAN.md)
 
 
 ## Collegamenti tra versioni di fix_implementation_plan.md

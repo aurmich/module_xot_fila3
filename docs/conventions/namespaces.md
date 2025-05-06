@@ -87,6 +87,6 @@ it('uses correct namespace for view models', function () {
 
 ## Collegamenti tra versioni di namespaces.md
 * [namespaces.md](docs/conventions/namespaces.md)
-* [namespaces.md](laravel/Modules/Xot/docs/conventions/namespaces.md)
-* [namespaces.md](laravel/Modules/Cms/docs/conventions/namespaces.md)
+* [namespaces.md](../../../Xot/docs/conventions/namespaces.md)
+* [namespaces.md](../../../Cms/docs/conventions/namespaces.md)
 

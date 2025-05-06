@@ -68,6 +68,6 @@ return [
 - [Documentazione Principale](../README.md) 
 ## Collegamenti tra versioni di configuration.md
 * [configuration.md](docs/configuration.md)
-* [configuration.md](laravel/Modules/Xot/docs/configuration.md)
-* [configuration.md](laravel/Modules/Cms/docs/configuration.md)
+* [configuration.md](../../../Xot/docs/configuration.md)
+* [configuration.md](../../../Cms/docs/configuration.md)
 

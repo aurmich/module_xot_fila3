@@ -145,8 +145,8 @@ class UserRepository implements UserRepositoryInterface
 
 Segui queste linee guida per risolvere la maggior parte degli errori relativi ai tipi generici nei tuoi modelli e relazioni Laravel. 
 ## Collegamenti tra versioni di PHPSTAN-GENERIC-TYPES.md
-* [PHPSTAN-GENERIC-TYPES.md](laravel/Modules/Xot/docs/phpstan/PHPSTAN-GENERIC-TYPES.md)
-* [PHPSTAN-GENERIC-TYPES.md](laravel/Modules/Xot/docs/PHPSTAN-GENERIC-TYPES.md)
+* [PHPSTAN-GENERIC-TYPES.md](../../../Xot/docs/phpstan/PHPSTAN-GENERIC-TYPES.md)
+* [PHPSTAN-GENERIC-TYPES.md](../../../Xot/docs/PHPSTAN-GENERIC-TYPES.md)
 
 
 ## Collegamenti tra versioni di phpstan-generic-types.md

@@ -52,8 +52,8 @@ Queste correzioni si allineano perfettamente con l'architettura basata esclusiva
 4. Tutte le interfacce utente rimangono coerenti attraverso l'applicazione
 
 ## Collegamenti tra versioni di PATH_RESOLUTION_FIXES.md
-* [PATH_RESOLUTION_FIXES.md](laravel/Modules/Xot/docs/phpstan/PATH_RESOLUTION_FIXES.md)
-* [PATH_RESOLUTION_FIXES.md](laravel/Modules/Xot/docs/PHPStan/PATH_RESOLUTION_FIXES.md)
+* [PATH_RESOLUTION_FIXES.md](../../../Xot/docs/phpstan/PATH_RESOLUTION_FIXES.md)
+* [PATH_RESOLUTION_FIXES.md](../../../Xot/docs/PHPStan/PATH_RESOLUTION_FIXES.md)
 
 
 ## Collegamenti tra versioni di path_resolution_fixes.md

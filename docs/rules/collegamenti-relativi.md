@@ -72,5 +72,5 @@ Questa regola si integra con il sistema di documentazione centralizzato descritt
 
 ## Collegamenti tra versioni di collegamenti-relativi.md
 * [collegamenti-relativi.md](docs/regole/collegamenti-relativi.md)
-* [collegamenti-relativi.md](laravel/Modules/Xot/docs/rules/collegamenti-relativi.md)
+* [collegamenti-relativi.md](../../../Xot/docs/rules/collegamenti-relativi.md)
 

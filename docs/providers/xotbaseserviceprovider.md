@@ -176,7 +176,7 @@ try {
 5. La registrazione dei componenti è automatica ma configurabile 
 ## Collegamenti tra versioni di XotBaseServiceProvider.md
 * [XotBaseServiceProvider.md](docs/moduli/xot/XotBaseServiceProvider.md)
-* [XotBaseServiceProvider.md](laravel/Modules/Xot/docs/providers/XotBaseServiceProvider.md)
+* [XotBaseServiceProvider.md](../../../Xot/docs/providers/XotBaseServiceProvider.md)
 
 
 ## Collegamenti tra versioni di xotbaseserviceprovider.md

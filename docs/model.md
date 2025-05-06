@@ -9,8 +9,8 @@ section: content
 
 # Model Queuable Actions
 ## Collegamenti tra versioni di model.md
-* [model.md](laravel/Modules/Xot/docs/model.md)
-* [model.md](laravel/Modules/Xot/docs/service/model.md)
+* [model.md](../../../Xot/docs/model.md)
+* [model.md](../../../Xot/docs/service/model.md)
 
 
 ### Versione Incoming

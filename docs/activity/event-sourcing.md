@@ -34,8 +34,8 @@ avere un controllo su un eventuale corruzione dei dati (bug, malicius, errore um
 
 
 ## Collegamenti tra versioni di event-sourcing.md
-* [event-sourcing.md](laravel/Modules/Xot/docs/activity/event-sourcing.md)
-* [event-sourcing.md](laravel/Modules/Tenant/docs/it/config/event-sourcing.md)
+* [event-sourcing.md](../../../Xot/docs/activity/event-sourcing.md)
+* [event-sourcing.md](../../../Tenant/docs/it/config/event-sourcing.md)
 
 
 ### Versione Incoming

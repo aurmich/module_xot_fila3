@@ -75,8 +75,8 @@ Implementeremo quindi le classi Data mancanti, iniziando da RouteData che sembra
 Poiché il progetto utilizza esclusivamente Filament senza controller o Blade, queste classi Data servono principalmente come strutture per configurazione e trasferimento dati tra componenti Filament, non impattando l'architettura generale ma migliorando la manutenibilità del codice.
 
 ## Collegamenti tra versioni di MISSING_DATA_CLASSES_FIXES.md
-* [MISSING_DATA_CLASSES_FIXES.md](laravel/Modules/Xot/docs/phpstan/MISSING_DATA_CLASSES_FIXES.md)
-* [MISSING_DATA_CLASSES_FIXES.md](laravel/Modules/Xot/docs/PHPStan/MISSING_DATA_CLASSES_FIXES.md)
+* [MISSING_DATA_CLASSES_FIXES.md](../../../Xot/docs/phpstan/MISSING_DATA_CLASSES_FIXES.md)
+* [MISSING_DATA_CLASSES_FIXES.md](../../../Xot/docs/PHPStan/MISSING_DATA_CLASSES_FIXES.md)
 
 
 ## Collegamenti tra versioni di missing_data_classes_fixes.md

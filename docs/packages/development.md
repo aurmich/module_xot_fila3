@@ -81,8 +81,8 @@ Ignition::editor('vscode');
 
 
 ## Collegamenti tra versioni di development.md
-* [development.md](laravel/Modules/Gdpr/docs/development.md)
-* [development.md](laravel/Modules/Xot/docs/packages/development.md)
+* [development.md](../../../Gdpr/docs/development.md)
+* [development.md](../../../Xot/docs/packages/development.md)
 
 
 ### Versione Incoming

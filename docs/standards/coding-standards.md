@@ -443,6 +443,6 @@ git commit -m "fix: correzione calcolo età paziente"
 - Monitorare performance
 - Alert su errori 
 ## Collegamenti tra versioni di coding-standards.md
-* [coding-standards.md](laravel/Modules/Xot/docs/standards/coding-standards.md)
-* [coding-standards.md](laravel/Modules/Xot/docs/conventions/coding-standards.md)
+* [coding-standards.md](../../../Xot/docs/standards/coding-standards.md)
+* [coding-standards.md](../../../Xot/docs/conventions/coding-standards.md)
 

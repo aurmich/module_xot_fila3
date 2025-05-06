@@ -29,11 +29,11 @@
 - [Chart](../Chart/docs/README.md) - Grafici 
 
 ## Collegamenti tra versioni di LINKS.md
-* [LINKS.md](laravel/Modules/Xot/docs/LINKS.md)
-* [LINKS.md](laravel/Modules/User/docs/LINKS.md)
-* [LINKS.md](laravel/Modules/UI/docs/LINKS.md)
-* [LINKS.md](laravel/Modules/Cms/docs/LINKS.md)
-* [LINKS.md](laravel/Themes/One/docs/LINKS.md)
+* [LINKS.md](../../../Xot/docs/LINKS.md)
+* [LINKS.md](../../../User/docs/LINKS.md)
+* [LINKS.md](../../../UI/docs/LINKS.md)
+* [LINKS.md](../../../Cms/docs/LINKS.md)
+* [LINKS.md](../../../../Themes/One/docs/LINKS.md)
 
 
 ## Collegamenti tra versioni di links.md
@@ -42,7 +42,7 @@
 * [links.md](ci/links.md)
 * [links.md](open_sources/links.md)
 * [links.md](../../User/docs/links.md)
-* [links.md](../../User/resources/views/docs/links.md)
+* [links.md](../../User/docs/links.md)
 * [links.md](../../UI/docs/links.md)
 * [links.md](../../Lang/docs/links.md)
 * [links.md](../../Job/docs/links.md)

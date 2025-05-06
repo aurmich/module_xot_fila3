@@ -36,12 +36,12 @@ $page->navigation
 
 
 ## Collegamenti tra versioni di navigation.md
-* [navigation.md](laravel/Modules/Gdpr/docs/navigation.md)
-* [navigation.md](laravel/Modules/Xot/docs/navigation.md)
-* [navigation.md](laravel/Modules/UI/docs/navigation.md)
-* [navigation.md](laravel/Modules/Cms/docs/blocks/navigation.md)
-* [navigation.md](laravel/Modules/Cms/docs/navigation.md)
-* [navigation.md](laravel/Modules/Cms/docs/components/navigation.md)
+* [navigation.md](../../../Gdpr/docs/navigation.md)
+* [navigation.md](../../../Xot/docs/navigation.md)
+* [navigation.md](../../../UI/docs/navigation.md)
+* [navigation.md](../../../Cms/docs/blocks/navigation.md)
+* [navigation.md](../../../Cms/docs/navigation.md)
+* [navigation.md](../../../Cms/docs/components/navigation.md)
 
 
 ### Versione Incoming

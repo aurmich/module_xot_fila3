@@ -256,5 +256,5 @@ class Patients extends Model  // Non usare plurale
 
 ## Collegamenti tra versioni di naming-conventions.md
 * [naming-conventions.md](docs/naming-conventions.md)
-* [naming-conventions.md](laravel/Modules/Xot/docs/naming-conventions.md)
+* [naming-conventions.md](../../../Xot/docs/naming-conventions.md)
 

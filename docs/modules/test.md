@@ -15,8 +15,8 @@ Modulo test serve per mettere azioni da testare.
 
 
 ## Collegamenti tra versioni di test.md
-* [test.md](laravel/Modules/Xot/docs/modules/test.md)
-* [test.md](laravel/Modules/Lang/docs/test.md)
+* [test.md](../../../Xot/docs/modules/test.md)
+* [test.md](../../../Lang/docs/test.md)
 
 
 ### Versione Incoming

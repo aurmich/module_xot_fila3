@@ -283,9 +283,9 @@ trait HasXotOptimizations
 
 ``` 
 ## Collegamenti tra versioni di bottlenecks_detailed.md
-* [bottlenecks_detailed.md](laravel/Modules/Xot/docs/bottlenecks_detailed.md)
-* [bottlenecks_detailed.md](laravel/Modules/Job/docs/bottlenecks_detailed.md)
-* [bottlenecks_detailed.md](laravel/Modules/Media/docs/bottlenecks_detailed.md)
+* [bottlenecks_detailed.md](../../../Xot/docs/bottlenecks_detailed.md)
+* [bottlenecks_detailed.md](../../../Job/docs/bottlenecks_detailed.md)
+* [bottlenecks_detailed.md](../../../Media/docs/bottlenecks_detailed.md)
 
 
 ### Versione Incoming

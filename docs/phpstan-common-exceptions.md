@@ -235,8 +235,8 @@ public function getModel(): ?Model
 
 L'analisi statica del codice con PHPStan a livello 10 è uno strumento potente per migliorare la qualità del codice e prevenire errori durante l'esecuzione. Seguendo queste best practices, è possibile risolvere la maggior parte degli errori comuni e scrivere codice più robusto e manutenibile. 
 ## Collegamenti tra versioni di PHPSTAN-COMMON-EXCEPTIONS.md
-* [PHPSTAN-COMMON-EXCEPTIONS.md](laravel/Modules/Xot/docs/phpstan/PHPSTAN-COMMON-EXCEPTIONS.md)
-* [PHPSTAN-COMMON-EXCEPTIONS.md](laravel/Modules/Xot/docs/PHPSTAN-COMMON-EXCEPTIONS.md)
+* [PHPSTAN-COMMON-EXCEPTIONS.md](../../../Xot/docs/phpstan/PHPSTAN-COMMON-EXCEPTIONS.md)
+* [PHPSTAN-COMMON-EXCEPTIONS.md](../../../Xot/docs/PHPSTAN-COMMON-EXCEPTIONS.md)
 
 
 ## Collegamenti tra versioni di phpstan-common-exceptions.md

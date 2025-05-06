@@ -8,29 +8,29 @@ Il modulo Xot è il modulo base che fornisce le classi e le funzionalità fondam
 ## Indice
 
 ### Architettura e Componenti Base
-- [Architecture](architecture.md) - Architettura del modulo
-- [Base Classes](base_classes.md) - Classi base
-- [Service Providers](service_providers.md) - Provider di servizi
+- [Architecture](./architecture.md) - Architettura del modulo
+- [Base Classes](./base_classes.md) - Classi base
+- [Service Providers](./service_providers.md) - Provider di servizi
 
 ### Filament
-- [Filament Integration](filament_integration.md) - Integrazione con Filament
-- [Widgets](widgets.md) - Sistema widget
-- [Resources](resources.md) - Gestione risorse
+- [Filament Integration](./filament_integration.md) - Integrazione con Filament
+- [Widgets](./widgets.md) - Sistema widget
+- [Resources](./resources.md) - Gestione risorse
 
 ### Service Providers
-- [Provider Structure](provider_structure.md) - Struttura provider
-- [Provider Traits](provider_traits.md) - Trait per provider
-- [Provider Best Practices](provider_best_practices.md) - Best practices
+- [Provider Structure](./provider_structure.md) - Struttura provider
+- [Provider Traits](./provider_traits.md) - Trait per provider
+- [Provider Best Practices](./provider_best_practices.md) - Best practices
 
 ### Testing e Quality
-- [Testing](testing.md) - Testing e quality assurance
-- [Best Practices](BEST-PRACTICES.md) - Linee guida generali
-- [Security](security.md) - Sicurezza e hardening
+- [Testing](./testing.md) - Testing e quality assurance
+- [Best Practices](./BEST-PRACTICES.md) - Linee guida generali
+- [Security](./security.md) - Sicurezza e hardening
 
 ### Documentazione Tecnica
-- [Roadmap](roadmap.md) - Piano di sviluppo futuro
-- [Bottlenecks](bottlenecks.md) - Analisi performance e ottimizzazioni
-- [Module Structure](MODULE_STRUCTURE.md) - Struttura moduli
+- [Roadmap](./roadmap.md) - Piano di sviluppo futuro
+- [Bottlenecks](./bottlenecks.md) - Analisi performance e ottimizzazioni
+- [Module Structure](./MODULE_STRUCTURE.md) - Struttura moduli
 
 ### Link Esterni
 - [Laravel Framework](https://laravel.com/docs/12.x)
@@ -100,22 +100,17 @@ Il modulo Xot è il cuore dell'architettura dell'applicazione. Fornisce le class
 ### Versione Incoming
 
 ##> **Collegamenti correlati**
-> - [README.md documentazione generale <nome progetto>](../../../../docs/README.md)
-> - [README.md toolkit bashscripts](../../../../bashscripts/docs/README.md)
-> - [README.md modulo CMS](../../../../laravel/Modules/Cms/docs/README.md)
-> - [README.md modulo Dental](../../../../laravel/Modules/Dental/docs/README.md)
-> - [README.md modulo GDPR](../../../../laravel/Modules/Gdpr/docs/README.md)
-> - [README.md modulo User](../../../../laravel/Modules/User/docs/README.md)
-> - [README.md modulo Lang](../../../../laravel/Modules/Lang/docs/README.md)
-> - [README.md modulo Media](../../../../laravel/Modules/Media/docs/README.md)
-> - [README.md modulo Notify](../../../../laravel/Modules/Notify/docs/README.md)
-> - [README.md modulo Reporting](../../../../laravel/Modules/Reporting/docs/README.md)
-> - [README.md modulo Tenant](../../../../laravel/Modules/Tenant/docs/README.md)
-> - [README.md modulo UI](../../../../laravel/Modules/UI/docs/README.md)
-> - [README.md modulo Xot](../../../../laravel/Modules/Xot/docs/README.md)
-> - [README.md modulo Chart](../../../../laravel/Modules/Chart/docs/README.md)
-> - [README.md tema One](../../../../laravel/Themes/One/docs/README.md)
-> - [Collegamenti documentazione centrale](../../../../docs/collegamenti-documentazione.md)
+> - [README.md documentazione generale](../../docs/README.md)
+> - [README.md toolkit bashscripts](../../bashscripts/docs/README.md)
+> - [README.md modulo GDPR](../Gdpr/docs/README.md)
+> - [README.md modulo User](../User/docs/README.md)
+> - [README.md modulo Lang](../Lang/docs/README.md)
+> - [README.md modulo CMS](../../laravel/Modules/Cms/docs/README.md) <!-- TODO: documento non presente -->
+> - [README.md modulo Reporting](../../laravel/Modules/Reporting/docs/README.md) <!-- TODO: documento non presente -->
+> - [README.md modulo Chart](../../laravel/Modules/Chart/docs/README.md) <!-- TODO: documento non presente -->
+> - [README.md modulo UI](../UI/docs/README.md)
+> - [README.md modulo Xot](../Xot/docs/README.md)
+> - [Collegamenti documentazione centrale](../../docs/collegamenti-documentazione.md)
 
 
 ---
@@ -123,11 +118,11 @@ Il modulo Xot è il cuore dell'architettura dell'applicazione. Fornisce le class
 ## Collegamenti Principali
 
 ### Documentazione Core
-- [Struttura del Modulo](structure.md)
-- [Base Classes](base-classes.md)
-- [Service Provider](SERVICE-PROVIDER-BEST-PRACTICES.md)
-- [Filament Integration](FILAMENT_BEST_PRACTICES.md)
-- [Module Structure](MODULE_STRUCTURE.md)
+- [Struttura del Modulo](./structure.md)
+- [Base Classes](./base-classes.md)
+- [Service Provider](./SERVICE-PROVIDER-BEST-PRACTICES.md)
+- [Filament Integration](./FILAMENT_BEST_PRACTICES.md)
+- [Module Structure](./MODULE_STRUCTURE.md)
 
 ### Integrazioni
 - [Integrazione con User](../User/docs/README.md)
@@ -135,15 +130,15 @@ Il modulo Xot è il cuore dell'architettura dell'applicazione. Fornisce le class
 - [Integrazione con UI](../UI/docs/README.md)
 
 ### Best Practices
-- [Best Practices Generali](BEST-PRACTICES.md)
-- [Convenzioni Namespace](namespace-conventions.md)
-- [PHPStan Fixes](phpstan-fixes.md)
-- [Risoluzione Conflitti](RISOLUZIONE_CONFLITTI_MERGE.md)
+- [Best Practices Generali](./BEST-PRACTICES.md)
+- [Convenzioni Namespace](./namespace-conventions.md)
+- [PHPStan Fixes](./phpstan-fixes.md)
+- [Risoluzione Conflitti](./RISOLUZIONE_CONFLITTI_MERGE.md)
 
 ### Testing e Qualità
-- [PHPStan Level 9](PHPSTAN_LEVEL9_FIXES.md)
-- [PHPStan Level 10](PHPSTAN_LEVEL10_FIXES.md)
-- [Testing Best Practices](testing-best-practices.md)
+- [PHPStan Level 9](./PHPSTAN_LEVEL9_FIXES.md)
+- [PHPStan Level 10](./PHPSTAN_LEVEL10_FIXES.md)
+- [Testing Best Practices](./testing-best-practices.md)
 
 ## Struttura del Modulo
 
@@ -348,96 +343,6 @@ class User extends XotBaseModel { ... }
 - Problemi di configurazione
 - Errori di integrazione
 ### Versione HEAD
-
-
-### Versione Incoming
-
-## Collegamenti Rapidi
-- [Torna alla Documentazione Principale](../../../docs/README.md)
-- [Standards di Codifica](../../../docs/standards/CODING.md)
-- [Configurazione](configuration/BASE.md)
-- [Sviluppo](development/SETUP.md)
-
-## Collegamenti tra versioni di README.md
-* [README.md](bashscripts/docs/README.md)
-* [README.md](bashscripts/docs/it/README.md)
-* [README.md](docs/laravel-app/phpstan/README.md)
-* [README.md](docs/laravel-app/README.md)
-* [README.md](docs/moduli/struttura/README.md)
-* [README.md](docs/moduli/README.md)
-* [README.md](docs/moduli/manutenzione/README.md)
-* [README.md](docs/moduli/core/README.md)
-* [README.md](docs/moduli/installati/README.md)
-* [README.md](docs/moduli/comandi/README.md)
-* [README.md](docs/phpstan/README.md)
-* [README.md](docs/README.md)
-* [README.md](docs/module-links/README.md)
-* [README.md](docs/troubleshooting/git-conflicts/README.md)
-* [README.md](docs/tecnico/laraxot/README.md)
-* [README.md](docs/modules/README.md)
-* [README.md](docs/conventions/README.md)
-* [README.md](docs/amministrazione/backup/README.md)
-* [README.md](docs/amministrazione/monitoraggio/README.md)
-* [README.md](docs/amministrazione/deployment/README.md)
-* [README.md](docs/translations/README.md)
-* [README.md](docs/roadmap/README.md)
-* [README.md](docs/ide/cursor/README.md)
-* [README.md](docs/implementazione/api/README.md)
-* [README.md](docs/implementazione/testing/README.md)
-* [README.md](docs/implementazione/pazienti/README.md)
-* [README.md](docs/implementazione/ui/README.md)
-* [README.md](docs/implementazione/dental/README.md)
-* [README.md](docs/implementazione/core/README.md)
-* [README.md](docs/implementazione/reporting/README.md)
-* [README.md](docs/implementazione/isee/README.md)
-* [README.md](docs/it/README.md)
-* [README.md](laravel/vendor/mockery/mockery/docs/README.md)
-* [README.md](laravel/Modules/Chart/docs/README.md)
-* [README.md](laravel/Modules/Reporting/docs/README.md)
-* [README.md](laravel/Modules/Gdpr/docs/phpstan/README.md)
-* [README.md](laravel/Modules/Gdpr/docs/README.md)
-* [README.md](laravel/Modules/Notify/docs/phpstan/README.md)
-* [README.md](laravel/Modules/Notify/docs/README.md)
-* [README.md](laravel/Modules/Xot/docs/filament/README.md)
-* [README.md](laravel/Modules/Xot/docs/phpstan/README.md)
-* [README.md](laravel/Modules/Xot/docs/exceptions/README.md)
-* [README.md](laravel/Modules/Xot/docs/README.md)
-* [README.md](laravel/Modules/Xot/docs/standards/README.md)
-* [README.md](laravel/Modules/Xot/docs/conventions/README.md)
-* [README.md](laravel/Modules/Xot/docs/development/README.md)
-* [README.md](laravel/Modules/Dental/docs/README.md)
-* [README.md](laravel/Modules/User/docs/phpstan/README.md)
-* [README.md](laravel/Modules/User/docs/README.md)
-* [README.md](laravel/Modules/User/resources/views/docs/README.md)
-* [README.md](laravel/Modules/UI/docs/phpstan/README.md)
-* [README.md](laravel/Modules/UI/docs/README.md)
-* [README.md](laravel/Modules/UI/docs/standards/README.md)
-* [README.md](laravel/Modules/UI/docs/themes/README.md)
-* [README.md](laravel/Modules/UI/docs/components/README.md)
-* [README.md](laravel/Modules/Lang/docs/phpstan/README.md)
-* [README.md](laravel/Modules/Lang/docs/README.md)
-* [README.md](laravel/Modules/Job/docs/phpstan/README.md)
-* [README.md](laravel/Modules/Job/docs/README.md)
-* [README.md](laravel/Modules/Media/docs/phpstan/README.md)
-* [README.md](laravel/Modules/Media/docs/README.md)
-* [README.md](laravel/Modules/Tenant/docs/phpstan/README.md)
-* [README.md](laravel/Modules/Tenant/docs/README.md)
-* [README.md](laravel/Modules/Activity/docs/phpstan/README.md)
-* [README.md](laravel/Modules/Activity/docs/README.md)
-* [README.md](laravel/Modules/Patient/docs/README.md)
-* [README.md](laravel/Modules/Patient/docs/standards/README.md)
-* [README.md](laravel/Modules/Patient/docs/value-objects/README.md)
-* [README.md](laravel/Modules/Cms/docs/blocks/README.md)
-* [README.md](laravel/Modules/Cms/docs/README.md)
-* [README.md](laravel/Modules/Cms/docs/standards/README.md)
-* [README.md](laravel/Modules/Cms/docs/content/README.md)
-* [README.md](laravel/Modules/Cms/docs/frontoffice/README.md)
-* [README.md](laravel/Modules/Cms/docs/components/README.md)
-* [README.md](laravel/Themes/Two/docs/README.md)
-* [README.md](laravel/Themes/One/docs/README.md)
-
-
----
 
 
 ### Versione Incoming

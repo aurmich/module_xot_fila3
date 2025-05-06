@@ -530,8 +530,8 @@ Errori PHPStan come `Class Modules\Xot\app\Console\Commands\DatabaseSchemaExport
 ```
 
 ## Collegamenti tra versioni di PHPSTAN_LIVELLO10_LINEE_GUIDA.md
-* [PHPSTAN_LIVELLO10_LINEE_GUIDA.md](laravel/Modules/Xot/docs/phpstan/PHPSTAN_LIVELLO10_LINEE_GUIDA.md)
-* [PHPSTAN_LIVELLO10_LINEE_GUIDA.md](laravel/Modules/Xot/docs/PHPSTAN_LIVELLO10_LINEE_GUIDA.md)
+* [PHPSTAN_LIVELLO10_LINEE_GUIDA.md](../../../Xot/docs/phpstan/PHPSTAN_LIVELLO10_LINEE_GUIDA.md)
+* [PHPSTAN_LIVELLO10_LINEE_GUIDA.md](../../../Xot/docs/PHPSTAN_LIVELLO10_LINEE_GUIDA.md)
 
 
 ## Collegamenti tra versioni di phpstan_livello10_linee_guida.md

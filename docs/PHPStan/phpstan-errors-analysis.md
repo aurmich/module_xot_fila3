@@ -45,8 +45,8 @@ Per correggere questi errori, seguiremo un approccio sistematico:
 
 Procederemo analizzando e correggendo gli errori modulo per modulo, partendo dai casi più semplici e ripetitivi per poi affrontare quelli più complessi. 
 ## Collegamenti tra versioni di PHPSTAN-ERRORS-ANALYSIS.md
-* [PHPSTAN-ERRORS-ANALYSIS.md](laravel/Modules/Xot/docs/phpstan/PHPSTAN-ERRORS-ANALYSIS.md)
-* [PHPSTAN-ERRORS-ANALYSIS.md](laravel/Modules/Xot/docs/PHPStan/PHPSTAN-ERRORS-ANALYSIS.md)
+* [PHPSTAN-ERRORS-ANALYSIS.md](../../../Xot/docs/phpstan/PHPSTAN-ERRORS-ANALYSIS.md)
+* [PHPSTAN-ERRORS-ANALYSIS.md](../../../Xot/docs/PHPStan/PHPSTAN-ERRORS-ANALYSIS.md)
 
 
 ## Collegamenti tra versioni di phpstan-errors-analysis.md

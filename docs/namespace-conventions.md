@@ -403,7 +403,7 @@ class UserResource extends Resource
 - Aggiornare moduli esistenti
 
 ## Collegamenti tra versioni di namespace-conventions.md
-* [namespace-conventions.md](laravel/Modules/Xot/docs/namespace-conventions.md)
-* [namespace-conventions.md](laravel/Modules/User/docs/namespace-conventions.md)
-* [namespace-conventions.md](laravel/Modules/Cms/docs/best-practices/namespace-conventions.md)
+* [namespace-conventions.md](../../../Xot/docs/namespace-conventions.md)
+* [namespace-conventions.md](../../../User/docs/namespace-conventions.md)
+* [namespace-conventions.md](../../../Cms/docs/best-practices/namespace-conventions.md)
 

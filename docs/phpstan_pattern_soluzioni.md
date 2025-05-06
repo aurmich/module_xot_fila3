@@ -280,8 +280,8 @@ Questi pattern rappresentano le soluzioni standard da adottare in tutto il modul
 2. Estendere questi pattern ad altri moduli del progetto
 3. Aggiornare regolarmente questo documento con nuovi pattern identificati 
 ## Collegamenti tra versioni di PHPSTAN_PATTERN_SOLUZIONI.md
-* [PHPSTAN_PATTERN_SOLUZIONI.md](laravel/Modules/Xot/docs/phpstan/PHPSTAN_PATTERN_SOLUZIONI.md)
-* [PHPSTAN_PATTERN_SOLUZIONI.md](laravel/Modules/Xot/docs/PHPSTAN_PATTERN_SOLUZIONI.md)
+* [PHPSTAN_PATTERN_SOLUZIONI.md](../../../Xot/docs/phpstan/PHPSTAN_PATTERN_SOLUZIONI.md)
+* [PHPSTAN_PATTERN_SOLUZIONI.md](../../../Xot/docs/PHPSTAN_PATTERN_SOLUZIONI.md)
 
 
 ## Collegamenti tra versioni di phpstan_pattern_soluzioni.md

@@ -212,5 +212,5 @@
 ## Collegamenti tra versioni di dental.md
 * [dental.md](docs/moduli/dental.md)
 * [dental.md](docs/roadmap/moduli/dental.md)
-* [dental.md](laravel/Modules/Xot/docs/roadmap/bottlenecks/dental.md)
+* [dental.md](../../../Xot/docs/roadmap/bottlenecks/dental.md)
 

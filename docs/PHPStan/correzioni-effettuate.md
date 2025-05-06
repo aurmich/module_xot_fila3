@@ -367,8 +367,8 @@ public function execute(string $model_class): Factory
 3. Verificare che le correzioni non introducano regressioni nel codice.
 4. Eseguire nuovamente PHPStan per verificare che gli errori siano stati risolti.
 ## Collegamenti tra versioni di CORREZIONI-EFFETTUATE.md
-* [CORREZIONI-EFFETTUATE.md](laravel/Modules/Xot/docs/phpstan/CORREZIONI-EFFETTUATE.md)
-* [CORREZIONI-EFFETTUATE.md](laravel/Modules/Xot/docs/PHPStan/CORREZIONI-EFFETTUATE.md)
+* [CORREZIONI-EFFETTUATE.md](../../../Xot/docs/phpstan/CORREZIONI-EFFETTUATE.md)
+* [CORREZIONI-EFFETTUATE.md](../../../Xot/docs/PHPStan/CORREZIONI-EFFETTUATE.md)
 
 
 ## Collegamenti tra versioni di correzioni-effettuate.md

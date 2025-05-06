@@ -134,5 +134,5 @@ rm -rf database/migrations
 ## Collegamenti tra versioni di struttura-progetto.md
 * [struttura-progetto.md](docs/tecnico/struttura/struttura-progetto.md)
 * [struttura-progetto.md](docs/tecnico/struttura-progetto.md)
-* [struttura-progetto.md](laravel/Modules/Xot/docs/architecture/struttura-progetto.md)
+* [struttura-progetto.md](../../../Xot/docs/architecture/struttura-progetto.md)
 

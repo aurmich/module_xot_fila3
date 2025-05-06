@@ -122,11 +122,11 @@ php artisan serve
 - [Regole di Documentazione](documentation-rules.md)
 
 ## Collegamenti tra versioni di installation.md
-* [installation.md](laravel/Modules/Xot/docs/filament/installation.md)
-* [installation.md](laravel/Modules/Xot/docs/installation.md)
-* [installation.md](laravel/Modules/Xot/docs/base/installation.md)
-* [installation.md](laravel/Modules/User/resources/views/docs/installation.md)
-* [installation.md](laravel/Modules/Lang/docs/installation.md)
-* [installation.md](laravel/Modules/Cms/docs/installation.md)
-* [installation.md](laravel/Themes/One/docs/installation.md)
+* [installation.md](../../../Xot/docs/filament/installation.md)
+* [installation.md](../../../Xot/docs/installation.md)
+* [installation.md](../../../Xot/docs/base/installation.md)
+* [installation.md](../../../User/docs/installation.md)
+* [installation.md](../../../Lang/docs/installation.md)
+* [installation.md](../../../Cms/docs/installation.md)
+* [installation.md](../../../../Themes/One/docs/installation.md)
 

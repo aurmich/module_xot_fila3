@@ -39,8 +39,8 @@ The static property `$view` in XotBaseWidget is declared with a type of `view-st
 - Follow Laravel view-string conventions
 
 ## Collegamenti tra versioni di PROPERTY_TYPE_FIXES.md
-* [PROPERTY_TYPE_FIXES.md](laravel/Modules/Xot/docs/phpstan/PROPERTY_TYPE_FIXES.md)
-* [PROPERTY_TYPE_FIXES.md](laravel/Modules/Xot/docs/PHPStan/PROPERTY_TYPE_FIXES.md)
+* [PROPERTY_TYPE_FIXES.md](../../../Xot/docs/phpstan/PROPERTY_TYPE_FIXES.md)
+* [PROPERTY_TYPE_FIXES.md](../../../Xot/docs/PHPStan/PROPERTY_TYPE_FIXES.md)
 
 
 ## Collegamenti tra versioni di property_type_fixes.md

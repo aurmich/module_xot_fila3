@@ -261,8 +261,8 @@ public function user()
 
 Implementando queste soluzioni sistematicamente, sarà possibile risolvere la maggior parte degli errori PHPStan di livello 9. 
 ## Collegamenti tra versioni di PHPSTAN-SOLUTIONS.md
-* [PHPSTAN-SOLUTIONS.md](laravel/Modules/Xot/docs/phpstan/PHPSTAN-SOLUTIONS.md)
-* [PHPSTAN-SOLUTIONS.md](laravel/Modules/Xot/docs/PHPStan/PHPSTAN-SOLUTIONS.md)
+* [PHPSTAN-SOLUTIONS.md](../../../Xot/docs/phpstan/PHPSTAN-SOLUTIONS.md)
+* [PHPSTAN-SOLUTIONS.md](../../../Xot/docs/PHPStan/PHPSTAN-SOLUTIONS.md)
 
 
 ## Collegamenti tra versioni di phpstan-solutions.md

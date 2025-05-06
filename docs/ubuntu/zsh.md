@@ -22,6 +22,6 @@ usefull links:
 
 
 ## Collegamenti tra versioni di zsh.md
-* [zsh.md](laravel/Modules/Xot/docs/install/zsh.md)
-* [zsh.md](laravel/Modules/Xot/docs/ubuntu/zsh.md)
+* [zsh.md](../../../Xot/docs/install/zsh.md)
+* [zsh.md](../../../Xot/docs/ubuntu/zsh.md)
 

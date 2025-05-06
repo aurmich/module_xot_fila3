@@ -27,8 +27,8 @@ The `getProfileClass()` method is currently returning a simple string, but PHPSt
 - Prevents potential runtime errors when the class name is used
 
 ## Collegamenti tra versioni di CLASS_STRING_FIXES.md
-* [CLASS_STRING_FIXES.md](laravel/Modules/Xot/docs/phpstan/CLASS_STRING_FIXES.md)
-* [CLASS_STRING_FIXES.md](laravel/Modules/Xot/docs/PHPStan/CLASS_STRING_FIXES.md)
+* [CLASS_STRING_FIXES.md](../../../Xot/docs/phpstan/CLASS_STRING_FIXES.md)
+* [CLASS_STRING_FIXES.md](../../../Xot/docs/PHPStan/CLASS_STRING_FIXES.md)
 
 
 ## Collegamenti tra versioni di class_string_fixes.md

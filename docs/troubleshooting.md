@@ -216,6 +216,6 @@ APP_DEBUG=false
 - [Regole di Documentazione](documentation-rules.md) 
 
 ## Collegamenti tra versioni di troubleshooting.md
-* [troubleshooting.md](laravel/Modules/Xot/docs/troubleshooting.md)
-* [troubleshooting.md](laravel/Modules/Cms/docs/frontoffice/troubleshooting.md)
+* [troubleshooting.md](../../../Xot/docs/troubleshooting.md)
+* [troubleshooting.md](../../../Cms/docs/frontoffice/troubleshooting.md)
 

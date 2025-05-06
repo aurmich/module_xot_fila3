@@ -172,8 +172,8 @@ Per categorie specifiche:
 $value = $data['key'];
 ``` 
 ## Collegamenti tra versioni di PHPSTAN-LEVEL9-GUIDE.md
-* [PHPSTAN-LEVEL9-GUIDE.md](laravel/Modules/Xot/docs/phpstan/PHPSTAN-LEVEL9-GUIDE.md)
-* [PHPSTAN-LEVEL9-GUIDE.md](laravel/Modules/Xot/docs/PHPSTAN-LEVEL9-GUIDE.md)
+* [PHPSTAN-LEVEL9-GUIDE.md](../../../Xot/docs/phpstan/PHPSTAN-LEVEL9-GUIDE.md)
+* [PHPSTAN-LEVEL9-GUIDE.md](../../../Xot/docs/PHPSTAN-LEVEL9-GUIDE.md)
 
 
 ## Collegamenti tra versioni di phpstan-level9-guide.md

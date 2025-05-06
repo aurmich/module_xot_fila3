@@ -97,10 +97,10 @@ test('it can integrate with laravel', function () {
 
 
 ## Collegamenti tra versioni di testing.md
-* [testing.md](laravel/Modules/Xot/docs/packages/testing.md)
-* [testing.md](laravel/Modules/Xot/docs/development/testing.md)
-* [testing.md](laravel/Modules/Cms/docs/frontoffice/testing.md)
-* [testing.md](laravel/Themes/One/docs/testing.md)
+* [testing.md](../../../Xot/docs/packages/testing.md)
+* [testing.md](../../../Xot/docs/development/testing.md)
+* [testing.md](../../../Cms/docs/frontoffice/testing.md)
+* [testing.md](../../../../Themes/One/docs/testing.md)
 
 
 ### Versione Incoming

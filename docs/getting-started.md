@@ -79,11 +79,11 @@ npm run dev
 
 
 ## Collegamenti tra versioni di getting-started.md
-* [getting-started.md](laravel/Modules/Gdpr/docs/getting-started.md)
-* [getting-started.md](laravel/Modules/Xot/docs/getting-started.md)
-* [getting-started.md](laravel/Modules/UI/docs/getting-started.md)
-* [getting-started.md](laravel/Modules/Tenant/docs/it/getting-started.md)
-* [getting-started.md](laravel/Modules/Cms/docs/getting-started.md)
+* [getting-started.md](../../../Gdpr/docs/getting-started.md)
+* [getting-started.md](../../../Xot/docs/getting-started.md)
+* [getting-started.md](../../../UI/docs/getting-started.md)
+* [getting-started.md](../../../Tenant/docs/it/getting-started.md)
+* [getting-started.md](../../../Cms/docs/getting-started.md)
 
 
 ### Versione Incoming

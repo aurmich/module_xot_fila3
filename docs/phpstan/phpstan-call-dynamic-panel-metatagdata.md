@@ -64,8 +64,8 @@ Questo pattern consente:
 8. Le strutture dati complesse sono tipizzate con array shapes
 
 ## Collegamenti tra versioni di PHPSTAN-CALL-DYNAMIC-PANEL-METATAGDATA.md
-* [PHPSTAN-CALL-DYNAMIC-PANEL-METATAGDATA.md](laravel/Modules/Xot/docs/phpstan/PHPSTAN-CALL-DYNAMIC-PANEL-METATAGDATA.md)
-* [PHPSTAN-CALL-DYNAMIC-PANEL-METATAGDATA.md](laravel/Modules/Xot/docs/PHPSTAN-CALL-DYNAMIC-PANEL-METATAGDATA.md)
+* [PHPSTAN-CALL-DYNAMIC-PANEL-METATAGDATA.md](../../../Xot/docs/phpstan/PHPSTAN-CALL-DYNAMIC-PANEL-METATAGDATA.md)
+* [PHPSTAN-CALL-DYNAMIC-PANEL-METATAGDATA.md](../../../Xot/docs/PHPSTAN-CALL-DYNAMIC-PANEL-METATAGDATA.md)
 
 
 ## Collegamenti tra versioni di phpstan-call-dynamic-panel-metatagdata.md

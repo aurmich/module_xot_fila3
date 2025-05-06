@@ -219,6 +219,6 @@ public function store(Request $request): Response
 - [Security Best Practices](../security/README.md) 
 
 ## Collegamenti tra versioni di coding-standards.md
-* [coding-standards.md](laravel/Modules/Xot/docs/standards/coding-standards.md)
-* [coding-standards.md](laravel/Modules/Xot/docs/conventions/coding-standards.md)
+* [coding-standards.md](../../../Xot/docs/standards/coding-standards.md)
+* [coding-standards.md](../../../Xot/docs/conventions/coding-standards.md)
 

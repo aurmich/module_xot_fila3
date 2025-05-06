@@ -604,8 +604,8 @@ public function getTableBulkActions(): array
 
 // ... existing code ... 
 ## Collegamenti tra versioni di resource.md
-* [resource.md](laravel/Modules/Xot/docs/filament/resource.md)
-* [resource.md](laravel/Modules/Xot/docs/resource.md)
+* [resource.md](../../../Xot/docs/filament/resource.md)
+* [resource.md](../../../Xot/docs/resource.md)
 
 
 ### Versione Incoming
