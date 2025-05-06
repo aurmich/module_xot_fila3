@@ -66,6 +66,7 @@ abstract class XotBaseServiceProvider extends ServiceProvider
         if ('' === $this->name) {
             throw new \Exception('name is empty on ['.static::class.']');
         }
+        //$svgPath = app(GetModulePathByGeneratorAction::class)->execute($this->name, 'svg');
 
         Assert::string($relativePath = config('modules.paths.generator.assets.path'));
 
@@ -162,6 +163,9 @@ abstract class XotBaseServiceProvider extends ServiceProvider
 
     public function registerBladeComponents(): void
     {
+        $componentViewPath = app(GetModulePathByGeneratorAction::class)->execute($this->name, 'component-view');
+        Blade::anonymousComponentPath($componentViewPath);
+
         $componentClassPath = app(GetModulePathByGeneratorAction::class)->execute($this->name, 'component-class');
 
         $namespace = $this->module_ns.'\View\Components';

@@ -3,19 +3,16 @@
 ## Problema
 È stato rilevato un conflitto di merge nel file `Modules/Xot/app/Actions/View/GetViewByClassAction.php` alla riga relativa alla conversione di tipi scalari in stringa.
 
-<<<<<<< HEAD
 Il file presenta un marker di conflitto `
 
 
 Il file presenta un marker di conflitto `
-=======
 
 Il file presenta un marker di conflitto `>>>>>>> origin/dev` che indica un merge non completato tra due rami di sviluppo.
 
 Il file presenta un marker di conflitto `
 
 =======
->>>>>>> aurmich/dev
 >>>>>>> aurmich/dev
 >>>>>>> 5693302 (.):docs/actions/view/GetViewByClassAction_conflict.md
 =======
