@@ -62,9 +62,12 @@ public static function getFormSchema(): array
 - Utilizzare il lazy loading per le relazioni
 - Implementare il caching dove appropriato
 - Ottimizzare le query del database
+<<<<<<< HEAD
 
 ## Collegamenti tra versioni di filament-integration.md
 * [filament-integration.md](laravel/Modules/Xot/docs/laraxot/filament-integration.md)
 * [filament-integration.md](laravel/Modules/Cms/docs/roadmap/features/filament-integration.md)
 * [filament-integration.md](laravel/Modules/Cms/docs/filament-integration.md)
 
+=======
+>>>>>>> 9746d62 (.)

@@ -10,15 +10,19 @@ use Illuminate\Support\Facades\Storage;
 use Spatie\QueueableAction\QueueableAction;
 use Symfony\Component\HttpFoundation\BinaryFileResponse;
 
+<<<<<<< HEAD
 /**
  * Classe per la generazione di PDF da HTML.
  */
+=======
+>>>>>>> 9746d62 (.)
 class PdfByHtmlAction
 {
     use QueueableAction;
 
     public PdfEngineEnum $engine;
 
+<<<<<<< HEAD
     /**
      * Genera un PDF da HTML.
      *
@@ -31,6 +35,8 @@ class PdfByHtmlAction
      *
      * @return string|BinaryFileResponse Il percorso del file o la risposta di download
      */
+=======
+>>>>>>> 9746d62 (.)
     public function execute(
         string $html,
         string $filename = 'my_doc.pdf',
@@ -39,6 +45,7 @@ class PdfByHtmlAction
         string $orientation = 'P',
         PdfEngineEnum $engine = PdfEngineEnum::SPIPU,
     ): string|BinaryFileResponse {
+<<<<<<< HEAD
         $data = PdfData::from([
             'html' => $html,
             'filename' => $filename,
@@ -55,5 +62,15 @@ class PdfByHtmlAction
             'download' => $data->download(),
             default => $data->getPath(),
         };
+=======
+        return $data = PdfData::from([
+            'html'->$html,
+            'filename' -> $filename,
+            'disk' -> $disk,
+            'out' -> $out,
+            'orientation' -> $orientation,
+            'engine' -> $engine,
+            ]);
+>>>>>>> 9746d62 (.)
     }
 }

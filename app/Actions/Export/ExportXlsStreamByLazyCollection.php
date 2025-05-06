@@ -36,11 +36,15 @@ class ExportXlsStreamByLazyCollection
         ?array $fields = null,
     ): StreamedResponse {
         $headers = [
+<<<<<<< HEAD
             'Content-Type' => 'text/csv',
             'Content-Disposition' => 'attachment; filename=' . $filename,
             'Pragma' => 'no-cache',
             'Cache-Control' => 'must-revalidate, post-check=0, pre-check=0',
             'Expires' => '0'
+=======
+            'Content-Disposition' => 'attachment; filename=' . $filename,
+>>>>>>> 9746d62 (.)
         ];
         $head = $this->headings($data, $transKey);
 
@@ -48,12 +52,21 @@ class ExportXlsStreamByLazyCollection
             static function () use ($data, $head): void {
                 $file = fopen('php://output', 'w+');
 
+<<<<<<< HEAD
 
 
                 // Assicuriamo che le intestazioni siano stringhe
                 $headStrings = array_map(function ($item): string {
                     return strval($item);
                 }, $head);
+=======
+                // Assicuriamo che le intestazioni siano stringhe
+                $headStrings = array_map(function ($item) {
+                    //return is_string($item) ? $item : (string) $item;
+                    return strval($item);
+                }, $head);
+
+>>>>>>> 9746d62 (.)
                 fputcsv($file, $headStrings);
 
                 foreach ($data as $key => $value) {
@@ -69,7 +82,11 @@ class ExportXlsStreamByLazyCollection
                         continue;
                     }
                     // Convertiamo tutti i valori in stringhe o null
+<<<<<<< HEAD
                     $safeRowData = array_map(function ($item): ?string {
+=======
+                    $safeRowData = array_map(function ($item) {
+>>>>>>> 9746d62 (.)
                         if ($item === null) {
                             return null;
                         }
@@ -78,6 +95,10 @@ class ExportXlsStreamByLazyCollection
 
                     fputcsv($file, $safeRowData);
                 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> 9746d62 (.)
                 // Aggiungiamo righe vuote alla fine
                 $blanks = ["\t", "\t", "\t", "\t"];
                 fputcsv($file, $blanks);
@@ -106,16 +127,24 @@ class ExportXlsStreamByLazyCollection
             return []; // Ritorna intestazioni vuote se non c'è un primo elemento valido
         }
 
+<<<<<<< HEAD
 
         $headArray = is_array($first) ? $first : $first->toArray();
+=======
+        $headArray = is_array($first) ? $first : $first->toArray();
+
+>>>>>>> 9746d62 (.)
         /** 
          * @var array<string, mixed> $headArray 
          * @var \Illuminate\Support\Collection<int, string> $headings 
          */
         $headings = collect($headArray)->keys();
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 9746d62 (.)
         if (null !== $transKey) {
             $headings = $headings->map(
                 static function (string $item) use ($transKey) {
@@ -125,7 +154,10 @@ class ExportXlsStreamByLazyCollection
                         return $trans;
                     }
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 9746d62 (.)
                     Assert::string($item1 = Str::replace('.', '_', $item), '[' . __LINE__ . '][' . __CLASS__ . ']');
                     $key = $transKey . '.fields.' . $item1;
                     $trans = trans($key);
@@ -139,6 +171,10 @@ class ExportXlsStreamByLazyCollection
         }
 
         /** @var array<string> */
+<<<<<<< HEAD
         return $headings->map(fn($item): string => strval($item))->toArray();
+=======
+        return $headings->map(fn($item) => strval($item))->toArray();
+>>>>>>> 9746d62 (.)
     }
 }

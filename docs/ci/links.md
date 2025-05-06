@@ -48,6 +48,7 @@ SonarQube
 This one has a large community and supports a lot of languages besides PHP.
 
 Deptrac
+<<<<<<< HEAD
 
 ## Collegamenti tra versioni di links.md
 * [links.md](laravel/Modules/Gdpr/docs/links.md)
@@ -61,3 +62,5 @@ Deptrac
 * [links.md](laravel/Modules/Cms/docs/links.md)
 * [links.md](laravel/Themes/One/docs/links.md)
 
+=======
+>>>>>>> 9746d62 (.)

@@ -27,6 +27,10 @@ abstract class XotBaseListRecords extends FilamentListRecords
 {
     use HasXotTable;
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 9746d62 (.)
     /**
      * Get the table columns.
      *
@@ -52,6 +56,10 @@ abstract class XotBaseListRecords extends FilamentListRecords
     protected function getHeaderActions(): array
     {
         return [
+<<<<<<< HEAD
+=======
+            // \Filament\Actions\CreateAction::make(),
+>>>>>>> 9746d62 (.)
             ExportXlsAction::make('export_xls'),
         ];
     }

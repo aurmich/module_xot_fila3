@@ -1,6 +1,9 @@
 https://fly.io/laravel-bytes/filamentphp-adding-some-style/
+<<<<<<< HEAD
 
 ## Collegamenti tra versioni di theme.md
 * [theme.md](laravel/Modules/Xot/docs/filament/theme.md)
 * [theme.md](laravel/Themes/One/docs/theme.md)
 
+=======
+>>>>>>> 9746d62 (.)

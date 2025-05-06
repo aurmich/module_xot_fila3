@@ -24,6 +24,7 @@ ${cat /mnt/f/var/www/quaeris/laravel/Modules/Xot/_docs/__php-code-analysis-tools
 ${cat /mnt/f/var/www/quaeris/laravel/Modules/Xot/_docs/phpstan.txt}
 ${cat /mnt/f/var/www/quaeris/laravel/Modules/Xot/_docs/phpstan_error.txt}
 ```
+<<<<<<< HEAD
 
 ## Collegamenti tra versioni di testing.md
 * [testing.md](laravel/Modules/Xot/docs/packages/testing.md)
@@ -31,3 +32,5 @@ ${cat /mnt/f/var/www/quaeris/laravel/Modules/Xot/_docs/phpstan_error.txt}
 * [testing.md](laravel/Modules/Cms/docs/frontoffice/testing.md)
 * [testing.md](laravel/Themes/One/docs/testing.md)
 
+=======
+>>>>>>> 9746d62 (.)

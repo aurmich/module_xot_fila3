@@ -16,9 +16,12 @@ ${cat /mnt/f/var/www/quaeris/laravel/Modules/Xot/_docs/_elastic_links.txt}
 ```txt
 ${cat /mnt/f/var/www/quaeris/laravel/Modules/Xot/_docs/Content_Selection_and_Highlighting.txt}
 ```
+<<<<<<< HEAD
 
 ## Collegamenti tra versioni di search.md
 * [search.md](docs/rules/search.md)
 * [search.md](laravel/Modules/Xot/docs/features/search.md)
 * [search.md](laravel/Modules/Xot/docs/rules/search.md)
 
+=======
+>>>>>>> 9746d62 (.)

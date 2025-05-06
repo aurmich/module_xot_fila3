@@ -12,6 +12,7 @@ class GetYearFilter
     use QueueableAction;
 
     /**
+<<<<<<< HEAD
      * Crea un filtro per selezionare un anno all'interno di un intervallo.
      *
      * @param string $fieldName Il nome del campo su cui filtrare
@@ -19,6 +20,9 @@ class GetYearFilter
      * @param int $to L'anno di fine dell'intervallo
      *
      * @return SelectFilter Il filtro Filament configurato
+=======
+     * Undocumented function.
+>>>>>>> 9746d62 (.)
      */
     public function execute(string $fieldName, int $from, int $to): SelectFilter
     {

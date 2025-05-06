@@ -9,6 +9,7 @@ section: content
 
 Quando fai php artisan module:make-model -m Modello Modulo, se il modello viene creato nella cartella sbagliata, 
 
+<<<<<<< HEAD
 bisogna modificare il file /laravel/config/modules.php ed indicare la cartella giusta che è Models.
 ## Collegamenti tra versioni di modules.md
 * [modules.md](docs/tecnico/laraxot/modules.md)
@@ -16,3 +17,6 @@ bisogna modificare il file /laravel/config/modules.php ed indicare la cartella g
 * [modules.md](laravel/Modules/Xot/docs/filament/modules.md)
 * [modules.md](laravel/Modules/Xot/docs/config/modules.md)
 
+=======
+bisogna modificare il file /laravel/config/modules.php ed indicare la cartella giusta che è Models.
+>>>>>>> 9746d62 (.)

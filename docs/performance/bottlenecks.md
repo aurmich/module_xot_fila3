@@ -199,6 +199,7 @@ public function exportData()
     })->chunk(1000);
 }
 ```
+<<<<<<< HEAD
 
 ## Collegamenti tra versioni di bottlenecks.md
 * [bottlenecks.md](laravel/Modules/Gdpr/docs/performance/bottlenecks.md)
@@ -212,3 +213,5 @@ public function exportData()
 * [bottlenecks.md](laravel/Modules/Media/docs/performance/bottlenecks.md)
 * [bottlenecks.md](laravel/Modules/Patient/docs/roadmap/bottlenecks.md)
 
+=======
+>>>>>>> 9746d62 (.)

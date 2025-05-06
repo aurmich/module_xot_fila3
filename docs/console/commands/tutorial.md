@@ -20,6 +20,10 @@ namespace Modules\Xot\Console\Commands;
 ### ❌ ERRATO
 ```php
 namespace Modules\Xot\app\Console\Commands;
+<<<<<<< HEAD
+=======
+namespace Modules\Xot\Console\Commands;
+>>>>>>> 9746d62 (.)
 ```
 
 ## Esempio di Comando Console

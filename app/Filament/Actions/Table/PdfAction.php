@@ -20,7 +20,11 @@ class PdfAction extends Action
     {
         parent::setUp();
         $this->translateLabel()
+<<<<<<< HEAD
             
+=======
+
+>>>>>>> 9746d62 (.)
             ->tooltip('pdf')
             ->openUrlInNewTab()
             // ->icon('heroicon-o-cloud-arrow-down')

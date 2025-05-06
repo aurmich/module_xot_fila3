@@ -1,5 +1,6 @@
 # Classi Base del Modulo Xot
 
+<<<<<<< HEAD
 ## Panoramica
 Il modulo Xot fornisce una serie di classi base che devono essere estese dagli altri moduli. Questo garantisce coerenza e funzionalità comuni in tutta l'applicazione.
 
@@ -108,6 +109,8 @@ class XotBaseEditRecord
 - [Service Provider](service-provider-best-practices.md)
 - [Convenzioni](conventions.md)
 
+=======
+>>>>>>> 9746d62 (.)
 ## XotBaseResource
 
 Classe base per tutte le risorse Filament dell'applicazione.
@@ -247,7 +250,10 @@ class PolizzaConvenzioneController extends XotBaseController
 - Gestione autorizzazioni integrata
 - Metodi di utilità comuni
 - Gestione errori standardizzata
+<<<<<<< HEAD
 - Risposte JSON predefinite 
+=======
+>>>>>>> 9746d62 (.)
 - Risposte JSON predefinite
 
 ## Best Practices
@@ -270,8 +276,12 @@ class PolizzaConvenzioneController extends XotBaseController
 4. **Personalizzazione**
    - Estendere le funzionalità tramite trait
    - Mantenere la retrocompatibilità
+<<<<<<< HEAD
    - Documentare le modifiche significative 
 ## Collegamenti tra versioni di base-classes.md
 * [base-classes.md](laravel/Modules/Xot/docs/base-classes.md)
 * [base-classes.md](laravel/Modules/Xot/docs/roadmap/base-classes.md)
 
+=======
+   - Documentare le modifiche significative 
+>>>>>>> 9746d62 (.)

@@ -230,8 +230,12 @@ return [
 4. **Testing**
    - Scrivere test unitari per ogni servizio
    - Utilizzare mock per le dipendenze
+<<<<<<< HEAD
    - Testare i casi limite 
 ## Collegamenti tra versioni di services.md
 * [services.md](laravel/Modules/Xot/docs/services.md)
 * [services.md](laravel/Modules/Tenant/docs/it/config/services.md)
 
+=======
+   - Testare i casi limite 
+>>>>>>> 9746d62 (.)

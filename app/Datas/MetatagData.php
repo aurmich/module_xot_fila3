@@ -15,7 +15,11 @@ use Spatie\LaravelData\Concerns\WireableData;
 
 /**
  * Class MetatagData
+<<<<<<< HEAD
  *
+=======
+ * 
+>>>>>>> 9746d62 (.)
  * @property string $title
  * @property string $sitename
  * @property string $subtitle
@@ -141,7 +145,11 @@ class MetatagData extends Data implements Wireable
 
     /** @var string */
     public string $favicon = '/favicon.ico';
+<<<<<<< HEAD
 
+=======
+    
+>>>>>>> 9746d62 (.)
     /**
      * @var array<string, array{key?: string, color: string, hex?: string}>
      */
@@ -251,22 +259,37 @@ class MetatagData extends Data implements Wireable
     public function getColors(): array
     {
         if (empty($this->colors)) {
+<<<<<<< HEAD
             return $this->getFilamentColors();
+=======
+            return $this->getFilamentColors();    
+>>>>>>> 9746d62 (.)
         }
 
         /** @var array<string, array<int, string>> $mapped */
         $mapped = Arr::mapWithKeys(
             $this->colors,
             function (array $item, string|int $key): array {
+<<<<<<< HEAD
                 $keyStr = isset($item['key'])
                     ? $item['key']
+=======
+                $keyStr = isset($item['key']) 
+                    ? $item['key'] 
+>>>>>>> 9746d62 (.)
                     : (string) $key;
 
                 /** @var array<int, string> $value */
                 $value = match (true) {
+<<<<<<< HEAD
                     $item['color'] === 'custom' && isset($item['hex'])
                         => Color::hex($item['hex']),
                     isset(Color::all()[$item['color']])
+=======
+                    $item['color'] === 'custom' && isset($item['hex']) 
+                        => Color::hex($item['hex']),
+                    isset(Color::all()[$item['color']]) 
+>>>>>>> 9746d62 (.)
                         => Color::all()[$item['color']],
                     default => Color::Gray,
                 };
@@ -274,6 +297,7 @@ class MetatagData extends Data implements Wireable
                 return [$keyStr => $value];
             }
         );
+<<<<<<< HEAD
 
         return $mapped;
     }
@@ -397,4 +421,9 @@ class MetatagData extends Data implements Wireable
             'site' => $this->twitter_href,
         ];
     }
+=======
+        
+        return $mapped;
+    }
+>>>>>>> 9746d62 (.)
 }

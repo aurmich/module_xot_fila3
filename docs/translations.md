@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Traduzioni
 
 ## Struttura delle Traduzioni
@@ -131,6 +132,58 @@ return [
    - Usare le chiavi di traduzione
    - Mantenere la coerenza
 
+=======
+# Sistema di Traduzioni
+
+## Struttura
+
+### File di Traduzione
+```
+resources/lang/
+├── it/
+│   ├── broker.php
+│   ├── ui.php
+│   └── validation.php
+└── en/
+    ├── broker.php
+    ├── ui.php
+    └── validation.php
+```
+
+### Formato File
+```php
+return [
+    'resources' => [
+        'polizza_convenzione' => [
+            'label' => 'Polizza in Convenzione',
+            'plural_label' => 'Polizze in Convenzione',
+            'navigation' => [
+                'group' => 'Portafoglio',
+                'icon' => 'heroicon-o-document-text',
+                'sort' => 1,
+            ],
+            'columns' => [
+                'numero_adesione' => 'Numero Adesione',
+                'cliente' => 'Cliente',
+                // ...
+            ],
+            'filters' => [
+                'stato_pratica' => 'Stato Pratica',
+                'convenzione' => 'Convenzione',
+                // ...
+            ],
+            'actions' => [
+                'create' => 'Nuova Polizza',
+                'edit' => 'Modifica',
+                'view' => 'Visualizza',
+                // ...
+            ],
+        ],
+    ],
+];
+```
+
+>>>>>>> 9746d62 (.)
 ## Utilizzo
 
 ### In Filament Resources
@@ -266,6 +319,7 @@ TextInput::make('cognome')
 // Utilizzo in Actions
 Action::make('save')
 Action::make('delete')
+<<<<<<< HEAD
 ```
 
 ## Nuove Best Practices
@@ -324,3 +378,6 @@ Action::make('delete')
 * [translations.md](laravel/Modules/Patient/docs/translations.md)
 * [translations.md](laravel/Modules/Cms/docs/translations.md)
 
+=======
+``` 
+>>>>>>> 9746d62 (.)

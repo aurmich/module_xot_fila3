@@ -87,6 +87,7 @@ return [
 - Rimossi i metodi ->label() dal SessionResource
 - Implementato il sistema di traduzioni per le label
 - Allineate le chiavi del form schema con il file di traduzioni
+<<<<<<< HEAD
 - Mantenute le validazioni e la struttura del form 
 ## Collegamenti tra versioni di filament-resources.md
 * [filament-resources.md](docs/tecnico/filament/filament-resources.md)
@@ -95,3 +96,6 @@ return [
 * [filament-resources.md](laravel/Modules/Xot/docs/filament-resources.md)
 * [filament-resources.md](laravel/Modules/Cms/docs/filament-resources.md)
 
+=======
+- Mantenute le validazioni e la struttura del form 
+>>>>>>> 9746d62 (.)

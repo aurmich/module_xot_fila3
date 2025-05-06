@@ -24,8 +24,11 @@ ${cat /mnt/f/var/www/quaeris/laravel/Modules/Xot/_docs/star_rating.txt}
 ```txt
 ${cat /mnt/f/var/www/quaeris/laravel/Modules/Xot/_docs/custom_errors.txt}
 ```
+<<<<<<< HEAD
 
 ## Collegamenti tra versioni di forms.md
 * [forms.md](docs/tecnico/filament/forms.md)
 * [forms.md](laravel/Modules/Xot/docs/features/forms.md)
 
+=======
+>>>>>>> 9746d62 (.)

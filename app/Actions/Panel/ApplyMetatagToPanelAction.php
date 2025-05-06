@@ -12,6 +12,7 @@ class ApplyMetatagToPanelAction
 {
     use QueueableAction;
 
+<<<<<<< HEAD
     /**
      * Applica i metatag al pannello Filament.
      *
@@ -19,6 +20,8 @@ class ApplyMetatagToPanelAction
      * 
      * @return Panel Il pannello con i metatag applicati
      */
+=======
+>>>>>>> 9746d62 (.)
     public function execute(Panel &$panel): Panel
     {
         try {
@@ -32,7 +35,11 @@ class ApplyMetatagToPanelAction
                 ->darkModeBrandLogo($metatag->getLogoHeaderDark())
                 ->brandLogoHeight($metatag->getLogoHeight())
                 ->favicon($metatag->getFavicon());
+<<<<<<< HEAD
         } catch (\Throwable $e) {
+=======
+        } catch (\Exception $e) {
+>>>>>>> 9746d62 (.)
             // Log l'errore ma non bloccare l'applicazione
             \Illuminate\Support\Facades\Log::error('Error applying metatag to panel: ' . $e->getMessage());
             return $panel;

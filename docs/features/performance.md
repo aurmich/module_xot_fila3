@@ -19,6 +19,7 @@ ${cat /mnt/f/var/www/quaeris/laravel/Modules/Xot/_docs/_lazy.txt}
 ```txt
 ${cat /mnt/f/var/www/quaeris/laravel/Modules/Xot/_docs/_performance.txt}
 ```
+<<<<<<< HEAD
 
 ## Collegamenti tra versioni di performance.md
 * [performance.md](laravel/vendor/spatie/laravel-data/docs/advanced-usage/performance.md)
@@ -30,3 +31,5 @@ ${cat /mnt/f/var/www/quaeris/laravel/Modules/Xot/_docs/_performance.txt}
 * [performance.md](laravel/Modules/Job/docs/packages/performance.md)
 * [performance.md](laravel/Modules/Cms/docs/frontoffice/performance.md)
 
+=======
+>>>>>>> 9746d62 (.)

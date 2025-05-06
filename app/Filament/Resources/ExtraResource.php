@@ -12,7 +12,11 @@ use Modules\Xot\Models\Extra;
 
 
 
+<<<<<<< HEAD
 use Modules\Xot\Filament\Resources\XotBaseResource\RelationManager\XotBaseRelationManager;
+=======
+use Modules\Xot\Filament\Resources\XotBaseResource\RelationManagers\XotBaseRelationManager;
+>>>>>>> 9746d62 (.)
 
 
 

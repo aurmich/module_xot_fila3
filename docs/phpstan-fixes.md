@@ -26,6 +26,7 @@
 - ✅ Migliorata gestione delle eccezioni
 - ✅ Documentazione PHPDoc completa
 
+<<<<<<< HEAD
 ### 5. ExportXlsByView (2023-03-21)
 - ✅ Rimossi controlli ridondanti dei tipi in `is_string()` e `is_scalar()`
 - ✅ Migliorata la documentazione dei parametri
@@ -90,6 +91,8 @@
 - ✅ Aggiunte annotazioni PHPDoc per le variabili di opzione
 - ✅ Aggiunta documentazione della classe
 
+=======
+>>>>>>> 9746d62 (.)
 ## Best Practices
 
 ### 1. Gestione Tipi
@@ -103,6 +106,7 @@ public function execute(string $modelClass): AbstractSchemaManager
 {
     Assert::classExists($modelClass);
     Assert::subclassOf($modelClass, Model::class);
+<<<<<<< HEAD
 # Risoluzione Problemi PHPStan nel Modulo Xot
 
 Questo documento descrive i principali problemi PHPStan risolti nel modulo Xot e le strategie adottate per la loro risoluzione.
@@ -202,6 +206,8 @@ Questo documento descrive i principali problemi PHPStan risolti nel modulo Xot e
  */
 class XotBaseModel extends Model
 {
+=======
+>>>>>>> 9746d62 (.)
     // ...
 }
 ```
@@ -216,6 +222,7 @@ private function validateData(array $data): void
 {
     Assert::keyExists($data, 'required_field');
     Assert::string($data['required_field']);
+<<<<<<< HEAD
 ### Servizi e Dependency Injection
 
 **Problema**: Metodi che utilizzano dependency injection non avevano tipi ben definiti.
@@ -232,6 +239,8 @@ private function validateData(array $data): void
  */
 public function process(ServiceInterface $service): ResponseInterface
 {
+=======
+>>>>>>> 9746d62 (.)
     // ...
 }
 ```
@@ -328,6 +337,7 @@ public function execute(Model $model, array $data): array
 - ✅ Risolto: Implementato `getTableColumns()` e `getTableConfiguration()`
 
 ### 2. Metodo Final Override in UsersRelationManager
+<<<<<<< HEAD
 - ❌ Errore: Cannot override final method `Modules\Xot\Filament\Resources\XotBaseResource\RelationManager\XotBaseRelationManager::form()`
 
 
@@ -338,6 +348,9 @@ public function execute(Model $model, array $data): array
 
 - ❌ Errore: Cannot override final method `Modules\Xot\Filament\Resources\XotBaseResource\RelationManagers\XotBaseRelationManager::form()`
  7b67053 (fix: auto resolve conflict)
+=======
+- ❌ Errore: Cannot override final method `Modules\Xot\Filament\Resources\XotBaseResource\RelationManagers\XotBaseRelationManager::form()`
+>>>>>>> 9746d62 (.)
 - 📍 Posizione: `Modules/User/app/Filament/Resources/TeamResource/RelationManagers/UsersRelationManager.php:21`
 - 🔧 Soluzione necessaria:
   - Rimuovere l'override del metodo `form()`
@@ -345,6 +358,7 @@ public function execute(Model $model, array $data): array
   - Implementare la logica corretta per la gestione delle relazioni
 
 ### 3. Metodo Final Override in DomainsRelationManager
+<<<<<<< HEAD
 - ❌ Errore: Cannot override final method `Modules\Xot\Filament\Resources\XotBaseResource\RelationManager\XotBaseRelationManager::form()`
 
 
@@ -355,6 +369,9 @@ public function execute(Model $model, array $data): array
 
 - ❌ Errore: Cannot override final method `Modules\Xot\Filament\Resources\XotBaseResource\RelationManagers\XotBaseRelationManager::form()`
  7b67053 (fix: auto resolve conflict)
+=======
+- ❌ Errore: Cannot override final method `Modules\Xot\Filament\Resources\XotBaseResource\RelationManagers\XotBaseRelationManager::form()`
+>>>>>>> 9746d62 (.)
 - 📍 Posizione: `Modules/User/app/Filament/Resources/TenantResource/RelationManagers/DomainsRelationManager.php:20`
 - 🔧 Soluzione necessaria:
   - Rimuovere l'override del metodo `form()`
@@ -407,7 +424,11 @@ public function execute(Model $model, array $data): array
 
 3. **Azioni e Validazione**
    ```php
+<<<<<<< HEAD
    public function getTableActions(): array
+=======
+   protected function getTableActions(): array
+>>>>>>> 9746d62 (.)
    {
        return [
            Tables\Actions\EditAction::make()
@@ -443,6 +464,7 @@ Best Practices:
 - Utilizzare i metodi previsti per la personalizzazione invece di sovrascrivere metodi final
 - Mantenere la coerenza nella struttura dei form tra i vari RelationManager
 - Validare i dati utilizzando le regole di validazione di Laravel
+<<<<<<< HEAD
 
 - Documentare le personalizzazioni nel codice 
 
@@ -682,3 +704,6 @@ interface AuthenticatableRequest
 - [Tipi generici in PHP](https://phpstan.org/blog/generics-in-php-using-phpdocs)
 - [Larastan](https://github.com/nunomaduro/larastan)
 - [Guida PHPStan Livello 10](PHPSTAN_LIVELLO10_LINEE_GUIDA.md)
+=======
+- Documentare le personalizzazioni nel codice 
+>>>>>>> 9746d62 (.)

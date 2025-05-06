@@ -17,6 +17,10 @@ namespace Modules\Tenant\Repositories;
 ### Esempi Errati
 ```php
 namespace Modules\Xot\app\Console\Commands;
+<<<<<<< HEAD
+=======
+namespace Modules\Xot\Console\Commands;
+>>>>>>> 9746d62 (.)
 namespace Modules\Broker\app\Models;
 namespace Modules\User\app\Services;
 namespace Modules\Tenant\app\Repositories;

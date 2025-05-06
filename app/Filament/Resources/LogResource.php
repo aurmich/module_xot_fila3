@@ -14,7 +14,11 @@ use Modules\Xot\Filament\Infolists\Components\FileContentEntry;
 use Modules\Xot\Filament\Resources\LogResource\Pages;
 use Modules\Xot\Filament\Traits\NavigationLabelTrait;
 use Modules\Xot\Models\Log;
+<<<<<<< HEAD
 use Modules\Xot\Filament\Resources\XotBaseResource\RelationManager\XotBaseRelationManager;
+=======
+use Modules\Xot\Filament\Resources\XotBaseResource\RelationManagers\XotBaseRelationManager;
+>>>>>>> 9746d62 (.)
 
 class LogResource extends XotBaseResource
 {

@@ -24,8 +24,11 @@ ${cat /mnt/f/var/www/quaeris/laravel/Modules/Xot/_docs/image.txt}
 ```txt
 ${cat /mnt/f/var/www/quaeris/laravel/Modules/Xot/_docs/upload.txt}
 ```
+<<<<<<< HEAD
 
 ## Collegamenti tra versioni di media.md
 * [media.md](laravel/Modules/Xot/docs/features/media.md)
 * [media.md](laravel/Modules/Xot/docs/roadmap/bottlenecks/media.md)
 
+=======
+>>>>>>> 9746d62 (.)

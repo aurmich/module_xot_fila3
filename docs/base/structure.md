@@ -65,6 +65,7 @@ quindi le relazioni verranno create utilizzando il MorphMap, ovvero la stringa '
 'locale' => 'it',
 ```
 
+<<<<<<< HEAD
 - altri files
 ## Collegamenti tra versioni di structure.md
 * [structure.md](bashscripts/docs/structure.md)
@@ -84,3 +85,6 @@ quindi le relazioni verranno create utilizzando il MorphMap, ovvero la stringa '
 * [structure.md](laravel/Modules/Cms/docs/themes/structure.md)
 * [structure.md](laravel/Modules/Cms/docs/components/structure.md)
 
+=======
+- altri files
+>>>>>>> 9746d62 (.)

@@ -24,6 +24,7 @@ https://github.com/jigar-dhulla/exchange-rate
 
 
 
+<<<<<<< HEAD
 
 ## Collegamenti tra versioni di links.md
 * [links.md](laravel/Modules/Gdpr/docs/links.md)
@@ -37,3 +38,5 @@ https://github.com/jigar-dhulla/exchange-rate
 * [links.md](laravel/Modules/Cms/docs/links.md)
 * [links.md](laravel/Themes/One/docs/links.md)
 
+=======
+>>>>>>> 9746d62 (.)

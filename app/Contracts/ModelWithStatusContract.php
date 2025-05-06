@@ -44,7 +44,10 @@ use Spatie\ModelStatus\Status;
  * @method mixed     save($params)
  * @method array     treeLabel()
  * @method array     treeSons()
+<<<<<<< HEAD
  * @method int       treeSonsCount()
+=======
+>>>>>>> 9746d62 (.)
  * @method array     toArray()
  * @method BelongsTo user()
  *

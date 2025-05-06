@@ -56,6 +56,7 @@ class RouteDynService
         Assert::string($name = $v['name']);
         $as = mb_strtolower($name);
         $as = str_replace('/', '.', $as);
+<<<<<<< HEAD
 
         /** @var string $tmp */
         $tmp = preg_replace('/{.*}./', '', $as);
@@ -64,6 +65,9 @@ class RouteDynService
         }
         $as = $tmp;
 
+=======
+        $as = preg_replace('/{.*}./', '', $as);
+>>>>>>> 9746d62 (.)
         $as = str_replace(['{', '}'], '', $as);
 
         return $as.'.';
@@ -93,6 +97,7 @@ class RouteDynService
         }
 
         Assert::nullOrString($v['act'] = $v['name']);
+<<<<<<< HEAD
 
         $act = '';
         if (is_string($v['act'])) {
@@ -106,6 +111,19 @@ class RouteDynService
         }
 
         return $act;
+=======
+        Assert::nullOrString($v['act']);
+        $v['act'] = preg_replace('/{.*}\//', '', (string) $v['act']);
+        if ($v['act'] === null) {
+            $v['act'] = '';
+        }
+
+        $v['act'] = str_replace('/', '_', $v['act']);
+        $v['act'] = Str::camel($v['act']);
+        $v['act'] = str_replace(['{', '}'], '', $v['act']);
+
+        return Str::camel($v['act']);
+>>>>>>> 9746d62 (.)
     }
 
     public static function getParamName(array $v, ?string $namespace): string
@@ -168,7 +186,12 @@ class RouteDynService
 
     public static function getUri(array $v, ?string $namespace): string
     {
+<<<<<<< HEAD
         Assert::string($name = $v['name']);
+=======
+        Assert::string($name= $v['name']);
+        //return mb_strtolower(is_string($v) ? $v : (string) $v['name);
+>>>>>>> 9746d62 (.)
         return $name;
     }
 
@@ -229,11 +252,19 @@ class RouteDynService
         if ($v['name'] === null) {
             return;
         }
+<<<<<<< HEAD
 
         Assert::string($name = $v['name']);
         $opts = self::getResourceOpts($v, $namespace);
         $controller = self::getController($v, $namespace);
 
+=======
+        Assert::string($name= $v['name']);
+        $opts = self::getResourceOpts($v, $namespace);
+        $controller = self::getController($v, $namespace);
+        
+        
+>>>>>>> 9746d62 (.)
         Route::resource($name, $controller, $opts);
     }
 

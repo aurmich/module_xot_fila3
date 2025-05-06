@@ -55,6 +55,7 @@ section: content
 - 
 - php artisan module:make-filament-context Filament
 
+<<<<<<< HEAD
 - php artisan make:filament-user per creare utente
 ## Collegamenti tra versioni di installation.md
 * [installation.md](laravel/Modules/Xot/docs/filament/installation.md)
@@ -65,3 +66,6 @@ section: content
 * [installation.md](laravel/Modules/Cms/docs/installation.md)
 * [installation.md](laravel/Themes/One/docs/installation.md)
 
+=======
+- php artisan make:filament-user per creare utente
+>>>>>>> 9746d62 (.)

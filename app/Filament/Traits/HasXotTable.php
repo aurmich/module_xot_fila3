@@ -14,7 +14,10 @@ use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Filters\BaseFilter;
 use Illuminate\Database\Eloquent\Model;
 use Filament\Notifications\Notification;
+<<<<<<< HEAD
 use Filament\Tables\Actions\Action;
+=======
+>>>>>>> 9746d62 (.)
 use Filament\Tables\Actions\ActionGroup;
 use Filament\Tables\Enums\FiltersLayout;
 use Filament\Tables\Columns\Layout\Stack;
@@ -286,11 +289,16 @@ trait HasXotTable
     /**
      * Get table actions.
      *
+<<<<<<< HEAD
      * @return array<string, Tables\Actions\Action|Tables\Actions\ActionGroup>
+=======
+     * @return array<string, Action|ActionGroup>
+>>>>>>> 9746d62 (.)
      */
     public function getTableActions(): array
     {
         $actions = [];
+<<<<<<< HEAD
 
         if ($this->shouldShowViewAction()) {
             $actions['view'] = Tables\Actions\ViewAction::make()
@@ -308,6 +316,31 @@ trait HasXotTable
             ->iconButton()
             ->tooltip(__('user::actions.delete'));
 
+=======
+        $resource = $this->getResource();
+        
+        if (method_exists($resource, 'canView')) {
+            $actions['view'] = Tables\Actions\ViewAction::make()
+                ->iconButton()
+                ->tooltip(__('user::actions.view'))
+                ->visible(fn (Model $record): bool => $resource::canView($record));
+        }
+
+        if (method_exists($resource, 'canEdit')) {
+            $actions['edit'] = Tables\Actions\EditAction::make()
+                ->iconButton()
+                ->tooltip(__('user::actions.edit'))
+                ->visible(fn (Model $record): bool => $resource::canEdit($record));
+        }
+        
+        if (method_exists($resource, 'canDelete')) {
+            $actions['delete'] = Tables\Actions\DeleteAction::make()
+                ->iconButton()
+                ->tooltip(__('user::actions.delete'))
+                ->visible(fn (Model $record): bool => $resource::canDelete($record));
+        }
+        
+>>>>>>> 9746d62 (.)
         if ($this->shouldShowReplicateAction()) {
             $actions['replicate'] = Tables\Actions\ReplicateAction::make()
                 ->iconButton()

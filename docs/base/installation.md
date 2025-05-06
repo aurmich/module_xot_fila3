@@ -130,6 +130,7 @@ se il branch di un modulo vuole essere pubblicato, eseguire nel modulo
 ```bash
 ../../../bascripts/git_init.sh nome_branch
 ```  
+<<<<<<< HEAD
 
 ## Collegamenti tra versioni di installation.md
 * [installation.md](laravel/Modules/Xot/docs/filament/installation.md)
@@ -140,3 +141,5 @@ se il branch di un modulo vuole essere pubblicato, eseguire nel modulo
 * [installation.md](laravel/Modules/Cms/docs/installation.md)
 * [installation.md](laravel/Themes/One/docs/installation.md)
 
+=======
+>>>>>>> 9746d62 (.)

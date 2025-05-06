@@ -100,8 +100,11 @@ Route::middleware('api')->prefix('api')->group(function () {
 - Utilizzare le variabili d'ambiente quando appropriato
 - Documentare tutte le opzioni di configurazione
 - Fornire valori predefiniti sensati
+<<<<<<< HEAD
 
 ## Collegamenti tra versioni di module-structure.md
 * [module-structure.md](laravel/Modules/Xot/docs/laraxot/module-structure.md)
 * [module-structure.md](laravel/Modules/Xot/docs/architecture/module-structure.md)
 
+=======
+>>>>>>> 9746d62 (.)

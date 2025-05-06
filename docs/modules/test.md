@@ -11,8 +11,11 @@ Modulo test serve per mettere azioni da testare.
 
 * Quando le azioni andranno bene verranno spostate nel modulo giusto.
 * Ce n’è uno per ogni base e **fa parte della repo della base. Non va in una repository "a parte"**
+<<<<<<< HEAD
 
 ## Collegamenti tra versioni di test.md
 * [test.md](laravel/Modules/Xot/docs/modules/test.md)
 * [test.md](laravel/Modules/Lang/docs/test.md)
 
+=======
+>>>>>>> 9746d62 (.)

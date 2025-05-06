@@ -289,8 +289,12 @@ foreach ((new ReflectionClass($model))->getMethods(ReflectionMethod::IS_PUBLIC) 
     ) {
         continue;
     }
+<<<<<<< HEAD
 ```
 ## Collegamenti tra versioni di model.md
 * [model.md](laravel/Modules/Xot/docs/model.md)
 * [model.md](laravel/Modules/Xot/docs/service/model.md)
 
+=======
+```
+>>>>>>> 9746d62 (.)

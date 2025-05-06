@@ -18,9 +18,12 @@ return [
     'forcessl' => false,
 ];
 ~~~
+<<<<<<< HEAD
 
 ## Collegamenti tra versioni di xra.md
 * [xra.md](laravel/Modules/Xot/docs/install/xra.md)
 * [xra.md](laravel/Modules/Tenant/docs/it/xra.md)
 * [xra.md](laravel/Modules/Tenant/docs/it/config/xra.md)
 
+=======
+>>>>>>> 9746d62 (.)

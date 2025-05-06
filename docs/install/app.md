@@ -10,8 +10,11 @@ return [
 ];
 
 ~~~
+<<<<<<< HEAD
 
 ## Collegamenti tra versioni di app.md
 * [app.md](laravel/Modules/Xot/docs/install/app.md)
 * [app.md](laravel/Modules/Tenant/docs/it/config/app.md)
 
+=======
+>>>>>>> 9746d62 (.)

@@ -93,6 +93,7 @@ test('it can integrate with laravel', function () {
 - [Performance](performance.md)
 - [Debug](debug.md)
 - [Panoramica](../packages.md) 
+<<<<<<< HEAD
 
 ## Collegamenti tra versioni di testing.md
 * [testing.md](laravel/Modules/Xot/docs/packages/testing.md)
@@ -100,3 +101,5 @@ test('it can integrate with laravel', function () {
 * [testing.md](laravel/Modules/Cms/docs/frontoffice/testing.md)
 * [testing.md](laravel/Themes/One/docs/testing.md)
 
+=======
+>>>>>>> 9746d62 (.)

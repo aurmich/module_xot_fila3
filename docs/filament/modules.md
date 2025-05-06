@@ -40,6 +40,7 @@ class AdminPanelProvider extends XotBasePanelProvider
 
 ```
 
+<<<<<<< HEAD
 
 ## Collegamenti tra versioni di modules.md
 * [modules.md](docs/tecnico/laraxot/modules.md)
@@ -47,3 +48,5 @@ class AdminPanelProvider extends XotBasePanelProvider
 * [modules.md](laravel/Modules/Xot/docs/filament/modules.md)
 * [modules.md](laravel/Modules/Xot/docs/config/modules.md)
 
+=======
+>>>>>>> 9746d62 (.)
