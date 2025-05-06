@@ -42,3 +42,6 @@ cache/
 .git-blame-ignore-revs
 .php-cs-fixer.cache
 *.exe
+
+# Backup files
+*.bak

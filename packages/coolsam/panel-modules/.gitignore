@@ -19,3 +19,6 @@ build/
 node_modules
 docs/cache/
 cache/
+
+# Backup files
+*.bak

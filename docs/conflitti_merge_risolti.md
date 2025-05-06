@@ -9,7 +9,7 @@ Durante lo sviluppo del progetto il progetto, sono stati identificati diversi fi
 
 Durante lo sviluppo del progetto il progetto, sono stati identificati diversi file con conflitti di merge non risolti. Questi conflitti erano indicati dalla presenza di marcatori come ``, `origin/dev` nel codice sorgente. I conflitti non risolti impedivano la corretta esecuzione del codice e causavano errori durante l'analisi statica con PHPStan.
 aurmich/dev
-=======
+
 
 Durante lo sviluppo del progetto il progetto, sono stati identificati diversi file con conflitti di merge non risolti. Questi conflitti erano indicati dalla presenza di marcatori come ``, `origin/dev` nel codice sorgente. I conflitti non risolti impedivano la corretta esecuzione del codice e causavano errori durante l'analisi statica con PHPStan.
 aurmich/dev
@@ -57,7 +57,7 @@ if (! $this->isValidConnection($connectionName)) {
 if (! $this->isValidConnection(is_string($connectionName) ? $connectionName : (string) $connectionName)) {
 
 
-=======
+
 
 if (! $this->isValidConnection($connectionName)) {
 origin/dev
@@ -74,7 +74,7 @@ In `TemporaryUploadPathGenerator.php`, c'erano conflitti nelle annotazioni PHPDo
  * @param \Modules\Media\Models\Media $media
  */
 
-=======
+
 
 /**
  * @param \Modules\Media\Models\Media $media
@@ -86,7 +86,7 @@ aurmich/dev
 
 origin/dev
 aurmich/dev
-=======
+
 origin/dev
 aurmich/dev
 ```
@@ -108,7 +108,7 @@ In `ApplyMetatagToPanelAction.php`, c'erano conflitti nell'implementazione del m
 //->colors($metatag->getColors())
 
 
-=======
+
 
 // @phpstan-ignore argument.type
 ->colors($metatag->getColors())
@@ -129,7 +129,7 @@ if ($content === false) {
     return false;
 }
 
-=======
+
 
 //if ($content === false) {
 //    return false;
@@ -144,7 +144,7 @@ if ($content === false) {
 
 origin/dev
 aurmich/dev
-=======
+
 origin/dev
 aurmich/dev
 ```
@@ -159,7 +159,7 @@ $headers = [
     'Content-Disposition' => 'attachment; filename=' . $filename,
 
 
-=======
+
 ```
 
 E anche nella tipizzazione delle funzioni di callback:
@@ -174,7 +174,7 @@ $headStrings = array_map(function ($item) {
 
 
 
-=======
+
 ```
 
 ## Soluzione Implementata
@@ -264,7 +264,7 @@ Per verificare la correttezza della soluzione, sono stati creati test Pest che v
 
 
 
-=======
+
 
 ### Test per i File del Modulo Media
 
@@ -284,7 +284,7 @@ it('verifica che i file corretti non contengano marcatori di conflitto', functio
     }
 });
 ```
-=======
+
             ->and($content)->not->toContain('origin/dev');
     }
 });
@@ -314,7 +314,7 @@ $headers = [
     'Content-Disposition' => 'attachment; filename=' . $filename,
 
 
-=======
+
 ];
 
 // Dopo
@@ -405,7 +405,7 @@ In particolare, le correzioni hanno portato i seguenti benefici:
 5. **Compatibilità con PHPStan**: Riduzione degli errori di analisi statica
 
 Questo lavoro di risoluzione dei conflitti ha inoltre contribuito a stabilire best practices per la gestione dei merge nel progetto il progetto, che potranno essere applicate in futuro per prevenire problemi simili.
-=======
+
 
 49ebea7 (.)`.
 

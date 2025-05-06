@@ -51,7 +51,7 @@ In ogni file, sono stati rimossi tutti i marcatori di conflitto , mantenendo la 
 
 In ogni file, sono stati rimossi tutti i marcatori di conflitto (``, `origin/dev`), mantenendo la versione più completa e corretta del codice.
 aurmich/dev
-=======
+
 
 In ogni file, sono stati rimossi tutti i marcatori di conflitto (``, `origin/dev`), mantenendo la versione più completa e corretta del codice.
 aurmich/dev
