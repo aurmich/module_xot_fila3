@@ -5,14 +5,9 @@ declare(strict_types=1);
 namespace Modules\Xot\Console\Commands;
 
 use Illuminate\Console\Command;
-<<<<<<< HEAD
-
-use function Safe\shell_exec;
-=======
 use RuntimeException;
 use function Safe\shell_exec;
 use function Safe\sprintf;
->>>>>>> 5693302 (.)
 
 class ImportMdbToSQLite extends Command
 {
@@ -32,86 +27,8 @@ class ImportMdbToSQLite extends Command
 
     /**
      * Esegui il comando.
-<<<<<<< HEAD
-     *
-     * @return void
      */
-    public function handle()
-    {
-        // Chiedi il percorso del file .mdb
-        $mdbFile = $this->ask('Per favore, inserisci il percorso del file .mdb');
-
-        // Chiedi il nome del file SQLite
-        $sqliteDb = $this->ask('Per favore, inserisci il nome del database SQLite (includi l\'estensione .sqlite)');
-
-        // Mostra i parametri ricevuti (opzionale, per verificare)
-        $this->info("File .mdb: $mdbFile");
-        $this->info("Database SQLite: $sqliteDb");
-
-        // Esporta le tabelle dal file .mdb
-        $this->info('Esportando tabelle dal file .mdb in CSV...');
-        $tables = $this->exportTablesToCSV($mdbFile);
-
-        // Crea le tabelle SQLite
-        $this->info('Creando tabelle nel database SQLite...');
-        $this->createTablesInSQLite($mdbFile, $sqliteDb);
-
-        // Carica i dati CSV nelle tabelle SQLite
-        $this->info('Importando i dati CSV nelle tabelle SQLite...');
-        $this->importDataToSQLite($tables, $sqliteDb);
-
-        $this->info('Processo completato!');
-    }
-
-    /**
-     * Esporta tutte le tabelle dal file .mdb in formato CSV.
-     *
-     * @param string $mdbFile
-     *
-     * @return array
-     */
-    private function exportTablesToCSV($mdbFile)
-    {
-        $tables = [];
-        $tableList = shell_exec("mdb-tables $mdbFile");
-
-        // Esporta ogni tabella in un file CSV
-        foreach (explode("\n", trim($tableList)) as $table) {
-            if (empty($table)) {
-                continue;
-            }
-            $tables[] = $table;
-            $csvFile = storage_path("app/{$table}.csv");
-            shell_exec("mdb-export $mdbFile $table > $csvFile");
-        }
-
-        return $tables;
-    }
-
-    /**
-     * Crea le tabelle nel database SQLite basandosi sullo schema del file .mdb.
-     *
-     * @param string $mdbFile
-     * @param string $sqliteDb
-     */
-    private function createTablesInSQLite($mdbFile, $sqliteDb)
-    {
-        $schema = shell_exec("mdb-schema $mdbFile sqlite");
-        $tables = explode(";\n", $schema);
-
-        foreach ($tables as $tableSchema) {
-            if (empty($tableSchema)) {
-                continue;
-            }
-            // Adatta le virgolette per SQLite
-            $tableSchema = str_replace('`', '"', $tableSchema);
-
-            // Crea la tabella in SQLite
-            $command = "sqlite3 $sqliteDb \"$tableSchema;\"";
-            shell_exec($command);
-=======
-     */
-    public function handle(): void
+    public function handle(): int
     {
         /** @var string */
         $mdbFile = $this->ask('Per favore, inserisci il percorso del file .mdb');
@@ -133,26 +50,14 @@ class ImportMdbToSQLite extends Command
             $this->importDataToSQLite($tables, $sqliteDb);
 
             $this->info('Processo completato!');
+            return Command::SUCCESS;
         } catch (\Exception $e) {
             $this->error($e->getMessage());
->>>>>>> 5693302 (.)
+            return Command::FAILURE;
         }
     }
 
     /**
-<<<<<<< HEAD
-     * Importa i dati CSV nelle tabelle SQLite.
-     *
-     * @param array  $tables
-     * @param string $sqliteDb
-     */
-    private function importDataToSQLite($tables, $sqliteDb)
-    {
-        foreach ($tables as $table) {
-            $csvFile = storage_path("app/{$table}.csv");
-            $command = "sqlite3 $sqliteDb \".mode csv\" \".import $csvFile $table\"";
-            shell_exec($command);
-=======
      * Esporta tutte le tabelle dal file .mdb in formato CSV.
      *
      * @param string $mdbFile
@@ -163,7 +68,7 @@ class ImportMdbToSQLite extends Command
         $tables = [];
         try {
             $result = shell_exec(sprintf("mdb-tables %s", $mdbFile));
-            
+
             foreach (explode("\n", trim($result)) as $table) {
                 if (empty($table)) {
                     continue;
@@ -196,7 +101,7 @@ class ImportMdbToSQLite extends Command
                 if (empty($tableSchema)) {
                     continue;
                 }
-                
+
                 $tableSchema = str_replace('`', '"', $tableSchema);
                 shell_exec(sprintf('sqlite3 %s "%s;"', $sqliteDb, $tableSchema));
             }
@@ -221,7 +126,6 @@ class ImportMdbToSQLite extends Command
             }
         } catch (\Exception $e) {
             throw new RuntimeException(sprintf('Errore durante l\'importazione dei dati: %s', $e->getMessage()));
->>>>>>> 5693302 (.)
         }
     }
 }

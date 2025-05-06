@@ -1,7 +1,4 @@
-<<<<<<< HEAD
-=======
 
->>>>>>> 5693302 (.)
 # Linee Guida per la Documentazione in Laraxot
 
 Questo documento definisce le best practices per la creazione e la manutenzione della documentazione all'interno del framework Laraxot.

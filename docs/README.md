@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Modulo Xot
 
 ### Versione HEAD
@@ -347,7 +346,6 @@ class User extends XotBaseModel { ... }
 
 
 ### Versione Incoming
-=======
 # Modulo Xot - Documentazione Core
 
 ## Introduzione
@@ -382,7 +380,6 @@ Il modulo Xot è il cuore dell'architettura modulare del sistema. Fornisce le fu
 - [Roadmap Generale](/docs/roadmap.md)
 - [Architettura Generale](/docs/ARCHITECTURE.md)
 - [Documentazione Tecnica](/docs/TECHNICAL.md)
->>>>>>> 5693302 (.)
 
 ## Panoramica
 Il modulo Xot fornisce le funzionalità base e le utilities utilizzate da tutti gli altri moduli dell'applicazione.
@@ -497,10 +494,8 @@ Il modulo è configurabile tramite:
 
 - [Linee Guida per getInfolistSchema](./filament/INFOLIST_SCHEMA_GUIDELINES.md) - Guida completa per l'implementazione corretta del metodo getInfolistSchema, con focus sull'uso delle chiavi stringa negli array 
 
-<<<<<<< HEAD
 ---
 
-=======
 ## Documentazione Filament
 
 - [Linee Guida per getInfolistSchema](./filament/INFOLIST_SCHEMA_GUIDELINES.md) - Guida completa per l'implementazione corretta del metodo getInfolistSchema, con focus sull'uso delle chiavi stringa negli array 
@@ -513,4 +508,3 @@ Il modulo è configurabile tramite:
 
 ## Documentazione Filament
 - [Linee Guida per getInfolistSchema](./filament/INFOLIST_SCHEMA_GUIDELINES.md) - Guida completa per l'implementazione corretta del metodo getInfolistSchema, con focus sull'uso delle chiavi stringa negli array 
->>>>>>> 5693302 (.)

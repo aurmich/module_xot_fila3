@@ -4,3 +4,6 @@ package-lock.json
 
 # Backup files
 *.bak
+-e 
+# PHPStan documentation
+docs/phpstan/

@@ -2,33 +2,30 @@
 
 ## Problema
 
-<<<<<<< HEAD:docs/risoluzione_conflitti_merge.md
 Durante lo sviluppo del progetto, sono stati identificati diversi file con conflitti di merge non risolti. Questi conflitti erano indicati dalla presenza di marcatori nel codice sorgente. I conflitti non risolti causavano errori durante l'analisi statica con PHPStan e impedivano il corretto funzionamento del codice.
 
 ## Collegamenti Bidirezionali
 
 - [Linee Guida Generali per la Risoluzione dei Conflitti Git](../../../../docs/risoluzione_conflitti_git.md)
 - [Documentazione Conflitti Git nei Moduli](../../../../docs/conflitti_git_moduli.md)
-=======
 
 
 =======
 
-Durante lo sviluppo del progetto SaluteOra, sono stati identificati diversi file con conflitti di merge non risolti. Questi conflitti erano indicati dalla presenza di marcatori come ``, `origin/dev` nel codice sorgente. I conflitti non risolti causavano errori durante l'analisi statica con PHPStan e impedivano il corretto funzionamento del codice.
+Durante lo sviluppo del progetto <nome progetto>, sono stati identificati diversi file con conflitti di merge non risolti. Questi conflitti erano indicati dalla presenza di marcatori come ``, `origin/dev` nel codice sorgente. I conflitti non risolti causavano errori durante l'analisi statica con PHPStan e impedivano il corretto funzionamento del codice.
 aurmich/dev
 =======
 
->>>>>>> aurmich/dev
 
-Durante lo sviluppo del progetto SaluteOra, sono stati identificati diversi file con conflitti di merge non risolti. Questi conflitti erano indicati dalla presenza di marcatori come ``, `=======` e `>>>>>>> origin/dev` nel codice sorgente. I conflitti non risolti causavano errori durante l'analisi statica con PHPStan e impedivano il corretto funzionamento del codice.
+Durante lo sviluppo del progetto <nome progetto>, sono stati identificati diversi file con conflitti di merge non risolti. Questi conflitti erano indicati dalla presenza di marcatori come ``, `=======` e `>>>>>>> origin/dev` nel codice sorgente. I conflitti non risolti causavano errori durante l'analisi statica con PHPStan e impedivano il corretto funzionamento del codice.
 =======
 
-Durante lo sviluppo del progetto SaluteOra, sono stati identificati diversi file con conflitti di merge non risolti. Questi conflitti erano indicati dalla presenza di marcatori come ``, `origin/dev` nel codice sorgente. I conflitti non risolti causavano errori durante l'analisi statica con PHPStan e impedivano il corretto funzionamento del codice.
+Durante lo sviluppo del progetto <nome progetto>, sono stati identificati diversi file con conflitti di merge non risolti. Questi conflitti erano indicati dalla presenza di marcatori come ``, `origin/dev` nel codice sorgente. I conflitti non risolti causavano errori durante l'analisi statica con PHPStan e impedivano il corretto funzionamento del codice.
 aurmich/dev
 >>>>>>> aurmich/dev
 =======
 
-Durante lo sviluppo del progetto SaluteOra, sono stati identificati diversi file con conflitti di merge non risolti. Questi conflitti erano indicati dalla presenza di marcatori come ``, `origin/dev` nel codice sorgente. I conflitti non risolti causavano errori durante l'analisi statica con PHPStan e impedivano il corretto funzionamento del codice.
+Durante lo sviluppo del progetto <nome progetto>, sono stati identificati diversi file con conflitti di merge non risolti. Questi conflitti erano indicati dalla presenza di marcatori come ``, `origin/dev` nel codice sorgente. I conflitti non risolti causavano errori durante l'analisi statica con PHPStan e impedivano il corretto funzionamento del codice.
 aurmich/dev
 >>>>>>> aurmich/dev
 
@@ -72,12 +69,10 @@ Per risolvere i conflitti, è stato seguito un approccio sistematico:
 
 ### 1. Rimozione dei Marcatori di Conflitto
 
-<<<<<<< HEAD:docs/risoluzione_conflitti_merge.md
 
 In ogni file, sono stati rimossi tutti i marcatori di conflitto (``, `origin/dev`), mantenendo la versione più completa e corretta del codice.
 aurmich/dev
 In ogni file, sono stati rimossi tutti i marcatori di conflitto , mantenendo la versione più completa e corretta del codice.
-=======
 
 
 =======
@@ -86,7 +81,6 @@ In ogni file, sono stati rimossi tutti i marcatori di conflitto (``, `origin/dev
 aurmich/dev
 =======
 
->>>>>>> aurmich/dev
 
 In ogni file, sono stati rimossi tutti i marcatori di conflitto (``, `=======`, `>>>>>>> origin/dev`), mantenendo la versione più completa e corretta del codice.
 =======
@@ -98,9 +92,6 @@ aurmich/dev
 
 In ogni file, sono stati rimossi tutti i marcatori di conflitto (``, `origin/dev`), mantenendo la versione più completa e corretta del codice.
 aurmich/dev
-<<<<<<< HEAD:docs/risoluzione_conflitti_merge.md
-=======
->>>>>>> aurmich/dev
 
 =======
 >>>>>>> aurmich/dev
@@ -274,17 +265,14 @@ Per prevenire problemi simili in futuro, si raccomanda di:
 - **Visual Merge Tools**: Utilizzare strumenti come VS Code, PhpStorm o GitKraken per gestire i conflitti di merge in modo visuale
 - **Merge Opzionali**: Considerare l'uso di `git merge --no-commit` per verificare il risultato prima di completare il merge
 
-<<<<<<< HEAD:docs/risoluzione_conflitti_merge.md
+
+
 
 
 =======
 
-
 =======
 
-=======
-
->>>>>>> aurmich/dev
 
 =======
 

@@ -15,7 +15,7 @@ use Spatie\LaravelData\Concerns\WireableData;
 
 /**
  * Class MetatagData
- * 
+ *
  * @property string $title
  * @property string $sitename
  * @property string $subtitle
@@ -141,7 +141,7 @@ class MetatagData extends Data implements Wireable
 
     /** @var string */
     public string $favicon = '/favicon.ico';
-    
+
     /**
      * @var array<string, array{key?: string, color: string, hex?: string}>
      */
@@ -248,156 +248,129 @@ class MetatagData extends Data implements Wireable
      *
      * @return array<string, array<int, string>>
      */
-    public function getColors(): array
-    {
-        if (empty($this->colors)) {
-            return $this->getFilamentColors();    
-        }
-
-        /** @var array<string, array<int, string>> $mapped */
-        $mapped = Arr::mapWithKeys(
-            $this->colors,
-            function (array $item, string|int $key): array {
-                $keyStr = isset($item['key']) 
-                    ? $item['key'] 
-                    : (string) $key;
-
-                /** @var array<int, string> $value */
-                $value = match (true) {
-                    $item['color'] === 'custom' && isset($item['hex']) 
-                        => Color::hex($item['hex']),
-                    isset(Color::all()[$item['color']]) 
-                        => Color::all()[$item['color']],
-                    default => Color::Gray,
-                };
-
-                return [$keyStr => $value];
-            }
-        );
-        
-        return $mapped;
-<<<<<<< HEAD
-=======
-    }
-
-    /**
-     * @return array<string, string>
-     */
     public function getAllColors(): array
     {
-        $colors = array_keys(Color::all());
-        return array_combine($colors, $colors);
+        return array_merge($this->getFilamentColors(), $this->colors);
     }
 
     /**
-     * Get the icons configuration.
+     * Get the icons array.
      *
      * @return array<string, string>
      */
     public function getIcons(): array
     {
-        $config = TenantService::getConfig('metatag');
-        /** @var array<string, string> $icons */
-        $icons = Arr::get($config, 'icons', []);
-        return $icons;
+        return [
+            'logo' => $this->logo,
+            'logo_square' => $this->logo_square,
+            'logo_header' => $this->logo_header,
+            'logo_header_dark' => $this->logo_header_dark,
+            'logo_footer' => $this->logo_footer,
+            'favicon' => $this->favicon,
+        ];
     }
 
     /**
-     * Get the dimensions configuration.
+     * Get the dimensions array.
      *
-     * @return array<string, int|string>
+     * @return array<string, string>
      */
     public function getDimensions(): array
     {
-        $config = TenantService::getConfig('metatag');
-        /** @var array<string, int|string> $dimensions */
-        $dimensions = Arr::get($config, 'dimensions', []);
-        return $dimensions;
+        return [
+            'logo_height' => $this->logo_height,
+        ];
     }
 
     /**
-     * Get the alignment configuration.
+     * Get the alignment array.
      *
      * @return array<string, string>
      */
     public function getAlignment(): array
     {
-        $config = TenantService::getConfig('metatag');
-        /** @var array<string, string> $alignment */
-        $alignment = Arr::get($config, 'alignment', []);
-        return $alignment;
+        return [
+            'hide_megamenu' => $this->hide_megamenu,
+            'hero_type' => $this->hero_type,
+        ];
     }
 
     /**
-     * Get the settings configuration.
+     * Get the settings array.
      *
-     * @return array<string, mixed>
+     * @return array<string, string>
      */
     public function getSettings(): array
     {
-        $config = TenantService::getConfig('metatag');
-        /** @var array<string, mixed> $settings */
-        $settings = Arr::get($config, 'settings', []);
-        return $settings;
+        return [
+            'fastlink' => $this->fastlink,
+        ];
     }
 
     /**
-     * Get the meta values configuration.
+     * Get the meta values array.
      *
-     * @return array<string, string>
+     * @return array<string, string|null>
      */
     public function getMetaValues(): array
     {
-        $result = [
+        return [
             'title' => $this->title,
-            'description' => $this->description ?? '',
-            'keywords' => $this->keywords ?? '',
-            'author' => $this->author ?? '',
-            'generator' => $this->generator ?? '',
+            'sitename' => $this->sitename,
+            'subtitle' => $this->subtitle,
+            'generator' => $this->generator,
+            'charset' => $this->charset,
+            'author' => $this->author,
+            'description' => $this->description,
+            'keywords' => $this->keywords,
+            'nome_regione' => $this->nome_regione,
+            'nome_comune' => $this->nome_comune,
+            'site_title' => $this->site_title,
         ];
-
-        return array_filter($result);
     }
 
     /**
-     * Get the social cards configuration.
+     * Get the social cards array.
      *
-     * @return array<string, mixed>
+     * @return array<string, string>
      */
     public function getSocialCards(): array
     {
-        $config = TenantService::getConfig('metatag');
-        /** @var array<string, mixed> $socialCards */
-        $socialCards = Arr::get($config, 'social_cards', []);
-        return $socialCards;
+        return [
+            'facebook_href' => $this->facebook_href,
+            'twitter_href' => $this->twitter_href,
+            'youtube_href' => $this->youtube_href,
+        ];
     }
 
     /**
-     * Get the OpenGraph data.
+     * Get the OpenGraph array.
      *
-     * @return array<string, string>
+     * @return array<string, string|null>
      */
     public function getOpenGraph(): array
     {
         return [
             'title' => $this->title,
-            'description' => $this->description ?? '',
+            'description' => $this->description,
+            'type' => 'website',
+            'url' => url()->current(),
             'site_name' => $this->sitename,
         ];
     }
 
     /**
-     * Get the Twitter Card data.
+     * Get the Twitter Cards array.
      *
-     * @return array<string, string>
+     * @return array<string, string|null>
      */
     public function getTwitterCards(): array
     {
         return [
+            'card' => 'summary_large_image',
             'title' => $this->title,
-            'description' => $this->description ?? '',
+            'description' => $this->description,
             'site' => $this->twitter_href,
         ];
->>>>>>> 5693302 (.)
     }
 }

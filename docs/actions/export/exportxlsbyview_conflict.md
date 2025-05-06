@@ -3,23 +3,17 @@
 ## Problema
 È stato rilevato un conflitto di merge nel file `Modules/Xot/app/Actions/Export/ExportXlsByView.php` alla riga relativa alla conversione di campi in stringa all'interno della funzione di callback di `array_map`.
 
-<<<<<<< HEAD:docs/actions/export/exportxlsbyview_conflict.md
+Il file presenta un marker di conflitto `
+
+
+=======
 Il file presenta un marker di conflitto `
 =======
 
-
-=======
-Il file presenta un marker di conflitto `
-=======
-
->>>>>>> aurmich/dev
 >>>>>>> 5693302 (.):docs/actions/export/ExportXlsByView_conflict.md
 Il file presenta un marker di conflitto `>>>>>>> origin/dev` che indica un merge non completato tra due rami di sviluppo.
 
 Il file presenta un marker di conflitto `
-<<<<<<< HEAD:docs/actions/export/exportxlsbyview_conflict.md
-=======
->>>>>>> aurmich/dev
 
 =======
 >>>>>>> aurmich/dev
