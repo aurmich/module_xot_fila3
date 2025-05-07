@@ -1,9 +1,12 @@
 /*.lock
 package-lock.json
 /vendor
+<<<<<<< HEAD
 
 # Backup files
 *.bak
 -e 
 # PHPStan documentation
 docs/phpstan/
+=======
+>>>>>>> 3268b83 (.)

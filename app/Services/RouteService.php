@@ -348,4 +348,30 @@ class RouteService
                 }
             )->implode('.');
     }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+    /**
+     * Recupera i parametri della route corrente.
+     *
+     * @return array<string, mixed>
+     */
+    public static function getRouteParams(): array
+    {
+        $route = Route::current();
+        if (null === $route) {
+            return [];
+        }
+
+        return [
+            'name' => $route->getName(),
+            'action' => $route->getActionName(),
+            'parameters' => $route->parameters(),
+            'uri' => $route->uri(),
+        ];
+    }
+=======
+>>>>>>> origin/dev
+>>>>>>> 3268b83 (.)
 }

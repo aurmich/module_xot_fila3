@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ### Versione HEAD
 
 # Analisi della Discrepanza tra Namespace e Struttura Directory nei Moduli Laraxot
@@ -240,6 +241,14 @@ laravel/Themes/[Nome]/
 ---
 
 
+=======
+<<<<<<< HEAD
+=======
+
+=======
+
+>>>>>>> origin/dev
+>>>>>>> 3268b83 (.)
 # Struttura del Modulo Xot
 
 ## Struttura delle Directory
@@ -276,9 +285,18 @@ Modules/Xot/
 3. **Best Practices**
    - Mantenere una struttura di directory pulita e organizzata
    - Seguire le convenzioni di Laravel per la struttura delle directory
+<<<<<<< HEAD
 ### Versione HEAD
 
    - Utilizzare i namespace appropriati che riflettono la struttura delle directory 
+=======
+<<<<<<< HEAD
+   - Utilizzare i namespace appropriati che riflettono la struttura delle directory 
+=======
+   - Utilizzare i namespace appropriati che riflettono la struttura delle directory 
+=======
+>>>>>>> aurmich/dev
+>>>>>>> 3268b83 (.)
 # Modulo Xot
 
 Data: 2025-04-23 19:09:56
@@ -1065,6 +1083,7 @@ tests_old
 - [Report PHPStan](/docs/phpstan/)
 
 
+<<<<<<< HEAD
 ### Versione Incoming
 
    - Utilizzare i namespace appropriati che riflettono la struttura delle directory 
@@ -1097,3 +1116,9 @@ tests_old
 
 ---
 
+=======
+=======
+>>>>>>> aurmich/dev
+>>>>>>> aurmich/dev
+>>>>>>> origin/dev
+>>>>>>> 3268b83 (.)

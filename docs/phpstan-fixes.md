@@ -1,6 +1,18 @@
+<<<<<<< HEAD
 
 
 
+=======
+<<<<<<< HEAD
+=======
+
+
+=======
+=======
+
+>>>>>>> aurmich/dev
+>>>>>>> origin/dev
+>>>>>>> 3268b83 (.)
 # Correzioni PHPStan nel Modulo Xot
 
 ## Correzioni Implementate
@@ -29,8 +41,13 @@
 - ✅ Migliorata gestione delle eccezioni
 - ✅ Documentazione PHPDoc completa
 
+<<<<<<< HEAD
 ### Versione HEAD
 
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 3268b83 (.)
 ### 5. ExportXlsByView (2023-03-21)
 - ✅ Rimossi controlli ridondanti dei tipi in `is_string()` e `is_scalar()`
 - ✅ Migliorata la documentazione dei parametri
@@ -95,12 +112,16 @@
 - ✅ Aggiunte annotazioni PHPDoc per le variabili di opzione
 - ✅ Aggiunta documentazione della classe
 
+<<<<<<< HEAD
 
 ### Versione Incoming
 
 
 ---
 
+=======
+>>>>>>> origin/dev
+>>>>>>> 3268b83 (.)
 ## Best Practices
 
 ### 1. Gestione Tipi
@@ -114,9 +135,19 @@ public function execute(string $modelClass): AbstractSchemaManager
 {
     Assert::classExists($modelClass);
     Assert::subclassOf($modelClass, Model::class);
+<<<<<<< HEAD
 ### Versione HEAD
 
 
+=======
+<<<<<<< HEAD
+=======
+=======
+
+=======
+>>>>>>> aurmich/dev
+>>>>>>> aurmich/dev
+>>>>>>> 3268b83 (.)
 # Risoluzione Problemi PHPStan nel Modulo Xot
 
 Questo documento descrive i principali problemi PHPStan risolti nel modulo Xot e le strategie adottate per la loro risoluzione.
@@ -217,19 +248,41 @@ Questo documento descrive i principali problemi PHPStan risolti nel modulo Xot e
 class XotBaseModel extends Model
 {
 
+<<<<<<< HEAD
 ### Versione Incoming
 
 
 ---
 
 
+=======
+=======
+
+=======
+>>>>>>> aurmich/dev
+>>>>>>> aurmich/dev
+>>>>>>> aurmich/dev
+>>>>>>> origin/dev
+>>>>>>> 3268b83 (.)
     // ...
 }
 ```
 
+<<<<<<< HEAD
 
 
 
+=======
+<<<<<<< HEAD
+=======
+
+
+=======
+=======
+
+>>>>>>> aurmich/dev
+>>>>>>> origin/dev
+>>>>>>> 3268b83 (.)
 ### 2. Validazione Dati
 ```php
 /**
@@ -240,9 +293,19 @@ private function validateData(array $data): void
 {
     Assert::keyExists($data, 'required_field');
     Assert::string($data['required_field']);
+<<<<<<< HEAD
 ### Versione HEAD
 
 
+=======
+<<<<<<< HEAD
+=======
+=======
+
+=======
+>>>>>>> aurmich/dev
+>>>>>>> aurmich/dev
+>>>>>>> 3268b83 (.)
 ### Servizi e Dependency Injection
 
 **Problema**: Metodi che utilizzano dependency injection non avevano tipi ben definiti.
@@ -260,19 +323,41 @@ private function validateData(array $data): void
 public function process(ServiceInterface $service): ResponseInterface
 {
 
+<<<<<<< HEAD
 ### Versione Incoming
 
 
 ---
 
 
+=======
+=======
+
+=======
+>>>>>>> aurmich/dev
+>>>>>>> aurmich/dev
+>>>>>>> aurmich/dev
+>>>>>>> origin/dev
+>>>>>>> 3268b83 (.)
     // ...
 }
 ```
 
+<<<<<<< HEAD
 
 
 
+=======
+<<<<<<< HEAD
+=======
+
+
+=======
+=======
+
+>>>>>>> aurmich/dev
+>>>>>>> origin/dev
+>>>>>>> 3268b83 (.)
 ### 3. Gestione Relazioni
 ```php
 /**
@@ -365,9 +450,18 @@ public function execute(Model $model, array $data): array
 - ✅ Risolto: Implementato `getTableColumns()` e `getTableConfiguration()`
 
 ### 2. Metodo Final Override in UsersRelationManager
+<<<<<<< HEAD
 ### Versione HEAD
 
 - ❌ Errore: Cannot override final method `Modules\Xot\Filament\Resources\XotBaseResource\RelationManager\XotBaseRelationManager::form()`
+=======
+<<<<<<< HEAD
+- ❌ Errore: Cannot override final method `Modules\Xot\Filament\Resources\XotBaseResource\RelationManager\XotBaseRelationManager::form()`
+=======
+
+- ❌ Errore: Cannot override final method `Modules\Xot\Filament\Resources\XotBaseResource\RelationManager\XotBaseRelationManager::form()`
+=======
+>>>>>>> 3268b83 (.)
 
 
 - ❌ Errore: Cannot override final method `Modules\Xot\Filament\Resources\XotBaseResource\RelationManagers\XotBaseRelationManager::form()`
@@ -377,6 +471,7 @@ public function execute(Model $model, array $data): array
 
 - ❌ Errore: Cannot override final method `Modules\Xot\Filament\Resources\XotBaseResource\RelationManagers\XotBaseRelationManager::form()`
  7b67053 (fix: auto resolve conflict)
+<<<<<<< HEAD
 
 ### Versione Incoming
 
@@ -384,6 +479,10 @@ public function execute(Model $model, array $data): array
 
 ---
 
+=======
+>>>>>>> aurmich/dev
+>>>>>>> origin/dev
+>>>>>>> 3268b83 (.)
 - 📍 Posizione: `Modules/User/app/Filament/Resources/TeamResource/RelationManagers/UsersRelationManager.php:21`
 - 🔧 Soluzione necessaria:
   - Rimuovere l'override del metodo `form()`
@@ -391,9 +490,18 @@ public function execute(Model $model, array $data): array
   - Implementare la logica corretta per la gestione delle relazioni
 
 ### 3. Metodo Final Override in DomainsRelationManager
+<<<<<<< HEAD
 ### Versione HEAD
 
 - ❌ Errore: Cannot override final method `Modules\Xot\Filament\Resources\XotBaseResource\RelationManager\XotBaseRelationManager::form()`
+=======
+<<<<<<< HEAD
+- ❌ Errore: Cannot override final method `Modules\Xot\Filament\Resources\XotBaseResource\RelationManager\XotBaseRelationManager::form()`
+=======
+
+- ❌ Errore: Cannot override final method `Modules\Xot\Filament\Resources\XotBaseResource\RelationManager\XotBaseRelationManager::form()`
+=======
+>>>>>>> 3268b83 (.)
 
 
 - ❌ Errore: Cannot override final method `Modules\Xot\Filament\Resources\XotBaseResource\RelationManagers\XotBaseRelationManager::form()`
@@ -403,6 +511,7 @@ public function execute(Model $model, array $data): array
 
 - ❌ Errore: Cannot override final method `Modules\Xot\Filament\Resources\XotBaseResource\RelationManagers\XotBaseRelationManager::form()`
  7b67053 (fix: auto resolve conflict)
+<<<<<<< HEAD
 
 ### Versione Incoming
 
@@ -410,6 +519,10 @@ public function execute(Model $model, array $data): array
 
 ---
 
+=======
+>>>>>>> aurmich/dev
+>>>>>>> origin/dev
+>>>>>>> 3268b83 (.)
 - 📍 Posizione: `Modules/User/app/Filament/Resources/TenantResource/RelationManagers/DomainsRelationManager.php:20`
 - 🔧 Soluzione necessaria:
   - Rimuovere l'override del metodo `form()`
@@ -462,6 +575,7 @@ public function execute(Model $model, array $data): array
 
 3. **Azioni e Validazione**
    ```php
+<<<<<<< HEAD
 ### Versione HEAD
 
    public function getTableActions(): array
@@ -472,6 +586,27 @@ public function execute(Model $model, array $data): array
 
 ---
 
+=======
+<<<<<<< HEAD
+
+
+
+
+ e06b7b401b19a629db99ac2a1abdc82075a443cf
+   public function getTableActions(): array
+
+   protected function getTableActions(): array
+
+
+
+   public function getTableActions(): array
+
+
+ e06b7b401b19a629db99ac2a1abdc82075a443cf
+=======
+   public function getTableActions(): array
+>>>>>>> origin/dev
+>>>>>>> 3268b83 (.)
    {
        return [
            Tables\Actions\EditAction::make()
@@ -507,9 +642,22 @@ Best Practices:
 - Utilizzare i metodi previsti per la personalizzazione invece di sovrascrivere metodi final
 - Mantenere la coerenza nella struttura dei form tra i vari RelationManager
 - Validare i dati utilizzando le regole di validazione di Laravel
+<<<<<<< HEAD
 ### Versione HEAD
 
 
+=======
+
+<<<<<<< HEAD
+
+
+
+
+
+ e06b7b401b19a629db99ac2a1abdc82075a443cf
+=======
+>>>>>>> origin/dev
+>>>>>>> 3268b83 (.)
 - Documentare le personalizzazioni nel codice 
 
 ## Problema: File Helper.php mancante
@@ -570,6 +718,16 @@ Il file `TenantService.php` fa riferimento alla classe `Modules\Tenant\Actions\G
 2. Creare il file `GetTenantNameAction.php` con l'implementazione appropriata
 3. Assicurarsi che il namespace sia corretto (`Modules\Tenant\Actions`)
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+
+
+ e06b7b401b19a629db99ac2a1abdc82075a443cf
+=======
+>>>>>>> origin/dev
+>>>>>>> 3268b83 (.)
 Questo permette a phpstan di trovare correttamente il file durante l'analisi statica del codice. 
 
 - Documentare le personalizzazioni nel codice 
@@ -580,6 +738,11 @@ Questo permette a phpstan di trovare correttamente il file durante l'analisi sta
 
 
  e06b7b401b19a629db99ac2a1abdc82075a443cf
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 3268b83 (.)
 
 ## Commands
 
@@ -591,10 +754,18 @@ Questo permette a phpstan di trovare correttamente il file durante l'analisi sta
 - Aggiunta tipizzazione per i metodi getColumns, getIndexes e getForeignKeys
 - Aggiunta asserzione per la codifica JSON
 - Aggiunta tipizzazione per il DoctrineSchemaManager
+<<<<<<< HEAD
 
 ### Versione Incoming
 
 
+=======
+=======
+
+=======
+>>>>>>> aurmich/dev
+>>>>>>> aurmich/dev
+>>>>>>> 3268b83 (.)
 ### Problemi con le Relazioni Eloquent
 
 **Problema**: PHPStan non riconosceva correttamente i tipi restituiti dalle relazioni Eloquent.
@@ -752,6 +923,7 @@ interface AuthenticatableRequest
 - [Larastan](https://github.com/nunomaduro/larastan)
 - [Guida PHPStan Livello 10](PHPSTAN_LIVELLO10_LINEE_GUIDA.md)
 
+<<<<<<< HEAD
 ### Versione Incoming
 
 - Documentare le personalizzazioni nel codice 
@@ -759,3 +931,12 @@ interface AuthenticatableRequest
 ---
 
 
+=======
+=======
+
+=======
+>>>>>>> aurmich/dev
+>>>>>>> aurmich/dev
+>>>>>>> aurmich/dev
+>>>>>>> origin/dev
+>>>>>>> 3268b83 (.)

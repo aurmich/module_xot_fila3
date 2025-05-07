@@ -102,7 +102,34 @@ Per le risorse PHP (file handles, connessioni di database, ecc.) che non possono
 private $fileHandle = null;
 ```
 
+<<<<<<< HEAD
 ### 4. Pattern per Controller
+=======
+<<<<<<< HEAD
+
+
+
+
+
+ e06b7b401b19a629db99ac2a1abdc82075a443cf
+
+
+
+
+### 4. Pattern per Controller
+
+
+
+
+
+
+
+
+
+ e06b7b401b19a629db99ac2a1abdc82075a443cf
+=======
+>>>>>>> origin/dev
+>>>>>>> 3268b83 (.)
 ### 4. Gestione delle API Fluenti di Librerie Esterne
 
 Le API fluenti (method chaining) di alcune librerie esterne come Laravel-FFMpeg possono causare problemi con PHPStan a livello 10, in particolare quando i metodi intermedi restituiscono tipi non standard o quando la catena è lunga e complessa.
@@ -151,6 +178,34 @@ Questo pattern è stato applicato con successo nei file `ConvertVideoByMediaConv
 
 ### 5. Pattern per Controller
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+
+
+
+
+
+ e06b7b401b19a629db99ac2a1abdc82075a443cf
+### 4. Pattern per Controller
+
+
+### 4. Pattern per Controller
+
+
+
+
+
+
+ e06b7b401b19a629db99ac2a1abdc82075a443cf
+
+
+
+
+=======
+>>>>>>> origin/dev
+>>>>>>> 3268b83 (.)
 Per i metodi dei controller, utilizzare tipi di ritorno espliciti che riflettono i possibili valori restituiti:
 
 ```php
@@ -160,8 +215,46 @@ public function show(string $id): \Illuminate\View\View|\Illuminate\Http\Redirec
 }
 ```
 
+<<<<<<< HEAD
 ### 5. Gestione delle Proprietà Dinamiche
 ### 6. Gestione delle Proprietà Dinamiche
+=======
+<<<<<<< HEAD
+
+
+
+
+
+
+
+ e06b7b401b19a629db99ac2a1abdc82075a443cf
+### 6. Gestione delle Proprietà Dinamiche
+### 5. Gestione delle Proprietà Dinamiche
+
+
+### 6. Gestione delle Proprietà Dinamiche
+
+### 5. Gestione delle Proprietà Dinamiche
+
+
+
+
+ e06b7b401b19a629db99ac2a1abdc82075a443cf
+
+### 5. Gestione delle Proprietà Dinamiche
+
+### 6. Gestione delle Proprietà Dinamiche
+
+
+
+
+
+ e06b7b401b19a629db99ac2a1abdc82075a443cf
+
+=======
+### 6. Gestione delle Proprietà Dinamiche
+>>>>>>> origin/dev
+>>>>>>> 3268b83 (.)
 
 Per le proprietà dinamiche nei modelli, utilizzare annotazioni PHPDoc complete:
 
@@ -177,8 +270,46 @@ class User extends Model
 }
 ```
 
+<<<<<<< HEAD
 ### 6. Conversione Sicura da `mixed` a Tipi Scalari
 ### 7. Conversione Sicura da `mixed` a Tipi Scalari
+=======
+<<<<<<< HEAD
+
+
+
+
+
+
+
+ e06b7b401b19a629db99ac2a1abdc82075a443cf
+### 7. Conversione Sicura da `mixed` a Tipi Scalari
+### 6. Conversione Sicura da `mixed` a Tipi Scalari
+
+
+### 7. Conversione Sicura da `mixed` a Tipi Scalari
+
+### 6. Conversione Sicura da `mixed` a Tipi Scalari
+
+
+
+
+ e06b7b401b19a629db99ac2a1abdc82075a443cf
+
+### 6. Conversione Sicura da `mixed` a Tipi Scalari
+
+### 7. Conversione Sicura da `mixed` a Tipi Scalari
+
+
+
+
+
+ e06b7b401b19a629db99ac2a1abdc82075a443cf
+
+=======
+### 7. Conversione Sicura da `mixed` a Tipi Scalari
+>>>>>>> origin/dev
+>>>>>>> 3268b83 (.)
 
 Quando si lavora con valori `mixed` da convertire in tipi scalari (string, int, float, bool), utilizzare controlli di tipo prima della conversione:
 
@@ -220,8 +351,46 @@ if ($value !== null) {
 }
 ```
 
+<<<<<<< HEAD
 ### 7. Gestione Sicura di Array con Chiavi Miste
 ### 8. Gestione Sicura di Array con Chiavi Miste
+=======
+<<<<<<< HEAD
+
+
+
+
+
+
+
+ e06b7b401b19a629db99ac2a1abdc82075a443cf
+### 8. Gestione Sicura di Array con Chiavi Miste
+### 7. Gestione Sicura di Array con Chiavi Miste
+
+
+### 8. Gestione Sicura di Array con Chiavi Miste
+
+### 7. Gestione Sicura di Array con Chiavi Miste
+
+
+
+
+ e06b7b401b19a629db99ac2a1abdc82075a443cf
+
+### 7. Gestione Sicura di Array con Chiavi Miste
+
+### 8. Gestione Sicura di Array con Chiavi Miste
+
+
+
+
+
+ e06b7b401b19a629db99ac2a1abdc82075a443cf
+
+=======
+### 8. Gestione Sicura di Array con Chiavi Miste
+>>>>>>> origin/dev
+>>>>>>> 3268b83 (.)
 
 Quando si ottengono array da fonti esterne (es. funzioni Laravel che restituiscono array con chiavi miste):
 
@@ -238,8 +407,46 @@ foreach ($componentsWithMixedKeys as $key => $component) {
 }
 ```
 
+<<<<<<< HEAD
 ### 8. Tipi Unione con Null
 ### 9. Tipi Unione con Null
+=======
+<<<<<<< HEAD
+
+
+
+
+
+
+
+ e06b7b401b19a629db99ac2a1abdc82075a443cf
+### 9. Tipi Unione con Null
+### 8. Tipi Unione con Null
+
+
+### 9. Tipi Unione con Null
+
+### 8. Tipi Unione con Null
+
+
+
+
+ e06b7b401b19a629db99ac2a1abdc82075a443cf
+
+### 8. Tipi Unione con Null
+
+### 9. Tipi Unione con Null
+
+
+
+
+
+ e06b7b401b19a629db99ac2a1abdc82075a443cf
+
+=======
+### 9. Tipi Unione con Null
+>>>>>>> origin/dev
+>>>>>>> 3268b83 (.)
 
 Preferire la sintassi nullable (`?tipo`) per i tipi che possono essere null:
 
@@ -250,8 +457,46 @@ public function findById(?int $id): ?User
 }
 ```
 
+<<<<<<< HEAD
 ### 9. Parametri Variabili (Variadic)
 ### 10. Parametri Variabili (Variadic)
+=======
+<<<<<<< HEAD
+
+
+
+
+
+
+
+ e06b7b401b19a629db99ac2a1abdc82075a443cf
+### 10. Parametri Variabili (Variadic)
+### 9. Parametri Variabili (Variadic)
+
+
+### 10. Parametri Variabili (Variadic)
+
+### 9. Parametri Variabili (Variadic)
+
+
+
+
+ e06b7b401b19a629db99ac2a1abdc82075a443cf
+
+### 9. Parametri Variabili (Variadic)
+
+### 10. Parametri Variabili (Variadic)
+
+
+
+
+
+ e06b7b401b19a629db99ac2a1abdc82075a443cf
+
+=======
+### 10. Parametri Variabili (Variadic)
+>>>>>>> origin/dev
+>>>>>>> 3268b83 (.)
 
 Per i parametri variabili, specificare il tipo di ogni elemento nell'array risultante:
 
@@ -266,9 +511,49 @@ public function buildPath(string ...$segments): string
 }
 ```
 
+<<<<<<< HEAD
 ### 10. Callback e Closure
 ### 11. Callback e Closure
 
+=======
+<<<<<<< HEAD
+
+
+
+
+
+
+
+ e06b7b401b19a629db99ac2a1abdc82075a443cf
+### 11. Callback e Closure
+### 10. Callback e Closure
+
+
+### 11. Callback e Closure
+
+### 10. Callback e Closure
+
+
+
+
+ e06b7b401b19a629db99ac2a1abdc82075a443cf
+
+### 10. Callback e Closure
+
+### 11. Callback e Closure
+
+
+
+
+
+ e06b7b401b19a629db99ac2a1abdc82075a443cf
+
+
+=======
+### 10. Callback e Closure
+
+>>>>>>> origin/dev
+>>>>>>> 3268b83 (.)
 Per i callback e le closure, utilizzare `callable` con specifiche di tipo dettagliate:
 
 ```php
@@ -499,17 +784,111 @@ Anche se i file sono fisicamente collocati nella directory `app` del modulo, il 
 Uno degli errori più frequenti riguarda il namespace delle Actions:
 
 - ✅ **CORRETTO**: `namespace Modules\Xot\Actions;`
+<<<<<<< HEAD
 - ❌ **ERRATO**: `namespace Modules\Xot\app\Actions;`
 - ❌ **ERRATO**: `namespace Modules\Xot\Actions;`
 
+=======
+<<<<<<< HEAD
+
+
+
+
+
+
+
+ e06b7b401b19a629db99ac2a1abdc82075a443cf
+- ❌ **ERRATO**: `namespace Modules\Xot\Actions;`
+- ❌ **ERRATO**: `namespace Modules\Xot\app\Actions;`
+
+
+- ❌ **ERRATO**: `namespace Modules\Xot\Actions;`
+
+- ❌ **ERRATO**: `namespace Modules\Xot\app\Actions;`
+
+
+
+
+ e06b7b401b19a629db99ac2a1abdc82075a443cf
+
+- ❌ **ERRATO**: `namespace Modules\Xot\app\Actions;`
+
+- ❌ **ERRATO**: `namespace Modules\Xot\Actions;`
+
+
+
+
+
+ e06b7b401b19a629db99ac2a1abdc82075a443cf
+
+
+=======
+- ❌ **ERRATO**: `namespace Modules\Xot\app\Actions;`
+
+>>>>>>> origin/dev
+>>>>>>> 3268b83 (.)
 Anche se il file Actions si trova fisicamente in `Modules/Xot/app/Actions/`, il namespace deve sempre essere `Modules\Xot\Actions` (senza il segmento `app`).
 
 Gli errori PHPStan relativi a questo problema sono spesso del tipo:
 ```
+<<<<<<< HEAD
 Class 'Modules\Xot\app\Actions\MyAction' not found.
 Class 'Modules\Xot\Actions\MyAction' not found.
 ```
 
+=======
+<<<<<<< HEAD
+
+
+
+
+
+
+
+ e06b7b401b19a629db99ac2a1abdc82075a443cf
+Class 'Modules\Xot\Actions\MyAction' not found.
+Class 'Modules\Xot\app\Actions\MyAction' not found.
+
+
+Class 'Modules\Xot\Actions\MyAction' not found.
+
+Class 'Modules\Xot\app\Actions\MyAction' not found.
+
+
+
+
+ e06b7b401b19a629db99ac2a1abdc82075a443cf
+
+Class 'Modules\Xot\app\Actions\MyAction' not found.
+
+Class 'Modules\Xot\Actions\MyAction' not found.
+
+
+
+
+
+ e06b7b401b19a629db99ac2a1abdc82075a443cf
+
+```
+
+=======
+Class 'Modules\Xot\app\Actions\MyAction' not found.
+```
+
+#### Esempio per i Comandi Console
+
+```php
+// CORRETTO
+namespace Modules\Xot\Console\Commands;
+
+// ERRATO
+namespace Modules\Xot\app\Console\Commands;
+```
+
+Errori PHPStan come `Class Modules\Xot\app\Console\Commands\DatabaseSchemaExportCommand not found` indicano che è necessario rimuovere il segmento `app` dal namespace.
+
+>>>>>>> origin/dev
+>>>>>>> 3268b83 (.)
 #### Namespace Corretti per i Componenti Principali
 
 | Tipo di Componente       | Percorso Fisico                         | Namespace Corretto                 |
@@ -524,16 +903,79 @@ Class 'Modules\Xot\Actions\MyAction' not found.
 
 #### Esempio per i Comandi Console
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 3268b83 (.)
 ```php
 // CORRETTO
 namespace Modules\Xot\Console\Commands;
 
 // ERRATO
+<<<<<<< HEAD
 namespace Modules\Xot\app\Console\Commands;
 ```
 
 Errori PHPStan come `Class Modules\Xot\app\Console\Commands\DatabaseSchemaExportCommand not found` indicano che è necessario rimuovere il segmento `app` dal namespace.
+=======
+
+
+
+
+
+
+
+ e06b7b401b19a629db99ac2a1abdc82075a443cf
+
+
+
+>>>>>>> 3268b83 (.)
 namespace Modules\Xot\Console\Commands;
 ```
 
 Errori PHPStan come `Class Modules\Xot\Console\Commands\DatabaseSchemaExportCommand not found` indicano che è necessario rimuovere il segmento `app` dal namespace.
+<<<<<<< HEAD
+=======
+
+
+
+
+
+
+
+
+
+ e06b7b401b19a629db99ac2a1abdc82075a443cf
+
+
+namespace Modules\Xot\app\Console\Commands;
+```
+
+Errori PHPStan come `Class Modules\Xot\app\Console\Commands\DatabaseSchemaExportCommand not found` indicano che è necessario rimuovere il segmento `app` dal namespace.
+
+
+
+
+
+ e06b7b401b19a629db99ac2a1abdc82075a443cf
+
+
+
+
+namespace Modules\Xot\Console\Commands;
+```
+
+Errori PHPStan come `Class Modules\Xot\Console\Commands\DatabaseSchemaExportCommand not found` indicano che è necessario rimuovere il segmento `app` dal namespace.
+
+
+
+
+
+
+
+ e06b7b401b19a629db99ac2a1abdc82075a443cf
+
+=======
+```
+>>>>>>> origin/dev
+>>>>>>> 3268b83 (.)

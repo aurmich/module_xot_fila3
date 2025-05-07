@@ -279,6 +279,7 @@ trait HasXotOptimizations
         ];
     }
 }
+<<<<<<< HEAD
 ### Versione HEAD
 
 ``` 
@@ -294,3 +295,6 @@ trait HasXotOptimizations
 
 ---
 
+=======
+``` 
+>>>>>>> 3268b83 (.)

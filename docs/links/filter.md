@@ -9,6 +9,7 @@ section: content
 
 Mastering Laravel Pipeline and Query Builder for Efficient Query Building
 https://medium.com/@dkthelearner/mastering-laravel-pipeline-and-query-builder-for-efficient-query-building-27eee8910bd7
+<<<<<<< HEAD
 ### Versione HEAD
 
 
@@ -22,3 +23,5 @@ https://medium.com/@dkthelearner/mastering-laravel-pipeline-and-query-builder-fo
 
 ---
 
+=======
+>>>>>>> 3268b83 (.)

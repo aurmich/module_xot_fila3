@@ -83,6 +83,7 @@ $package->state->transitionTo(Archived::class);
 - [Testing](testing.md)
 - [Debug](debug.md)
 - [Panoramica](../packages.md) 
+<<<<<<< HEAD
 ### Versione HEAD
 
 
@@ -102,3 +103,5 @@ $package->state->transitionTo(Archived::class);
 
 ---
 
+=======
+>>>>>>> 3268b83 (.)

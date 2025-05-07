@@ -64,6 +64,7 @@
 - Verificare la compatibilità
 - Testare le modifiche
 - Documentare i cambiamenti 
+<<<<<<< HEAD
 ### Versione HEAD
 
 
@@ -78,3 +79,5 @@
 
 ---
 
+=======
+>>>>>>> 3268b83 (.)

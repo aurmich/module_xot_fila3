@@ -40,6 +40,7 @@ class AdminPanelProvider extends XotBasePanelProvider
 
 ```
 
+<<<<<<< HEAD
 ### Versione HEAD
 
 
@@ -55,3 +56,5 @@ class AdminPanelProvider extends XotBasePanelProvider
 
 ---
 
+=======
+>>>>>>> 3268b83 (.)

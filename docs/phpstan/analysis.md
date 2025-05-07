@@ -17,6 +17,7 @@
 
 ## Collegamenti
 - [Link a docs/phpstan della root per sintesi trasversali]
+<<<<<<< HEAD
 
 ## Collegamenti tra versioni di analysis.md
 * [analysis.md](../../../Notify/docs/analysis.md)
@@ -33,3 +34,5 @@
 * [analysis.md](../../../Media/docs/phpstan/analysis.md)
 * [analysis.md](../../../../Themes/One/docs/analysis.md)
 
+=======
+>>>>>>> 3268b83 (.)

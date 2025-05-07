@@ -6,7 +6,19 @@ namespace Modules\Xot\Filament\Pages;
 
 use Filament\Pages\Dashboard;
 use Illuminate\Support\Str;
+<<<<<<< HEAD
 use Webmozart\Assert\Assert;
+=======
+<<<<<<< HEAD
+use Illuminate\Support\Facades\Auth;
+use Webmozart\Assert\Assert;
+use Modules\User\Models\User;
+=======
+use Webmozart\Assert\Assert;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Foundation\Auth\User;
+>>>>>>> origin/dev
+>>>>>>> 3268b83 (.)
 
 /**
  * Class Modules\Xot\Filament\Pages\MainDashboard.
@@ -25,7 +37,18 @@ class MainDashboard extends Dashboard
 
     public function mount(): void
     {
+<<<<<<< HEAD
         Assert::notNull($user = auth()->user(), '['.__LINE__.']['.class_basename($this).']');
+=======
+<<<<<<< HEAD
+        /** @var User $user */
+        Assert::notNull($user = Auth::user(), '['.__LINE__.']['.class_basename($this).']');
+=======
+        $user = Auth::user();
+        Assert::notNull($user, '['.__LINE__.']['.class_basename($this).']');
+
+>>>>>>> origin/dev
+>>>>>>> 3268b83 (.)
         $modules = $user->roles->filter(
             static function ($item) {
                 return Str::endsWith($item->name, '::admin');

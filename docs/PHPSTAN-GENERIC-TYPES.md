@@ -44,8 +44,34 @@ public function comments(): HasMany
  */
 public function tags(): BelongsToMany
 {
+<<<<<<< HEAD
     return $this->belongsToManyX(Tag::class);
     return $this->belongsToMany(Tag::class);
+=======
+<<<<<<< HEAD
+
+
+
+
+ e06b7b401b19a629db99ac2a1abdc82075a443cf
+    return $this->belongsToMany(Tag::class);
+
+
+    return $this->belongsToManyX(Tag::class);
+
+    return $this->belongsToMany(Tag::class);
+
+
+
+
+    return $this->belongsToMany(Tag::class);
+
+
+ e06b7b401b19a629db99ac2a1abdc82075a443cf
+=======
+    return $this->belongsToMany(Tag::class);
+>>>>>>> origin/dev
+>>>>>>> 3268b83 (.)
 }
 ```
 

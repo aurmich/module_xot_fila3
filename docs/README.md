@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Modulo Xot
 
 ### Versione HEAD
@@ -380,6 +381,36 @@ Il modulo Xot è il cuore dell'architettura modulare del sistema. Fornisce le fu
 - [Roadmap Generale](/docs/roadmap.md)
 - [Architettura Generale](/docs/ARCHITECTURE.md)
 - [Documentazione Tecnica](/docs/TECHNICAL.md)
+=======
+<<<<<<< HEAD
+# Modulo Xot
+=======
+
+
+
+# Modulo Xot
+=======
+
+# Modulo Xot
+aurmich/dev
+>>>>>>> aurmich/dev
+=======
+# Modulo Xot
+>>>>>>> aurmich/dev
+=======
+# Modulo Xot
+
+Il modulo Xot è il core del sistema SaluteOra, fornendo le funzionalità di base e le classi astratte utilizzate dagli altri moduli.
+
+## Collegamenti Documentazione
+
+- [Architettura Generale dei Moduli](../../../../docs/architecture/modules.md)
+- [Struttura dei Moduli](./MODULE-STRUCTURE.md)
+- [Convenzioni di Namespace](./NAMESPACE-CONVENTIONS.md)
+- [Best Practices](./BEST-PRACTICES.md)
+>>>>>>> aurmich/dev
+>>>>>>> origin/dev
+>>>>>>> 3268b83 (.)
 
 ## Panoramica
 Il modulo Xot fornisce le funzionalità base e le utilities utilizzate da tutti gli altri moduli dell'applicazione.
@@ -486,19 +517,57 @@ Il modulo è configurabile tramite:
 - `/docs/service/`: Servizi disponibili
 - `/docs/activity/`: Sistema di logging
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+
+
+
+=======
+
+>>>>>>> aurmich/dev
+=======
+
+>>>>>>> aurmich/dev
+>>>>>>> origin/dev
+>>>>>>> 3268b83 (.)
 ## Documentazione PHPStan
 
 - [Linee Guida PHPStan Livello 10](./PHPStan/LEVEL10_LINEE_GUIDA.md) - Linee guida dettagliate per rispettare le regole di PHPStan a livello 10
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+## Documentazione Filament
+
+- [Linee Guida per getInfolistSchema](./filament/INFOLIST_SCHEMA_GUIDELINES.md) - Guida completa per l'implementazione corretta del metodo getInfolistSchema, con focus sull'uso delle chiavi stringa negli array 
+=======
+
+
+=======
+aurmich/dev
+>>>>>>> aurmich/dev
+## Documentazione Filament
+
+- [Linee Guida per getInfolistSchema](./filament/INFOLIST_SCHEMA_GUIDELINES.md) - Guida completa per l'implementazione corretta del metodo getInfolistSchema, con focus sull'uso delle chiavi stringa negli array 
+=======
+=======
+>>>>>>> 3268b83 (.)
 ## Documentazione Filament
 
 - [Linee Guida per getInfolistSchema](./filament/INFOLIST_SCHEMA_GUIDELINES.md) - Guida completa per l'implementazione corretta del metodo getInfolistSchema, con focus sull'uso delle chiavi stringa negli array 
 
+<<<<<<< HEAD
 ---
 
 ## Documentazione Filament
 
 - [Linee Guida per getInfolistSchema](./filament/INFOLIST_SCHEMA_GUIDELINES.md) - Guida completa per l'implementazione corretta del metodo getInfolistSchema, con focus sull'uso delle chiavi stringa negli array 
+=======
+>>>>>>> aurmich/dev
+- `/docs/providers/`: Service Provider e loro utilizzo
+>>>>>>> 3268b83 (.)
 
 ## Documentazione Service Provider
 - [Best Practices nei Service Provider](./providers/service_provider_best_practices.md) - Linee guida sull'utilizzo di GetModulePathByGeneratorAction per una gestione robusta dei percorsi
@@ -508,3 +577,11 @@ Il modulo è configurabile tramite:
 
 ## Documentazione Filament
 - [Linee Guida per getInfolistSchema](./filament/INFOLIST_SCHEMA_GUIDELINES.md) - Guida completa per l'implementazione corretta del metodo getInfolistSchema, con focus sull'uso delle chiavi stringa negli array 
+<<<<<<< HEAD
+=======
+
+>>>>>>> aurmich/dev
+=======
+>>>>>>> aurmich/dev
+>>>>>>> origin/dev
+>>>>>>> 3268b83 (.)

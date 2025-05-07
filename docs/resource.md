@@ -600,6 +600,7 @@ public function getTableBulkActions(): array
 - Mantenere consistenza nei nomi delle chiavi tra diverse risorse
 - Utilizzare sempre la tipizzazione PHPDoc corretta
 
+<<<<<<< HEAD
 ### Versione HEAD
 
 // ... existing code ... 
@@ -614,3 +615,6 @@ public function getTableBulkActions(): array
 
 ---
 
+=======
+// ... existing code ... 
+>>>>>>> 3268b83 (.)

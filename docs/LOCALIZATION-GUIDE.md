@@ -1,8 +1,16 @@
+<<<<<<< HEAD
 # Guida alla Localizzazione nel Framework Laraxot <nome progetto>
 
 ## Introduzione
 
 La localizzazione (l10n) è un aspetto fondamentale delle applicazioni modern, permettendo di offrire l'interfaccia e i contenuti in diverse lingue. Il framework Laraxot <nome progetto> segue le convenzioni di Laravel per la gestione della localizzazione, con alcune personalizzazioni specifiche.
+=======
+# Guida alla Localizzazione nel Framework Laraxot PTVX
+
+## Introduzione
+
+La localizzazione (l10n) è un aspetto fondamentale delle applicazioni modern, permettendo di offrire l'interfaccia e i contenuti in diverse lingue. Il framework Laraxot PTVX segue le convenzioni di Laravel per la gestione della localizzazione, con alcune personalizzazioni specifiche.
+>>>>>>> 3268b83 (.)
 
 Questo documento fornisce una guida completa su come implementare e gestire correttamente la localizzazione nei moduli Laraxot.
 
@@ -124,7 +132,11 @@ if (App::isLocale('it')) {
 }
 ```
 
+<<<<<<< HEAD
 ## Implementazione in Laraxot <nome progetto>
+=======
+## Implementazione in Laraxot PTVX
+>>>>>>> 3268b83 (.)
 
 ### Middleware per il Cambio Automatico della Lingua
 
@@ -171,9 +183,48 @@ protected $middlewareGroups = [
 È buona pratica utilizzare un Enum per gestire le lingue supportate:
 
 ```php
+<<<<<<< HEAD
 namespace Modules\Xot\app\Enums;
 namespace Modules\Xot\Enums;
 
+=======
+<<<<<<< HEAD
+
+
+
+
+
+
+
+ e06b7b401b19a629db99ac2a1abdc82075a443cf
+namespace Modules\Xot\Enums;
+
+
+namespace Modules\Xot\Enums;
+
+namespace Modules\Xot\app\Enums;
+
+
+
+
+ e06b7b401b19a629db99ac2a1abdc82075a443cf
+
+namespace Modules\Xot\app\Enums;
+
+namespace Modules\Xot\Enums;
+
+
+
+
+
+ e06b7b401b19a629db99ac2a1abdc82075a443cf
+
+
+=======
+namespace Modules\Xot\Enums;
+
+>>>>>>> origin/dev
+>>>>>>> 3268b83 (.)
 enum SupportedLocale: string
 {
     case ITALIAN = 'it';
@@ -295,4 +346,12 @@ php artisan lang:clear
 
 ## Conclusione
 
+<<<<<<< HEAD
 Seguendo queste linee guida, potrai implementare un sistema di localizzazione robusto e manutenibile all'interno del framework Laraxot <nome progetto>. Ricorda che i file di localizzazione devono rimanere nella directory `lang` alla radice del modulo, rispettando le convenzioni standard di Laravel. 
+=======
+<<<<<<< HEAD
+Seguendo queste linee guida, potrai implementare un sistema di localizzazione robusto e manutenibile all'interno del framework Laraxot PTVX. Ricorda che i file di localizzazione devono rimanere nella directory `lang` alla radice del modulo, rispettando le convenzioni standard di Laravel. 
+=======
+Seguendo queste linee guida, potrai implementare un sistema di localizzazione robusto e manutenibile all'interno del framework Laraxot PTVX. Ricorda che i file di localizzazione devono rimanere nella directory `lang` alla radice del modulo, rispettando le convenzioni standard di Laravel. 
+>>>>>>> origin/dev
+>>>>>>> 3268b83 (.)

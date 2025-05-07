@@ -12,6 +12,23 @@ use Illuminate\Support\Carbon;
  * Modules\Xot\Contracts\ModelWithAuthorContract.
  *
  * @property int                $id
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+ * @property int|null          $user_id
+ * @property string|null       $post_type
+ * @property Carbon|null       $created_at
+ * @property Carbon|null       $updated_at
+ * @property string|null       $created_by
+ * @property string|null       $updated_by
+ * @property string|null       $title
+ * @property PivotContract|null $pivot
+ * @property string           $tennant_name
+ * @property int|null         $author_id
+ * @property UserContract|null $user
+ * @property UserContract|null $author
+=======
+>>>>>>> 3268b83 (.)
  * @property int|null           $user_id
  * @property string|null        $post_type
  * @property Carbon|null        $created_at
@@ -24,6 +41,10 @@ use Illuminate\Support\Carbon;
  * @property int|null           $author_id
  * @property UserContract|null  $user
  * @property UserContract|null  $author
+<<<<<<< HEAD
+=======
+>>>>>>> origin/dev
+>>>>>>> 3268b83 (.)
  *
  * @method mixed     getKey()
  * @method string    getRouteKey()
@@ -40,6 +61,10 @@ use Illuminate\Support\Carbon;
  * @method mixed     save($params)
  * @method array     treeLabel()
  * @method array     treeSons()
+<<<<<<< HEAD
+=======
+ * @method int       treeSonsCount()
+>>>>>>> 3268b83 (.)
  * @method array     toArray()
  * @method BelongsTo user()
  *
@@ -47,4 +72,80 @@ use Illuminate\Support\Carbon;
  *
  * @mixin \Eloquent
  */
+<<<<<<< HEAD
 interface ModelWithAuthorContract {}
+=======
+<<<<<<< HEAD
+interface ModelWithAuthorContract extends ModelContract
+{
+    /**
+     * Ottiene la relazione con l'autore del record.
+     */
+    public function author(): BelongsTo;
+
+    /**
+     * Ottiene la relazione con l'ultimo utente che ha modificato il record.
+     */
+    public function updater(): BelongsTo;
+
+    /**
+     * Ottiene la relazione con l'utente che ha eliminato il record (per soft deletes).
+     */
+    public function deleter(): BelongsTo;
+
+    /**
+     * Ottiene l'ID dell'autore.
+     */
+    public function getAuthorIdAttribute(): ?int;
+
+    /**
+     * Imposta l'ID dell'autore.
+     */
+    public function setAuthorIdAttribute(?int $value): void;
+
+    /**
+     * Ottiene l'ID dell'ultimo utente che ha modificato il record.
+     */
+    public function getUpdaterIdAttribute(): ?int;
+
+    /**
+     * Imposta l'ID dell'ultimo utente che ha modificato il record.
+     */
+    public function setUpdaterIdAttribute(?int $value): void;
+
+    /**
+     * Ottiene l'ID dell'utente che ha eliminato il record.
+     */
+    public function getDeleterIdAttribute(): ?int;
+
+    /**
+     * Imposta l'ID dell'utente che ha eliminato il record.
+     */
+    public function setDeleterIdAttribute(?int $value): void;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+=======
+interface ModelWithAuthorContract
+{
+}
+>>>>>>> origin/dev
+>>>>>>> 3268b83 (.)

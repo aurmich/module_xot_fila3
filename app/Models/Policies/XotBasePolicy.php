@@ -19,6 +19,7 @@ abstract class XotBasePolicy
 
     public function before(UserContract $user, string $ability): ?bool
     {
+<<<<<<< HEAD
         return once(function () use ($user, $ability) {
             if ($user->hasRole('super-admin')) {
                 return true;
@@ -26,6 +27,13 @@ abstract class XotBasePolicy
 
             return null;
         });
+=======
+        if ($user->hasRole('super-admin')) {
+            return true;
+        }
+
+        return null;
+>>>>>>> 3268b83 (.)
     }
 
     public function viewAny(UserContract $userContract): bool

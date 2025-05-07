@@ -19,9 +19,12 @@ build/
 node_modules
 docs/cache/
 cache/
+<<<<<<< HEAD
 
 # Backup files
 *.bak
 -e 
 # PHPStan documentation
 docs/phpstan/
+=======
+>>>>>>> 3268b83 (.)

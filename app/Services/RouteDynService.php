@@ -16,6 +16,104 @@ use Webmozart\Assert\Assert;
 class RouteDynService
 {
     private static string $namespace_start = '';
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    private static ?self $instance = null;
+
+    private function __construct()
+    {
+        // Costruttore privato per il pattern Singleton
+    }
+
+    public static function getInstance(): self
+    {
+        if (self::$instance === null) {
+            self::$instance = new self();
+        }
+        return self::$instance;
+    }
+
+    /**
+     * Ottiene le opzioni di gruppo per una rotta.
+     *
+     * @param array<string, mixed> $opts
+     * @return array<string, mixed>
+     */
+    public function getGroupOpts(array $opts): array
+    {
+        $group_opts = [];
+
+        $prefix = $this->getPrefix($opts);
+        if ('' !== $prefix) {
+            $group_opts['prefix'] = $prefix;
+        }
+
+        $as = $this->getAs($opts);
+        if ('' !== $as) {
+            $group_opts['as'] = $as;
+        }
+
+        $namespace = $this->getNamespace($opts);
+        if ('' !== $namespace) {
+            $group_opts['namespace'] = $namespace;
+        }
+
+        return $group_opts;
+    }
+
+    /**
+     * Ottiene il prefisso della rotta.
+     *
+     * @param array<string, mixed> $opts
+     */
+    public function getPrefix(array $opts): string
+    {
+        Assert::keyExists($opts, 'prefix');
+        return (string) Arr::get($opts, 'prefix');
+    }
+
+    /**
+     * Ottiene il nome della rotta.
+     *
+     * @param array<string, mixed> $opts
+     */
+    public function getAs(array $opts): string
+    {
+        Assert::keyExists($opts, 'as');
+        return (string) Arr::get($opts, 'as');
+    }
+
+    /**
+     * Ottiene il namespace del controller.
+     *
+     * @param array<string, mixed> $opts
+     */
+    public function getNamespace(array $opts): string
+    {
+        Assert::keyExists($opts, 'namespace');
+        return (string) Arr::get($opts, 'namespace');
+    }
+
+    /**
+     * Ottiene il controller.
+     *
+     * @param array<string, mixed> $opts
+     */
+    public function getController(array $opts): string
+    {
+        Assert::keyExists($opts, 'controller');
+        return (string) Arr::get($opts, 'controller');
+    }
+
+    /**
+     * Ottiene l'azione dalla configurazione.
+     *
+     * @param array<string, mixed> $v
+     */
+    public function getAct(array $v): string
+=======
+>>>>>>> 3268b83 (.)
 
     // Commentato: La proprietà $curr non viene mai letta, quindi potrebbe essere rimossa
     // private static ?string $curr = null;
@@ -56,7 +154,18 @@ class RouteDynService
         Assert::string($name = $v['name']);
         $as = mb_strtolower($name);
         $as = str_replace('/', '.', $as);
+<<<<<<< HEAD
         $as = preg_replace('/{.*}./', '', $as);
+=======
+
+        /** @var string $tmp */
+        $tmp = preg_replace('/{.*}./', '', $as);
+        if (!is_string($tmp)) {
+            $tmp = $as; // Fallback se preg_replace fallisce
+        }
+        $as = $tmp;
+
+>>>>>>> 3268b83 (.)
         $as = str_replace(['{', '}'], '', $as);
 
         return $as.'.';
@@ -79,6 +188,10 @@ class RouteDynService
     }
 
     public static function getAct(array $v, ?string $namespace): string
+<<<<<<< HEAD
+=======
+>>>>>>> origin/dev
+>>>>>>> 3268b83 (.)
     {
         if (isset($v['act'])) {
             Assert::string($act = $v['act']);
@@ -86,6 +199,10 @@ class RouteDynService
         }
 
         Assert::nullOrString($v['act'] = $v['name']);
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 3268b83 (.)
         Assert::nullOrString($v['act']);
         $v['act'] = preg_replace('/{.*}\//', '', (string) $v['act']);
         if ($v['act'] === null) {
@@ -99,7 +216,34 @@ class RouteDynService
         return Str::camel($v['act']);
     }
 
+<<<<<<< HEAD
     public static function getParamName(array $v, ?string $namespace): string
+=======
+    /**
+     * Ottiene il nome del parametro.
+     *
+     * @param array<string, mixed> $v
+     */
+    public function getParamName(array $v): string
+=======
+
+        $act = '';
+        if (is_string($v['act'])) {
+            /** @var string|null $tmp */
+            $tmp = preg_replace('/{.*}\//', '', $v['act']);
+            $act = $tmp !== null ? $tmp : $v['act'];
+
+            $act = str_replace('/', '_', $act);
+            $act = Str::camel($act);
+            $act = str_replace(['{', '}'], '', $act);
+        }
+
+        return $act;
+    }
+
+    public static function getParamName(array $v, ?string $namespace): string
+>>>>>>> origin/dev
+>>>>>>> 3268b83 (.)
     {
         if (isset($v['param_name'])) {
             Assert::string($param_name = $v['param_name']);
@@ -113,6 +257,37 @@ class RouteDynService
         return mb_strtolower($param_name);
     }
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    /**
+     * Ottiene i nomi dei parametri.
+     *
+     * @param array<string, mixed> $v
+     * @return array<int, string>
+     */
+    public function getParamsName(array $v): array
+    {
+        $param_name = $this->getParamName($v);
+        return [$param_name];
+    }
+
+    /**
+     * Ottiene le opzioni per la risorsa.
+     *
+     * @param array<string, mixed> $v
+     * @return array<string, mixed>
+     */
+    public function getResourceOpts(array $v): array
+    {
+        $param_name = $this->getParamName($v);
+        $params_name = $this->getParamsName($v);
+
+        $opts = [
+            'parameters' => [mb_strtolower((string) $v['name']) => implode('}/{', $params_name)],
+            'names' => $this->prefixedResourceNames($this->getAs($v)),
+=======
+>>>>>>> 3268b83 (.)
     public static function getParamsName(array $v, ?string $namespace): array
     {
         $param_name = self::getParamName($v, $namespace);
@@ -128,6 +303,10 @@ class RouteDynService
         $opts = [
             'parameters' => [mb_strtolower((string) $v['name']) => implode('}/{', $params_name)],
             'names' => self::prefixedResourceNames(self::getAs($v, $namespace)),
+<<<<<<< HEAD
+=======
+>>>>>>> origin/dev
+>>>>>>> 3268b83 (.)
         ];
 
         if (isset($v['only'])) {
@@ -142,6 +321,17 @@ class RouteDynService
         return $opts;
     }
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    /**
+     * Ottiene l'URI della rotta.
+     *
+     * @param array<string, mixed> $v
+     */
+    public function getUri(array $v): string
+=======
+>>>>>>> 3268b83 (.)
     public static function getController(array $v, ?string $namespace): string
     {
         if (isset($v['controller'])) {
@@ -158,6 +348,7 @@ class RouteDynService
     }
 
     public static function getUri(array $v, ?string $namespace): string
+<<<<<<< HEAD
     {
         Assert::string($name= $v['name']);
         //return mb_strtolower(is_string($v) ? $v : (string) $v['name);
@@ -165,6 +356,25 @@ class RouteDynService
     }
 
     public static function getMethod(array $v, ?string $namespace): array
+=======
+>>>>>>> origin/dev
+    {
+        Assert::string($name = $v['name']);
+        return $name;
+    }
+
+<<<<<<< HEAD
+    /**
+     * Ottiene il metodo HTTP.
+     *
+     * @param array<string, mixed> $v
+     * @return array<int, string>
+     */
+    public function getMethod(array $v): array
+=======
+    public static function getMethod(array $v, ?string $namespace): array
+>>>>>>> origin/dev
+>>>>>>> 3268b83 (.)
     {
         if (isset($v['method'])) {
             return Arr::wrap($v['method']);
@@ -172,6 +382,34 @@ class RouteDynService
         return ['get', 'post'];
     }
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    /**
+     * Ottiene il controller e l'azione.
+     *
+     * @param array<string, mixed> $v
+     */
+    public function getUses(array $v): string
+    {
+        $controller = $this->getController($v);
+        $act = $this->getAct($v);
+        return $controller.'@'.$act;
+    }
+
+    /**
+     * Ottiene il callback della rotta.
+     *
+     * @param array<string, mixed> $v
+     * @return array{as: string, uses: string}
+     */
+    public function getCallback(array $v, ?string $curr = null): array
+    {
+        Assert::string($name = $v['name']);
+        $as = Str::slug($name);
+        $uses = $this->getUses($v);
+=======
+>>>>>>> 3268b83 (.)
     public static function getUses(array $v, ?string $namespace): string
     {
         $controller = self::getController($v, $namespace);
@@ -184,6 +422,10 @@ class RouteDynService
         Assert::string($name = $v['name']);
         $as = Str::slug($name);
         $uses = self::getUses($v, $namespace);
+<<<<<<< HEAD
+=======
+>>>>>>> origin/dev
+>>>>>>> 3268b83 (.)
         if ($curr !== null) {
             $uses = '\\'.self::$namespace_start.'\\'.$curr.'\\'.$uses;
         } else {
@@ -193,6 +435,17 @@ class RouteDynService
         return ['as' => $as, 'uses' => $uses];
     }
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    /**
+     * Crea una rotta dinamica.
+     *
+     * @param array<string, mixed> $array
+     */
+=======
+>>>>>>> origin/dev
+>>>>>>> 3268b83 (.)
     public static function dynamic_route(array $array, ?string $namespace = null, ?string $namespace_start = null, ?string $curr = null): void
     {
         Assert::isArray($array, 'The $array parameter must be an array.');
@@ -202,6 +455,77 @@ class RouteDynService
             self::$namespace_start = $namespace_start;
         }
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+        $instance = self::getInstance();
+        foreach ($array as $k => $v) {
+            if (isset($v['subs'])) {
+                $instance->createRouteSubs($v, $namespace, $curr);
+                continue;
+            }
+            if (isset($v['acts'])) {
+                $instance->createRouteActs($v, $namespace, $curr);
+                continue;
+            }
+            if (isset($v['resource'])) {
+                $instance->createRouteResource($v, $namespace);
+                continue;
+            }
+        }
+    }
+
+    /**
+     * Crea una rotta risorsa.
+     *
+     * @param array<string, mixed> $v
+     */
+    public function createRouteResource(array $v, ?string $namespace): void
+    {
+        $uri = $this->getUri($v);
+        $controller = $this->getController($v);
+        $opts = $this->getResourceOpts($v);
+
+        Route::resource($uri, $controller, $opts);
+    }
+
+    /**
+     * Crea rotte per le sottosezioni.
+     *
+     * @param array<string, mixed> $v
+     */
+    public function createRouteSubs(array $v, ?string $namespace, ?string $curr): void
+    {
+        Assert::isArray($v['subs']);
+        $group_opts = $this->getGroupOpts($v);
+        Route::group($group_opts, function () use ($v, $namespace, $curr): void {
+            self::dynamic_route($v['subs'], $namespace, null, $curr);
+        });
+    }
+
+    /**
+     * Crea rotte per le azioni.
+     *
+     * @param array<string, mixed> $v
+     */
+    public function createRouteActs(array $v, ?string $namespace, ?string $curr): void
+    {
+        Assert::isArray($v['acts']);
+        $group_opts = $this->getGroupOpts($v);
+        Route::group($group_opts, function () use ($v, $namespace, $curr): void {
+            self::dynamic_route($v['acts'], $namespace, null, $curr);
+        });
+    }
+
+    /**
+     * Genera nomi di risorse con prefisso.
+     *
+     * @return array<string, string>
+     */
+    public function prefixedResourceNames(string $prefix): array
+    {
+=======
+>>>>>>> 3268b83 (.)
         foreach ($array as $v) {
             Assert::isArray($v, 'Each item in the array must be an array.');
             $group_opts = self::getGroupOpts($v, $namespace);
@@ -221,11 +545,19 @@ class RouteDynService
         if ($v['name'] === null) {
             return;
         }
+<<<<<<< HEAD
         Assert::string($name= $v['name']);
         $opts = self::getResourceOpts($v, $namespace);
         $controller = self::getController($v, $namespace);
         
         
+=======
+
+        Assert::string($name = $v['name']);
+        $opts = self::getResourceOpts($v, $namespace);
+        $controller = self::getController($v, $namespace);
+
+>>>>>>> 3268b83 (.)
         Route::resource($name, $controller, $opts);
     }
 
@@ -265,6 +597,10 @@ class RouteDynService
             $prefix = mb_substr($prefix, 0, -1);
         }
 
+<<<<<<< HEAD
+=======
+>>>>>>> origin/dev
+>>>>>>> 3268b83 (.)
         return [
             'index' => $prefix.'.index',
             'create' => $prefix.'.create',
@@ -275,6 +611,14 @@ class RouteDynService
             'destroy' => $prefix.'.destroy',
         ];
     }
+<<<<<<< HEAD
 
     // --------------------------------------------------
+=======
+<<<<<<< HEAD
+=======
+
+    // --------------------------------------------------
+>>>>>>> origin/dev
+>>>>>>> 3268b83 (.)
 }

@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 # Configurazione in il progetto
+=======
+# Configurazione in SaluteOra
+>>>>>>> 3268b83 (.)
 
 La configurazione del tema è gestita attraverso file di configurazione che definiscono le impostazioni del tema.
 
@@ -40,7 +44,11 @@ return [
     | Breve descrizione del tema.
     |
     */
+<<<<<<< HEAD
     'description' => 'Tema One per il progetto',
+=======
+    'description' => 'Tema One per SaluteOra',
+>>>>>>> 3268b83 (.)
 
     /*
     |--------------------------------------------------------------------------
@@ -60,7 +68,11 @@ return [
     | Nome dell'autore del tema.
     |
     */
+<<<<<<< HEAD
     'author' => 'il progetto Team',
+=======
+    'author' => 'SaluteOra Team',
+>>>>>>> 3268b83 (.)
 
     /*
     |--------------------------------------------------------------------------
@@ -282,8 +294,12 @@ return [
 5. **Consistenza**: Mantieni uno stile coerente
 6. **Sicurezza**: Proteggi le informazioni sensibili
 7. **Performance**: Ottimizza la configurazione
+<<<<<<< HEAD
 8. **Versioning**: Gestisci correttamente le versioni 
 ## Collegamenti tra versioni di config.md
 * [config.md](../../../Xot/docs/config.md)
 * [config.md](../../../../Themes/One/docs/config.md)
 
+=======
+8. **Versioning**: Gestisci correttamente le versioni 
+>>>>>>> 3268b83 (.)

@@ -18,6 +18,7 @@ return [
     'forcessl' => false,
 ];
 ~~~
+<<<<<<< HEAD
 ### Versione HEAD
 
 
@@ -32,3 +33,5 @@ return [
 
 ---
 
+=======
+>>>>>>> 3268b83 (.)

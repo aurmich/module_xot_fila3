@@ -62,6 +62,7 @@ public static function getFormSchema(): array
 - Utilizzare il lazy loading per le relazioni
 - Implementare il caching dove appropriato
 - Ottimizzare le query del database
+<<<<<<< HEAD
 ### Versione HEAD
 
 
@@ -76,3 +77,5 @@ public static function getFormSchema(): array
 
 ---
 
+=======
+>>>>>>> 3268b83 (.)

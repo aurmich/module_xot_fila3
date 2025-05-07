@@ -196,16 +196,109 @@ class InformationSchemaTable extends Model
         $results = collect(DB::select($query, [DB::connection()->getDatabaseName()]))
             ->map(function ($row, $index) {
                 $data = (array) $row;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+                $data['id'] = $index + 1;
+                return $data;
+            })
+            ->all();
+
+        Assert::isArray($results);
+=======
+>>>>>>> 3268b83 (.)
                 $data['id'] = $index + 1; // Aggiungi un ID incrementale
                 return $data;
             })
             ->toArray();
 
         /** @var array<int, array<string, mixed>> */
+<<<<<<< HEAD
+=======
+>>>>>>> origin/dev
+>>>>>>> 3268b83 (.)
         return $results;
     }
 
     /**
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+     * Get statistics for a specific table.
+     */
+    public static function getTableStats(string $schema, string $table): ?self
+    {
+        Assert::stringNotEmpty($schema, 'Schema name cannot be empty');
+        Assert::stringNotEmpty($table, 'Table name cannot be empty');
+
+        return static::query()
+            ->where('TABLE_SCHEMA', $schema)
+            ->where('TABLE_NAME', $table)
+            ->first();
+    }
+
+    /**
+     * Get the number of records in a model's table.
+     */
+    public static function getModelCount(string $modelClass): int
+    {
+        Assert::classExists($modelClass, 'Model class does not exist');
+
+        /** @var Model $model */
+        $model = new $modelClass();
+        $connection = $model->getConnection()->getName();
+        $table = $model->getTable();
+
+        $stats = static::getTableStats(
+            DB::connection($connection)->getDatabaseName(),
+            $table
+        );
+
+        return $stats?->TABLE_ROWS ?? 0;
+    }
+
+    /**
+     * Get accurate row count for a table using COUNT(*).
+     */
+    public static function getAccurateRowCount(string $tableName, string $database): int
+    {
+        Assert::stringNotEmpty($tableName, 'Table name cannot be empty');
+        Assert::stringNotEmpty($database, 'Database name cannot be empty');
+
+        $result = DB::select("SELECT COUNT(*) as count FROM `{$database}`.`{$tableName}`");
+        Assert::isArray($result);
+        Assert::notEmpty($result);
+
+        return (int) $result[0]->count;
+    }
+
+    /**
+     * Get the size of a table in bytes.
+     */
+    public static function getTableSize(string $tableName, string $database): int
+    {
+        Assert::stringNotEmpty($tableName, 'Table name cannot be empty');
+        Assert::stringNotEmpty($database, 'Database name cannot be empty');
+
+        $stats = static::getTableStats($database, $tableName);
+        if (null === $stats) {
+            throw new InvalidArgumentException("Table {$database}.{$tableName} not found");
+        }
+
+        return ($stats->DATA_LENGTH ?? 0) + ($stats->INDEX_LENGTH ?? 0);
+    }
+
+    /**
+     * Refresh the information_schema cache for a table.
+     */
+    public static function refreshCache(string $tableName, string $database): void
+    {
+        Assert::stringNotEmpty($tableName, 'Table name cannot be empty');
+        Assert::stringNotEmpty($database, 'Database name cannot be empty');
+
+        DB::statement("ANALYZE TABLE `{$database}`.`{$tableName}`");
+=======
+>>>>>>> 3268b83 (.)
      * Get table statistics from Sushi or information_schema as fallback.
      *
      * @param string $schema The schema name
@@ -351,5 +444,9 @@ class InformationSchemaTable extends Model
     {
         DB::connection('mysql')
             ->statement("ANALYZE TABLE `{$database}`.`{$tableName}`");
+<<<<<<< HEAD
+=======
+>>>>>>> origin/dev
+>>>>>>> 3268b83 (.)
     }
 }

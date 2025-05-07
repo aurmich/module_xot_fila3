@@ -43,15 +43,35 @@ class AutoLabelAction
         // @phpstan-ignore function.alreadyNarrowedType
         if (method_exists($component, 'getStatePath')) {
             $statePath = $component->getStatePath();
+<<<<<<< HEAD
             return $statePath;
+=======
+<<<<<<< HEAD
+            return is_string($statePath) ? $statePath : (string) $statePath;
+=======
+
+            return $statePath;
+>>>>>>> origin/dev
+>>>>>>> 3268b83 (.)
         }
 
         // Fallback a reflection per altri casi
         $reflectionClass = new \ReflectionClass($component);
         if ($reflectionClass->hasProperty('name') && $reflectionClass->getProperty('name')->isPublic()) {
             $property = $reflectionClass->getProperty('name');
+<<<<<<< HEAD
             Assert::string($value = $property->getValue($component));
             return $value;
+=======
+<<<<<<< HEAD
+            $value = $property->getValue($component);
+            return is_string($value) ? $value : (string) $value;
+=======
+
+            Assert::string($value = $property->getValue($component));
+            return $value;
+>>>>>>> origin/dev
+>>>>>>> 3268b83 (.)
         }
 
         // Ultima risorsa: ritorniamo il nome della classe
@@ -62,20 +82,45 @@ class AutoLabelAction
      * Applica automaticamente le etichette ai componenti Filament.
      *
      * @param Field|Component $component Il componente a cui applicare l'etichetta
+<<<<<<< HEAD
      * 
+=======
+<<<<<<< HEAD
+     * 
+=======
+     *
+>>>>>>> origin/dev
+>>>>>>> 3268b83 (.)
      * @return Field|Component Il componente con l'etichetta applicata
      */
     public function execute(Field|Component $component): Field|Component
     {
         Assert::isInstanceOf($component, Field::class, 'Il componente deve essere un\'istanza di Field o Component');
+<<<<<<< HEAD
         $backtrace = debug_backtrace(DEBUG_BACKTRACE_PROVIDE_OBJECT, 6);
 
         // Otteniamo il valore dalla backtrace
+=======
+
+        $backtrace = debug_backtrace(DEBUG_BACKTRACE_PROVIDE_OBJECT, 6);
+<<<<<<< HEAD
+=======
+
+        // Otteniamo il valore dalla backtrace
+>>>>>>> origin/dev
+>>>>>>> 3268b83 (.)
         $class = Arr::get($backtrace, '5.class');
 
         // Gestiamo il caso in cui $class sia vuoto
         if (empty($class)) {
+<<<<<<< HEAD
             // Se non riusciamo a ottenere la classe dal backtrace, usiamo la classe del componente
+=======
+<<<<<<< HEAD
+=======
+            // Se non riusciamo a ottenere la classe dal backtrace, usiamo la classe del componente
+>>>>>>> origin/dev
+>>>>>>> 3268b83 (.)
             $class = get_class($component);
         }
 
@@ -101,6 +146,32 @@ class AutoLabelAction
         $label_key = $trans_key . '.fields.' . $componentName . '.label';
         $label = trans($label_key);
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+        if (is_string($label) && $label_key === $label) {
+            // Se la traduzione non esiste, creiamone una utilizzando il nome del componente
+            $label_value = $componentName;
+
+            // Proviamo a ottenere una traduzione più breve
+            $label_key1 = $trans_key . '.fields.' . $componentName;
+            $label1 = trans($label_key1);
+
+            if ($label_key1 !== $label1 && is_string($label1)) {
+                $label_value = $label1;
+            }
+
+            // Salviamo la traduzione
+            $saveTransAction = app(SaveTransAction::class);
+            Assert::isCallable([$saveTransAction, 'execute'], 'SaveTransAction::execute deve essere chiamabile');
+            $saveTransAction->execute($label_key, $label_value);
+        }
+
+        // Applichiamo l'etichetta al componente
+        $component->label($label);
+
+=======
+>>>>>>> 3268b83 (.)
         if (is_string($label)) {
             if ($label_key === $label) {
                 // Se la traduzione non esiste, creiamone una utilizzando il nome del componente
@@ -126,6 +197,10 @@ class AutoLabelAction
             $component->label($label);
         }
 
+<<<<<<< HEAD
+=======
+>>>>>>> origin/dev
+>>>>>>> 3268b83 (.)
         return $component;
     }
 }

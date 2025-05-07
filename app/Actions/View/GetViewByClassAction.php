@@ -15,7 +15,15 @@ class GetViewByClassAction
 
     /**
      * "Modules\UI\Filament\Widgets\GroupWidget" => "ui::filament.widgets.group"
+<<<<<<< HEAD
      * @return view-string
+=======
+<<<<<<< HEAD
+     * @return string
+=======
+     * @return view-string
+>>>>>>> origin/dev
+>>>>>>> 3268b83 (.)
      */
     public function execute(string $class, string $suffix = ''): string
     {
@@ -30,10 +38,23 @@ class GetViewByClassAction
             if ($key > 0 && isset($after[$key - 1])) {
                 /** @var mixed $prevValue */
                 $prevValue = $after[$key - 1];
+<<<<<<< HEAD
 
                 // Gestione sicura delle conversioni di tipo per PHPStan level 10
                 $prevValueStr = '';
 
+=======
+<<<<<<< HEAD
+                
+                // Gestione sicura delle conversioni di tipo per PHPStan level 10
+                $prevValueStr = '';
+                
+=======
+
+                // Gestione sicura delle conversioni di tipo per PHPStan level 10
+                $prevValueStr = '';
+>>>>>>> origin/dev
+>>>>>>> 3268b83 (.)
                 if (is_string($prevValue)) {
                     $prevValueStr = $prevValue;
                 } elseif ($prevValue === null) {
@@ -42,19 +63,43 @@ class GetViewByClassAction
                     // Cast sicuro per valori scalari (int, float, bool)
                     $prevValueStr = strval($prevValue);
                 }
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+                
+=======
+
+>>>>>>> origin/dev
+>>>>>>> 3268b83 (.)
                 $singular = Str::of($prevValueStr)->singular()->toString();
                 if (Str::endsWith($value, $singular)) {
                     $value = Str::of($value)->beforeLast($singular)->toString();
                 }
             }
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+            
+=======
+
+>>>>>>> origin/dev
+>>>>>>> 3268b83 (.)
             return Str::of($value)->slug()->toString();
         });
 
         $implode = implode('.', $mapped);
         $view = $module_low.'::'.$implode.$suffix;
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+        
+=======
+
+>>>>>>> origin/dev
+>>>>>>> 3268b83 (.)
         if (!view()->exists($view)) {
             throw new \Exception('View not found: '.$view);
         }

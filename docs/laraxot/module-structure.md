@@ -100,6 +100,7 @@ Route::middleware('api')->prefix('api')->group(function () {
 - Utilizzare le variabili d'ambiente quando appropriato
 - Documentare tutte le opzioni di configurazione
 - Fornire valori predefiniti sensati
+<<<<<<< HEAD
 ### Versione HEAD
 
 
@@ -113,3 +114,5 @@ Route::middleware('api')->prefix('api')->group(function () {
 
 ---
 
+=======
+>>>>>>> 3268b83 (.)

@@ -16,11 +16,25 @@ use Filament\Forms\Form;
 use Filament\Forms\Get;
 use Filament\Notifications\Notification;
 use Filament\Pages\Page;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+use Filament\Support\Colors\Color;
+>>>>>>> origin/dev
+>>>>>>> 3268b83 (.)
 use Modules\Tenant\Services\TenantService;
 use Modules\Xot\Datas\MetatagData;
 use Modules\Xot\Filament\Traits\NavigationLabelTrait;
 use Webmozart\Assert\Assert;
+<<<<<<< HEAD
 use Filament\Support\Colors\Color;
+=======
+<<<<<<< HEAD
+use Filament\Support\Colors\Color;
+=======
+>>>>>>> origin/dev
+>>>>>>> 3268b83 (.)
 
 /**
  * @property ComponentContainer $form
@@ -60,6 +74,11 @@ class MetatagPage extends Page implements HasForms
                     TextInput::make('author'),
                     TextInput::make('description'),
                     TextInput::make('keywords'),
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 3268b83 (.)
                     /*
                 FileUpload::make('logo_header')
                     ->preserveFilenames()
@@ -76,6 +95,10 @@ class MetatagPage extends Page implements HasForms
                     })->first() )
                                       ,
                 */
+<<<<<<< HEAD
+=======
+>>>>>>> origin/dev
+>>>>>>> 3268b83 (.)
                     TextInput::make('logo_header'),
                     TextInput::make('logo_header_dark')
                         ->helperText('logo for dark css'),
@@ -88,6 +111,17 @@ class MetatagPage extends Page implements HasForms
                                 ->options($metatag->getFilamentColors()),
                             Select::make('color')
                                 ->label('Colore')
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+                                ->required()
+                                ->reactive()
+                                ->options(array_merge(['custom' => '--- custom ---'], $metatag->getAllColors())),
+                            ColorPicker::make('hex')
+                                ->label('Colore personalizzato')
+                                ->visible(fn (Get $get): bool => 'custom' === $get('color'))
+=======
+>>>>>>> 3268b83 (.)
                                 ->options(array_combine(
                                     array_keys(Color::all()),
                                     array_keys(Color::all())
@@ -96,6 +130,10 @@ class MetatagPage extends Page implements HasForms
                             ColorPicker::make('hex')
                                 ->label('Colore personalizzato')
                                 ->visible(fn (Get $get) => $get('color') === 'custom')
+<<<<<<< HEAD
+=======
+>>>>>>> origin/dev
+>>>>>>> 3268b83 (.)
                                 ->required(),
                         ])
                         ->columns(3),
@@ -104,6 +142,34 @@ class MetatagPage extends Page implements HasForms
             ->statePath('data');
     }
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    public function getFormActions(): array
+    {
+        return [
+            Action::make('save')
+                ->label(__('Save'))
+                ->submit('save'),
+        ];
+    }
+
+    public function save(): void
+    {
+        $data = $this->form->getState();
+
+        Assert::isArray($data);
+
+        $service = app(TenantService::class);
+        $service->saveConfig('metatag', $data);
+
+        Notification::make()
+            ->title(__('Saved successfully'))
+            ->success()
+            ->send();
+    }
+=======
+>>>>>>> 3268b83 (.)
     public function save(): void
     {
         $data = $this->form->getState();
@@ -122,4 +188,8 @@ class MetatagPage extends Page implements HasForms
                 ->submit('save'),
         ];
     }
+<<<<<<< HEAD
+=======
+>>>>>>> origin/dev
+>>>>>>> 3268b83 (.)
 }

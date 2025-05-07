@@ -14,6 +14,10 @@ use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Filters\BaseFilter;
 use Illuminate\Database\Eloquent\Model;
 use Filament\Notifications\Notification;
+<<<<<<< HEAD
+=======
+use Filament\Tables\Actions\Action;
+>>>>>>> 3268b83 (.)
 use Filament\Tables\Actions\ActionGroup;
 use Filament\Tables\Enums\FiltersLayout;
 use Filament\Tables\Columns\Layout\Stack;
@@ -173,6 +177,22 @@ trait HasXotTable
     /**
      * Get table empty state actions.
      *
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+     * @return array<string, Tables\Actions\Action>
+     */
+    public function getTableEmptyStateActions(): array
+    {
+        return [
+            'create' => Tables\Actions\CreateAction::make(),
+        ];
+    }
+
+    /**
+     * Configure table.
+=======
+>>>>>>> 3268b83 (.)
      * @return array<string, Action>
      */
     public function getTableEmptyStateActions(): array
@@ -196,6 +216,10 @@ trait HasXotTable
      * mantenendo la retrocompatibilità e prevenendo errori.
      *
      * Ultimo aggiornamento: 10/2023
+<<<<<<< HEAD
+=======
+>>>>>>> origin/dev
+>>>>>>> 3268b83 (.)
      */
     public function table(Table $table): Table
     {
@@ -238,12 +262,21 @@ trait HasXotTable
             ->emptyStateActions($this->getTableEmptyStateActions())
             ->striped();
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 3268b83 (.)
         /*
             ->defaultSort(
                 column: $this->getDefaultTableSortColumn(),
                 direction: $this->getDefaultTableSortDirection(),
             );
         */
+<<<<<<< HEAD
+=======
+>>>>>>> origin/dev
+>>>>>>> 3268b83 (.)
         return $table;
     }
 
@@ -285,11 +318,20 @@ trait HasXotTable
     /**
      * Get table actions.
      *
+<<<<<<< HEAD
      * @return array<string, Action|ActionGroup>
+=======
+<<<<<<< HEAD
+     * @return array<string, Action|ActionGroup>
+=======
+     * @return array<string, Tables\Actions\Action|Tables\Actions\ActionGroup>
+>>>>>>> origin/dev
+>>>>>>> 3268b83 (.)
      */
     public function getTableActions(): array
     {
         $actions = [];
+<<<<<<< HEAD
         $resource = $this->getResource();
         
         if (method_exists($resource, 'canView')) {
@@ -313,6 +355,25 @@ trait HasXotTable
                 ->visible(fn (Model $record): bool => $resource::canDelete($record));
         }
         
+=======
+
+        if ($this->shouldShowViewAction()) {
+            $actions['view'] = Tables\Actions\ViewAction::make()
+                ->iconButton()
+                ->tooltip(__('user::actions.view'));
+        }
+
+        if ($this->shouldShowEditAction()) {
+            $actions['edit'] = Tables\Actions\EditAction::make()
+                ->iconButton()
+                ->tooltip(__('user::actions.edit'));
+        }
+
+        $actions['delete'] = Tables\Actions\DeleteAction::make()
+            ->iconButton()
+            ->tooltip(__('user::actions.delete'));
+
+>>>>>>> 3268b83 (.)
         if ($this->shouldShowReplicateAction()) {
             $actions['replicate'] = Tables\Actions\ReplicateAction::make()
                 ->iconButton()

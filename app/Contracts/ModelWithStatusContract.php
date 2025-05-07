@@ -12,7 +12,15 @@ use Illuminate\Support\Carbon;
 use Spatie\ModelStatus\Status;
 
 /**
+<<<<<<< HEAD
  * Modules\Xot\Contracts\ModelWithStatusContract.
+=======
+<<<<<<< HEAD
+ * Contratto per i modelli che supportano la gestione degli stati.
+=======
+ * Modules\Xot\Contracts\ModelWithStatusContract.
+>>>>>>> origin/dev
+>>>>>>> 3268b83 (.)
  *
  * @property int                      $id
  * @property int|null                 $user_id
@@ -23,9 +31,21 @@ use Spatie\ModelStatus\Status;
  * @property string|null              $updated_by
  * @property string|null              $title
  * @property PivotContract|null       $pivot
+<<<<<<< HEAD
  * @property string $tennant_name
  * @property UserContract|null        $user
  * @property string $status
+=======
+<<<<<<< HEAD
+ * @property string                   $tennant_name
+ * @property UserContract|null        $user
+ * @property string                   $status
+=======
+ * @property string $tennant_name
+ * @property UserContract|null        $user
+ * @property string $status
+>>>>>>> origin/dev
+>>>>>>> 3268b83 (.)
  * @property Collection|array<Status> $statuses
  * @property int|null                 $statuses_count
  *
@@ -44,6 +64,10 @@ use Spatie\ModelStatus\Status;
  * @method mixed     save($params)
  * @method array     treeLabel()
  * @method array     treeSons()
+<<<<<<< HEAD
+=======
+ * @method int       treeSonsCount()
+>>>>>>> 3268b83 (.)
  * @method array     toArray()
  * @method BelongsTo user()
  *
@@ -51,6 +75,37 @@ use Spatie\ModelStatus\Status;
  *
  * @mixin \Eloquent
  */
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+interface ModelWithStatusContract extends ModelContract
+{
+    /**
+     * Restituisce la relazione morfica con gli stati del modello.
+     */
+    public function statuses(): MorphMany;
+
+    /**
+     * Restituisce lo stato corrente del modello.
+     */
+    public function getStatus(): ?string;
+
+    /**
+     * Imposta un nuovo stato per il modello.
+     */
+    public function setStatus(string $status, ?string $reason = null): self;
+
+    /**
+     * Verifica se il modello ha un determinato stato.
+     */
+    public function hasStatus(string $status): bool;
+
+    /**
+     * Restituisce l'ultimo stato del modello.
+     */
+    public function latestStatus(?string $status = null): ?Status;
+=======
+>>>>>>> 3268b83 (.)
 interface ModelWithStatusContract
 {
     public function statuses(): MorphMany;
@@ -58,4 +113,8 @@ interface ModelWithStatusContract
     public function status(): ?Status;
 
     public function setStatus(string $name, ?string $reason = null): self;
+<<<<<<< HEAD
+=======
+>>>>>>> origin/dev
+>>>>>>> 3268b83 (.)
 }

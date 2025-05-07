@@ -11,22 +11,52 @@ use Modules\Xot\Datas\RelationData as RelationDTO;
 use Spatie\QueueableAction\QueueableAction;
 use Webmozart\Assert\Assert;
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+/**
+ * Azione per gestire le relazioni morphToOne nei modelli.
+ */
+>>>>>>> origin/dev
+>>>>>>> 3268b83 (.)
 class MorphToOneAction
 {
     use QueueableAction;
 
+<<<<<<< HEAD
     public function execute(Model $model, RelationDTO $relationDTO): void
     {
         //if ($relationDTO === null) {
         //    return;
         //}
 
+=======
+<<<<<<< HEAD
+    public function execute(Model $model, RelationDTO $relationDTO): void
+    {
+        if ($relationDTO === null) {
+            return;
+        }
+
+=======
+    /**
+     * Esegue l'azione di creazione per una relazione morphToOne.
+     *
+     * @param Model $model Il modello su cui operare
+     * @param RelationDTO $relationDTO I dati della relazione da creare
+     */
+    public function execute(Model $model, RelationDTO $relationDTO): void
+    {
+>>>>>>> origin/dev
+>>>>>>> 3268b83 (.)
         Assert::isInstanceOf($rows = $relationDTO->rows, MorphToOne::class);
 
         if (! isset($relationDTO->data['lang'])) {
             $relationDTO->data['lang'] = App::getLocale();
         }
 
+<<<<<<< HEAD
         //if ($rows !== null) {
         $rows->create($relationDTO->data);
         //}
@@ -45,5 +75,14 @@ class MorphToOneAction
 
         dddx('wip');
         */
+=======
+<<<<<<< HEAD
+        if ($rows !== null) {
+            $rows->create($relationDTO->data);
+        }
+=======
+        $rows->create($relationDTO->data);
+>>>>>>> origin/dev
+>>>>>>> 3268b83 (.)
     }
 }

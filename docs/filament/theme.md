@@ -1,4 +1,5 @@
 https://fly.io/laravel-bytes/filamentphp-adding-some-style/
+<<<<<<< HEAD
 ### Versione HEAD
 
 
@@ -12,3 +13,5 @@ https://fly.io/laravel-bytes/filamentphp-adding-some-style/
 
 ---
 
+=======
+>>>>>>> 3268b83 (.)
