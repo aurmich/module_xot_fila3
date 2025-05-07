@@ -3,6 +3,7 @@
 ## Problema
 È stato rilevato un conflitto di merge nel file `Modules/Xot/app/Actions/Export/ExportXlsByCollection.php` alla riga relativa alla documentazione del metodo `writeRows()`.
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -29,6 +30,10 @@ Il file presenta un marker di conflitto `
  aurmich/dev
  aurmich/dev
 >>>>>>> 2c69b98 (.)
+=======
+Il file presenta un marker di conflitto `<<<<<<< HEAD` che indica un merge non completato tra due rami di sviluppo.
+
+>>>>>>> 3726c14d (.)
 ## Analisi del Contesto
 Il conflitto si verifica nella documentazione PHPDoc del metodo `writeRows()`. In particolare, l'incongruenza riguarda la descrizione dei parametri e la formattazione della documentazione, che è stata probabilmente aggiornata in uno dei rami di sviluppo per migliorare la compatibilità con PHPStan.
 

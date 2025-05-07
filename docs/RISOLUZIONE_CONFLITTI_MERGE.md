@@ -2,6 +2,7 @@
 
 ## Problema
 
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -43,6 +44,9 @@ aurmich/dev
  aurmich/dev
  aurmich/dev
 >>>>>>> 2c69b98 (.)
+=======
+Durante lo sviluppo del progetto SaluteOra, sono stati identificati diversi file con conflitti di merge non risolti. Questi conflitti erano indicati dalla presenza di marcatori come `<<<<<<< HEAD`, `=======` e `>>>>>>> origin/dev` nel codice sorgente. I conflitti non risolti causavano errori durante l'analisi statica con PHPStan e impedivano il corretto funzionamento del codice.
+>>>>>>> 3726c14d (.)
 
 ## File Coinvolti
 
@@ -79,6 +83,7 @@ Per risolvere i conflitti, è stato seguito un approccio sistematico:
 
 ### 1. Rimozione dei Marcatori di Conflitto
 
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -120,6 +125,9 @@ aurmich/dev
  aurmich/dev
  aurmich/dev
 >>>>>>> 2c69b98 (.)
+=======
+In ogni file, sono stati rimossi tutti i marcatori di conflitto (`<<<<<<< HEAD`, `=======`, `>>>>>>> origin/dev`), mantenendo la versione più completa e corretta del codice.
+>>>>>>> 3726c14d (.)
 
 ### 2. Correzione dei Problemi di Tipizzazione
 
@@ -288,6 +296,7 @@ Per prevenire problemi simili in futuro, si raccomanda di:
 - **Visual Merge Tools**: Utilizzare strumenti come VS Code, PhpStorm o GitKraken per gestire i conflitti di merge in modo visuale
 - **Merge Opzionali**: Considerare l'uso di `git merge --no-commit` per verificare il risultato prima di completare il merge
 
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -315,6 +324,8 @@ Per prevenire problemi simili in futuro, si raccomanda di:
  aurmich/dev
  aurmich/dev
 >>>>>>> 2c69b98 (.)
+=======
+>>>>>>> 3726c14d (.)
 ### 2. Implementazione di Hook Git
 
 - Implementare un hook pre-commit che verifichi l'assenza di marcatori di conflitto:
@@ -324,12 +335,19 @@ Per prevenire problemi simili in futuro, si raccomanda di:
   # Verifica se ci sono marcatori di conflitto nei file in staging
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
   if git diff --cached | grep -E '|' > /dev/null; then
 =======
 
 >>>>>>> aurmich/dev
+=======
+
+  if git diff --cached | grep -E '|' > /dev/null; then
+=======
+
+>>>>>>> 3726c14d (.)
 
   if git diff --cached | grep -E '|=======|>>>>>>> ' > /dev/null; then
 =======
@@ -360,12 +378,19 @@ Per prevenire problemi simili in futuro, si raccomanda di:
   ```
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 aurmich/dev
 =======
 
 >>>>>>> aurmich/dev
+=======
+
+aurmich/dev
+=======
+
+>>>>>>> 3726c14d (.)
 
 =======
 aurmich/dev

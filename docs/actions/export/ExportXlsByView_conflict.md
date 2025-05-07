@@ -5,12 +5,19 @@
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 Il file presenta un marker di conflitto `
 =======
 
 >>>>>>> aurmich/dev
+=======
+
+Il file presenta un marker di conflitto `
+=======
+
+>>>>>>> 3726c14d (.)
 Il file presenta un marker di conflitto `>>>>>>> origin/dev` che indica un merge non completato tra due rami di sviluppo.
 
 =======

@@ -2,6 +2,7 @@
 
 ## Problema
 
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -43,6 +44,9 @@ aurmich/dev
  aurmich/dev
  aurmich/dev
 >>>>>>> 2c69b98 (.)
+=======
+Durante lo sviluppo del progetto SaluteOra, sono stati identificati diversi file con conflitti di merge non risolti. Questi conflitti erano indicati dalla presenza di marcatori come `<<<<<<< HEAD`, `=======` e `>>>>>>> origin/dev` nel codice sorgente. I conflitti non risolti impedivano la corretta esecuzione del codice e causavano errori durante l'analisi statica con PHPStan.
+>>>>>>> 3726c14d (.)
 
 I file principali con conflitti erano:
 - `Modules/Xot/app/Datas/MetatagData.php`
@@ -77,6 +81,7 @@ I conflitti erano il risultato di un merge incompleto tra il branch `HEAD` e `or
 In `GetFieldnamesByTablenameAction.php`, c'erano conflitti relativi alla gestione dei tipi di parametri:
 
 ```php
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -139,6 +144,11 @@ aurmich/dev
  aurmich/dev
  aurmich/dev
 >>>>>>> 2c69b98 (.)
+=======
+if (! $this->isValidConnection(is_string($connectionName) ? $connectionName : (string) $connectionName)) {
+    // ...
+}
+>>>>>>> 3726c14d (.)
 ```
 
 #### 2. Conflitti nelle Annotazioni PHPDoc
@@ -146,6 +156,7 @@ aurmich/dev
 In `TemporaryUploadPathGenerator.php`, c'erano conflitti nelle annotazioni PHPDoc dei metodi:
 
 ```php
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -464,6 +475,11 @@ $headStrings = array_map(function ($item) {
  aurmich/dev
  aurmich/dev
 >>>>>>> 2c69b98 (.)
+=======
+/**
+ * @param \Modules\Media\Models\Media $media
+ */
+>>>>>>> 3726c14d (.)
 ```
 
 ## Soluzione Implementata
@@ -551,6 +567,7 @@ Per verificare la correttezza della soluzione, sono stati creati test Pest che v
 4. La gestione corretta delle eccezioni
 5. La compatibilità con PHPStan a livello massimo
 
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -578,6 +595,8 @@ Per verificare la correttezza della soluzione, sono stati creati test Pest che v
  aurmich/dev
  aurmich/dev
 >>>>>>> 2c69b98 (.)
+=======
+>>>>>>> 3726c14d (.)
 ### Test per i File del Modulo Media
 
 ```php
@@ -590,6 +609,7 @@ it('verifica che i file corretti non contengano marcatori di conflitto', functio
 
     foreach ($files as $file) {
         $content = File::get($file);
+<<<<<<< HEAD
         expect($content)->not->toContain('')
 
 <<<<<<< HEAD
@@ -735,6 +755,12 @@ return $headings->map(fn($item) => strval($item))->toArray();
 
 // Dopo
 return $headings->map(fn($item): string => strval($item))->toArray();
+=======
+        expect($content)->not->toContain('<<<<<<< HEAD')
+            ->and($content)->not->toContain('>>>>>>> origin/dev');
+    }
+});
+>>>>>>> 3726c14d (.)
 ```
 
 ### Test per i File del Modulo Xot
@@ -790,6 +816,7 @@ In particolare, le correzioni hanno portato i seguenti benefici:
 5. **Compatibilità con PHPStan**: Riduzione degli errori di analisi statica
 
 Questo lavoro di risoluzione dei conflitti ha inoltre contribuito a stabilire best practices per la gestione dei merge nel progetto SaluteOra, che potranno essere applicate in futuro per prevenire problemi simili.
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -844,3 +871,5 @@ Questo lavoro di risoluzione dei conflitti ha inoltre contribuito a stabilire be
  aurmich/dev
  aurmich/dev
 >>>>>>> 2c69b98 (.)
+=======
+>>>>>>> 3726c14d (.)
