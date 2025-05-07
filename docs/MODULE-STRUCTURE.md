@@ -1,12 +1,27 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 # Struttura dei Moduli in <nome progetto>
 
 Questo documento definisce le linee guida ufficiali per la struttura dei moduli all'interno del framework <nome progetto>.
 =======
+=======
+
+### Versione HEAD
+
+# Struttura dei Moduli in <nome progetto>
+
+Questo documento definisce le linee guida ufficiali per la struttura dei moduli all'interno del framework <nome progetto>.
+
+### Versione Alternativa
+
+>>>>>>> 355a587 (.)
 # Struttura dei Moduli in PTVX
 
 Questo documento definisce le linee guida ufficiali per la struttura dei moduli all'interno del framework PTVX.
 >>>>>>> 3268b83 (.)
+
+---
+
 
 ## Service Provider
 

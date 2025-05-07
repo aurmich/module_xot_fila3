@@ -21,15 +21,21 @@ use InvalidArgumentException;
 use Symfony\Component\Console\Helper\TableSeparator;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 355a587 (.)
 /**
  * Class GenerateDbDocumentationCommand.
  *
  * Comando per generare la documentazione dello schema del database.
  * Conforme a Laraxot/PTVX e PHPStan livello 9.
  */
+<<<<<<< HEAD
 =======
 >>>>>>> origin/dev
 >>>>>>> 3268b83 (.)
+=======
+>>>>>>> 355a587 (.)
 class GenerateDbDocumentationCommand extends Command
 {
     /**
@@ -330,11 +336,15 @@ MARKDOWN;
 
         foreach ($columns as $columnName => $column) {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 355a587 (.)
             $type = $column['type'];
             $nullable = $column['nullable'] ? 'Sì' : 'No';
             $default = $column['default'] ?? 'NULL';
             $extra = $column['extra'] ?? '';
             $comment = $column['comment'] ?? '';
+<<<<<<< HEAD
 
             $content .= "| {$columnName} | {$type} | {$nullable} | {$default} | {$extra} | {$comment} |\n";
         }
@@ -383,114 +393,57 @@ MARKDOWN;
             if (isset($column['type']) && (is_string($column['type']) || is_numeric($column['type']))) {
                 $type = is_string($column) ? $column : (string) $column['type'];
             }
+=======
+>>>>>>> 355a587 (.)
 
-            $nullable = isset($column['nullable']) && $column['nullable'] ? 'Sì' : 'No';
-
-            $default = 'NULL';
-            if (isset($column['default']) && (is_string($column['default']) || is_numeric($column['default']))) {
-                $default = is_string($column) ? $column : (string) $column['default'];
-            }
-
-            $extra = '';
-            if (isset($column['extra']) && (is_string($column['extra']) || is_numeric($column['extra']))) {
-                $extra = is_string($column) ? $column : (string) $column['extra'];
-            }
-
-            $comment = '';
-            if (isset($column['comment']) && (is_string($column['comment']) || is_numeric($column['comment']))) {
-                $comment = is_string($column) ? $column : (string) $column['comment'];
-            }
-            
-            $columnNameSafe = is_string($columnName) ? $columnName : '';
-            $content .= "| {$columnNameSafe} | {$type} | {$nullable} | {$default} | {$extra} | {$comment} |\n";
+            $content .= "| {$columnName} | {$type} | {$nullable} | {$default} | {$extra} | {$comment} |\n";
         }
 
-        if (is_array($indexes) && !empty($indexes)) {
+        // Aggiungi sezione indici
+        if (!empty($indexes)) {
             $content .= "\n## Indici\n\n";
-            $content .= "| Nome | Colonne | Unico |\n";
-            $content .= "|------|---------|-------|\n";
+            $content .= "| Nome | Colonne | Tipo |\n|------|----------|------|\n";
 
             foreach ($indexes as $indexName => $index) {
-                if (!is_array($index)) {
-                    continue;
-                }
-                if ($indexName === 'PRIMARY') {
-                    continue;
-                }
-                
-                $columnsArray = isset($index['columns']) && is_array($index['columns']) ? $index['columns'] : [];
-                $columns = implode(', ', $columnsArray);
-                $unique = isset($index['unique']) && $index['unique'] ? 'Sì' : 'No';
-                $indexNameSafe = is_string($indexName) ? $indexName : '';
-                
-                $content .= "| {$indexNameSafe} | {$columns} | {$unique} |\n";
+                $columns = implode(', ', $index['columns']);
+                $type = $index['type'];
+                $content .= "| {$indexName} | {$columns} | {$type} |\n";
             }
         }
 
-        if (!empty($foreignKeys) && count($foreignKeys) > 0) {
+        // Aggiungi sezione chiavi esterne
+        if (!empty($foreignKeys)) {
             $content .= "\n## Chiavi Esterne\n\n";
-            $content .= "| Nome | Colonne | Tabella Riferimento | Colonne Riferimento |\n";
-            $content .= "|------|---------|---------------------|--------------------|\n";
+            $content .= "| Colonna | Riferimento | On Update | On Delete |\n|----------|-------------|------------|------------|\n";
 
-            foreach ($foreignKeys as $foreignKeyName => $foreignKey) {
-                // Verifica che gli array necessari esistano e usa array vuoti se non esistono
-                $localColumns = $foreignKey['local_columns'] ?? $foreignKey['columns'] ?? [];
-                $refTable = $foreignKey['foreign_table'] ?? $foreignKey['references_table'] ?? 'unknown_table';
-                $refColumns = $foreignKey['foreign_columns'] ?? $foreignKey['references_columns'] ?? [];
-                
-                $columns = implode(', ', $localColumns);
-                $refColumnsStr = implode(', ', $refColumns);
-                
-                $content .= "| {$foreignKeyName} | {$columns} | {$refTable} | {$refColumnsStr} |\n";
+            foreach ($foreignKeys as $fk) {
+                $column = implode(', ', $fk['columns']);
+                $reference = $fk['reference_table'] . '(' . implode(', ', $fk['reference_columns']) . ')';
+                $onUpdate = $fk['on_update'];
+                $onDelete = $fk['on_delete'];
+
+                $content .= "| {$column} | {$reference} | {$onUpdate} | {$onDelete} |\n";
             }
         }
 
-        // Relazioni
+        // Aggiungi sezione relazioni
         $tableRelationships = $this->getTableRelationships($tableName, $relationships);
-        
         if (!empty($tableRelationships)) {
             $content .= "\n## Relazioni\n\n";
-            
-            if (!empty($tableRelationships['belongs_to'])) {
-                $content .= "### Belongs To\n\n";
-                $content .= "| Tabella | Chiave Esterna | Chiave Riferimento |\n";
-                $content .= "|---------|---------------|-------------------|\n";
-                
-                foreach ($tableRelationships['belongs_to'] as $relation) {
-                    $targetTable = $relation['to_table'];
-                    $foreignKey = implode(', ', $relation['from_columns']);
-                    $targetKey = implode(', ', $relation['to_columns']);
-                    
-                    $content .= "| [{$targetTable}]({$targetTable}.md) | {$foreignKey} | {$targetKey} |\n";
-                }
-            }
-            
-            if (!empty($tableRelationships['has_many'])) {
-                $content .= "\n### Has Many\n\n";
-                $content .= "| Tabella | Chiave Esterna | Chiave Locale |\n";
-                $content .= "|---------|---------------|-------------|\n";
-                
-                foreach ($tableRelationships['has_many'] as $relation) {
-                    $targetTable = $relation['to_table'];
-                    $foreignKey = implode(', ', $relation['to_columns']);
-                    $localKey = implode(', ', $relation['from_columns']);
-                    
-                    $content .= "| [{$targetTable}]({$targetTable}.md) | {$foreignKey} | {$localKey} |\n";
-                }
-            }
-        }
+            $content .= "| Tipo | Tabella Correlata | Note |\n|------|------------------|------|\n";
 
-        // Dati di esempio
-        if (!empty($tableInfo['sample_data'])) {
-            $content .= "\n## Dati di Esempio\n\n";
-            $content .= "```json\n";
-            try {
-                $content .= \Safe\json_encode($tableInfo['sample_data'], JSON_PRETTY_PRINT);
-            } catch (\Exception $e) {
-                $content .= "Errore nella formattazione dei dati di esempio: " . $e->getMessage();
+            foreach ($tableRelationships as $relation) {
+                $type = $relation['type'];
+                $relatedTable = $relation['related_table'];
+                $notes = $relation['notes'] ?? '';
+
+                $content .= "| {$type} | {$relatedTable} | {$notes} |\n";
             }
+<<<<<<< HEAD
             $content .= "\n```\n";
 >>>>>>> origin/dev
+=======
+>>>>>>> 355a587 (.)
         }
 
         File::put($outputDir . '/' . $tableName . '.md', $content);
@@ -498,6 +451,7 @@ MARKDOWN;
 
     /**
      * Ottiene le relazioni per una tabella specifica.
+<<<<<<< HEAD
 <<<<<<< HEAD
      *
      * @return array<int, array{type: string, related_table: string, local_key: string, foreign_key: string}>
@@ -528,32 +482,39 @@ MARKDOWN;
     }
 }
 =======
+=======
+     *
+     * @param string $tableName Nome della tabella
+     * @param array $relationships Array delle relazioni
+     * @return array Array delle relazioni della tabella
+>>>>>>> 355a587 (.)
      */
     protected function getTableRelationships(string $tableName, array $relationships): array
     {
-        $tableRelationships = [
-            'belongs_to' => [],
-            'has_many' => [],
-        ];
-        
+        $tableRelationships = [];
+
         foreach ($relationships as $relationship) {
-            // Verifica che tutti i campi necessari esistano
-            if (!isset($relationship['from_table']) || !isset($relationship['to_table']) || 
-                !isset($relationship['type']) || 
-                !isset($relationship['from_columns']) || !isset($relationship['to_columns']) ||
-                empty($relationship['from_columns']) || empty($relationship['to_columns'])) {
-                continue;
-            }
-            
-            if ($relationship['from_table'] === $tableName && $relationship['type'] === 'belongs_to') {
-                $tableRelationships['belongs_to'][] = $relationship;
-            } elseif ($relationship['from_table'] === $tableName && $relationship['type'] === 'has_many') {
-                $tableRelationships['has_many'][] = $relationship;
+            if ($relationship['from_table'] === $tableName) {
+                $tableRelationships[] = [
+                    'type' => $relationship['type'],
+                    'related_table' => $relationship['to_table'],
+                    'notes' => $relationship['notes'] ?? '',
+                ];
+            } elseif ($relationship['to_table'] === $tableName) {
+                $tableRelationships[] = [
+                    'type' => 'referenced by',
+                    'related_table' => $relationship['from_table'],
+                    'notes' => $relationship['notes'] ?? '',
+                ];
             }
         }
-        
+
         return $tableRelationships;
     }
+<<<<<<< HEAD
 } 
 >>>>>>> origin/dev
 >>>>>>> 3268b83 (.)
+=======
+}
+>>>>>>> 355a587 (.)

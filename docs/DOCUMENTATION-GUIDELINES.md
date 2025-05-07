@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
@@ -6,6 +7,28 @@
 
 >>>>>>> origin/dev
 >>>>>>> 3268b83 (.)
+=======
+
+### Versione HEAD
+
+
+
+### Versione Alternativa
+
+
+### Versione HEAD
+
+
+### Versione Alternativa
+
+
+
+---
+
+
+---
+
+>>>>>>> 355a587 (.)
 # Linee Guida per la Documentazione in Laraxot
 
 Questo documento definisce le best practices per la creazione e la manutenzione della documentazione all'interno del framework Laraxot.
@@ -288,10 +311,28 @@ Per implementare queste linee guida:
 - [Documentazione Laravel](https://laravel.com/docs)
 - [Documentazione PHPDoc](https://docs.phpdoc.org/)
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 =======
+=======
+
+### Versione HEAD
+
+
+### Versione Alternativa
+
+
+### Versione HEAD
+
+
+### Versione Alternativa
+
+
+### Versione Alternativa
+
+>>>>>>> 355a587 (.)
 # Linee Guida per la Documentazione
 
 ## Struttura della Documentazione
@@ -438,6 +479,18 @@ Per garantire la riutilizzabilità dei moduli, la documentazione all'interno dei
 ## Collegamenti alla Documentazione Generale
 
 - [Linee Guida per la Documentazione di SaluteOra](../../../../docs/linee-guida-documentazione.md)
+<<<<<<< HEAD
 >>>>>>> aurmich/dev
 >>>>>>> origin/dev
 >>>>>>> 3268b83 (.)
+=======
+
+---
+
+
+---
+
+
+---
+
+>>>>>>> 355a587 (.)

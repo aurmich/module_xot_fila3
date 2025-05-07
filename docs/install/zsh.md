@@ -13,6 +13,12 @@ PROMPT='%F{green}%n@%m%f %F{magenta}arm64 %F{yellow}%~ %F{cyan}${vcs_info_msg_0_
 ~~~
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+### Versione HEAD
+
+>>>>>>> 355a587 (.)
 ### Versione HEAD
 
 
@@ -26,5 +32,14 @@ PROMPT='%F{green}%n@%m%f %F{magenta}arm64 %F{yellow}%~ %F{cyan}${vcs_info_msg_0_
 
 ---
 
+<<<<<<< HEAD
 =======
 >>>>>>> 3268b83 (.)
+=======
+
+### Versione Alternativa
+
+
+---
+
+>>>>>>> 355a587 (.)

@@ -31,6 +31,12 @@ la storia di tutto ciò che è successo in passato, quindi si può interrogare
 quindi si può ricostruire uno stato delle cose ad un certo punto nel tempo  
 avere un controllo su un eventuale corruzione dei dati (bug, malicius, errore umano), in modo da poter correggere
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+### Versione HEAD
+
+>>>>>>> 355a587 (.)
 ### Versione HEAD
 
 
@@ -44,5 +50,14 @@ avere un controllo su un eventuale corruzione dei dati (bug, malicius, errore um
 
 ---
 
+<<<<<<< HEAD
 =======
 >>>>>>> 3268b83 (.)
+=======
+
+### Versione Alternativa
+
+
+---
+
+>>>>>>> 355a587 (.)

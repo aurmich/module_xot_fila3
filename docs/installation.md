@@ -1,4 +1,10 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+### Versione HEAD
+
+>>>>>>> 355a587 (.)
 # Installazione
 
 ## Requisiti di Sistema
@@ -131,7 +137,13 @@ php artisan serve
 * [installation.md](../../../Cms/docs/installation.md)
 * [installation.md](../../../../Themes/One/docs/installation.md)
 
+<<<<<<< HEAD
 =======
+=======
+
+### Versione Alternativa
+
+>>>>>>> 355a587 (.)
 # Installazione in SaluteOra
 
 Questa guida descrive come installare e configurare il tema One in SaluteOra.
@@ -283,4 +295,10 @@ storage/logs/theme-one.log
 6. **Performance**: Ottimizza le performance
 7. **Manutenibilità**: Mantieni il codice pulito
 8. **Supporto**: Fornisci supporto per i problemi 
+<<<<<<< HEAD
 >>>>>>> 3268b83 (.)
+=======
+
+---
+
+>>>>>>> 355a587 (.)

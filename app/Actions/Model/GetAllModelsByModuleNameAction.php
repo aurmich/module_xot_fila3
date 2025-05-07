@@ -22,18 +22,23 @@ use Nwidart\Modules\Facades\Module;
 use ReflectionClass;
 use Spatie\QueueableAction\QueueableAction;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 use Webmozart\Assert\Assert;
 =======
 >>>>>>> origin/dev
 >>>>>>> 3268b83 (.)
+=======
+use Webmozart\Assert\Assert;
+>>>>>>> 355a587 (.)
 
 class GetAllModelsByModuleNameAction
 {
     use QueueableAction;
 
     /**
+<<<<<<< HEAD
 <<<<<<< HEAD
      * Execute the action.
      */
@@ -52,20 +57,28 @@ class GetAllModelsByModuleNameAction
         
 =======
      * Ottiene tutti i modelli di un modulo specifico.
+=======
+     * Recupera tutti i modelli presenti in un modulo specifico.
+>>>>>>> 355a587 (.)
      *
-     * @param string $moduleName Nome del modulo
-     *
-     * @return array<string, class-string> Array di modelli del modulo
+     * @param string $moduleName Nome del modulo da cui recuperare i modelli
+     * @return array<string, class-string> Array associativo di nomi modello => classi
      */
     public function execute(string $moduleName): array
     {
+<<<<<<< HEAD
 >>>>>>> origin/dev
 >>>>>>> 3268b83 (.)
+=======
+        Assert::stringNotEmpty($moduleName, 'Il nome del modulo non può essere vuoto');
+        
+>>>>>>> 355a587 (.)
         $mod = Module::find($moduleName);
         if (! $mod instanceof \Nwidart\Modules\Module) {
             return [];
         }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -101,13 +114,22 @@ class GetAllModelsByModuleNameAction
 >>>>>>> 3268b83 (.)
         $mod_path = $mod->getPath() . '/Models';
         $mod_path = str_replace(['\\', '/'], [\DIRECTORY_SEPARATOR, \DIRECTORY_SEPARATOR], $mod_path);
+=======
+        $modPath = $mod->getPath() . '/Models';
+        $modPath = str_replace(['\\', '/'], [\DIRECTORY_SEPARATOR, \DIRECTORY_SEPARATOR], $modPath);
+>>>>>>> 355a587 (.)
 
-        $files = File::files($mod_path);
+        if (!File::exists($modPath)) {
+            return [];
+        }
+
+        $files = File::files($modPath);
         $data = [];
         $ns = 'Modules\\' . $mod->getName() . '\\Models';
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 >>>>>>> 3268b83 (.)
         // con la barra davanti non va il search ?
         foreach ($files as $file) {
@@ -120,11 +142,19 @@ class GetAllModelsByModuleNameAction
                 $name = mb_substr($filename, 0, -mb_strlen($ext));
                 // dddx(['name' => $name, 'name1' => $file->getFilenameWithoutExtension()]);
 =======
+=======
+        foreach ($files as $file) {
+            $filename = $file->getRelativePathname();
+            if (!Str::endsWith($filename, '.php')) {
+                continue;
+            }
+>>>>>>> 355a587 (.)
 
-            if (Str::endsWith($filename, $ext)) {
-                $tmp = new \stdClass();
-                $name = mb_substr($filename, 0, -mb_strlen($ext));
+            $name = $file->getFilenameWithoutExtension();
+            /** @var class-string */
+            $class = $ns . '\\' . $name;
 
+<<<<<<< HEAD
 >>>>>>> 3268b83 (.)
                 /**
                  * @var class-string
@@ -158,6 +188,16 @@ class GetAllModelsByModuleNameAction
                 }
 >>>>>>> origin/dev
 >>>>>>> 3268b83 (.)
+=======
+            try {
+                $reflectionClass = new ReflectionClass($class);
+                if (!$reflectionClass->isAbstract()) {
+                    $data[Str::snake($name)] = $class;
+                }
+            } catch (\ReflectionException) {
+                // Ignora le classi che non possono essere riflesse
+                continue;
+>>>>>>> 355a587 (.)
             }
         }
 

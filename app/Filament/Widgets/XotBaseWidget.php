@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace Modules\Xot\Filament\Widgets;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 use Filament\Forms;
 use Filament\Forms\Form;
 use Illuminate\Support\Facades\Cache;
@@ -42,17 +43,28 @@ abstract class XotBaseWidget extends FilamentWidget implements HasForms
     protected int|string|array $columnSpan = 'full';
 
 =======
+=======
+use Filament\Forms;
+use Filament\Forms\Form;
+use Filament\Actions\Action;
+>>>>>>> 355a587 (.)
 use Filament\Widgets\Widget as FilamentWidget;
-use Illuminate\Support\Facades\Cache;
+use Filament\Forms\Contracts\HasForms;
 use Filament\Widgets\WidgetConfiguration;
+use Filament\Widgets\Concerns\InteractsWithPageTable;
 use Filament\Widgets\Concerns\InteractsWithPageFilters;
+use Illuminate\Support\Facades\Cache;
 use Modules\Xot\Actions\View\GetViewByClassAction;
+<<<<<<< HEAD
 >>>>>>> 3268b83 (.)
+=======
+use Illuminate\Contracts\View\View;
+>>>>>>> 355a587 (.)
 
 /**
  * @property bool $shouldRender
- *
  */
+<<<<<<< HEAD
 <<<<<<< HEAD
 abstract class XotBaseWidget extends FilamentWidget implements HasForms
 {
@@ -65,12 +77,22 @@ abstract class XotBaseWidget extends FilamentWidget implements HasForms
     protected int|string|array $columnSpan = 'full';
 =======
 abstract class XotBaseWidget extends FilamentWidget
+=======
+abstract class XotBaseWidget extends FilamentWidget implements HasForms
+>>>>>>> 355a587 (.)
 {
     use InteractsWithPageFilters;
+    use Forms\Concerns\InteractsWithForms;
+
     public string $title = '';
     public string $icon = '';
+<<<<<<< HEAD
 >>>>>>> origin/dev
 >>>>>>> 3268b83 (.)
+=======
+    protected int|string|array $columnSpan = 'full';
+
+>>>>>>> 355a587 (.)
     /**
      * The view that should be rendered for the widget.
      *
@@ -153,16 +175,47 @@ abstract class XotBaseWidget extends FilamentWidget
      *
      * @var view-string
      */
-    protected static string $view;
+    protected static string $view = '';
 
+    public array $listener = [
+        'filters-updated' => 'filtersUpdated',
+    ];
 
     public function __construct()
     {
-        //parent::__construct();//Cannot call constructor
+        /** @var string $view */
         $view = app(GetViewByClassAction::class)->execute(static::class);
-        static::$view = $view;
+        if (view()->exists($view)) {
+            static::$view = $view;
+        }
+    }
 
+<<<<<<< HEAD
 >>>>>>> origin/dev
 >>>>>>> 3268b83 (.)
+=======
+    abstract public function getFormSchema(): array;
+
+    final public function form(Form $form): Form
+    {
+        return $form
+            ->schema($this->getFormSchema())
+            ->columns(2)
+            ->statePath('data');
+    }
+
+    protected function getFormActions(): array
+    {
+        return [
+            Action::make('save')
+                ->label(__('filament-panels::resources/pages/edit-record.form.actions.save.label'))
+                ->submit('save'),
+        ];
+    }
+
+    public function save(): void
+    {
+        // Implementazione del salvataggio
+>>>>>>> 355a587 (.)
     }
 }

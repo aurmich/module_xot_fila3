@@ -26,12 +26,24 @@ php artisan xot:search-string-in-database {search_string} {--table=} {--column=}
 3. Query ottimizzate per performance
 4. Supporto per PHPStan livello 9
 <<<<<<< HEAD
+<<<<<<< HEAD
 5. Conforme alle convenzioni Laraxot/<nome progetto>
 =======
+=======
+
+### Versione HEAD
+
+5. Conforme alle convenzioni Laraxot/<nome progetto>
+
+### Versione Alternativa
+
+>>>>>>> 355a587 (.)
 5. Conforme alle convenzioni Laraxot/PTVX
 >>>>>>> 3268b83 (.)
+
+---
+
 
 ## Collegamenti
 - [Database Guidelines](../DATABASE-GUIDELINES.md)
 - [Performance Guidelines](../performance/database-queries.md)
-- [PHPStan Level 9 Guide](../PHPSTAN-LEVEL9-GUIDE.md) 

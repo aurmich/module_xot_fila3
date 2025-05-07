@@ -20,11 +20,17 @@ node_modules
 docs/cache/
 cache/
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 355a587 (.)
 
 # Backup files
 *.bak
 -e 
 # PHPStan documentation
 docs/phpstan/
+<<<<<<< HEAD
 =======
 >>>>>>> 3268b83 (.)
+=======
+>>>>>>> 355a587 (.)

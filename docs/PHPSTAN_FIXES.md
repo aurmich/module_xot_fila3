@@ -163,10 +163,24 @@ Line 147: Method Modules\Xot\Filament\Resources\XotBaseResource::getRelations() 
 
 ```
 <<<<<<< HEAD
+<<<<<<< HEAD
 Line 111: Static access to instance property Modules\Xot\Filament\Resources\XotBaseResource\RelationManagers\XotBaseRelationManager::$resource.
 =======
 Line 111: Static access to instance property Modules\Xot\Filament\Resources\XotBaseResource\RelationManager\XotBaseRelationManager::$resource.
 >>>>>>> 3268b83 (.)
+=======
+
+### Versione HEAD
+
+Line 111: Static access to instance property Modules\Xot\Filament\Resources\XotBaseResource\RelationManagers\XotBaseRelationManager::$resource.
+
+### Versione Alternativa
+
+Line 111: Static access to instance property Modules\Xot\Filament\Resources\XotBaseResource\RelationManager\XotBaseRelationManager::$resource.
+
+---
+
+>>>>>>> 355a587 (.)
 Line 112: Dead catch - Exception is never thrown in the try block.
 ```
 

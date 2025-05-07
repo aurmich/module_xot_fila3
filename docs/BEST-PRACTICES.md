@@ -66,9 +66,22 @@ public function process(\Modules\User\Models\User $user) {
     // Codice
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 ``` 
 =======
 <<<<<<< HEAD
+=======
+
+### Versione HEAD
+
+``` 
+
+### Versione Alternativa
+
+
+### Versione HEAD
+
+>>>>>>> 355a587 (.)
 ```
 
 # Best Practices per il Modulo Xot
@@ -152,7 +165,20 @@ function getItems(array $data): array {
 - [PHP Strict Types](PHP-STRICT-TYPES.md)
 - [Filament Best Practices](filament/FILAMENT-BEST-PRACTICES.md)
 - [Testing Guidelines](testing/TESTING-GUIDELINES.md) 
+<<<<<<< HEAD
 =======
 ``` 
 >>>>>>> origin/dev
 >>>>>>> 3268b83 (.)
+=======
+
+### Versione Alternativa
+
+``` 
+
+---
+
+
+---
+
+>>>>>>> 355a587 (.)

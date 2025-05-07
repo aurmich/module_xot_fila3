@@ -101,6 +101,12 @@ Route::middleware('api')->prefix('api')->group(function () {
 - Documentare tutte le opzioni di configurazione
 - Fornire valori predefiniti sensati
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+### Versione HEAD
+
+>>>>>>> 355a587 (.)
 ### Versione HEAD
 
 
@@ -114,5 +120,14 @@ Route::middleware('api')->prefix('api')->group(function () {
 
 ---
 
+<<<<<<< HEAD
 =======
 >>>>>>> 3268b83 (.)
+=======
+
+### Versione Alternativa
+
+
+---
+
+>>>>>>> 355a587 (.)

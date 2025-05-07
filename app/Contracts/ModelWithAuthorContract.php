@@ -13,8 +13,11 @@ use Illuminate\Support\Carbon;
  *
  * @property int                $id
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> 355a587 (.)
  * @property int|null          $user_id
  * @property string|null       $post_type
  * @property Carbon|null       $created_at
@@ -22,6 +25,7 @@ use Illuminate\Support\Carbon;
  * @property string|null       $created_by
  * @property string|null       $updated_by
  * @property string|null       $title
+<<<<<<< HEAD
  * @property PivotContract|null $pivot
  * @property string           $tennant_name
  * @property int|null         $author_id
@@ -45,6 +49,13 @@ use Illuminate\Support\Carbon;
 =======
 >>>>>>> origin/dev
 >>>>>>> 3268b83 (.)
+=======
+ * @property PivotContract|null $pivot
+ * @property string           $tennant_name
+ * @property int|null         $author_id
+ * @property UserContract|null $user
+ * @property UserContract|null $author
+>>>>>>> 355a587 (.)
  *
  * @method mixed     getKey()
  * @method string    getRouteKey()
@@ -72,6 +83,7 @@ use Illuminate\Support\Carbon;
  *
  * @mixin \Eloquent
  */
+<<<<<<< HEAD
 <<<<<<< HEAD
 interface ModelWithAuthorContract {}
 =======
@@ -145,7 +157,54 @@ interface ModelWithAuthorContract extends ModelContract
 
 =======
 interface ModelWithAuthorContract
+=======
+interface ModelWithAuthorContract extends ModelContract
+>>>>>>> 355a587 (.)
 {
+    /**
+     * Ottiene la relazione con l'autore del record.
+     */
+    public function author(): BelongsTo;
+
+    /**
+     * Ottiene la relazione con l'ultimo utente che ha modificato il record.
+     */
+    public function updater(): BelongsTo;
+
+    /**
+     * Ottiene la relazione con l'utente che ha eliminato il record (per soft deletes).
+     */
+    public function deleter(): BelongsTo;
+
+    /**
+     * Ottiene l'ID dell'autore.
+     */
+    public function getAuthorIdAttribute(): ?int;
+
+    /**
+     * Imposta l'ID dell'autore.
+     */
+    public function setAuthorIdAttribute(?int $value): void;
+
+    /**
+     * Ottiene l'ID dell'ultimo utente che ha modificato il record.
+     */
+    public function getUpdaterIdAttribute(): ?int;
+
+    /**
+     * Imposta l'ID dell'ultimo utente che ha modificato il record.
+     */
+    public function setUpdaterIdAttribute(?int $value): void;
+
+    /**
+     * Ottiene l'ID dell'utente che ha eliminato il record.
+     */
+    public function getDeleterIdAttribute(): ?int;
+
+    /**
+     * Imposta l'ID dell'utente che ha eliminato il record.
+     */
+    public function setDeleterIdAttribute(?int $value): void;
 }
 >>>>>>> origin/dev
 >>>>>>> 3268b83 (.)

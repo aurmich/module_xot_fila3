@@ -79,8 +79,11 @@ trait TransTrait
     {
         $key = static::getKeyTransFunc($func);
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> 355a587 (.)
         return static::trans($key, $exceptionIfNotExist);
     }
 
@@ -116,8 +119,11 @@ trait TransTrait
 
         if (is_array($res)) {
             $first = current($res);
+<<<<<<< HEAD
 =======
 >>>>>>> 3268b83 (.)
+=======
+>>>>>>> 355a587 (.)
         /** @var string|array<int|string,mixed>|null */
         $trans = null;
 
@@ -149,17 +155,24 @@ trait TransTrait
         if (is_array($trans)) {
             $first = current($trans);
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/dev
 >>>>>>> 3268b83 (.)
+=======
+ origin/dev
+>>>>>>> 355a587 (.)
             if (is_string($first) || is_numeric($first)) {
                 return is_string($first) ? $first : (string) $first;
             }
         }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> 355a587 (.)
         return 'fix:' . $tmp;
     }
 
@@ -204,8 +217,11 @@ trait TransTrait
         }
 
         return 'fix:' . $tmp;
+<<<<<<< HEAD
 =======
 >>>>>>> 3268b83 (.)
+=======
+>>>>>>> 355a587 (.)
         if (is_string($trans)) {
             if ($trans === $key) {
                 $newTrans = Str::of($key)
@@ -237,8 +253,12 @@ trait TransTrait
     {
         return trans_choice($key, $number, $replace) ?? $key;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/dev
 >>>>>>> 3268b83 (.)
+=======
+ origin/dev
+>>>>>>> 355a587 (.)
     }
 }

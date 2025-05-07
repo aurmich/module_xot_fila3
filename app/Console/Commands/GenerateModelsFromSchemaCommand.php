@@ -279,9 +279,14 @@ class GenerateModelsFromSchemaCommand extends Command
         $schemaContent = File::get($schemaFilePath);
         try {
 <<<<<<< HEAD
+<<<<<<< HEAD
             $schema = json_decode($schemaContent, true);
         } catch (JsonException $e) {
 =======
+=======
+            $schema = json_decode($schemaContent, true);
+        } catch (JsonException $e) {
+>>>>>>> 355a587 (.)
             /** @var array{database: string, tables: array<string, array>, relationships: array} $schema */
             $schema = \Safe\json_decode($schemaContent, true);
             
@@ -293,7 +298,11 @@ class GenerateModelsFromSchemaCommand extends Command
                 return 1;
             }
         } catch (\Exception $e) {
+<<<<<<< HEAD
 >>>>>>> origin/dev
+=======
+ origin/dev
+>>>>>>> 355a587 (.)
             $this->error('Errore nella decodifica del file JSON: ' . $e->getMessage());
             return 1;
         }
@@ -320,11 +329,17 @@ class GenerateModelsFromSchemaCommand extends Command
         // Elabora ciascuna tabella e genera i modelli
         foreach ($schema['tables'] as $tableName => $tableInfo) {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 355a587 (.)
             $this->generateModel($tableName, $tableInfo, $schema['relationships'], $namespace, $modelPath);
 
             if ($migrationPath) {
                 $this->generateMigration($tableName, $tableInfo, $migrationPath);
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 355a587 (.)
             // Assicurati che $tableName sia una stringa
             $tableNameStr = is_string($tableName) ? $tableName : (string)$tableName;
             
@@ -338,7 +353,11 @@ class GenerateModelsFromSchemaCommand extends Command
 
             if ($migrationPath) {
                 $this->generateMigration($tableNameStr, $tableInfo, $migrationPath);
+<<<<<<< HEAD
 >>>>>>> origin/dev
+=======
+ origin/dev
+>>>>>>> 355a587 (.)
             }
 
             $progressBar->advance();
@@ -661,12 +680,20 @@ PHP;
         $length = null;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         if (\Safe\preg_match('/\((\d+)\)/', $columnType, $matches)) {
             $length = $matches[1];
 =======
         if (is_string($columnType) && \Safe\preg_match('/\((\d+)\)/', $columnType, $matches)) {
             $length = isset($matches[1]) ? (int)$matches[1] : null;
 >>>>>>> origin/dev
+=======
+        if (\Safe\preg_match('/\((\d+)\)/', $columnType, $matches)) {
+            $length = $matches[1];
+        if (is_string($columnType) && \Safe\preg_match('/\((\d+)\)/', $columnType, $matches)) {
+            $length = isset($matches[1]) ? (int)$matches[1] : null;
+ origin/dev
+>>>>>>> 355a587 (.)
         }
 
         $methodName = match ($baseType) {
@@ -694,6 +721,7 @@ PHP;
             $code .= "->length({$length})";
         } elseif ('decimal' === $methodName) {
 <<<<<<< HEAD
+<<<<<<< HEAD
             if (\Safe\preg_match('/\((\d+),\s*(\d+)\)/', $columnType, $matches)) {
                 $precision = (int) $matches[1];
                 $scale = (int) $matches[2];
@@ -702,6 +730,15 @@ PHP;
                 $precision = isset($matches[1]) ? (int)$matches[1] : 0;
                 $scale = isset($matches[2]) ? (int)$matches[2] : 0;
 >>>>>>> origin/dev
+=======
+            if (\Safe\preg_match('/\((\d+),\s*(\d+)\)/', $columnType, $matches)) {
+                $precision = (int) $matches[1];
+                $scale = (int) $matches[2];
+            if (is_string($columnType) && \Safe\preg_match('/\((\d+),\s*(\d+)\)/', $columnType, $matches)) {
+                $precision = isset($matches[1]) ? (int)$matches[1] : 0;
+                $scale = isset($matches[2]) ? (int)$matches[2] : 0;
+ origin/dev
+>>>>>>> 355a587 (.)
                 $code .= ", {$precision}, {$scale}";
             }
         } elseif ('enum' === $methodName) {
@@ -726,19 +763,29 @@ PHP;
 =======
             } elseif (!is_string($default) && !is_numeric($default)) {
                 $default = "''";
+<<<<<<< HEAD
 >>>>>>> origin/dev
+=======
+ origin/dev
+>>>>>>> 355a587 (.)
             }
             $code .= "->default({$default})";
         }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 355a587 (.)
         if (! empty($column['extra']) && false !== strpos($column['extra'], 'auto_increment')) {
             $code .= '->autoIncrement()';
         }
 
         if (! empty($column['comment'])) {
             $code .= "->comment('{$column['comment']}')";
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 355a587 (.)
         if (isset($column['extra']) && is_string($column['extra']) && false !== strpos((string)$column['extra'], 'auto_increment')) {
             $code .= '->autoIncrement()';
         }
@@ -746,7 +793,11 @@ PHP;
         if (isset($column['comment']) && is_string($column['comment']) && $column['comment'] !== '') {
             $comment = (string)$column['comment'];
             $code .= "->comment('{$comment}')";
+<<<<<<< HEAD
 >>>>>>> origin/dev
+=======
+ origin/dev
+>>>>>>> 355a587 (.)
         }
 
         $code .= ';';

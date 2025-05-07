@@ -601,6 +601,12 @@ public function getTableBulkActions(): array
 - Utilizzare sempre la tipizzazione PHPDoc corretta
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+### Versione HEAD
+
+>>>>>>> 355a587 (.)
 ### Versione HEAD
 
 // ... existing code ... 
@@ -615,6 +621,16 @@ public function getTableBulkActions(): array
 
 ---
 
+<<<<<<< HEAD
 =======
 // ... existing code ... 
 >>>>>>> 3268b83 (.)
+=======
+
+### Versione Alternativa
+
+// ... existing code ... 
+
+---
+
+>>>>>>> 355a587 (.)

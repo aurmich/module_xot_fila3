@@ -74,6 +74,12 @@ class Foo extends bar
 
 </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+### Versione HEAD
+
+>>>>>>> 355a587 (.)
 ### Versione HEAD
 
 
@@ -90,5 +96,14 @@ class Foo extends bar
 
 ---
 
+<<<<<<< HEAD
 =======
 >>>>>>> 3268b83 (.)
+=======
+
+### Versione Alternativa
+
+
+---
+
+>>>>>>> 355a587 (.)

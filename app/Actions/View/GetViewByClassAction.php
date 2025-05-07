@@ -9,11 +9,15 @@ use Illuminate\Support\Str;
 use Spatie\QueueableAction\QueueableAction;
 use Modules\Xot\Actions\Module\GetModuleNameByModelClassAction;
 
+/**
+ * Azione per ottenere il percorso della view da una classe.
+ */
 class GetViewByClassAction
 {
     use QueueableAction;
 
     /**
+<<<<<<< HEAD
      * "Modules\UI\Filament\Widgets\GroupWidget" => "ui::filament.widgets.group"
 <<<<<<< HEAD
      * @return view-string
@@ -24,6 +28,15 @@ class GetViewByClassAction
      * @return view-string
 >>>>>>> origin/dev
 >>>>>>> 3268b83 (.)
+=======
+     * Converte il percorso di una classe in un percorso di view.
+     * Esempio: "Modules\UI\Filament\Widgets\GroupWidget" => "ui::filament.widgets.group"
+     *
+     * @param string $class Il nome completo della classe
+     * @param string $suffix Il suffisso da aggiungere al percorso della view
+     * @return view-string Il percorso della view
+     * @throws \Exception Se la view non esiste
+>>>>>>> 355a587 (.)
      */
     public function execute(string $class, string $suffix = ''): string
     {
@@ -42,6 +55,7 @@ class GetViewByClassAction
 
                 // Gestione sicura delle conversioni di tipo per PHPStan level 10
                 $prevValueStr = '';
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
@@ -55,6 +69,9 @@ class GetViewByClassAction
                 $prevValueStr = '';
 >>>>>>> origin/dev
 >>>>>>> 3268b83 (.)
+=======
+                
+>>>>>>> 355a587 (.)
                 if (is_string($prevValue)) {
                     $prevValueStr = $prevValue;
                 } elseif ($prevValue === null) {

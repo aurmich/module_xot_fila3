@@ -23,13 +23,20 @@ use Spatie\LaravelData\DataCollection;
 use Spatie\QueueableAction\QueueableAction;
 use Webmozart\Assert\Assert;
 
+/**
+ * Azione per recuperare i componenti da un percorso specificato.
+ */
 class GetComponentsAction
 {
     use QueueableAction;
 
     /**
-     * Undocumented function.
+     * Recupera i componenti da un percorso specificato.
      *
+     * @param string $path Percorso da cui recuperare i componenti
+     * @param string $namespace Namespace dei componenti
+     * @param string $prefix Prefisso da applicare ai nomi dei componenti
+     * @param bool $force_recreate Se forzare la ricreazione del file _components.json
      * @return DataCollection<ComponentFileData>
      */
     public function execute(string $path, string $namespace, string $prefix, bool $force_recreate = false): DataCollection
@@ -57,6 +64,7 @@ class GetComponentsAction
 =======
             try {
                 $comps = json_decode($content, true, 512, JSON_THROW_ON_ERROR);
+<<<<<<< HEAD
             } catch (\JsonException $e) {
                 $comps = [];
             }
@@ -64,6 +72,12 @@ class GetComponentsAction
 >>>>>>> origin/dev
 >>>>>>> 3268b83 (.)
             if (! is_array($comps)) {
+=======
+                if (! is_array($comps)) {
+                    $comps = [];
+                }
+            } catch (\JsonException) {
+>>>>>>> 355a587 (.)
                 $comps = [];
             }
             return ComponentFileData::collection($comps);
@@ -158,16 +172,22 @@ class GetComponentsAction
 =======
         try {
             $content = json_encode($comps, JSON_THROW_ON_ERROR | JSON_PRETTY_PRINT);
-        } catch (\JsonException $e) {
-            return ComponentFileData::collection($comps);
-        }
+            $old_content = File::exists($components_json) ? File::get($components_json) : '';
 
+<<<<<<< HEAD
 >>>>>>> origin/dev
 >>>>>>> 3268b83 (.)
         $old_content = File::exists($components_json) ? File::get($components_json) : '';
 
         if ($old_content !== $content) {
             File::put($components_json, $content);
+=======
+            if ($old_content !== $content) {
+                File::put($components_json, $content);
+            }
+        } catch (\JsonException) {
+            // Se la codifica JSON fallisce, restituisci comunque la collezione
+>>>>>>> 355a587 (.)
         }
 
         return ComponentFileData::collection($comps);

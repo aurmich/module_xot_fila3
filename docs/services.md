@@ -231,6 +231,12 @@ return [
    - Scrivere test unitari per ogni servizio
    - Utilizzare mock per le dipendenze
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+### Versione HEAD
+
+>>>>>>> 355a587 (.)
 ### Versione HEAD
 
    - Testare i casi limite 
@@ -245,6 +251,16 @@ return [
 
 ---
 
+<<<<<<< HEAD
 =======
    - Testare i casi limite 
 >>>>>>> 3268b83 (.)
+=======
+
+### Versione Alternativa
+
+   - Testare i casi limite 
+
+---
+
+>>>>>>> 355a587 (.)

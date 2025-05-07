@@ -1,16 +1,31 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+### Versione HEAD
+
+>>>>>>> 355a587 (.)
 # Guida all'Utilizzo di PHPStan nel Framework Laraxot <nome progetto>
 
 ## Introduzione
 
 PHPStan è uno strumento di analisi statica che aiuta a identificare errori nel codice senza doverlo eseguire. Questo documento fornisce informazioni dettagliate su come usare PHPStan nel contesto del framework Laraxot <nome progetto>.
+<<<<<<< HEAD
 =======
+=======
+
+### Versione Alternativa
+
+>>>>>>> 355a587 (.)
 # Guida all'Utilizzo di PHPStan nel Framework Laraxot PTVX
 
 ## Introduzione
 
 PHPStan è uno strumento di analisi statica che aiuta a identificare errori nel codice senza doverlo eseguire. Questo documento fornisce informazioni dettagliate su come usare PHPStan nel contesto del framework Laraxot PTVX.
 >>>>>>> 3268b83 (.)
+
+---
+
 
 ## Comando Base per Eseguire PHPStan
 
@@ -66,10 +81,23 @@ Per analizzare tutti i moduli (può richiedere molto tempo):
 ## Livelli di Analisi
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 PHPStan offre più livelli di rigore nell'analisi (da 0 a 10). Il framework Laraxot <nome progetto> mira a essere compatibile con:
 =======
+=======
+
+### Versione HEAD
+
+PHPStan offre più livelli di rigore nell'analisi (da 0 a 10). Il framework Laraxot <nome progetto> mira a essere compatibile con:
+
+### Versione Alternativa
+
+>>>>>>> 355a587 (.)
 PHPStan offre più livelli di rigore nell'analisi (da 0 a 10). Il framework Laraxot PTVX mira a essere compatibile con:
 >>>>>>> 3268b83 (.)
+
+---
+
 
 - **Livello 9:** Standard attuale del progetto
 - **Livello 10:** Obiettivo futuro (massima rigidità)
@@ -85,10 +113,23 @@ PHPStan offre più livelli di rigore nell'analisi (da 0 a 10). Il framework Lara
 ## Configurazione
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 La configurazione di PHPStan per Laraxot <nome progetto> si trova in:
 =======
+=======
+
+### Versione HEAD
+
+La configurazione di PHPStan per Laraxot <nome progetto> si trova in:
+
+### Versione Alternativa
+
+>>>>>>> 355a587 (.)
 La configurazione di PHPStan per Laraxot PTVX si trova in:
 >>>>>>> 3268b83 (.)
+
+---
+
 
 ```
 laravel/phpstan.neon
@@ -237,10 +278,23 @@ jobs:
 ## Conclusione
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 Seguendo questa guida, sarai in grado di utilizzare efficacemente PHPStan all'interno del framework Laraxot <nome progetto>. Ricorda che l'obiettivo è migliorare la qualità del codice e prevenire errori, non complicare lo sviluppo. Utilizzando PHPStan regolarmente, potrai identificare e correggere i problemi prima che diventino critici.
 =======
+=======
+
+### Versione HEAD
+
+Seguendo questa guida, sarai in grado di utilizzare efficacemente PHPStan all'interno del framework Laraxot <nome progetto>. Ricorda che l'obiettivo è migliorare la qualità del codice e prevenire errori, non complicare lo sviluppo. Utilizzando PHPStan regolarmente, potrai identificare e correggere i problemi prima che diventino critici.
+
+### Versione Alternativa
+
+>>>>>>> 355a587 (.)
 Seguendo questa guida, sarai in grado di utilizzare efficacemente PHPStan all'interno del framework Laraxot PTVX. Ricorda che l'obiettivo è migliorare la qualità del codice e prevenire errori, non complicare lo sviluppo. Utilizzando PHPStan regolarmente, potrai identificare e correggere i problemi prima che diventino critici.
 >>>>>>> 3268b83 (.)
+
+---
+
 
 ## Promemoria Rapido
 
@@ -256,4 +310,3 @@ cd /percorso/al/progetto/laravel
 
 # Analisi con output dettagliato
 ./vendor/bin/phpstan analyse Modules/NomeModulo --level=9 --verbose
-``` 

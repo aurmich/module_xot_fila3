@@ -1,4 +1,10 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+### Versione HEAD
+
+>>>>>>> 355a587 (.)
 ### Versione HEAD
 
 # Colli di Bottiglia e Soluzioni - Modulo Xot
@@ -698,8 +704,17 @@ Implementando queste soluzioni, il modulo Xot potrà superare i principali colli
 
 ### Versione Incoming
 
+<<<<<<< HEAD
 =======
 >>>>>>> 3268b83 (.)
+=======
+
+### Versione Alternativa
+
+
+---
+
+>>>>>>> 355a587 (.)
 # Analisi dei Colli di Bottiglia - Modulo Xot
 
 ## Performance Critiche
@@ -824,10 +839,26 @@ Implementando queste soluzioni, il modulo Xot potrà superare i principali colli
 1. Implementare microservizi per operazioni pesanti
 2. Ottimizzare l'architettura per scalabilità
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+### Versione HEAD
+
+>>>>>>> 355a587 (.)
 3. Migliorare la gestione delle risorse distribuite 
 
 ---
 
+<<<<<<< HEAD
 =======
 3. Migliorare la gestione delle risorse distribuite 
 >>>>>>> 3268b83 (.)
+=======
+
+### Versione Alternativa
+
+3. Migliorare la gestione delle risorse distribuite 
+
+---
+
+>>>>>>> 355a587 (.)

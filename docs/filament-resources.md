@@ -88,6 +88,12 @@ return [
 - Implementato il sistema di traduzioni per le label
 - Allineate le chiavi del form schema con il file di traduzioni
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+### Versione HEAD
+
+>>>>>>> 355a587 (.)
 ### Versione HEAD
 
 - Mantenute le validazioni e la struttura del form 
@@ -105,6 +111,16 @@ return [
 
 ---
 
+<<<<<<< HEAD
 =======
 - Mantenute le validazioni e la struttura del form 
 >>>>>>> 3268b83 (.)
+=======
+
+### Versione Alternativa
+
+- Mantenute le validazioni e la struttura del form 
+
+---
+
+>>>>>>> 355a587 (.)

@@ -10,6 +10,7 @@ use Illuminate\Support\Carbon;
 
 /**
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
  * Contratto per i modelli che rappresentano contatti nel sistema.
@@ -35,18 +36,22 @@ use Illuminate\Support\Carbon;
 =======
 >>>>>>> 3268b83 (.)
  * Modules\Xot\Contracts\ModelContract.
+=======
+ * Contratto per i modelli che rappresentano contatti nel sistema.
+>>>>>>> 355a587 (.)
  *
  * @property int                $id
- * @property int|null           $user_id
- * @property string|null        $post_type
- * @property Carbon|null        $created_at
- * @property Carbon|null        $updated_at
- * @property string|null        $created_by
- * @property string|null        $updated_by
- * @property string|null        $title
- * @property bool               $is_reclamed
- * @property bool               $table_enable
+ * @property int|null          $user_id
+ * @property string|null       $post_type
+ * @property Carbon|null       $created_at
+ * @property Carbon|null       $updated_at
+ * @property string|null       $created_by
+ * @property string|null       $updated_by
+ * @property string|null       $title
+ * @property bool             $is_reclamed
+ * @property bool             $table_enable
  * @property PivotContract|null $pivot
+<<<<<<< HEAD
  * @property string $tennant_name
  * @property string $mail_subject
  * @property string $mail_body
@@ -58,6 +63,15 @@ use Illuminate\Support\Carbon;
 =======
 >>>>>>> origin/dev
 >>>>>>> 3268b83 (.)
+=======
+ * @property string           $tennant_name
+ * @property string           $mail_subject
+ * @property string           $mail_body
+ * @property string           $sms_from
+ * @property string           $mobile_phone
+ * @property string           $sms_body
+ * @property string           $sms_count
+>>>>>>> 355a587 (.)
  *
  * @method mixed     getKey()
  * @method string    getRouteKey()
@@ -85,6 +99,7 @@ use Illuminate\Support\Carbon;
  *
  * @mixin \Eloquent
  */
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -156,14 +171,78 @@ interface ModelContactContract extends ModelContract
 =======
 >>>>>>> 3268b83 (.)
 interface ModelContactContract
+=======
+interface ModelContactContract extends ModelContract
+>>>>>>> 355a587 (.)
 {
+    /**
+     * Ottiene i canali di notifica preferiti del contatto.
+     *
+     * @return array<string>
+     */
     public function getNotifyVia(): array;
 
+    /**
+     * Gestisce il callback dopo l'invio di una email.
+     */
     public function sendEmailCallback(): void;
 
+    /**
+     * Incrementa un contatore specifico per il contatto.
+     *
+     * @param array<string, mixed> $data
+     */
     public function increase(string $what, array $data): void;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> origin/dev
 >>>>>>> 3268b83 (.)
+=======
+
+    /**
+     * Ottiene l'indirizzo email del contatto.
+     */
+    public function getEmail(): ?string;
+
+    /**
+     * Ottiene il numero di telefono del contatto.
+     */
+    public function getPhone(): ?string;
+
+    /**
+     * Ottiene l'indirizzo del contatto.
+     */
+    public function getAddress(): ?string;
+
+    /**
+     * Ottiene la città del contatto.
+     */
+    public function getCity(): ?string;
+
+    /**
+     * Ottiene il paese del contatto.
+     */
+    public function getCountry(): ?string;
+
+    /**
+     * Ottiene il codice postale del contatto.
+     */
+    public function getZipCode(): ?string;
+
+    /**
+     * Ottiene il nome completo del contatto.
+     */
+    public function getFullName(): string;
+
+    /**
+     * Ottiene il nome del contatto.
+     */
+    public function getFirstName(): ?string;
+
+    /**
+     * Ottiene il cognome del contatto.
+     */
+    public function getLastName(): ?string;
+>>>>>>> 355a587 (.)
 }

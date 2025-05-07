@@ -27,10 +27,23 @@ trait TransTrait
 3. Supporto per PHPStan livello 9
 4. Integrazione con Filament
 <<<<<<< HEAD
+<<<<<<< HEAD
 5. Conforme alle convenzioni Laraxot/<nome progetto>
 =======
+=======
+
+### Versione HEAD
+
+5. Conforme alle convenzioni Laraxot/<nome progetto>
+
+### Versione Alternativa
+
+>>>>>>> 355a587 (.)
 5. Conforme alle convenzioni Laraxot/PTVX
 >>>>>>> 3268b83 (.)
+
+---
+
 
 ## Esempi di Utilizzo
 ```php
@@ -50,4 +63,3 @@ class MyResource
 ## Collegamenti
 - [Filament Best Practices](../FILAMENT-BEST-PRACTICES.md)
 - [Translation Guidelines](../TRANSLATIONS-BEST-PRACTICES.md)
-- [PHPStan Level 9 Guide](../PHPSTAN-LEVEL9-GUIDE.md) 

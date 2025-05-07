@@ -294,6 +294,7 @@ abstract class XotBaseServiceProvider extends ServiceProvider
         if (0 == $comps->count()) {
             return;
         }
+<<<<<<< HEAD
         $commands = $comps->toArray();
         /** @var array<int, array{ns: string}> $commands */
         $commands = array_map(
@@ -313,11 +314,12 @@ abstract class XotBaseServiceProvider extends ServiceProvider
             $commands
         );
         $this->commands($commands);
+=======
+
+        $this->commands($comps->toArray());
+>>>>>>> 355a587 (.)
     }
 
-    /**
-     * Get the services provided by the provider.
-     */
     public function provides(): array
     {
         return [];

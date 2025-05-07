@@ -1,8 +1,11 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 <?php
 
 =======
 >>>>>>> 3268b83 (.)
+=======
+>>>>>>> 355a587 (.)
 declare(strict_types=1);
 
 namespace Modules\Xot\Console\Commands;
@@ -89,10 +92,13 @@ class DatabaseSchemaExporterCommand extends Command
         // Salva i dati in un file JSON
         $filename = "{$outputDir}/{$databaseName}_schema.json";
 <<<<<<< HEAD
+<<<<<<< HEAD
         File::put($filename, json_encode($databaseSchema, JSON_PRETTY_PRINT));
 
         $this->info("Schema del database esportato con successo in: {$filename}");
 =======
+=======
+>>>>>>> 355a587 (.)
         try {
             $jsonContent = \Safe\json_encode($databaseSchema, JSON_PRETTY_PRINT);
             File::put($filename, $jsonContent);
@@ -101,7 +107,10 @@ class DatabaseSchemaExporterCommand extends Command
             $this->error("Errore nell'encoding JSON dello schema: " . $e->getMessage());
             return Command::FAILURE;
         }
+<<<<<<< HEAD
 >>>>>>> 3268b83 (.)
+=======
+>>>>>>> 355a587 (.)
 
         return 0;
     }
@@ -109,10 +118,15 @@ class DatabaseSchemaExporterCommand extends Command
     /**
      * Ottieni la lista di tutte le tabelle nel database.
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
      *
      * @return array<int, string>
 >>>>>>> 3268b83 (.)
+=======
+     *
+     * @return array<int, string>
+>>>>>>> 355a587 (.)
      */
     private function getTables(string $connection): array
     {
@@ -129,10 +143,15 @@ class DatabaseSchemaExporterCommand extends Command
     /**
      * Ottieni informazioni dettagliate su una tabella.
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
      *
      * @return array{name: string, columns: array<string, array{type: string, nullable: bool, default: mixed, comment: string, extra: string}>, indexes: array<string, array{columns: array<int, string>, unique: bool}>, primary_key: ?array{name: string, columns: array<int, string>}, foreign_keys: array<string, array{columns: array<int, string>, referenced_table: string, referenced_columns: array<int, string>, on_update: string, on_delete: string}>, record_count: int, sample_data: array<int, array<string, mixed>>}
 >>>>>>> 3268b83 (.)
+=======
+     *
+     * @return array{name: string, columns: array<string, array{type: string, nullable: bool, default: mixed, comment: string, extra: string}>, indexes: array<string, array{columns: array<int, string>, unique: bool}>, primary_key: ?array{name: string, columns: array<int, string>}, foreign_keys: array<string, array{columns: array<int, string>, referenced_table: string, referenced_columns: array<int, string>, on_update: string, on_delete: string}>, record_count: int, sample_data: array<int, array<string, mixed>>}
+>>>>>>> 355a587 (.)
      */
     private function getTableInfo(string $connection, string $table): array
     {
@@ -157,10 +176,15 @@ class DatabaseSchemaExporterCommand extends Command
     /**
      * Ottieni informazioni su tutte le colonne di una tabella.
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
      *
      * @return array<string, array{type: string, nullable: bool, default: mixed, comment: string, extra: string}>
 >>>>>>> 3268b83 (.)
+=======
+     *
+     * @return array<string, array{type: string, nullable: bool, default: mixed, comment: string, extra: string}>
+>>>>>>> 355a587 (.)
      */
     private function getTableColumns(string $connection, string $table): array
     {
@@ -183,10 +207,15 @@ class DatabaseSchemaExporterCommand extends Command
     /**
      * Ottieni gli indici di una tabella.
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
      *
      * @return array<string, array{columns: array<int, string>, unique: bool}>
 >>>>>>> 3268b83 (.)
+=======
+     *
+     * @return array<string, array{columns: array<int, string>, unique: bool}>
+>>>>>>> 355a587 (.)
      */
     private function getTableIndexes(string $connection, string $table): array
     {
@@ -210,6 +239,7 @@ class DatabaseSchemaExporterCommand extends Command
     /**
      * Ottieni la chiave primaria di una tabella.
 <<<<<<< HEAD
+<<<<<<< HEAD
      */
     private function getTablePrimaryKey(string $connection, string $table): ?array
     {
@@ -230,6 +260,8 @@ class DatabaseSchemaExporterCommand extends Command
 
         return $primaryKey;
 =======
+=======
+>>>>>>> 355a587 (.)
      *
      * @return array{name: string, columns: array<int, string>}|null
      */
@@ -250,22 +282,31 @@ class DatabaseSchemaExporterCommand extends Command
             'name' => 'PRIMARY',
             'columns' => $columns,
         ];
+<<<<<<< HEAD
 >>>>>>> 3268b83 (.)
+=======
+>>>>>>> 355a587 (.)
     }
 
     /**
      * Ottieni le chiavi esterne di una tabella.
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
      *
      * @return array<string, array{columns: array<int, string>, referenced_table: string, referenced_columns: array<int, string>, on_update: string, on_delete: string}>
 >>>>>>> 3268b83 (.)
+=======
+     *
+     * @return array<string, array{columns: array<int, string>, referenced_table: string, referenced_columns: array<int, string>, on_update: string, on_delete: string}>
+>>>>>>> 355a587 (.)
      */
     private function getTableForeignKeys(string $connection, string $table): array
     {
         $foreignKeys = [];
         $databaseName = DB::connection($connection)->getDatabaseName();
 
+<<<<<<< HEAD
 <<<<<<< HEAD
         // Utilizziamo query SQL dirette per ottenere le chiavi esterne
         $fkResults = DB::connection($connection)->select('
@@ -296,6 +337,8 @@ class DatabaseSchemaExporterCommand extends Command
             $foreignKeys[$fk->constraint_name]['local_columns'][] = $fk->column_name;
             $foreignKeys[$fk->constraint_name]['foreign_columns'][] = $fk->referenced_column;
 =======
+=======
+>>>>>>> 355a587 (.)
         $fkInfo = DB::connection($connection)->select("
             SELECT
                 CONSTRAINT_NAME,
@@ -325,7 +368,10 @@ class DatabaseSchemaExporterCommand extends Command
 
             $foreignKeys[$fk->CONSTRAINT_NAME]['columns'][] = $fk->COLUMN_NAME;
             $foreignKeys[$fk->CONSTRAINT_NAME]['referenced_columns'][] = $fk->REFERENCED_COLUMN_NAME;
+<<<<<<< HEAD
 >>>>>>> 3268b83 (.)
+=======
+>>>>>>> 355a587 (.)
         }
 
         return $foreignKeys;
@@ -337,15 +383,21 @@ class DatabaseSchemaExporterCommand extends Command
     private function getTableRecordCount(string $connection, string $table): int
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
         return DB::connection($connection)->table($table)->count();
 =======
         $result = DB::connection($connection)->select("SELECT COUNT(*) as count FROM `{$table}`");
         return (int) $result[0]->count;
 >>>>>>> 3268b83 (.)
+=======
+        $result = DB::connection($connection)->select("SELECT COUNT(*) as count FROM `{$table}`");
+        return (int) $result[0]->count;
+>>>>>>> 355a587 (.)
     }
 
     /**
      * Ottieni un campione di dati dalla tabella.
+<<<<<<< HEAD
 <<<<<<< HEAD
      */
     private function getTableSampleData(string $connection, string $table, int $limit = 5): array
@@ -362,6 +414,8 @@ class DatabaseSchemaExporterCommand extends Command
     /**
      * Analizza le relazioni tra le tabelle.
 =======
+=======
+>>>>>>> 355a587 (.)
      *
      * @return array<int, array<string, mixed>>
      */
@@ -382,19 +436,27 @@ class DatabaseSchemaExporterCommand extends Command
      *
      * @param array<int, string> $tables
      * @return array<int, array{type: string, from_table: string, from_columns: array<int, string>, to_table: string, to_columns: array<int, string>}>
+<<<<<<< HEAD
 >>>>>>> 3268b83 (.)
+=======
+>>>>>>> 355a587 (.)
      */
     private function getRelationships(string $connection, array $tables): array
     {
         $relationships = [];
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
         $databaseName = DB::connection($connection)->getDatabaseName();
 >>>>>>> 3268b83 (.)
+=======
+        $databaseName = DB::connection($connection)->getDatabaseName();
+>>>>>>> 355a587 (.)
 
         foreach ($tables as $table) {
             $foreignKeys = $this->getTableForeignKeys($connection, $table);
 
+<<<<<<< HEAD
 <<<<<<< HEAD
             foreach ($foreignKeys as $name => $foreignKey) {
                 $relationships[] = [
@@ -413,6 +475,8 @@ class DatabaseSchemaExporterCommand extends Command
                     'to_table' => $table,
                     'to_columns' => $foreignKey['local_columns'],
 =======
+=======
+>>>>>>> 355a587 (.)
             foreach ($foreignKeys as $fk) {
                 $relationships[] = [
                     'type' => 'belongs_to',
@@ -420,7 +484,10 @@ class DatabaseSchemaExporterCommand extends Command
                     'from_columns' => $fk['columns'],
                     'to_table' => $fk['referenced_table'],
                     'to_columns' => $fk['referenced_columns'],
+<<<<<<< HEAD
 >>>>>>> 3268b83 (.)
+=======
+>>>>>>> 355a587 (.)
                 ];
             }
         }

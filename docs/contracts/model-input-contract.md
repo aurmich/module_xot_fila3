@@ -45,14 +45,27 @@ interface ModelInputContract extends ModelContract
 2. Documentazione PHPDoc completa
 3. Supporto per PHPStan livello 9
 <<<<<<< HEAD
+<<<<<<< HEAD
 4. Conforme alle convenzioni Laraxot/<nome progetto>
 =======
 4. Conforme alle convenzioni Laraxot/PTVX
 >>>>>>> 3268b83 (.)
+=======
+
+### Versione HEAD
+
+4. Conforme alle convenzioni Laraxot/<nome progetto>
+
+### Versione Alternativa
+
+4. Conforme alle convenzioni Laraxot/PTVX
+
+---
+
+>>>>>>> 355a587 (.)
 5. Gestione null-safety
 
 ## Collegamenti
 - [Form Guidelines](../forms/README.md)
 - [Input Components](../components/FORM-COMPONENTS.md)
 - [PHPStan Level 9 Guide](../PHPSTAN-LEVEL9-GUIDE.md)
-- [Contracts Overview](./README.md) 

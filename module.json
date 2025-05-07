@@ -2,12 +2,17 @@
     "name": "Xot",
     "alias": "xot",
 <<<<<<< HEAD
+<<<<<<< HEAD
     "description": "Modulo base che fornisce funzionalità core e strutture fondamentali per gli altri moduli",
     "keywords": ["core", "base", "foundation", "structure"],
 =======
     "description": "",
     "keywords": [],
 >>>>>>> 3268b83 (.)
+=======
+    "description": "Modulo base che fornisce funzionalità core e strutture fondamentali per gli altri moduli",
+    "keywords": ["core", "base", "foundation", "structure"],
+>>>>>>> 355a587 (.)
     "priority": 2,
     "active": 1,
     "order": 2,

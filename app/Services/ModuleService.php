@@ -58,19 +58,27 @@ class ModuleService
     public function getModels(): array
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 >>>>>>> 3268b83 (.)
+=======
+
+>>>>>>> 355a587 (.)
         /*
         if (null == $module) {
             return [];
         }
         */
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/dev
 >>>>>>> 3268b83 (.)
+=======
+
+>>>>>>> 355a587 (.)
         $mod = Module::find($this->name);
         if (! $mod instanceof \Nwidart\Modules\Module) {
             return [];
@@ -82,8 +90,11 @@ class ModuleService
         $files = File::files($mod_path);
         $data = [];
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> 355a587 (.)
         $ns = 'Modules\\'.$mod->getName().'\\Models';
 
         foreach ($files as $file) {
@@ -96,8 +107,11 @@ class ModuleService
 
                 /** @var class-string */
                 $class = $ns.'\\'.$name;
+<<<<<<< HEAD
 =======
 >>>>>>> 3268b83 (.)
+=======
+>>>>>>> 355a587 (.)
         $ns = 'Modules\\'.$mod->getName().'\\Models';  // con la barra davanti non va il search ?
         foreach ($files as $file) {
             $filename = $file->getRelativePathname();
@@ -108,9 +122,14 @@ class ModuleService
 
                 $name = mb_substr($filename, 0, -mb_strlen($ext));
 <<<<<<< HEAD
+<<<<<<< HEAD
 
                 
 =======
+=======
+
+                
+>>>>>>> 355a587 (.)
                 // dddx(['name' => $name, 'name1' => $file->getFilenameWithoutExtension()]);
 >>>>>>> 3268b83 (.)
                 /**
@@ -118,12 +137,18 @@ class ModuleService
                  */
                 $class = $ns.'\\'.$name;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 355a587 (.)
                 //Strict comparison using === between stdClass and null will always evaluate to false.
 
                 //if ($tmp === null) {
                 //    continue;
                 //}
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 355a587 (.)
 
                 //Strict comparison using === between stdClass and null will always evaluate to false.
                 //if ($tmp === null) {

@@ -64,11 +64,27 @@ Questa sezione documenta tutti gli errori rilevati da PHPStan nel modulo Xot.
 - Documentare ogni correzione con una spiegazione
 - Aggiornare il file baseline dopo ogni correzione
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+### Versione HEAD
+
+>>>>>>> 355a587 (.)
 - Testare le correzioni prima di applicarle 
 ## Collegamenti tra versioni di errors.md
 * [errors.md](docs/errors.md)
 * [errors.md](../../../Xot/docs/phpstan/errors.md)
 
+<<<<<<< HEAD
 =======
 - Testare le correzioni prima di applicarle 
 >>>>>>> 3268b83 (.)
+=======
+
+### Versione Alternativa
+
+- Testare le correzioni prima di applicarle 
+
+---
+
+>>>>>>> 355a587 (.)

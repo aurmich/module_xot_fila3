@@ -22,6 +22,7 @@ class ExportXlsByView
      * @param View $view Vista da esportare
      * @param string $filename Nome del file Excel
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @param array<string>|null $fields Campi da includere nell'export
      * 
 =======
@@ -33,6 +34,10 @@ class ExportXlsByView
      *
 >>>>>>> origin/dev
 >>>>>>> 3268b83 (.)
+=======
+     * @param list<string>|null $fields Campi da includere nell'export (tipizzato per PHPStan 9)
+     * 
+>>>>>>> 355a587 (.)
      * @return BinaryFileResponse
      */
     public function execute(
@@ -44,19 +49,25 @@ class ExportXlsByView
         $stringFields = null;
         if (is_array($fields)) {
 <<<<<<< HEAD
+<<<<<<< HEAD
             $stringFields = array_map(function ($field) {
                 return strval($field);
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> 355a587 (.)
             // Corretto secondo le regole Laraxot/PTVX e PHPStan 9: controllo esplicito del tipo
             // In questo modo, si assicura che i campi siano stringhe o scalari convertibili in stringhe
             $stringFields = array_map(function ($field) {
                 return is_string($field) ? $field : (is_scalar($field) ? (string) $field : '');
+<<<<<<< HEAD
 =======
             $stringFields = array_map(static function ($field) {
                 return strval($field);
 >>>>>>> origin/dev
 >>>>>>> 3268b83 (.)
+=======
+>>>>>>> 355a587 (.)
             }, array_values($fields));
         }
 

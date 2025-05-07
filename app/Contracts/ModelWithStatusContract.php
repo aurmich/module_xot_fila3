@@ -13,6 +13,7 @@ use Spatie\ModelStatus\Status;
 
 /**
 <<<<<<< HEAD
+<<<<<<< HEAD
  * Modules\Xot\Contracts\ModelWithStatusContract.
 =======
 <<<<<<< HEAD
@@ -21,6 +22,9 @@ use Spatie\ModelStatus\Status;
  * Modules\Xot\Contracts\ModelWithStatusContract.
 >>>>>>> origin/dev
 >>>>>>> 3268b83 (.)
+=======
+ * Contratto per i modelli che supportano la gestione degli stati.
+>>>>>>> 355a587 (.)
  *
  * @property int                      $id
  * @property int|null                 $user_id
@@ -31,6 +35,7 @@ use Spatie\ModelStatus\Status;
  * @property string|null              $updated_by
  * @property string|null              $title
  * @property PivotContract|null       $pivot
+<<<<<<< HEAD
 <<<<<<< HEAD
  * @property string $tennant_name
  * @property UserContract|null        $user
@@ -46,6 +51,11 @@ use Spatie\ModelStatus\Status;
  * @property string $status
 >>>>>>> origin/dev
 >>>>>>> 3268b83 (.)
+=======
+ * @property string                   $tennant_name
+ * @property UserContract|null        $user
+ * @property string                   $status
+>>>>>>> 355a587 (.)
  * @property Collection|array<Status> $statuses
  * @property int|null                 $statuses_count
  *
@@ -75,6 +85,7 @@ use Spatie\ModelStatus\Status;
  *
  * @mixin \Eloquent
  */
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -107,14 +118,40 @@ interface ModelWithStatusContract extends ModelContract
 =======
 >>>>>>> 3268b83 (.)
 interface ModelWithStatusContract
+=======
+interface ModelWithStatusContract extends ModelContract
+>>>>>>> 355a587 (.)
 {
+    /**
+     * Restituisce la relazione morfica con gli stati del modello.
+     */
     public function statuses(): MorphMany;
 
-    public function status(): ?Status;
+    /**
+     * Restituisce lo stato corrente del modello.
+     */
+    public function getStatus(): ?string;
 
+<<<<<<< HEAD
     public function setStatus(string $name, ?string $reason = null): self;
 <<<<<<< HEAD
 =======
 >>>>>>> origin/dev
 >>>>>>> 3268b83 (.)
+=======
+    /**
+     * Imposta un nuovo stato per il modello.
+     */
+    public function setStatus(string $status, ?string $reason = null): self;
+
+    /**
+     * Verifica se il modello ha un determinato stato.
+     */
+    public function hasStatus(string $status): bool;
+
+    /**
+     * Restituisce l'ultimo stato del modello.
+     */
+    public function latestStatus(?string $status = null): ?Status;
+>>>>>>> 355a587 (.)
 }

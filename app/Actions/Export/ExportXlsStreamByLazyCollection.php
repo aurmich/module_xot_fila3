@@ -57,6 +57,7 @@ class ExportXlsStreamByLazyCollection
                 $file = fopen('php://output', 'w+');
 
 <<<<<<< HEAD
+<<<<<<< HEAD
                 // Assicuriamo che le intestazioni siano stringhe
                 $headStrings = array_map(function ($item) {
                     //return is_string($item) ? $item : (string) $item;
@@ -73,6 +74,8 @@ class ExportXlsStreamByLazyCollection
 =======
 
 
+=======
+>>>>>>> 355a587 (.)
                 // Assicuriamo che le intestazioni siano stringhe
                 $headStrings = array_map(function ($item): string {
                     return strval($item);
@@ -186,10 +189,13 @@ class ExportXlsStreamByLazyCollection
         }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         $headArray = is_array($first) ? $first : $first->toArray();
 
 =======
 
+=======
+>>>>>>> 355a587 (.)
         $headArray = is_array($first) ? $first : $first->toArray();
 >>>>>>> 3268b83 (.)
         /** 
@@ -199,10 +205,13 @@ class ExportXlsStreamByLazyCollection
         $headings = collect($headArray)->keys();
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> 3268b83 (.)
+=======
+>>>>>>> 355a587 (.)
         if (null !== $transKey) {
             $headings = $headings->map(
                 static function (string $item) use ($transKey) {
@@ -213,9 +222,12 @@ class ExportXlsStreamByLazyCollection
                     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> 3268b83 (.)
+=======
+>>>>>>> 355a587 (.)
                     Assert::string($item1 = Str::replace('.', '_', $item), '[' . __LINE__ . '][' . __CLASS__ . ']');
                     $key = $transKey . '.fields.' . $item1;
                     $trans = trans($key);

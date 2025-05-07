@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace Modules\Xot\Datas;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 use Filament\Support\Colors\Color;
@@ -24,16 +25,22 @@ use Webmozart\Assert\Assert;
 =======
 >>>>>>> 3268b83 (.)
 use Livewire\Wireable;
+=======
+use Filament\Support\Colors\Color;
+>>>>>>> 355a587 (.)
 use Illuminate\Support\Arr;
+use Livewire\Wireable;
+use Modules\Tenant\Services\TenantService;
+use Modules\Xot\Actions\File\AssetAction;
+use Spatie\LaravelData\Concerns\WireableData;
 use Spatie\LaravelData\Data;
 use Webmozart\Assert\Assert;
-use Filament\Support\Colors\Color;
-use Modules\Xot\Actions\File\AssetAction;
-use Modules\Tenant\Services\TenantService;
-use Spatie\LaravelData\Concerns\WireableData;
 
 /**
  * Class MetatagData
+ * 
+ * Gestisce i meta tag per SEO e social media.
+ * Implementa l'interfaccia Wireable per la serializzazione Livewire.
  *
  * @property string $title
  * @property string $sitename
@@ -75,6 +82,7 @@ class MetatagData extends Data implements Wireable
 {
     use WireableData;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -169,104 +177,111 @@ class MetatagData extends Data implements Wireable
 =======
 >>>>>>> 3268b83 (.)
     /** @var string */
+=======
+    /** @var string Titolo della pagina */
+>>>>>>> 355a587 (.)
     public string $title = '';
 
-    /** @var string */
+    /** @var string Nome del sito */
     public string $sitename = '';
 
-    /** @var string */
+    /** @var string Sottotitolo della pagina */
     public string $subtitle = '';
 
-    /** @var string|null */
+    /** @var string|null Generatore del contenuto */
     public ?string $generator = 'xot';
 
-    /** @var string */
+    /** @var string Charset della pagina */
     public string $charset = 'UTF-8';
 
-    /** @var string|null */
+    /** @var string|null Autore del contenuto */
     public ?string $author = 'xot';
 
-    /** @var string|null */
+    /** @var string|null Descrizione della pagina */
     public ?string $description = null;
 
-    /** @var string|null */
+    /** @var string|null Keywords della pagina */
     public ?string $keywords = null;
 
-    /** @var string */
+    /** @var string Nome della regione */
     public string $nome_regione = '';
 
-    /** @var string */
+    /** @var string Nome del comune */
     public string $nome_comune = '';
 
-    /** @var string */
+    /** @var string Titolo del sito */
     public string $site_title = '';
 
-    /** @var string */
+    /** @var string Percorso del logo principale */
     public string $logo = '';
 
-    /** @var string */
+    /** @var string Percorso del logo quadrato */
     public string $logo_square = '';
 
-    /** @var string */
+    /** @var string Percorso del logo dell'header */
     public string $logo_header = '';
 
-    /** @var string */
+    /** @var string Percorso del logo dell'header per modalità scura */
     public string $logo_header_dark = '';
 
-    /** @var string */
+    /** @var string Altezza del logo */
     public string $logo_height = '2em';
 
-    /** @var string */
+    /** @var string Percorso del logo del footer */
     public string $logo_footer = '';
 
-    /** @var string */
+    /** @var string Testo alternativo del logo */
     public string $logo_alt = '';
 
-    /** @var string */
+    /** @var string Flag per nascondere il megamenu */
     public string $hide_megamenu = '';
 
-    /** @var string */
+    /** @var string Tipo di hero section */
     public string $hero_type = '';
 
-    /** @var string */
+    /** @var string URL Facebook */
     public string $facebook_href = '';
 
-    /** @var string */
+    /** @var string URL Twitter */
     public string $twitter_href = '';
 
-    /** @var string */
+    /** @var string URL YouTube */
     public string $youtube_href = '';
 
-    /** @var string */
+    /** @var string Link rapido */
     public string $fastlink = '';
 
-    /** @var string */
+    /** @var string Colore primario */
     public string $color_primary = '';
 
-    /** @var string */
+    /** @var string Colore del titolo */
     public string $color_title = '';
 
-    /** @var string */
+    /** @var string Colore del megamenu */
     public string $color_megamenu = '';
 
-    /** @var string */
+    /** @var string Colore dell'hamburger menu */
     public string $color_hamburger = '';
 
-    /** @var string */
+    /** @var string Colore del banner */
     public string $color_banner = '';
 
+<<<<<<< HEAD
     /** @var string */
 <<<<<<< HEAD
 =======
 >>>>>>> origin/dev
 >>>>>>> 3268b83 (.)
     public string $favicon = '/favicon.ico';
+=======
+    /** @var string Percorso del favicon */
+    public string $favicon = '';
+>>>>>>> 355a587 (.)
 
-    /**
-     * @var array<string, array{key?: string, color: string, hex?: string}>
-     */
+    /** @var array<string, array{key?: string, color: string, hex?: string}> */
     public array $colors = [];
 
+<<<<<<< HEAD
     /**
 <<<<<<< HEAD
 =======
@@ -305,10 +320,17 @@ class MetatagData extends Data implements Wireable
             $data = TenantService::getConfig('metatag');
             self::$instance = self::from($data);
         }
+=======
+    public static function make(): self
+    {
+        $config = TenantService::config('metatag');
+        Assert::isArray($config);
+>>>>>>> 355a587 (.)
 
-        return self::$instance;
+        return self::from($config);
     }
 
+<<<<<<< HEAD
     /**
 <<<<<<< HEAD
      * Get the brand name.
@@ -358,9 +380,18 @@ class MetatagData extends Data implements Wireable
             return asset($path);
         } catch (\Throwable $e) {
             return asset($this->logo_header);
+=======
+    public function getLogoHeader(): string
+    {
+        if ('' === $this->logo_header) {
+            return '';
+>>>>>>> 355a587 (.)
         }
+
+        return app(AssetAction::class)->execute($this->logo_header);
     }
 
+<<<<<<< HEAD
     /**
 <<<<<<< HEAD
      * Get the dark mode brand logo.
@@ -447,9 +478,18 @@ class MetatagData extends Data implements Wireable
             return asset($path);
         } catch (\Throwable $e) {
             return asset($this->logo_header_dark);
+=======
+    public function getLogoHeaderDark(): string
+    {
+        if ('' === $this->logo_header_dark) {
+            return '';
+>>>>>>> 355a587 (.)
         }
+
+        return app(AssetAction::class)->execute($this->logo_header_dark);
     }
 
+<<<<<<< HEAD
     /**
 <<<<<<< HEAD
      * Get the brand logo height.
@@ -587,17 +627,18 @@ class MetatagData extends Data implements Wireable
      *
      * @return string
      */
+=======
+>>>>>>> 355a587 (.)
     public function getFavicon(): string
     {
-        try {
-            /** @var string $path */
-            $path = app(AssetAction::class)->execute($this->favicon);
-            return $path;
-        } catch (\Throwable $e) {
-            return asset($this->favicon);
+        if ('' === $this->favicon) {
+            return '';
         }
+
+        return app(AssetAction::class)->execute($this->favicon);
     }
 
+<<<<<<< HEAD
     /**
 <<<<<<< HEAD
      * @deprecated Use getThemeColors() instead as it better reflects the semantic purpose
@@ -614,18 +655,21 @@ class MetatagData extends Data implements Wireable
      *
      * @return array<string, array<int, string>>
      */
+=======
+>>>>>>> 355a587 (.)
     public function getFilamentColors(): array
     {
         return [
-            'danger' => Color::Red,
-            'gray' => Color::Zinc,
-            'info' => Color::Blue,
-            'primary' => Color::Amber,
-            'success' => Color::Green,
-            'warning' => Color::Amber,
+            'primary' => 'Primario',
+            'danger' => 'Pericolo',
+            'gray' => 'Grigio',
+            'info' => 'Info',
+            'success' => 'Successo',
+            'warning' => 'Attenzione',
         ];
     }
 
+<<<<<<< HEAD
     /**
      * Get the colors array with proper type handling.
      *
@@ -673,12 +717,17 @@ class MetatagData extends Data implements Wireable
     /**
      * @return array<string, string>
      */
+=======
+>>>>>>> 355a587 (.)
     public function getAllColors(): array
     {
-        $colors = array_keys(Color::all());
-        return array_combine($colors, $colors);
+        return array_combine(
+            array_keys(Color::all()),
+            array_keys(Color::all())
+        );
     }
 
+<<<<<<< HEAD
     /**
      * Get the icons configuration.
 >>>>>>> 3268b83 (.)
@@ -705,21 +754,19 @@ class MetatagData extends Data implements Wireable
         /** @var array<string, string> $icons */
         $icons = Arr::get($config, 'icons', []);
         return $icons;
-    }
-
-    /**
-     * Get the dimensions configuration.
-     *
-     * @return array<string, int|string>
-     */
-    public function getDimensions(): array
+=======
+    public function getLogoHeight(): string
     {
-        $config = TenantService::getConfig('metatag');
-        /** @var array<string, int|string> $dimensions */
-        $dimensions = Arr::get($config, 'dimensions', []);
-        return $dimensions;
+        return $this->logo_height ?: '2em';
+>>>>>>> 355a587 (.)
     }
 
+    public function getColors(): array
+    {
+        return $this->colors;
+    }
+
+<<<<<<< HEAD
     /**
      * Get the alignment configuration.
 >>>>>>> 3268b83 (.)
@@ -912,5 +959,10 @@ class MetatagData extends Data implements Wireable
         ];
 >>>>>>> origin/dev
 >>>>>>> 3268b83 (.)
+=======
+    public function getBrandName(): string
+    {
+        return $this->sitename ?: config('app.name', '');
+>>>>>>> 355a587 (.)
     }
 }

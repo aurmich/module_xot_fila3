@@ -5,10 +5,23 @@
 ### Panoramica
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 Nei service provider del progetto il progetto, è consigliato utilizzare l'action `GetModulePathByGeneratorAction` per ottenere i percorsi dei moduli anziché utilizzare direttamente la funzione `module_path`. Questo documento spiega i vantaggi di questo approccio e fornisce esempi di implementazione.
 =======
+=======
+
+### Versione HEAD
+
+Nei service provider del progetto il progetto, è consigliato utilizzare l'action `GetModulePathByGeneratorAction` per ottenere i percorsi dei moduli anziché utilizzare direttamente la funzione `module_path`. Questo documento spiega i vantaggi di questo approccio e fornisce esempi di implementazione.
+
+### Versione Alternativa
+
+>>>>>>> 355a587 (.)
 Nei service provider del progetto SaluteOra, è consigliato utilizzare l'action `GetModulePathByGeneratorAction` per ottenere i percorsi dei moduli anziché utilizzare direttamente la funzione `module_path`. Questo documento spiega i vantaggi di questo approccio e fornisce esempi di implementazione.
 >>>>>>> 3268b83 (.)
+
+---
+
 
 ### Vantaggi dell'utilizzo di GetModulePathByGeneratorAction
 
@@ -137,9 +150,22 @@ Questa implementazione:
 ### Conclusione
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 L'utilizzo di `GetModulePathByGeneratorAction` anziché chiamate dirette a `module_path` rappresenta una best practice importante nel progetto il progetto. Questo approccio migliora la robustezza, la leggibilità e la manutenibilità del codice nei service provider.
 =======
+=======
+
+### Versione HEAD
+
+L'utilizzo di `GetModulePathByGeneratorAction` anziché chiamate dirette a `module_path` rappresenta una best practice importante nel progetto il progetto. Questo approccio migliora la robustezza, la leggibilità e la manutenibilità del codice nei service provider.
+
+### Versione Alternativa
+
+>>>>>>> 355a587 (.)
 L'utilizzo di `GetModulePathByGeneratorAction` anziché chiamate dirette a `module_path` rappresenta una best practice importante nel progetto SaluteOra. Questo approccio migliora la robustezza, la leggibilità e la manutenibilità del codice nei service provider.
 >>>>>>> 3268b83 (.)
+
+---
+
 
 Si raccomanda di seguire questo pattern in tutti i service provider personalizzati per garantire coerenza e affidabilità nell'accesso ai percorsi dei moduli. 

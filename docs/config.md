@@ -1,8 +1,21 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 # Configurazione in il progetto
 =======
+=======
+
+### Versione HEAD
+
+# Configurazione in il progetto
+
+### Versione Alternativa
+
+>>>>>>> 355a587 (.)
 # Configurazione in SaluteOra
 >>>>>>> 3268b83 (.)
+
+---
+
 
 La configurazione del tema è gestita attraverso file di configurazione che definiscono le impostazioni del tema.
 
@@ -45,10 +58,23 @@ return [
     |
     */
 <<<<<<< HEAD
+<<<<<<< HEAD
     'description' => 'Tema One per il progetto',
 =======
+=======
+
+### Versione HEAD
+
+    'description' => 'Tema One per il progetto',
+
+### Versione Alternativa
+
+>>>>>>> 355a587 (.)
     'description' => 'Tema One per SaluteOra',
 >>>>>>> 3268b83 (.)
+
+---
+
 
     /*
     |--------------------------------------------------------------------------
@@ -69,10 +95,23 @@ return [
     |
     */
 <<<<<<< HEAD
+<<<<<<< HEAD
     'author' => 'il progetto Team',
 =======
+=======
+
+### Versione HEAD
+
+    'author' => 'il progetto Team',
+
+### Versione Alternativa
+
+>>>>>>> 355a587 (.)
     'author' => 'SaluteOra Team',
 >>>>>>> 3268b83 (.)
+
+---
+
 
     /*
     |--------------------------------------------------------------------------
@@ -295,11 +334,27 @@ return [
 6. **Sicurezza**: Proteggi le informazioni sensibili
 7. **Performance**: Ottimizza la configurazione
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+### Versione HEAD
+
+>>>>>>> 355a587 (.)
 8. **Versioning**: Gestisci correttamente le versioni 
 ## Collegamenti tra versioni di config.md
 * [config.md](../../../Xot/docs/config.md)
 * [config.md](../../../../Themes/One/docs/config.md)
 
+<<<<<<< HEAD
 =======
 8. **Versioning**: Gestisci correttamente le versioni 
 >>>>>>> 3268b83 (.)
+=======
+
+### Versione Alternativa
+
+8. **Versioning**: Gestisci correttamente le versioni 
+
+---
+
+>>>>>>> 355a587 (.)

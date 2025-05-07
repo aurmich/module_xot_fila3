@@ -178,8 +178,11 @@ trait HasXotTable
      * Get table empty state actions.
      *
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> 355a587 (.)
      * @return array<string, Tables\Actions\Action>
      */
     public function getTableEmptyStateActions(): array
@@ -191,8 +194,11 @@ trait HasXotTable
 
     /**
      * Configure table.
+<<<<<<< HEAD
 =======
 >>>>>>> 3268b83 (.)
+=======
+>>>>>>> 355a587 (.)
      * @return array<string, Action>
      */
     public function getTableEmptyStateActions(): array
@@ -217,9 +223,13 @@ trait HasXotTable
      *
      * Ultimo aggiornamento: 10/2023
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/dev
 >>>>>>> 3268b83 (.)
+=======
+ origin/dev
+>>>>>>> 355a587 (.)
      */
     public function table(Table $table): Table
     {
@@ -274,9 +284,13 @@ trait HasXotTable
             );
         */
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/dev
 >>>>>>> 3268b83 (.)
+=======
+ origin/dev
+>>>>>>> 355a587 (.)
         return $table;
     }
 
@@ -319,6 +333,7 @@ trait HasXotTable
      * Get table actions.
      *
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @return array<string, Action|ActionGroup>
 =======
 <<<<<<< HEAD
@@ -327,6 +342,11 @@ trait HasXotTable
      * @return array<string, Tables\Actions\Action|Tables\Actions\ActionGroup>
 >>>>>>> origin/dev
 >>>>>>> 3268b83 (.)
+=======
+     * @return array<string, Action|ActionGroup>
+     * @return array<string, Tables\Actions\Action|Tables\Actions\ActionGroup>
+ origin/dev
+>>>>>>> 355a587 (.)
      */
     public function getTableActions(): array
     {

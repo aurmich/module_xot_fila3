@@ -1,4 +1,10 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+### Versione HEAD
+
+>>>>>>> 355a587 (.)
 ### Versione HEAD
 
 # Analisi della Discrepanza tra Namespace e Struttura Directory nei Moduli Laraxot
@@ -241,6 +247,7 @@ laravel/Themes/[Nome]/
 ---
 
 
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -249,6 +256,28 @@ laravel/Themes/[Nome]/
 
 >>>>>>> origin/dev
 >>>>>>> 3268b83 (.)
+=======
+
+### Versione Alternativa
+
+
+### Versione HEAD
+
+
+### Versione Alternativa
+
+
+
+### Versione Alternativa
+
+
+
+---
+
+
+---
+
+>>>>>>> 355a587 (.)
 # Struttura del Modulo Xot
 
 ## Struttura delle Directory
@@ -286,6 +315,7 @@ Modules/Xot/
    - Mantenere una struttura di directory pulita e organizzata
    - Seguire le convenzioni di Laravel per la struttura delle directory
 <<<<<<< HEAD
+<<<<<<< HEAD
 ### Versione HEAD
 
    - Utilizzare i namespace appropriati che riflettono la struttura delle directory 
@@ -297,6 +327,34 @@ Modules/Xot/
 =======
 >>>>>>> aurmich/dev
 >>>>>>> 3268b83 (.)
+=======
+
+### Versione HEAD
+
+### Versione HEAD
+
+   - Utilizzare i namespace appropriati che riflettono la struttura delle directory 
+
+### Versione Alternativa
+
+
+### Versione HEAD
+
+   - Utilizzare i namespace appropriati che riflettono la struttura delle directory 
+
+### Versione Alternativa
+
+   - Utilizzare i namespace appropriati che riflettono la struttura delle directory 
+
+### Versione Alternativa
+
+
+---
+
+
+---
+
+>>>>>>> 355a587 (.)
 # Modulo Xot
 
 Data: 2025-04-23 19:09:56
@@ -1084,6 +1142,12 @@ tests_old
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+### Versione HEAD
+
+>>>>>>> 355a587 (.)
 ### Versione Incoming
 
    - Utilizzare i namespace appropriati che riflettono la struttura delle directory 
@@ -1116,9 +1180,30 @@ tests_old
 
 ---
 
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> aurmich/dev
 >>>>>>> aurmich/dev
 >>>>>>> origin/dev
 >>>>>>> 3268b83 (.)
+=======
+
+### Versione Alternativa
+
+
+### Versione Alternativa
+
+
+---
+
+
+---
+
+
+---
+
+
+---
+
+>>>>>>> 355a587 (.)

@@ -80,6 +80,7 @@ class MetatagPage extends Page implements HasForms
 =======
 >>>>>>> 3268b83 (.)
                     /*
+<<<<<<< HEAD
                 FileUpload::make('logo_header')
                     ->preserveFilenames()
                     ->image()
@@ -99,6 +100,22 @@ class MetatagPage extends Page implements HasForms
 =======
 >>>>>>> origin/dev
 >>>>>>> 3268b83 (.)
+=======
+                    FileUpload::make('logo_header')
+                        ->preserveFilenames()
+                        ->image()
+                        ->imageEditor()
+                        ->moveFiles()
+                        ->disk('public')
+                        ->visibility('public')
+                        ->directory('logo')
+                        ->formatStateUsing(fn ($state): array =>[basename($state)])
+                        //->formatStateUsing(fn ($state): array =>['/uploads/photos/pexels-giona-mason-19138633.jpg'])
+                        ->dehydrateStateUsing(fn ($state) => collect($state)->map(function($item){
+                            return Storage::disk('public')->url($item);
+                        })->first() )
+                    */
+>>>>>>> 355a587 (.)
                     TextInput::make('logo_header'),
                     TextInput::make('logo_header_dark')
                         ->helperText('logo for dark css'),

@@ -1,4 +1,10 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+### Versione HEAD
+
+>>>>>>> 355a587 (.)
 # Correzioni PHPStan Livello 7 - Modulo Xot
 
 Questo documento traccia gli errori PHPStan di livello 7 identificati nel modulo Xot e le relative soluzioni implementate.
@@ -835,7 +841,13 @@ Le correzioni apportate al modulo Xot hanno migliorato significativamente la qua
 
 ---
 
+<<<<<<< HEAD
 =======
+=======
+
+### Versione Alternativa
+
+>>>>>>> 355a587 (.)
 # Correzioni PHPStan per il Modulo Xot
 
 ## Panoramica
@@ -931,4 +943,10 @@ Queste correzioni hanno migliorato l'architettura del modulo Xot nei seguenti mo
 ## Conclusioni
 
 Le correzioni apportate al modulo Xot hanno migliorato significativamente la qualità del codice e ridotto la possibilità di errori runtime. Queste modifiche sono in linea con le best practice moderne di PHP e contribuiscono a un codebase più robusto e manutenibile. 
+<<<<<<< HEAD
 >>>>>>> 3268b83 (.)
+=======
+
+---
+
+>>>>>>> 355a587 (.)

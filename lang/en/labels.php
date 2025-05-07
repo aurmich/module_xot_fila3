@@ -182,10 +182,14 @@ return [
                     ],
                 ],
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 >>>>>>> 3268b83 (.)
+=======
+
+>>>>>>> 355a587 (.)
                 'table' => [
                     'id' => 'Id',
                     'merchant_id' => 'Restaurant Name',

@@ -46,20 +46,49 @@ Il file JSON generato contiene:
 3. Query ottimizzate per performance
 4. Supporto per PHPStan livello 9
 <<<<<<< HEAD
+<<<<<<< HEAD
 5. Conforme alle convenzioni Laraxot/<nome progetto>
 =======
+=======
+
+### Versione HEAD
+
+5. Conforme alle convenzioni Laraxot/<nome progetto>
+
+### Versione Alternativa
+
+>>>>>>> 355a587 (.)
 5. Conforme alle convenzioni Laraxot/PTVX
 >>>>>>> 3268b83 (.)
+
+---
+
 
 ## Collegamenti
 - [Database Guidelines](../DATABASE-GUIDELINES.md)
 - [Schema Documentation](../DIRECTORY-STRUCTURE-GUIDE.md)
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+### Versione HEAD
+
+>>>>>>> 355a587 (.)
 - [PHPStan Level 9 Guide](../PHPSTAN-LEVEL9-GUIDE.md)
 ## Collegamenti tra versioni di database-schema-exporter.md
 * [database-schema-exporter.md](../../../Xot/docs/commands/database-schema-exporter.md)
 * [database-schema-exporter.md](../../../Xot/docs/console/commands/database-schema-exporter.md)
 
+<<<<<<< HEAD
 =======
 - [PHPStan Level 9 Guide](../PHPSTAN-LEVEL9-GUIDE.md)
 >>>>>>> 3268b83 (.)
+=======
+
+### Versione Alternativa
+
+- [PHPStan Level 9 Guide](../PHPSTAN-LEVEL9-GUIDE.md)
+
+---
+
+>>>>>>> 355a587 (.)

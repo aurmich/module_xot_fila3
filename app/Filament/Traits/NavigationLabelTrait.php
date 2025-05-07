@@ -78,6 +78,7 @@ trait NavigationLabelTrait
     }
     /*
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
@@ -85,12 +86,17 @@ trait NavigationLabelTrait
 =======
 >>>>>>> origin/dev
 >>>>>>> 3268b83 (.)
+=======
+
+ origin/dev
+>>>>>>> 355a587 (.)
     public function getHeading(): string|Htmlable
     {
         return 'AAAAAAAAAA';
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
@@ -100,6 +106,11 @@ trait NavigationLabelTrait
 =======
 >>>>>>> origin/dev
 >>>>>>> 3268b83 (.)
+=======
+
+
+ origin/dev
+>>>>>>> 355a587 (.)
     public static function getBreadcrumb(): string {
         return JobsWaitingPlugin::make()->getBreadcrumb();
     }
@@ -112,6 +123,7 @@ trait NavigationLabelTrait
         return JobsWaitingPlugin::make()->getNavigationIcon();
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
@@ -119,6 +131,10 @@ trait NavigationLabelTrait
 =======
 >>>>>>> origin/dev
 >>>>>>> 3268b83 (.)
+=======
+
+ origin/dev
+>>>>>>> 355a587 (.)
     */
 }
 

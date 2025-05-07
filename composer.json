@@ -57,6 +57,7 @@
         "tightenco/parental": "*",
         "spatie/laravel-queueable-action": "*"
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
         
@@ -72,6 +73,8 @@
 
 >>>>>>> origin/dev
 >>>>>>> 3268b83 (.)
+=======
+>>>>>>> 355a587 (.)
     },
     "require-dev": {
         "barryvdh/laravel-debugbar": "^3.14",
@@ -88,6 +91,7 @@
         "orchestra/testbench": "*"
     },
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     "require-dev-comment": {
 <<<<<<< HEAD
@@ -99,6 +103,8 @@
 >>>>>>> origin/dev
     },
 >>>>>>> 3268b83 (.)
+=======
+>>>>>>> 355a587 (.)
     "repositories": [
         {
             "type": "path",

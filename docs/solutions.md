@@ -246,6 +246,12 @@ class CacheTest extends TestCase {
 3. Monitorare costantemente le metriche di performance
 4. Aggiornare la documentazione per ogni modifica
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+### Versione HEAD
+
+>>>>>>> 355a587 (.)
 ### Versione HEAD
 
 5. Mantenere compatibilità con le versioni precedenti 
@@ -261,6 +267,16 @@ class CacheTest extends TestCase {
 
 ---
 
+<<<<<<< HEAD
 =======
 5. Mantenere compatibilità con le versioni precedenti 
 >>>>>>> 3268b83 (.)
+=======
+
+### Versione Alternativa
+
+5. Mantenere compatibilità con le versioni precedenti 
+
+---
+
+>>>>>>> 355a587 (.)

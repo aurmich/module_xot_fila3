@@ -66,6 +66,12 @@ quindi le relazioni verranno create utilizzando il MorphMap, ovvero la stringa '
 ```
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+### Versione HEAD
+
+>>>>>>> 355a587 (.)
 ### Versione HEAD
 
 - altri files
@@ -94,6 +100,16 @@ quindi le relazioni verranno create utilizzando il MorphMap, ovvero la stringa '
 
 ---
 
+<<<<<<< HEAD
 =======
 - altri files
 >>>>>>> 3268b83 (.)
+=======
+
+### Versione Alternativa
+
+- altri files
+
+---
+
+>>>>>>> 355a587 (.)

@@ -94,6 +94,12 @@ test('it can integrate with laravel', function () {
 - [Debug](debug.md)
 - [Panoramica](../packages.md) 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+### Versione HEAD
+
+>>>>>>> 355a587 (.)
 ### Versione HEAD
 
 
@@ -109,5 +115,14 @@ test('it can integrate with laravel', function () {
 
 ---
 
+<<<<<<< HEAD
 =======
 >>>>>>> 3268b83 (.)
+=======
+
+### Versione Alternativa
+
+
+---
+
+>>>>>>> 355a587 (.)

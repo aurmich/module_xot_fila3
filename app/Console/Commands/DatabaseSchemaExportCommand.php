@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace Modules\Xot\Console\Commands;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 use Doctrine\DBAL\Schema\Column;
 use Doctrine\DBAL\Schema\ForeignKeyConstraint;
 use Doctrine\DBAL\Schema\Index;
@@ -54,6 +55,8 @@ class DatabaseSchemaExportCommand extends Command
         foreach ($tables as $table) {
             $this->exportTable($table->name, $module);
 =======
+=======
+>>>>>>> 355a587 (.)
 use Illuminate\Console\Command;
 use Illuminate\Support\Facades\DB;
 use Safe\Exceptions\DatetimeException;
@@ -105,11 +108,15 @@ class DatabaseSchemaExportCommand extends Command
         } catch (\Exception $e) {
             $this->error('Errore durante l\'esportazione: ' . $e->getMessage());
             return 1;
+<<<<<<< HEAD
 >>>>>>> 3268b83 (.)
+=======
+>>>>>>> 355a587 (.)
         }
     }
 
     /**
+<<<<<<< HEAD
 <<<<<<< HEAD
      * Esporta lo schema di una tabella in JSON.
      *
@@ -237,6 +244,8 @@ class DatabaseSchemaExportCommand extends Command
 
         return $basePath . '/' . $filename;
 =======
+=======
+>>>>>>> 355a587 (.)
      * Esporta lo schema del database.
      */
     protected function exportSchema(string $connection, ?array $tables = null): array
@@ -331,6 +340,9 @@ class DatabaseSchemaExportCommand extends Command
             ];
         }
         return $foreignKeys;
+<<<<<<< HEAD
 >>>>>>> 3268b83 (.)
+=======
+>>>>>>> 355a587 (.)
     }
 }

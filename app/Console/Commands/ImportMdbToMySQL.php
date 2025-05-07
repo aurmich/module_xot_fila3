@@ -13,7 +13,10 @@ use Illuminate\Support\Facades\DB;
 use Safe\Exceptions\DatetimeException;
 use Safe\Exceptions\JsonException;
 use Safe\Exceptions\PcreException;
+<<<<<<< HEAD
 >>>>>>> 3268b83 (.)
+=======
+>>>>>>> 355a587 (.)
 
 class ImportMdbToMySQL extends Command
 {
@@ -168,6 +171,9 @@ class ImportMdbToMySQL extends Command
     {
         // Implementazione dell'importazione dei dati
         $this->info('Importazione dati in corso...');
+<<<<<<< HEAD
 >>>>>>> 3268b83 (.)
+=======
+>>>>>>> 355a587 (.)
     }
 }

@@ -99,6 +99,7 @@ final class GetFieldnamesByTablenameAction
         try {
             DB::connection($connectionName)->getPdo();
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
@@ -106,6 +107,8 @@ final class GetFieldnamesByTablenameAction
 
 >>>>>>> origin/dev
 >>>>>>> 3268b83 (.)
+=======
+>>>>>>> 355a587 (.)
             return true;
         } catch (\Throwable $e) {
             return false;

@@ -197,6 +197,7 @@ class InformationSchemaTable extends Model
             ->map(function ($row, $index) {
                 $data = (array) $row;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
                 $data['id'] = $index + 1;
@@ -208,19 +209,26 @@ class InformationSchemaTable extends Model
 =======
 >>>>>>> 3268b83 (.)
                 $data['id'] = $index + 1; // Aggiungi un ID incrementale
+=======
+                $data['id'] = $index + 1;
+>>>>>>> 355a587 (.)
                 return $data;
             })
-            ->toArray();
+            ->all();
 
+<<<<<<< HEAD
         /** @var array<int, array<string, mixed>> */
 <<<<<<< HEAD
 =======
 >>>>>>> origin/dev
 >>>>>>> 3268b83 (.)
+=======
+>>>>>>> 355a587 (.)
         return $results;
     }
 
     /**
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -300,153 +308,86 @@ class InformationSchemaTable extends Model
 =======
 >>>>>>> 3268b83 (.)
      * Get table statistics from Sushi or information_schema as fallback.
+=======
+     * Get table statistics for a specific table.
+>>>>>>> 355a587 (.)
      *
-     * @param string $schema The schema name
+     * @param string $schema The database schema name
      * @param string $table The table name
+     * @return self|null The table statistics or null if not found
      */
     public static function getTableStats(string $schema, string $table): ?self
     {
-        $result = DB::connection('mysql')
-            ->table('information_schema.TABLES')
-            ->select([
-                'TABLE_CATALOG',
-                'TABLE_SCHEMA',
-                'TABLE_NAME',
-                'TABLE_TYPE',
-                'ENGINE',
-                'VERSION',
-                'ROW_FORMAT',
-                'TABLE_ROWS',
-                'AVG_ROW_LENGTH',
-                'DATA_LENGTH',
-                'MAX_DATA_LENGTH',
-                'INDEX_LENGTH',
-                'DATA_FREE',
-                'AUTO_INCREMENT',
-                'CREATE_TIME',
-                'UPDATE_TIME',
-                'CHECK_TIME',
-                'TABLE_COLLATION',
-                'CHECKSUM',
-                'CREATE_OPTIONS',
-                'TABLE_COMMENT'
-            ])
-            ->where('TABLE_SCHEMA', '=', $schema)
-            ->where('TABLE_NAME', '=', $table)
+        return static::query()
+            ->where('TABLE_SCHEMA', $schema)
+            ->where('TABLE_NAME', $table)
             ->first();
-
-        if (!$result) {
-            return null;
-        }
-
-        // Creiamo una nuova istanza e popoliamola manualmente
-        $instance = new self();
-        foreach ((array) $result as $key => $value) {
-            $instance->setAttribute($key, $value);
-        }
-        return $instance;
     }
 
     /**
-     * Get the row count for a model class.
-     * This method incorporates the logic from CountAction.
+     * Get the number of rows in a model's table.
      *
-     * @param class-string<Model> $modelClass The fully qualified model class name
-     *
-     * @throws InvalidArgumentException If model class is invalid or not found
+     * @param string $modelClass The fully qualified model class name
+     * @return int The number of rows in the table
      */
     public static function getModelCount(string $modelClass): int
     {
-        if (! class_exists($modelClass)) {
-            throw new InvalidArgumentException("Model class [$modelClass] does not exist");
-        }
+        $model = new $modelClass();
+        $tableName = $model->getTable();
+        $database = DB::connection()->getDatabaseName();
 
-        /** @var Model $model */
-        $model = app($modelClass);
-
-        if (! $model instanceof Model) {
-            throw new InvalidArgumentException("Class [$modelClass] must be an instance of ".Model::class);
-        }
-
-        $connection = $model->getConnection();
-        $database = $connection->getDatabaseName();
-        $driver = $connection->getDriverName();
-        $table = $model->getTable();
-
-        // Handle in-memory database
-        if (':memory:' === $database) {
-            return (int) $model->count();
-        }
-
-        // Handle SQLite specifically
-        if ('sqlite' === $driver) {
-            return (int) $model->count();
-        }
-
-        return static::getAccurateRowCount($table, $database);
+        return static::getAccurateRowCount($tableName, $database);
     }
 
     /**
-     * Get accurate row count for a table.
+     * Get an accurate row count for a table.
      *
      * @param string $tableName The name of the table
      * @param string $database The database name
+     * @return int The number of rows in the table
      */
     public static function getAccurateRowCount(string $tableName, string $database): int
     {
-        $stats = static::getTableStats($database, $tableName);
-        if ($stats === null) {
-            return 0;
-        }
+        $query = "SELECT COUNT(*) as count FROM `{$tableName}`";
+        $result = DB::select($query);
 
-        $rows = $stats->getAttribute('TABLE_ROWS');
-        if ($rows === null) {
-            return 0;
-        }
-        Assert::numeric($rows);
-        return (int) $rows;
+        return (int) ($result[0]->count ?? 0);
     }
 
     /**
-     * Get table size in bytes.
+     * Get the size of a table in bytes.
      *
      * @param string $tableName The name of the table
      * @param string $database The database name
+     * @return int The size of the table in bytes
      */
     public static function getTableSize(string $tableName, string $database): int
     {
         $stats = static::getTableStats($database, $tableName);
-        if ($stats === null) {
+        if (null === $stats) {
             return 0;
         }
 
-        $dataLength = $stats->getAttribute('DATA_LENGTH');
-        $indexLength = $stats->getAttribute('INDEX_LENGTH');
-
-        if ($dataLength === null || $indexLength === null) {
-            return 0;
-        }
-
-        // Assicuriamo che i valori siano convertiti correttamente in intero
-        $dataLengthInt = is_numeric($dataLength) ? (int) $dataLength : 0;
-        $indexLengthInt = is_numeric($indexLength) ? (int) $indexLength : 0;
-        
-        return $dataLengthInt + $indexLengthInt;
+        return (int) ($stats->DATA_LENGTH + $stats->INDEX_LENGTH);
     }
 
     /**
-     * Refresh the cache for a specific table.
+     * Refresh the table statistics cache.
      *
      * @param string $tableName The name of the table
      * @param string $database The database name
      */
     public static function refreshCache(string $tableName, string $database): void
     {
+<<<<<<< HEAD
         DB::connection('mysql')
             ->statement("ANALYZE TABLE `{$database}`.`{$tableName}`");
 <<<<<<< HEAD
 =======
 >>>>>>> origin/dev
 >>>>>>> 3268b83 (.)
+=======
+        DB::statement("ANALYZE TABLE `{$database}`.`{$tableName}`");
+>>>>>>> 355a587 (.)
     }
 }

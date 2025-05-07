@@ -33,12 +33,24 @@ interface ErrorFormatterContract
 2. Documentazione PHPDoc completa
 3. Supporto per PHPStan livello 9
 <<<<<<< HEAD
+<<<<<<< HEAD
 4. Conforme alle convenzioni Laraxot/<nome progetto>
 =======
+=======
+
+### Versione HEAD
+
+4. Conforme alle convenzioni Laraxot/<nome progetto>
+
+### Versione Alternativa
+
+>>>>>>> 355a587 (.)
 4. Conforme alle convenzioni Laraxot/PTVX
 >>>>>>> 3268b83 (.)
+
+---
+
 
 ## Collegamenti
 - [Error Handling Guidelines](../EXCEPTION-HANDLING-GUIDE.md)
 - [Error Formatters](../exceptions/formatters/README.md)
-- [PHPStan Level 9 Guide](../PHPSTAN-LEVEL9-GUIDE.md) 

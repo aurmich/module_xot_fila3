@@ -23,10 +23,24 @@ interface ModelWithAuthorContract extends ModelContract
 
 ## Fix/Modifiche recenti
 <<<<<<< HEAD
+<<<<<<< HEAD
 - [2025-04-16] Correzione conflitti git, uniformazione tipizzazione, aggiunta firme metodi autore/editor, aggiornamento PHPDoc e struttura secondo convenzioni Laraxot/<nome progetto>.
 =======
 - [2025-04-16] Correzione conflitti git, uniformazione tipizzazione, aggiunta firme metodi autore/editor, aggiornamento PHPDoc e struttura secondo convenzioni Laraxot/PTVX.
 >>>>>>> 3268b83 (.)
+=======
+
+### Versione HEAD
+
+- [2025-04-16] Correzione conflitti git, uniformazione tipizzazione, aggiunta firme metodi autore/editor, aggiornamento PHPDoc e struttura secondo convenzioni Laraxot/<nome progetto>.
+
+### Versione Alternativa
+
+- [2025-04-16] Correzione conflitti git, uniformazione tipizzazione, aggiunta firme metodi autore/editor, aggiornamento PHPDoc e struttura secondo convenzioni Laraxot/PTVX.
+
+---
+
+>>>>>>> 355a587 (.)
 - Link bidirezionale: [Vai a PHPSTAN-FIXES-SUMMARY.md](../../../docs/PHPSTAN-FIXES-SUMMARY.md)
 
 ## Collegamenti
@@ -85,4 +99,3 @@ class Article extends Model implements ModelWithAuthorContract
 - Implementare sempre tutte le relazioni richieste
 - Gestire correttamente i casi di soft delete
 - Mantenere la consistenza dei dati nelle relazioni
-- Documentare eventuali personalizzazioni 

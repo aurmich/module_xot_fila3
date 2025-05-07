@@ -280,6 +280,12 @@ trait HasXotOptimizations
     }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+### Versione HEAD
+
+>>>>>>> 355a587 (.)
 ### Versione HEAD
 
 ``` 
@@ -295,6 +301,16 @@ trait HasXotOptimizations
 
 ---
 
+<<<<<<< HEAD
 =======
 ``` 
 >>>>>>> 3268b83 (.)
+=======
+
+### Versione Alternativa
+
+``` 
+
+---
+
+>>>>>>> 355a587 (.)

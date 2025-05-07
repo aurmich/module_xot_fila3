@@ -14,6 +14,7 @@ use Illuminate\Support\Carbon;
 
 /**
 <<<<<<< HEAD
+<<<<<<< HEAD
  * Modules\Xot\Contracts\ModelContract.
 =======
 <<<<<<< HEAD
@@ -22,6 +23,9 @@ use Illuminate\Support\Carbon;
  * Modules\Xot\Contracts\ModelContract.
 >>>>>>> origin/dev
 >>>>>>> 3268b83 (.)
+=======
+ * Contratto base per i modelli nel sistema Laraxot.
+>>>>>>> 355a587 (.)
  *
  * @property int                $id
  * @property int|null           $user_id
@@ -31,6 +35,7 @@ use Illuminate\Support\Carbon;
  * @property string|null        $created_by
  * @property string|null        $updated_by
  * @property string|null        $title
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -48,6 +53,12 @@ use Illuminate\Support\Carbon;
 =======
 >>>>>>> origin/dev
 >>>>>>> 3268b83 (.)
+=======
+ * @property bool              $is_reclamed
+ * @property bool              $table_enable
+ * @property PivotContract|null $pivot
+ * @property string            $tennant_name
+>>>>>>> 355a587 (.)
  *
  * @method mixed     getKey()
  * @method string    getRouteKey()
@@ -78,6 +89,7 @@ use Illuminate\Support\Carbon;
 interface ModelContract
 {
     /**
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -163,68 +175,92 @@ interface ModelContract
      * Duplicate the instance and unset all the loaded relations.
      *
      * @return $this
+=======
+     * Duplica l'istanza e rimuove tutte le relazioni caricate.
+>>>>>>> 355a587 (.)
      */
-    public function withoutRelations();
+    public function withoutRelations(): static;
 
     /**
-     * Fill the model with an array of attributes. Force mass assignment.
+     * Riempie il modello con un array di attributi, forzando l'assegnazione di massa.
      *
-     * @return $this
+     * @param array<string, mixed> $attributes
      */
-    public function forceFill(array $attributes);
+    public function forceFill(array $attributes): static;
 
     /**
-     * Save the model to the database.
+     * Salva il modello nel database.
      *
-     * @return bool
+     * @param array<string, mixed> $options
      */
-    public function save(array $options = []);
-    /*
-         * Save a new model and return the instance. Allow mass-assignment.
-         *
-         * @return \Illuminate\Database\Eloquent\Model|$this
-
-        public function forceCreate(array $attributes);
-        */
+    public function save(array $options = []): bool;
 
     /**
-     * Convert the model instance to an array.
+     * Converte l'istanza del modello in un array.
      *
-     * @return array
+     * @return array<string, mixed>
      */
-    public function toArray();
+    public function toArray(): array;
 
     /**
-     * Get the value of the model's primary key.
+     * Ottiene il valore della chiave primaria del modello.
      *
-     * @return mixed|int|string
+     * @return mixed
      */
-    public function getKey();
+    public function getKey(): mixed;
 
-    /*
-     * Add a basic where clause to the query.
+    /**
+     * Ottiene il nome della chiave primaria del modello.
+     */
+    public function getKeyName(): string;
+
+    /**
+     * Ottiene il tipo della chiave primaria del modello.
+     */
+    public function getKeyType(): string;
+
+    /**
+     * Ottiene il nome della tabella associata al modello.
+     */
+    public function getTable(): string;
+
+    /**
+     * Ottiene il nome della connessione del database utilizzata dal modello.
+     */
+    public function getConnection(): string;
+
+    /**
+     * Ottiene gli attributi che possono essere assegnati in massa.
      *
-     * @param  \Closure|string|array|\Illuminate\Contracts\Database\Query\Expression  $column
-     * @param  mixed  $operator
-     * @param  mixed  $value
-     * @param  string $boolean
-     * @return $this
+     * @return array<int, string>
+     */
+    public function getFillable(): array;
 
-    public function where($column, $operator = null, $value = null, $boolean = 'and');
-    */
-
-    /*
-     * Execute the query and get the first result or throw an exception.
+    /**
+     * Ottiene gli attributi che devono essere convertiti.
      *
-     * @param  array|string $columns
-     * @return \Illuminate\Database\Eloquent\Model|static
-     *
-     * @throws \Illuminate\Database\Eloquent\ModelNotFoundException<\Illuminate\Database\Eloquent\Model>
+     * @return array<string, string>
+     */
+    public function getCasts(): array;
 
+<<<<<<< HEAD
     public function firstOrFail($columns = ['*']);
     */
 <<<<<<< HEAD
 =======
 >>>>>>> origin/dev
 >>>>>>> 3268b83 (.)
+=======
+    /**
+     * Ottiene gli attributi che devono essere trattati come date.
+     *
+     * @return array<int, string>
+     */
+    public function getDates(): array;
+
+    /**
+     * Determina se il modello utilizza i timestamp.
+     */
+    public function usesTimestamps(): bool;
+>>>>>>> 355a587 (.)
 }

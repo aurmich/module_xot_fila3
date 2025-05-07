@@ -1,4 +1,10 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+### Versione HEAD
+
+>>>>>>> 355a587 (.)
 ### Versione HEAD
 
 # Pattern Architetturali
@@ -89,8 +95,17 @@ Elenco di pratiche da evitare nello sviluppo.
 
 ### Versione Incoming
 
+<<<<<<< HEAD
 =======
 >>>>>>> 3268b83 (.)
+=======
+
+### Versione Alternativa
+
+
+---
+
+>>>>>>> 355a587 (.)
 # Design Patterns and Architecture
 
 ## Clean Architecture
@@ -128,8 +143,23 @@ ${cat /mnt/f/var/www/quaeris/laravel/Modules/Xot/_docs/presenter.txt}
 ${cat /mnt/f/var/www/quaeris/laravel/Modules/Xot/_docs/bad_practices.txt}
 ```
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 ---
 
 =======
 >>>>>>> 3268b83 (.)
+=======
+
+### Versione HEAD
+
+
+---
+
+
+### Versione Alternativa
+
+
+---
+
+>>>>>>> 355a587 (.)
