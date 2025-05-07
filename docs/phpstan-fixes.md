@@ -1,9 +1,6 @@
 
 
-=======
-=======
 
->>>>>>> 5693302 (.)
 # Correzioni PHPStan nel Modulo Xot
 
 ## Correzioni Implementate
@@ -119,11 +116,7 @@ public function execute(string $modelClass): AbstractSchemaManager
     Assert::subclassOf($modelClass, Model::class);
 ### Versione HEAD
 
-=======
 
-=======
->>>>>>> aurmich/dev
->>>>>>> 5693302 (.)
 # Risoluzione Problemi PHPStan nel Modulo Xot
 
 Questo documento descrive i principali problemi PHPStan risolti nel modulo Xot e le strategie adottate per la loro risoluzione.
@@ -229,22 +222,14 @@ class XotBaseModel extends Model
 
 ---
 
-=======
 
-=======
->>>>>>> aurmich/dev
->>>>>>> aurmich/dev
->>>>>>> 5693302 (.)
     // ...
 }
 ```
 
 
 
-=======
-=======
 
->>>>>>> 5693302 (.)
 ### 2. Validazione Dati
 ```php
 /**
@@ -257,11 +242,7 @@ private function validateData(array $data): void
     Assert::string($data['required_field']);
 ### Versione HEAD
 
-=======
 
-=======
->>>>>>> aurmich/dev
->>>>>>> 5693302 (.)
 ### Servizi e Dependency Injection
 
 **Problema**: Metodi che utilizzano dependency injection non avevano tipi ben definiti.
@@ -284,22 +265,14 @@ public function process(ServiceInterface $service): ResponseInterface
 
 ---
 
-=======
 
-=======
->>>>>>> aurmich/dev
->>>>>>> aurmich/dev
->>>>>>> 5693302 (.)
     // ...
 }
 ```
 
 
 
-=======
-=======
 
->>>>>>> 5693302 (.)
 ### 3. Gestione Relazioni
 ```php
 /**
@@ -621,11 +594,7 @@ Questo permette a phpstan di trovare correttamente il file durante l'analisi sta
 
 ### Versione Incoming
 
-=======
 
-=======
->>>>>>> aurmich/dev
->>>>>>> 5693302 (.)
 ### Problemi con le Relazioni Eloquent
 
 **Problema**: PHPStan non riconosceva correttamente i tipi restituiti dalle relazioni Eloquent.
@@ -789,9 +758,4 @@ interface AuthenticatableRequest
 
 ---
 
-=======
 
-=======
->>>>>>> aurmich/dev
->>>>>>> aurmich/dev
->>>>>>> 5693302 (.)

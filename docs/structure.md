@@ -239,7 +239,6 @@ laravel/Themes/[Nome]/
 
 ---
 
-=======
 
 # Struttura del Modulo Xot
 
@@ -1098,6 +1097,3 @@ tests_old
 
 ---
 
-=======
->>>>>>> aurmich/dev
->>>>>>> 5693302 (.)

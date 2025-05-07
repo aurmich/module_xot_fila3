@@ -15,11 +15,8 @@ use Nwidart\Modules\Traits\PathNamespace;
 use Modules\Xot\Actions\Blade\RegisterBladeComponentsAction;
 use Modules\Xot\Actions\Module\GetModulePathByGeneratorAction;
 use Modules\Xot\Actions\Livewire\RegisterLivewireComponentsAction;
-<<<<<<< HEAD
 use BladeUI\Icons\Factory as BladeIconsFactory;
 use Illuminate\Contracts\Container\Container;
-=======
->>>>>>> 876df26 (.)
 
 use function Safe\realpath;
 
@@ -72,7 +69,6 @@ abstract class XotBaseServiceProvider extends ServiceProvider
             throw new \Exception('name is empty on ['.static::class.']');
         }
 
-<<<<<<< HEAD
         $this->callAfterResolving(BladeIconsFactory::class, function (BladeIconsFactory $factory) {
             $assetsPath = app(GetModulePathByGeneratorAction::class)->execute($this->name, 'assets');
             $svgPath=$assetsPath.'/../svg';
@@ -80,8 +76,6 @@ abstract class XotBaseServiceProvider extends ServiceProvider
         });
         //$svgPath = app(GetModulePathByGeneratorAction::class)->execute($this->name, 'svg');
         /*
-=======
->>>>>>> 876df26 (.)
         Assert::string($relativePath = config('modules.paths.generator.assets.path'));
 
         try {
@@ -103,10 +97,7 @@ abstract class XotBaseServiceProvider extends ServiceProvider
 
         Config::set('blade-icons.sets.'.$this->nameLower.'.path', $svgPath);
         Config::set('blade-icons.sets.'.$this->nameLower.'.prefix', $this->nameLower);
-<<<<<<< HEAD
         */
-=======
->>>>>>> 876df26 (.)
     }
 
     /**
@@ -181,12 +172,9 @@ abstract class XotBaseServiceProvider extends ServiceProvider
 
     public function registerBladeComponents(): void
     {
-<<<<<<< HEAD
         $componentViewPath = app(GetModulePathByGeneratorAction::class)->execute($this->name, 'component-view');
         Blade::anonymousComponentPath($componentViewPath);
 
-=======
->>>>>>> 876df26 (.)
         $componentClassPath = app(GetModulePathByGeneratorAction::class)->execute($this->name, 'component-class');
 
         $namespace = $this->module_ns.'\View\Components';
