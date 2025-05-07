@@ -1,10 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-### Versione HEAD
-
->>>>>>> 355a587 (.)
 # Convenzioni dei Namespace nel Modulo Xot
 
 ## Panoramica
@@ -8639,47 +8632,6 @@ namespace Xot\Models;
 
 
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-
-
-=======
-=======
-
->>>>>>> aurmich/dev
->>>>>>> origin/dev
->>>>>>> 3268b83 (.)
-=======
-
-### Versione Alternativa
-
-
-### Versione HEAD
-
-
-### Versione Alternativa
-
-
-
-
-### Versione Alternativa
-
-
-### Versione Alternativa
-
-
-
----
-
-
----
-
-
----
-
->>>>>>> 355a587 (.)
 # Convenzioni per i Namespace nei Moduli Laraxot
 
 Questo documento definisce le convenzioni per i namespace nei moduli del framework Laraxot PTVX, un aspetto fondamentale per garantire la compatibilità con PHPStan livello 9 e la coerenza del codice.
@@ -8716,55 +8668,15 @@ Un errore particolarmente frequente riguarda le Actions. La convenzione corretta
 
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 
 
-=======
-<<<<<<< HEAD
-=======
-
-### Versione HEAD
-
-
-
-
-
-### Versione Alternativa
-
-
-### Versione HEAD
-
-
-
-
-
- e06b7b401b19a629db99ac2a1abdc82075a443cf
-
-### Versione Alternativa
-
-
----
-
-
----
->>>>>>> 355a587 (.)
-
-
-
-
- e06b7b401b19a629db99ac2a1abdc82075a443cf
-=======
->>>>>>> origin/dev
->>>>>>> 3268b83 (.)
 - ❌ **ERRATO**: `namespace Modules\Xot\Actions;`
 
 
 - ❌ **ERRATO**: `namespace Modules\Xot\Actions;`
 
 - ❌ **ERRATO**: `namespace Modules\Xot\app\Actions;`
-<<<<<<< HEAD
 - ❌ **ERRATO**: `namespace Modules\Xot\Actions;`
 
 
@@ -8776,120 +8688,6 @@ Un errore particolarmente frequente riguarda le Actions. La convenzione corretta
 - ❌ **ERRATO**: `namespace Modules\Xot\app\Actions;`
  bb08ed4 (.)
 - ❌ **ERRATO**: `namespace Modules\Xot\app\Actions;`
-- ❌ **ERRATO**: `namespace Modules\Xot\app\Actions;`
-=======
-
-### Versione HEAD
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
- e06b7b401b19a629db99ac2a1abdc82075a443cf
-
-- ❌ **ERRATO**: `namespace Modules\Xot\app\Actions;`
-
-- ❌ **ERRATO**: `namespace Modules\Xot\Actions;`
-
-
-
-
-
- e06b7b401b19a629db99ac2a1abdc82075a443cf
-
-=======
-=======
-
-- ❌ **ERRATO**: `namespace Modules\Xot\Actions;`
-=======
-=======
-- ❌ **ERRATO**: `namespace Modules\Xot\Actions;`
-
->>>>>>> 355a587 (.)
-
-- ❌ **ERRATO**: `namespace Modules\Xot\Actions;`
-
-
-- ❌ **ERRATO**: `namespace Modules\Xot\Actions;`
-
-- ❌ **ERRATO**: `namespace Modules\Xot\app\Actions;`
- bb08ed4 (.)
-- ❌ **ERRATO**: `namespace Modules\Xot\app\Actions;`
-- ❌ **ERRATO**: `namespace Modules\Xot\app\Actions;`
-
-### Versione Alternativa
-
-
-
-
-### Versione HEAD
-
-
-
- e06b7b401b19a629db99ac2a1abdc82075a443cf
-
-- ❌ **ERRATO**: `namespace Modules\Xot\app\Actions;`
-
-- ❌ **ERRATO**: `namespace Modules\Xot\Actions;`
-
-
-
-
-
- e06b7b401b19a629db99ac2a1abdc82075a443cf
-
-
-### Versione Alternativa
-
-
-### Versione Alternativa
-
-
-- ❌ **ERRATO**: `namespace Modules\Xot\Actions;`
-
-### Versione Alternativa
-
-
-- ❌ **ERRATO**: `namespace Modules\Xot\Actions;`
-
-### Versione Alternativa
-
-- ❌ **ERRATO**: `namespace Modules\Xot\app\Actions;`
-
----
-
-
----
-
-
----
-
-
-### Versione Alternativa
-
-
-
-- ❌ **ERRATO**: `namespace Modules\Xot\Actions;`
-origin/dev
-
----
-
-aurmich/dev
-<<<<<<< HEAD
->>>>>>> aurmich/dev
->>>>>>> origin/dev
->>>>>>> 3268b83 (.)
-=======
-
----
-
-
----
-
-
----
-
->>>>>>> 355a587 (.)
 
 Anche se il file si trova nel percorso fisico `Modules/Xot/app/Actions/`, il namespace non deve mai includere il segmento `app`.
 
@@ -8898,55 +8696,15 @@ Questo errore causa spesso problemi di PHPStan come:
 
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 
 
-=======
-<<<<<<< HEAD
-=======
-
-### Versione HEAD
-
-
-
-
-
-### Versione Alternativa
-
-
-### Versione HEAD
-
-
-
-
-
- e06b7b401b19a629db99ac2a1abdc82075a443cf
-
-### Versione Alternativa
-
-
----
-
-
----
->>>>>>> 355a587 (.)
-
-
-
-
- e06b7b401b19a629db99ac2a1abdc82075a443cf
-=======
->>>>>>> origin/dev
->>>>>>> 3268b83 (.)
 Class 'Modules\Xot\Actions\MyAction' not found.
 
 
 Class 'Modules\Xot\Actions\MyAction' not found.
 
 Class 'Modules\Xot\app\Actions\MyAction' not found.
-<<<<<<< HEAD
 Class 'Modules\Xot\Actions\MyAction' not found.
 
 
@@ -8958,120 +8716,6 @@ Class 'Modules\Xot\Actions\MyAction' not found.
 Class 'Modules\Xot\app\Actions\MyAction' not found.
  bb08ed4 (.)
 Class 'Modules\Xot\app\Actions\MyAction' not found.
-Class 'Modules\Xot\app\Actions\MyAction' not found.
-=======
-
-### Versione HEAD
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
- e06b7b401b19a629db99ac2a1abdc82075a443cf
-
-Class 'Modules\Xot\app\Actions\MyAction' not found.
-
-Class 'Modules\Xot\Actions\MyAction' not found.
-
-
-
-
-
- e06b7b401b19a629db99ac2a1abdc82075a443cf
-
-=======
-=======
-
-Class 'Modules\Xot\Actions\MyAction' not found.
-=======
-=======
-Class 'Modules\Xot\Actions\MyAction' not found.
-
->>>>>>> 355a587 (.)
-
-Class 'Modules\Xot\Actions\MyAction' not found.
-
-
-Class 'Modules\Xot\Actions\MyAction' not found.
-
-Class 'Modules\Xot\app\Actions\MyAction' not found.
- bb08ed4 (.)
-Class 'Modules\Xot\app\Actions\MyAction' not found.
-Class 'Modules\Xot\app\Actions\MyAction' not found.
-
-### Versione Alternativa
-
-
-
-
-### Versione HEAD
-
-
-
- e06b7b401b19a629db99ac2a1abdc82075a443cf
-
-Class 'Modules\Xot\app\Actions\MyAction' not found.
-
-Class 'Modules\Xot\Actions\MyAction' not found.
-
-
-
-
-
- e06b7b401b19a629db99ac2a1abdc82075a443cf
-
-
-### Versione Alternativa
-
-
-### Versione Alternativa
-
-
-Class 'Modules\Xot\Actions\MyAction' not found.
-
-### Versione Alternativa
-
-
-Class 'Modules\Xot\Actions\MyAction' not found.
-
-### Versione Alternativa
-
-Class 'Modules\Xot\app\Actions\MyAction' not found.
-
----
-
-
----
-
-
----
-
-
-### Versione Alternativa
-
-
-
-Class 'Modules\Xot\Actions\MyAction' not found.
-origin/dev
-
----
-
-aurmich/dev
-<<<<<<< HEAD
->>>>>>> aurmich/dev
->>>>>>> origin/dev
->>>>>>> 3268b83 (.)
-=======
-
----
-
-
----
-
-
----
-
->>>>>>> 355a587 (.)
 ```
 
 La correzione è sempre la stessa: rimuovere il segmento `app` dal namespace.
@@ -9128,13 +8772,6 @@ class RatingData extends Data
 {
     // Implementazione
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-### Versione HEAD
-
->>>>>>> 355a587 (.)
 
 
 
@@ -9145,46 +8782,6 @@ class RatingData extends Data
 # Convenzioni Namespace in <nome progetto>
 
 Questo documento descrive le convenzioni di namespace adottate nel progetto <nome progetto>, con particolare attenzione alla struttura modulare basata su Laravel.
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
-
-=======
->>>>>>> aurmich/dev
->>>>>>> aurmich/dev
-=======
-
-### Versione Alternativa
-
-
-### Versione HEAD
-
-
-### Versione Alternativa
-
-
-### Versione Alternativa
-
-
-
-### Versione Alternativa
-
-
----
-
-
----
-
->>>>>>> 355a587 (.)
-# Convenzioni Namespace in SaluteOra
-
-Questo documento descrive le convenzioni di namespace adottate nel progetto SaluteOra, con particolare attenzione alla struttura modulare basata su Laravel.
->>>>>>> 3268b83 (.)
-
----
-
 
 ## Struttura Base
 
@@ -9265,67 +8862,16 @@ I controllers API dovrebbero essere in:
 ```
 Modules\{ModuleName}\Http\Controllers\Api\{ControllerName}
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-### Versione HEAD
-
->>>>>>> 355a587 (.)
 
 
 
  aurmich/dev
  aurmich/dev
  aurmich/dev
-<<<<<<< HEAD
-=======
-=======
-
-=======
->>>>>>> aurmich/dev
->>>>>>> aurmich/dev
->>>>>>> aurmich/dev
->>>>>>> origin/dev
->>>>>>> 3268b83 (.)
-=======
-
-### Versione Alternativa
-
-
-### Versione Alternativa
-
-
-
-### Versione Alternativa
-
-
----
-
-
----
-
-
----
-
-
----
-
-
----
-
->>>>>>> 355a587 (.)
 ```
 
 ### Actions
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-### Versione HEAD
-
->>>>>>> 355a587 (.)
 
 
 
@@ -9334,47 +8880,6 @@ Modules\{ModuleName}\Http\Controllers\Api\{ControllerName}
 
 
  aurmich/dev
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-
-
-=======
-=======
-
->>>>>>> aurmich/dev
->>>>>>> origin/dev
->>>>>>> 3268b83 (.)
-=======
-
-### Versione Alternativa
-
-
-### Versione HEAD
-
-
-### Versione Alternativa
-
-
-
-
-### Versione Alternativa
-
-
-### Versione Alternativa
-
-
-
----
-
-
----
-
-
----
-
->>>>>>> 355a587 (.)
 ```php
 <?php
 
@@ -9409,13 +8914,6 @@ class RatingCommand extends Command
     
     // Implementazione
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-### Versione HEAD
-
->>>>>>> 355a587 (.)
 
 
 
@@ -9423,43 +8921,6 @@ class RatingCommand extends Command
 
  aurmich/dev
  aurmich/dev
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
-
-=======
->>>>>>> aurmich/dev
->>>>>>> aurmich/dev
->>>>>>> 3268b83 (.)
-=======
-
-### Versione Alternativa
-
-
-### Versione HEAD
-
-
-### Versione Alternativa
-
-
-### Versione Alternativa
-
-
-
-### Versione Alternativa
-
-
----
-
-
----
-
-
----
-
->>>>>>> 355a587 (.)
 ```
 Modules\{ModuleName}\Actions\{Subtype?}\{ActionName}
 ```
@@ -9483,67 +8944,16 @@ Modules\{ModuleName}\Filament\Resources\{ResourceName}Resource\RelationManagers\
 ```
 Modules\{ModuleName}\Listeners\{ListenerName}
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-### Versione HEAD
-
->>>>>>> 355a587 (.)
 
 
 
  aurmich/dev
  aurmich/dev
  aurmich/dev
-<<<<<<< HEAD
-=======
-=======
-
-=======
->>>>>>> aurmich/dev
->>>>>>> aurmich/dev
->>>>>>> aurmich/dev
->>>>>>> origin/dev
->>>>>>> 3268b83 (.)
-=======
-
-### Versione Alternativa
-
-
-### Versione Alternativa
-
-
-
-### Versione Alternativa
-
-
----
-
-
----
-
-
----
-
-
----
-
-
----
-
->>>>>>> 355a587 (.)
 ```
 
 ### Service Providers
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-### Versione HEAD
-
->>>>>>> 355a587 (.)
 
 
 
@@ -9552,47 +8962,6 @@ Modules\{ModuleName}\Listeners\{ListenerName}
 
 
  aurmich/dev
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-
-
-=======
-=======
-
->>>>>>> aurmich/dev
->>>>>>> origin/dev
->>>>>>> 3268b83 (.)
-=======
-
-### Versione Alternativa
-
-
-### Versione HEAD
-
-
-### Versione Alternativa
-
-
-
-
-### Versione Alternativa
-
-
-### Versione Alternativa
-
-
-
----
-
-
----
-
-
----
-
->>>>>>> 355a587 (.)
 ```php
 <?php
 
@@ -9678,13 +9047,6 @@ use Modules\Rating\Models\Rating as RatingModel;
 ## Namespace in composer.json
 
 Quando si definisce l'autoloading in `composer.json`, assicurarsi che la mappatura rifletta questa convenzione:
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-### Versione HEAD
-
->>>>>>> 355a587 (.)
 
 
 
@@ -9692,43 +9054,6 @@ Quando si definisce l'autoloading in `composer.json`, assicurarsi che la mappatu
 
  aurmich/dev
  aurmich/dev
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
-
-=======
->>>>>>> aurmich/dev
->>>>>>> aurmich/dev
->>>>>>> 3268b83 (.)
-=======
-
-### Versione Alternativa
-
-
-### Versione HEAD
-
-
-### Versione Alternativa
-
-
-### Versione Alternativa
-
-
-
-### Versione Alternativa
-
-
----
-
-
----
-
-
----
-
->>>>>>> 355a587 (.)
 ```
 Modules\{ModuleName}\Providers\{ServiceName}ServiceProvider
 ```
@@ -9737,62 +9062,16 @@ Modules\{ModuleName}\Providers\{ServiceName}ServiceProvider
 
 La configurazione dell'autoloading in `composer.json` deve riflettere questa struttura di namespace:
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-### Versione HEAD
-
->>>>>>> 355a587 (.)
 
 
 
  aurmich/dev
  aurmich/dev
  aurmich/dev
-<<<<<<< HEAD
-=======
-=======
-
-=======
->>>>>>> aurmich/dev
->>>>>>> aurmich/dev
->>>>>>> aurmich/dev
->>>>>>> origin/dev
->>>>>>> 3268b83 (.)
-=======
-
-### Versione Alternativa
-
-
-### Versione Alternativa
-
-
-
-### Versione Alternativa
-
-
----
-
-
----
-
-
----
-
-
----
-
-
----
-
->>>>>>> 355a587 (.)
 
 ```json
 "autoload": {
     "psr-4": {
-<<<<<<< HEAD
-<<<<<<< HEAD
 
         "Modules\\Rating\\": "Modules/Rating/app/"
 
@@ -9813,113 +9092,10 @@ La configurazione dell'autoloading in `composer.json` deve riflettere questa str
 
  aurmich/dev
  aurmich/dev
-=======
-<<<<<<< HEAD
-        "Modules\\Rating\\": "Modules/Rating/app/"
-=======
-
-
-=======
-        "App\\": "app/",
-        "Modules\\": "Modules/"
-=======
-
->>>>>>> aurmich/dev
-=======
-
-### Versione HEAD
-
-
->>>>>>> 355a587 (.)
-        "Modules\\Rating\\": "Modules/Rating/app/"
-
-
-
-
-        "App\\": "app/",
-        "Modules\\": "Modules/"
-<<<<<<< HEAD
->>>>>>> aurmich/dev
-
-=======
->>>>>>> aurmich/dev
->>>>>>> aurmich/dev
->>>>>>> origin/dev
->>>>>>> 3268b83 (.)
-=======
-
-
- aurmich/dev
-        "Modules\\Rating\\": "Modules/Rating/app/"
-
-        "App\\": "app/",
-        "Modules\\": "Modules/"
- aurmich/dev
-
-
- aurmich/dev
- aurmich/dev
-
-### Versione Alternativa
-
-
-### Versione HEAD
-
-        "Modules\\Rating\\": "Modules/Rating/app/"
-
-### Versione Alternativa
-
-
-
-
-### Versione Alternativa
-
-        "App\\": "app/",
-        "Modules\\": "Modules/"
-
-### Versione Alternativa
-
-
-
----
-
-        "Modules\\Rating\\": "Modules/Rating/app/"
-
-### Versione Alternativa
-
-        "App\\": "app/",
-        "Modules\\": "Modules/"
-
----
-
-
-
-### Versione Alternativa
-
-
----
-
-
----
-
-
----
-
-
----
-
->>>>>>> 355a587 (.)
     }
 }
 ```
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-### Versione HEAD
-
->>>>>>> 355a587 (.)
 
 
 
@@ -9928,47 +9104,6 @@ La configurazione dell'autoloading in `composer.json` deve riflettere questa str
 
 
  aurmich/dev
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-
-
-=======
-=======
-
->>>>>>> aurmich/dev
->>>>>>> origin/dev
->>>>>>> 3268b83 (.)
-=======
-
-### Versione Alternativa
-
-
-### Versione HEAD
-
-
-### Versione Alternativa
-
-
-
-
-### Versione Alternativa
-
-
-### Versione Alternativa
-
-
-
----
-
-
----
-
-
----
-
->>>>>>> 355a587 (.)
 ## Risoluzione dei Problemi PHPStan con i Namespace
 
 I problemi PHPStan relativi ai namespace possono essere identificati da messaggi come:
@@ -10011,8 +9146,6 @@ namespace Modules\Rating\Console\Commands;
 4. **Riflettività**: Il namespace riflette la struttura logica del modulo, non la sua struttura fisica
 5. **Standard Laravel**: Allineato alle convenzioni di Laravel
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 Seguire queste convenzioni di namespace aiuterà a mantenere un codebase coerente e a evitare errori comuni durante l'analisi statica del codice con PHPStan. 
 
@@ -10028,78 +9161,6 @@ aurmich/dev
 
  aurmich/dev
  aurmich/dev
-=======
-<<<<<<< HEAD
-Seguire queste convenzioni di namespace aiuterà a mantenere un codebase coerente e a evitare errori comuni durante l'analisi statica del codice con PHPStan. 
-=======
-
-=======
-
-### Versione HEAD
-
-
->>>>>>> 355a587 (.)
-Seguire queste convenzioni di namespace aiuterà a mantenere un codebase coerente e a evitare errori comuni durante l'analisi statica del codice con PHPStan. 
-
-
-Seguire queste convenzioni di namespace aiuterà a mantenere un codebase coerente e a evitare errori comuni durante l'analisi statica del codice con PHPStan. 
-
-
-Seguire queste convenzioni di namespace aiuterà a mantenere un codebase coerente e a evitare errori comuni durante l'analisi statica del codice con PHPStan. 
-aurmich/dev
-<<<<<<< HEAD
->>>>>>> aurmich/dev
-=======
-
-=======
->>>>>>> aurmich/dev
->>>>>>> aurmich/dev
->>>>>>> 3268b83 (.)
-=======
- aurmich/dev
-
-
-
- aurmich/dev
- aurmich/dev
-
-### Versione Alternativa
-
-
-### Versione HEAD
-
-Seguire queste convenzioni di namespace aiuterà a mantenere un codebase coerente e a evitare errori comuni durante l'analisi statica del codice con PHPStan. 
-
-### Versione Alternativa
-
-
-Seguire queste convenzioni di namespace aiuterà a mantenere un codebase coerente e a evitare errori comuni durante l'analisi statica del codice con PHPStan. 
-
-### Versione Alternativa
-
-
-Seguire queste convenzioni di namespace aiuterà a mantenere un codebase coerente e a evitare errori comuni durante l'analisi statica del codice con PHPStan. 
-aurmich/dev
-
----
-
-
-### Versione Alternativa
-
-
-
-### Versione Alternativa
-
-
----
-
-
----
-
-
----
-
->>>>>>> 355a587 (.)
 ## Casi Speciali
 
 ### Traits
@@ -10175,13 +9236,6 @@ php scripts/check-namespaces.php
 - [Laravel Namespacing Conventions](https://laravel.com/docs/master/structure)
 - [Nwidart/Laravel-Modules Documentation](https://nwidart.com/laravel-modules/v6/introduction)
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-### Versione HEAD
-
->>>>>>> 355a587 (.)
 
 
 
@@ -10189,40 +9243,3 @@ php scripts/check-namespaces.php
  aurmich/dev
  aurmich/dev
 Seguire queste convenzioni di namespace aiuterà a mantenere un codebase coerente e a evitare errori comuni durante l'analisi statica del codice con PHPStan. 
-<<<<<<< HEAD
-=======
-=======
-
-=======
->>>>>>> aurmich/dev
->>>>>>> aurmich/dev
->>>>>>> aurmich/dev
->>>>>>> origin/dev
->>>>>>> 3268b83 (.)
-=======
-
-### Versione Alternativa
-
-
-### Versione Alternativa
-
-
-
-### Versione Alternativa
-
-
----
-
-
----
-
-
----
-
-
----
-
-
----
-
->>>>>>> 355a587 (.)

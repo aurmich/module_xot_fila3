@@ -35,13 +35,6 @@ ${cat /mnt/f/var/www/quaeris/laravel/Modules/Xot/_docs/type_hinting.txt}
 ```txt
 ${cat /mnt/f/var/www/quaeris/laravel/Modules/Xot/_docs/scope.txt}
 ```
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-### Versione HEAD
-
->>>>>>> 355a587 (.)
 ### Versione HEAD
 
 
@@ -54,14 +47,3 @@ ${cat /mnt/f/var/www/quaeris/laravel/Modules/Xot/_docs/scope.txt}
 
 ---
 
-<<<<<<< HEAD
-=======
->>>>>>> 3268b83 (.)
-=======
-
-### Versione Alternativa
-
-
----
-
->>>>>>> 355a587 (.)

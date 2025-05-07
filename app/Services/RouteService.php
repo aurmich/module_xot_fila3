@@ -55,10 +55,17 @@ class RouteService
         $act = 'show';
         $row = (object) [];
         extract($params);
-
+        /*
+        $mutator = $act.'_url';
+        try {
+            $route = $row->$mutator;
+        } catch (\Exception $e) {
+            $route = '#';
+        }
+        */
         $route_action = (string) Route::currentRouteAction();
         Str::snake(Str::after($route_action, '@'));
-        
+        // Cannot call method getName() on mixed.
         $routename = ''; // Request::route()->getName();
         $old_act_route = last(explode('.', $routename));
         if (! \is_string($old_act_route)) {
@@ -73,6 +80,13 @@ class RouteService
             $routename = $route_current->getName();
         }
 
+        /*
+        try {
+            $route_params = optional(\Route::current())->parameters();
+        } catch (\Exception $e) {
+            $route_params = [];
+        }
+        */
         if (Route::has($routename_act)) {
             $parz = array_merge($route_params, [$row]);
             $parz = array_merge($parz, $query);
@@ -83,6 +97,8 @@ class RouteService
         return '#'.$routename_act;
     }
 
+    // se n=0 => 'container0'
+    // se n=1 => 'containers.container1'
     /**
      * @param array<string,string> $params
      */
@@ -93,7 +109,7 @@ class RouteService
         $act = 'show';
         extract($params);
         $tmp = [];
-        
+        // dddx(inAdmin());
         if (inAdmin($params)) {
             $tmp[] = 'admin';
         }
@@ -107,111 +123,229 @@ class RouteService
         return implode('.', $tmp);
     }
 
+    /*
+    public static function urlRelatedPanel(array $params){
+        $act = 'show';
+        extract($params);
+        if (! isset($panel)) {
+            dddx(['err' => 'panel is missing']);
+
+            return;
+        }
+        if (! isset($related_name)) {
+            dddx(['err' => 'related_name is missing']);
+
+            return;
+        }
+        $parents = collect([]);
+        $panel_curr = $panel;
+
+        while (null != $panel_curr->getParent()) {
+            $parents->prepend($panel_curr->getParent());
+            $panel_curr = $panel_curr->getParent();
+        }
+        $container_root = $panel->getRow();
+        if ($parents->count() > 0) {
+
+            //$tmp='['.$parents->count().']';
+            //foreach($parents as $parent){
+            //    $tmp.=$parent->getRow()->post_type.'-';
+            //}
+            //return $tmp;
+
+            $container_root = $parents->first()?->row;
+        }
+
+        //$containers_class = self::getContainersClass();
+        //$n = collect($containers_class)->search(get_class($container_root));
+        //if (null === $n) {
+        //    $n = 0;
+        //}
+
+        $n = 0;
+
+        $route_name = self::getRoutenameN(['n' => $n + 1 + $parents->count(), 'act' => $act]);
+        $route_current = \Route::current();
+        $route_params = is_object($route_current) ? $route_current->parameters() : [];
+
+        $i = 0;
+        foreach ($parents as $parent) {
+            $route_params['container'.($n + $i)] = $parent->postType();
+            $route_params['item'.($n + $i)] = $parent->guid();
+            ++$i;
+        }
+        $route_params['container'.($n + $i)] = $panel->postType();
+        $route_params['item'.($n + $i)] = $panel->guid();
+        ++$i;
+        $route_params['container'.($n + $i)] = $related_name;
+
+        $route_params['page'] = 1;
+        $route_params['_act'] = '';
+        unset($route_params['_act']);
+        try {
+            $url = str_replace(url(''), '', route($route_name, $route_params));
+        } catch (\Exception $e) {
+            if (request()->input('debug', false)) {
+                dd([
+                    'route_name' => $route_name,
+                    'route_params' => $route_params,
+                    'line' => __LINE__,
+                    'file' => __FILE__,
+                    'e' => $e->getMessage(),
+                ]);
+            }
+
+            return '#['.__LINE__.']['.class_basename($this).']';
+        }
+
+        return $url;
+    }
+    */
     /**
      * @param array<string,string> $params
      */
     public static function urlLang(array $params = []): string
     {
+        extract($params);
+
         return '?';
+        /*
+        return '?'.$lang; //da fixare dopo
+        //$row=$this->row;
+        //$row->lang=$lang;
+        //return '/wip'.$this->url();
+        $route_name = \Route::currentRouteName();
+        $route_params = optional(\Route::current())->parameters();
+        $route_params['lang'] = $lang;
+        [$containers, $items] = params2ContainerItem($route_params);
+        $n_items = count($items);
+        //dddx($n_items);//1
+        //dddx($route_name); containers.show
+        for ($i = 0; $i < $n_items; ++$i) {
+            $v = $items[$i];
+            if (method_exists($v, 'postLang')) {
+                $tmp = $v->postLang($lang)->first();
+                if (is_object($tmp)) {
+                    $guid = $tmp->guid;
+                } else {
+                    $guid = '#';
+                    //dddx(app()->getLocale());
+                    $v_post = $v->post;
+                    if (null == $v_post) {
+                        break;
+                    }
+                    $new_post = $v_post->replicate();
+                    $fields = ['title', 'subtitle', 'txt', 'meta_description', 'meta_keywords'];
+                    foreach ($fields as $field) {
+                        $trans = ImportService::trans(['q' => $new_post->$field, 'from' => app()->getLocale(), 'to' => $lang]);
+
+                        //dddx([
+                        //    'from'=>app()->getLocale(),
+                        //    'to'=>$lang,
+                        //    'trans'=>$trans,
+
+                        //]);
+
+                        $new_post->$field = $trans;
+                    }
+                    $new_post->lang = $lang;
+                    $new_post->save();
+                    $guid = $new_post->guid;
+                }
+            } else {
+                $route_key_name = $v->getRouteKeyName();
+                $guid = $v->$route_key_name;
+            }
+
+            $route_params['item'.$i] = $guid;
+            //dddx($route_params['item'.$i]->guidLang);
+        }
+        //dddx($route_params);
+        //return '/wip['.__LINE__.']['.class_basename($this).']';
+        try {
+            return route($route_name, $route_params);
+        } catch (\Exception $e) {
+            return url($lang);
+        }
+        */
     }
 
+    /**
+     * Function getAct.
+     *
+     * @throws \Exception
+     */
     public static function getAct(): string
     {
-        $route_current = Route::current();
-        if (null === $route_current) {
-            return 'show';
-        }
-        $routename = $route_current->getName();
-        if (null === $routename) {
-            return 'show';
+        $route_action = Route::currentRouteAction();
+        if (null === $route_action) {
+            throw new \Exception('$route_action is null');
         }
 
-        return (string) last(explode('.', $routename));
+        $act = Str::after($route_action, '@');
+
+        // --- i prossimi 2 if son per i controller con metodo invoke
+        if (Str::contains($act, '\\')) {
+            $act = Str::afterLast($act, '\\');
+        }
+
+        if (Str::endsWith($act, 'Controller')) {
+            $act = Str::before($act, 'Controller');
+        }
+
+        return Str::snake($act);
     }
 
+    /**
+     * Function.
+     *
+     * @throws \Exception
+     */
     public static function getModuleName(): string
     {
-        $route_current = Route::current();
-        if (null === $route_current) {
-            return '';
-        }
-        $route_action = $route_current->getActionName();
-        if (! \is_string($route_action)) {
-            throw new \Exception('['.__LINE__.']['.class_basename(self::class).']');
-        }
-        $arr = explode('\\', $route_action);
-        if (! isset($arr[1])) {
-            return '';
+        $route_action = Route::currentRouteAction();
+        if (null === $route_action) {
+            throw new \Exception('$route_action is null');
         }
 
-        return $arr[1];
+        return Str::between($route_action, 'Modules\\', '\Http');
     }
 
+    /**
+     * Function.
+     *
+     * @throws \Exception
+     */
     public static function getControllerName(): string
     {
-        $route_current = Route::current();
-        if (null === $route_current) {
-            return '';
+        $route_action = Route::currentRouteAction();
+        if (null === $route_action) {
+            throw new \Exception('$route_action is null');
         }
 
-        return class_basename($route_current->getController());
+        return Str::between($route_action, 'Http\Controllers\\', 'Controller');
     }
 
     public static function getView(): string
     {
-        $route_current = Route::current();
-        if (null === $route_current) {
-            return '';
-        }
-        $routename = $route_current->getName();
-        if (null === $routename) {
-            return '';
-        }
-        $act = last(explode('.', $routename));
-        if (! \is_string($act)) {
-            throw new \Exception('['.__LINE__.']['.class_basename(self::class).']');
-        }
-        $module_name = self::getModuleName();
-        $controller_name = self::getControllerName();
-        $controller_name = Str::before($controller_name, 'Controller');
-        $controller_name = Str::snake($controller_name);
+        $controllerName = self::getControllerName();
+        $tmp_arr = explode('\\', $controllerName);
 
-        return strtolower($module_name).'::'.$controller_name.'.'.$act;
+        $params = getRouteParameters();
+        [$containers, $items] = params2ContainerItem($params);
+
+        $params['containers'] = implode('.', $containers);
+
+        return collect($tmp_arr)
+            ->filter(
+                static fn ($item): bool => ! \in_array($item, ['Module', 'Item'], false)
+            )
+            ->map(
+                static function ($item) use ($params) {
+                    $item = Str::snake($item);
+
+                    return $params[$item] ?? $item;
+                }
+            )->implode('.');
     }
-
-    public static function getRouteParams(): array
-    {
-        $route_current = Route::current();
-        if (null === $route_current) {
-            return [];
-        }
-
-        return $route_current->parameters();
-    }
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-    /**
-     * Recupera i parametri della route corrente.
-     *
-     * @return array<string, mixed>
-     */
-    public static function getRouteParams(): array
-    {
-        $route = Route::current();
-        if (null === $route) {
-            return [];
-        }
-
-        return [
-            'name' => $route->getName(),
-            'action' => $route->getActionName(),
-            'parameters' => $route->parameters(),
-            'uri' => $route->uri(),
-        ];
-    }
-=======
->>>>>>> origin/dev
->>>>>>> 3268b83 (.)
 }

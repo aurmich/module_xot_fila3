@@ -39,28 +39,11 @@ interface ModelContract
 1. Utilizzo di strict types
 2. Documentazione PHPDoc completa
 3. Supporto per PHPStan livello 9
-<<<<<<< HEAD
-<<<<<<< HEAD
 4. Conforme alle convenzioni Laraxot/<nome progetto>
-=======
-4. Conforme alle convenzioni Laraxot/PTVX
->>>>>>> 3268b83 (.)
-=======
-
-### Versione HEAD
-
-4. Conforme alle convenzioni Laraxot/<nome progetto>
-
-### Versione Alternativa
-
-4. Conforme alle convenzioni Laraxot/PTVX
-
----
-
->>>>>>> 355a587 (.)
 5. Integrazione con Laravel Eloquent
 
 ## Collegamenti
 - [Model Guidelines](../models/README.md)
 - [Database Guidelines](../DATABASE-GUIDELINES.md)
 - [PHPStan Level 9 Guide](../PHPSTAN-LEVEL9-GUIDE.md)
+- [Contracts Overview](./README.md) 

@@ -22,36 +22,12 @@ use Spatie\ModelStatus\Status;
  * @property string|null              $updated_by
  * @property string|null              $title
  * @property PivotContract|null       $pivot
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
- * @property string                   $tennant_name
- * @property UserContract|null        $user
- * @property string                   $status
- * @property Collection|array<Status> $statuses
- * @property int|null                 $statuses_count
- * @property int|null                 $pos
- * @property int|null                 $parent_id
-=======
->>>>>>> 3268b83 (.)
  * @property string $tennant_name
-=======
- * @property string                   $tennant_name
->>>>>>> 355a587 (.)
  * @property UserContract|null        $user
- * @property string                   $status
+ * @property string $status
  * @property Collection|array<Status> $statuses
  * @property int|null                 $statuses_count
  * @property int|null                 $pos
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/dev
->>>>>>> 3268b83 (.)
-=======
- * @property int|null                 $parent_id
->>>>>>> 355a587 (.)
  *
  * @method mixed     getKey()
  * @method string    getRouteKey()
@@ -68,10 +44,6 @@ use Spatie\ModelStatus\Status;
  * @method mixed     save($params)
  * @method array     treeLabel()
  * @method array     treeSons()
-<<<<<<< HEAD
-=======
- * @method int       treeSonsCount()
->>>>>>> 3268b83 (.)
  * @method array     toArray()
  * @method BelongsTo user()
  *
@@ -79,118 +51,4 @@ use Spatie\ModelStatus\Status;
  *
  * @mixin \Eloquent
  */
-<<<<<<< HEAD
-<<<<<<< HEAD
 interface ModelWithPosContract {}
-=======
-<<<<<<< HEAD
-interface ModelWithPosContract extends ModelContract
-{
-    /**
-     * Ottiene la posizione corrente dell'elemento.
-     */
-    public function getPosAttribute(): int;
-
-    /**
-     * Imposta la posizione dell'elemento.
-     */
-    public function setPosAttribute(int $value): void;
-
-    /**
-     * Ottiene il gruppo di ordinamento dell'elemento.
-     */
-    public function getGroupPosAttribute(): ?string;
-
-    /**
-     * Imposta il gruppo di ordinamento dell'elemento.
-     */
-    public function setGroupPosAttribute(?string $value): void;
-
-    /**
-     * Sposta l'elemento una posizione in su.
-     */
-    public function moveUp(): bool;
-
-    /**
-     * Sposta l'elemento una posizione in giù.
-     */
-    public function moveDown(): bool;
-
-    /**
-     * Sposta l'elemento nella posizione specificata.
-     */
-    public function moveToPosition(int $position): bool;
-
-    /**
-     * Resetta la posizione dell'elemento all'ultima posizione disponibile.
-     */
-    public function resetPosition(): void;
-
-    /**
-     * Ottiene la prossima posizione disponibile nel gruppo corrente.
-     */
-    public function getNextPosition(): int;
-
-    /**
-     * Ottiene la posizione massima nel gruppo corrente.
-     */
-    public function getMaxPosition(): int;
-=======
-interface ModelWithPosContract
-{
->>>>>>> origin/dev
-=======
-interface ModelWithPosContract extends ModelContract
-{
-    /**
-     * Ottiene la posizione corrente dell'elemento.
-     */
-    public function getPosAttribute(): int;
-
-    /**
-     * Imposta la posizione dell'elemento.
-     */
-    public function setPosAttribute(int $value): void;
-
-    /**
-     * Ottiene il gruppo di ordinamento dell'elemento.
-     */
-    public function getGroupPosAttribute(): ?string;
-
-    /**
-     * Imposta il gruppo di ordinamento dell'elemento.
-     */
-    public function setGroupPosAttribute(?string $value): void;
-
-    /**
-     * Sposta l'elemento una posizione in su.
-     */
-    public function moveUp(): bool;
-
-    /**
-     * Sposta l'elemento una posizione in giù.
-     */
-    public function moveDown(): bool;
-
-    /**
-     * Sposta l'elemento nella posizione specificata.
-     */
-    public function moveToPosition(int $position): bool;
-
-    /**
-     * Resetta la posizione dell'elemento all'ultima posizione disponibile.
-     */
-    public function resetPosition(): void;
-
-    /**
-     * Ottiene la prossima posizione disponibile nel gruppo corrente.
-     */
-    public function getNextPosition(): int;
-
-    /**
-     * Ottiene la posizione massima nel gruppo corrente.
-     */
-    public function getMaxPosition(): int;
->>>>>>> 355a587 (.)
-}
->>>>>>> 3268b83 (.)

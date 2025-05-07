@@ -10,17 +10,6 @@ use Modules\Xot\Exports\QueryExport;
 use Spatie\QueueableAction\QueueableAction;
 // use Staudenmeir\LaravelCte\Query\Builder as CteBuilder;
 use Symfony\Component\HttpFoundation\BinaryFileResponse;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-use Webmozart\Assert\Assert;
-=======
->>>>>>> origin/dev
->>>>>>> 3268b83 (.)
-=======
-use Webmozart\Assert\Assert;
->>>>>>> 355a587 (.)
 
 class ExportXlsByQuery
 {
@@ -35,19 +24,6 @@ class ExportXlsByQuery
      * @param int|null $limit Limite di righe da esportare
      * 
      * @return BinaryFileResponse
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-     * 
-     * @throws \InvalidArgumentException Se i campi non sono validi
-=======
->>>>>>> origin/dev
->>>>>>> 3268b83 (.)
-=======
-     * 
-     * @throws \InvalidArgumentException Se i campi non sono validi
->>>>>>> 355a587 (.)
      */
     public function execute(
         Builder $query,
@@ -55,34 +31,9 @@ class ExportXlsByQuery
         array $fields = [],
         ?int $limit = null,
     ): BinaryFileResponse {
-<<<<<<< HEAD
-<<<<<<< HEAD
         // Assicuriamo che $fields sia un array di stringhe
         $stringFields = array_map(function ($field) {
             return strval($field);
-=======
-<<<<<<< HEAD
-        Assert::allString($fields, 'I campi devono essere stringhe');
-
-        // Assicuriamo che $fields sia un array di stringhe non vuote
-        $stringFields = array_map(function ($field) {
-            Assert::stringNotEmpty($field, 'I campi non possono essere vuoti');
-            return $field;
-=======
-        // Assicuriamo che $fields sia un array di stringhe
-        $stringFields = array_map(function ($field) {
-
-            return strval($field);
->>>>>>> origin/dev
->>>>>>> 3268b83 (.)
-=======
-        Assert::allString($fields, 'I campi devono essere stringhe');
-
-        // Assicuriamo che $fields sia un array di stringhe non vuote
-        $stringFields = array_map(function ($field): string {
-            Assert::stringNotEmpty($field, 'I campi non possono essere vuoti');
-            return $field;
->>>>>>> 355a587 (.)
         }, array_values($fields));
 
         $export = new QueryExport(
@@ -90,29 +41,9 @@ class ExportXlsByQuery
             transKey: null,
             fields: $stringFields
         );
-<<<<<<< HEAD
-<<<<<<< HEAD
         // Note: QueryExport doesn't accept a limit parameter directly
         // If limit is needed, apply it to the query before passing to the exporter
         if ($limit !== null) {
-=======
-<<<<<<< HEAD
-
-        // Applica il limite alla query se specificato
-        if ($limit !== null) {
-            Assert::positiveInteger($limit, 'Il limite deve essere un numero positivo');
-=======
-        // Note: QueryExport doesn't accept a limit parameter directly
-        // If limit is needed, apply it to the query before passing to the exporter
-        if ($limit !== null) {
->>>>>>> origin/dev
->>>>>>> 3268b83 (.)
-=======
-
-        // Applica il limite alla query se specificato
-        if ($limit !== null) {
-            Assert::positiveInteger($limit, 'Il limite deve essere un numero positivo');
->>>>>>> 355a587 (.)
             $query->limit($limit);
         }
 

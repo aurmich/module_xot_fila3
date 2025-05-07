@@ -56,25 +56,6 @@
         "livewire/volt": "*",
         "tightenco/parental": "*",
         "spatie/laravel-queueable-action": "*"
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-        
-    },
-    "require-comment": {
-       
-=======
-
-
-    },
-    "require-comment": {
-
-
->>>>>>> origin/dev
->>>>>>> 3268b83 (.)
-=======
->>>>>>> 355a587 (.)
     },
     "require-dev": {
         "barryvdh/laravel-debugbar": "^3.14",
@@ -90,21 +71,6 @@
         "spatie/laravel-error-solutions": "*",
         "orchestra/testbench": "*"
     },
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-    "require-dev-comment": {
-<<<<<<< HEAD
-        
-=======
-
-
-
->>>>>>> origin/dev
-    },
->>>>>>> 3268b83 (.)
-=======
->>>>>>> 355a587 (.)
     "repositories": [
         {
             "type": "path",

@@ -20,26 +20,8 @@ source ~/.zshrc
 usefull links:
 - https://zsh-prompt-generator.site/
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-### Versione HEAD
-
->>>>>>> 355a587 (.)
 
 ## Collegamenti tra versioni di zsh.md
 * [zsh.md](../../../Xot/docs/install/zsh.md)
 * [zsh.md](../../../Xot/docs/ubuntu/zsh.md)
 
-<<<<<<< HEAD
-=======
->>>>>>> 3268b83 (.)
-=======
-
-### Versione Alternativa
-
-
----
-
->>>>>>> 355a587 (.)

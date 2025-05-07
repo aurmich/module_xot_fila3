@@ -2,24 +2,7 @@
 
 ## Introduzione
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 Il framework Laraxot <nome progetto> richiede una struttura di directory ben definita per garantire la corretta organizzazione del codice e il funzionamento ottimale del framework. Per facilitare l'adesione a queste convenzioni, è stato sviluppato uno script di correzione automatica che analizza e sistema la struttura delle directory dei moduli.
-=======
-=======
-
-### Versione HEAD
-
-Il framework Laraxot <nome progetto> richiede una struttura di directory ben definita per garantire la corretta organizzazione del codice e il funzionamento ottimale del framework. Per facilitare l'adesione a queste convenzioni, è stato sviluppato uno script di correzione automatica che analizza e sistema la struttura delle directory dei moduli.
-
-### Versione Alternativa
-
->>>>>>> 355a587 (.)
-Il framework Laraxot PTVX richiede una struttura di directory ben definita per garantire la corretta organizzazione del codice e il funzionamento ottimale del framework. Per facilitare l'adesione a queste convenzioni, è stato sviluppato uno script di correzione automatica che analizza e sistema la struttura delle directory dei moduli.
->>>>>>> 3268b83 (.)
-
----
-
 
 Questo documento fornisce una guida dettagliata all'utilizzo e al funzionamento dello script di autofix.
 
@@ -37,25 +20,7 @@ bashscripts/fix_directory_structure.sh
 
 Lo script esegue le seguenti operazioni:
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 1. **Analisi della struttura delle directory**: Identifica i file che non seguono le convenzioni di Laraxot <nome progetto>.
-=======
-1. **Analisi della struttura delle directory**: Identifica i file che non seguono le convenzioni di Laraxot PTVX.
->>>>>>> 3268b83 (.)
-=======
-
-### Versione HEAD
-
-1. **Analisi della struttura delle directory**: Identifica i file che non seguono le convenzioni di Laraxot <nome progetto>.
-
-### Versione Alternativa
-
-1. **Analisi della struttura delle directory**: Identifica i file che non seguono le convenzioni di Laraxot PTVX.
-
----
-
->>>>>>> 355a587 (.)
 2. **Correzione automatica**: Sposta i file nelle posizioni corrette.
 3. **Verifica finale**: Controlla che tutte le correzioni siano state applicate correttamente.
 
@@ -247,22 +212,4 @@ Durante lo sviluppo, è possibile eseguire lo script solo sul modulo in fase di 
 
 ## Conclusione
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 Lo script di correzione automatica della struttura delle directory è uno strumento essenziale per mantenere la coerenza e seguire le convenzioni del framework Laraxot <nome progetto>. Utilizzandolo regolarmente, è possibile garantire che il codice segua sempre la struttura richiesta, facilitando la manutenzione e l'interoperabilità tra i vari moduli. 
-=======
-Lo script di correzione automatica della struttura delle directory è uno strumento essenziale per mantenere la coerenza e seguire le convenzioni del framework Laraxot PTVX. Utilizzandolo regolarmente, è possibile garantire che il codice segua sempre la struttura richiesta, facilitando la manutenzione e l'interoperabilità tra i vari moduli. 
->>>>>>> 3268b83 (.)
-=======
-
-### Versione HEAD
-
-Lo script di correzione automatica della struttura delle directory è uno strumento essenziale per mantenere la coerenza e seguire le convenzioni del framework Laraxot <nome progetto>. Utilizzandolo regolarmente, è possibile garantire che il codice segua sempre la struttura richiesta, facilitando la manutenzione e l'interoperabilità tra i vari moduli. 
-
-### Versione Alternativa
-
-Lo script di correzione automatica della struttura delle directory è uno strumento essenziale per mantenere la coerenza e seguire le convenzioni del framework Laraxot PTVX. Utilizzandolo regolarmente, è possibile garantire che il codice segua sempre la struttura richiesta, facilitando la manutenzione e l'interoperabilità tra i vari moduli. 
-
----
-
->>>>>>> 355a587 (.)

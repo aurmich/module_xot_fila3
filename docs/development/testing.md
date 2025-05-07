@@ -24,13 +24,6 @@ ${cat /mnt/f/var/www/quaeris/laravel/Modules/Xot/_docs/__php-code-analysis-tools
 ${cat /mnt/f/var/www/quaeris/laravel/Modules/Xot/_docs/phpstan.txt}
 ${cat /mnt/f/var/www/quaeris/laravel/Modules/Xot/_docs/phpstan_error.txt}
 ```
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-### Versione HEAD
-
->>>>>>> 355a587 (.)
 ### Versione HEAD
 
 
@@ -46,14 +39,3 @@ ${cat /mnt/f/var/www/quaeris/laravel/Modules/Xot/_docs/phpstan_error.txt}
 
 ---
 
-<<<<<<< HEAD
-=======
->>>>>>> 3268b83 (.)
-=======
-
-### Versione Alternativa
-
-
----
-
->>>>>>> 355a587 (.)

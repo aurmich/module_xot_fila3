@@ -1,21 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 # Layout in il progetto
-=======
-=======
-
-### Versione HEAD
-
-# Layout in il progetto
-
-### Versione Alternativa
-
->>>>>>> 355a587 (.)
-# Layout in SaluteOra
->>>>>>> 3268b83 (.)
-
----
-
 
 I layout sono i template base che definiscono la struttura delle pagine. Ogni tema può definire i propri layout.
 

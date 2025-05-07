@@ -27,24 +27,7 @@ Rector
 Easy Coding Standard (ECS), 
 PHPStan, 
 Psalm.
-<<<<<<< HEAD
-<<<<<<< HEAD
 More on those three later. In addition to them, there are also a lot of other tools. In my personal experience, I only used them sparingly, but some of them are definitely viable.  You're welcome to give them a try.
-=======
-=======
-
-### Versione HEAD
-
-More on those three later. In addition to them, there are also a lot of other tools. In my personal experience, I only used them sparingly, but some of them are definitely viable.  You're welcome to give them a try.
-
-### Versione Alternativa
-
->>>>>>> 355a587 (.)
-More on those three later. In addition to them, there are also a lot of other tools. In my personal experience, I only used them sparingly, but some of them are definitely viable.  You’re welcome to give them a try.
->>>>>>> 3268b83 (.)
-
----
-
 
 PHP Code Style Fixer (PHP CS Fixer)
 You can fix your code according to a chosen standard, including those developed by specific communities such as Symfony.
@@ -65,13 +48,6 @@ SonarQube
 This one has a large community and supports a lot of languages besides PHP.
 
 Deptrac
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-### Versione HEAD
-
->>>>>>> 355a587 (.)
 ### Versione HEAD
 
 
@@ -315,14 +291,3 @@ return [
 ],
 ```
 
-<<<<<<< HEAD
-=======
->>>>>>> 3268b83 (.)
-=======
-
-### Versione Alternativa
-
-
----
-
->>>>>>> 355a587 (.)

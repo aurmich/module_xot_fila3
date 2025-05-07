@@ -16,23 +16,13 @@ use Filament\Support\Concerns\Configurable;
 use Filament\Tables\Columns\Column;
 use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Filters\BaseFilter;
-<<<<<<< HEAD
 use Illuminate\Auth\AuthenticationException;
 use Illuminate\Contracts\Debug\ExceptionHandler;
 use Illuminate\Database\Eloquent\Model;
-=======
-<<<<<<< HEAD
-use Illuminate\Auth\AuthenticationException;
-use Illuminate\Contracts\Debug\ExceptionHandler;
-use Illuminate\Database\Eloquent\Model;
-=======
->>>>>>> origin/dev
->>>>>>> 3268b83 (.)
 use Illuminate\Database\Events\MigrationsEnded;
 use Illuminate\Support\Carbon;
 use Illuminate\Support\Facades\Event;
 use Illuminate\Support\Facades\File;
-<<<<<<< HEAD
 use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\URL;
 use Illuminate\Support\Facades\View;
@@ -41,22 +31,6 @@ use Modules\Xot\Exceptions\Handlers\HandlersRepository;
 use Modules\Xot\Exceptions\Formatters\WebhookErrorFormatter;
 use Modules\Xot\View\Composers\XotComposer;
 use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
-=======
-<<<<<<< HEAD
-use Illuminate\Support\Facades\Log;
-use Illuminate\Support\Facades\URL;
-use Illuminate\Support\Facades\View;
-use Modules\Xot\Exceptions\Formatters\WebhookErrorFormatter;
-use Modules\Xot\Exceptions\Handlers\HandlerDecorator;
-use Modules\Xot\Exceptions\Handlers\HandlersRepository;
-use Modules\Xot\View\Composers\XotComposer;
-use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
-=======
-use Illuminate\Support\Facades\URL;
-use Illuminate\Support\Facades\View;
-use Modules\Xot\View\Composers\XotComposer;
->>>>>>> origin/dev
->>>>>>> 3268b83 (.)
 use Webmozart\Assert\Assert;
 
 use function Safe\realpath;
@@ -78,14 +52,7 @@ class XotServiceProvider extends XotBaseServiceProvider
         $this->redirectSSL();
         $this->registerViewComposers();
         $this->registerEvents();
-<<<<<<< HEAD
         //$this->registerExceptionHandler(); // guardare come fa sentry
-=======
-<<<<<<< HEAD
-        $this->registerExceptionHandler();
-=======
->>>>>>> origin/dev
->>>>>>> 3268b83 (.)
         $this->registerTimezone();
         $this->registerProviders();
     }
@@ -94,16 +61,8 @@ class XotServiceProvider extends XotBaseServiceProvider
     {
         parent::register();
         $this->registerConfig();
-<<<<<<< HEAD
         //$this->registerExceptionHandlersRepository();
         //$this->extendExceptionHandler();
-=======
-<<<<<<< HEAD
-        $this->registerExceptionHandlersRepository();
-        $this->extendExceptionHandler();
-=======
->>>>>>> origin/dev
->>>>>>> 3268b83 (.)
         $this->registerCommands();
     }
 
@@ -128,7 +87,6 @@ class XotServiceProvider extends XotBaseServiceProvider
         TextColumn::configureUsing(fn (TextColumn $column) => $column->timezone($timezone));
     }
 
-<<<<<<< HEAD
     /*
      * @see https://github.com/cerbero90/exception-handler
      --  guardare come fa sentry 
@@ -154,51 +112,6 @@ class XotServiceProvider extends XotBaseServiceProvider
     }
         */
 
-=======
-<<<<<<< HEAD
-    /**
-     * @see https://github.com/cerbero90/exception-handler
-     */
-    public function registerExceptionHandler(): void
-    {
-        $exceptionHandler = $this->app->make(ExceptionHandler::class);
-
-        $exceptionHandler->reporter(
-            static function (\Throwable $e): void {
-                $data = (new WebhookErrorFormatter($e))->format();
-                if ($e instanceof AuthenticationException || $e instanceof NotFoundHttpException) {
-                    return;
-                }
-
-                if (is_string(config('logging.channels.slack_errors.url'))
-                    && mb_strlen(config('logging.channels.slack_errors.url')) > 5) {
-                    Log::channel('slack_errors')
-                        ->error($e->getMessage(), $data);
-                }
-            }
-        );
-
-        // $exceptionHandler->renderer(function ($e, $request) {
-        //    dddx([$e, $request]);
-        // });
-
-        /*
-        ->reporter(function ($e) {
-            // $this->app['log']->debug($e->getMessage());
-
-        });
-
-        // register a custom renderer to redirect the user back and show validation errors
-        $this->app->make(ExceptionHandler::class)->renderer(function ($e, $request) {
-            // return back()->withInput()->withErrors($e->errors());
-
-        });
-        */
-    }
-
-=======
->>>>>>> origin/dev
->>>>>>> 3268b83 (.)
     public function registerConfig(): void
     {
         // $config_file = realpath(__DIR__.'/../config/metatag.php');
@@ -234,35 +147,19 @@ class XotServiceProvider extends XotBaseServiceProvider
         }
     }
 
-<<<<<<< HEAD
     /*
      * Register the custom exception handlers repository.
      -- guardare come fa sentry
-=======
-<<<<<<< HEAD
-    /**
-     * Register the custom exception handlers repository.
-     */
->>>>>>> 3268b83 (.)
     private function registerExceptionHandlersRepository(): void
     {
         $this->app->singleton(HandlersRepository::class, HandlersRepository::class);
     }
-<<<<<<< HEAD
     */
     /*
      * Extend the Laravel default exception handler.
      *
      * @see https://github.com/cerbero90/exception-handler/blob/master/src/Providers/ExceptionHandlerServiceProvider.php
      -- guardare come fa sentry
-=======
-
-    /**
-     * Extend the Laravel default exception handler.
-     *
-     * @see https://github.com/cerbero90/exception-handler/blob/master/src/Providers/ExceptionHandlerServiceProvider.php
-     */
->>>>>>> 3268b83 (.)
     private function extendExceptionHandler(): void
     {
         $this->app->extend(
@@ -272,13 +169,7 @@ class XotServiceProvider extends XotBaseServiceProvider
             }
         );
     }
-<<<<<<< HEAD
     */
-=======
-
-=======
->>>>>>> origin/dev
->>>>>>> 3268b83 (.)
     private function redirectSSL(): void
     {
         // --- meglio ficcare un controllo anche sull'env
@@ -315,14 +206,6 @@ class XotServiceProvider extends XotBaseServiceProvider
     {
         View::composer('*', XotComposer::class);
     }
-<<<<<<< HEAD
 
 
-=======
-<<<<<<< HEAD
-
-
-=======
->>>>>>> origin/dev
->>>>>>> 3268b83 (.)
 } // end class

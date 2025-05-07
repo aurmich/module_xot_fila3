@@ -1,31 +1,8 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-### Versione HEAD
-
->>>>>>> 355a587 (.)
 # Eccezioni alla Regola della Directory app in Laraxot <nome progetto>
 
 ## Panoramica
 
 Mentre la regola principale in Laraxot <nome progetto> richiede che tutto il codice PHP *dell'applicazione* sia posizionato all'interno della sottodirectory `app` del modulo, esistono eccezioni legittime a questa regola che non devono essere spostate.
-<<<<<<< HEAD
-=======
-=======
-
-### Versione Alternativa
-
->>>>>>> 355a587 (.)
-# Eccezioni alla Regola della Directory app in Laraxot PTVX
-
-## Panoramica
-
-Mentre la regola principale in Laraxot PTVX richiede che tutto il codice PHP *dell'applicazione* sia posizionato all'interno della sottodirectory `app` del modulo, esistono eccezioni legittime a questa regola che non devono essere spostate.
->>>>>>> 3268b83 (.)
-
----
-
 
 ## Eccezioni Standard (NON spostare in app/)
 
@@ -75,48 +52,12 @@ I file di localizzazione **devono rimanere nella directory principale**:
 
 ✅ CORRETTO:
 ```
-<<<<<<< HEAD
-<<<<<<< HEAD
 /var/www/html/_bases/base_<nome progetto>_fila3/laravel/Modules/Rating/lang/it/rating.php
-=======
-/var/www/html/_bases/base_ptvx_fila3/laravel/Modules/Rating/lang/it/rating.php
->>>>>>> 3268b83 (.)
-=======
-
-### Versione HEAD
-
-/var/www/html/_bases/base_<nome progetto>_fila3/laravel/Modules/Rating/lang/it/rating.php
-
-### Versione Alternativa
-
-/var/www/html/_bases/base_ptvx_fila3/laravel/Modules/Rating/lang/it/rating.php
-
----
-
->>>>>>> 355a587 (.)
 ```
 
 ❌ ERRATO:
 ```
-<<<<<<< HEAD
-<<<<<<< HEAD
 /var/www/html/_bases/base_<nome progetto>_fila3/laravel/Modules/Rating/app/lang/it/rating.php
-=======
-/var/www/html/_bases/base_ptvx_fila3/laravel/Modules/Rating/app/lang/it/rating.php
->>>>>>> 3268b83 (.)
-=======
-
-### Versione HEAD
-
-/var/www/html/_bases/base_<nome progetto>_fila3/laravel/Modules/Rating/app/lang/it/rating.php
-
-### Versione Alternativa
-
-/var/www/html/_bases/base_ptvx_fila3/laravel/Modules/Rating/app/lang/it/rating.php
-
----
-
->>>>>>> 355a587 (.)
 ```
 
 ## Eccezioni Tecniche (NON spostare in app/)
@@ -170,3 +111,4 @@ Mentre la regola della directory `app` è importante per la coerenza e l'autoloa
 1. **Compatibilità con Laravel**: Il framework si aspetta certi file in posizioni specifiche
 2. **Convenzioni di Modularità**: Alcuni file devono seguire convenzioni specifiche per il loading modulare
 3. **Funzionalità degli Strumenti**: Certi strumenti di sviluppo richiedono file di configurazione in posizioni specifiche
+4. **Separazione delle Responsabilità**: Separare il codice applicativo dai file di supporto migliora la manutenibilità 

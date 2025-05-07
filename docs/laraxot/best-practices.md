@@ -102,13 +102,6 @@ class MyResource extends XotBaseResource
 - Utilizzare Blade components per la riusabilità
 - Implementare la localizzazione per tutti i testi
 - Seguire una struttura modulare
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-### Versione HEAD
-
->>>>>>> 355a587 (.)
 ### Versione HEAD
 
 
@@ -124,14 +117,3 @@ class MyResource extends XotBaseResource
 
 ---
 
-<<<<<<< HEAD
-=======
->>>>>>> 3268b83 (.)
-=======
-
-### Versione Alternativa
-
-
----
-
->>>>>>> 355a587 (.)

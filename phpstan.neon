@@ -1,11 +1,4 @@
 parameters:
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-    excludePaths:
-        - app_old/*
-=======
->>>>>>> 3268b83 (.)
     level: 7
     paths:
         - app
@@ -53,7 +46,3 @@ services:
         class: PHPStan\Rules\Properties\TypesAssignedToPropertiesRule
         tags:
             - phpstan.rules.rule
-<<<<<<< HEAD
-=======
->>>>>>> origin/dev
->>>>>>> 3268b83 (.)

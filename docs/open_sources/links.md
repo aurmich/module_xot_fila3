@@ -24,13 +24,6 @@ https://github.com/jigar-dhulla/exchange-rate
 
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-### Versione HEAD
-
->>>>>>> 355a587 (.)
 ### Versione HEAD
 
 
@@ -52,14 +45,3 @@ https://github.com/jigar-dhulla/exchange-rate
 
 ---
 
-<<<<<<< HEAD
-=======
->>>>>>> 3268b83 (.)
-=======
-
-### Versione Alternativa
-
-
----
-
->>>>>>> 355a587 (.)

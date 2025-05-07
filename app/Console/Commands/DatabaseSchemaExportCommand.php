@@ -4,8 +4,6 @@ declare(strict_types=1);
 
 namespace Modules\Xot\Console\Commands;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 use Doctrine\DBAL\Schema\Column;
 use Doctrine\DBAL\Schema\ForeignKeyConstraint;
 use Doctrine\DBAL\Schema\Index;
@@ -54,70 +52,10 @@ class DatabaseSchemaExportCommand extends Command
         $tables = SchemaFacade::getAllTables();
         foreach ($tables as $table) {
             $this->exportTable($table->name, $module);
-=======
-=======
->>>>>>> 355a587 (.)
-use Illuminate\Console\Command;
-use Illuminate\Support\Facades\DB;
-use Safe\Exceptions\DatetimeException;
-use Safe\Exceptions\JsonException;
-use Safe\Exceptions\PcreException;
-
-class DatabaseSchemaExportCommand extends Command
-{
-    /**
-     * Il nome e la firma del comando console.
-     *
-     * @var string
-     */
-    protected $signature = 'xot:export-database-schema 
-                            {connection? : Nome della connessione al database} 
-                            {--output= : Percorso del file di output} 
-                            {--tables=* : Tabelle specifiche da esportare} 
-                            {--format=json : Formato di output (json, yaml)}';
-
-    /**
-     * La descrizione del comando console.
-     *
-     * @var string
-     */
-    protected $description = 'Esporta lo schema del database in formato JSON';
-
-    /**
-     * Esegui il comando console.
-     */
-    public function handle(): int
-    {
-        $connection = $this->argument('connection') ?? config('database.default');
-        $output = $this->option('output') ?? 'database_schema.json';
-        $tables = $this->option('tables');
-        $format = $this->option('format');
-
-        try {
-            $schema = $this->exportSchema($connection, $tables);
-            
-            if ($format === 'json') {
-                $this->exportToJson($schema, $output);
-            } else {
-                $this->error('Formato non supportato: ' . $format);
-                return 1;
-            }
-
-            $this->info("Schema esportato con successo in: {$output}");
-            return 0;
-        } catch (\Exception $e) {
-            $this->error('Errore durante l\'esportazione: ' . $e->getMessage());
-            return 1;
-<<<<<<< HEAD
->>>>>>> 3268b83 (.)
-=======
->>>>>>> 355a587 (.)
         }
     }
 
     /**
-<<<<<<< HEAD
-<<<<<<< HEAD
      * Esporta lo schema di una tabella in JSON.
      *
      * @param string $table Nome della tabella
@@ -243,106 +181,5 @@ class DatabaseSchemaExportCommand extends Command
         }
 
         return $basePath . '/' . $filename;
-=======
-=======
->>>>>>> 355a587 (.)
-     * Esporta lo schema del database.
-     */
-    protected function exportSchema(string $connection, ?array $tables = null): array
-    {
-        $schema = [
-            'database' => config("database.connections.{$connection}.database"),
-            'tables' => [],
-        ];
-
-        $dbTables = $tables ?? DB::connection($connection)->getDoctrineSchemaManager()->listTableNames();
-
-        foreach ($dbTables as $table) {
-            $schema['tables'][$table] = $this->getTableSchema($connection, $table);
-        }
-
-        return $schema;
-    }
-
-    /**
-     * Ottiene lo schema di una tabella specifica.
-     */
-    protected function getTableSchema(string $connection, string $table): array
-    {
-        $schemaManager = DB::connection($connection)->getDoctrineSchemaManager();
-        $tableDetails = $schemaManager->listTableDetails($table);
-
-        return [
-            'columns' => $this->getColumns($tableDetails),
-            'indexes' => $this->getIndexes($tableDetails),
-            'foreign_keys' => $this->getForeignKeys($tableDetails),
-        ];
-    }
-
-    /**
-     * Esporta lo schema in formato JSON.
-     */
-    protected function exportToJson(array $schema, string $output): void
-    {
-        $json = json_encode($schema, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE);
-        file_put_contents($output, $json);
-    }
-
-    /**
-     * Ottiene i dettagli delle colonne.
-     */
-    protected function getColumns($tableDetails): array
-    {
-        $columns = [];
-        foreach ($tableDetails->getColumns() as $column) {
-            $columns[$column->getName()] = [
-                'type' => $column->getType()->getName(),
-                'length' => $column->getLength(),
-                'precision' => $column->getPrecision(),
-                'scale' => $column->getScale(),
-                'nullable' => ! $column->getNotnull(),
-                'default' => $column->getDefault(),
-                'autoincrement' => $column->getAutoincrement(),
-            ];
-        }
-        return $columns;
-    }
-
-    /**
-     * Ottiene i dettagli degli indici.
-     */
-    protected function getIndexes($tableDetails): array
-    {
-        $indexes = [];
-        foreach ($tableDetails->getIndexes() as $index) {
-            $indexes[$index->getName()] = [
-                'columns' => $index->getColumns(),
-                'unique' => $index->isUnique(),
-                'primary' => $index->isPrimary(),
-            ];
-        }
-        return $indexes;
-    }
-
-    /**
-     * Ottiene i dettagli delle chiavi esterne.
-     */
-    protected function getForeignKeys($tableDetails): array
-    {
-        $foreignKeys = [];
-        foreach ($tableDetails->getForeignKeys() as $name => $foreignKey) {
-            $foreignKeys[$name] = [
-                'local_columns' => $foreignKey->getLocalColumns(),
-                'foreign_table' => $foreignKey->getForeignTableName(),
-                'foreign_columns' => $foreignKey->getForeignColumns(),
-                'on_delete' => $foreignKey->getOption('onDelete'),
-                'on_update' => $foreignKey->getOption('onUpdate'),
-            ];
-        }
-        return $foreignKeys;
-<<<<<<< HEAD
->>>>>>> 3268b83 (.)
-=======
->>>>>>> 355a587 (.)
     }
 }

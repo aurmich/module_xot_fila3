@@ -5,99 +5,19 @@ declare(strict_types=1);
 namespace Modules\Xot\Exceptions\Formatters;
 
 use Illuminate\Support\Facades\Auth;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-use Modules\Xot\Contracts\ErrorFormatterContract;
 
-/**
- * Formattatore per errori da inviare tramite webhook.
- * Implementa le best practices di Laraxot per la gestione degli errori.
- */
-class WebhookErrorFormatter implements ErrorFormatterContract
+class WebhookErrorFormatter
 {
     public function __construct(
-        private readonly \Throwable $exception
-    ) {}
-
-    /**
-     * Formatta l'eccezione per l'invio tramite webhook.
-     *
-=======
->>>>>>> 3268b83 (.)
-=======
-use Modules\Xot\Contracts\ErrorFormatterContract;
->>>>>>> 355a587 (.)
-
-/**
- * Formattatore per errori da inviare tramite webhook.
- * Implementa le best practices di Laraxot per la gestione degli errori.
- */
-class WebhookErrorFormatter implements ErrorFormatterContract
-{
-    public function __construct(
-<<<<<<< HEAD
         private \Throwable $exception
     ) {}
 
     /**
-=======
-        private readonly \Throwable $exception
-    ) {}
-
-    /**
-<<<<<<< HEAD
->>>>>>> origin/dev
->>>>>>> 3268b83 (.)
-=======
-     * Formatta l'eccezione per l'invio tramite webhook.
-     *
->>>>>>> 355a587 (.)
      * @return array<string, mixed>
      */
     public function format(): array
     {
         $user = Auth::user();
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-        $email = $user?->email ?? 'CLI User';
-
-        return [
-            'error' => [
-                'message' => $this->exception->getMessage(),
-                'code' => $this->exception->getCode(),
-                'type' => get_class($this->exception),
-                'file' => $this->exception->getFile(),
-                'line' => $this->exception->getLine(),
-                'trace' => $this->exception->getTraceAsString(),
-                'context' => [
-                    'user' => [
-                        'id' => Auth::id() ?? 0,
-                        'email' => $email,
-                    ],
-                    'request' => [
-                        'method' => request()->getMethod(),
-                        'url' => request()->fullUrl(),
-                        'previous_url' => url()->previous(),
-                        'ip' => request()->ip(),
-                    ],
-                ],
-                'metadata' => [
-                    'thrown_in' => sprintf(
-                        '%s:%d',
-                        $this->exception->getFile(),
-                        $this->exception->getLine()
-                    ),
-                    'previous_exception' => $this->exception->getPrevious() 
-                        ? get_class($this->exception->getPrevious()) 
-                        : null,
-                ],
-            ],
-=======
->>>>>>> 3268b83 (.)
         $email = $user->email ?? 'CLI User';
 
         return [
@@ -130,45 +50,6 @@ class WebhookErrorFormatter implements ErrorFormatterContract
                 $this->exception->getPrevious() ? ('`' . get_class($this->exception->getPrevious()) . '`') : 'None'
             ),
             */
-<<<<<<< HEAD
-=======
->>>>>>> origin/dev
->>>>>>> 3268b83 (.)
-=======
-        $email = $user?->email ?? 'CLI User';
-
-        return [
-            'error' => [
-                'message' => $this->exception->getMessage(),
-                'code' => $this->exception->getCode(),
-                'type' => get_class($this->exception),
-                'file' => $this->exception->getFile(),
-                'line' => $this->exception->getLine(),
-                'trace' => $this->exception->getTraceAsString(),
-                'context' => [
-                    'user' => [
-                        'id' => Auth::id() ?? 0,
-                        'email' => $email,
-                    ],
-                    'request' => [
-                        'method' => request()->getMethod(),
-                        'url' => request()->fullUrl(),
-                        'previous_url' => url()->previous(),
-                        'ip' => request()->ip(),
-                    ],
-                ],
-                'metadata' => [
-                    'thrown_in' => sprintf(
-                        '%s:%d',
-                        $this->exception->getFile(),
-                        $this->exception->getLine()
-                    ),
-                    'previous_exception' => $this->exception->getPrevious() 
-                        ? get_class($this->exception->getPrevious()) 
-                        : null,
-                ],
-            ],
->>>>>>> 355a587 (.)
         ];
     }
 }

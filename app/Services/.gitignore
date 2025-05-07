@@ -1,20 +1,9 @@
 /*.lock
 package-lock.json
 /vendor
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 # Backup files
 *.bak
 -e 
 # PHPStan documentation
 docs/phpstan/
-=======
->>>>>>> 3268b83 (.)
-=======
-
-# Backup files
-*.bak
-# PHPStan documentation
-docs/phpstan/
->>>>>>> 355a587 (.)

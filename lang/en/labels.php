@@ -181,15 +181,6 @@ return [
                         ],
                     ],
                 ],
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 3268b83 (.)
-=======
-
->>>>>>> 355a587 (.)
                 'table' => [
                     'id' => 'Id',
                     'merchant_id' => 'Restaurant Name',
@@ -1013,10 +1004,6 @@ return [
                 'state_region' => 'State Region',
                 'google_lat' => 'Google Latitude',
                 'google_lng' => 'Google Longitude',
-<<<<<<< HEAD
-=======
->>>>>>> origin/dev
->>>>>>> 3268b83 (.)
             ],
         ],
     ],

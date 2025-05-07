@@ -19,13 +19,6 @@ namespace Modules\Xot\Console\Commands;
 
 ### ❌ ERRATO
 ```php
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-### Versione HEAD
-
->>>>>>> 355a587 (.)
 namespace Modules\Xot\app\Console\Commands;
 ### Versione HEAD
 
@@ -36,65 +29,6 @@ namespace Modules\Xot\Console\Commands;
 
 ---
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-
-### Versione Alternativa
-
-
-### Versione HEAD
-
->>>>>>> 355a587 (.)
-
-
-
-
-
-
-
- e06b7b401b19a629db99ac2a1abdc82075a443cf
-namespace Modules\Xot\Console\Commands;
-namespace Modules\Xot\app\Console\Commands;
-
-
-namespace Modules\Xot\Console\Commands;
-
-namespace Modules\Xot\app\Console\Commands;
-
-
-
-
- e06b7b401b19a629db99ac2a1abdc82075a443cf
-
-namespace Modules\Xot\app\Console\Commands;
-
-namespace Modules\Xot\Console\Commands;
-
-
-
-
-
- e06b7b401b19a629db99ac2a1abdc82075a443cf
-
-<<<<<<< HEAD
-=======
-namespace Modules\Xot\app\Console\Commands;
->>>>>>> origin/dev
->>>>>>> 3268b83 (.)
-=======
-
-### Versione Alternativa
-
-namespace Modules\Xot\app\Console\Commands;
-
----
-
-
----
-
->>>>>>> 355a587 (.)
 ```
 
 ## Esempio di Comando Console

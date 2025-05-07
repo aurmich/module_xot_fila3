@@ -13,19 +13,7 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Support\Carbon;
 
 /**
-<<<<<<< HEAD
-<<<<<<< HEAD
  * Modules\Xot\Contracts\ModelContract.
-=======
-<<<<<<< HEAD
- * Contratto base per i modelli nel sistema Laraxot.
-=======
- * Modules\Xot\Contracts\ModelContract.
->>>>>>> origin/dev
->>>>>>> 3268b83 (.)
-=======
- * Contratto base per i modelli nel sistema Laraxot.
->>>>>>> 355a587 (.)
  *
  * @property int                $id
  * @property int|null           $user_id
@@ -35,30 +23,10 @@ use Illuminate\Support\Carbon;
  * @property string|null        $created_by
  * @property string|null        $updated_by
  * @property string|null        $title
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
- * @property bool              $is_reclamed
- * @property bool              $table_enable
- * @property PivotContract|null $pivot
- * @property string            $tennant_name
-=======
->>>>>>> 3268b83 (.)
  * @property bool               $is_reclamed
  * @property bool               $table_enable
  * @property PivotContract|null $pivot
  * @property string $tennant_name
-<<<<<<< HEAD
-=======
->>>>>>> origin/dev
->>>>>>> 3268b83 (.)
-=======
- * @property bool              $is_reclamed
- * @property bool              $table_enable
- * @property PivotContract|null $pivot
- * @property string            $tennant_name
->>>>>>> 355a587 (.)
  *
  * @method mixed     getKey()
  * @method string    getRouteKey()
@@ -74,10 +42,6 @@ use Illuminate\Support\Carbon;
  * @method mixed     attach($params)
  * @method array     treeLabel()
  * @method array     treeSons()
-<<<<<<< HEAD
-=======
- * @method int       treeSonsCount()
->>>>>>> 3268b83 (.)
  * @method array     toArray()
  * @method BelongsTo user()
  * @method mixed     getAttributeValue(string $key)
@@ -89,178 +53,67 @@ use Illuminate\Support\Carbon;
 interface ModelContract
 {
     /**
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-     * Duplica l'istanza e rimuove tutte le relazioni caricate.
-     */
-    public function withoutRelations(): static;
-
-    /**
-     * Riempie il modello con un array di attributi, forzando l'assegnazione di massa.
-     *
-     * @param array<string, mixed> $attributes
-     */
-    public function forceFill(array $attributes): static;
-
-    /**
-     * Salva il modello nel database.
-     *
-     * @param array<string, mixed> $options
-     */
-    public function save(array $options = []): bool;
-
-    /**
-     * Converte l'istanza del modello in un array.
-     *
-     * @return array<string, mixed>
-     */
-    public function toArray(): array;
-
-    /**
-     * Ottiene il valore della chiave primaria del modello.
-     *
-     * @return mixed
-     */
-    public function getKey(): mixed;
-
-    /**
-     * Ottiene il nome della chiave primaria del modello.
-     */
-    public function getKeyName(): string;
-
-    /**
-     * Ottiene il tipo della chiave primaria del modello.
-     */
-    public function getKeyType(): string;
-
-    /**
-     * Ottiene il nome della tabella associata al modello.
-     */
-    public function getTable(): string;
-
-    /**
-     * Ottiene il nome della connessione del database utilizzata dal modello.
-     */
-    public function getConnection(): string;
-
-    /**
-     * Ottiene gli attributi che possono essere assegnati in massa.
-     *
-     * @return array<int, string>
-     */
-    public function getFillable(): array;
-
-    /**
-     * Ottiene gli attributi che devono essere convertiti.
-     *
-     * @return array<string, string>
-     */
-    public function getCasts(): array;
-
-    /**
-     * Ottiene gli attributi che devono essere trattati come date.
-     *
-     * @return array<int, string>
-     */
-    public function getDates(): array;
-
-    /**
-     * Determina se il modello utilizza i timestamp.
-     */
-    public function usesTimestamps(): bool;
-=======
->>>>>>> 3268b83 (.)
      * Duplicate the instance and unset all the loaded relations.
      *
      * @return $this
-=======
-     * Duplica l'istanza e rimuove tutte le relazioni caricate.
->>>>>>> 355a587 (.)
      */
-    public function withoutRelations(): static;
+    public function withoutRelations();
 
     /**
-     * Riempie il modello con un array di attributi, forzando l'assegnazione di massa.
+     * Fill the model with an array of attributes. Force mass assignment.
      *
-     * @param array<string, mixed> $attributes
+     * @return $this
      */
-    public function forceFill(array $attributes): static;
+    public function forceFill(array $attributes);
 
     /**
-     * Salva il modello nel database.
+     * Save the model to the database.
      *
-     * @param array<string, mixed> $options
+     * @return bool
      */
-    public function save(array $options = []): bool;
+    public function save(array $options = []);
+    /*
+         * Save a new model and return the instance. Allow mass-assignment.
+         *
+         * @return \Illuminate\Database\Eloquent\Model|$this
+
+        public function forceCreate(array $attributes);
+        */
 
     /**
-     * Converte l'istanza del modello in un array.
+     * Convert the model instance to an array.
      *
-     * @return array<string, mixed>
+     * @return array
      */
-    public function toArray(): array;
+    public function toArray();
 
     /**
-     * Ottiene il valore della chiave primaria del modello.
+     * Get the value of the model's primary key.
      *
-     * @return mixed
+     * @return mixed|int|string
      */
-    public function getKey(): mixed;
+    public function getKey();
 
-    /**
-     * Ottiene il nome della chiave primaria del modello.
-     */
-    public function getKeyName(): string;
-
-    /**
-     * Ottiene il tipo della chiave primaria del modello.
-     */
-    public function getKeyType(): string;
-
-    /**
-     * Ottiene il nome della tabella associata al modello.
-     */
-    public function getTable(): string;
-
-    /**
-     * Ottiene il nome della connessione del database utilizzata dal modello.
-     */
-    public function getConnection(): string;
-
-    /**
-     * Ottiene gli attributi che possono essere assegnati in massa.
+    /*
+     * Add a basic where clause to the query.
      *
-     * @return array<int, string>
-     */
-    public function getFillable(): array;
+     * @param  \Closure|string|array|\Illuminate\Contracts\Database\Query\Expression  $column
+     * @param  mixed  $operator
+     * @param  mixed  $value
+     * @param  string $boolean
+     * @return $this
 
-    /**
-     * Ottiene gli attributi che devono essere convertiti.
+    public function where($column, $operator = null, $value = null, $boolean = 'and');
+    */
+
+    /*
+     * Execute the query and get the first result or throw an exception.
      *
-     * @return array<string, string>
-     */
-    public function getCasts(): array;
+     * @param  array|string $columns
+     * @return \Illuminate\Database\Eloquent\Model|static
+     *
+     * @throws \Illuminate\Database\Eloquent\ModelNotFoundException<\Illuminate\Database\Eloquent\Model>
 
-<<<<<<< HEAD
     public function firstOrFail($columns = ['*']);
     */
-<<<<<<< HEAD
-=======
->>>>>>> origin/dev
->>>>>>> 3268b83 (.)
-=======
-    /**
-     * Ottiene gli attributi che devono essere trattati come date.
-     *
-     * @return array<int, string>
-     */
-    public function getDates(): array;
-
-    /**
-     * Determina se il modello utilizza i timestamp.
-     */
-    public function usesTimestamps(): bool;
->>>>>>> 355a587 (.)
 }

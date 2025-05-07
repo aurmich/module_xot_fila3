@@ -4,8 +4,6 @@ declare(strict_types=1);
 
 namespace Modules\Xot\Filament\Widgets;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 use Filament\Forms;
 use Filament\Forms\Form;
 use Illuminate\Support\Facades\Cache;
@@ -16,56 +14,11 @@ use Modules\Xot\Actions\View\GetViewByClassAction;
 use Filament\Widgets\Concerns\InteractsWithPageTable;
 use Filament\Widgets\Concerns\InteractsWithPageFilters;
 use Filament\Actions\Action;
-=======
-<<<<<<< HEAD
-use Filament\Forms;
-use Filament\Forms\Form;
-use Filament\Actions\Action;
-use Filament\Widgets\Widget as FilamentWidget;
-use Filament\Forms\Contracts\HasForms;
-use Filament\Widgets\WidgetConfiguration;
-use Filament\Widgets\Concerns\InteractsWithPageTable;
-use Filament\Widgets\Concerns\InteractsWithPageFilters;
-use Illuminate\Support\Facades\Cache;
-use Modules\Xot\Actions\View\GetViewByClassAction;
-use Illuminate\Contracts\View\View;
 
 /**
  * @property bool $shouldRender
+ *
  */
-abstract class XotBaseWidget extends FilamentWidget implements HasForms
-{
-    use InteractsWithPageFilters;
-    use Forms\Concerns\InteractsWithForms;
-
-    public string $title = '';
-    public string $icon = '';
-    protected int|string|array $columnSpan = 'full';
-
-=======
-=======
-use Filament\Forms;
-use Filament\Forms\Form;
-use Filament\Actions\Action;
->>>>>>> 355a587 (.)
-use Filament\Widgets\Widget as FilamentWidget;
-use Filament\Forms\Contracts\HasForms;
-use Filament\Widgets\WidgetConfiguration;
-use Filament\Widgets\Concerns\InteractsWithPageTable;
-use Filament\Widgets\Concerns\InteractsWithPageFilters;
-use Illuminate\Support\Facades\Cache;
-use Modules\Xot\Actions\View\GetViewByClassAction;
-<<<<<<< HEAD
->>>>>>> 3268b83 (.)
-=======
-use Illuminate\Contracts\View\View;
->>>>>>> 355a587 (.)
-
-/**
- * @property bool $shouldRender
- */
-<<<<<<< HEAD
-<<<<<<< HEAD
 abstract class XotBaseWidget extends FilamentWidget implements HasForms
 {
     use InteractsWithPageFilters;
@@ -75,31 +28,12 @@ abstract class XotBaseWidget extends FilamentWidget implements HasForms
     public string $title = '';
     public string $icon = '';
     protected int|string|array $columnSpan = 'full';
-=======
-abstract class XotBaseWidget extends FilamentWidget
-=======
-abstract class XotBaseWidget extends FilamentWidget implements HasForms
->>>>>>> 355a587 (.)
-{
-    use InteractsWithPageFilters;
-    use Forms\Concerns\InteractsWithForms;
-
-    public string $title = '';
-    public string $icon = '';
-<<<<<<< HEAD
->>>>>>> origin/dev
->>>>>>> 3268b83 (.)
-=======
-    protected int|string|array $columnSpan = 'full';
-
->>>>>>> 355a587 (.)
     /**
      * The view that should be rendered for the widget.
      *
      * This property allows either a string that can be rendered as a view
      * (prefixed with a namespace like 'module-name::view-name') or a path to a
      * Blade view file.
-<<<<<<< HEAD
      *
      * @var view-string
      */
@@ -123,24 +57,6 @@ abstract class XotBaseWidget extends FilamentWidget implements HasForms
     */
         
 
-=======
-<<<<<<< HEAD
-     */
-    protected static string $view = '';
-
-    public array $listener = [
-        'filters-updated' => 'filtersUpdated',
-    ];
-
-    public function __construct()
-    {
-        /** @var string $view */
-        $view = app(GetViewByClassAction::class)->execute(static::class);
-        if (view()->exists($view)) {
-            static::$view = $view;
-        }
-    }
->>>>>>> 3268b83 (.)
 
     abstract public function getFormSchema(): array;
 
@@ -152,11 +68,7 @@ abstract class XotBaseWidget extends FilamentWidget implements HasForms
             ->statePath('data');
     }
 
-<<<<<<< HEAD
      protected function getFormActions(): array
-=======
-    protected function getFormActions(): array
->>>>>>> 3268b83 (.)
     {
         return [
             Action::make('save')
@@ -167,55 +79,6 @@ abstract class XotBaseWidget extends FilamentWidget implements HasForms
 
     public function save(): void
     {
-<<<<<<< HEAD
 
-=======
-        // Implementazione del salvataggio
-=======
-     *
-     * @var view-string
-     */
-    protected static string $view = '';
-
-    public array $listener = [
-        'filters-updated' => 'filtersUpdated',
-    ];
-
-    public function __construct()
-    {
-        /** @var string $view */
-        $view = app(GetViewByClassAction::class)->execute(static::class);
-        if (view()->exists($view)) {
-            static::$view = $view;
-        }
-    }
-
-<<<<<<< HEAD
->>>>>>> origin/dev
->>>>>>> 3268b83 (.)
-=======
-    abstract public function getFormSchema(): array;
-
-    final public function form(Form $form): Form
-    {
-        return $form
-            ->schema($this->getFormSchema())
-            ->columns(2)
-            ->statePath('data');
-    }
-
-    protected function getFormActions(): array
-    {
-        return [
-            Action::make('save')
-                ->label(__('filament-panels::resources/pages/edit-record.form.actions.save.label'))
-                ->submit('save'),
-        ];
-    }
-
-    public function save(): void
-    {
-        // Implementazione del salvataggio
->>>>>>> 355a587 (.)
     }
 }

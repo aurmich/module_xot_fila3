@@ -44,61 +44,8 @@ public function comments(): HasMany
  */
 public function tags(): BelongsToMany
 {
-<<<<<<< HEAD
-<<<<<<< HEAD
     return $this->belongsToManyX(Tag::class);
     return $this->belongsToMany(Tag::class);
-=======
-<<<<<<< HEAD
-=======
-
-### Versione HEAD
-
-    return $this->belongsToManyX(Tag::class);
-    return $this->belongsToMany(Tag::class);
-
-### Versione Alternativa
-
-
-### Versione HEAD
-
->>>>>>> 355a587 (.)
-
-
-
-
- e06b7b401b19a629db99ac2a1abdc82075a443cf
-    return $this->belongsToMany(Tag::class);
-
-
-    return $this->belongsToManyX(Tag::class);
-
-    return $this->belongsToMany(Tag::class);
-
-
-
-
-    return $this->belongsToMany(Tag::class);
-
-
- e06b7b401b19a629db99ac2a1abdc82075a443cf
-<<<<<<< HEAD
-=======
-    return $this->belongsToMany(Tag::class);
->>>>>>> origin/dev
->>>>>>> 3268b83 (.)
-=======
-
-### Versione Alternativa
-
-    return $this->belongsToMany(Tag::class);
-
----
-
-
----
-
->>>>>>> 355a587 (.)
 }
 ```
 
@@ -197,3 +144,4 @@ class UserRepository implements UserRepositoryInterface
 }
 ```
 
+Segui queste linee guida per risolvere la maggior parte degli errori relativi ai tipi generici nei tuoi modelli e relazioni Laravel. 

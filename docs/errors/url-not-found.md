@@ -34,13 +34,6 @@ define ROOT "C:/var/www/nome_giunzione/public"
 a  
 define ROOT "C:/var/www/nome_giunzione/public_html"  
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-### Versione HEAD
-
->>>>>>> 355a587 (.)
 ### Versione HEAD
 
 **NB**: dopo aver fatto questa modifica, riavviare laragon
@@ -55,16 +48,3 @@ define ROOT "C:/var/www/nome_giunzione/public_html"
 
 ---
 
-<<<<<<< HEAD
-=======
-**NB**: dopo aver fatto questa modifica, riavviare laragon
->>>>>>> 3268b83 (.)
-=======
-
-### Versione Alternativa
-
-**NB**: dopo aver fatto questa modifica, riavviare laragon
-
----
-
->>>>>>> 355a587 (.)

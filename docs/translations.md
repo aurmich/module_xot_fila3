@@ -1,10 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-### Versione HEAD
-
->>>>>>> 355a587 (.)
 ### Versione HEAD
 
 # Traduzioni
@@ -143,17 +136,6 @@ return [
 
 ### Versione Incoming
 
-<<<<<<< HEAD
-=======
->>>>>>> 3268b83 (.)
-=======
-
-### Versione Alternativa
-
-
----
-
->>>>>>> 355a587 (.)
 # Sistema di Traduzioni
 
 ## Struttura
@@ -204,27 +186,9 @@ return [
 ];
 ```
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 ---
 
-=======
->>>>>>> 3268b83 (.)
-=======
-
-### Versione HEAD
-
-
----
-
-
-### Versione Alternativa
-
-
----
-
->>>>>>> 355a587 (.)
 ## Utilizzo
 
 ### In Filament Resources
@@ -360,13 +324,6 @@ TextInput::make('cognome')
 // Utilizzo in Actions
 Action::make('save')
 Action::make('delete')
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-### Versione HEAD
-
->>>>>>> 355a587 (.)
 ### Versione HEAD
 
 ```
@@ -434,16 +391,3 @@ Action::make('delete')
 
 ---
 
-<<<<<<< HEAD
-=======
-``` 
->>>>>>> 3268b83 (.)
-=======
-
-### Versione Alternativa
-
-``` 
-
----
-
->>>>>>> 355a587 (.)

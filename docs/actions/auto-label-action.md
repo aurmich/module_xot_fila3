@@ -1,63 +1,12 @@
 # Correzione e miglioramento: AutoLabelAction.php (2025-04-16)
 
 ## Contesto
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-### Versione HEAD
-
->>>>>>> 355a587 (.)
 Il file `AutoLabelAction.php` presentava marker di conflitto (``) e duplicazioni dovute a merge errati.
-=======
-<<<<<<< HEAD
-Il file `AutoLabelAction.php` presentava marker di conflitto (`<<<<<<< HEAD`) e duplicazioni dovute a merge errati.
-=======
-Il file `AutoLabelAction.php` presentava marker di conflitto (``) e duplicazioni dovute a merge errati.
->>>>>>> origin/dev
->>>>>>> 3268b83 (.)
-
-### Versione Alternativa
-
-
-### Versione HEAD
-
-
-### Versione HEAD
-
-
-### Versione Alternativa
-
-Il file `AutoLabelAction.php` presentava marker di conflitto (``) e duplicazioni dovute a merge errati.
-
----
-
-
----
-
 
 ## Azioni svolte
 - Rimozione completa dei marker di conflitto e delle duplicazioni di codice.
 - Uniformazione della logica: ora la funzione applica la logica di auto-label in modo sicuro e tipizzato.
-<<<<<<< HEAD
-<<<<<<< HEAD
 - Miglioramento della gestione dei tipi secondo le regole Laraxot/<nome progetto> e PHPStan livello 9.
-=======
-- Miglioramento della gestione dei tipi secondo le regole Laraxot/PTVX e PHPStan livello 9.
->>>>>>> 3268b83 (.)
-=======
-
-### Versione HEAD
-
-- Miglioramento della gestione dei tipi secondo le regole Laraxot/<nome progetto> e PHPStan livello 9.
-
-### Versione Alternativa
-
-- Miglioramento della gestione dei tipi secondo le regole Laraxot/PTVX e PHPStan livello 9.
-
----
-
->>>>>>> 355a587 (.)
 - Validazione con PHPStan livello 9.
 - Aggiornamento della documentazione e creazione di collegamento bidirezionale con la doc root.
 

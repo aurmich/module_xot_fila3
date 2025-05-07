@@ -59,13 +59,6 @@
 - [Testing](packages/testing.md)
 - [Performance](packages/performance.md)
 - [Debug](packages/debug.md) 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-### Versione HEAD
-
->>>>>>> 355a587 (.)
 ### Versione HEAD
 
 
@@ -86,14 +79,3 @@
 
 ---
 
-<<<<<<< HEAD
-=======
->>>>>>> 3268b83 (.)
-=======
-
-### Versione Alternativa
-
-
----
-
->>>>>>> 355a587 (.)

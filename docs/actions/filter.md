@@ -1,63 +1,12 @@
 # Correzione e miglioramento: GetYearFilter.php (2025-04-16)
 
 ## Contesto
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-### Versione HEAD
-
->>>>>>> 355a587 (.)
 Il file `GetYearFilter.php` presentava marker di conflitto (``) e duplicazioni dovute a merge errati.
-=======
-<<<<<<< HEAD
-Il file `GetYearFilter.php` presentava marker di conflitto (`<<<<<<< HEAD`) e duplicazioni dovute a merge errati.
-=======
-Il file `GetYearFilter.php` presentava marker di conflitto (``) e duplicazioni dovute a merge errati.
->>>>>>> origin/dev
->>>>>>> 3268b83 (.)
-
-### Versione Alternativa
-
-
-### Versione HEAD
-
-
-### Versione HEAD
-
-
-### Versione Alternativa
-
-Il file `GetYearFilter.php` presentava marker di conflitto (``) e duplicazioni dovute a merge errati.
-
----
-
-
----
-
 
 ## Azioni svolte
 - Rimozione completa dei marker di conflitto e delle duplicazioni di codice.
 - Uniformazione della logica: ora la funzione costruisce l'array delle opzioni anno in modo sicuro e tipizzato.
-<<<<<<< HEAD
-<<<<<<< HEAD
 - Miglioramento della gestione dei tipi secondo le regole Laraxot/<nome progetto> e PHPStan livello 9.
-=======
-- Miglioramento della gestione dei tipi secondo le regole Laraxot/PTVX e PHPStan livello 9.
->>>>>>> 3268b83 (.)
-=======
-
-### Versione HEAD
-
-- Miglioramento della gestione dei tipi secondo le regole Laraxot/<nome progetto> e PHPStan livello 9.
-
-### Versione Alternativa
-
-- Miglioramento della gestione dei tipi secondo le regole Laraxot/PTVX e PHPStan livello 9.
-
----
-
->>>>>>> 355a587 (.)
 - Validazione con PHPStan livello 9.
 - Aggiornamento della documentazione e creazione di collegamento bidirezionale con la doc root.
 
@@ -72,26 +21,8 @@ Il file `GetYearFilter.php` presentava marker di conflitto (``) e duplicazioni d
 ---
 
 *Ultimo aggiornamento: 2025-04-16*
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-### Versione HEAD
-
->>>>>>> 355a587 (.)
 
 ## Collegamenti tra versioni di filter.md
 * [filter.md](../../../Xot/docs/actions/filter.md)
 * [filter.md](../../../Xot/docs/links/filter.md)
 
-<<<<<<< HEAD
-=======
->>>>>>> 3268b83 (.)
-=======
-
-### Versione Alternativa
-
-
----
-
->>>>>>> 355a587 (.)

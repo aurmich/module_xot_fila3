@@ -1,21 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 # Service Provider in il progetto
-=======
-=======
-
-### Versione HEAD
-
-# Service Provider in il progetto
-
-### Versione Alternativa
-
->>>>>>> 355a587 (.)
-# Service Provider in SaluteOra
->>>>>>> 3268b83 (.)
-
----
-
 
 Il service provider è responsabile della registrazione e configurazione del tema. Ogni tema deve avere il proprio service provider.
 
@@ -158,3 +141,4 @@ Il service provider deve essere registrato in:
 5. **Consistenza**: Mantieni uno stile coerente
 6. **Sicurezza**: Proteggi le informazioni sensibili
 7. **Performance**: Ottimizza il caricamento delle risorse
+8. **Versioning**: Gestisci correttamente le versioni 

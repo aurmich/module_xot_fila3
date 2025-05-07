@@ -10,19 +10,29 @@ Durante lo sviluppo del progetto, sono stati identificati diversi file con confl
 - [Documentazione Conflitti Git nei Moduli](../../../../docs/conflitti_git_moduli.md)
 
 
+=======
 
 Durante lo sviluppo del progetto <nome progetto>, sono stati identificati diversi file con conflitti di merge non risolti. Questi conflitti erano indicati dalla presenza di marcatori come ``, `origin/dev` nel codice sorgente. I conflitti non risolti causavano errori durante l'analisi statica con PHPStan e impedivano il corretto funzionamento del codice.
 aurmich/dev
+=======
 
 
 Durante lo sviluppo del progetto <nome progetto>, sono stati identificati diversi file con conflitti di merge non risolti. Questi conflitti erano indicati dalla presenza di marcatori come ``, `=======` e `>>>>>>> origin/dev` nel codice sorgente. I conflitti non risolti causavano errori durante l'analisi statica con PHPStan e impedivano il corretto funzionamento del codice.
+=======
 
 Durante lo sviluppo del progetto <nome progetto>, sono stati identificati diversi file con conflitti di merge non risolti. Questi conflitti erano indicati dalla presenza di marcatori come ``, `origin/dev` nel codice sorgente. I conflitti non risolti causavano errori durante l'analisi statica con PHPStan e impedivano il corretto funzionamento del codice.
 aurmich/dev
+>>>>>>> aurmich/dev
+=======
 
 Durante lo sviluppo del progetto <nome progetto>, sono stati identificati diversi file con conflitti di merge non risolti. Questi conflitti erano indicati dalla presenza di marcatori come ``, `origin/dev` nel codice sorgente. I conflitti non risolti causavano errori durante l'analisi statica con PHPStan e impedivano il corretto funzionamento del codice.
 aurmich/dev
+>>>>>>> aurmich/dev
 
+=======
+>>>>>>> aurmich/dev
+>>>>>>> aurmich/dev
+>>>>>>> 5693302 (.):docs/RISOLUZIONE_CONFLITTI_MERGE.md
 
 ## File Coinvolti
 
@@ -64,12 +74,16 @@ aurmich/dev
 In ogni file, sono stati rimossi tutti i marcatori di conflitto , mantenendo la versione più completa e corretta del codice.
 
 
+=======
 
 In ogni file, sono stati rimossi tutti i marcatori di conflitto (``, `origin/dev`), mantenendo la versione più completa e corretta del codice.
 aurmich/dev
+=======
 
 
 In ogni file, sono stati rimossi tutti i marcatori di conflitto (``, `=======`, `>>>>>>> origin/dev`), mantenendo la versione più completa e corretta del codice.
+=======
+>>>>>>> 5693302 (.):docs/RISOLUZIONE_CONFLITTI_MERGE.md
 
 In ogni file, sono stati rimossi tutti i marcatori di conflitto (``, `origin/dev`), mantenendo la versione più completa e corretta del codice.
 aurmich/dev
@@ -78,6 +92,10 @@ aurmich/dev
 In ogni file, sono stati rimossi tutti i marcatori di conflitto (``, `origin/dev`), mantenendo la versione più completa e corretta del codice.
 aurmich/dev
 
+=======
+>>>>>>> aurmich/dev
+>>>>>>> aurmich/dev
+>>>>>>> 5693302 (.):docs/RISOLUZIONE_CONFLITTI_MERGE.md
 
 ### 2. Correzione dei Problemi di Tipizzazione
 
@@ -251,11 +269,18 @@ Per prevenire problemi simili in futuro, si raccomanda di:
 
 
 
+=======
 
 
+=======
 
+=======
 
+>>>>>>> aurmich/dev
 
+=======
+>>>>>>> aurmich/dev
+>>>>>>> aurmich/dev
 ### 2. Implementazione di Hook Git
 
 - Implementare un hook pre-commit che verifichi l'assenza di marcatori di conflitto:
@@ -265,13 +290,23 @@ Per prevenire problemi simili in futuro, si raccomanda di:
   # Verifica se ci sono marcatori di conflitto nei file in staging
 
 
+=======
   if git diff --cached | grep -E '|' > /dev/null; then
+=======
 
+>>>>>>> aurmich/dev
 
   if git diff --cached | grep -E '|=======|>>>>>>> ' > /dev/null; then
+=======
   if git diff --cached | grep -E '|' > /dev/null; then
+>>>>>>> aurmich/dev
+=======
   if git diff --cached | grep -E '|' > /dev/null; then
+>>>>>>> aurmich/dev
 
+=======
+>>>>>>> aurmich/dev
+>>>>>>> aurmich/dev
       echo "Error: You have unresolved merge conflicts. Please resolve them before committing."
       exit 1
   fi
@@ -280,16 +315,28 @@ Per prevenire problemi simili in futuro, si raccomanda di:
   ```
 
 
+=======
 aurmich/dev
+=======
 
+>>>>>>> aurmich/dev
 
+=======
 aurmich/dev
+>>>>>>> aurmich/dev
+=======
 aurmich/dev
+>>>>>>> aurmich/dev
 
+=======
+>>>>>>> aurmich/dev
+>>>>>>> aurmich/dev
+>>>>>>> 5693302 (.):docs/RISOLUZIONE_CONFLITTI_MERGE.md
 
 ### 3. Esecuzione Regolare dei Test
+=======
 ### 2. Esecuzione Regolare dei Test
-### 2. Esecuzione Regolare dei Test
+>>>>>>> 6dc688d (.)
 
 - Eseguire regolarmente i test che verificano l'assenza di marcatori di conflitto
 - Includere questi test nella pipeline CI/CD

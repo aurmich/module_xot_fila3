@@ -289,29 +289,9 @@ foreach ((new ReflectionClass($model))->getMethods(ReflectionMethod::IS_PUBLIC) 
     ) {
         continue;
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-### Versione HEAD
-
->>>>>>> 355a587 (.)
 ```
 ## Collegamenti tra versioni di model.md
 * [model.md](../../../Xot/docs/model.md)
 * [model.md](../../../Xot/docs/service/model.md)
 
 ```
-<<<<<<< HEAD
-=======
-```
->>>>>>> 3268b83 (.)
-=======
-
-### Versione Alternativa
-
-```
-
----
-
->>>>>>> 355a587 (.)

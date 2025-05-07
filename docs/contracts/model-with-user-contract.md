@@ -37,25 +37,7 @@ interface ModelWithUserContract extends ModelContract
 1. Utilizzo di strict types
 2. Documentazione PHPDoc completa
 3. Supporto per PHPStan livello 9
-<<<<<<< HEAD
-<<<<<<< HEAD
 4. Conforme alle convenzioni Laraxot/<nome progetto>
-=======
-4. Conforme alle convenzioni Laraxot/PTVX
->>>>>>> 3268b83 (.)
-=======
-
-### Versione HEAD
-
-4. Conforme alle convenzioni Laraxot/<nome progetto>
-
-### Versione Alternativa
-
-4. Conforme alle convenzioni Laraxot/PTVX
-
----
-
->>>>>>> 355a587 (.)
 5. Gestione null-safety
 
 ## Schema Database
@@ -88,3 +70,4 @@ class Article extends Model implements ModelWithUserContract
 - [ModelContract](model-contract.md)
 - [User Management](../features/USER-MANAGEMENT.md)
 - [PHPStan Level 9 Guide](../PHPSTAN-LEVEL9-GUIDE.md)
+- [Contracts Overview](./README.md) 

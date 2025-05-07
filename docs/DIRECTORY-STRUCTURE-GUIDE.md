@@ -1,31 +1,8 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-### Versione HEAD
-
->>>>>>> 355a587 (.)
 # Guida alla Struttura Corretta delle Directory nei Moduli Laraxot <nome progetto>
 
 ## Panoramica
 
 In Laraxot <nome progetto>, la struttura delle directory di ogni modulo è cruciale per il corretto funzionamento dell'autoloading, la compatibilità con PHPStan e la manutenibilità del codice.
-<<<<<<< HEAD
-=======
-=======
-
-### Versione Alternativa
-
->>>>>>> 355a587 (.)
-# Guida alla Struttura Corretta delle Directory nei Moduli Laraxot PTVX
-
-## Panoramica
-
-In Laraxot PTVX, la struttura delle directory di ogni modulo è cruciale per il corretto funzionamento dell'autoloading, la compatibilità con PHPStan e la manutenibilità del codice.
->>>>>>> 3268b83 (.)
-
----
-
 
 ## Regola Fondamentale
 
@@ -144,3 +121,4 @@ Per correggere automaticamente la struttura delle directory, utilizza lo script 
 2. **Autoloading Corretto**: Il PSR-4 autoloader è configurato per cercare le classi in `app/`
 3. **Compatibilità con PHPStan**: Evita errori di classi non trovate durante l'analisi statica
 4. **Manutenibilità**: Struttura coerente e prevedibile per tutti i moduli
+5. **Chiarezza**: Separazione netta tra codice applicativo e supporto (config, routes, ecc.) 

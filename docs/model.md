@@ -5,13 +5,6 @@ extends: _layouts.documentation
 section: content
 ---
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-### Versione HEAD
-
->>>>>>> 355a587 (.)
 ### Versione HEAD
 
 # Model Queuable Actions
@@ -26,16 +19,3 @@ section: content
 
 ---
 
-<<<<<<< HEAD
-=======
-# Model Queuable Actions
->>>>>>> 3268b83 (.)
-=======
-
-### Versione Alternativa
-
-# Model Queuable Actions
-
----
-
->>>>>>> 355a587 (.)

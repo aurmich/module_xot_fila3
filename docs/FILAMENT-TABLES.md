@@ -1,23 +1,6 @@
 # Gestione delle Tabelle in Filament
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 Questo documento definisce le linee guida per l'implementazione delle tabelle Filament nel progetto <nome progetto>, utilizzando il trait `HasXotTable`.
-=======
-=======
-
-### Versione HEAD
-
-Questo documento definisce le linee guida per l'implementazione delle tabelle Filament nel progetto <nome progetto>, utilizzando il trait `HasXotTable`.
-
-### Versione Alternativa
-
->>>>>>> 355a587 (.)
-Questo documento definisce le linee guida per l'implementazione delle tabelle Filament nel progetto PTVX, utilizzando il trait `HasXotTable`.
->>>>>>> 3268b83 (.)
-
----
-
 
 ## Introduzione
 

@@ -13,19 +13,8 @@ use Illuminate\Support\ServiceProvider;
 use Modules\Xot\Datas\ComponentFileData;
 use Nwidart\Modules\Traits\PathNamespace;
 use Modules\Xot\Actions\Blade\RegisterBladeComponentsAction;
-<<<<<<< HEAD
 use Modules\Xot\Actions\Module\GetModulePathByGeneratorAction;
 use Modules\Xot\Actions\Livewire\RegisterLivewireComponentsAction;
-use BladeUI\Icons\Factory as BladeIconsFactory;
-use Illuminate\Contracts\Container\Container;
-=======
-<<<<<<< HEAD
-=======
-use Modules\Xot\Actions\File\GetComponentsAction;
->>>>>>> origin/dev
-use Modules\Xot\Actions\Module\GetModulePathByGeneratorAction;
-use Modules\Xot\Actions\Livewire\RegisterLivewireComponentsAction;
->>>>>>> 3268b83 (.)
 
 use function Safe\realpath;
 
@@ -51,16 +40,6 @@ abstract class XotBaseServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-        if ('' === $this->name) {
-            return;
-        }
-
-=======
->>>>>>> origin/dev
->>>>>>> 3268b83 (.)
         $this->registerTranslations();
         $this->registerConfig();
         $this->registerViews();
@@ -75,16 +54,6 @@ abstract class XotBaseServiceProvider extends ServiceProvider
      */
     public function register(): void
     {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-        if ('' === $this->name) {
-            return;
-        }
-
-=======
->>>>>>> origin/dev
->>>>>>> 3268b83 (.)
         $this->nameLower = Str::lower($this->name);
         $this->module_ns = collect(explode('\\', $this->module_ns))->slice(0, -1)->implode('\\');
         $this->app->register($this->module_ns.'\Providers\RouteServiceProvider');
@@ -94,29 +63,10 @@ abstract class XotBaseServiceProvider extends ServiceProvider
 
     public function registerBladeIcons(): void
     {
-<<<<<<< HEAD
         if ('' === $this->name) {
             throw new \Exception('name is empty on ['.static::class.']');
         }
 
-        $this->callAfterResolving(BladeIconsFactory::class, function (BladeIconsFactory $factory) {
-            $assetsPath = app(GetModulePathByGeneratorAction::class)->execute($this->name, 'assets');
-            $svgPath=$assetsPath.'/../svg';
-            $factory->add( $this->nameLower, ['path' => $svgPath,'prefix' => $this->nameLower]);
-        });
-        //$svgPath = app(GetModulePathByGeneratorAction::class)->execute($this->name, 'svg');
-        /*
-=======
-<<<<<<< HEAD
-        if ('' === $this->name || '' === $this->nameLower) {
-            return;
-=======
-        if ('' === $this->name) {
-            throw new \Exception('name is empty on ['.static::class.']');
->>>>>>> origin/dev
-        }
-
->>>>>>> 3268b83 (.)
         Assert::string($relativePath = config('modules.paths.generator.assets.path'));
 
         try {
@@ -138,10 +88,6 @@ abstract class XotBaseServiceProvider extends ServiceProvider
 
         Config::set('blade-icons.sets.'.$this->nameLower.'.path', $svgPath);
         Config::set('blade-icons.sets.'.$this->nameLower.'.prefix', $this->nameLower);
-<<<<<<< HEAD
-        */
-=======
->>>>>>> 3268b83 (.)
     }
 
     /**
@@ -203,30 +149,9 @@ abstract class XotBaseServiceProvider extends ServiceProvider
      */
     protected function registerConfig(): void
     {
-<<<<<<< HEAD
 
         try {
             $configPath = app(GetModulePathByGeneratorAction::class)->execute($this->name, 'config');
-=======
-        try {
-<<<<<<< HEAD
-            Assert::string($relativePath = config('modules.paths.generator.config.path'));
-            $configPath = module_path($this->name, $relativePath);
-            if (! is_string($configPath)) {
-                return;
-            }
-
-            if (! file_exists($configPath)) {
-                return;
-            }
-=======
-            $configPath = app(GetModulePathByGeneratorAction::class)->execute($this->name, 'config');
->>>>>>> origin/dev
-
-            $this->publishes([
-                $configPath => config_path($this->nameLower.'.php'),
-            ], 'config');
->>>>>>> 3268b83 (.)
 
             $this->mergeConfigFrom($configPath, $this->nameLower);
         } catch (\Exception $e) {
@@ -237,27 +162,9 @@ abstract class XotBaseServiceProvider extends ServiceProvider
 
     public function registerBladeComponents(): void
     {
-<<<<<<< HEAD
-        $componentViewPath = app(GetModulePathByGeneratorAction::class)->execute($this->name, 'component-view');
-        Blade::anonymousComponentPath($componentViewPath);
-
         $componentClassPath = app(GetModulePathByGeneratorAction::class)->execute($this->name, 'component-class');
 
         $namespace = $this->module_ns.'\View\Components';
-=======
-<<<<<<< HEAD
-        $componentClassPath = app(GetModulePathByGeneratorAction::class)->execute($this->name, 'component-class');
-
-        $namespace = $this->module_ns.'\View\Components';
-=======
-        $componentsViewPath = app(GetModulePathByGeneratorAction::class)->execute($this->name, 'component-view');
-        Blade::anonymousComponentPath($componentsViewPath);
-
-        $componentClassPath = app(GetModulePathByGeneratorAction::class)->execute($this->name, 'component-class');
-
-        $namespace = $this->module_ns.'\\View\\Components';
->>>>>>> origin/dev
->>>>>>> 3268b83 (.)
         Blade::componentNamespace($namespace, $this->nameLower);
 
         app(RegisterBladeComponentsAction::class)
@@ -294,32 +201,23 @@ abstract class XotBaseServiceProvider extends ServiceProvider
         if (0 == $comps->count()) {
             return;
         }
-<<<<<<< HEAD
         $commands = $comps->toArray();
         /** @var array<int, array{ns: string}> $commands */
         $commands = array_map(
             static function (mixed $item): string {
                 Assert::isArray($item);
                 Assert::keyExists($item, 'ns');
-<<<<<<< HEAD
                 Assert::string($item['ns']);
-=======
-<<<<<<< HEAD
-                Assert::string($item['ns']);
-=======
->>>>>>> origin/dev
->>>>>>> 3268b83 (.)
                 return $item['ns'];
             },
             $commands
         );
         $this->commands($commands);
-=======
-
-        $this->commands($comps->toArray());
->>>>>>> 355a587 (.)
     }
 
+    /**
+     * Get the services provided by the provider.
+     */
     public function provides(): array
     {
         return [];
