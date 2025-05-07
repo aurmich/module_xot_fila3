@@ -37,7 +37,11 @@ abstract class XotBaseWidget extends FilamentWidget implements HasForms
      *
      * @var view-string
      */
+<<<<<<< HEAD
     protected static string $view;
+=======
+    protected static string $view = '';
+>>>>>>> 876df26 (.)
     
 
     public array $listener = [

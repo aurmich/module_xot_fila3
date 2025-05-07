@@ -7,6 +7,10 @@ Il file presenta un marker di conflitto `
 
 
 Il file presenta un marker di conflitto `
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 876df26 (.)
 
 Il file presenta un marker di conflitto `>>>>>>> origin/dev` che indica un merge non completato tra due rami di sviluppo.
 
@@ -14,11 +18,18 @@ Il file presenta un marker di conflitto `
 
 =======
 >>>>>>> aurmich/dev
+<<<<<<< HEAD
 >>>>>>> 5693302 (.):docs/actions/export/ExportXlsByCollection_conflict.md
 =======
 >>>>>>> 6dc688d (.)
 =======
 >>>>>>> 1abc8f7 (.)
+=======
+>>>>>>> aurmich/dev
+>>>>>>> 5693302 (.):docs/actions/export/ExportXlsByCollection_conflict.md
+=======
+>>>>>>> 6dc688d (.)
+>>>>>>> 876df26 (.)
 ## Analisi del Contesto
 Il conflitto si verifica nella documentazione PHPDoc del metodo `writeRows()`. In particolare, l'incongruenza riguarda la descrizione dei parametri e la formattazione della documentazione, che è stata probabilmente aggiornata in uno dei rami di sviluppo per migliorare la compatibilità con PHPStan.
 

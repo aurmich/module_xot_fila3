@@ -269,12 +269,20 @@ Per prevenire problemi simili in futuro, si raccomanda di:
 
 
 
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 876df26 (.)
 
 
 =======
 
 =======
 
+<<<<<<< HEAD
+=======
+>>>>>>> aurmich/dev
+>>>>>>> 876df26 (.)
 
 =======
 >>>>>>> aurmich/dev
@@ -335,9 +343,12 @@ aurmich/dev
 =======
 ### 2. Esecuzione Regolare dei Test
 >>>>>>> 6dc688d (.)
+<<<<<<< HEAD
 =======
 ### 2. Esecuzione Regolare dei Test
 >>>>>>> 1abc8f7 (.)
+=======
+>>>>>>> 876df26 (.)
 
 - Eseguire regolarmente i test che verificano l'assenza di marcatori di conflitto
 - Includere questi test nella pipeline CI/CD

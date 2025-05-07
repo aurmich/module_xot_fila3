@@ -7,6 +7,10 @@ Il file presenta un marker di conflitto `
 
 
 Il file presenta un marker di conflitto `
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 876df26 (.)
 
 Il file presenta un marker di conflitto `>>>>>>> origin/dev` che indica un merge non completato tra due rami di sviluppo.
 
@@ -14,11 +18,18 @@ Il file presenta un marker di conflitto `
 
 =======
 >>>>>>> aurmich/dev
+<<<<<<< HEAD
 >>>>>>> 5693302 (.):docs/actions/view/GetViewByClassAction_conflict.md
 =======
 >>>>>>> 6dc688d (.)
 =======
 >>>>>>> 1abc8f7 (.)
+=======
+>>>>>>> aurmich/dev
+>>>>>>> 5693302 (.):docs/actions/view/GetViewByClassAction_conflict.md
+=======
+>>>>>>> 6dc688d (.)
+>>>>>>> 876df26 (.)
 ## Analisi del Contesto
 Il conflitto si verifica nella funzione di callback utilizzata per mappare array di percorsi di classi in nomi di view. La porzione di codice interessata gestisce la conversione sicura di tipi scalari in stringa per garantire compatibilità con PHPStan livello 10.
 
