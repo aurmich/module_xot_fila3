@@ -4,6 +4,7 @@
 È stato rilevato un conflitto di merge nel file `Modules/Xot/app/Actions/Export/ExportXlsByView.php` alla riga relativa alla conversione di campi in stringa all'interno della funzione di callback di `array_map`.
 
 
+<<<<<<< HEAD
 
 =======
 Il file presenta un marker di conflitto `
@@ -19,6 +20,15 @@ Il file presenta un marker di conflitto `
 =======
 >>>>>>> aurmich/dev
 >>>>>>> aurmich/dev
+=======
+Il file presenta un marker di conflitto `
+ aurmich/dev
+Il file presenta un marker di conflitto `` che indica un merge non completato tra due rami di sviluppo.
+Il file presenta un marker di conflitto `
+ aurmich/dev
+ aurmich/dev
+ aurmich/dev
+>>>>>>> 2c69b98 (.)
 ## Analisi del Contesto
 Il conflitto si verifica nella funzione di mappatura che converte i valori dell'array $fields in stringhe prima di passarli all'oggetto ViewExport. Questa conversione è necessaria per garantire che tutti gli elementi dell'array siano stringhe, come richiesto dal tipo dichiarato `array<string>`.
 
