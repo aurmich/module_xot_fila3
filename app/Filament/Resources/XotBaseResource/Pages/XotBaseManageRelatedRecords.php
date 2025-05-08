@@ -47,7 +47,7 @@ abstract class XotBaseManageRelatedRecords extends FilamentManageRelatedRecords
      *
      * @return array<string, TextColumn>
      */
-    public function getListTableColumns(): array
+    public function getTableColumns(): array
     {
         return [
             'id' => TextColumn::make('id')
@@ -108,7 +108,7 @@ abstract class XotBaseManageRelatedRecords extends FilamentManageRelatedRecords
     public function table(Table $table): Table
     {
         return $table
-            ->columns($this->getListTableColumns())
+            ->columns($this->getTableColumns())
             ->headerActions($this->getTableHeaderActions())
             ->actions($this->getTableActions())
             ->bulkActions([])

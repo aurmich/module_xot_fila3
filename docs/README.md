@@ -12,9 +12,13 @@ Il modulo Xot è il modulo base che fornisce le classi e le funzionalità fondam
 - [Base Classes](./base_classes.md) - Classi base
 - [Service Providers](./service_providers.md) - Provider di servizi
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 - [Volt Folio Best Practices](./VOLT_FOLIO_BEST_PRACTICES.md) - Best practices per Volt e Folio
 >>>>>>> b579e92 (.)
+=======
+- [Volt Folio Best Practices](./VOLT_FOLIO_BEST_PRACTICES.md) - Best practices per Volt e Folio
+>>>>>>> 1d35e25 (.)
 
 ### Filament
 - [Filament Integration](./filament_integration.md) - Integrazione con Filament

@@ -421,24 +421,7 @@ class RouteServiceProvider extends ServiceProvider
 // middleware essenziali o non essere integrate con il sistema di permessi
 ```
 
-## Troubleshooting
-
-### Problema: Traduzioni non caricate
-
-**Soluzione:** Verificare che:
-1. Il Service Provider estenda `XotBaseServiceProvider`
-2. Il metodo `boot()` chiami `parent::boot()`
-3. Le proprietà `$moduleName` e `$moduleNameLower` siano definite correttamente
-
-### Problema: Route non funzionanti
-
-**Soluzione:** Verificare che:
-1. Il Route Provider estenda `XotBaseRouteServiceProvider`
-2. Il metodo `boot()` chiami `parent::boot()`
-3. La proprietà `$moduleNameLower` sia definita correttamente
-4. I file di route siano nei percorsi corretti (web.php, api.php, admin.php)
-
-### Problema: Eventi non ascoltati
+### Errore: Eventi non ascoltati
 
 **Soluzione:** Verificare che:
 1. L'Event Provider estenda `BaseEventServiceProvider`
@@ -462,3 +445,218 @@ class RouteServiceProvider extends ServiceProvider
 - [XotBaseServiceProvider](/var/www/html/exa/base_orisbroker_fila3/laravel/Modules/Xot/Providers/XotBaseServiceProvider.php)
 - [XotBaseRouteServiceProvider](/var/www/html/exa/base_orisbroker_fila3/laravel/Modules/Xot/Providers/XotBaseRouteServiceProvider.php)
 - [BaseEventServiceProvider](/var/www/html/exa/base_orisbroker_fila3/laravel/Modules/Xot/Providers/BaseEventServiceProvider.php)
+
+# Best Practices per ServiceProvider
+
+## Regole Fondamentali
+
+1. **Estendere la Classe Base Corretta**
+   - Per moduli: estendere `XotBaseServiceProvider`
+   - Per temi: estendere `XotBaseThemeServiceProvider`
+   - Per route: estendere `XotBaseRouteServiceProvider`
+   - Per eventi: estendere `XotBaseEventServiceProvider`
+   - Per applicazione principale: estendere `XotBaseServiceProvider`
+   - NON estendere direttamente `Illuminate\Support\ServiceProvider`
+
+2. **Proprietà Obbligatorie**
+   ```php
+   public string $name = 'NomeModulo';
+   public string $nameLower = 'nomemodulo';
+   protected string $module_dir = __DIR__;
+   protected string $module_ns = __NAMESPACE__;
+   ```
+
+3. **Boot Method**
+   ```php
+   public function boot(): void
+   {
+       parent::boot(); // SEMPRE chiamare il parent::boot()
+       // Aggiungere solo logica specifica del modulo/tema
+   }
+   ```
+
+4. **Register Method**
+   ```php
+   public function register(): void
+   {
+       parent::register(); // SEMPRE chiamare il parent::register()
+       // Aggiungere solo binding specifici del modulo/tema
+   }
+   ```
+
+## Cosa NON Fare
+
+❌ **Non Duplicare Metodi Standard**
+```php
+// NO: Questi metodi sono già nelle classi base
+public function registerTranslations(): void { }
+public function registerConfig(): void { }
+public function registerViews(): void { }
+public function registerBladeComponents(): void { }
+```
+
+❌ **Non Registrare Manualmente Componenti**
+```php
+// NO: La registrazione è automatica
+Blade::componentNamespace('Modules\Module\View\Components', 'module');
+Blade::component('component-name', ComponentClass::class);
+```
+
+## Cosa Fare
+
+✅ **Struttura Base per Moduli**
+```php
+<?php
+
+declare(strict_types=1);
+
+namespace Modules\MyModule\Providers;
+
+use Modules\Xot\Providers\XotBaseServiceProvider;
+
+class MyModuleServiceProvider extends XotBaseServiceProvider
+{
+    public string $name = 'MyModule';
+    public string $nameLower = 'mymodule';
+    protected string $module_dir = __DIR__;
+    protected string $module_ns = __NAMESPACE__;
+
+    public function boot(): void
+    {
+        parent::boot();
+        // Logica specifica del modulo
+    }
+}
+```
+
+✅ **Struttura Base per Temi**
+```php
+<?php
+
+declare(strict_types=1);
+
+namespace Themes\MyTheme\Providers;
+
+use Modules\Xot\Providers\XotBaseThemeServiceProvider;
+
+class ThemeServiceProvider extends XotBaseThemeServiceProvider
+{
+    public string $name = 'MyTheme';
+    public string $nameLower = 'mytheme';
+    protected string $module_dir = __DIR__;
+    protected string $module_ns = __NAMESPACE__;
+
+    public function boot(): void
+    {
+        parent::boot();
+        // Logica specifica del tema
+    }
+}
+```
+
+✅ **Struttura Base per Applicazione**
+```php
+<?php
+
+declare(strict_types=1);
+
+namespace App\Providers;
+
+use Modules\Xot\Providers\XotBaseServiceProvider;
+
+class AppServiceProvider extends XotBaseServiceProvider
+{
+    public string $name = 'App';
+    public string $nameLower = 'app';
+    protected string $module_dir = __DIR__;
+    protected string $module_ns = __NAMESPACE__;
+
+    public function boot(): void
+    {
+        parent::boot();
+        // Logica specifica dell'applicazione
+    }
+}
+```
+
+✅ **Aggiungere Solo Logica Specifica**
+```php
+protected function registerCustomFeatures(): void
+{
+    // Registrazione di feature specifiche del modulo/tema
+}
+```
+
+## Registrazione Componenti Blade
+
+### ❌ Cosa NON Fare
+```php
+// NO: Non registrare manualmente i componenti
+public function boot(): void
+{
+    Blade::componentNamespace('Modules\Module\View\Components', 'module');
+    Blade::component('component-name', ComponentClass::class);
+}
+```
+
+### ✅ Cosa Fare
+1. **Creare il Componente nella Directory Corretta**
+```php
+<?php
+
+declare(strict_types=1);
+
+namespace Modules\MyModule\View\Components;
+
+use Illuminate\View\Component;
+
+class MyComponent extends Component
+{
+    public function render()
+    {
+        return view('my-module::components.my-component');
+    }
+}
+```
+
+2. **Creare il Template nella Directory Corretta**
+```blade
+{{-- resources/views/components/my-component.blade.php --}}
+<div>
+    {{ $slot }}
+</div>
+```
+
+3. **Utilizzare il Componente**
+```blade
+<x-my-module::my-component>
+    Contenuto
+</x-my-module::my-component>
+```
+
+## Troubleshooting
+
+### Stringhe Non Tradotte
+- Verificare che i file di traduzione siano nella directory corretta (`lang/`)
+- Verificare che il nome del modulo/tema sia corretto in `$name` e `$nameLower`
+
+### Route Non Funzionanti
+- Verificare che `RouteServiceProvider` sia registrato correttamente
+- Verificare che le route siano nel file corretto (`routes/web.php` o `routes/api.php`)
+
+### Eventi Non Ascoltati
+- Verificare che `EventServiceProvider` sia registrato correttamente
+- Verificare che gli eventi e i listener siano mappati correttamente
+
+### Componenti Blade Non Funzionanti
+- Verificare che i componenti siano nella directory corretta (`View/Components/`)
+- Verificare che i template siano in `resources/views/components/`
+- Verificare che i nomi dei componenti seguano le convenzioni
+
+## Link Utili
+- [XotBaseServiceProvider](XotBaseServiceProvider.md)
+- [XotBaseThemeServiceProvider](XotBaseThemeServiceProvider.md)
+- [XotBaseRouteServiceProvider](XotBaseRouteServiceProvider.md)
+- [XotBaseEventServiceProvider](XotBaseEventServiceProvider.md)
+- [blade-component-registration.md](blade-component-registration.md)
+- [filament-best-practices.md](filament-best-practices.md)

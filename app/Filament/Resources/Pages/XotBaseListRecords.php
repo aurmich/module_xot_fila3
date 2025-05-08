@@ -27,14 +27,17 @@ abstract class XotBaseListRecords extends FilamentListRecords
 {
     use HasXotTable;
 
-
     /**
      * Get the table columns.
      *
      * @return array<string, Tables\Columns\Column>
      */
-    abstract public function getListTableColumns(): array;
+    public function getTableColumns(): array
+    {
+        return [];
+    }
 
+    
     /**
      * Get the default sort column and direction.
      *
@@ -76,27 +79,11 @@ abstract class XotBaseListRecords extends FilamentListRecords
      */
     protected function paginateTableQuery(Builder $query): Paginator
     {
-        $perPage = $this->getTableRecordsPerPage();
-
-        if ('all' === $perPage) {
-            $count = $query->count();
-
-            /* @var \Illuminate\Contracts\Pagination\Paginator */
-            Assert::isInstanceOf($res = $query->fastPaginate($count), Paginator::class);
-            return $res;
-        }
-
-        if (is_numeric($perPage)) {
-            $perPageInt = (int) $perPage;
-            Assert::greaterThan($perPageInt, 0);
-
-            /* @var \Illuminate\Contracts\Pagination\Paginator */
-            Assert::isInstanceOf($res = $query->fastPaginate($perPageInt), Paginator::class);
-            return $res;
-        }
-
-        /* @var \Illuminate\Contracts\Pagination\Paginator */
-        Assert::isInstanceOf($res = $query->fastPaginate(10), Paginator::class);
-        return $res;
+        return $query->fastPaginate(
+            ('all' === $this->getTableRecordsPerPage()) 
+            ? $query->count() 
+            : $this->getTableRecordsPerPage()
+        );
     }
 }
+

@@ -8,6 +8,7 @@ use Filament\Forms;
 use Filament\Forms\Form;
 use Illuminate\Support\Facades\Cache;
 use Filament\Forms\Contracts\HasForms;
+use Filament\Forms\Concerns\InteractsWithForms;
 use Filament\Widgets\WidgetConfiguration;
 use Filament\Widgets\Widget as FilamentWidget;
 use Modules\Xot\Actions\View\GetViewByClassAction;
@@ -23,7 +24,7 @@ abstract class XotBaseWidget extends FilamentWidget implements HasForms
 {
     use InteractsWithPageFilters;
     //use InteractsWithPageTable;
-    use Forms\Concerns\InteractsWithForms;
+    use InteractsWithForms;
     
     public string $title = '';
     public string $icon = '';
@@ -45,6 +46,8 @@ abstract class XotBaseWidget extends FilamentWidget implements HasForms
       
     ];
 
+    public ?array $data = [];
+
     /*
     public function __construct()
     {
@@ -55,19 +58,26 @@ abstract class XotBaseWidget extends FilamentWidget implements HasForms
         }
     }
     */
-        
+    /*
+    public function mount(): void
+    {
+        $this->form->fill();
+    }    
+    */
 
 
     abstract public function getFormSchema(): array;
 
+    /*
     final public function form(Form $form): Form
     {
         return $form
             ->schema($this->getFormSchema())
-            ->columns(2)
+            //->columns(2)
             ->statePath('data');
     }
-
+    */
+    
      protected function getFormActions(): array
     {
         return [

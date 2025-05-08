@@ -1,11 +1,13 @@
 <?php
 
-declare(strict_types=1);
-
-return [
-    'fields' => [
-        'view' => [
-            'label' => 'view',
-        ],
-    ],
-];
+return array (
+  'fields' => 
+  array (
+    'view' => 
+    array (
+      'label' => 'view',
+      'description' => 'view',
+      'helper_text' => 'view',
+    ),
+  ),
+);

@@ -126,7 +126,7 @@ trait HasXotTable
     public function getGridTableColumns(): array
     {
         return [
-            Stack::make($this->getListTableColumns()),
+            Stack::make($this->getTableColumns()),
         ];
     }
 
@@ -135,7 +135,7 @@ trait HasXotTable
      *
      * @return array<string, Tables\Columns\Column>
      */
-    public function getListTableColumns(): array
+    public function getTableColumns(): array
     {
         return [];
     }
