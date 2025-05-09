@@ -12,6 +12,8 @@ use Filament\Support\Colors\Color;
 use Modules\Xot\Actions\File\AssetAction;
 use Modules\Tenant\Services\TenantService;
 use Spatie\LaravelData\Concerns\WireableData;
+use Spatie\LaravelData\Attributes\WithTransformer;
+use Modules\Xot\Datas\Transformers\AssetTransformer;
 
 /**
  * Class MetatagData
@@ -92,6 +94,7 @@ class MetatagData extends Data implements Wireable
     public string $logo_square = '';
 
     /** @var string */
+    #[WithTransformer(AssetTransformer::class)]
     public string $logo_header = '';
 
     /** @var string */

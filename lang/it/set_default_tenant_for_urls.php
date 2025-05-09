@@ -31,6 +31,7 @@ return array (
       'label' => 'remember',
       'description' => 'remember',
       'helper_text' => 'remember',
+      'placeholder' => 'remember',
     ),
   ),
 );
