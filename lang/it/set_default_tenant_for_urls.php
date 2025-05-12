@@ -25,6 +25,8 @@ return array (
     'password' => 
     array (
       'label' => 'password',
+      'description' => 'password',
+      'helper_text' => 'password',
     ),
     'remember' => 
     array (
