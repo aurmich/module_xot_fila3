@@ -510,3 +510,11 @@ Il modulo è configurabile tramite:
 
 ## Documentazione Filament
 - [Linee Guida per getInfolistSchema](./filament/INFOLIST_SCHEMA_GUIDELINES.md) - Guida completa per l'implementazione corretta del metodo getInfolistSchema, con focus sull'uso delle chiavi stringa negli array 
+
+## Politica, Filosofia, Religione, Etica, Zen
+
+- **Politica**: Il modulo Xot promuove collaborazione, trasparenza e inclusività, senza discriminazioni.
+- **Filosofia**: Minimalismo, chiarezza, miglioramento continuo.
+- **Religione**: Laicità, rispetto di tutte le fedi, libertà di pensiero.
+- **Etica**: Onestà, rispetto, responsabilità, attenzione all'impatto sociale e ambientale.
+- **Zen**: Semplicità, concentrazione sul presente, armonia e serenità nello sviluppo.
