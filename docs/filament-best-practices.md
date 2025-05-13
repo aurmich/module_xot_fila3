@@ -680,4 +680,44 @@ Consulta l'esempio completo all'inizio di questo documento per una implementazio
 
 ---
 
+## Collocazione dei metodi tabellari
+
+**Regola:**
+I metodi `getTableColumns`, `getTableFilters`, `getTableActions`, `getTableBulkActions` vanno sempre implementati nella pagina collegata (es. `ListXResource`), **mai** nella Resource, secondo le regole Filament e Laraxot. La Resource deve solo definire le pagine e la form schema.
+
+**Motivazione:**
+- Rispetta la separazione delle responsabilità tra Resource e Page
+- Permette override e personalizzazione per singola pagina
+- Facilita la manutenzione e la testabilità
+- Allinea il codice agli standard Filament e Laraxot
+
+**Esempio corretto:**
+```php
+// In Resource:
+public static function getPages(): array {
+    return [
+        'index' => Pages\ListPerformanceFondos::route('/'),
+        // ...
+    ];
+}
+
+// In Pages/ListPerformanceFondos.php:
+public function getTableColumns(): array { /* ... */ }
+public function getTableFilters(): array { /* ... */ }
+public function getTableActions(): array { /* ... */ }
+public function getTableBulkActions(): array { /* ... */ }
+```
+
+**Esempio sbagliato:**
+```php
+// In Resource:
+public static function getTableColumns(): array { /* ... */ }
+```
+
+**Nota:**
+Aggiornare sempre la documentazione e le regole di progetto. Applicare la stessa regola a tutti i moduli e risorse Filament, anche custom.
+
+**Vedi anche:**
+- [Best Practices Filament per il modulo Performance](../../Performance/docs/filament.md)
+
 
