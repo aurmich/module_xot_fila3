@@ -117,10 +117,7 @@ Quando si identifica una nuova regola o pattern importante:
 4. **Windsurf**
    - [ ] Aggiornare .windsurfrules
    - [ ] Verificare coerenza
-<<<<<<< HEAD
 
-=======
->>>>>>> 39e73e8a (.)
    - [ ] Testare applicabilità 
 
 ## Gestione dei Prompt
@@ -172,9 +169,6 @@ Modules/Xot/docs/
 3. **Manutenzione**
    - Revisione periodica
    - Aggiornamento delle regole
-<<<<<<< HEAD
    - Verifica dei collegamenti    - [ ] Testare applicabilità 
 b6f667c (.)
-=======
    - Verifica dei collegamenti 
->>>>>>> 39e73e8a (.)

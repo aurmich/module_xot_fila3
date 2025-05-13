@@ -453,7 +453,6 @@ class RouteServiceProvider extends ServiceProvider
 // middleware essenziali o non essere integrate con il sistema di permessi
 ```
 
-<<<<<<< HEAD
 
 ### Errore: Eventi non ascoltati## Troubleshooting
 
@@ -474,9 +473,7 @@ class RouteServiceProvider extends ServiceProvider
 
 ### Problema: Eventi non ascoltati
 b6f667c (.)
-=======
 ### Errore: Eventi non ascoltati
->>>>>>> 39e73e8a (.)
 
 **Soluzione:** Verificare che:
 1. L'Event Provider estenda `BaseEventServiceProvider`
@@ -501,10 +498,7 @@ b6f667c (.)
 - [XotBaseRouteServiceProvider](/var/www/html/exa/base_orisbroker_fila3/laravel/Modules/Xot/Providers/XotBaseRouteServiceProvider.php)
 - [BaseEventServiceProvider](/var/www/html/exa/base_orisbroker_fila3/laravel/Modules/Xot/Providers/BaseEventServiceProvider.php)
 
-<<<<<<< HEAD
 
-=======
->>>>>>> 39e73e8a (.)
 # Best Practices per ServiceProvider
 
 ## Regole Fondamentali
@@ -718,7 +712,6 @@ class MyComponent extends Component
 - [XotBaseRouteServiceProvider](XotBaseRouteServiceProvider.md)
 - [XotBaseEventServiceProvider](XotBaseEventServiceProvider.md)
 - [blade-component-registration.md](blade-component-registration.md)
-<<<<<<< HEAD
 - [filament-best-practices.md](filament-best-practices.md)b6f667c (.)
 
 ## Correzione e motivazione (2025-05-13)
@@ -753,6 +746,4 @@ public function boot(): void
 ```
 
 **Collegamento:** Vedi anche [XotBaseServiceProvider.md](./XotBaseServiceProvider.md)
-=======
 - [filament-best-practices.md](filament-best-practices.md)
->>>>>>> 39e73e8a (.)

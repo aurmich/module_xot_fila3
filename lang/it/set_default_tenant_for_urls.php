@@ -1,43 +1,37 @@
 <?php
 
 return array (
-  'actions' => 
+  'actions' =>
   array (
-    'authenticate' => 
+    'authenticate' =>
     array (
       'label' => 'authenticate',
     ),
-    'login' => 
+    'login' =>
     array (
       'label' => 'login',
     ),
-    'request' => 
+    'request' =>
     array (
       'label' => 'request',
     ),
   ),
-  'fields' => 
+  'fields' =>
   array (
-    'email' => 
+    'email' =>
     array (
       'label' => 'email',
-<<<<<<< HEAD
       'description' => 'email',
       'helper_text' => 'email',
-=======
->>>>>>> 39e73e8a (.)
     ),
-    'password' => 
+    'password' =>
     array (
       'label' => 'password',
       'description' => 'password',
       'helper_text' => 'password',
-<<<<<<< HEAD
       'placeholder' => 'password',
-=======
->>>>>>> 39e73e8a (.)
     ),
-    'remember' => 
+    'remember' =>
     array (
       'label' => 'remember',
       'description' => 'remember',
