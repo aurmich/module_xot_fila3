@@ -21,15 +21,21 @@ return array (
     'email' => 
     array (
       'label' => 'email',
+<<<<<<< HEAD
       'description' => 'email',
       'helper_text' => 'email',
+=======
+>>>>>>> 39e73e8a (.)
     ),
     'password' => 
     array (
       'label' => 'password',
       'description' => 'password',
       'helper_text' => 'password',
+<<<<<<< HEAD
       'placeholder' => 'password',
+=======
+>>>>>>> 39e73e8a (.)
     ),
     'remember' => 
     array (

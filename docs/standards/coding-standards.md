@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 # Standard di Codice per il progetto
 
@@ -74,13 +75,88 @@ Ogni modifica ai dati sensibili deve essere:
 ## Principi Fondamentali
 
 Il codice del progetto il progetto **deve** aderire ai seguenti principi fondamentali:# Standard di Codice
+=======
+# Standard di Codice per il progetto
+>>>>>>> 39e73e8a (.)
 
-Questo documento contiene gli standard di codice generali per il progetto.
+> **Nota**: Questo documento è correlato a [Convenzioni](../../../docs/conventions.md) e [Naming Conventions](../../../docs/naming-conventions.md). Per una panoramica completa, consulta tutti i documenti correlati.
+
+Questo documento contiene gli standard di codice specifici per il progetto il progetto. Per le linee guida generali sulla scrittura del codice, consultare la [documentazione del modulo Xot](../CODE-STANDARDS.md).
+
+## Principi Fondamentali in il progetto
+
+Oltre ai principi generali documentati nel modulo Xot, in il progetto aderiamo ai seguenti principi:
+
+1. **Coerenza con l'Architettura Modulare**: Ogni modulo deve seguire la struttura e i pattern definiti
+2. **Documentazione Bilingue**: I commenti e la documentazione devono essere in italiano, con terminologia tecnica in inglese
+3. **Sicurezza dei Dati Sanitari**: Implementare sempre misure di sicurezza avanzate per la protezione dei dati sensibili
+
+## Regole Specifiche per il progetto
+
+### Moduli Custom
+
+il progetto utilizza diversi moduli personalizzati che richiedono specifiche implementazioni:
+
+1. **Modulo Patient**: 
+   - Implementare sempre la validazione ISEE
+   - Utilizzare lo stato di gravidanza come flag per i trattamenti disponibili
+
+2. **Modulo Dental**:
+   - Le prenotazioni devono sempre essere collegate a un paziente registrato
+   - Ogni visita deve avere uno stato tracciabile
+
+3. **Modulo User**:
+   - Implementare sempre il controllo multi-ruolo
+   - Utilizzare i permessi granulari per l'accesso alle funzionalità
+
+### Filament nel Contesto di il progetto
+
+Nel pannello di amministrazione di il progetto:
+
+1. Le risorse devono essere organizzate in navigazione gerarchica
+2. I form devono implementare sempre controlli di autorizzazione basati su ruoli
+3. Le azioni di massa devono essere limitate agli utenti amministratori
+
+### Internazionalizzazione
+
+il progetto richiede supporto multilingua per:
+
+1. Interfaccia utente (IT primario, EN secondario)
+2. Contenuti informativi per i pazienti
+3. Notifiche e comunicazioni
+
+## Migrazione dal Vecchio Sistema
+
+Quando si integra codice dal vecchio sistema, è necessario:
+
+1. Riscrivere completamente utilizzando tipizzazione stretta
+2. Documentare l'origine e le modifiche apportate
+3. Testare approfonditamente l'integrazione con i moduli esistenti
+
+## Configurazioni Specifiche
+
+il progetto utilizza le seguenti configurazioni personalizzate:
+
+1. File di configurazione per regioni e provincie italiane
+2. Configurazioni per integrazione con servizi sanitari nazionali
+3. Mappatura codici per prestazioni odontoiatriche
+
+## Audit e Logging
+
+Ogni modifica ai dati sensibili deve essere:
+
+1. Registrata con timestamp e utente che ha effettuato la modifica
+2. Accessibile tramite interfaccia di audit per gli amministratori
+3. Conservata secondo le normative sulla privacy e gestione dati sanitari
 
 ## Principi Fondamentali
 
+<<<<<<< HEAD
 Il codice del progetto **deve** aderire ai seguenti principi fondamentali:
 b6f667c (.)
+=======
+Il codice del progetto il progetto **deve** aderire ai seguenti principi fondamentali:
+>>>>>>> 39e73e8a (.)
 
 1. **Robustezza**: Il codice deve funzionare correttamente anche in condizioni impreviste o avverse
 2. **Solidità**: La struttura deve essere manutenibile, scalabile e testabile
@@ -257,6 +333,7 @@ class StorePatientRequest extends FormRequest
     public function rules(): array
     {
         return [
+<<<<<<< HEAD
 
             'tax_code' => ['required', 'string', 'size:16', 'unique:patients,tax_code'],
             'first_name' => ['required', 'string', 'max:255'],
@@ -276,11 +353,27 @@ class StorePatientRequest extends FormRequest
             'birth_date' => ['required', 'date', 'before:today'],
             'tax_code' => ['required', 'string', 'size:16', 'unique:patients,tax_code'],
 b6f667c (.)
+=======
+            'tax_code' => ['required', 'string', 'size:16', 'unique:patients,tax_code'],
+            'first_name' => ['required', 'string', 'max:255'],
+            'last_name' => ['required', 'string', 'max:255'],
+            'birth_date' => ['required', 'date', 'before:today'],
+            'gender' => ['required', 'string', 'in:' . implode(',', array_column(GenderType::cases(), 'value'))],
+            'email' => ['required', 'email', 'unique:patients,email'],
+            'phone' => ['required', 'string', 'max:20'],
+            'address' => ['required', 'string', 'max:255'],
+            'city' => ['required', 'string', 'max:255'],
+            'province' => ['required', 'string', 'size:2'],
+            'postal_code' => ['required', 'string', 'size:5'],
+            'isee' => ['required', 'numeric', 'min:0'],
+            'is_pregnant' => ['boolean'],
+>>>>>>> 39e73e8a (.)
         ];
     }
 }
 ```
 
+<<<<<<< HEAD
 
 ## Collegamenti Correlati
 
@@ -542,4 +635,12 @@ git commit -m "fix: correzione calcolo età paziente"
 * [coding-standards.md](../../../Xot/docs/standards/coding-standards.md)
 * [coding-standards.md](../../../Xot/docs/conventions/coding-standards.md)
 b6f667c (.)
+=======
+## Collegamenti Correlati
+
+- [Convenzioni](../../../docs/conventions.md)
+- [Naming Conventions](../../../docs/naming-conventions.md)
+- [Documentazione Xot](../CODE-STANDARDS.md)
+- [Collegamenti Documentazione](../../../../docs/collegamenti-documentazione.md)
+>>>>>>> 39e73e8a (.)
 

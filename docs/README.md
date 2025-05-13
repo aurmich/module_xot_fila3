@@ -11,6 +11,8 @@ Il modulo Xot è il modulo base che fornisce le classi e le funzionalità fondam
 - [Architecture](./architecture.md) - Architettura del modulo
 - [Base Classes](./base_classes.md) - Classi base
 - [Service Providers](./service_providers.md) - Provider di servizi
+- [Volt Folio Best Practices](./VOLT_FOLIO_BEST_PRACTICES.md) - Best practices per Volt e Folio
+- [Volt Folio Best Practices](./VOLT_FOLIO_BEST_PRACTICES.md) - Best practices per Volt e Folio
 
 - [Volt Folio Best Practices](./VOLT_FOLIO_BEST_PRACTICES.md) - Best practices per Volt e Folio
 - [Volt Folio Best Practices](./VOLT_FOLIO_BEST_PRACTICES.md) - Best practices per Volt e Foliob6f667c (.)
@@ -512,13 +514,17 @@ Il modulo è configurabile tramite:
 ## Documentazione Filament
 - [Linee Guida per getInfolistSchema](./filament/INFOLIST_SCHEMA_GUIDELINES.md) - Guida completa per l'implementazione corretta del metodo getInfolistSchema, con focus sull'uso delle chiavi stringa negli array 
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 39e73e8a (.)
 ## Politica, Filosofia, Religione, Etica, Zen
 
 - **Politica**: Il modulo Xot promuove collaborazione, trasparenza e inclusività, senza discriminazioni.
 - **Filosofia**: Minimalismo, chiarezza, miglioramento continuo.
 - **Religione**: Laicità, rispetto di tutte le fedi, libertà di pensiero.
 - **Etica**: Onestà, rispetto, responsabilità, attenzione all'impatto sociale e ambientale.
+<<<<<<< HEAD
 - **Zen**: Semplicità, concentrazione sul presente, armonia e serenità nello sviluppo.b6f667c (.)
 
 ## Service Provider: Decisione Architetturale (2025-05-13)
@@ -543,3 +549,6 @@ Consulta le [best practices aggiornate](./providers/service_provider_best_practi
 
 ## Backlink
 - [Collegamento a docs/links.md della root](../../../../docs/links.md)
+=======
+- **Zen**: Semplicità, concentrazione sul presente, armonia e serenità nello sviluppo.
+>>>>>>> 39e73e8a (.)
