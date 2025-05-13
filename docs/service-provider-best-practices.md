@@ -421,7 +421,28 @@ class RouteServiceProvider extends ServiceProvider
 // middleware essenziali o non essere integrate con il sistema di permessi
 ```
 
+<<<<<<< HEAD
 ### Errore: Eventi non ascoltati
+=======
+## Troubleshooting
+
+### Problema: Traduzioni non caricate
+
+**Soluzione:** Verificare che:
+1. Il Service Provider estenda `XotBaseServiceProvider`
+2. Il metodo `boot()` chiami `parent::boot()`
+3. Le proprietà `$moduleName` e `$moduleNameLower` siano definite correttamente
+
+### Problema: Route non funzionanti
+
+**Soluzione:** Verificare che:
+1. Il Route Provider estenda `XotBaseRouteServiceProvider`
+2. Il metodo `boot()` chiami `parent::boot()`
+3. La proprietà `$moduleNameLower` sia definita correttamente
+4. I file di route siano nei percorsi corretti (web.php, api.php, admin.php)
+
+### Problema: Eventi non ascoltati
+>>>>>>> b6f667c (.)
 
 **Soluzione:** Verificare che:
 1. L'Event Provider estenda `BaseEventServiceProvider`
@@ -445,6 +466,7 @@ class RouteServiceProvider extends ServiceProvider
 - [XotBaseServiceProvider](/var/www/html/exa/base_orisbroker_fila3/laravel/Modules/Xot/Providers/XotBaseServiceProvider.php)
 - [XotBaseRouteServiceProvider](/var/www/html/exa/base_orisbroker_fila3/laravel/Modules/Xot/Providers/XotBaseRouteServiceProvider.php)
 - [BaseEventServiceProvider](/var/www/html/exa/base_orisbroker_fila3/laravel/Modules/Xot/Providers/BaseEventServiceProvider.php)
+<<<<<<< HEAD
 
 # Best Practices per ServiceProvider
 
@@ -660,3 +682,5 @@ class MyComponent extends Component
 - [XotBaseEventServiceProvider](XotBaseEventServiceProvider.md)
 - [blade-component-registration.md](blade-component-registration.md)
 - [filament-best-practices.md](filament-best-practices.md)
+=======
+>>>>>>> b6f667c (.)

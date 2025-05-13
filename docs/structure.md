@@ -239,7 +239,10 @@ laravel/Themes/[Nome]/
 
 ---
 
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> b6f667c (.)
 
 # Struttura del Modulo Xot
 
@@ -1098,6 +1101,9 @@ tests_old
 
 ---
 
+<<<<<<< HEAD
 =======
 >>>>>>> aurmich/dev
 >>>>>>> 5693302 (.)
+=======
+>>>>>>> b6f667c (.)

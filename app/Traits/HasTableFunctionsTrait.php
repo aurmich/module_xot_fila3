@@ -15,7 +15,11 @@ trait HasTableFunctionsTrait
      *
      * @return array<string, \Filament\Tables\Columns\Column>
      */
+<<<<<<< HEAD
     public function getTableColumns(): array
+=======
+    public function getListTableColumns(): array
+>>>>>>> b6f667c (.)
     {
         return [
             'id' => TextColumn::make('id'),

@@ -11,8 +11,11 @@ Il modulo Xot è il modulo base che fornisce le classi e le funzionalità fondam
 - [Architecture](./architecture.md) - Architettura del modulo
 - [Base Classes](./base_classes.md) - Classi base
 - [Service Providers](./service_providers.md) - Provider di servizi
+<<<<<<< HEAD
 - [Volt Folio Best Practices](./VOLT_FOLIO_BEST_PRACTICES.md) - Best practices per Volt e Folio
 - [Volt Folio Best Practices](./VOLT_FOLIO_BEST_PRACTICES.md) - Best practices per Volt e Folio
+=======
+>>>>>>> b6f667c (.)
 
 ### Filament
 - [Filament Integration](./filament_integration.md) - Integrazione con Filament
@@ -510,6 +513,7 @@ Il modulo è configurabile tramite:
 
 ## Documentazione Filament
 - [Linee Guida per getInfolistSchema](./filament/INFOLIST_SCHEMA_GUIDELINES.md) - Guida completa per l'implementazione corretta del metodo getInfolistSchema, con focus sull'uso delle chiavi stringa negli array 
+<<<<<<< HEAD
 
 ## Politica, Filosofia, Religione, Etica, Zen
 
@@ -518,3 +522,5 @@ Il modulo è configurabile tramite:
 - **Religione**: Laicità, rispetto di tutte le fedi, libertà di pensiero.
 - **Etica**: Onestà, rispetto, responsabilità, attenzione all'impatto sociale e ambientale.
 - **Zen**: Semplicità, concentrazione sul presente, armonia e serenità nello sviluppo.
+=======
+>>>>>>> b6f667c (.)

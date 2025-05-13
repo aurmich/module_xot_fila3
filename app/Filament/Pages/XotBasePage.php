@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Modules\Xot\Filament\Pages;
 
+<<<<<<< HEAD
 use Filament\Forms\Form;
 use Filament\Pages\Page;
 use Illuminate\Support\Str;
@@ -13,23 +14,37 @@ use Illuminate\Database\Eloquent\Model;
 use Modules\Xot\Filament\Traits\TransTrait;
 use Filament\Forms\Concerns\InteractsWithForms;
 use Illuminate\Contracts\Auth\Authenticatable;
+=======
+use Filament\Pages\Page;
+use Illuminate\Support\Str;
+use Modules\Xot\Filament\Traits\TransTrait;
+>>>>>>> b6f667c (.)
 
 /**
  * Undocumented class.
  *
  * @property ?string $model
  */
+<<<<<<< HEAD
 abstract class XotBasePage extends Page implements HasForms
 {
     use TransTrait;
     use InteractsWithForms;
+=======
+abstract class XotBasePage extends Page
+{
+    use TransTrait;
+>>>>>>> b6f667c (.)
 
     protected static ?string $navigationIcon = 'heroicon-o-computer-desktop';
 
     protected static string $view = 'job::filament.pages.job-monitor';
 
     protected static ?string $model = null; // ---
+<<<<<<< HEAD
     public ?array $data = [];
+=======
+>>>>>>> b6f667c (.)
 
     // public function mount(): void {
     //     $user = auth()->user();
@@ -96,6 +111,7 @@ abstract class XotBasePage extends Page implements HasForms
 
         return $res;
     }
+<<<<<<< HEAD
 
     public function form(Form $form): Form
     {
@@ -118,4 +134,6 @@ abstract class XotBasePage extends Page implements HasForms
 
         return $user;
     }
+=======
+>>>>>>> b6f667c (.)
 }
