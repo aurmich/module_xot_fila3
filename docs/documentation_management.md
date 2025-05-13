@@ -171,4 +171,7 @@ Modules/Xot/docs/
    - Aggiornamento delle regole
    - Verifica dei collegamenti    - [ ] Testare applicabilità 
 b6f667c (.)
+<<<<<<< HEAD
    - Verifica dei collegamenti 
+=======
+>>>>>>> 38698b4d9 (fix collisioni sync)

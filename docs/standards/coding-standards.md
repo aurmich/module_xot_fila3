@@ -150,7 +150,10 @@ Ogni modifica ai dati sensibili deve essere:
 
 Il codice del progetto **deve** aderire ai seguenti principi fondamentali:
 b6f667c (.)
+<<<<<<< HEAD
 Il codice del progetto il progetto **deve** aderire ai seguenti principi fondamentali:
+=======
+>>>>>>> 38698b4d9 (fix collisioni sync)
 
 1. **Robustezza**: Il codice deve funzionare correttamente anche in condizioni impreviste o avverse
 2. **Solidità**: La struttura deve essere manutenibile, scalabile e testabile
@@ -346,6 +349,7 @@ class StorePatientRequest extends FormRequest
             'birth_date' => ['required', 'date', 'before:today'],
             'tax_code' => ['required', 'string', 'size:16', 'unique:patients,tax_code'],
 b6f667c (.)
+<<<<<<< HEAD
             'tax_code' => ['required', 'string', 'size:16', 'unique:patients,tax_code'],
             'first_name' => ['required', 'string', 'max:255'],
             'last_name' => ['required', 'string', 'max:255'],
@@ -359,6 +363,8 @@ b6f667c (.)
             'postal_code' => ['required', 'string', 'size:5'],
             'isee' => ['required', 'numeric', 'min:0'],
             'is_pregnant' => ['boolean'],
+=======
+>>>>>>> 38698b4d9 (fix collisioni sync)
         ];
     }
 }
@@ -625,10 +631,13 @@ git commit -m "fix: correzione calcolo età paziente"
 * [coding-standards.md](../../../Xot/docs/standards/coding-standards.md)
 * [coding-standards.md](../../../Xot/docs/conventions/coding-standards.md)
 b6f667c (.)
+<<<<<<< HEAD
 ## Collegamenti Correlati
 
 - [Convenzioni](../../../docs/conventions.md)
 - [Naming Conventions](../../../docs/naming-conventions.md)
 - [Documentazione Xot](../CODE-STANDARDS.md)
 - [Collegamenti Documentazione](../../../../docs/collegamenti-documentazione.md)
+=======
+>>>>>>> 38698b4d9 (fix collisioni sync)
 

@@ -17,6 +17,9 @@ Il modulo Xot è il modulo base che fornisce le classi e le funzionalità fondam
 - [Volt Folio Best Practices](./VOLT_FOLIO_BEST_PRACTICES.md) - Best practices per Volt e Folio
 - [Volt Folio Best Practices](./VOLT_FOLIO_BEST_PRACTICES.md) - Best practices per Volt e Foliob6f667c (.)
 
+- [Volt Folio Best Practices](./VOLT_FOLIO_BEST_PRACTICES.md) - Best practices per Volt e Folio
+- [Volt Folio Best Practices](./VOLT_FOLIO_BEST_PRACTICES.md) - Best practices per Volt e Foliob6f667c (.)
+
 ### Filament
 - [Filament Integration](./filament_integration.md) - Integrazione con Filament
 - [Widgets](./widgets.md) - Sistema widget
@@ -545,4 +548,7 @@ Consulta le [best practices aggiornate](./providers/service_provider_best_practi
 
 ## Backlink
 - [Collegamento a docs/links.md della root](../../../../docs/links.md)
+<<<<<<< HEAD
 - **Zen**: Semplicità, concentrazione sul presente, armonia e serenità nello sviluppo.
+=======
+>>>>>>> 38698b4d9 (fix collisioni sync)
