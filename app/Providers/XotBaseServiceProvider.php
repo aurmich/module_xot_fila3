@@ -4,17 +4,13 @@ declare(strict_types=1);
 
 namespace Modules\Xot\Providers;
 
-use Illuminate\Support\Arr;
-use Illuminate\Support\Str;
-use Webmozart\Assert\Assert;
 use Illuminate\Support\Facades\Blade;
 use Illuminate\Support\Facades\Config;
 use Illuminate\Support\ServiceProvider;
-use Modules\Xot\Datas\ComponentFileData;
-use Nwidart\Modules\Traits\PathNamespace;
+use Illuminate\Support\Str;
 use Modules\Xot\Actions\Blade\RegisterBladeComponentsAction;
-use Modules\Xot\Actions\Module\GetModulePathByGeneratorAction;
 use Modules\Xot\Actions\Livewire\RegisterLivewireComponentsAction;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 use BladeUI\Icons\Factory as BladeIconsFactory;
@@ -22,6 +18,11 @@ use Illuminate\Contracts\Container\Container;
 >>>>>>> b6f667c (.)
 
 use function Safe\realpath;
+=======
+use Modules\Xot\Actions\Module\GetModulePathByGeneratorAction;
+use Nwidart\Modules\Traits\PathNamespace;
+use Webmozart\Assert\Assert;
+>>>>>>> fc83074 (.)
 
 /**
  * Class XotBaseServiceProvider.
@@ -168,7 +169,6 @@ abstract class XotBaseServiceProvider extends ServiceProvider
      */
     protected function registerConfig(): void
     {
-
         try {
             $configPath = app(GetModulePathByGeneratorAction::class)->execute($this->name, 'config');
 
@@ -182,11 +182,17 @@ abstract class XotBaseServiceProvider extends ServiceProvider
     public function registerBladeComponents(): void
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
         $componentViewPath = app(GetModulePathByGeneratorAction::class)->execute($this->name, 'component-view');
         Blade::anonymousComponentPath($componentViewPath);
 
 >>>>>>> b6f667c (.)
+=======
+        $componentViewPath = app(GetModulePathByGeneratorAction::class)->execute($this->name, 'component-view');
+        Blade::anonymousComponentPath($componentViewPath);
+
+>>>>>>> fc83074 (.)
         $componentClassPath = app(GetModulePathByGeneratorAction::class)->execute($this->name, 'component-class');
 
         $namespace = $this->module_ns.'\View\Components';
@@ -233,6 +239,7 @@ abstract class XotBaseServiceProvider extends ServiceProvider
                 Assert::isArray($item);
                 Assert::keyExists($item, 'ns');
                 Assert::string($item['ns']);
+
                 return $item['ns'];
             },
             $commands

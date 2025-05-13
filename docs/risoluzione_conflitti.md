@@ -74,25 +74,36 @@ Per le best practices complete, consultare il file [best_practices.md](conflicts
    - Testare la compatibilità
    - Validare le funzionalità
 
-# Risoluzione Conflitti Git - Modulo Xot
+## File Risolti Recentemente
 
-## Helper.php
+1. **Modulo Activity**
+   - Conflitti nelle migrazioni del database
+   - Implementazione delle annotazioni PHPDoc corrette
+   - Struttura coerente dei modelli
 
-### Intent
-- Garantire la corretta normalizzazione del percorso `doc_root` e tipizzazione forte senza casting ridondanti.
+2. **Modulo Tenant**
+   - Risoluzione conflitti nei controller
+   - Allineamento delle policy di autorizzazione
+   - Miglioramento gestione multi-tenancy
 
-### Cosa
-- Rimosso marker di conflitto e duplicazioni nella funzione `dddx`.
-- Utilizzato `Assert::string()` per garantire il tipo di `doc_root`.
-- Semplificata la logica di `str_replace` per la conversione dei separatori di percorso.
+3. **Modulo Media**
+   - Risoluzione conflitti nel SubtitleService
+   - Aggiornamento della documentazione
+   - Allineamento con PHPStan livello 9
 
-## Collegamenti
-- Documentazione principale: [Ris. conflitti Git - Modulo Xot](../../../docs/risoluzione_conflitti_git.md#modulo-xot)
+## Dettagli delle Risoluzioni
 
-## Collegamenti alla Documentazione Principale
+1. **Xot/app/Actions/Export/ExportXlsByView.php**
+   - Allineamento delle annotazioni PHPDoc
+   - Rimozione codici duplicati
+   - Compatibilità con PHPStan livello 9
 
-Per una panoramica completa di tutti i conflitti risolti, vedere la [documentazione centrale sulla risoluzione dei conflitti git](../../../docs/risoluzione_conflitti_git.md). 
+2. **Xot/app/Actions/Model/UpdateAction.php**
+   - Risoluzione conflitti nella gestione dei tipi di dati
+   - Miglioramento della gestione degli errori
+   - Documentazione dei metodi aggiornata
 
+<<<<<<< HEAD
 ## Collegamenti Esterni
 
 - [Documentazione generale sulla risoluzione dei conflitti git](../../../docs/risoluzione_conflitti_git.md)
@@ -187,6 +198,12 @@ I seguenti conflitti sono stati risolti come parte dell'ultima manutenzione del 
 8. **Activity/database/migrations/2023_10_30_103350_create_stored_events_table.php**: Risolto il conflitto nella migrazione mantenendo l'annotazione PHPDoc per i parametri di tipo Blueprint.
 
 9. **Activity/database/migrations/2023_03_31_103350_create_activity_table.php**: Risolto il conflitto nella migrazione mantenendo la versione con annotazioni PHPDoc corrette.
+=======
+3. **Activity/database/migrations/2023_03_31_103350_create_activity_table.php**
+   - Mantenimento delle annotazioni PHPDoc per i parametri Blueprint
+   - Uniformità nella struttura delle migrazioni
+   - Coerenza con le convenzioni del framework
+>>>>>>> fc83074 (.)
 
 Le modifiche sono state applicate seguendo le best practice documentate in `CONFLITTI_MERGE_RISOLTI.md`, privilegiando la chiarezza del codice e la coerenza con gli standard di progetto.
 
@@ -218,6 +235,7 @@ La risoluzione dei conflitti rimanenti dovrebbe seguire questi principi:
 5. **Documentare le decisioni**: Per ogni conflitto risolto, documentare l'intento e il motivo della scelta effettuata.
 
 ## Collegamenti tra versioni di risoluzione_conflitti.md
+<<<<<<< HEAD
 * [risoluzione_conflitti.md](../../../Xot/docs/risoluzione_conflitti.md)
 * [risoluzione_conflitti.md](../../../Tenant/docs/risoluzione_conflitti.md)
 
@@ -227,3 +245,8 @@ La risoluzione dei conflitti rimanenti dovrebbe seguire questi principi:
 >>>>>>> 5693302 (.)
 =======
 >>>>>>> b6f667c (.)
+=======
+* [Risoluzione Conflitti Xot](../../../Xot/docs/risoluzione_conflitti.md)
+* [Risoluzione Conflitti Tenant](../../../Tenant/docs/risoluzione_conflitti.md)
+* [Linee Guida Principali Risoluzione Conflitti](../../../../docs/conflict_resolution.md)
+>>>>>>> fc83074 (.)

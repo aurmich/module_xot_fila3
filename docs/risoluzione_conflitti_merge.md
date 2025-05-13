@@ -1,13 +1,74 @@
-# Risoluzione dei Conflitti di Merge in il progetto
+# Risoluzione dei Conflitti di Merge nel Progetto
 
 ## Problema
 
-Durante lo sviluppo del progetto, sono stati identificati diversi file con conflitti di merge non risolti. Questi conflitti erano indicati dalla presenza di marcatori nel codice sorgente. I conflitti non risolti causavano errori durante l'analisi statica con PHPStan e impedivano il corretto funzionamento del codice.
+Durante lo sviluppo del progetto Laraxot PTVX, sono stati identificati diversi file con conflitti di merge non risolti. Questi conflitti erano indicati dalla presenza di marcatori  nel codice sorgente. I conflitti non risolti causavano errori durante l'analisi statica con PHPStan e impedivano il corretto funzionamento del codice.
+
+## Approccio Metodologico
+
+### 1. Identificazione
+- Utilizzare strumenti di ricerca per trovare i marcatori di conflitto
+- Categorizzare i conflitti per modulo e tipo (codice, documentazione, configurazione)
+- Stabilire priorità basate sull'impatto funzionale
+
+### 2. Analisi
+- Studiare le differenze tra le versioni in conflitto
+- Comprendere lo scopo e il contesto di ciascuna modifica
+- Consultare la documentazione pertinente
+- Considerare le implicazioni di ciascuna scelta
+
+### 3. Risoluzione
+- Applicare le best practices del progetto
+- Mantenere la compatibilità con PHPStan livello 9
+- Garantire la coerenza con l'architettura esistente
+- Documentare le motivazioni delle decisioni
+
+### 4. Documentazione
+- Aggiornare la documentazione dei moduli
+- Creare collegamenti bidirezionali tra i documenti
+- Assicurare che ogni documento abbia almeno due collegamenti in entrata
+
+## Strategia di Risoluzione per Tipo di File
+
+### File PHP
+- Mantenere i tipi espliciti (PHP 8.x)
+- Utilizzare docblocks completi per proprietà e metodi
+- Evitare type casting diretto di valori mixed
+- Gestire correttamente i casi null
+- Preferire QueueableActions ai Services tradizionali
+
+### File di Configurazione
+- Mantenere la coerenza con il resto del progetto
+- Preservare le opzioni di configurazione avanzate
+- Documentare chiaramente il significato di ciascuna opzione
+
+### File di Documentazione
+- Combinare le versioni preservando tutte le informazioni utili
+- Strutturare i documenti in modo logico e coerente
+- Assicurare che ogni documento spieghi il "perché" oltre al "come"
+
+## Casistiche Risolte
+
+### Conflitti di Namespace
+I conflitti nei namespace sono stati risolti seguendo la regola fondamentale: i namespace dei moduli **NON** devono includere il segmento `app` anche se i file sono fisicamente posizionati nella directory `app`.
+
+### Conflitti nelle Actions
+Nelle Actions, in particolare quelle che gestiscono export e view, i conflitti sono stati risolti privilegiando:
+- Le versioni con annotazioni PHPDoc corrette e complete
+- La gestione sicura dei tipi di dati
+- L'ottimizzazione delle prestazioni
+
+### Conflitti nelle Migrazioni
+Nelle migrazioni, abbiamo mantenuto:
+- Le annotazioni PHPDoc per i parametri di tipo Blueprint
+- La struttura coerente con le convenzioni Laravel
+- I commenti esplicativi per campi complessi
 
 ## Collegamenti Bidirezionali
 
-- [Linee Guida Generali per la Risoluzione dei Conflitti Git](../../../../docs/risoluzione_conflitti_git.md)
+- [Linee Guida Generali per la Risoluzione dei Conflitti Git](../../../../docs/conflict_resolution.md)
 - [Documentazione Conflitti Git nei Moduli](../../../../docs/conflitti_git_moduli.md)
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -425,70 +486,24 @@ Per le best practices complete, consultare il file [best_practices.md](conflicts
 ## Casi Risolti Recentemente
 
 ### 1. Namespace e Convenzioni
+=======
+- [Best Practices PHPStan](phpstan/best_practices.md)
+>>>>>>> fc83074 (.)
 - [Convenzioni Namespace](NAMESPACE-CONVENTIONS.md)
-- Risoluzione conflitti nelle convenzioni di namespace
-- Mantenimento della compatibilità con PHPStan
+- [Struttura Moduli](MODULE-STRUCTURE.md)
 
-### 2. Actions e Export
-- [ExportXlsByCollection](actions/export/exportxlsbycollection_conflict.md)
-  - Risoluzione conflitti nella documentazione PHPDoc
-  - Miglioramento della compatibilità con PHPStan
-  - Documentazione più completa e chiara
+## Problematiche Rimanenti
 
-- [GetViewByClassAction](actions/view/getviewbyclassaction_conflict.md)
-  - Implementazione conversione tipi con `strval()`
-  - Mantenimento compatibilità PHPStan livello 10
-  - Documentazione delle decisioni prese
+Alcuni file necessitano ancora di attenzione, in particolare:
+- Actions nel modulo Xot che gestiscono export e view
+- File di documentazione PHPStan nei vari moduli
+- Alcuni file di configurazione con opzioni in conflitto
 
-### 3. Autenticazione e UI
-- [Componenti Filament](../../Themes/One/docs/FILAMENT_COMPONENTS.md)
-- [Registrazione Utenti](../../Themes/One/docs/AUTH.md)
-  - Implementazione completa sistema registrazione
-  - Gestione tipi utente dinamica
-  - UI moderna con Filament
+## Conclusioni e Raccomandazioni
 
-## Processo di Risoluzione
-
-1. **Analisi**
-   - Identificare la natura del conflitto
-   - Valutare l'impatto delle modifiche
-   - Consultare la documentazione esistente
-
-2. **Decisione**
-   - Scegliere la versione più completa
-   - Mantenere la compatibilità con gli standard
-   - Considerare la manutenibilità futura
-
-3. **Implementazione**
-   - Applicare le modifiche in modo coerente
-   - Aggiornare la documentazione
-   - Verificare la compatibilità
-
-4. **Documentazione**
-   - Creare file di documentazione dedicati
-   - Aggiornare i collegamenti
-   - Mantenere traccia delle decisioni
-
-## Collegamenti Correlati
-
-- [Best Practices](conflicts/best_practices.md)
-- [PHPStan Livello 10](phpstan_livello10_linee_guida.md)
-- [Struttura Moduli](module-structure.md)
-- [Risoluzione Conflitti](risoluzione_conflitti.md)
-
-## Note Importanti
-
-1. **Compatibilità**
-   - Mantenere la compatibilità con PHPStan
-   - Seguire le convenzioni di Laravel
-   - Rispettare gli standard di codifica
-
-2. **Documentazione**
-   - Aggiornare sempre la documentazione
-   - Mantenere collegamenti bidirezionali
-   - Documentare le decisioni prese
-
-3. **Testing**
-   - Verificare le modifiche con PHPStan
-   - Testare la compatibilità
-   - Validare le funzionalità 
+La risoluzione dei conflitti di merge richiede un approccio metodico e una conoscenza approfondita del progetto. È fondamentale:
+1. Comprendere lo scopo delle modifiche
+2. Mantenere la compatibilità con gli standard del progetto
+3. Documentare accuratamente le decisioni prese
+4. Verificare che le modifiche non introducano regressioni
+5. Mantenere aggiornata la documentazione con collegamenti bidirezionali

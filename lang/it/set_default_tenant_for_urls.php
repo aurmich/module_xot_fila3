@@ -22,12 +22,15 @@ return array (
     'email' => 
     array (
       'label' => 'email',
+      'description' => 'email',
+      'helper_text' => 'email',
     ),
     'password' => 
     array (
       'label' => 'password',
       'description' => 'password',
       'helper_text' => 'password',
+      'placeholder' => 'password',
     ),
     'remember' => 
     array (

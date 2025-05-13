@@ -4,18 +4,17 @@ declare(strict_types=1);
 
 namespace Modules\Xot\Filament\Resources\XotBaseResource\Pages;
 
-use Filament\Forms\Form;
-use Filament\Tables\Table;
-use Illuminate\Support\Str;
-use Filament\Tables\Actions\Action;
-use Filament\Tables\Columns\TextColumn;
-use Illuminate\Database\Eloquent\Model;
-use Filament\Forms\Components\Component;
-use Filament\Tables\Actions\CreateAction;
-use Modules\Xot\Filament\Traits\HasXotTable;
 use Filament\Forms\Concerns\InteractsWithForms;
-use Modules\Xot\Filament\Traits\NavigationLabelTrait;
+use Filament\Forms\Form;
 use Filament\Resources\Pages\ManageRelatedRecords as FilamentManageRelatedRecords;
+use Filament\Tables\Actions\Action;
+use Filament\Tables\Actions\CreateAction;
+use Filament\Tables\Columns\TextColumn;
+use Filament\Tables\Table;
+use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Str;
+use Modules\Xot\Filament\Traits\HasXotTable;
+use Modules\Xot\Filament\Traits\NavigationLabelTrait;
 
 /**
  * Classe base per la gestione delle relazioni nelle risorse Filament.
@@ -24,7 +23,6 @@ use Filament\Resources\Pages\ManageRelatedRecords as FilamentManageRelatedRecord
  */
 abstract class XotBaseManageRelatedRecords extends FilamentManageRelatedRecords
 {
-
     use HasXotTable;
     use InteractsWithForms;
     use NavigationLabelTrait;
@@ -106,9 +104,23 @@ abstract class XotBaseManageRelatedRecords extends FilamentManageRelatedRecords
         ];
     }
 
-    /**
+    /*
      * Configura la tabella per la visualizzazione dei record correlati.
+     * public function table(Table $table): Table
+     * {
+     * return $table
+     * ->columns($this->getTableColumns())
+     * ->headerActions($this->getTableHeaderActions())
+     * ->actions($this->getTableActions())
+     * ->bulkActions([])
+     * ->emptyStateActions([
+     * 'create' => CreateAction::make()
+     * ->label('Crea Nuovo')
+     * ->disableCreateAnother(),
+     * ]);
+     * }.
      */
+<<<<<<< HEAD
     public function table(Table $table): Table
     {
         return $table
@@ -127,6 +139,8 @@ abstract class XotBaseManageRelatedRecords extends FilamentManageRelatedRecords
             ]);
     }
 
+=======
+>>>>>>> fc83074 (.)
     /**
      * Configura il form per la creazione/modifica dei record correlati.
      */

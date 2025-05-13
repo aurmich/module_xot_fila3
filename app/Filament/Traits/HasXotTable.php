@@ -246,6 +246,8 @@ trait HasXotTable
             ->emptyStateActions($this->getTableEmptyStateActions())
             ->striped();
 
+        $table = $table
+            ->paginated($this->getTablePaginated());
         /*
             ->defaultSort(
                 column: $this->getDefaultTableSortColumn(),
@@ -253,6 +255,11 @@ trait HasXotTable
             );
         */
         return $table;
+    }
+
+    protected function getTablePaginated(): bool
+    {
+        return true;
     }
 
     /**
