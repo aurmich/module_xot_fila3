@@ -6,42 +6,28 @@ L'action `ExportXlsByView` è un componente essenziale nel framework Laraxot PTV
 
 ## Problematiche Riscontrate
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-Il file presenta un marker di conflitto `
-=======
 
->>>>>>> 5693302 (.):docs/actions/export/ExportXlsByView_conflict.md
-=======
 Il file presenta un marker di conflitto `
+5693302 (.):docs/actions/export/ExportXlsByView_conflict.mdIl file presenta un marker di conflitto `
 
->>>>>>> b6f667c (.)
-Il file presenta un marker di conflitto `>>>>>>> origin/dev` che indica un merge non completato tra due rami di sviluppo.
-=======
-Durante lo sviluppo del progetto, questo file ha subito conflitti di merge causati da:
+b6f667c (.)
+Il file presenta un marker di conflitto `origin/dev` che indica un merge non completato tra due rami di sviluppo.Durante lo sviluppo del progetto, questo file ha subito conflitti di merge causati da:
 
 1. Differenti approcci nella documentazione PHPDoc per PHPStan livello 9
 2. Cambiamenti nella gestione dei tipi dei parametri
 3. Modifiche al comportamento della funzionalità di esportazione
 4. Ottimizzazioni e miglioramenti del codice
->>>>>>> fc83074 (.)
+fc83074 (.)
 
 ## Decisioni Architetturali
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> aurmich/dev
->>>>>>> aurmich/dev
->>>>>>> 5693302 (.):docs/actions/export/ExportXlsByView_conflict.md
-=======
->>>>>>> b6f667c (.)
+
+aurmich/dev
+aurmich/dev
+5693302 (.):docs/actions/export/ExportXlsByView_conflict.mdb6f667c (.)
 ## Analisi del Contesto
-Il conflitto si verifica nella funzione di mappatura che converte i valori dell'array $fields in stringhe prima di passarli all'oggetto ViewExport. Questa conversione è necessaria per garantire che tutti gli elementi dell'array siano stringhe, come richiesto dal tipo dichiarato `array<string>`.
-=======
-### 1. Utilizzo di QueueableAction
->>>>>>> fc83074 (.)
+Il conflitto si verifica nella funzione di mappatura che converte i valori dell'array $fields in stringhe prima di passarli all'oggetto ViewExport. Questa conversione è necessaria per garantire che tutti gli elementi dell'array siano stringhe, come richiesto dal tipo dichiarato `array<string>`.### 1. Utilizzo di QueueableAction
+fc83074 (.)
 
 Si è mantenuto l'utilizzo di QueueableAction invece di un Service tradizionale per:
 

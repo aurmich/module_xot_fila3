@@ -6,37 +6,27 @@ Durante lo sviluppo del progetto Laraxot PTVX, sono stati identificati diversi f
 
 ## File Principali con Conflitti
 
-<<<<<<< HEAD
-<<<<<<< HEAD
+
 =======
-=======
->>>>>>> b6f667c (.)
+b6f667c (.)
 
 Durante lo sviluppo del progetto il progetto, sono stati identificati diversi file con conflitti di merge non risolti. Questi conflitti erano indicati dalla presenza di marcatori come ``, `origin/dev` nel codice sorgente. I conflitti non risolti impedivano la corretta esecuzione del codice e causavano errori durante l'analisi statica con PHPStan.
 aurmich/dev
 Durante lo sviluppo del progetto il progetto, sono stati identificati diversi file con conflitti di merge non risolti. Questi conflitti erano indicati dalla presenza di marcatori come ``, `` e `` nel codice sorgente. I conflitti non risolti impedivano la corretta esecuzione del codice e causavano errori durante l'analisi statica con PHPStan.
-<<<<<<< HEAD
-=======
 =======
 ### 1. XotBasePivot.php
 
 **Problema**: Conflitto nella definizione dei metodi e proprietà della classe base pivot.
->>>>>>> fc83074 (.)
+fc83074 (.)
 
 **Risoluzione**: Mantenuta la versione con le implementazioni più complete e tipizzate correttamente per PHPStan livello 9.
 
-<<<<<<< HEAD
-Durante lo sviluppo del progetto <nome progetto>, sono stati identificati diversi file con conflitti di merge non risolti. Questi conflitti erano indicati dalla presenza di marcatori come ``, `` e `` nel codice sorgente. I conflitti non risolti impedivano la corretta esecuzione del codice e causavano errori durante l'analisi statica con PHPStan.
-=======
->>>>>>> 5693302 (.):docs/CONFLITTI_MERGE_RISOLTI.md
-=======
 
+Durante lo sviluppo del progetto <nome progetto>, sono stati identificati diversi file con conflitti di merge non risolti. Questi conflitti erano indicati dalla presenza di marcatori come ``, `` e `` nel codice sorgente. I conflitti non risolti impedivano la corretta esecuzione del codice e causavano errori durante l'analisi statica con PHPStan.5693302 (.):docs/CONFLITTI_MERGE_RISOLTI.md
 
 Durante lo sviluppo del progetto <nome progetto>, sono stati identificati diversi file con conflitti di merge non risolti. Questi conflitti erano indicati dalla presenza di marcatori come ``, `` e `` nel codice sorgente. I conflitti non risolti impedivano la corretta esecuzione del codice e causavano errori durante l'analisi statica con PHPStan.
->>>>>>> b6f667c (.)
-=======
-**Documentazione**: [Modelli Base](/var/www/html/_bases/base_ptvx_fila3_mono/laravel/Modules/Xot/docs/base-classes.md)
->>>>>>> fc83074 (.)
+b6f667c (.)**Documentazione**: [Modelli Base](/var/www/html/_bases/base_ptvx_fila3_mono/laravel/Modules/Xot/docs/base-classes.md)
+fc83074 (.)
 
 ### 2. XotBaseServiceProvider.php
 
@@ -44,17 +34,11 @@ Durante lo sviluppo del progetto <nome progetto>, sono stati identificati divers
 
 **Risoluzione**: Integrate entrambe le versioni, mantenendo la funzionalità di entrambe le implementazioni, con particolare attenzione alla gestione delle eccezioni e alle verifiche di tipo.
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> aurmich/dev
->>>>>>> aurmich/dev
->>>>>>> 5693302 (.):docs/CONFLITTI_MERGE_RISOLTI.md
-=======
->>>>>>> b6f667c (.)
-=======
-**Documentazione**: [Service Provider](/var/www/html/_bases/base_ptvx_fila3_mono/laravel/Modules/Xot/docs/SERVICE-PROVIDER-BEST-PRACTICES.md)
->>>>>>> fc83074 (.)
+
+aurmich/dev
+aurmich/dev
+5693302 (.):docs/CONFLITTI_MERGE_RISOLTI.mdb6f667c (.)**Documentazione**: [Service Provider](/var/www/html/_bases/base_ptvx_fila3_mono/laravel/Modules/Xot/docs/SERVICE-PROVIDER-BEST-PRACTICES.md)
+fc83074 (.)
 
 ### 3. HasMedia.php (Trait)
 
@@ -78,27 +62,19 @@ Durante lo sviluppo del progetto <nome progetto>, sono stati identificati divers
 
 **Risoluzione**: Standardizzati tutti i namespace rimuovendo il segmento 'app', in conformità con le convenzioni del progetto.
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
-=======
-**Documentazione**: [Namespace Conventions](/var/www/html/_bases/base_ptvx_fila3_mono/laravel/Modules/Xot/docs/NAMESPACE-CONVENTIONS.md)
->>>>>>> fc83074 (.)
+
+=======**Documentazione**: [Namespace Conventions](/var/www/html/_bases/base_ptvx_fila3_mono/laravel/Modules/Xot/docs/NAMESPACE-CONVENTIONS.md)
+fc83074 (.)
 
 ## Problemi Comuni Identificati
 
-<<<<<<< HEAD
->>>>>>> 5693302 (.):docs/CONFLITTI_MERGE_RISOLTI.md
-=======
 
+5693302 (.):docs/CONFLITTI_MERGE_RISOLTI.md
 
->>>>>>> b6f667c (.)
+b6f667c (.)
 if (! $this->isValidConnection($connectionName)) {
-if (! $this->isValidConnection(is_string($connectionName) ? $connectionName : (string) $connectionName)) {
-=======
-1. **Incoerenza nei Namespace**: L'errore più frequente era l'inclusione del segmento 'app' nei namespace, contrariamente alle convenzioni.
->>>>>>> fc83074 (.)
+if (! $this->isValidConnection(is_string($connectionName) ? $connectionName : (string) $connectionName)) {1. **Incoerenza nei Namespace**: L'errore più frequente era l'inclusione del segmento 'app' nei namespace, contrariamente alle convenzioni.
+fc83074 (.)
 
 2. **Annotazioni PHPDoc Incomplete**: Molte classi mancavano di annotazioni complete, causando errori con PHPStan livello 9.
 
@@ -110,50 +86,32 @@ if (! $this->isValidConnection(is_string($connectionName) ? $connectionName : (s
 
 ## Processo di Risoluzione
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
 
 =======
->>>>>>> aurmich/dev
->>>>>>> aurmich/dev
->>>>>>> 5693302 (.):docs/CONFLITTI_MERGE_RISOLTI.md
-=======
-
->>>>>>> b6f667c (.)
-=======
-La risoluzione è stata effettuata seguendo questi passi:
+aurmich/dev
+aurmich/dev
+5693302 (.):docs/CONFLITTI_MERGE_RISOLTI.md
+b6f667c (.)La risoluzione è stata effettuata seguendo questi passi:
 
 1. **Analisi dei Conflitti**: Identificazione dei file con conflitti utilizzando il comando `git status`.
->>>>>>> fc83074 (.)
+fc83074 (.)
 
 2. **Analisi delle Versioni**: Comprensione delle differenze e dei motivi delle modifiche in ciascuna versione.
 
 3. **Risoluzione Manuale**: Integrazione manuale delle versioni conflittuali, mantenendo le funzionalità di entrambe dove possibile.
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> aurmich/dev
-=======
-=======
 
->>>>>>> aurmich/dev
-=======
->>>>>>> aurmich/dev
->>>>>>> aurmich/dev
->>>>>>> aurmich/dev
->>>>>>> 5693302 (.):docs/CONFLITTI_MERGE_RISOLTI.md
-=======
+aurmich/dev=======
 
->>>>>>> b6f667c (.)
-```
-=======
-4. **Verifica con PHPStan**: Analisi del codice risolto con PHPStan livello 9 per verificare l'assenza di errori.
+aurmich/devaurmich/dev
+aurmich/dev
+aurmich/dev
+5693302 (.):docs/CONFLITTI_MERGE_RISOLTI.md
+b6f667c (.)
+```4. **Verifica con PHPStan**: Analisi del codice risolto con PHPStan livello 9 per verificare l'assenza di errori.
 
 5. **Test Funzionali**: Verifica del corretto funzionamento delle funzionalità risolte.
->>>>>>> fc83074 (.)
+fc83074 (.)
 
 6. **Documentazione**: Aggiornamento della documentazione per descrivere le decisioni prese e le convenzioni stabilite.
 
@@ -167,50 +125,36 @@ La risoluzione è stata effettuata seguendo questi passi:
 
 ### Service Provider Conventions
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
-=======
-- Tutti i Service Provider devono estendere `XotBaseServiceProvider` o `XotBaseRouteServiceProvider`
+
+=======- Tutti i Service Provider devono estendere `XotBaseServiceProvider` o `XotBaseRouteServiceProvider`
 - Devono definire correttamente la proprietà `$name` con il nome del modulo
 - Devono utilizzare il trait `BootsTraits` per il caricamento modulare
 - [Documentazione Completa](/var/www/html/_bases/base_ptvx_fila3_mono/laravel/Modules/Xot/docs/SERVICE-PROVIDER-BEST-PRACTICES.md)
->>>>>>> fc83074 (.)
+fc83074 (.)
 
 ### Model Conventions
 
-<<<<<<< HEAD
->>>>>>> 5693302 (.):docs/CONFLITTI_MERGE_RISOLTI.md
-=======
 
+5693302 (.):docs/CONFLITTI_MERGE_RISOLTI.md
 
->>>>>>> b6f667c (.)
+b6f667c (.)
 /**
  * @param \Modules\Media\Models\Media $media
- */
-=======
-- I modelli devono seguire le convenzioni di Laravel
+ */- I modelli devono seguire le convenzioni di Laravel
 - Devono utilizzare le annotazioni PHPDoc complete per proprietà e relazioni
 - Devono definire correttamente le proprietà `$fillable`, `$casts`, ecc.
 - [Documentazione Completa](/var/www/html/_bases/base_ptvx_fila3_mono/laravel/Modules/Xot/docs/model.md)
->>>>>>> fc83074 (.)
+fc83074 (.)
 
 ## Impatto delle Risoluzioni
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> aurmich/dev
 
 =======
->>>>>>> aurmich/dev
->>>>>>> aurmich/dev
->>>>>>> 5693302 (.):docs/CONFLITTI_MERGE_RISOLTI.md
-=======
-
->>>>>>> b6f667c (.)
+aurmich/dev
+aurmich/dev
+aurmich/dev
+5693302 (.):docs/CONFLITTI_MERGE_RISOLTI.md
+b6f667c (.)
 
 /**
  * @param \Modules\Media\Models\Media $media
@@ -219,20 +163,14 @@ origin/dev
 aurmich/dev
 
 
-<<<<<<< HEAD
-=======
-origin/dev
-aurmich/dev
-=======
-
-
->>>>>>> 5693302 (.):docs/CONFLITTI_MERGE_RISOLTI.md
-=======
 origin/dev
 aurmich/dev
 
+5693302 (.):docs/CONFLITTI_MERGE_RISOLTI.mdorigin/dev
+aurmich/dev
 
->>>>>>> b6f667c (.)
+
+b6f667c (.)
 
 
 
@@ -242,13 +180,9 @@ aurmich/dev
 origin/dev
 aurmich/dev
 
-<<<<<<< HEAD
-=======
->>>>>>> aurmich/dev
->>>>>>> aurmich/dev
->>>>>>> 5693302 (.):docs/CONFLITTI_MERGE_RISOLTI.md
-=======
->>>>>>> b6f667c (.)
+aurmich/dev
+aurmich/dev
+5693302 (.):docs/CONFLITTI_MERGE_RISOLTI.mdb6f667c (.)
 ```
 
 #### 3. Conflitti nell'Implementazione dei Metodi
@@ -259,16 +193,12 @@ In `ApplyMetatagToPanelAction.php`, c'erano conflitti nell'implementazione del m
 
 
 
-<<<<<<< HEAD
-=======
 =======
 
 
->>>>>>> 5693302 (.):docs/CONFLITTI_MERGE_RISOLTI.md
-=======
+5693302 (.):docs/CONFLITTI_MERGE_RISOLTI.md
 
-
->>>>>>> b6f667c (.)
+b6f667c (.)
 // @phpstan-ignore argument.type
 ->colors($metatag->getColors())
 //->colors($metatag->getColors())
@@ -281,17 +211,11 @@ In `ApplyMetatagToPanelAction.php`, c'erano conflitti nell'implementazione del m
 
 
 
-<<<<<<< HEAD
 =======
-=======
-
-=======
->>>>>>> aurmich/dev
->>>>>>> aurmich/dev
->>>>>>> 5693302 (.):docs/CONFLITTI_MERGE_RISOLTI.md
-=======
-
->>>>>>> b6f667c (.)
+aurmich/dev
+aurmich/dev
+5693302 (.):docs/CONFLITTI_MERGE_RISOLTI.md
+b6f667c (.)
 
 // @phpstan-ignore argument.type
 ->colors($metatag->getColors())
@@ -299,21 +223,13 @@ origin/dev
 aurmich/dev
 
 
-<<<<<<< HEAD
-=======
->>>>>>> aurmich/dev
-=======
-=======
+aurmich/dev=======
 
->>>>>>> aurmich/dev
-=======
->>>>>>> aurmich/dev
->>>>>>> aurmich/dev
->>>>>>> aurmich/dev
->>>>>>> 5693302 (.):docs/CONFLITTI_MERGE_RISOLTI.md
-=======
-
->>>>>>> b6f667c (.)
+aurmich/devaurmich/dev
+aurmich/dev
+aurmich/dev
+5693302 (.):docs/CONFLITTI_MERGE_RISOLTI.md
+b6f667c (.)
 ```
 
 #### 4. Conflitti nella Gestione delle Eccezioni
@@ -324,16 +240,12 @@ In `SaveJsonArrayAction.php`, c'erano conflitti nella gestione delle condizioni 
 
 
 
-<<<<<<< HEAD
-=======
 =======
 
 
->>>>>>> 5693302 (.):docs/CONFLITTI_MERGE_RISOLTI.md
-=======
+5693302 (.):docs/CONFLITTI_MERGE_RISOLTI.md
 
-
->>>>>>> b6f667c (.)
+b6f667c (.)
 //if ($content === false) {
 //    return false;
 //}
@@ -342,18 +254,12 @@ if ($content === false) {
 }
 
 
-<<<<<<< HEAD
 =======
-=======
->>>>>>> aurmich/dev
-
-=======
->>>>>>> aurmich/dev
->>>>>>> aurmich/dev
->>>>>>> 5693302 (.):docs/CONFLITTI_MERGE_RISOLTI.md
-=======
-
->>>>>>> b6f667c (.)
+aurmich/dev
+aurmich/dev
+aurmich/dev
+5693302 (.):docs/CONFLITTI_MERGE_RISOLTI.md
+b6f667c (.)
 
 //if ($content === false) {
 //    return false;
@@ -362,20 +268,14 @@ origin/dev
 aurmich/dev
 
 
-<<<<<<< HEAD
-=======
-origin/dev
-aurmich/dev
-=======
-
-
->>>>>>> 5693302 (.):docs/CONFLITTI_MERGE_RISOLTI.md
-=======
 origin/dev
 aurmich/dev
 
+5693302 (.):docs/CONFLITTI_MERGE_RISOLTI.mdorigin/dev
+aurmich/dev
 
->>>>>>> b6f667c (.)
+
+b6f667c (.)
 
 if ($content === false) {
     return false;
@@ -388,13 +288,9 @@ aurmich/dev
 origin/dev
 aurmich/dev
 
-<<<<<<< HEAD
-=======
->>>>>>> aurmich/dev
->>>>>>> aurmich/dev
->>>>>>> 5693302 (.):docs/CONFLITTI_MERGE_RISOLTI.md
-=======
->>>>>>> b6f667c (.)
+aurmich/dev
+aurmich/dev
+5693302 (.):docs/CONFLITTI_MERGE_RISOLTI.mdb6f667c (.)
 ```
 
 #### 5. Conflitti nelle API Fluenti
@@ -410,28 +306,18 @@ $headers = [
 
 
 
-<<<<<<< HEAD
-=======
 =======
 
 
-
-=======
->>>>>>> origin/dev
->>>>>>> aurmich/dev
-=======
->>>>>>> aurmich/dev
-
-=======
->>>>>>> aurmich/dev
->>>>>>> aurmich/dev
->>>>>>> 5693302 (.):docs/CONFLITTI_MERGE_RISOLTI.md
-=======
+origin/dev
+aurmich/devaurmich/dev
+aurmich/dev
+aurmich/dev
+5693302 (.):docs/CONFLITTI_MERGE_RISOLTI.md
 
 
 
-
->>>>>>> b6f667c (.)
+b6f667c (.)
 ```
 
 E anche nella tipizzazione delle funzioni di callback:
@@ -449,28 +335,18 @@ $headStrings = array_map(function ($item) {
 
 
 
-<<<<<<< HEAD
-=======
 =======
 
 
-
-=======
->>>>>>> origin/dev
->>>>>>> aurmich/dev
-=======
->>>>>>> aurmich/dev
-
-=======
->>>>>>> aurmich/dev
->>>>>>> aurmich/dev
->>>>>>> 5693302 (.):docs/CONFLITTI_MERGE_RISOLTI.md
-=======
+origin/dev
+aurmich/devaurmich/dev
+aurmich/dev
+aurmich/dev
+5693302 (.):docs/CONFLITTI_MERGE_RISOLTI.md
 
 
 
-
->>>>>>> b6f667c (.)
+b6f667c (.)
 ```
 
 ## Soluzione Implementata
@@ -561,30 +437,18 @@ Per verificare la correttezza della soluzione, sono stati creati test Pest che v
 
 
 
-<<<<<<< HEAD
-=======
 
-=======
-
-
-=======
->>>>>>> 5693302 (.):docs/CONFLITTI_MERGE_RISOLTI.md
-=======
->>>>>>> b6f667c (.)
+5693302 (.):docs/CONFLITTI_MERGE_RISOLTI.mdb6f667c (.)
 
 
 
 
-<<<<<<< HEAD
-=======
->>>>>>> aurmich/dev
->>>>>>> aurmich/dev
->>>>>>> 5693302 (.):docs/CONFLITTI_MERGE_RISOLTI.md
-=======
+aurmich/dev
+aurmich/dev
+5693302 (.):docs/CONFLITTI_MERGE_RISOLTI.md
 
 
-
->>>>>>> b6f667c (.)
+b6f667c (.)
 ### Test per i File del Modulo Media
 
 ```php
@@ -600,33 +464,23 @@ it('verifica che i file corretti non contengano marcatori di conflitto', functio
         expect($content)->not->toContain('')
 
 
-<<<<<<< HEAD
-=======
 =======
 
 
->>>>>>> 5693302 (.):docs/CONFLITTI_MERGE_RISOLTI.md
-=======
+5693302 (.):docs/CONFLITTI_MERGE_RISOLTI.md
 
-
->>>>>>> b6f667c (.)
+b6f667c (.)
             ->and($content)->not->toContain('')
             ->and($content)->not->toContain('');
     }
 });
 ```
 
-<<<<<<< HEAD
 =======
-=======
-
-=======
->>>>>>> aurmich/dev
->>>>>>> aurmich/dev
->>>>>>> 5693302 (.):docs/CONFLITTI_MERGE_RISOLTI.md
-=======
-
->>>>>>> b6f667c (.)
+aurmich/dev
+aurmich/dev
+5693302 (.):docs/CONFLITTI_MERGE_RISOLTI.md
+b6f667c (.)
             ->and($content)->not->toContain('origin/dev');
     }
 });
@@ -634,21 +488,13 @@ it('verifica che i file corretti non contengano marcatori di conflitto', functio
 aurmich/dev
 
 
-<<<<<<< HEAD
-=======
->>>>>>> aurmich/dev
-=======
-=======
+aurmich/dev=======
 
->>>>>>> aurmich/dev
-=======
->>>>>>> aurmich/dev
->>>>>>> aurmich/dev
->>>>>>> aurmich/dev
->>>>>>> 5693302 (.):docs/CONFLITTI_MERGE_RISOLTI.md
-=======
-
->>>>>>> b6f667c (.)
+aurmich/devaurmich/dev
+aurmich/dev
+aurmich/dev
+5693302 (.):docs/CONFLITTI_MERGE_RISOLTI.md
+b6f667c (.)
 
 ### Test per i File del Modulo Xot
 
@@ -676,28 +522,18 @@ $headers = [
 
 
 
-<<<<<<< HEAD
-=======
 =======
 
 
-
-=======
->>>>>>> origin/dev
->>>>>>> aurmich/dev
-=======
->>>>>>> aurmich/dev
-
-=======
->>>>>>> aurmich/dev
->>>>>>> aurmich/dev
->>>>>>> 5693302 (.):docs/CONFLITTI_MERGE_RISOLTI.md
-=======
+origin/dev
+aurmich/devaurmich/dev
+aurmich/dev
+aurmich/dev
+5693302 (.):docs/CONFLITTI_MERGE_RISOLTI.md
 
 
 
-
->>>>>>> b6f667c (.)
+b6f667c (.)
 ];
 
 // Dopo
@@ -779,10 +615,8 @@ Per prevenire problemi simili in futuro, si raccomanda di:
 
 La risoluzione dei conflitti di merge ha ripristinato la corretta funzionalità di diverse classi nei moduli Media, Lang e Xot, permettendo l'analisi statica con PHPStan e garantendo il corretto funzionamento dell'applicazione. Le soluzioni implementate hanno mantenuto la coerenza del codice e migliorato la robustezza delle classi interessate.
 
-In particolare, le correzioni hanno portato i seguenti benefici:
-=======
-La risoluzione dei conflitti di merge ha portato a:
->>>>>>> fc83074 (.)
+In particolare, le correzioni hanno portato i seguenti benefici:La risoluzione dei conflitti di merge ha portato a:
+fc83074 (.)
 
 1. **Maggiore Robustezza**: Miglioramento della gestione delle eccezioni e dei casi limite
 2. **Migliore Tipizzazione**: Uso più preciso dei tipi PHP e delle annotazioni PHPDoc
@@ -804,36 +638,26 @@ Questo lavoro di risoluzione dei conflitti ha inoltre contribuito a stabilire be
  * @property array<array-key, mixed> $blocks
 ```
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
-
 
 =======
-=======
->>>>>>> aurmich/dev
 
 =======
->>>>>>> aurmich/dev
->>>>>>> aurmich/dev
->>>>>>> 5693302 (.):docs/CONFLITTI_MERGE_RISOLTI.md
-=======
+aurmich/dev
+aurmich/dev
+aurmich/dev
+5693302 (.):docs/CONFLITTI_MERGE_RISOLTI.md
 
 
-
->>>>>>> b6f667c (.)
+b6f667c (.)
 
 49ebea7 (.)`.
 
 **Risoluzione**: Eliminate le proprietà duplicate e risolto il conflitto di tipo per la proprietà `blocks`.
 
-**Documentazione**: [Moduli Cms](../../../Cms/docs/models/PageContent_conflict.md)
-=======
-**Risoluzione**: Eliminate le proprietà duplicate e risolto il conflitto di tipo per la proprietà `blocks`, utilizzando la tipizzazione più precisa.
+**Documentazione**: [Moduli Cms](../../../Cms/docs/models/PageContent_conflict.md)**Risoluzione**: Eliminate le proprietà duplicate e risolto il conflitto di tipo per la proprietà `blocks`, utilizzando la tipizzazione più precisa.
 
 **Documentazione**: [Moduli Cms](/var/www/html/_bases/base_ptvx_fila3_mono/laravel/Modules/Cms/docs/models/PageContent.md)
->>>>>>> fc83074 (.)
+fc83074 (.)
 
 ## Collegamenti tra versioni di CONFLITTI_MERGE_RISOLTI.md
 * [CONFLITTI_MERGE_RISOLTI.md](/var/www/html/_bases/base_ptvx_fila3_mono/laravel/Modules/Gdpr/docs/CONFLITTI_MERGE_RISOLTI.md)
@@ -842,32 +666,22 @@ Questo lavoro di risoluzione dei conflitti ha inoltre contribuito a stabilire be
 * [CONFLITTI_MERGE_RISOLTI.md](/var/www/html/_bases/base_ptvx_fila3_mono/laravel/Modules/Media/docs/CONFLITTI_MERGE_RISOLTI.md)
 
 ## Collegamenti tra versioni di conflitti_merge_risolti.md
-<<<<<<< HEAD
+
 * [conflitti_merge_risolti.md](../../Gdpr/docs/conflitti_merge_risolti.md)
 * [conflitti_merge_risolti.md](../../UI/docs/conflitti_merge_risolti.md)
 * [conflitti_merge_risolti.md](../../Media/docs/conflitti_merge_risolti.md)
 
 
-<<<<<<< HEAD
-=======
 =======
 
->>>>>>> aurmich/dev
->>>>>>> aurmich/dev
-=======
->>>>>>> aurmich/dev
+aurmich/dev
+aurmich/devaurmich/dev
+aurmich/dev
+aurmich/dev
+5693302 (.):docs/CONFLITTI_MERGE_RISOLTI.md
 
-=======
->>>>>>> aurmich/dev
->>>>>>> aurmich/dev
->>>>>>> 5693302 (.):docs/CONFLITTI_MERGE_RISOLTI.md
-=======
-
-
->>>>>>> b6f667c (.)
-=======
-* [conflitti_merge_risolti.md](/var/www/html/_bases/base_ptvx_fila3_mono/laravel/Modules/Gdpr/docs/conflitti_merge_risolti.md)
+b6f667c (.)* [conflitti_merge_risolti.md](/var/www/html/_bases/base_ptvx_fila3_mono/laravel/Modules/Gdpr/docs/conflitti_merge_risolti.md)
 * [conflitti_merge_risolti.md](/var/www/html/_bases/base_ptvx_fila3_mono/laravel/Modules/UI/docs/conflitti_merge_risolti.md)
 * [conflitti_merge_risolti.md](/var/www/html/_bases/base_ptvx_fila3_mono/laravel/Modules/Media/docs/conflitti_merge_risolti.md)
 * [Risoluzione Conflitti Git](/var/www/html/_bases/base_ptvx_fila3_mono/bashscripts/docs/git_conflicts_resolution.md)
->>>>>>> fc83074 (.)
+fc83074 (.)

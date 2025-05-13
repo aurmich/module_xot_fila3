@@ -15,11 +15,15 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Str;
 use Modules\Xot\Filament\Traits\HasXotTable;
 use Modules\Xot\Filament\Traits\NavigationLabelTrait;
+use Webmozart\Assert\Assert;
 
 /**
  * Classe base per la gestione delle relazioni nelle risorse Filament.
  * Estende la classe ManageRelatedRecords di Filament e fornisce funzionalità aggiuntive
  * specifiche per il framework Laraxot.
+ *
+ * @template TModel of Model
+ * @extends FilamentManageRelatedRecords<TModel>
  */
 abstract class XotBaseManageRelatedRecords extends FilamentManageRelatedRecords
 {
@@ -29,6 +33,9 @@ abstract class XotBaseManageRelatedRecords extends FilamentManageRelatedRecords
 
     // protected static string $resource;
 
+    /**
+     * Restituisce il gruppo di navigazione (override opzionale).
+     */
     public static function getNavigationGroup(): string
     {
         return '';
@@ -45,11 +52,7 @@ abstract class XotBaseManageRelatedRecords extends FilamentManageRelatedRecords
      *
      * @return array<string, TextColumn>
      */
-<<<<<<< HEAD
     public function getTableColumns(): array
-=======
-    public function getListTableColumns(): array
->>>>>>> b6f667c (.)
     {
         return [
             'id' => TextColumn::make('id')
@@ -95,12 +98,12 @@ abstract class XotBaseManageRelatedRecords extends FilamentManageRelatedRecords
             'edit' => Action::make('edit')
                 ->label('Modifica')
                 ->icon('heroicon-o-pencil')
-                ->url(fn (Model $record): string => $this->getResource()::getUrl('edit', ['record' => $record])),
+                ->url(fn (Model $record): string => static::getResource()::getUrl('edit', ['record' => $record])),
 
             'view' => Action::make('view')
                 ->label('Visualizza')
                 ->icon('heroicon-o-eye')
-                ->url(fn (Model $record): string => $this->getResource()::getUrl('view', ['record' => $record])),
+                ->url(fn (Model $record): string => static::getResource()::getUrl('view', ['record' => $record])),
         ];
     }
 
@@ -119,16 +122,11 @@ abstract class XotBaseManageRelatedRecords extends FilamentManageRelatedRecords
      * ->disableCreateAnother(),
      * ]);
      * }.
-     */
-<<<<<<< HEAD
+     
     public function table(Table $table): Table
     {
         return $table
-<<<<<<< HEAD
             ->columns($this->getTableColumns())
-=======
-            ->columns($this->getListTableColumns())
->>>>>>> b6f667c (.)
             ->headerActions($this->getTableHeaderActions())
             ->actions($this->getTableActions())
             ->bulkActions([])
@@ -138,16 +136,16 @@ abstract class XotBaseManageRelatedRecords extends FilamentManageRelatedRecords
                     ->disableCreateAnother(),
             ]);
     }
-
-=======
->>>>>>> fc83074 (.)
+    */
     /**
      * Configura il form per la creazione/modifica dei record correlati.
      */
     public function form(Form $form): Form
     {
-        return $form
-            ->schema($this->getFormSchema());
+        Assert::true(method_exists($this, 'getFormSchema'), 'Devi implementare getFormSchema() nella classe figlia.');
+        /** @var array<\Filament\Forms\Components\Component> $schema */
+        $schema = $this->getFormSchema();
+        return $form->schema($schema);
     }
 
     /**

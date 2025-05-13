@@ -10,19 +10,12 @@ use Illuminate\Support\ServiceProvider;
 use Illuminate\Support\Str;
 use Modules\Xot\Actions\Blade\RegisterBladeComponentsAction;
 use Modules\Xot\Actions\Livewire\RegisterLivewireComponentsAction;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 use BladeUI\Icons\Factory as BladeIconsFactory;
 use Illuminate\Contracts\Container\Container;
->>>>>>> b6f667c (.)
-
 use function Safe\realpath;
-=======
 use Modules\Xot\Actions\Module\GetModulePathByGeneratorAction;
 use Nwidart\Modules\Traits\PathNamespace;
 use Webmozart\Assert\Assert;
->>>>>>> fc83074 (.)
 
 /**
  * Class XotBaseServiceProvider.
@@ -73,8 +66,6 @@ abstract class XotBaseServiceProvider extends ServiceProvider
             throw new \Exception('name is empty on ['.static::class.']');
         }
 
-<<<<<<< HEAD
-=======
         $this->callAfterResolving(BladeIconsFactory::class, function (BladeIconsFactory $factory) {
             $assetsPath = app(GetModulePathByGeneratorAction::class)->execute($this->name, 'assets');
             $svgPath=$assetsPath.'/../svg';
@@ -82,7 +73,6 @@ abstract class XotBaseServiceProvider extends ServiceProvider
         });
         //$svgPath = app(GetModulePathByGeneratorAction::class)->execute($this->name, 'svg');
         /*
->>>>>>> b6f667c (.)
         Assert::string($relativePath = config('modules.paths.generator.assets.path'));
 
         try {
@@ -104,10 +94,7 @@ abstract class XotBaseServiceProvider extends ServiceProvider
 
         Config::set('blade-icons.sets.'.$this->nameLower.'.path', $svgPath);
         Config::set('blade-icons.sets.'.$this->nameLower.'.prefix', $this->nameLower);
-<<<<<<< HEAD
-=======
         */
->>>>>>> b6f667c (.)
     }
 
     /**
@@ -128,7 +115,21 @@ abstract class XotBaseServiceProvider extends ServiceProvider
     }
 
     /**
-     * Register translations.
+     * Restituisce il path della cartella lang del modulo, con fallback robusto.
+     */
+    protected function getLangPath(): string
+    {
+        try {
+            return app(GetModulePathByGeneratorAction::class)->execute($this->name, 'lang');
+        } catch (\Throwable $e) {
+            return base_path('Modules/'.$this->name.'/lang');
+        }
+    }
+
+    /**
+     * Registra le traduzioni del modulo.
+     *
+     * @throws \Exception
      */
     public function registerTranslations(): void
     {
@@ -136,22 +137,9 @@ abstract class XotBaseServiceProvider extends ServiceProvider
             throw new \Exception('name is empty on ['.static::class.']');
         }
 
-        try {
-            $langPath = module_path($this->name, 'lang');
-            if (! is_string($langPath)) {
-                throw new \Exception('Invalid language path');
-            }
-            $this->loadTranslationsFrom($langPath, $this->nameLower);
-        } catch (\Error $e) {
-            $fallbackPath = base_path('Modules/'.$this->name.'/lang');
-            $this->loadTranslationsFrom($fallbackPath, $this->nameLower);
-        }
-
-        $jsonLangPath = module_path($this->name, 'lang');
-        if (! is_string($jsonLangPath)) {
-            throw new \Exception('Invalid JSON language path');
-        }
-        $this->loadJsonTranslationsFrom($jsonLangPath);
+        $langPath = $this->getLangPath();
+        $this->loadTranslationsFrom($langPath, $this->nameLower);
+        $this->loadJsonTranslationsFrom($langPath);
     }
 
     /**
@@ -181,18 +169,9 @@ abstract class XotBaseServiceProvider extends ServiceProvider
 
     public function registerBladeComponents(): void
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
         $componentViewPath = app(GetModulePathByGeneratorAction::class)->execute($this->name, 'component-view');
         Blade::anonymousComponentPath($componentViewPath);
 
->>>>>>> b6f667c (.)
-=======
-        $componentViewPath = app(GetModulePathByGeneratorAction::class)->execute($this->name, 'component-view');
-        Blade::anonymousComponentPath($componentViewPath);
-
->>>>>>> fc83074 (.)
         $componentClassPath = app(GetModulePathByGeneratorAction::class)->execute($this->name, 'component-class');
 
         $namespace = $this->module_ns.'\View\Components';

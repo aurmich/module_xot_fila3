@@ -95,3 +95,13 @@ DatePicker::make('field_name')
 * [FILAMENT_COMPONENTS.md](../../../Xot/docs/FILAMENT_COMPONENTS.md)
 * [FILAMENT_COMPONENTS.md](../../../../Themes/One/docs/FILAMENT_COMPONENTS.md)
 
+## Correzione e regole per XotBaseManageRelatedRecords
+
+- Tutti i metodi pubblici devono avere tipizzazione forte e PHPDoc dettagliato.
+- Usare sempre Assert per garantire la correttezza dei tipi e fallback robusti.
+- Vietato l'uso di return impliciti, mixed o cast forzati.
+- Il metodo per le colonne della tabella deve essere sempre getTableColumns.
+- Ogni correzione deve essere documentata qui e in FILAMENT_TABLE_COLUMNS.md.
+
+**Collegamento:** Vedi anche [FILAMENT_TABLE_COLUMNS.md](./FILAMENT_TABLE_COLUMNS.md)
+

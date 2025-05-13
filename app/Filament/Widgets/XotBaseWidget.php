@@ -8,10 +8,7 @@ use Filament\Forms;
 use Filament\Forms\Form;
 use Illuminate\Support\Facades\Cache;
 use Filament\Forms\Contracts\HasForms;
-<<<<<<< HEAD
 use Filament\Forms\Concerns\InteractsWithForms;
-=======
->>>>>>> b6f667c (.)
 use Filament\Widgets\WidgetConfiguration;
 use Filament\Widgets\Widget as FilamentWidget;
 use Modules\Xot\Actions\View\GetViewByClassAction;
@@ -27,11 +24,7 @@ abstract class XotBaseWidget extends FilamentWidget implements HasForms
 {
     use InteractsWithPageFilters;
     //use InteractsWithPageTable;
-<<<<<<< HEAD
     use InteractsWithForms;
-=======
-    use Forms\Concerns\InteractsWithForms;
->>>>>>> b6f667c (.)
     
     public string $title = '';
     public string $icon = '';
@@ -53,11 +46,8 @@ abstract class XotBaseWidget extends FilamentWidget implements HasForms
       
     ];
 
-<<<<<<< HEAD
     public ?array $data = [];
 
-=======
->>>>>>> b6f667c (.)
     /*
     public function __construct()
     {
@@ -68,40 +58,26 @@ abstract class XotBaseWidget extends FilamentWidget implements HasForms
         }
     }
     */
-<<<<<<< HEAD
     /*
     public function mount(): void
     {
         $this->form->fill();
     }    
     */
-=======
-        
->>>>>>> b6f667c (.)
 
 
     abstract public function getFormSchema(): array;
 
-<<<<<<< HEAD
     /*
-=======
->>>>>>> b6f667c (.)
     final public function form(Form $form): Form
     {
         return $form
             ->schema($this->getFormSchema())
-<<<<<<< HEAD
             //->columns(2)
             ->statePath('data');
     }
     */
     
-=======
-            ->columns(2)
-            ->statePath('data');
-    }
-
->>>>>>> b6f667c (.)
      protected function getFormActions(): array
     {
         return [

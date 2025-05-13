@@ -6,15 +6,11 @@ L'action `ExportXlsByCollection` è un componente fondamentale nel framework Lar
 
 ## Problematiche Riscontrate
 
-<<<<<<< HEAD
+
 Il file presenta un marker di conflitto `
-<<<<<<< HEAD
 =======
-=======
->>>>>>> b6f667c (.)
-=======
-Durante l'evoluzione del progetto, questo file ha avuto conflitti di merge a causa di modifiche parallele che miravano a:
->>>>>>> fc83074 (.)
+b6f667c (.)Durante l'evoluzione del progetto, questo file ha avuto conflitti di merge a causa di modifiche parallele che miravano a:
+fc83074 (.)
 
 1. Migliorare le annotazioni PHPDoc per compatibilità con PHPStan livello 9
 2. Aggiungere funzionalità di esportazione diretta tramite PhpSpreadsheet
@@ -23,21 +19,13 @@ Durante l'evoluzione del progetto, questo file ha avuto conflitti di merge a cau
 
 ## Decisioni Architetturali
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> aurmich/dev
->>>>>>> aurmich/dev
->>>>>>> 5693302 (.):docs/actions/export/ExportXlsByCollection_conflict.md
-=======
->>>>>>> 6dc688d (.)
-=======
->>>>>>> b6f667c (.)
+
+aurmich/dev
+aurmich/dev
+5693302 (.):docs/actions/export/ExportXlsByCollection_conflict.md6dc688d (.)b6f667c (.)
 ## Analisi del Contesto
-Il conflitto si verifica nella documentazione PHPDoc del metodo `writeRows()`. In particolare, l'incongruenza riguarda la descrizione dei parametri e la formattazione della documentazione, che è stata probabilmente aggiornata in uno dei rami di sviluppo per migliorare la compatibilità con PHPStan.
-=======
-### 1. Utilizzo di QueueableAction
->>>>>>> fc83074 (.)
+Il conflitto si verifica nella documentazione PHPDoc del metodo `writeRows()`. In particolare, l'incongruenza riguarda la descrizione dei parametri e la formattazione della documentazione, che è stata probabilmente aggiornata in uno dei rami di sviluppo per migliorare la compatibilità con PHPStan.### 1. Utilizzo di QueueableAction
+fc83074 (.)
 
 Si è deciso di mantenere l'approccio QueueableAction anziché convertire a un Service tradizionale per:
 

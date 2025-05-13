@@ -30,11 +30,7 @@ class ListCaches extends XotBaseListRecords
         ];
     }
 
-<<<<<<< HEAD
     public function getTableColumns(): array
-=======
-    public function getListTableColumns(): array
->>>>>>> b6f667c (.)
     {
         return [
             'key' => TextColumn::make('key')
@@ -58,11 +54,7 @@ class ListCaches extends XotBaseListRecords
     public function getGridTableColumns(): array
     {
         return [
-<<<<<<< HEAD
             Stack::make($this->getTableColumns()),
-=======
-            Stack::make($this->getListTableColumns()),
->>>>>>> b6f667c (.)
         ];
     }
 

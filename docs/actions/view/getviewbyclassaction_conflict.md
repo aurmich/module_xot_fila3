@@ -6,15 +6,11 @@ L'action `GetViewByClassAction` è un componente strategico nel framework Laraxo
 
 ## Problematiche Riscontrate
 
-<<<<<<< HEAD
+
 Il file presenta un marker di conflitto `
-<<<<<<< HEAD
 =======
-=======
->>>>>>> b6f667c (.)
-=======
-Durante l'evoluzione del codice, questo file ha presentato conflitti di merge dovuti a:
->>>>>>> fc83074 (.)
+b6f667c (.)Durante l'evoluzione del codice, questo file ha presentato conflitti di merge dovuti a:
+fc83074 (.)
 
 1. Differenti approcci nella gestione dei tipi per compatibilità con PHPStan livello 9
 2. Variazioni nelle strategie di conversione dei nomi di classe in percorsi di vista
@@ -23,21 +19,13 @@ Durante l'evoluzione del codice, questo file ha presentato conflitti di merge do
 
 ## Decisioni Architetturali
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> aurmich/dev
->>>>>>> aurmich/dev
->>>>>>> 5693302 (.):docs/actions/view/GetViewByClassAction_conflict.md
-=======
->>>>>>> 6dc688d (.)
-=======
->>>>>>> b6f667c (.)
+
+aurmich/dev
+aurmich/dev
+5693302 (.):docs/actions/view/GetViewByClassAction_conflict.md6dc688d (.)b6f667c (.)
 ## Analisi del Contesto
-Il conflitto si verifica nella funzione di callback utilizzata per mappare array di percorsi di classi in nomi di view. La porzione di codice interessata gestisce la conversione sicura di tipi scalari in stringa per garantire compatibilità con PHPStan livello 10.
-=======
-### 1. Utilizzo di QueueableAction
->>>>>>> fc83074 (.)
+Il conflitto si verifica nella funzione di callback utilizzata per mappare array di percorsi di classi in nomi di view. La porzione di codice interessata gestisce la conversione sicura di tipi scalari in stringa per garantire compatibilità con PHPStan livello 10.### 1. Utilizzo di QueueableAction
+fc83074 (.)
 
 Si è mantenuto l'approccio QueueableAction rispetto a un Service tradizionale per:
 

@@ -20,19 +20,11 @@ class ListSessions extends XotBaseListRecords
     public function getGridTableColumns(): array
     {
         return [
-<<<<<<< HEAD
             Stack::make($this->getTableColumns()),
         ];
     }
 
     public function getTableColumns(): array
-=======
-            Stack::make($this->getListTableColumns()),
-        ];
-    }
-
-    public function getListTableColumns(): array
->>>>>>> b6f667c (.)
     {
         return [
             'id' => TextColumn::make('id')

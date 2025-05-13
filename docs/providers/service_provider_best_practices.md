@@ -1,5 +1,35 @@
 # Best Practices nei Service Provider
 
+## Decisione Architetturale (2025-05-13)
+
+Il provider `XotBaseServiceProvider` rappresenta la base architetturale per tutti i moduli Laraxot. Le scelte implementative sono motivate da:
+- **Centralizzazione delle logiche comuni** (views, config, traduzioni, componenti Blade/Livewire)
+- **Uso di actions dedicate** (es. `GetModulePathByGeneratorAction`) per garantire robustezza, validazione e coerenza nell'accesso ai path
+- **Tipizzazione rigorosa** e gestione delle eccezioni per evitare errori silenziosi
+- **Estendibilità**: ogni modulo eredita le convenzioni e le protezioni architetturali
+
+### Punti di forza
+- Coerenza cross-modulo
+- Facilità di estensione
+- Robustezza nella gestione dei path
+- Allineamento alle best practices documentate
+
+### Criticità e miglioramenti possibili
+- Logging degli errori nei fallback e nei catch (oggi spesso silenziosi)
+- Maggiore chiarezza nei commenti e PHPDoc
+- Riferimenti espliciti alle actions custom nella documentazione
+- Promuovere l'iniezione delle actions tramite costruttore per migliorare la testabilità
+
+### Consigli operativi
+- Centralizzare la gestione degli errori tramite trait/helper
+- Documentare ogni action custom usata nei provider
+- Aggiungere esempi pratici di estensione nei moduli custom
+- Chiarire la logica dei fallback e dei path di default
+
+## Backlink
+- [Torna a README.md del modulo Xot](../README.md)
+- [Collegamento a docs/links.md della root](../../../../docs/links.md)
+
 ## Utilizzo di GetModulePathByGeneratorAction
 
 ### Panoramica

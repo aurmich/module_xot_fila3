@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 # Standard di Codice per il progetto
 
 > **Nota**: Questo documento è correlato a [Convenzioni](../../../docs/conventions.md) e [Naming Conventions](../../../docs/naming-conventions.md). Per una panoramica completa, consulta tutti i documenti correlati.
@@ -73,16 +73,14 @@ Ogni modifica ai dati sensibili deve essere:
 
 ## Principi Fondamentali
 
-Il codice del progetto il progetto **deve** aderire ai seguenti principi fondamentali:
-=======
-# Standard di Codice
+Il codice del progetto il progetto **deve** aderire ai seguenti principi fondamentali:# Standard di Codice
 
 Questo documento contiene gli standard di codice generali per il progetto.
 
 ## Principi Fondamentali
 
 Il codice del progetto **deve** aderire ai seguenti principi fondamentali:
->>>>>>> b6f667c (.)
+b6f667c (.)
 
 1. **Robustezza**: Il codice deve funzionare correttamente anche in condizioni impreviste o avverse
 2. **Solidità**: La struttura deve essere manutenibile, scalabile e testabile
@@ -259,7 +257,7 @@ class StorePatientRequest extends FormRequest
     public function rules(): array
     {
         return [
-<<<<<<< HEAD
+
             'tax_code' => ['required', 'string', 'size:16', 'unique:patients,tax_code'],
             'first_name' => ['required', 'string', 'max:255'],
             'last_name' => ['required', 'string', 'max:255'],
@@ -272,28 +270,24 @@ class StorePatientRequest extends FormRequest
             'province' => ['required', 'string', 'size:2'],
             'postal_code' => ['required', 'string', 'size:5'],
             'isee' => ['required', 'numeric', 'min:0'],
-            'is_pregnant' => ['boolean'],
-=======
-            'first_name' => ['required', 'string', 'max:255'],
+            'is_pregnant' => ['boolean'],            'first_name' => ['required', 'string', 'max:255'],
             'last_name' => ['required', 'string', 'max:255'],
             'gender' => ['required', 'string', 'in:' . implode(',', GenderType::values())],
             'birth_date' => ['required', 'date', 'before:today'],
             'tax_code' => ['required', 'string', 'size:16', 'unique:patients,tax_code'],
->>>>>>> b6f667c (.)
+b6f667c (.)
         ];
     }
 }
 ```
 
-<<<<<<< HEAD
+
 ## Collegamenti Correlati
 
 - [Convenzioni](../../../docs/conventions.md)
 - [Naming Conventions](../../../docs/naming-conventions.md)
 - [Documentazione Xot](../CODE-STANDARDS.md)
-- [Collegamenti Documentazione](../../../../docs/collegamenti-documentazione.md)
-=======
-## Documentazione del Codice
+- [Collegamenti Documentazione](../../../../docs/collegamenti-documentazione.md)## Documentazione del Codice
 
 ### PHPDoc
 
@@ -547,5 +541,5 @@ git commit -m "fix: correzione calcolo età paziente"
 ## Collegamenti tra versioni di coding-standards.md
 * [coding-standards.md](../../../Xot/docs/standards/coding-standards.md)
 * [coding-standards.md](../../../Xot/docs/conventions/coding-standards.md)
->>>>>>> b6f667c (.)
+b6f667c (.)
 

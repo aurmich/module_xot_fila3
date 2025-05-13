@@ -113,6 +113,38 @@ class BrainServiceProvider extends XotBaseServiceProvider
 }
 ```
 
+### 4. Gestione delle Traduzioni
+
+#### ✅ DO - Usare GetModulePathByGeneratorAction per i path delle traduzioni
+
+Utilizzare sempre l'action `GetModulePathByGeneratorAction` per ottenere il path della cartella `lang` del modulo, con fallback robusto e Assert.
+
+**Esempio corretto:**
+```php
+try {
+    $langPath = app(GetModulePathByGeneratorAction::class)->execute($this->name, 'lang');
+    \Webmozart\Assert\Assert::string($langPath, 'Percorso lang non valido');
+    $this->loadTranslationsFrom($langPath, $this->nameLower);
+} catch (\Throwable $e) {
+    $fallbackPath = base_path('Modules/'.$this->name.'/lang');
+    $this->loadTranslationsFrom($fallbackPath, $this->nameLower);
+}
+```
+
+**Esempio sbagliato:**
+```php
+$langPath = module_path($this->name, 'lang');
+$this->loadTranslationsFrom($langPath, $this->nameLower);
+```
+
+**Motivazione:**
+- Coerenza e robustezza tra i moduli
+- Fallback e validazione centralizzata
+- Facilità di manutenzione
+
+**Nota:**
+Applicare la stessa regola per la registrazione delle traduzioni JSON.
+
 ## Implementazione Dettagliata per Tipo di Provider
 
 ### 1. Provider Principale del Modulo
@@ -421,10 +453,8 @@ class RouteServiceProvider extends ServiceProvider
 // middleware essenziali o non essere integrate con il sistema di permessi
 ```
 
-<<<<<<< HEAD
-### Errore: Eventi non ascoltati
-=======
-## Troubleshooting
+
+### Errore: Eventi non ascoltati## Troubleshooting
 
 ### Problema: Traduzioni non caricate
 
@@ -442,7 +472,7 @@ class RouteServiceProvider extends ServiceProvider
 4. I file di route siano nei percorsi corretti (web.php, api.php, admin.php)
 
 ### Problema: Eventi non ascoltati
->>>>>>> b6f667c (.)
+b6f667c (.)
 
 **Soluzione:** Verificare che:
 1. L'Event Provider estenda `BaseEventServiceProvider`
@@ -466,7 +496,7 @@ class RouteServiceProvider extends ServiceProvider
 - [XotBaseServiceProvider](/var/www/html/exa/base_orisbroker_fila3/laravel/Modules/Xot/Providers/XotBaseServiceProvider.php)
 - [XotBaseRouteServiceProvider](/var/www/html/exa/base_orisbroker_fila3/laravel/Modules/Xot/Providers/XotBaseRouteServiceProvider.php)
 - [BaseEventServiceProvider](/var/www/html/exa/base_orisbroker_fila3/laravel/Modules/Xot/Providers/BaseEventServiceProvider.php)
-<<<<<<< HEAD
+
 
 # Best Practices per ServiceProvider
 
@@ -681,6 +711,37 @@ class MyComponent extends Component
 - [XotBaseRouteServiceProvider](XotBaseRouteServiceProvider.md)
 - [XotBaseEventServiceProvider](XotBaseEventServiceProvider.md)
 - [blade-component-registration.md](blade-component-registration.md)
-- [filament-best-practices.md](filament-best-practices.md)
-=======
->>>>>>> b6f667c (.)
+- [filament-best-practices.md](filament-best-practices.md)b6f667c (.)
+
+## Correzione e motivazione (2025-05-13)
+
+- Seguire le regole e i pattern documentati in [XotBaseServiceProvider.md](./XotBaseServiceProvider.md).
+- Centralizzare la logica di fallback per path e namespace in metodi protected riutilizzabili.
+- Loggare i casi di fallback e le eccezioni non bloccanti.
+- Ogni override deve chiamare sempre `parent::method()` e non cambiare la visibilità delle proprietà/metodi ereditati.
+- Rafforzare la tipizzazione e la documentazione PHPDoc.
+- Usare metodi protected per facilitare il mocking nei test.
+- Implementare test di integrazione per la registrazione delle risorse.
+- Introdurre versioning e validazione per le icone SVG.
+
+**Esempi di override**
+
+Corretto:
+```php
+public function boot(): void
+{
+    parent::boot();
+    // Estensioni specifiche...
+}
+```
+
+Sbagliato:
+```php
+public function boot(): void
+{
+    // parent::boot() mancante!
+    // ...
+}
+```
+
+**Collegamento:** Vedi anche [XotBaseServiceProvider.md](./XotBaseServiceProvider.md)
