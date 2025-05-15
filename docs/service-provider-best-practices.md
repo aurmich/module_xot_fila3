@@ -472,11 +472,6 @@ class RouteServiceProvider extends ServiceProvider
 4. I file di route siano nei percorsi corretti (web.php, api.php, admin.php)
 
 ### Problema: Eventi non ascoltati
-b6f667c (.)
-<<<<<<< HEAD
-### Errore: Eventi non ascoltati
-=======
->>>>>>> 38698b4d9 (fix collisioni sync)
 
 **Soluzione:** Verificare che:
 1. L'Event Provider estenda `BaseEventServiceProvider`
@@ -749,7 +744,4 @@ public function boot(): void
 ```
 
 **Collegamento:** Vedi anche [XotBaseServiceProvider.md](./XotBaseServiceProvider.md)
-<<<<<<< HEAD
 - [filament-best-practices.md](filament-best-practices.md)
-=======
->>>>>>> 38698b4d9 (fix collisioni sync)

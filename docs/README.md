@@ -12,13 +12,6 @@ Il modulo Xot è il modulo base che fornisce le classi e le funzionalità fondam
 - [Base Classes](./base_classes.md) - Classi base
 - [Service Providers](./service_providers.md) - Provider di servizi
 - [Volt Folio Best Practices](./VOLT_FOLIO_BEST_PRACTICES.md) - Best practices per Volt e Folio
-- [Volt Folio Best Practices](./VOLT_FOLIO_BEST_PRACTICES.md) - Best practices per Volt e Folio
-
-- [Volt Folio Best Practices](./VOLT_FOLIO_BEST_PRACTICES.md) - Best practices per Volt e Folio
-- [Volt Folio Best Practices](./VOLT_FOLIO_BEST_PRACTICES.md) - Best practices per Volt e Foliob6f667c (.)
-
-- [Volt Folio Best Practices](./VOLT_FOLIO_BEST_PRACTICES.md) - Best practices per Volt e Folio
-- [Volt Folio Best Practices](./VOLT_FOLIO_BEST_PRACTICES.md) - Best practices per Volt e Foliob6f667c (.)
 
 ### Filament
 - [Filament Integration](./filament_integration.md) - Integrazione con Filament
@@ -517,38 +510,10 @@ Il modulo è configurabile tramite:
 ## Documentazione Filament
 - [Linee Guida per getInfolistSchema](./filament/INFOLIST_SCHEMA_GUIDELINES.md) - Guida completa per l'implementazione corretta del metodo getInfolistSchema, con focus sull'uso delle chiavi stringa negli array 
 
-
 ## Politica, Filosofia, Religione, Etica, Zen
 
 - **Politica**: Il modulo Xot promuove collaborazione, trasparenza e inclusività, senza discriminazioni.
 - **Filosofia**: Minimalismo, chiarezza, miglioramento continuo.
 - **Religione**: Laicità, rispetto di tutte le fedi, libertà di pensiero.
 - **Etica**: Onestà, rispetto, responsabilità, attenzione all'impatto sociale e ambientale.
-- **Zen**: Semplicità, concentrazione sul presente, armonia e serenità nello sviluppo.b6f667c (.)
-
-## Service Provider: Decisione Architetturale (2025-05-13)
-
-Il provider `XotBaseServiceProvider` è progettato per:
-- Centralizzare la registrazione di views, config, traduzioni, componenti Blade e Livewire
-- Utilizzare actions dedicate (es. `GetModulePathByGeneratorAction`) per garantire robustezza e coerenza
-- Gestire fallback e validazioni in modo sicuro
-- Favorire l'estendibilità e la coerenza cross-modulo
-
-### Punti di forza
-- Coerenza architetturale
-- Robustezza nella gestione dei path
-- Facilità di estensione per i moduli custom
-
-### Criticità e miglioramenti
-- Logging degli errori nei fallback (oggi spesso silenziosi)
-- Maggiore chiarezza nei commenti e PHPDoc
-- Promuovere l'iniezione delle actions per testabilità
-
-Consulta le [best practices aggiornate](./providers/service_provider_best_practices.md) per dettagli, motivazioni e consigli operativi.
-
-## Backlink
-- [Collegamento a docs/links.md della root](../../../../docs/links.md)
-<<<<<<< HEAD
 - **Zen**: Semplicità, concentrazione sul presente, armonia e serenità nello sviluppo.
-=======
->>>>>>> 38698b4d9 (fix collisioni sync)
