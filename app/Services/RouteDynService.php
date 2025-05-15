@@ -56,7 +56,18 @@ class RouteDynService
         Assert::string($name = $v['name']);
         $as = mb_strtolower($name);
         $as = str_replace('/', '.', $as);
+<<<<<<< HEAD
         $as = preg_replace('/{.*}./', '', $as);
+=======
+
+        /** @var string $tmp */
+        $tmp = preg_replace('/{.*}./', '', $as);
+        if (!is_string($tmp)) {
+            $tmp = $as; // Fallback se preg_replace fallisce
+        }
+        $as = $tmp;
+
+>>>>>>> 823c958 (.)
         $as = str_replace(['{', '}'], '', $as);
 
         return $as.'.';
@@ -86,6 +97,7 @@ class RouteDynService
         }
 
         Assert::nullOrString($v['act'] = $v['name']);
+<<<<<<< HEAD
         Assert::nullOrString($v['act']);
         $v['act'] = preg_replace('/{.*}\//', '', (string) $v['act']);
         if ($v['act'] === null) {
@@ -97,6 +109,21 @@ class RouteDynService
         $v['act'] = str_replace(['{', '}'], '', $v['act']);
 
         return Str::camel($v['act']);
+=======
+
+        $act = '';
+        if (is_string($v['act'])) {
+            /** @var string|null $tmp */
+            $tmp = preg_replace('/{.*}\//', '', $v['act']);
+            $act = $tmp !== null ? $tmp : $v['act'];
+
+            $act = str_replace('/', '_', $act);
+            $act = Str::camel($act);
+            $act = str_replace(['{', '}'], '', $act);
+        }
+
+        return $act;
+>>>>>>> 823c958 (.)
     }
 
     public static function getParamName(array $v, ?string $namespace): string
@@ -159,8 +186,12 @@ class RouteDynService
 
     public static function getUri(array $v, ?string $namespace): string
     {
+<<<<<<< HEAD
         Assert::string($name= $v['name']);
         //return mb_strtolower(is_string($v) ? $v : (string) $v['name);
+=======
+        Assert::string($name = $v['name']);
+>>>>>>> 823c958 (.)
         return $name;
     }
 
@@ -221,11 +252,19 @@ class RouteDynService
         if ($v['name'] === null) {
             return;
         }
+<<<<<<< HEAD
         Assert::string($name= $v['name']);
         $opts = self::getResourceOpts($v, $namespace);
         $controller = self::getController($v, $namespace);
         
         
+=======
+
+        Assert::string($name = $v['name']);
+        $opts = self::getResourceOpts($v, $namespace);
+        $controller = self::getController($v, $namespace);
+
+>>>>>>> 823c958 (.)
         Route::resource($name, $controller, $opts);
     }
 

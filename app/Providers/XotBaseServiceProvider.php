@@ -4,6 +4,11 @@ declare(strict_types=1);
 
 namespace Modules\Xot\Providers;
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> bdc979b (.)
 use Illuminate\Support\Facades\Blade;
 use Illuminate\Support\Facades\Config;
 use Illuminate\Support\ServiceProvider;
@@ -16,6 +21,33 @@ use function Safe\realpath;
 use Modules\Xot\Actions\Module\GetModulePathByGeneratorAction;
 use Nwidart\Modules\Traits\PathNamespace;
 use Webmozart\Assert\Assert;
+<<<<<<< HEAD
+=======
+=======
+=======
+>>>>>>> 823c958 (.)
+use Illuminate\Support\Arr;
+use Illuminate\Support\Str;
+use Webmozart\Assert\Assert;
+use Illuminate\Support\Facades\Blade;
+use Illuminate\Support\Facades\Config;
+use Illuminate\Support\ServiceProvider;
+use Modules\Xot\Datas\ComponentFileData;
+use Nwidart\Modules\Traits\PathNamespace;
+use Modules\Xot\Actions\Blade\RegisterBladeComponentsAction;
+use Modules\Xot\Actions\Module\GetModulePathByGeneratorAction;
+use Modules\Xot\Actions\Livewire\RegisterLivewireComponentsAction;
+<<<<<<< HEAD
+use BladeUI\Icons\Factory as BladeIconsFactory;
+use Illuminate\Contracts\Container\Container;
+
+use function Safe\realpath;
+>>>>>>> 4241492 (.)
+=======
+
+use function Safe\realpath;
+>>>>>>> 823c958 (.)
+>>>>>>> bdc979b (.)
 
 /**
  * Class XotBaseServiceProvider.
@@ -66,6 +98,12 @@ abstract class XotBaseServiceProvider extends ServiceProvider
             throw new \Exception('name is empty on ['.static::class.']');
         }
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< Updated upstream
+<<<<<<< HEAD
+>>>>>>> bdc979b (.)
         $this->callAfterResolving(BladeIconsFactory::class, function (BladeIconsFactory $factory) {
             $assetsPath = app(GetModulePathByGeneratorAction::class)->execute($this->name, 'assets');
             $svgPath=$assetsPath.'/../svg';
@@ -73,6 +111,21 @@ abstract class XotBaseServiceProvider extends ServiceProvider
         });
         //$svgPath = app(GetModulePathByGeneratorAction::class)->execute($this->name, 'svg');
         /*
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 4241492 (.)
+=======
+        $this->callAfterResolving(BladeIconsFactory::class, function (BladeIconsFactory $factory) {
+            $assetsPath = app(GetModulePathByGeneratorAction::class)->execute($this->name, 'assets');
+            $svgPath = $assetsPath.'/../svg';
+            $factory->add($this->nameLower, ['path' => $svgPath, 'prefix' => $this->nameLower]);
+        });
+
+>>>>>>> Stashed changes
+=======
+>>>>>>> 823c958 (.)
+>>>>>>> bdc979b (.)
         Assert::string($relativePath = config('modules.paths.generator.assets.path'));
 
         try {
@@ -94,7 +147,17 @@ abstract class XotBaseServiceProvider extends ServiceProvider
 
         Config::set('blade-icons.sets.'.$this->nameLower.'.path', $svgPath);
         Config::set('blade-icons.sets.'.$this->nameLower.'.prefix', $this->nameLower);
+<<<<<<< HEAD
         */
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+        */
+=======
+>>>>>>> 4241492 (.)
+=======
+>>>>>>> 823c958 (.)
+>>>>>>> bdc979b (.)
     }
 
     /**
@@ -115,6 +178,14 @@ abstract class XotBaseServiceProvider extends ServiceProvider
     }
 
     /**
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< Updated upstream
+<<<<<<< HEAD
+=======
+>>>>>>> Stashed changes
+>>>>>>> bdc979b (.)
      * Restituisce il path della cartella lang del modulo, con fallback robusto.
      */
     protected function getLangPath(): string
@@ -130,6 +201,18 @@ abstract class XotBaseServiceProvider extends ServiceProvider
      * Registra le traduzioni del modulo.
      *
      * @throws \Exception
+<<<<<<< HEAD
+=======
+<<<<<<< Updated upstream
+=======
+     * Register translations.
+>>>>>>> 4241492 (.)
+=======
+>>>>>>> Stashed changes
+=======
+     * Register translations.
+>>>>>>> 823c958 (.)
+>>>>>>> bdc979b (.)
      */
     public function registerTranslations(): void
     {
@@ -137,9 +220,46 @@ abstract class XotBaseServiceProvider extends ServiceProvider
             throw new \Exception('name is empty on ['.static::class.']');
         }
 
+<<<<<<< HEAD
         $langPath = $this->getLangPath();
         $this->loadTranslationsFrom($langPath, $this->nameLower);
         $this->loadJsonTranslationsFrom($langPath);
+=======
+<<<<<<< HEAD
+<<<<<<< Updated upstream
+<<<<<<< HEAD
+        $langPath = $this->getLangPath();
+        $this->loadTranslationsFrom($langPath, $this->nameLower);
+        $this->loadJsonTranslationsFrom($langPath);
+=======
+=======
+>>>>>>> 823c958 (.)
+        try {
+            $langPath = module_path($this->name, 'lang');
+            if (! is_string($langPath)) {
+                throw new \Exception('Invalid language path');
+            }
+            $this->loadTranslationsFrom($langPath, $this->nameLower);
+        } catch (\Error $e) {
+            $fallbackPath = base_path('Modules/'.$this->name.'/lang');
+            $this->loadTranslationsFrom($fallbackPath, $this->nameLower);
+        }
+
+        $jsonLangPath = module_path($this->name, 'lang');
+        if (! is_string($jsonLangPath)) {
+            throw new \Exception('Invalid JSON language path');
+        }
+        $this->loadJsonTranslationsFrom($jsonLangPath);
+<<<<<<< HEAD
+>>>>>>> 4241492 (.)
+=======
+        $langPath = $this->getLangPath();
+        $this->loadTranslationsFrom($langPath, $this->nameLower);
+        $this->loadJsonTranslationsFrom($langPath);
+>>>>>>> Stashed changes
+=======
+>>>>>>> 823c958 (.)
+>>>>>>> bdc979b (.)
     }
 
     /**
@@ -157,9 +277,39 @@ abstract class XotBaseServiceProvider extends ServiceProvider
      */
     protected function registerConfig(): void
     {
+<<<<<<< HEAD
         try {
             $configPath = app(GetModulePathByGeneratorAction::class)->execute($this->name, 'config');
 
+=======
+<<<<<<< HEAD
+<<<<<<< Updated upstream
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4241492 (.)
+=======
+>>>>>>> Stashed changes
+        try {
+            $configPath = app(GetModulePathByGeneratorAction::class)->execute($this->name, 'config');
+=======
+        try {
+            Assert::string($relativePath = config('modules.paths.generator.config.path'));
+            $configPath = module_path($this->name, $relativePath);
+            if (! is_string($configPath)) {
+                return;
+            }
+
+            if (! file_exists($configPath)) {
+                return;
+            }
+
+            $this->publishes([
+                $configPath => config_path($this->nameLower.'.php'),
+            ], 'config');
+
+>>>>>>> 823c958 (.)
+>>>>>>> bdc979b (.)
             $this->mergeConfigFrom($configPath, $this->nameLower);
         } catch (\Exception $e) {
             // Ignore missing configuration
@@ -169,9 +319,27 @@ abstract class XotBaseServiceProvider extends ServiceProvider
 
     public function registerBladeComponents(): void
     {
+<<<<<<< HEAD
         $componentViewPath = app(GetModulePathByGeneratorAction::class)->execute($this->name, 'component-view');
         Blade::anonymousComponentPath($componentViewPath);
 
+=======
+<<<<<<< HEAD
+<<<<<<< Updated upstream
+<<<<<<< HEAD
+        $componentViewPath = app(GetModulePathByGeneratorAction::class)->execute($this->name, 'component-view');
+        Blade::anonymousComponentPath($componentViewPath);
+
+=======
+>>>>>>> 4241492 (.)
+=======
+        $componentViewPath = app(GetModulePathByGeneratorAction::class)->execute($this->name, 'component-view');
+        Blade::anonymousComponentPath($componentViewPath);
+
+>>>>>>> Stashed changes
+=======
+>>>>>>> 823c958 (.)
+>>>>>>> bdc979b (.)
         $componentClassPath = app(GetModulePathByGeneratorAction::class)->execute($this->name, 'component-class');
 
         $namespace = $this->module_ns.'\View\Components';
@@ -198,8 +366,22 @@ abstract class XotBaseServiceProvider extends ServiceProvider
             );
     }
 
+<<<<<<< HEAD
     public function registerCommands(): void
     {
+=======
+<<<<<<< HEAD
+    /**
+     * Register commands.
+     */
+    public function registerCommands(): void
+    {
+<<<<<<< Updated upstream
+=======
+    public function registerCommands(): void
+    {
+>>>>>>> 823c958 (.)
+>>>>>>> bdc979b (.)
         $prefix = '';
 
         $comps = app(\Modules\Xot\Actions\File\GetComponentsAction::class)
@@ -218,16 +400,43 @@ abstract class XotBaseServiceProvider extends ServiceProvider
                 Assert::isArray($item);
                 Assert::keyExists($item, 'ns');
                 Assert::string($item['ns']);
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> 4241492 (.)
+=======
+>>>>>>> 823c958 (.)
+>>>>>>> bdc979b (.)
                 return $item['ns'];
             },
             $commands
         );
         $this->commands($commands);
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+        $this->commands([]);
+>>>>>>> Stashed changes
+=======
+>>>>>>> 823c958 (.)
+>>>>>>> bdc979b (.)
     }
 
     /**
      * Get the services provided by the provider.
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+     *
+     * @return array
+=======
+>>>>>>> 823c958 (.)
+>>>>>>> bdc979b (.)
      */
     public function provides(): array
     {

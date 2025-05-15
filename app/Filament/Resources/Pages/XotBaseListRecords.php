@@ -27,17 +27,54 @@ abstract class XotBaseListRecords extends FilamentListRecords
 {
     use HasXotTable;
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< Updated upstream
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4241492 (.)
+=======
+>>>>>>> Stashed changes
+=======
+
+>>>>>>> 823c958 (.)
+>>>>>>> bdc979b (.)
     /**
      * Get the table columns.
      *
      * @return array<string, Tables\Columns\Column>
      */
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< Updated upstream
+<<<<<<< HEAD
+=======
+>>>>>>> Stashed changes
+>>>>>>> bdc979b (.)
     public function getTableColumns(): array
     {
         return [];
     }
 
     
+<<<<<<< HEAD
+=======
+=======
+    abstract public function getListTableColumns(): array;
+
+>>>>>>> 4241492 (.)
+=======
+
+    
+>>>>>>> Stashed changes
+=======
+    abstract public function getListTableColumns(): array;
+
+>>>>>>> 823c958 (.)
+>>>>>>> bdc979b (.)
     /**
      * Get the default sort column and direction.
      *
@@ -79,6 +116,14 @@ abstract class XotBaseListRecords extends FilamentListRecords
      */
     protected function paginateTableQuery(Builder $query): Paginator
     {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< Updated upstream
+<<<<<<< HEAD
+=======
+>>>>>>> Stashed changes
+>>>>>>> bdc979b (.)
         return $query->fastPaginate(
             ('all' === $this->getTableRecordsPerPage()) 
             ? $query->count() 
@@ -87,3 +132,42 @@ abstract class XotBaseListRecords extends FilamentListRecords
     }
 }
 
+<<<<<<< HEAD
+=======
+=======
+=======
+>>>>>>> 823c958 (.)
+        $perPage = $this->getTableRecordsPerPage();
+
+        if ('all' === $perPage) {
+            $count = $query->count();
+
+            /* @var \Illuminate\Contracts\Pagination\Paginator */
+            Assert::isInstanceOf($res = $query->fastPaginate($count), Paginator::class);
+            return $res;
+        }
+
+        if (is_numeric($perPage)) {
+            $perPageInt = (int) $perPage;
+            Assert::greaterThan($perPageInt, 0);
+
+            /* @var \Illuminate\Contracts\Pagination\Paginator */
+            Assert::isInstanceOf($res = $query->fastPaginate($perPageInt), Paginator::class);
+            return $res;
+        }
+
+        /* @var \Illuminate\Contracts\Pagination\Paginator */
+        Assert::isInstanceOf($res = $query->fastPaginate(10), Paginator::class);
+        return $res;
+    }
+}
+<<<<<<< HEAD
+>>>>>>> 4241492 (.)
+=======
+    }
+}
+
+>>>>>>> Stashed changes
+=======
+>>>>>>> 823c958 (.)
+>>>>>>> bdc979b (.)

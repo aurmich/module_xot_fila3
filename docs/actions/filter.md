@@ -6,7 +6,11 @@ Il file `GetYearFilter.php` presentava marker di conflitto (``) e duplicazioni d
 ## Azioni svolte
 - Rimozione completa dei marker di conflitto e delle duplicazioni di codice.
 - Uniformazione della logica: ora la funzione costruisce l'array delle opzioni anno in modo sicuro e tipizzato.
+<<<<<<< HEAD
 - Miglioramento della gestione dei tipi secondo le regole Laraxot/<nome progetto> e PHPStan livello 9.
+=======
+- Miglioramento della gestione dei tipi secondo le regole Laraxot/PTVX e PHPStan livello 9.
+>>>>>>> 823c958 (.)
 - Validazione con PHPStan livello 9.
 - Aggiornamento della documentazione e creazione di collegamento bidirezionale con la doc root.
 
@@ -21,8 +25,11 @@ Il file `GetYearFilter.php` presentava marker di conflitto (``) e duplicazioni d
 ---
 
 *Ultimo aggiornamento: 2025-04-16*
+<<<<<<< HEAD
 
 ## Collegamenti tra versioni di filter.md
 * [filter.md](../../../Xot/docs/actions/filter.md)
 * [filter.md](../../../Xot/docs/links/filter.md)
 
+=======
+>>>>>>> 823c958 (.)

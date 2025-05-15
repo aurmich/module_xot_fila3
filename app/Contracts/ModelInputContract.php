@@ -47,6 +47,10 @@ use Illuminate\Support\Carbon;
  * @method mixed     save($params)
  * @method array     treeLabel()
  * @method array     treeSons()
+<<<<<<< HEAD
+=======
+ * @method int       treeSonsCount()
+>>>>>>> 823c958 (.)
  * @method array     toArray()
  * @method BelongsTo user()
  *
@@ -54,4 +58,10 @@ use Illuminate\Support\Carbon;
  *
  * @mixin \Eloquent
  */
+<<<<<<< HEAD
 interface ModelInputContract {}
+=======
+interface ModelInputContract
+{
+}
+>>>>>>> 823c958 (.)

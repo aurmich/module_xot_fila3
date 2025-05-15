@@ -11,6 +11,7 @@ Modulo test serve per mettere azioni da testare.
 
 * Quando le azioni andranno bene verranno spostate nel modulo giusto.
 * Ce n’è uno per ogni base e **fa parte della repo della base. Non va in una repository "a parte"**
+<<<<<<< HEAD
 ### Versione HEAD
 
 
@@ -24,3 +25,5 @@ Modulo test serve per mettere azioni da testare.
 
 ---
 
+=======
+>>>>>>> 823c958 (.)

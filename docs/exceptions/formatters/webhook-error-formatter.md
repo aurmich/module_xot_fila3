@@ -41,7 +41,11 @@ class WebhookErrorFormatter implements ErrorFormatterContract
 2. Gestione sicura delle informazioni sensibili
 3. Formattazione consistente
 4. Supporto per PHPStan livello 9
+<<<<<<< HEAD
 5. Conforme alle convenzioni Laraxot/<nome progetto>
+=======
+5. Conforme alle convenzioni Laraxot/PTVX
+>>>>>>> 823c958 (.)
 
 ## Collegamenti
 - [Error Handling Guidelines](../../EXCEPTION-HANDLING-GUIDE.md)

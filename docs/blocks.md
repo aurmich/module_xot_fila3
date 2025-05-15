@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 # Blocchi UI in il progetto
+=======
+# Blocchi UI in SaluteOra
+>>>>>>> 823c958 (.)
 
 I blocchi UI sono componenti riutilizzabili per la costruzione delle pagine. Ogni blocco è un componente Blade che può essere utilizzato in qualsiasi vista del tema.
 
@@ -99,6 +103,7 @@ Ogni blocco deve seguire questa struttura:
 6. **Responsive**: Rendi i blocchi responsive
 7. **Performance**: Ottimizza le performance
 8. **Codice**: Mantieni il codice pulito e documentato
+<<<<<<< HEAD
 
 ## Collegamenti tra versioni di blocks.md
 * [blocks.md](../../../Xot/docs/blocks.md)
@@ -108,3 +113,5 @@ Ogni blocco deve seguire questa struttura:
 * [blocks.md](../../../../Themes/One/docs/blocks.md)
 * [blocks.md](../../../../Themes/One/docs/components/blocks.md)
 
+=======
+>>>>>>> 823c958 (.)

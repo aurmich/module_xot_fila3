@@ -43,6 +43,10 @@ class AutoLabelAction
         // @phpstan-ignore function.alreadyNarrowedType
         if (method_exists($component, 'getStatePath')) {
             $statePath = $component->getStatePath();
+<<<<<<< HEAD
+=======
+
+>>>>>>> 823c958 (.)
             return $statePath;
         }
 
@@ -50,6 +54,10 @@ class AutoLabelAction
         $reflectionClass = new \ReflectionClass($component);
         if ($reflectionClass->hasProperty('name') && $reflectionClass->getProperty('name')->isPublic()) {
             $property = $reflectionClass->getProperty('name');
+<<<<<<< HEAD
+=======
+
+>>>>>>> 823c958 (.)
             Assert::string($value = $property->getValue($component));
             return $value;
         }
@@ -62,12 +70,20 @@ class AutoLabelAction
      * Applica automaticamente le etichette ai componenti Filament.
      *
      * @param Field|Component $component Il componente a cui applicare l'etichetta
+<<<<<<< HEAD
      * 
+=======
+     *
+>>>>>>> 823c958 (.)
      * @return Field|Component Il componente con l'etichetta applicata
      */
     public function execute(Field|Component $component): Field|Component
     {
         Assert::isInstanceOf($component, Field::class, 'Il componente deve essere un\'istanza di Field o Component');
+<<<<<<< HEAD
+=======
+
+>>>>>>> 823c958 (.)
         $backtrace = debug_backtrace(DEBUG_BACKTRACE_PROVIDE_OBJECT, 6);
 
         // Otteniamo il valore dalla backtrace

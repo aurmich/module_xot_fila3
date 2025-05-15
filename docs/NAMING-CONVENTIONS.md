@@ -1,6 +1,12 @@
+<<<<<<< HEAD
 # Convenzioni di Nomenclatura in <nome progetto>
 
 Questo documento definisce le convenzioni ufficiali di nomenclatura da utilizzare in tutto il progetto <nome progetto>.
+=======
+# Convenzioni di Nomenclatura in PTVX
+
+Questo documento definisce le convenzioni ufficiali di nomenclatura da utilizzare in tutto il progetto PTVX.
+>>>>>>> 823c958 (.)
 
 ## Convenzioni Generali
 

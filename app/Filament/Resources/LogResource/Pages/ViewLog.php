@@ -8,6 +8,22 @@ use Filament\Actions;
 use Filament\Infolists\Components\Section;
 use Filament\Infolists\Components\TextEntry;
 use Filament\Infolists\Components\Grid;
+<<<<<<< HEAD
+use Modules\Xot\Filament\Resources\LogResource;
+=======
+<<<<<<< HEAD
+use Modules\Xot\Filament\Resources\Pages\XotBaseViewRecord;
+>>>>>>> bdc979b (.)
+
+use function Safe\json_encode;
+
+class ViewLog extends \Modules\Xot\Filament\Resources\Pages\XotBaseViewRecord
+{
+<<<<<<< HEAD
+    protected static string $resource = LogResource::class;
+=======
+    protected static string $resource = \Modules\Xot\Filament\Resources\LogResource::class;
+=======
 use Modules\Xot\Filament\Resources\LogResource;
 
 use function Safe\json_encode;
@@ -15,6 +31,8 @@ use function Safe\json_encode;
 class ViewLog extends \Modules\Xot\Filament\Resources\Pages\XotBaseViewRecord
 {
     protected static string $resource = LogResource::class;
+>>>>>>> 823c958 (.)
+>>>>>>> bdc979b (.)
 
     protected function getInfolistSchema(): array
     {

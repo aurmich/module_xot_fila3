@@ -4,6 +4,12 @@ declare(strict_types=1);
 
 namespace Modules\Xot\Filament\Pages;
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< Updated upstream
+<<<<<<< HEAD
+>>>>>>> bdc979b (.)
 use Filament\Forms\Form;
 use Filament\Pages\Page;
 use Illuminate\Support\Str;
@@ -13,23 +19,86 @@ use Illuminate\Database\Eloquent\Model;
 use Modules\Xot\Filament\Traits\TransTrait;
 use Filament\Forms\Concerns\InteractsWithForms;
 use Illuminate\Contracts\Auth\Authenticatable;
+<<<<<<< HEAD
+=======
+=======
+=======
+use Filament\Forms\Form;
+>>>>>>> Stashed changes
+use Filament\Pages\Page;
+use Illuminate\Support\Str;
+use Filament\Facades\Filament;
+use Filament\Forms\Contracts\HasForms;
+use Illuminate\Database\Eloquent\Model;
+use Modules\Xot\Filament\Traits\TransTrait;
+<<<<<<< Updated upstream
+>>>>>>> 4241492 (.)
+=======
+use Filament\Forms\Concerns\InteractsWithForms;
+use Illuminate\Contracts\Auth\Authenticatable;
+>>>>>>> Stashed changes
+=======
+use Filament\Pages\Page;
+use Illuminate\Support\Str;
+use Modules\Xot\Filament\Traits\TransTrait;
+>>>>>>> 823c958 (.)
+>>>>>>> bdc979b (.)
 
 /**
  * Undocumented class.
  *
  * @property ?string $model
  */
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< Updated upstream
+<<<<<<< HEAD
+>>>>>>> bdc979b (.)
 abstract class XotBasePage extends Page implements HasForms
 {
     use TransTrait;
     use InteractsWithForms;
+<<<<<<< HEAD
+=======
+=======
+abstract class XotBasePage extends Page
+{
+    use TransTrait;
+>>>>>>> 4241492 (.)
+=======
+abstract class XotBasePage extends Page implements HasForms
+{
+    use TransTrait;
+    use InteractsWithForms;
+>>>>>>> Stashed changes
+=======
+abstract class XotBasePage extends Page
+{
+    use TransTrait;
+>>>>>>> 823c958 (.)
+>>>>>>> bdc979b (.)
 
     protected static ?string $navigationIcon = 'heroicon-o-computer-desktop';
 
     protected static string $view = 'job::filament.pages.job-monitor';
 
     protected static ?string $model = null; // ---
+<<<<<<< HEAD
     public ?array $data = [];
+=======
+<<<<<<< HEAD
+<<<<<<< Updated upstream
+<<<<<<< HEAD
+    public ?array $data = [];
+=======
+>>>>>>> 4241492 (.)
+=======
+    public ?array $data = [];
+>>>>>>> Stashed changes
+=======
+>>>>>>> 823c958 (.)
+>>>>>>> bdc979b (.)
 
     // public function mount(): void {
     //     $user = auth()->user();
@@ -96,6 +165,14 @@ abstract class XotBasePage extends Page implements HasForms
 
         return $res;
     }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< Updated upstream
+<<<<<<< HEAD
+=======
+>>>>>>> Stashed changes
+>>>>>>> bdc979b (.)
 
     public function form(Form $form): Form
     {
@@ -118,4 +195,14 @@ abstract class XotBasePage extends Page implements HasForms
 
         return $user;
     }
+<<<<<<< HEAD
+=======
+<<<<<<< Updated upstream
+=======
+>>>>>>> 4241492 (.)
+=======
+>>>>>>> Stashed changes
+=======
+>>>>>>> 823c958 (.)
+>>>>>>> bdc979b (.)
 }

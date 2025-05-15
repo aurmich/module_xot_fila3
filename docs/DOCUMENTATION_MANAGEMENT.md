@@ -75,6 +75,14 @@ Quando si identifica una nuova regola o pattern importante:
    - Aggiornare `.windsurfrules`
    - Mantenere coerenza con altre documentazioni
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< Updated upstream
+<<<<<<< HEAD
+=======
+>>>>>>> Stashed changes
+>>>>>>> bdc979b (.)
 ### 3. Gestione dei Prompt
 
 1. **Struttura dei Prompt**
@@ -101,6 +109,16 @@ Quando si identifica una nuova regola o pattern importante:
    - Aggiornare la documentazione in tempo reale
    - Verificare la coerenza con le convenzioni esistenti
 
+<<<<<<< HEAD
+=======
+<<<<<<< Updated upstream
+=======
+>>>>>>> 4241492 (.)
+=======
+>>>>>>> Stashed changes
+=======
+>>>>>>> 823c958 (.)
+>>>>>>> bdc979b (.)
 ### 3. Best Practices
 
 1. **Coerenza**
@@ -143,4 +161,21 @@ Quando si identifica una nuova regola o pattern importante:
 4. **Windsurf**
    - [ ] Aggiornare .windsurfrules
    - [ ] Verificare coerenza
+<<<<<<< HEAD
    - [ ] Testare applicabilità 
+=======
+<<<<<<< HEAD
+<<<<<<< Updated upstream
+<<<<<<< HEAD
+   - [ ] Testare applicabilità 
+=======
+   - [ ] Testare applicabilità 
+>>>>>>> 4241492 (.)
+=======
+   - [ ] Testare applicabilità 
+   - [ ] Testare applicabilità 
+>>>>>>> Stashed changes
+=======
+   - [ ] Testare applicabilità 
+>>>>>>> 823c958 (.)
+>>>>>>> bdc979b (.)

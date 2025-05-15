@@ -16,13 +16,17 @@ use Filament\Support\Concerns\Configurable;
 use Filament\Tables\Columns\Column;
 use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Filters\BaseFilter;
+<<<<<<< HEAD
 use Illuminate\Auth\AuthenticationException;
 use Illuminate\Contracts\Debug\ExceptionHandler;
 use Illuminate\Database\Eloquent\Model;
+=======
+>>>>>>> 823c958 (.)
 use Illuminate\Database\Events\MigrationsEnded;
 use Illuminate\Support\Carbon;
 use Illuminate\Support\Facades\Event;
 use Illuminate\Support\Facades\File;
+<<<<<<< HEAD
 use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\URL;
 use Illuminate\Support\Facades\View;
@@ -31,6 +35,11 @@ use Modules\Xot\Exceptions\Handlers\HandlersRepository;
 use Modules\Xot\Exceptions\Formatters\WebhookErrorFormatter;
 use Modules\Xot\View\Composers\XotComposer;
 use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
+=======
+use Illuminate\Support\Facades\URL;
+use Illuminate\Support\Facades\View;
+use Modules\Xot\View\Composers\XotComposer;
+>>>>>>> 823c958 (.)
 use Webmozart\Assert\Assert;
 
 use function Safe\realpath;
@@ -52,7 +61,10 @@ class XotServiceProvider extends XotBaseServiceProvider
         $this->redirectSSL();
         $this->registerViewComposers();
         $this->registerEvents();
+<<<<<<< HEAD
         //$this->registerExceptionHandler(); // guardare come fa sentry
+=======
+>>>>>>> 823c958 (.)
         $this->registerTimezone();
         $this->registerProviders();
     }
@@ -61,8 +73,11 @@ class XotServiceProvider extends XotBaseServiceProvider
     {
         parent::register();
         $this->registerConfig();
+<<<<<<< HEAD
         //$this->registerExceptionHandlersRepository();
         //$this->extendExceptionHandler();
+=======
+>>>>>>> 823c958 (.)
         $this->registerCommands();
     }
 
@@ -87,6 +102,7 @@ class XotServiceProvider extends XotBaseServiceProvider
         TextColumn::configureUsing(fn (TextColumn $column) => $column->timezone($timezone));
     }
 
+<<<<<<< HEAD
     /*
      * @see https://github.com/cerbero90/exception-handler
      --  guardare come fa sentry 
@@ -112,6 +128,8 @@ class XotServiceProvider extends XotBaseServiceProvider
     }
         */
 
+=======
+>>>>>>> 823c958 (.)
     public function registerConfig(): void
     {
         // $config_file = realpath(__DIR__.'/../config/metatag.php');
@@ -147,6 +165,7 @@ class XotServiceProvider extends XotBaseServiceProvider
         }
     }
 
+<<<<<<< HEAD
     /*
      * Register the custom exception handlers repository.
      -- guardare come fa sentry
@@ -170,6 +189,8 @@ class XotServiceProvider extends XotBaseServiceProvider
         );
     }
     */
+=======
+>>>>>>> 823c958 (.)
     private function redirectSSL(): void
     {
         // --- meglio ficcare un controllo anche sull'env
@@ -206,6 +227,9 @@ class XotServiceProvider extends XotBaseServiceProvider
     {
         View::composer('*', XotComposer::class);
     }
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 823c958 (.)
 } // end class

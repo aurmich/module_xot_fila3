@@ -29,7 +29,12 @@ class HandlersRepository
      */
     public function addReporter(callable $reporter): int
     {
+<<<<<<< HEAD
         return array_unshift($this->reporters, $reporter);
+=======
+        array_unshift($this->reporters, $reporter);
+        return count($this->reporters);
+>>>>>>> 823c958 (.)
     }
 
     /**
@@ -37,7 +42,12 @@ class HandlersRepository
      */
     public function addRenderer(callable $renderer): int
     {
+<<<<<<< HEAD
         return array_unshift($this->renderers, $renderer);
+=======
+        array_unshift($this->renderers, $renderer);
+        return count($this->renderers);
+>>>>>>> 823c958 (.)
     }
 
     /**
@@ -45,7 +55,12 @@ class HandlersRepository
      */
     public function addConsoleRenderer(callable $renderer): int
     {
+<<<<<<< HEAD
         return array_unshift($this->consoleRenderers, $renderer);
+=======
+        array_unshift($this->consoleRenderers, $renderer);
+        return count($this->consoleRenderers);
+>>>>>>> 823c958 (.)
     }
 
     /**
@@ -89,10 +104,28 @@ class HandlersRepository
             $reflection = new \ReflectionFunction(\Closure::fromCallable($handler));
         }
 
+<<<<<<< HEAD
         if (! $params = $reflection->getParameters()) {
             return false;
         }
 
         return $params[0]->getClass() instanceof \ReflectionClass ? $params[0]->getClass()->isInstance($e) : true;
+=======
+        $params = $reflection->getParameters();
+        if (empty($params)) {
+            return false;
+        }
+
+        if (!isset($params[0]) || !$params[0]->hasType()) {
+            return true;
+        }
+
+        $type = $params[0]->getType();
+        if (!$type instanceof \ReflectionNamedType || $type->isBuiltin()) {
+            return true;
+        }
+
+        return is_a($e, $type->getName(), true);
+>>>>>>> 823c958 (.)
     }
 }

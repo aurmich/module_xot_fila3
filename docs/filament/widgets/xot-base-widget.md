@@ -5,6 +5,7 @@ La classe astratta `XotBaseWidget` fornisce una base comune per tutti i widget F
 ## Caratteristiche Principali
 
 - Estende `Filament\Widgets\Widget`
+<<<<<<< HEAD
 - Integra funzionalità per i form tramite `InteractsWithForms`
 - Supporta filtri di pagina tramite `InteractsWithPageFilters`
 - Gestione automatica delle viste
@@ -30,6 +31,13 @@ namespace Modules\User\Filament\Widgets;
 // NON usare: namespace Modules\User\App\Filament\Widgets;
 ```
 
+=======
+- Integra funzionalità per i form
+- Supporta filtri di pagina
+- Gestione automatica delle viste
+- Configurazione flessibile
+
+>>>>>>> 823c958 (.)
 ## Proprietà
 
 ```php
@@ -40,10 +48,15 @@ protected int|string|array $columnSpan = 'full';  // Larghezza del widget
 
 ## Traits Integrati
 
+<<<<<<< HEAD
 - `\Filament\Widgets\Concerns\InteractsWithPageFilters`: Gestione dei filtri di pagina
 - `\Filament\Forms\Concerns\InteractsWithForms`: Interazione con i form
 
 > **IMPORTANTE**: Utilizzare sempre il namespace completo per i traits, incluso il namespace `\Filament\` iniziale
+=======
+- `InteractsWithPageFilters`: Gestione dei filtri di pagina
+- `InteractsWithForms`: Interazione con i form
+>>>>>>> 823c958 (.)
 
 ## Form Schema
 
@@ -65,6 +78,7 @@ final public function form(Form $form): Form
 
 1. **Estensione della Classe**
    ```php
+<<<<<<< HEAD
    namespace Modules\User\Filament\Widgets;
    
    use Modules\Xot\Filament\Widgets\XotBaseWidget;
@@ -85,10 +99,22 @@ final public function form(Form $form): Form
        public function getFormSchema(): array
        {
            return $this->resource::getFormSchemaWidget();
+=======
+   use Modules\Xot\Filament\Widgets\XotBaseWidget;
+
+   class YourWidget extends XotBaseWidget
+   {
+       public function getFormSchema(): array
+       {
+           return [
+               // Definisci lo schema del form
+           ];
+>>>>>>> 823c958 (.)
        }
    }
    ```
 
+<<<<<<< HEAD
 2. **Mai Usare `->label()` nei Componenti Filament**
    - Le etichette sono gestite automaticamente dal LangServiceProvider
    - Utilizzare la struttura espansa per i campi nei file di traduzione
@@ -106,16 +132,27 @@ final public function form(Form $form): Form
    ```
 
 4. **Gestione delle Viste**
+=======
+2. **Gestione delle Viste**
+>>>>>>> 823c958 (.)
    - Le viste vengono risolte automaticamente
    - Utilizzare il namespace del modulo per le viste
    - Seguire le convenzioni di naming
 
+<<<<<<< HEAD
 5. **Configurazione**
+=======
+3. **Configurazione**
+>>>>>>> 823c958 (.)
    - Personalizzare titolo e icona
    - Definire la larghezza appropriata
    - Implementare azioni di salvataggio quando necessario
 
+<<<<<<< HEAD
 6. **Filtri**
+=======
+4. **Filtri**
+>>>>>>> 823c958 (.)
    - Utilizzare i metodi di `InteractsWithPageFilters`
    - Gestire gli aggiornamenti dei filtri
    - Mantenere la coerenza nella struttura
@@ -141,6 +178,7 @@ public array $listener = [
 - Supporta la personalizzazione completa del form
 - Integra gestione cache per ottimizzazione
 
+<<<<<<< HEAD
 ## Integrazione con CanPoll
 
 Per implementare il polling automatico nei widget Filament, utilizzare il trait `CanPoll`:
@@ -172,3 +210,10 @@ Questo trait permette al widget di aggiornarsi automaticamente a intervalli rego
 - [FOLIO_VOLT_FILAMENT_INTEGRATION.md](../../FOLIO_VOLT_FILAMENT_INTEGRATION.md) - Integrazione Folio, Volt e Filament
 - [MODULE_STRUCTURE.md](../../MODULE_STRUCTURE.md) - Struttura standard dei moduli
 - [Documentazione Filament](https://filamentphp.com/docs/3.x/widgets/installation) 
+=======
+## Link Correlati
+
+- [Documentazione Filament](../../../docs/filament/index.md)
+- [Gestione Widget](../../../docs/filament/widgets.md)
+- [Form Schema](../../../docs/filament/forms.md) 
+>>>>>>> 823c958 (.)

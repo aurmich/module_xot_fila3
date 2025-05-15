@@ -19,7 +19,23 @@ class ListExtras extends XotBaseListRecords
 {
     protected static string $resource = ExtraResource::class;
 
+<<<<<<< HEAD
     public function getTableColumns(): array
+=======
+<<<<<<< HEAD
+<<<<<<< Updated upstream
+<<<<<<< HEAD
+    public function getTableColumns(): array
+=======
+    public function getListTableColumns(): array
+>>>>>>> 4241492 (.)
+=======
+    public function getTableColumns(): array
+>>>>>>> Stashed changes
+=======
+    public function getListTableColumns(): array
+>>>>>>> 823c958 (.)
+>>>>>>> bdc979b (.)
     {
         return [
             'id' => TextColumn::make('id')

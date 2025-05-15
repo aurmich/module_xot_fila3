@@ -14,6 +14,10 @@ use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Filters\BaseFilter;
 use Illuminate\Database\Eloquent\Model;
 use Filament\Notifications\Notification;
+<<<<<<< HEAD
+=======
+use Filament\Tables\Actions\Action;
+>>>>>>> 823c958 (.)
 use Filament\Tables\Actions\ActionGroup;
 use Filament\Tables\Enums\FiltersLayout;
 use Filament\Tables\Columns\Layout\Stack;
@@ -126,7 +130,23 @@ trait HasXotTable
     public function getGridTableColumns(): array
     {
         return [
+<<<<<<< HEAD
             Stack::make($this->getTableColumns()),
+=======
+<<<<<<< HEAD
+<<<<<<< Updated upstream
+<<<<<<< HEAD
+            Stack::make($this->getTableColumns()),
+=======
+            Stack::make($this->getListTableColumns()),
+>>>>>>> 4241492 (.)
+=======
+            Stack::make($this->getTableColumns()),
+>>>>>>> Stashed changes
+=======
+            Stack::make($this->getListTableColumns()),
+>>>>>>> 823c958 (.)
+>>>>>>> bdc979b (.)
         ];
     }
 
@@ -135,7 +155,23 @@ trait HasXotTable
      *
      * @return array<string, Tables\Columns\Column>
      */
+<<<<<<< HEAD
     public function getTableColumns(): array
+=======
+<<<<<<< HEAD
+<<<<<<< Updated upstream
+<<<<<<< HEAD
+    public function getTableColumns(): array
+=======
+    public function getListTableColumns(): array
+>>>>>>> 4241492 (.)
+=======
+    public function getTableColumns(): array
+>>>>>>> Stashed changes
+=======
+    public function getListTableColumns(): array
+>>>>>>> 823c958 (.)
+>>>>>>> bdc979b (.)
     {
         return [];
     }
@@ -238,8 +274,24 @@ trait HasXotTable
             ->emptyStateActions($this->getTableEmptyStateActions())
             ->striped();
 
+<<<<<<< HEAD
         $table = $table
             ->paginated($this->getTablePaginated());
+=======
+<<<<<<< HEAD
+<<<<<<< Updated upstream
+<<<<<<< HEAD
+        $table = $table
+            ->paginated($this->getTablePaginated());
+=======
+>>>>>>> 4241492 (.)
+=======
+        $table = $table
+            ->paginated($this->getTablePaginated());
+>>>>>>> Stashed changes
+=======
+>>>>>>> 823c958 (.)
+>>>>>>> bdc979b (.)
         /*
             ->defaultSort(
                 column: $this->getDefaultTableSortColumn(),
@@ -249,11 +301,29 @@ trait HasXotTable
         return $table;
     }
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< Updated upstream
+<<<<<<< HEAD
+=======
+>>>>>>> Stashed changes
+>>>>>>> bdc979b (.)
     protected function getTablePaginated(): bool
     {
         return true;
     }
 
+<<<<<<< HEAD
+=======
+<<<<<<< Updated upstream
+=======
+>>>>>>> 4241492 (.)
+=======
+>>>>>>> Stashed changes
+=======
+>>>>>>> 823c958 (.)
+>>>>>>> bdc979b (.)
     /**
      * Get default table sort column.
      */
@@ -292,11 +362,16 @@ trait HasXotTable
     /**
      * Get table actions.
      *
+<<<<<<< HEAD
      * @return array<string, Action|ActionGroup>
+=======
+     * @return array<string, Tables\Actions\Action|Tables\Actions\ActionGroup>
+>>>>>>> 823c958 (.)
      */
     public function getTableActions(): array
     {
         $actions = [];
+<<<<<<< HEAD
         $resource = $this->getResource();
         
         if (method_exists($resource, 'canView')) {
@@ -319,7 +394,29 @@ trait HasXotTable
                 ->tooltip(__('user::actions.delete'))
                 ->visible(fn (Model $record): bool => $resource::canDelete($record));
         }
+<<<<<<< HEAD
         
+=======
+=======
+
+        if ($this->shouldShowViewAction()) {
+            $actions['view'] = Tables\Actions\ViewAction::make()
+                ->iconButton()
+                ->tooltip(__('user::actions.view'));
+        }
+
+        if ($this->shouldShowEditAction()) {
+            $actions['edit'] = Tables\Actions\EditAction::make()
+                ->iconButton()
+                ->tooltip(__('user::actions.edit'));
+        }
+
+        $actions['delete'] = Tables\Actions\DeleteAction::make()
+            ->iconButton()
+            ->tooltip(__('user::actions.delete'));
+>>>>>>> 823c958 (.)
+
+>>>>>>> bdc979b (.)
         if ($this->shouldShowReplicateAction()) {
             $actions['replicate'] = Tables\Actions\ReplicateAction::make()
                 ->iconButton()

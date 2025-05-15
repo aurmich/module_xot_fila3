@@ -9,8 +9,14 @@ use Illuminate\Support\Facades\Auth;
 class WebhookErrorFormatter
 {
     public function __construct(
+<<<<<<< HEAD
         private \Throwable $exception
     ) {}
+=======
+        private readonly \Throwable $exception
+    ) {
+    }
+>>>>>>> 823c958 (.)
 
     /**
      * @return array<string, mixed>

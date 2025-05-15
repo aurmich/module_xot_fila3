@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Analisi PHPStan per Moduli Laravel
 
 Questa documentazione spiega come utilizzare gli script forniti per analizzare i moduli Laravel con PHPStan.
@@ -181,3 +182,17 @@ php -d memory_limit=1G analyze_modules_phpstan.php
 * [README.md](../../../../Themes/Two/docs/README.md)
 * [README.md](../../../../Themes/One/docs/README.md)
 
+=======
+# Analisi PHPStan per il modulo Xot
+
+Data: Wed Apr 23 10:45:58 CEST 2025
+
+## Riassunto
+
+| Livello | Stato | Errori |
+|---------|-------|--------|
+| 1 | ❌ Errore | Errore di esecuzione |
+## Collegamenti
+
+- [Report Generale](/docs/phpstan/README.md)
+>>>>>>> 823c958 (.)

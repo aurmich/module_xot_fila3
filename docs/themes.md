@@ -1,6 +1,12 @@
+<<<<<<< HEAD
 # Temi in il progetto
 
 il progetto utilizza un sistema di temi basato su Filament 3.3. Ogni tema è un pacchetto Laravel indipendente che può essere installato e configurato separatamente.
+=======
+# Temi in SaluteOra
+
+SaluteOra utilizza un sistema di temi basato su Filament 3.3. Ogni tema è un pacchetto Laravel indipendente che può essere installato e configurato separatamente.
+>>>>>>> 823c958 (.)
 
 ## Struttura dei Temi
 
@@ -46,7 +52,11 @@ Le viste devono essere organizzate in:
 
 ## Tema One
 
+<<<<<<< HEAD
 Il tema One è il tema predefinito di il progetto. È basato su Filament 3.3 e include:
+=======
+Il tema One è il tema predefinito di SaluteOra. È basato su Filament 3.3 e include:
+>>>>>>> 823c958 (.)
 
 ### Blocchi Disponibili
 - Hero
@@ -81,6 +91,7 @@ Per personalizzare un tema:
 5. **Provider**: Registra solo ciò che è necessario
 6. **Blocchi**: Crea blocchi riutilizzabili
 7. **Layout**: Mantieni i layout flessibili
+<<<<<<< HEAD
 8. **Documentazione**: Documenta tutto accuratamente 
 ## Collegamenti tra versioni di themes.md
 * [themes.md](docs/rules/themes.md)
@@ -90,3 +101,16 @@ Per personalizzare un tema:
 * [README.md Tema One](/var/www/html/_bases/base_ptvx_fila3_mono/laravel/Themes/One/docs/README.md)
 * [Convenzioni Namespace Tema One](/var/www/html/_bases/base_ptvx_fila3_mono/laravel/Themes/One/docs/namespace-conventions.md)b6f667c (.)
 
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 4241492 (.)
+=======
+* [README.md Tema One](/var/www/html/_bases/base_ptvx_fila3_mono/laravel/Themes/One/docs/README.md)
+* [Convenzioni Namespace Tema One](/var/www/html/_bases/base_ptvx_fila3_mono/laravel/Themes/One/docs/namespace-conventions.md)b6f667c (.)
+
+>>>>>>> Stashed changes
+=======
+8. **Documentazione**: Documenta tutto accuratamente 
+>>>>>>> 823c958 (.)
+>>>>>>> bdc979b (.)

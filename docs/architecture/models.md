@@ -35,6 +35,7 @@ ${cat /mnt/f/var/www/quaeris/laravel/Modules/Xot/_docs/type_hinting.txt}
 ```txt
 ${cat /mnt/f/var/www/quaeris/laravel/Modules/Xot/_docs/scope.txt}
 ```
+<<<<<<< HEAD
 ### Versione HEAD
 
 
@@ -47,3 +48,5 @@ ${cat /mnt/f/var/www/quaeris/laravel/Modules/Xot/_docs/scope.txt}
 
 ---
 
+=======
+>>>>>>> 823c958 (.)

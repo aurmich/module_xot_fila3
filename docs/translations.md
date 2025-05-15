@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ### Versione HEAD
 
 # Traduzioni
@@ -136,6 +137,8 @@ return [
 
 ### Versione Incoming
 
+=======
+>>>>>>> 823c958 (.)
 # Sistema di Traduzioni
 
 ## Struttura
@@ -186,9 +189,12 @@ return [
 ];
 ```
 
+<<<<<<< HEAD
 
 ---
 
+=======
+>>>>>>> 823c958 (.)
 ## Utilizzo
 
 ### In Filament Resources
@@ -324,6 +330,7 @@ TextInput::make('cognome')
 // Utilizzo in Actions
 Action::make('save')
 Action::make('delete')
+<<<<<<< HEAD
 ### Versione HEAD
 
 ```
@@ -391,3 +398,6 @@ Action::make('delete')
 
 ---
 
+=======
+``` 
+>>>>>>> 823c958 (.)

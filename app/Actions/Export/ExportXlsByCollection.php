@@ -23,7 +23,11 @@ class ExportXlsByCollection
      * @param string $filename Nome del file Excel
      * @param string|null $transKey Chiave di traduzione per i campi
      * @param array<int, string> $fields Campi da includere nell'export
+<<<<<<< HEAD
      * 
+=======
+     *
+>>>>>>> 823c958 (.)
      * @return BinaryFileResponse
      */
     public function execute(
@@ -52,7 +56,11 @@ class ExportXlsByCollection
      * @param Collection $rows La collezione da esportare
      * @param array<string> $fields Campi da includere nell'export
      * @param string $filename Nome del file Excel
+<<<<<<< HEAD
      * 
+=======
+     *
+>>>>>>> 823c958 (.)
      * @return string Il percorso del file generato
      */
     public function executeWithSpreadsheet(Collection $rows, array $fields, string $filename): string
@@ -104,7 +112,10 @@ class ExportXlsByCollection
                 } elseif (is_object($data) && property_exists($data, $field)) {
                     $value = $data->{$field} ?? '';
                 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 823c958 (.)
                 $sheet->setCellValueByColumnAndRow($col + 1, $row, $value);
             }
             $row++;

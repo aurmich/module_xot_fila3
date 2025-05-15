@@ -55,6 +55,7 @@ section: content
 - 
 - php artisan module:make-filament-context Filament
 
+<<<<<<< HEAD
 ### Versione HEAD
 
 - php artisan make:filament-user per creare utente
@@ -74,3 +75,6 @@ section: content
 
 ---
 
+=======
+- php artisan make:filament-user per creare utente
+>>>>>>> 823c958 (.)

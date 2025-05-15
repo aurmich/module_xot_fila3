@@ -58,6 +58,7 @@ Modules/Xot/
 - Integration tests with dependent modules
 - Security testing
 - Performance testing
+<<<<<<< HEAD
 ### Versione HEAD
 
 
@@ -82,3 +83,5 @@ Modules/Xot/
 
 ---
 
+=======
+>>>>>>> 823c958 (.)

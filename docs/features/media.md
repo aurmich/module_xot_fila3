@@ -24,6 +24,7 @@ ${cat /mnt/f/var/www/quaeris/laravel/Modules/Xot/_docs/image.txt}
 ```txt
 ${cat /mnt/f/var/www/quaeris/laravel/Modules/Xot/_docs/upload.txt}
 ```
+<<<<<<< HEAD
 ### Versione HEAD
 
 
@@ -37,3 +38,5 @@ ${cat /mnt/f/var/www/quaeris/laravel/Modules/Xot/_docs/upload.txt}
 
 ---
 
+=======
+>>>>>>> 823c958 (.)

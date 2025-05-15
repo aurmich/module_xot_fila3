@@ -20,6 +20,7 @@ namespace Modules\Xot\Console\Commands;
 ### ❌ ERRATO
 ```php
 namespace Modules\Xot\app\Console\Commands;
+<<<<<<< HEAD
 ### Versione HEAD
 
 
@@ -29,6 +30,8 @@ namespace Modules\Xot\Console\Commands;
 
 ---
 
+=======
+>>>>>>> 823c958 (.)
 ```
 
 ## Esempio di Comando Console

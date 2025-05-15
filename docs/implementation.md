@@ -292,6 +292,7 @@ class XotPageTest extends TestCase
     }
 }
 ``` 
+<<<<<<< HEAD
 ### Versione HEAD
 
 
@@ -306,3 +307,5 @@ class XotPageTest extends TestCase
 
 ---
 
+=======
+>>>>>>> 823c958 (.)

@@ -1,9 +1,19 @@
+<<<<<<< HEAD
 
 
 =======
 
 5693302 (.)
 b6f667c (.)
+<<<<<<< HEAD
+=======
+=======
+
+>>>>>>> Stashed changes
+>>>>>>> 4241492 (.)
+=======
+>>>>>>> 823c958 (.)
+>>>>>>> bdc979b (.)
 # Correzioni PHPStan nel Modulo Xot
 
 ## Correzioni Implementate
@@ -32,8 +42,11 @@ b6f667c (.)
 - ✅ Migliorata gestione delle eccezioni
 - ✅ Documentazione PHPDoc completa
 
+<<<<<<< HEAD
 ### Versione HEAD
 
+=======
+>>>>>>> 823c958 (.)
 ### 5. ExportXlsByView (2023-03-21)
 - ✅ Rimossi controlli ridondanti dei tipi in `is_string()` e `is_scalar()`
 - ✅ Migliorata la documentazione dei parametri
@@ -98,12 +111,15 @@ b6f667c (.)
 - ✅ Aggiunte annotazioni PHPDoc per le variabili di opzione
 - ✅ Aggiunta documentazione della classe
 
+<<<<<<< HEAD
 
 ### Versione Incoming
 
 
 ---
 
+=======
+>>>>>>> 823c958 (.)
 ## Best Practices
 
 ### 1. Gestione Tipi
@@ -117,6 +133,7 @@ public function execute(string $modelClass): AbstractSchemaManager
 {
     Assert::classExists($modelClass);
     Assert::subclassOf($modelClass, Model::class);
+<<<<<<< HEAD
 ### Versione HEAD
 
 aurmich/dev
@@ -231,16 +248,49 @@ aurmich/dev
 aurmich/dev
 5693302 (.)
 b6f667c (.)
+<<<<<<< HEAD
+=======
+<<<<<<< Updated upstream
+=======
+=======
+>>>>>>> Stashed changes
+=======
+
+=======
+>>>>>>> aurmich/dev
+>>>>>>> 5693302 (.)
+>>>>>>> 4241492 (.)
+=======
+>>>>>>> 823c958 (.)
+>>>>>>> bdc979b (.)
     // ...
 }
 ```
 
+<<<<<<< HEAD
 
 
 =======
 
 5693302 (.)
 b6f667c (.)
+<<<<<<< HEAD
+=======
+=======
+=======
+
+>>>>>>> 5693302 (.)
+=======
+
+5693302 (.)
+b6f667c (.)
+=======
+
+>>>>>>> Stashed changes
+>>>>>>> 4241492 (.)
+=======
+>>>>>>> 823c958 (.)
+>>>>>>> bdc979b (.)
 ### 2. Validazione Dati
 ```php
 /**
@@ -251,6 +301,7 @@ private function validateData(array $data): void
 {
     Assert::keyExists($data, 'required_field');
     Assert::string($data['required_field']);
+<<<<<<< HEAD
 ### Versione HEAD
 
 aurmich/dev
@@ -282,16 +333,49 @@ aurmich/dev
 aurmich/dev
 5693302 (.)
 b6f667c (.)
+<<<<<<< HEAD
+=======
+<<<<<<< Updated upstream
+=======
+=======
+>>>>>>> Stashed changes
+=======
+
+=======
+>>>>>>> aurmich/dev
+>>>>>>> 5693302 (.)
+>>>>>>> 4241492 (.)
+=======
+>>>>>>> 823c958 (.)
+>>>>>>> bdc979b (.)
     // ...
 }
 ```
 
+<<<<<<< HEAD
 
 
 =======
 
 5693302 (.)
 b6f667c (.)
+<<<<<<< HEAD
+=======
+=======
+=======
+
+>>>>>>> 5693302 (.)
+=======
+
+5693302 (.)
+b6f667c (.)
+=======
+
+>>>>>>> Stashed changes
+>>>>>>> 4241492 (.)
+=======
+>>>>>>> 823c958 (.)
+>>>>>>> bdc979b (.)
 ### 3. Gestione Relazioni
 ```php
 /**
@@ -384,9 +468,12 @@ public function execute(Model $model, array $data): array
 - ✅ Risolto: Implementato `getTableColumns()` e `getTableConfiguration()`
 
 ### 2. Metodo Final Override in UsersRelationManager
+<<<<<<< HEAD
 ### Versione HEAD
 
 - ❌ Errore: Cannot override final method `Modules\Xot\Filament\Resources\XotBaseResource\RelationManager\XotBaseRelationManager::form()`
+=======
+>>>>>>> 823c958 (.)
 
 
 - ❌ Errore: Cannot override final method `Modules\Xot\Filament\Resources\XotBaseResource\RelationManagers\XotBaseRelationManager::form()`
@@ -396,6 +483,7 @@ public function execute(Model $model, array $data): array
 
 - ❌ Errore: Cannot override final method `Modules\Xot\Filament\Resources\XotBaseResource\RelationManagers\XotBaseRelationManager::form()`
  7b67053 (fix: auto resolve conflict)
+<<<<<<< HEAD
 
 ### Versione Incoming
 
@@ -403,6 +491,8 @@ public function execute(Model $model, array $data): array
 
 ---
 
+=======
+>>>>>>> 823c958 (.)
 - 📍 Posizione: `Modules/User/app/Filament/Resources/TeamResource/RelationManagers/UsersRelationManager.php:21`
 - 🔧 Soluzione necessaria:
   - Rimuovere l'override del metodo `form()`
@@ -410,9 +500,12 @@ public function execute(Model $model, array $data): array
   - Implementare la logica corretta per la gestione delle relazioni
 
 ### 3. Metodo Final Override in DomainsRelationManager
+<<<<<<< HEAD
 ### Versione HEAD
 
 - ❌ Errore: Cannot override final method `Modules\Xot\Filament\Resources\XotBaseResource\RelationManager\XotBaseRelationManager::form()`
+=======
+>>>>>>> 823c958 (.)
 
 
 - ❌ Errore: Cannot override final method `Modules\Xot\Filament\Resources\XotBaseResource\RelationManagers\XotBaseRelationManager::form()`
@@ -422,6 +515,7 @@ public function execute(Model $model, array $data): array
 
 - ❌ Errore: Cannot override final method `Modules\Xot\Filament\Resources\XotBaseResource\RelationManagers\XotBaseRelationManager::form()`
  7b67053 (fix: auto resolve conflict)
+<<<<<<< HEAD
 
 ### Versione Incoming
 
@@ -429,6 +523,8 @@ public function execute(Model $model, array $data): array
 
 ---
 
+=======
+>>>>>>> 823c958 (.)
 - 📍 Posizione: `Modules/User/app/Filament/Resources/TenantResource/RelationManagers/DomainsRelationManager.php:20`
 - 🔧 Soluzione necessaria:
   - Rimuovere l'override del metodo `form()`
@@ -481,6 +577,7 @@ public function execute(Model $model, array $data): array
 
 3. **Azioni e Validazione**
    ```php
+<<<<<<< HEAD
 ### Versione HEAD
 
    public function getTableActions(): array
@@ -491,6 +588,9 @@ public function execute(Model $model, array $data): array
 
 ---
 
+=======
+   public function getTableActions(): array
+>>>>>>> 823c958 (.)
    {
        return [
            Tables\Actions\EditAction::make()
@@ -526,8 +626,11 @@ Best Practices:
 - Utilizzare i metodi previsti per la personalizzazione invece di sovrascrivere metodi final
 - Mantenere la coerenza nella struttura dei form tra i vari RelationManager
 - Validare i dati utilizzando le regole di validazione di Laravel
+<<<<<<< HEAD
 ### Versione HEAD
 
+=======
+>>>>>>> 823c958 (.)
 
 - Documentare le personalizzazioni nel codice 
 
@@ -610,6 +713,7 @@ Questo permette a phpstan di trovare correttamente il file durante l'analisi sta
 - Aggiunta tipizzazione per i metodi getColumns, getIndexes e getForeignKeys
 - Aggiunta asserzione per la codifica JSON
 - Aggiunta tipizzazione per il DoctrineSchemaManager
+<<<<<<< HEAD
 
 ### Versione Incoming
 
@@ -783,3 +887,18 @@ aurmich/dev
 aurmich/dev
 5693302 (.)
 b6f667c (.)
+<<<<<<< HEAD
+=======
+<<<<<<< Updated upstream
+=======
+=======
+>>>>>>> Stashed changes
+=======
+
+=======
+>>>>>>> aurmich/dev
+>>>>>>> 5693302 (.)
+>>>>>>> 4241492 (.)
+=======
+>>>>>>> 823c958 (.)
+>>>>>>> bdc979b (.)
