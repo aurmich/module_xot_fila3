@@ -126,7 +126,11 @@ trait HasXotTable
     public function getGridTableColumns(): array
     {
         return [
+<<<<<<< HEAD
             Stack::make($this->getTableColumns()),
+=======
+            Stack::make($this->getListTableColumns()),
+>>>>>>> 4241492 (.)
         ];
     }
 
@@ -135,7 +139,11 @@ trait HasXotTable
      *
      * @return array<string, Tables\Columns\Column>
      */
+<<<<<<< HEAD
     public function getTableColumns(): array
+=======
+    public function getListTableColumns(): array
+>>>>>>> 4241492 (.)
     {
         return [];
     }
@@ -238,8 +246,11 @@ trait HasXotTable
             ->emptyStateActions($this->getTableEmptyStateActions())
             ->striped();
 
+<<<<<<< HEAD
         $table = $table
             ->paginated($this->getTablePaginated());
+=======
+>>>>>>> 4241492 (.)
         /*
             ->defaultSort(
                 column: $this->getDefaultTableSortColumn(),
@@ -249,11 +260,14 @@ trait HasXotTable
         return $table;
     }
 
+<<<<<<< HEAD
     protected function getTablePaginated(): bool
     {
         return true;
     }
 
+=======
+>>>>>>> 4241492 (.)
     /**
      * Get default table sort column.
      */

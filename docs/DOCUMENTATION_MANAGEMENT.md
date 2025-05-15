@@ -75,6 +75,7 @@ Quando si identifica una nuova regola o pattern importante:
    - Aggiornare `.windsurfrules`
    - Mantenere coerenza con altre documentazioni
 
+<<<<<<< HEAD
 ### 3. Gestione dei Prompt
 
 1. **Struttura dei Prompt**
@@ -101,6 +102,8 @@ Quando si identifica una nuova regola o pattern importante:
    - Aggiornare la documentazione in tempo reale
    - Verificare la coerenza con le convenzioni esistenti
 
+=======
+>>>>>>> 4241492 (.)
 ### 3. Best Practices
 
 1. **Coerenza**
@@ -143,4 +146,8 @@ Quando si identifica una nuova regola o pattern importante:
 4. **Windsurf**
    - [ ] Aggiornare .windsurfrules
    - [ ] Verificare coerenza
+<<<<<<< HEAD
    - [ ] Testare applicabilità 
+=======
+   - [ ] Testare applicabilità 
+>>>>>>> 4241492 (.)

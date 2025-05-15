@@ -18,7 +18,11 @@ class ListMyRecords extends XotBaseListRecords
 {
     protected static string $resource = MyResource::class;
 
+<<<<<<< HEAD
     public function getTableColumns(): array
+=======
+    public function getListTableColumns(): array
+>>>>>>> 4241492 (.)
     {
         return [
             // definizione colonne
@@ -31,7 +35,11 @@ class ListMyRecords extends XotBaseListRecords
 
 Quando si estende `XotBaseListRecords`, è necessario implementare i seguenti metodi:
 
+<<<<<<< HEAD
 1. `getTableColumns()`: Definisce le colonne della tabella
+=======
+1. `getListTableColumns()`: Definisce le colonne della tabella
+>>>>>>> 4241492 (.)
 2. `getListTableActions()`: Definisce le azioni per singola riga
 3. `getListTableBulkActions()`: Definisce le azioni di massa
 4. `getListTableFilters()`: Definisce i filtri della tabella
@@ -40,7 +48,11 @@ Quando si estende `XotBaseListRecords`, è necessario implementare i seguenti me
 
 1. **Prefisso List**:
    - Tutti i metodi relativi alla tabella DEVONO avere il prefisso "List"
+<<<<<<< HEAD
    - Es: `getTableColumns()` invece di `getListTableColumns()`
+=======
+   - Es: `getListTableColumns()` invece di `getTableColumns()`
+>>>>>>> 4241492 (.)
 
 2. **Visibilità dei Metodi**:
    - Tutti i metodi devono essere `public`
@@ -70,7 +82,11 @@ Quando si estende `XotBaseListRecords`, è necessario implementare i seguenti me
 3. **❌ Visibilità Errata**:
    ```php
    // NON cambiare la visibilità dei metodi
+<<<<<<< HEAD
    protected function getTableColumns(): array
+=======
+   protected function getListTableColumns(): array
+>>>>>>> 4241492 (.)
    ```
 
 ## Best Practices
@@ -81,7 +97,11 @@ Quando si estende `XotBaseListRecords`, è necessario implementare i seguenti me
    {
        protected static string $resource = MyResource::class;
 
+<<<<<<< HEAD
        public function getTableColumns(): array
+=======
+       public function getListTableColumns(): array
+>>>>>>> 4241492 (.)
        {
            return [
                TextColumn::make('id')->sortable(),
@@ -125,6 +145,7 @@ Quando si estende `XotBaseListRecords`, è necessario implementare i seguenti me
 
 3. Mantenere la coerenza in tutto il progetto usando sempre XotBaseListRecords
 
+<<<<<<< HEAD
 > **AVVISO IMPORTANTE (2025-05-13):**
 > Il metodo standard per la definizione delle colonne della tabella è ora `getTableColumns`. Il vecchio `getListTableColumns` è deprecato: aggiorna tutte le implementazioni e la documentazione. Questa scelta garantisce allineamento con Filament e coerenza tra tutti i moduli Laraxot.
 
@@ -150,6 +171,8 @@ public function getTableColumns(): array
 }
 ```
 
+=======
+>>>>>>> 4241492 (.)
 ```php
 declare(strict_types=1);
 
@@ -195,7 +218,11 @@ class ListXXX extends XotBaseListRecords
         ];
     }
 
+<<<<<<< HEAD
     public function getTableColumns(): array
+=======
+    public function getListTableColumns(): array
+>>>>>>> 4241492 (.)
     {
         return [
         ];

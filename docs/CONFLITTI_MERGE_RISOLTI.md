@@ -96,6 +96,7 @@ Per prevenire problemi simili in futuro, si raccomanda di:
 5. Utilizzare revisioni del codice prima di completare i merge
 6. Creare backup dei file prima di risolvere conflitti complessi
 
+<<<<<<< HEAD
 ## Standardizzazione Metodo Filament Table: getTableColumns
 
 ### Caso concreto: XotBaseManageRelatedRecords.php
@@ -111,6 +112,8 @@ Durante la risoluzione dei conflitti, nel file `Modules/Xot/app/Filament/Resourc
 - [Regola generale e motivazione in FILAMENT_TABLE_COLUMNS.md](./FILAMENT_TABLE_COLUMNS.md)
 
 ---
+=======
+>>>>>>> 4241492 (.)
 ## Conclusioni
 
 La risoluzione dei conflitti di merge ha ripristinato la corretta funzionalità delle classi nel modulo Xot, permettendo l'analisi statica con PHPStan e garantendo il corretto funzionamento dell'applicazione. Le soluzioni implementate hanno mantenuto la coerenza del codice e migliorato la robustezza delle classi interessate.

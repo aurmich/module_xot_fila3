@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Risoluzione dei Conflitti di Merge nel Progetto
 
 ## Problema
@@ -98,6 +99,43 @@ Durante lo sviluppo del progetto <nome progetto>, sono stati identificati divers
 aurmich/dev
 
 b6f667c (.)
+=======
+# Risoluzione dei Conflitti di Merge in il progetto
+
+## Problema
+
+Durante lo sviluppo del progetto, sono stati identificati diversi file con conflitti di merge non risolti. Questi conflitti erano indicati dalla presenza di marcatori nel codice sorgente. I conflitti non risolti causavano errori durante l'analisi statica con PHPStan e impedivano il corretto funzionamento del codice.
+
+## Collegamenti Bidirezionali
+
+- [Linee Guida Generali per la Risoluzione dei Conflitti Git](../../../../docs/risoluzione_conflitti_git.md)
+- [Documentazione Conflitti Git nei Moduli](../../../../docs/conflitti_git_moduli.md)
+
+
+=======
+
+Durante lo sviluppo del progetto <nome progetto>, sono stati identificati diversi file con conflitti di merge non risolti. Questi conflitti erano indicati dalla presenza di marcatori come ``, `origin/dev` nel codice sorgente. I conflitti non risolti causavano errori durante l'analisi statica con PHPStan e impedivano il corretto funzionamento del codice.
+aurmich/dev
+=======
+
+
+Durante lo sviluppo del progetto <nome progetto>, sono stati identificati diversi file con conflitti di merge non risolti. Questi conflitti erano indicati dalla presenza di marcatori come ``, `=======` e `>>>>>>> origin/dev` nel codice sorgente. I conflitti non risolti causavano errori durante l'analisi statica con PHPStan e impedivano il corretto funzionamento del codice.
+=======
+
+Durante lo sviluppo del progetto <nome progetto>, sono stati identificati diversi file con conflitti di merge non risolti. Questi conflitti erano indicati dalla presenza di marcatori come ``, `origin/dev` nel codice sorgente. I conflitti non risolti causavano errori durante l'analisi statica con PHPStan e impedivano il corretto funzionamento del codice.
+aurmich/dev
+>>>>>>> aurmich/dev
+=======
+
+Durante lo sviluppo del progetto <nome progetto>, sono stati identificati diversi file con conflitti di merge non risolti. Questi conflitti erano indicati dalla presenza di marcatori come ``, `origin/dev` nel codice sorgente. I conflitti non risolti causavano errori durante l'analisi statica con PHPStan e impedivano il corretto funzionamento del codice.
+aurmich/dev
+>>>>>>> aurmich/dev
+
+=======
+>>>>>>> aurmich/dev
+>>>>>>> aurmich/dev
+>>>>>>> 5693302 (.):docs/RISOLUZIONE_CONFLITTI_MERGE.md
+>>>>>>> 4241492 (.)
 
 ## File Coinvolti
 
@@ -139,6 +177,7 @@ aurmich/dev
 In ogni file, sono stati rimossi tutti i marcatori di conflitto , mantenendo la versione più completa e corretta del codice.
 
 
+<<<<<<< HEAD
 
 In ogni file, sono stati rimossi tutti i marcatori di conflitto (``, `origin/dev`), mantenendo la versione più completa e corretta del codice.
 aurmich/dev
@@ -150,6 +189,18 @@ aurmich/dev
 
 In ogni file, sono stati rimossi tutti i marcatori di conflitto (``, `=======`, `origin/dev`), mantenendo la versione più completa e corretta del codice.
 b6f667c (.)
+=======
+=======
+
+In ogni file, sono stati rimossi tutti i marcatori di conflitto (``, `origin/dev`), mantenendo la versione più completa e corretta del codice.
+aurmich/dev
+=======
+
+
+In ogni file, sono stati rimossi tutti i marcatori di conflitto (``, `=======`, `>>>>>>> origin/dev`), mantenendo la versione più completa e corretta del codice.
+=======
+>>>>>>> 5693302 (.):docs/RISOLUZIONE_CONFLITTI_MERGE.md
+>>>>>>> 4241492 (.)
 
 In ogni file, sono stati rimossi tutti i marcatori di conflitto (``, `origin/dev`), mantenendo la versione più completa e corretta del codice.
 aurmich/dev
@@ -158,9 +209,16 @@ aurmich/dev
 In ogni file, sono stati rimossi tutti i marcatori di conflitto (``, `origin/dev`), mantenendo la versione più completa e corretta del codice.
 aurmich/dev
 
+<<<<<<< HEAD
 aurmich/dev
 aurmich/dev
 5693302 (.):docs/RISOLUZIONE_CONFLITTI_MERGE.mdb6f667c (.)
+=======
+=======
+>>>>>>> aurmich/dev
+>>>>>>> aurmich/dev
+>>>>>>> 5693302 (.):docs/RISOLUZIONE_CONFLITTI_MERGE.md
+>>>>>>> 4241492 (.)
 
 ### 2. Correzione dei Problemi di Tipizzazione
 
@@ -334,6 +392,7 @@ Per prevenire problemi simili in futuro, si raccomanda di:
 
 
 
+<<<<<<< HEAD
 
 
 aurmich/dev
@@ -344,6 +403,20 @@ aurmich/dev
 
 
 b6f667c (.)
+=======
+=======
+
+
+=======
+
+=======
+
+>>>>>>> aurmich/dev
+
+=======
+>>>>>>> aurmich/dev
+>>>>>>> aurmich/dev
+>>>>>>> 4241492 (.)
 ### 2. Implementazione di Hook Git
 
 - Implementare un hook pre-commit che verifichi l'assenza di marcatori di conflitto:
@@ -353,6 +426,7 @@ b6f667c (.)
   # Verifica se ci sono marcatori di conflitto nei file in staging
 
 
+<<<<<<< HEAD
   if git diff --cached | grep -E '|' > /dev/null; then
 aurmich/dev
 
@@ -368,6 +442,25 @@ aurmich/dev  if git diff --cached | grep -E '|' > /dev/null; then
   if git diff --cached | grep -E '|' > /dev/null; then
 
 b6f667c (.)
+=======
+=======
+  if git diff --cached | grep -E '|' > /dev/null; then
+=======
+
+>>>>>>> aurmich/dev
+
+  if git diff --cached | grep -E '|=======|>>>>>>> ' > /dev/null; then
+=======
+  if git diff --cached | grep -E '|' > /dev/null; then
+>>>>>>> aurmich/dev
+=======
+  if git diff --cached | grep -E '|' > /dev/null; then
+>>>>>>> aurmich/dev
+
+=======
+>>>>>>> aurmich/dev
+>>>>>>> aurmich/dev
+>>>>>>> 4241492 (.)
       echo "Error: You have unresolved merge conflicts. Please resolve them before committing."
       exit 1
   fi
@@ -376,6 +469,7 @@ b6f667c (.)
   ```
 
 
+<<<<<<< HEAD
 aurmich/dev
 aurmich/dev
 aurmich/dev
@@ -397,6 +491,30 @@ aurmich/dev
 ### 2. Esecuzione Regolare dei Test
 ### 2. Esecuzione Regolare dei Test
 b6f667c (.)
+=======
+=======
+aurmich/dev
+=======
+
+>>>>>>> aurmich/dev
+
+=======
+aurmich/dev
+>>>>>>> aurmich/dev
+=======
+aurmich/dev
+>>>>>>> aurmich/dev
+
+=======
+>>>>>>> aurmich/dev
+>>>>>>> aurmich/dev
+>>>>>>> 5693302 (.):docs/RISOLUZIONE_CONFLITTI_MERGE.md
+
+### 3. Esecuzione Regolare dei Test
+=======
+### 2. Esecuzione Regolare dei Test
+>>>>>>> 6dc688d (.)
+>>>>>>> 4241492 (.)
 
 - Eseguire regolarmente i test che verificano l'assenza di marcatori di conflitto
 - Includere questi test nella pipeline CI/CD
@@ -425,6 +543,7 @@ Per le best practices complete, consultare il file [best_practices.md](conflicts
 
 ## Casi Risolti Recentemente
 
+<<<<<<< HEAD
 ### 1. Namespace e Convenzioni- [Best Practices PHPStan](phpstan/best_practices.md)
 fc83074 (.)
 - [Convenzioni Namespace](NAMESPACE-CONVENTIONS.md)
@@ -445,3 +564,73 @@ La risoluzione dei conflitti di merge richiede un approccio metodico e una conos
 3. Documentare accuratamente le decisioni prese
 4. Verificare che le modifiche non introducano regressioni
 5. Mantenere aggiornata la documentazione con collegamenti bidirezionali
+=======
+### 1. Namespace e Convenzioni
+- [Convenzioni Namespace](NAMESPACE-CONVENTIONS.md)
+- Risoluzione conflitti nelle convenzioni di namespace
+- Mantenimento della compatibilità con PHPStan
+
+### 2. Actions e Export
+- [ExportXlsByCollection](actions/export/exportxlsbycollection_conflict.md)
+  - Risoluzione conflitti nella documentazione PHPDoc
+  - Miglioramento della compatibilità con PHPStan
+  - Documentazione più completa e chiara
+
+- [GetViewByClassAction](actions/view/getviewbyclassaction_conflict.md)
+  - Implementazione conversione tipi con `strval()`
+  - Mantenimento compatibilità PHPStan livello 10
+  - Documentazione delle decisioni prese
+
+### 3. Autenticazione e UI
+- [Componenti Filament](../../Themes/One/docs/FILAMENT_COMPONENTS.md)
+- [Registrazione Utenti](../../Themes/One/docs/AUTH.md)
+  - Implementazione completa sistema registrazione
+  - Gestione tipi utente dinamica
+  - UI moderna con Filament
+
+## Processo di Risoluzione
+
+1. **Analisi**
+   - Identificare la natura del conflitto
+   - Valutare l'impatto delle modifiche
+   - Consultare la documentazione esistente
+
+2. **Decisione**
+   - Scegliere la versione più completa
+   - Mantenere la compatibilità con gli standard
+   - Considerare la manutenibilità futura
+
+3. **Implementazione**
+   - Applicare le modifiche in modo coerente
+   - Aggiornare la documentazione
+   - Verificare la compatibilità
+
+4. **Documentazione**
+   - Creare file di documentazione dedicati
+   - Aggiornare i collegamenti
+   - Mantenere traccia delle decisioni
+
+## Collegamenti Correlati
+
+- [Best Practices](conflicts/best_practices.md)
+- [PHPStan Livello 10](phpstan_livello10_linee_guida.md)
+- [Struttura Moduli](module-structure.md)
+- [Risoluzione Conflitti](risoluzione_conflitti.md)
+
+## Note Importanti
+
+1. **Compatibilità**
+   - Mantenere la compatibilità con PHPStan
+   - Seguire le convenzioni di Laravel
+   - Rispettare gli standard di codifica
+
+2. **Documentazione**
+   - Aggiornare sempre la documentazione
+   - Mantenere collegamenti bidirezionali
+   - Documentare le decisioni prese
+
+3. **Testing**
+   - Verificare le modifiche con PHPStan
+   - Testare la compatibilità
+   - Validare le funzionalità 
+>>>>>>> 4241492 (.)

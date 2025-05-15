@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 # Standard di Codice per il progetto
 
@@ -145,6 +146,11 @@ Ogni modifica ai dati sensibili deve essere:
 1. Registrata con timestamp e utente che ha effettuato la modifica
 2. Accessibile tramite interfaccia di audit per gli amministratori
 3. Conservata secondo le normative sulla privacy e gestione dati sanitari
+=======
+# Standard di Codice
+
+Questo documento contiene gli standard di codice generali per il progetto.
+>>>>>>> 4241492 (.)
 
 ## Principi Fondamentali
 
@@ -325,6 +331,7 @@ class StorePatientRequest extends FormRequest
     public function rules(): array
     {
         return [
+<<<<<<< HEAD
 
             'tax_code' => ['required', 'string', 'size:16', 'unique:patients,tax_code'],
             'first_name' => ['required', 'string', 'max:255'],
@@ -340,6 +347,10 @@ class StorePatientRequest extends FormRequest
             'isee' => ['required', 'numeric', 'min:0'],
             'is_pregnant' => ['boolean'],            'first_name' => ['required', 'string', 'max:255'],
             'last_name' => ['required', 'string', 'max:255'],
+=======
+            'first_name' => ['required', 'string', 'max:255'],
+            'last_name' => ['required', 'string', 'max:255'],
+>>>>>>> 4241492 (.)
             'gender' => ['required', 'string', 'in:' . implode(',', GenderType::values())],
             'birth_date' => ['required', 'date', 'before:today'],
             'tax_code' => ['required', 'string', 'size:16', 'unique:patients,tax_code'],
@@ -348,6 +359,7 @@ class StorePatientRequest extends FormRequest
 }
 ```
 
+<<<<<<< HEAD
 
 ## Collegamenti Correlati
 
@@ -355,6 +367,9 @@ class StorePatientRequest extends FormRequest
 - [Naming Conventions](../../../docs/naming-conventions.md)
 - [Documentazione Xot](../CODE-STANDARDS.md)
 - [Collegamenti Documentazione](../../../../docs/collegamenti-documentazione.md)## Documentazione del Codice
+=======
+## Documentazione del Codice
+>>>>>>> 4241492 (.)
 
 ### PHPDoc
 
@@ -609,6 +624,7 @@ git commit -m "fix: correzione calcolo età paziente"
 * [coding-standards.md](../../../Xot/docs/standards/coding-standards.md)
 * [coding-standards.md](../../../Xot/docs/conventions/coding-standards.md)
 
+<<<<<<< HEAD
 ## Collegamenti Correlati
 
 - [Convenzioni](../../../docs/conventions.md)
@@ -616,3 +632,5 @@ git commit -m "fix: correzione calcolo età paziente"
 - [Documentazione Xot](../CODE-STANDARDS.md)
 - [Collegamenti Documentazione](../../../../docs/collegamenti-documentazione.md)
 
+=======
+>>>>>>> 4241492 (.)

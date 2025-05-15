@@ -351,7 +351,11 @@ abstract class XotBaseMigration extends Migration
     /**
      * Determine if the migration should run.
      */
+<<<<<<< HEAD
     public function shouldRun(): bool
+=======
+    protected function shouldRun(): bool
+>>>>>>> 4241492 (.)
     {
         if (in_array($this->driver(), ['mariadb', 'mysql', 'pgsql', 'sqlite'])) {
             return true;

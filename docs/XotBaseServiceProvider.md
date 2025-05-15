@@ -115,6 +115,7 @@ class NotifyServiceProvider extends XotBaseServiceProvider
 ## Collegamenti tra versioni di XotBaseServiceProvider.md
 * [XotBaseServiceProvider.md](../../../../docs/moduli/xot/XotBaseServiceProvider.md)
 
+<<<<<<< HEAD
 ## Correzione, motivazione e miglioramenti (2025-05-13)
 
 ### Motivazione
@@ -197,3 +198,5 @@ Applicare la stessa regola per la registrazione delle traduzioni JSON.
 **Collegamento:**
 Vedi anche [registerBladeIcons.md](./registerBladeIcons.md) per la gestione centralizzata dei path.
 
+=======
+>>>>>>> 4241492 (.)

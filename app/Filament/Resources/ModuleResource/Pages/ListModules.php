@@ -27,14 +27,22 @@ class ListModules extends XotBaseListRecords
     public function getGridTableColumns(): array
     {
         return [
+<<<<<<< HEAD
             Stack::make($this->getTableColumns()),
+=======
+            Stack::make($this->getListTableColumns()),
+>>>>>>> 4241492 (.)
         ];
     }
 
     /**
      * @return array<string, Tables\Columns\Column>
      */
+<<<<<<< HEAD
     public function getTableColumns(): array
+=======
+    public function getListTableColumns(): array
+>>>>>>> 4241492 (.)
     {
         return [
             'name' => TextColumn::make('name')

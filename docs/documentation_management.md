@@ -117,6 +117,7 @@ Quando si identifica una nuova regola o pattern importante:
 4. **Windsurf**
    - [ ] Aggiornare .windsurfrules
    - [ ] Verificare coerenza
+<<<<<<< HEAD
 
    - [ ] Testare applicabilità 
 
@@ -172,3 +173,6 @@ Modules/Xot/docs/
    - Verifica dei collegamenti    
    - [ ] Testare applicabilità 
 
+=======
+   - [ ] Testare applicabilità 
+>>>>>>> 4241492 (.)

@@ -11,7 +11,11 @@ interface HasTableFunctions
      *
      * @return array<string, \Filament\Tables\Columns\Column>
      */
+<<<<<<< HEAD
     public function getTableColumns(): array;
+=======
+    public function getListTableColumns(): array;
+>>>>>>> 4241492 (.)
 
     /**
      * Get the table actions.

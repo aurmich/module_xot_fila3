@@ -113,6 +113,7 @@ class BrainServiceProvider extends XotBaseServiceProvider
 }
 ```
 
+<<<<<<< HEAD
 ### 4. Gestione delle Traduzioni
 
 #### ✅ DO - Usare GetModulePathByGeneratorAction per i path delle traduzioni
@@ -145,6 +146,8 @@ $this->loadTranslationsFrom($langPath, $this->nameLower);
 **Nota:**
 Applicare la stessa regola per la registrazione delle traduzioni JSON.
 
+=======
+>>>>>>> 4241492 (.)
 ## Implementazione Dettagliata per Tipo di Provider
 
 ### 1. Provider Principale del Modulo
@@ -453,8 +456,12 @@ class RouteServiceProvider extends ServiceProvider
 // middleware essenziali o non essere integrate con il sistema di permessi
 ```
 
+<<<<<<< HEAD
 
 ### Errore: Eventi non ascoltati## Troubleshooting
+=======
+## Troubleshooting
+>>>>>>> 4241492 (.)
 
 ### Problema: Traduzioni non caricate
 
@@ -495,6 +502,7 @@ class RouteServiceProvider extends ServiceProvider
 - [XotBaseServiceProvider](/var/www/html/exa/base_orisbroker_fila3/laravel/Modules/Xot/Providers/XotBaseServiceProvider.php)
 - [XotBaseRouteServiceProvider](/var/www/html/exa/base_orisbroker_fila3/laravel/Modules/Xot/Providers/XotBaseRouteServiceProvider.php)
 - [BaseEventServiceProvider](/var/www/html/exa/base_orisbroker_fila3/laravel/Modules/Xot/Providers/BaseEventServiceProvider.php)
+<<<<<<< HEAD
 
 
 # Best Practices per ServiceProvider
@@ -745,3 +753,5 @@ public function boot(): void
 
 **Collegamento:** Vedi anche [XotBaseServiceProvider.md](./XotBaseServiceProvider.md)
 - [filament-best-practices.md](filament-best-practices.md)
+=======
+>>>>>>> 4241492 (.)
