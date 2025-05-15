@@ -17,21 +17,12 @@ class TableExistsByModelClassActions
         }
 
         Assert::isInstanceOf($model = app($modelClass), EloquentModel::class);
-<<<<<<< Updated upstream
-<<<<<<< HEAD
-=======
->>>>>>> Stashed changes
 
          // Controlla se il modello utilizza Sushi
          if (in_array('Sushi\Sushi', class_uses_recursive($modelClass)) || method_exists($model, 'sushiRows')) {
             return true; // I modelli Sushi sono considerati come se avessero sempre una tabella
         }
         
-<<<<<<< Updated upstream
-=======
->>>>>>> 4241492 (.)
-=======
->>>>>>> Stashed changes
         $tableName = $model->getTable();
 
         return Schema::connection($model->getConnectionName())->hasTable($tableName);

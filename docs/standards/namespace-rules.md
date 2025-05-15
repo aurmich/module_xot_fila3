@@ -1,8 +1,8 @@
-# Regole di Namespace in SaluteOra
+# Regole di Namespace 
 
 ## Struttura dei Namespace
 
-In SaluteOra, tutti i namespace dei moduli seguono questa convenzione:
+, tutti i namespace dei moduli seguono questa convenzione:
 
 ```
 Modules\{NomeModulo}\{Categoria}

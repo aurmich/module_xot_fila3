@@ -8,16 +8,13 @@ use Filament\Actions;
 use Filament\Infolists\Components\Section;
 use Filament\Infolists\Components\TextEntry;
 use Filament\Infolists\Components\Grid;
-use Modules\Xot\Filament\Resources\Pages\XotBaseViewRecord;
+use Modules\Xot\Filament\Resources\LogResource;
 
 use function Safe\json_encode;
 
-/**
- * @see \Modules\Xot\Filament\Resources\LogResource
- */
-class ViewLog extends XotBaseViewRecord
+class ViewLog extends \Modules\Xot\Filament\Resources\Pages\XotBaseViewRecord
 {
-    protected static string $resource = \Modules\Xot\Filament\Resources\LogResource::class;
+    protected static string $resource = LogResource::class;
 
     protected function getInfolistSchema(): array
     {

@@ -4,8 +4,6 @@ declare(strict_types=1);
 
 namespace Modules\Xot\Filament\Pages;
 
-<<<<<<< Updated upstream
-<<<<<<< HEAD
 use Filament\Forms\Form;
 use Filament\Pages\Page;
 use Illuminate\Support\Str;
@@ -15,59 +13,23 @@ use Illuminate\Database\Eloquent\Model;
 use Modules\Xot\Filament\Traits\TransTrait;
 use Filament\Forms\Concerns\InteractsWithForms;
 use Illuminate\Contracts\Auth\Authenticatable;
-=======
-=======
-use Filament\Forms\Form;
->>>>>>> Stashed changes
-use Filament\Pages\Page;
-use Illuminate\Support\Str;
-use Filament\Facades\Filament;
-use Filament\Forms\Contracts\HasForms;
-use Illuminate\Database\Eloquent\Model;
-use Modules\Xot\Filament\Traits\TransTrait;
-<<<<<<< Updated upstream
->>>>>>> 4241492 (.)
-=======
-use Filament\Forms\Concerns\InteractsWithForms;
-use Illuminate\Contracts\Auth\Authenticatable;
->>>>>>> Stashed changes
 
 /**
  * Undocumented class.
  *
  * @property ?string $model
  */
-<<<<<<< Updated upstream
-<<<<<<< HEAD
 abstract class XotBasePage extends Page implements HasForms
 {
     use TransTrait;
     use InteractsWithForms;
-=======
-abstract class XotBasePage extends Page
-{
-    use TransTrait;
->>>>>>> 4241492 (.)
-=======
-abstract class XotBasePage extends Page implements HasForms
-{
-    use TransTrait;
-    use InteractsWithForms;
->>>>>>> Stashed changes
 
     protected static ?string $navigationIcon = 'heroicon-o-computer-desktop';
 
     protected static string $view = 'job::filament.pages.job-monitor';
 
     protected static ?string $model = null; // ---
-<<<<<<< Updated upstream
-<<<<<<< HEAD
     public ?array $data = [];
-=======
->>>>>>> 4241492 (.)
-=======
-    public ?array $data = [];
->>>>>>> Stashed changes
 
     // public function mount(): void {
     //     $user = auth()->user();
@@ -134,10 +96,6 @@ abstract class XotBasePage extends Page implements HasForms
 
         return $res;
     }
-<<<<<<< Updated upstream
-<<<<<<< HEAD
-=======
->>>>>>> Stashed changes
 
     public function form(Form $form): Form
     {
@@ -160,9 +118,4 @@ abstract class XotBasePage extends Page implements HasForms
 
         return $user;
     }
-<<<<<<< Updated upstream
-=======
->>>>>>> 4241492 (.)
-=======
->>>>>>> Stashed changes
 }

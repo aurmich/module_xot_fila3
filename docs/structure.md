@@ -240,14 +240,7 @@ laravel/Themes/[Nome]/
 ---
 
 =======
-<<<<<<< Updated upstream
-<<<<<<< HEAD
 b6f667c (.)
-=======
->>>>>>> 4241492 (.)
-=======
-b6f667c (.)
->>>>>>> Stashed changes
 
 # Struttura del Modulo Xot
 
@@ -979,53 +972,6 @@ resources/resources/views/sitemap
 resources/resources/views/test
 resources/resources/views/test/index
 resources/resources/views/test/index/acts
-<<<<<<< HEAD
-=======
-resources/svg
-resources/views
-resources/views/acts
-resources/views/acts/artisan
-resources/views/admin
-resources/views/admin/acts
-resources/views/admin/home
-resources/views/admin/home/acts
-resources/views/admin/index
-resources/views/admin/index/acts
-resources/views/admin/standalone
-resources/views/admin/standalone/manage
-resources/views/admin/store
-resources/views/admin/store/acts
-resources/views/admin/store/acts/xls_import
-resources/views/admin/test
-resources/views/admin/test/index
-resources/views/admin/test/index/acts
-resources/views/components
-resources/views/components/dashboard
-resources/views/emails
-resources/views/factory-generator
-resources/views/filament
-resources/views/filament/forms
-resources/views/filament/forms/components
-resources/views/filament/infolists
-resources/views/filament/infolists/components
-resources/views/filament/pages
-resources/views/filament/widgets
-resources/views/home
-resources/views/home/index
-resources/views/home/index/acts
-resources/views/layouts
-resources/views/livewire
-resources/views/livewire/manage_lang_module
-resources/views/livewire/rate
-resources/views/livewire/xot_base_table_component
-resources/views/pages
-resources/views/rss
-resources/views/services
-resources/views/sitemap
-resources/views/test
-resources/views/test/index
-resources/views/test/index/acts
->>>>>>> 4241492 (.)
 resources_old
 routes
 stubs
@@ -1109,10 +1055,6 @@ tests_old
 
 ---
 
-<<<<<<< Updated upstream
-<<<<<<< HEAD
-=======
->>>>>>> Stashed changes
 aurmich/dev
 5693302 (.)b6f667c (.)
 
@@ -1124,10 +1066,3 @@ aurmich/dev
 - Aggiornare la documentazione del modulo con esempi e riferimenti.
 
 Vedi anche la documentazione specifica del modulo per dettagli e casi particolari.
-<<<<<<< Updated upstream
-=======
-=======
->>>>>>> Stashed changes
-=======
->>>>>>> 5693302 (.)
->>>>>>> 4241492 (.)

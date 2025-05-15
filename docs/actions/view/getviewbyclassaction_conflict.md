@@ -1,7 +1,3 @@
-<<<<<<< Updated upstream
-<<<<<<< HEAD
-=======
->>>>>>> Stashed changes
 # Risoluzione Conflitti in GetViewByClassAction
 
 ## Contesto e Scopo
@@ -9,25 +5,10 @@
 L'action `GetViewByClassAction` è un componente strategico nel framework Laraxot PTVX che converte automaticamente un nome di classe completo (FQCN) in un percorso di vista utilizzabile. Questa funzionalità è essenziale per l'implementazione dell'architettura modulare del progetto e per la separazione tra logica e presentazione.
 
 ## Problematiche Riscontrate
-<<<<<<< Updated upstream
-=======
-=======
->>>>>>> Stashed changes
-# Risoluzione Conflitto in GetViewByClassAction.php
-
-## Problema
-È stato rilevato un conflitto di merge nel file `Modules/Xot/app/Actions/View/GetViewByClassAction.php` alla riga relativa alla conversione di tipi scalari in stringa.
-
-Il file presenta un marker di conflitto `
->>>>>>> 4241492 (.)
 
 
 Il file presenta un marker di conflitto `
 =======
-<<<<<<< Updated upstream
-<<<<<<< HEAD
-=======
->>>>>>> Stashed changes
 b6f667c (.)Durante l'evoluzione del codice, questo file ha presentato conflitti di merge dovuti a:
 fc83074 (.)
 
@@ -116,36 +97,3 @@ Esempio:
 1. La conversione dei tipi deve sempre utilizzare verifiche appropriate prima di applicare `strval()` per valori mixed.
 2. Il controllo di esistenza della vista (`view()->exists()`) è fondamentale per prevenire errori a runtime.
 3. Per aggiungere nuovi pattern di nomi di classe, modificare l'algoritmo di elaborazione dei segmenti mantenendo la compatibilità con i pattern esistenti.
-<<<<<<< Updated upstream
-=======
-=======
->>>>>>> Stashed changes
-
-Il file presenta un marker di conflitto `>>>>>>> origin/dev` che indica un merge non completato tra due rami di sviluppo.
-
-Il file presenta un marker di conflitto `
-
-=======
->>>>>>> aurmich/dev
->>>>>>> 5693302 (.):docs/actions/view/GetViewByClassAction_conflict.md
-=======
->>>>>>> 6dc688d (.)
-## Analisi del Contesto
-Il conflitto si verifica nella funzione di callback utilizzata per mappare array di percorsi di classi in nomi di view. La porzione di codice interessata gestisce la conversione sicura di tipi scalari in stringa per garantire compatibilità con PHPStan livello 10.
-
-## Soluzione Proposta
-Manterrò l'implementazione più recente che utilizza `strval()` per la conversione, poiché è più chiara e concisa rispetto all'alternativa commentata. È importante rimuovere il marker di conflitto e mantenere il codice coerente.
-
-### Codice da Implementare
-```php
-// Cast sicuro per valori scalari (int, float, bool)
-$prevValueStr = strval($prevValue);
-```
-
-L'uso di `strval()` è preferibile in questo contesto perché è più diretto e leggibile rispetto a costrutti condizionali per la conversione.
-
-## Impatto
-Questa modifica garantisce la corretta gestione dei tipi nei nomi delle view e mantiene la compatibilità con l'analisi statica del codice di PHPStan livello 10 senza introdurre regressioni.
-
-La funzione principale del codice è la generazione di nomi di view a partire da nomi di classi, e la corretta gestione dei tipi è essenziale per evitare errori a runtime. 
->>>>>>> 4241492 (.)

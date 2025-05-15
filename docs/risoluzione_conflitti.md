@@ -74,10 +74,6 @@ Per le best practices complete, consultare il file [best_practices.md](conflicts
    - Testare la compatibilità
    - Validare le funzionalità
 
-<<<<<<< Updated upstream
-<<<<<<< HEAD
-=======
->>>>>>> Stashed changes
 ## File Risolti Recentemente
 
 1. **Modulo Activity**
@@ -107,29 +103,6 @@ Per le best practices complete, consultare il file [best_practices.md](conflicts
    - Miglioramento della gestione degli errori
    - Documentazione dei metodi aggiornata
 
-<<<<<<< Updated upstream
-=======
-=======
->>>>>>> Stashed changes
-# Risoluzione Conflitti Git - Modulo Xot
-
-## Helper.php
-
-### Intent
-- Garantire la corretta normalizzazione del percorso `doc_root` e tipizzazione forte senza casting ridondanti.
-
-### Cosa
-- Rimosso marker di conflitto e duplicazioni nella funzione `dddx`.
-- Utilizzato `Assert::string()` per garantire il tipo di `doc_root`.
-- Semplificata la logica di `str_replace` per la conversione dei separatori di percorso.
-
-## Collegamenti
-- Documentazione principale: [Ris. conflitti Git - Modulo Xot](../../../docs/risoluzione_conflitti_git.md#modulo-xot)
-
-## Collegamenti alla Documentazione Principale
-
-Per una panoramica completa di tutti i conflitti risolti, vedere la [documentazione centrale sulla risoluzione dei conflitti git](../../../docs/risoluzione_conflitti_git.md). 
->>>>>>> 4241492 (.)
 
 ## Collegamenti Esterni
 
@@ -158,10 +131,6 @@ Il conflitto nel file `XotBaseServiceProvider.php` è stato risolto mantenendo:
 
 - Il metodo `registerConfig()` è stato aggiornato per utilizzare il percorso corretto da `modules.paths.generator.config.path`
 - È stato rimosso il codice commentato non necessario per `registerBladeComponents()`
-<<<<<<< Updated upstream
-<<<<<<< HEAD
-=======
->>>>>>> Stashed changes
 - Il metodo `registerConfig()` è stato aggiornato per utilizzare il percorso corretto da `modules.paths.generator.config.path`
 - È stato rimosso il codice commentato non necessario per `registerBladeComponents()`
 aurmich/dev
@@ -169,17 +138,6 @@ aurmich/dev
 - Il metodo `registerConfig()` è stato aggiornato per utilizzare il percorso corretto da `modules.paths.generator.config.path`
 - È stato rimosso il codice commentato non necessario per `registerBladeComponents()`
 b6f667c (.)
-<<<<<<< Updated upstream
-=======
-=======
->>>>>>> Stashed changes
-=======
-
-=======
-- Il metodo `registerConfig()` è stato aggiornato per utilizzare il percorso corretto da `modules.paths.generator.config.path`
-- È stato rimosso il codice commentato non necessario per `registerBladeComponents()`
->>>>>>> 5693302 (.)
->>>>>>> 4241492 (.)
 
 La soluzione adottata privilegia la chiarezza del codice e l'organizzazione logica dei metodi, eliminando commenti non necessari e duplicazioni.
 
@@ -204,23 +162,8 @@ La soluzione adottata ha mantenuto la versione più semplice e pulita senza la c
 
 Mantenere il codice più semplice è preferibile, soprattutto quando le funzionalità aggiuntive non sono attualmente utilizzate.
 
-<<<<<<< Updated upstream
-<<<<<<< HEAD
 5693302 (.)
 b6f667c (.)
-=======
-=======
-
-=======
->>>>>>> 5693302 (.)
-=======
-5693302 (.)
-b6f667c (.)
-=======
-
-=======
->>>>>>> Stashed changes
->>>>>>> 4241492 (.)
 
 ## Conflitti risolti (14/06/2024)
 
@@ -242,21 +185,11 @@ I seguenti conflitti sono stati risolti come parte dell'ultima manutenzione del 
 
 8. **Activity/database/migrations/2023_10_30_103350_create_stored_events_table.php**: Risolto il conflitto nella migrazione mantenendo l'annotazione PHPDoc per i parametri di tipo Blueprint.
 
-<<<<<<< Updated upstream
-<<<<<<< HEAD
-=======
->>>>>>> Stashed changes
 9. **Activity/database/migrations/2023_03_31_103350_create_activity_table.php**: Risolto il conflitto nella migrazione mantenendo la versione con annotazioni PHPDoc corrette.3. **Activity/database/migrations/2023_03_31_103350_create_activity_table.php**
    - Mantenimento delle annotazioni PHPDoc per i parametri Blueprint
    - Uniformità nella struttura delle migrazioni
    - Coerenza con le convenzioni del framework
 fc83074 (.)
-<<<<<<< Updated upstream
-=======
-=======
->>>>>>> Stashed changes
-9. **Activity/database/migrations/2023_03_31_103350_create_activity_table.php**: Risolto il conflitto nella migrazione mantenendo la versione con annotazioni PHPDoc corrette.
->>>>>>> 4241492 (.)
 
 Le modifiche sono state applicate seguendo le best practice documentate in `CONFLITTI_MERGE_RISOLTI.md`, privilegiando la chiarezza del codice e la coerenza con gli standard di progetto.
 
@@ -288,10 +221,6 @@ La risoluzione dei conflitti rimanenti dovrebbe seguire questi principi:
 5. **Documentare le decisioni**: Per ogni conflitto risolto, documentare l'intento e il motivo della scelta effettuata.
 
 ## Collegamenti tra versioni di risoluzione_conflitti.md
-<<<<<<< Updated upstream
-<<<<<<< HEAD
-=======
->>>>>>> Stashed changes
 
 * [risoluzione_conflitti.md](../../../Xot/docs/risoluzione_conflitti.md)
 * [risoluzione_conflitti.md](../../../Tenant/docs/risoluzione_conflitti.md)
@@ -301,13 +230,3 @@ aurmich/dev
 * [Risoluzione Conflitti Tenant](../../../Tenant/docs/risoluzione_conflitti.md)
 * [Linee Guida Principali Risoluzione Conflitti](../../../../docs/conflict_resolution.md)
 fc83074 (.)
-<<<<<<< Updated upstream
-=======
-=======
->>>>>>> Stashed changes
-* [risoluzione_conflitti.md](../../../Xot/docs/risoluzione_conflitti.md)
-* [risoluzione_conflitti.md](../../../Tenant/docs/risoluzione_conflitti.md)
-
-=======
->>>>>>> 5693302 (.)
->>>>>>> 4241492 (.)

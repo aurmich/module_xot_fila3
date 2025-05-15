@@ -1,7 +1,3 @@
-<<<<<<< Updated upstream
-<<<<<<< HEAD
-=======
->>>>>>> Stashed changes
 # Risoluzione Conflitti di Merge in Laraxot PTVX
 
 ## Problema
@@ -11,29 +7,13 @@ Durante lo sviluppo del progetto Laraxot PTVX, sono stati identificati diversi f
 ## File Principali con Conflitti
 
 
-<<<<<<< Updated upstream
 =======
-=======
->>>>>>> Stashed changes
 b6f667c (.)
-=======
-# Risoluzione Conflitti di Merge in il progetto
-
-## Problema
-
-
-
-=======
->>>>>>> 4241492 (.)
 
 Durante lo sviluppo del progetto il progetto, sono stati identificati diversi file con conflitti di merge non risolti. Questi conflitti erano indicati dalla presenza di marcatori come ``, `origin/dev` nel codice sorgente. I conflitti non risolti impedivano la corretta esecuzione del codice e causavano errori durante l'analisi statica con PHPStan.
 aurmich/dev
 Durante lo sviluppo del progetto il progetto, sono stati identificati diversi file con conflitti di merge non risolti. Questi conflitti erano indicati dalla presenza di marcatori come ``, `` e `` nel codice sorgente. I conflitti non risolti impedivano la corretta esecuzione del codice e causavano errori durante l'analisi statica con PHPStan.
 =======
-<<<<<<< Updated upstream
-<<<<<<< HEAD
-=======
->>>>>>> Stashed changes
 ### 1. XotBasePivot.php
 
 **Problema**: Conflitto nella definizione dei metodi e proprietà della classe base pivot.
@@ -107,10 +87,7 @@ fc83074 (.)
 ## Processo di Risoluzione
 
 
-<<<<<<< Updated upstream
 =======
-=======
->>>>>>> Stashed changes
 aurmich/dev
 aurmich/dev
 5693302 (.):docs/CONFLITTI_MERGE_RISOLTI.md
@@ -178,128 +155,6 @@ aurmich/dev
 aurmich/dev
 5693302 (.):docs/CONFLITTI_MERGE_RISOLTI.md
 b6f667c (.)
-=======
-
-
-Durante lo sviluppo del progetto <nome progetto>, sono stati identificati diversi file con conflitti di merge non risolti. Questi conflitti erano indicati dalla presenza di marcatori come ``, `` e `` nel codice sorgente. I conflitti non risolti impedivano la corretta esecuzione del codice e causavano errori durante l'analisi statica con PHPStan.
-=======
-
-Durante lo sviluppo del progetto il progetto, sono stati identificati diversi file con conflitti di merge non risolti. Questi conflitti erano indicati dalla presenza di marcatori come ``, `origin/dev` nel codice sorgente. I conflitti non risolti impedivano la corretta esecuzione del codice e causavano errori durante l'analisi statica con PHPStan.
-aurmich/dev
-
-
-Durante lo sviluppo del progetto il progetto, sono stati identificati diversi file con conflitti di merge non risolti. Questi conflitti erano indicati dalla presenza di marcatori come ``, `origin/dev` nel codice sorgente. I conflitti non risolti impedivano la corretta esecuzione del codice e causavano errori durante l'analisi statica con PHPStan.
-aurmich/dev
-
-=======
->>>>>>> aurmich/dev
->>>>>>> aurmich/dev
->>>>>>> 5693302 (.):docs/CONFLITTI_MERGE_RISOLTI.md
-
-I file principali con conflitti erano:
-- `Modules/Xot/app/Datas/MetatagData.php`
-- `Modules/Xot/app/Actions/Array/SaveJsonArrayAction.php`
-- `Modules/Xot/app/Actions/Panel/ApplyMetatagToPanelAction.php`
-- `Modules/Xot/app/Actions/Query/GetFieldnamesByTablenameAction.php`
-- `Modules/Xot/app/Actions/Export/ExportXlsStreamByLazyCollection.php`
-- `Modules/Media/app/Support/TemporaryUploadPathGenerator.php`
-- `Modules/Media/app/Actions/Video/ConvertVideoByMediaConvertAction.php`
-- `Modules/Media/app/Actions/Video/ConvertVideoByConvertDataAction.php`
-- `Modules/Media/app/Filament/Resources/HasMediaResource/RelationManagers/MediaRelationManager.php`
-- `Modules/Lang/app/Models/Post.php`
-- `Modules/Xot/app/Exceptions/Formatters/WebhookErrorFormatter.php`
-
-## Analisi
-
-L'analisi dei file ha rivelato molteplici conflitti di merge non risolti, principalmente riguardanti:
-
-1. Dichiarazioni di importazione (use statements)
-2. Definizione delle proprietà della classe
-3. Implementazione dei metodi
-4. Tipi di ritorno e annotazioni PHPDoc
-5. Gestione delle eccezioni
-6. Parametri dei metodi e loro tipizzazione
-
-I conflitti erano il risultato di un merge incompleto tra il branch `HEAD` e `origin/dev`, con alcune sezioni che presentavano conflitti annidati (conflitti all'interno di conflitti).
-
-### Tipologie di Conflitti Riscontrati
-
-#### 1. Conflitti nelle Dichiarazioni di Tipo
-
-In `GetFieldnamesByTablenameAction.php`, c'erano conflitti relativi alla gestione dei tipi di parametri:
-
-```php
-
-
-
-=======
-=======
-
-
->>>>>>> 5693302 (.):docs/CONFLITTI_MERGE_RISOLTI.md
-if (! $this->isValidConnection($connectionName)) {
-if (! $this->isValidConnection(is_string($connectionName) ? $connectionName : (string) $connectionName)) {
-
-
-if (! $this->isValidConnection($connectionName)) {
-
-if (! $this->isValidConnection(is_string($connectionName) ? $connectionName : (string) $connectionName)) {
-
-
-
-=======
-=======
-
-=======
->>>>>>> aurmich/dev
->>>>>>> aurmich/dev
->>>>>>> 5693302 (.):docs/CONFLITTI_MERGE_RISOLTI.md
-
-if (! $this->isValidConnection($connectionName)) {
-origin/dev
-aurmich/dev
-
-
-=======
->>>>>>> aurmich/dev
-=======
-=======
-
->>>>>>> aurmich/dev
-=======
->>>>>>> aurmich/dev
->>>>>>> aurmich/dev
->>>>>>> aurmich/dev
->>>>>>> 5693302 (.):docs/CONFLITTI_MERGE_RISOLTI.md
-```
-
-#### 2. Conflitti nelle Annotazioni PHPDoc
-
-In `TemporaryUploadPathGenerator.php`, c'erano conflitti nelle annotazioni PHPDoc dei metodi:
-
-```php
-
-
-
-=======
-=======
-
-
->>>>>>> 5693302 (.):docs/CONFLITTI_MERGE_RISOLTI.md
-/**
- * @param \Modules\Media\Models\Media $media
- */
-
-
-=======
-=======
->>>>>>> aurmich/dev
-
-=======
->>>>>>> aurmich/dev
->>>>>>> aurmich/dev
->>>>>>> 5693302 (.):docs/CONFLITTI_MERGE_RISOLTI.md
->>>>>>> 4241492 (.)
 
 /**
  * @param \Modules\Media\Models\Media $media
@@ -308,10 +163,6 @@ origin/dev
 aurmich/dev
 
 
-<<<<<<< Updated upstream
-<<<<<<< HEAD
-=======
->>>>>>> Stashed changes
 origin/dev
 aurmich/dev
 
@@ -320,21 +171,6 @@ aurmich/dev
 
 
 b6f667c (.)
-<<<<<<< Updated upstream
-=======
-=======
->>>>>>> Stashed changes
-=======
-origin/dev
-aurmich/dev
-=======
-
-
-<<<<<<< Updated upstream
->>>>>>> 5693302 (.):docs/CONFLITTI_MERGE_RISOLTI.md
-=======
->>>>>>> Stashed changes
->>>>>>> 4241492 (.)
 
 
 
@@ -344,21 +180,9 @@ aurmich/dev
 origin/dev
 aurmich/dev
 
-<<<<<<< Updated upstream
-<<<<<<< HEAD
 aurmich/dev
 aurmich/dev
 5693302 (.):docs/CONFLITTI_MERGE_RISOLTI.mdb6f667c (.)
-=======
-=======
-aurmich/dev
-aurmich/dev
-5693302 (.):docs/CONFLITTI_MERGE_RISOLTI.mdb6f667c (.)
->>>>>>> Stashed changes
-=======
->>>>>>> aurmich/dev
->>>>>>> 5693302 (.):docs/CONFLITTI_MERGE_RISOLTI.md
->>>>>>> 4241492 (.)
 ```
 
 #### 3. Conflitti nell'Implementazione dei Metodi
@@ -370,27 +194,11 @@ In `ApplyMetatagToPanelAction.php`, c'erano conflitti nell'implementazione del m
 
 
 =======
-<<<<<<< Updated upstream
-<<<<<<< HEAD
-=======
->>>>>>> Stashed changes
 
 
 5693302 (.):docs/CONFLITTI_MERGE_RISOLTI.md
 
 b6f667c (.)
-<<<<<<< Updated upstream
-=======
-=======
-
-
->>>>>>> 5693302 (.):docs/CONFLITTI_MERGE_RISOLTI.md
-=======
-=======
-
-
->>>>>>> Stashed changes
->>>>>>> 4241492 (.)
 // @phpstan-ignore argument.type
 ->colors($metatag->getColors())
 //->colors($metatag->getColors())
@@ -404,24 +212,10 @@ b6f667c (.)
 
 
 =======
-<<<<<<< Updated upstream
-<<<<<<< HEAD
-=======
->>>>>>> Stashed changes
 aurmich/dev
 aurmich/dev
 5693302 (.):docs/CONFLITTI_MERGE_RISOLTI.md
 b6f667c (.)
-<<<<<<< Updated upstream
-=======
-=======
->>>>>>> Stashed changes
-=======
-
-=======
->>>>>>> aurmich/dev
->>>>>>> 5693302 (.):docs/CONFLITTI_MERGE_RISOLTI.md
->>>>>>> 4241492 (.)
 
 // @phpstan-ignore argument.type
 ->colors($metatag->getColors())
@@ -429,10 +223,6 @@ origin/dev
 aurmich/dev
 
 
-<<<<<<< Updated upstream
-<<<<<<< HEAD
-=======
->>>>>>> Stashed changes
 aurmich/dev=======
 
 aurmich/devaurmich/dev
@@ -440,21 +230,6 @@ aurmich/dev
 aurmich/dev
 5693302 (.):docs/CONFLITTI_MERGE_RISOLTI.md
 b6f667c (.)
-<<<<<<< Updated upstream
-=======
-=======
->>>>>>> Stashed changes
-=======
-=======
-=======
-
->>>>>>> aurmich/dev
-=======
->>>>>>> aurmich/dev
->>>>>>> aurmich/dev
->>>>>>> aurmich/dev
->>>>>>> 5693302 (.):docs/CONFLITTI_MERGE_RISOLTI.md
->>>>>>> 4241492 (.)
 ```
 
 #### 4. Conflitti nella Gestione delle Eccezioni
@@ -466,27 +241,11 @@ In `SaveJsonArrayAction.php`, c'erano conflitti nella gestione delle condizioni 
 
 
 =======
-<<<<<<< Updated upstream
-<<<<<<< HEAD
-=======
->>>>>>> Stashed changes
 
 
 5693302 (.):docs/CONFLITTI_MERGE_RISOLTI.md
 
 b6f667c (.)
-<<<<<<< Updated upstream
-=======
-=======
-
-
->>>>>>> 5693302 (.):docs/CONFLITTI_MERGE_RISOLTI.md
-=======
-=======
-
-
->>>>>>> Stashed changes
->>>>>>> 4241492 (.)
 //if ($content === false) {
 //    return false;
 //}
@@ -496,26 +255,11 @@ if ($content === false) {
 
 
 =======
-<<<<<<< Updated upstream
-<<<<<<< HEAD
-=======
->>>>>>> Stashed changes
 aurmich/dev
 aurmich/dev
 aurmich/dev
 5693302 (.):docs/CONFLITTI_MERGE_RISOLTI.md
 b6f667c (.)
-<<<<<<< Updated upstream
-=======
-=======
->>>>>>> Stashed changes
-=======
-
-=======
->>>>>>> aurmich/dev
->>>>>>> aurmich/dev
->>>>>>> 5693302 (.):docs/CONFLITTI_MERGE_RISOLTI.md
->>>>>>> 4241492 (.)
 
 //if ($content === false) {
 //    return false;
@@ -524,10 +268,6 @@ origin/dev
 aurmich/dev
 
 
-<<<<<<< Updated upstream
-<<<<<<< HEAD
-=======
->>>>>>> Stashed changes
 origin/dev
 aurmich/dev
 
@@ -536,21 +276,6 @@ aurmich/dev
 
 
 b6f667c (.)
-<<<<<<< Updated upstream
-=======
-=======
->>>>>>> Stashed changes
-=======
-origin/dev
-aurmich/dev
-=======
-
-
-<<<<<<< Updated upstream
->>>>>>> 5693302 (.):docs/CONFLITTI_MERGE_RISOLTI.md
-=======
->>>>>>> Stashed changes
->>>>>>> 4241492 (.)
 
 if ($content === false) {
     return false;
@@ -563,21 +288,9 @@ aurmich/dev
 origin/dev
 aurmich/dev
 
-<<<<<<< Updated upstream
-<<<<<<< HEAD
 aurmich/dev
 aurmich/dev
 5693302 (.):docs/CONFLITTI_MERGE_RISOLTI.mdb6f667c (.)
-=======
-=======
-aurmich/dev
-aurmich/dev
-5693302 (.):docs/CONFLITTI_MERGE_RISOLTI.mdb6f667c (.)
->>>>>>> Stashed changes
-=======
->>>>>>> aurmich/dev
->>>>>>> 5693302 (.):docs/CONFLITTI_MERGE_RISOLTI.md
->>>>>>> 4241492 (.)
 ```
 
 #### 5. Conflitti nelle API Fluenti
@@ -594,10 +307,6 @@ $headers = [
 
 
 =======
-<<<<<<< Updated upstream
-<<<<<<< HEAD
-=======
->>>>>>> Stashed changes
 
 
 origin/dev
@@ -609,24 +318,6 @@ aurmich/dev
 
 
 b6f667c (.)
-<<<<<<< Updated upstream
-=======
-=======
->>>>>>> Stashed changes
-=======
-
-
-
-=======
->>>>>>> aurmich/dev
-=======
->>>>>>> aurmich/dev
-
-=======
->>>>>>> aurmich/dev
->>>>>>> aurmich/dev
->>>>>>> 5693302 (.):docs/CONFLITTI_MERGE_RISOLTI.md
->>>>>>> 4241492 (.)
 ```
 
 E anche nella tipizzazione delle funzioni di callback:
@@ -645,10 +336,6 @@ $headStrings = array_map(function ($item) {
 
 
 =======
-<<<<<<< Updated upstream
-<<<<<<< HEAD
-=======
->>>>>>> Stashed changes
 
 
 origin/dev
@@ -660,24 +347,6 @@ aurmich/dev
 
 
 b6f667c (.)
-<<<<<<< Updated upstream
-=======
-=======
->>>>>>> Stashed changes
-=======
-
-
-
-=======
->>>>>>> aurmich/dev
-=======
->>>>>>> aurmich/dev
-
-=======
->>>>>>> aurmich/dev
->>>>>>> aurmich/dev
->>>>>>> 5693302 (.):docs/CONFLITTI_MERGE_RISOLTI.md
->>>>>>> 4241492 (.)
 ```
 
 ## Soluzione Implementata
@@ -768,48 +437,18 @@ Per verificare la correttezza della soluzione, sono stati creati test Pest che v
 
 
 
-<<<<<<< Updated upstream
-<<<<<<< HEAD
 
 5693302 (.):docs/CONFLITTI_MERGE_RISOLTI.mdb6f667c (.)
-=======
-=======
-
-5693302 (.):docs/CONFLITTI_MERGE_RISOLTI.mdb6f667c (.)
->>>>>>> Stashed changes
-=======
-
-=======
-
-
-=======
-<<<<<<< Updated upstream
->>>>>>> 5693302 (.):docs/CONFLITTI_MERGE_RISOLTI.md
-=======
->>>>>>> Stashed changes
->>>>>>> 4241492 (.)
 
 
 
 
-<<<<<<< Updated upstream
-<<<<<<< HEAD
-=======
->>>>>>> Stashed changes
 aurmich/dev
 aurmich/dev
 5693302 (.):docs/CONFLITTI_MERGE_RISOLTI.md
 
 
 b6f667c (.)
-<<<<<<< Updated upstream
-=======
-=======
->>>>>>> Stashed changes
-=======
->>>>>>> aurmich/dev
->>>>>>> 5693302 (.):docs/CONFLITTI_MERGE_RISOLTI.md
->>>>>>> 4241492 (.)
 ### Test per i File del Modulo Media
 
 ```php
@@ -826,27 +465,11 @@ it('verifica che i file corretti non contengano marcatori di conflitto', functio
 
 
 =======
-<<<<<<< Updated upstream
-<<<<<<< HEAD
-=======
->>>>>>> Stashed changes
 
 
 5693302 (.):docs/CONFLITTI_MERGE_RISOLTI.md
 
 b6f667c (.)
-<<<<<<< Updated upstream
-=======
-=======
-
-
->>>>>>> 5693302 (.):docs/CONFLITTI_MERGE_RISOLTI.md
-=======
-=======
-
-
->>>>>>> Stashed changes
->>>>>>> 4241492 (.)
             ->and($content)->not->toContain('')
             ->and($content)->not->toContain('');
     }
@@ -854,24 +477,10 @@ b6f667c (.)
 ```
 
 =======
-<<<<<<< Updated upstream
-<<<<<<< HEAD
-=======
->>>>>>> Stashed changes
 aurmich/dev
 aurmich/dev
 5693302 (.):docs/CONFLITTI_MERGE_RISOLTI.md
 b6f667c (.)
-<<<<<<< Updated upstream
-=======
-=======
->>>>>>> Stashed changes
-=======
-
-=======
->>>>>>> aurmich/dev
->>>>>>> 5693302 (.):docs/CONFLITTI_MERGE_RISOLTI.md
->>>>>>> 4241492 (.)
             ->and($content)->not->toContain('origin/dev');
     }
 });
@@ -879,10 +488,6 @@ b6f667c (.)
 aurmich/dev
 
 
-<<<<<<< Updated upstream
-<<<<<<< HEAD
-=======
->>>>>>> Stashed changes
 aurmich/dev=======
 
 aurmich/devaurmich/dev
@@ -890,21 +495,6 @@ aurmich/dev
 aurmich/dev
 5693302 (.):docs/CONFLITTI_MERGE_RISOLTI.md
 b6f667c (.)
-<<<<<<< Updated upstream
-=======
-=======
->>>>>>> Stashed changes
-=======
-=======
-=======
-
->>>>>>> aurmich/dev
-=======
->>>>>>> aurmich/dev
->>>>>>> aurmich/dev
->>>>>>> aurmich/dev
->>>>>>> 5693302 (.):docs/CONFLITTI_MERGE_RISOLTI.md
->>>>>>> 4241492 (.)
 
 ### Test per i File del Modulo Xot
 
@@ -933,10 +523,6 @@ $headers = [
 
 
 =======
-<<<<<<< Updated upstream
-<<<<<<< HEAD
-=======
->>>>>>> Stashed changes
 
 
 origin/dev
@@ -948,24 +534,6 @@ aurmich/dev
 
 
 b6f667c (.)
-<<<<<<< Updated upstream
-=======
-=======
->>>>>>> Stashed changes
-=======
-
-
-
-=======
->>>>>>> aurmich/dev
-=======
->>>>>>> aurmich/dev
-
-=======
->>>>>>> aurmich/dev
->>>>>>> aurmich/dev
->>>>>>> 5693302 (.):docs/CONFLITTI_MERGE_RISOLTI.md
->>>>>>> 4241492 (.)
 ];
 
 // Dopo
@@ -1047,17 +615,8 @@ Per prevenire problemi simili in futuro, si raccomanda di:
 
 La risoluzione dei conflitti di merge ha ripristinato la corretta funzionalità di diverse classi nei moduli Media, Lang e Xot, permettendo l'analisi statica con PHPStan e garantendo il corretto funzionamento dell'applicazione. Le soluzioni implementate hanno mantenuto la coerenza del codice e migliorato la robustezza delle classi interessate.
 
-<<<<<<< Updated upstream
-<<<<<<< HEAD
 In particolare, le correzioni hanno portato i seguenti benefici:La risoluzione dei conflitti di merge ha portato a:
 fc83074 (.)
-=======
-=======
-In particolare, le correzioni hanno portato i seguenti benefici:La risoluzione dei conflitti di merge ha portato a:
-fc83074 (.)
->>>>>>> Stashed changes
-In particolare, le correzioni hanno portato i seguenti benefici:
->>>>>>> 4241492 (.)
 
 1. **Maggiore Robustezza**: Miglioramento della gestione delle eccezioni e dei casi limite
 2. **Migliore Tipizzazione**: Uso più preciso dei tipi PHP e delle annotazioni PHPDoc
@@ -1065,10 +624,6 @@ In particolare, le correzioni hanno portato i seguenti benefici:
 4. **Maggiore Coerenza**: Uniformità nell'implementazione dei metodi e nella gestione dei tipi
 5. **Compatibilità con PHPStan**: Riduzione degli errori di analisi statica
 
-<<<<<<< Updated upstream
-<<<<<<< HEAD
-=======
->>>>>>> Stashed changes
 Questo lavoro di risoluzione dei conflitti ha inoltre contribuito a stabilire best practices per la gestione dei merge nel progetto Laraxot PTVX, che potranno essere applicate in futuro per prevenire problemi simili.
 
 ## Esempio di Conflitto Risolto: PageContent.php
@@ -1084,10 +639,7 @@ Questo lavoro di risoluzione dei conflitti ha inoltre contribuito a stabilire be
 ```
 
 
-<<<<<<< Updated upstream
 =======
-=======
->>>>>>> Stashed changes
 
 =======
 aurmich/dev
@@ -1097,33 +649,11 @@ aurmich/dev
 
 
 b6f667c (.)
-=======
-Questo lavoro di risoluzione dei conflitti ha inoltre contribuito a stabilire best practices per la gestione dei merge nel progetto il progetto, che potranno essere applicate in futuro per prevenire problemi simili.
-
-Questo lavoro di risoluzione dei conflitti ha inoltre contribuito a stabilire best practices per la gestione dei merge nel progetto <nome progetto>, che potranno essere applicate in futuro per prevenire problemi simili.
-
-
-=======
-=======
-
-
-=======
-=======
-
-=======
->>>>>>> aurmich/dev
->>>>>>> aurmich/dev
->>>>>>> 5693302 (.):docs/CONFLITTI_MERGE_RISOLTI.md
->>>>>>> 4241492 (.)
 
 49ebea7 (.)`.
 
 **Risoluzione**: Eliminate le proprietà duplicate e risolto il conflitto di tipo per la proprietà `blocks`.
 
-<<<<<<< Updated upstream
-<<<<<<< HEAD
-=======
->>>>>>> Stashed changes
 **Documentazione**: [Moduli Cms](../../../Cms/docs/models/PageContent_conflict.md)**Risoluzione**: Eliminate le proprietà duplicate e risolto il conflitto di tipo per la proprietà `blocks`, utilizzando la tipizzazione più precisa.
 
 **Documentazione**: [Moduli Cms](/var/www/html/_bases/base_ptvx_fila3_mono/laravel/Modules/Cms/docs/models/PageContent.md)
@@ -1137,31 +667,12 @@ fc83074 (.)
 
 ## Collegamenti tra versioni di conflitti_merge_risolti.md
 
-<<<<<<< Updated upstream
-=======
-=======
->>>>>>> Stashed changes
-**Documentazione**: [Moduli Cms](../../../Cms/docs/models/PageContent_conflict.md)
-
-## Collegamenti tra versioni di CONFLITTI_MERGE_RISOLTI.md
-* [CONFLITTI_MERGE_RISOLTI.md](../../../Gdpr/docs/CONFLITTI_MERGE_RISOLTI.md)
-* [CONFLITTI_MERGE_RISOLTI.md](../../../Xot/docs/CONFLITTI_MERGE_RISOLTI.md)
-* [CONFLITTI_MERGE_RISOLTI.md](../../../UI/docs/CONFLITTI_MERGE_RISOLTI.md)
-* [CONFLITTI_MERGE_RISOLTI.md](../../../Media/docs/CONFLITTI_MERGE_RISOLTI.md)
-
-
-## Collegamenti tra versioni di conflitti_merge_risolti.md
->>>>>>> 4241492 (.)
 * [conflitti_merge_risolti.md](../../Gdpr/docs/conflitti_merge_risolti.md)
 * [conflitti_merge_risolti.md](../../UI/docs/conflitti_merge_risolti.md)
 * [conflitti_merge_risolti.md](../../Media/docs/conflitti_merge_risolti.md)
 
 
 =======
-<<<<<<< Updated upstream
-<<<<<<< HEAD
-=======
->>>>>>> Stashed changes
 
 aurmich/dev
 aurmich/devaurmich/dev
@@ -1174,18 +685,3 @@ b6f667c (.)* [conflitti_merge_risolti.md](/var/www/html/_bases/base_ptvx_fila3_m
 * [conflitti_merge_risolti.md](/var/www/html/_bases/base_ptvx_fila3_mono/laravel/Modules/Media/docs/conflitti_merge_risolti.md)
 * [Risoluzione Conflitti Git](/var/www/html/_bases/base_ptvx_fila3_mono/bashscripts/docs/git_conflicts_resolution.md)
 fc83074 (.)
-<<<<<<< Updated upstream
-=======
-=======
->>>>>>> Stashed changes
-=======
-
->>>>>>> aurmich/dev
-=======
->>>>>>> aurmich/dev
-
-=======
->>>>>>> aurmich/dev
->>>>>>> aurmich/dev
->>>>>>> 5693302 (.):docs/CONFLITTI_MERGE_RISOLTI.md
->>>>>>> 4241492 (.)

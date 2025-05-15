@@ -9,7 +9,7 @@
 
 ## Introduzione
 
-Questo documento definisce le best practices per l'utilizzo di Laravel Folio e Livewire Volt in SaluteOra, con particolare attenzione alle pagine di autenticazione e alle convenzioni di progetto.
+Questo documento definisce le best practices per l'utilizzo di Laravel Folio e Livewire Volt , con particolare attenzione alle pagine di autenticazione e alle convenzioni di progetto.
 
 ## Approcci Raccomandati per Volt e Folio
 

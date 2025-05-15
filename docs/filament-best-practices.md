@@ -680,10 +680,6 @@ Consulta l'esempio completo all'inizio di questo documento per una implementazio
 
 ---
 
-<<<<<<< Updated upstream
-<<<<<<< HEAD
-=======
->>>>>>> Stashed changes
 ## Collocazione dei metodi tabellari
 
 **Regola:**
@@ -724,9 +720,4 @@ Aggiornare sempre la documentazione e le regole di progetto. Applicare la stessa
 **Vedi anche:**
 - [Best Practices Filament per il modulo Performance](../../Performance/docs/filament.md)
 
-<<<<<<< Updated upstream
-=======
->>>>>>> 4241492 (.)
-=======
->>>>>>> Stashed changes
 

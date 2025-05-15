@@ -1,4 +1,4 @@
-# Sistema di Traduzione in SaluteOra
+# Sistema di Traduzione 
 
 ## Regola Fondamentale: NO ->label()
 

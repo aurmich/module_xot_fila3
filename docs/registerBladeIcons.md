@@ -103,10 +103,6 @@ Config::set('blade-icons.sets.'.$this->nameLower.'.prefix', $this->nameLower);
 3. Implementare un sistema di versioning per le icone
 4. Creare un sistema di fallback per icone mancanti
 
-<<<<<<< Updated upstream
-<<<<<<< HEAD
-=======
->>>>>>> Stashed changes
 ## Nota sulla gestione centralizzata dei path
 
 La stessa filosofia di gestione centralizzata dei path tramite action (es. GetModulePathByGeneratorAction) si applica anche alle traduzioni. Vedi la sezione aggiornata in [XotBaseServiceProvider.md](./XotBaseServiceProvider.md#gestione-dei-path-delle-traduzioni).
@@ -119,10 +115,5 @@ La stessa filosofia di gestione centralizzata dei path tramite action (es. GetMo
 
 **Collegamento:** Vedi anche [XotBaseServiceProvider.md](./XotBaseServiceProvider.md)
 
-<<<<<<< Updated upstream
-=======
->>>>>>> 4241492 (.)
-=======
->>>>>>> Stashed changes
 ## Conclusione
 Il metodo `registerBladeIcons` rappresenta un esempio di come la filosofia zen e i principi di design software possano convergere in una soluzione elegante ed efficace. La sua implementazione bilancia perfettamente la necessità di flessibilità con la robustezza del sistema, creando un ponte tra la modularità del codice e l'espressività dell'interfaccia utente. 
