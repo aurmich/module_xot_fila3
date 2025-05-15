@@ -1066,19 +1066,3 @@ aurmich/dev
 - Aggiornare la documentazione del modulo con esempi e riferimenti.
 
 Vedi anche la documentazione specifica del modulo per dettagli e casi particolari.
-<<<<<<< Updated upstream
-<<<<<<< HEAD
-=======
-<<<<<<< Updated upstream
-=======
-=======
->>>>>>> Stashed changes
-=======
->>>>>>> 5693302 (.)
->>>>>>> 4241492 (.)
-=======
-   - Utilizzare i namespace appropriati che riflettono la struttura delle directory 
->>>>>>> 823c958 (.)
->>>>>>> bdc979b (.)
-=======
->>>>>>> Stashed changes

@@ -41,10 +41,6 @@ abstract class XotBaseWidget extends FilamentWidget implements HasForms
     protected static string $view;
     
 
-<<<<<<< Updated upstream
-<<<<<<< HEAD
-=======
->>>>>>> Stashed changes
     public array $listener = [
         'filters-updated' => 'filtersUpdated',
       

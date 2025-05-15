@@ -1,33 +1,8 @@
 {
     "name": "Xot",
     "alias": "xot",
-<<<<<<< Updated upstream
-<<<<<<< HEAD
     "description": "Modulo base che fornisce funzionalità core e strutture fondamentali per gli altri moduli",
     "keywords": ["core", "base", "foundation", "structure"],
-=======
-<<<<<<< HEAD
-<<<<<<< Updated upstream
-<<<<<<< HEAD
-    "description": "Modulo base che fornisce funzionalità core e strutture fondamentali per gli altri moduli",
-    "keywords": ["core", "base", "foundation", "structure"],
-=======
-    "description": "",
-    "keywords": [],
->>>>>>> 4241492 (.)
-=======
-    "description": "Modulo base che fornisce funzionalità core e strutture fondamentali per gli altri moduli",
-    "keywords": ["core", "base", "foundation", "structure"],
->>>>>>> Stashed changes
-=======
-    "description": "",
-    "keywords": [],
->>>>>>> 823c958 (.)
->>>>>>> bdc979b (.)
-=======
-    "description": "Modulo base che fornisce funzionalità core e strutture fondamentali per gli altri moduli",
-    "keywords": ["core", "base", "foundation", "structure"],
->>>>>>> Stashed changes
     "priority": 2,
     "active": 1,
     "order": 2,

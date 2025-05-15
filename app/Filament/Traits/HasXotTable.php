@@ -126,27 +126,7 @@ trait HasXotTable
     public function getGridTableColumns(): array
     {
         return [
-<<<<<<< Updated upstream
-<<<<<<< HEAD
             Stack::make($this->getTableColumns()),
-=======
-<<<<<<< HEAD
-<<<<<<< Updated upstream
-<<<<<<< HEAD
-            Stack::make($this->getTableColumns()),
-=======
-            Stack::make($this->getListTableColumns()),
->>>>>>> 4241492 (.)
-=======
-            Stack::make($this->getTableColumns()),
->>>>>>> Stashed changes
-=======
-            Stack::make($this->getListTableColumns()),
->>>>>>> 823c958 (.)
->>>>>>> bdc979b (.)
-=======
-            Stack::make($this->getTableColumns()),
->>>>>>> Stashed changes
         ];
     }
 
@@ -155,27 +135,7 @@ trait HasXotTable
      *
      * @return array<string, Tables\Columns\Column>
      */
-<<<<<<< Updated upstream
-<<<<<<< HEAD
     public function getTableColumns(): array
-=======
-<<<<<<< HEAD
-<<<<<<< Updated upstream
-<<<<<<< HEAD
-    public function getTableColumns(): array
-=======
-    public function getListTableColumns(): array
->>>>>>> 4241492 (.)
-=======
-    public function getTableColumns(): array
->>>>>>> Stashed changes
-=======
-    public function getListTableColumns(): array
->>>>>>> 823c958 (.)
->>>>>>> bdc979b (.)
-=======
-    public function getTableColumns(): array
->>>>>>> Stashed changes
     {
         return [];
     }
@@ -278,29 +238,8 @@ trait HasXotTable
             ->emptyStateActions($this->getTableEmptyStateActions())
             ->striped();
 
-<<<<<<< Updated upstream
-<<<<<<< HEAD
         $table = $table
             ->paginated($this->getTablePaginated());
-=======
-<<<<<<< HEAD
-<<<<<<< Updated upstream
-<<<<<<< HEAD
-        $table = $table
-            ->paginated($this->getTablePaginated());
-=======
->>>>>>> 4241492 (.)
-=======
-        $table = $table
-            ->paginated($this->getTablePaginated());
->>>>>>> Stashed changes
-=======
->>>>>>> 823c958 (.)
->>>>>>> bdc979b (.)
-=======
-        $table = $table
-            ->paginated($this->getTablePaginated());
->>>>>>> Stashed changes
         /*
             ->defaultSort(
                 column: $this->getDefaultTableSortColumn(),
@@ -310,35 +249,11 @@ trait HasXotTable
         return $table;
     }
 
-<<<<<<< Updated upstream
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< Updated upstream
-<<<<<<< HEAD
-=======
->>>>>>> Stashed changes
->>>>>>> bdc979b (.)
-=======
->>>>>>> Stashed changes
     protected function getTablePaginated(): bool
     {
         return true;
     }
 
-<<<<<<< Updated upstream
-<<<<<<< HEAD
-=======
-<<<<<<< Updated upstream
-=======
->>>>>>> 4241492 (.)
-=======
->>>>>>> Stashed changes
-=======
->>>>>>> 823c958 (.)
->>>>>>> bdc979b (.)
-=======
->>>>>>> Stashed changes
     /**
      * Get default table sort column.
      */
@@ -404,33 +319,7 @@ trait HasXotTable
                 ->tooltip(__('user::actions.delete'))
                 ->visible(fn (Model $record): bool => $resource::canDelete($record));
         }
-<<<<<<< Updated upstream
-<<<<<<< HEAD
         
-=======
-=======
-
-        if ($this->shouldShowViewAction()) {
-            $actions['view'] = Tables\Actions\ViewAction::make()
-                ->iconButton()
-                ->tooltip(__('user::actions.view'));
-        }
-
-        if ($this->shouldShowEditAction()) {
-            $actions['edit'] = Tables\Actions\EditAction::make()
-                ->iconButton()
-                ->tooltip(__('user::actions.edit'));
-        }
-
-        $actions['delete'] = Tables\Actions\DeleteAction::make()
-            ->iconButton()
-            ->tooltip(__('user::actions.delete'));
->>>>>>> 823c958 (.)
-
->>>>>>> bdc979b (.)
-=======
-        
->>>>>>> Stashed changes
         if ($this->shouldShowReplicateAction()) {
             $actions['replicate'] = Tables\Actions\ReplicateAction::make()
                 ->iconButton()

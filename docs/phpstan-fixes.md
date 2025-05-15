@@ -4,18 +4,6 @@
 
 5693302 (.)
 b6f667c (.)
-<<<<<<< Updated upstream
-<<<<<<< HEAD
-=======
-=======
-
->>>>>>> Stashed changes
->>>>>>> 4241492 (.)
-=======
->>>>>>> 823c958 (.)
->>>>>>> bdc979b (.)
-=======
->>>>>>> Stashed changes
 # Correzioni PHPStan nel Modulo Xot
 
 ## Correzioni Implementate
@@ -243,24 +231,6 @@ aurmich/dev
 aurmich/dev
 5693302 (.)
 b6f667c (.)
-<<<<<<< Updated upstream
-<<<<<<< HEAD
-=======
-<<<<<<< Updated upstream
-=======
-=======
->>>>>>> Stashed changes
-=======
-
-=======
->>>>>>> aurmich/dev
->>>>>>> 5693302 (.)
->>>>>>> 4241492 (.)
-=======
->>>>>>> 823c958 (.)
->>>>>>> bdc979b (.)
-=======
->>>>>>> Stashed changes
     // ...
 }
 ```
@@ -271,26 +241,6 @@ b6f667c (.)
 
 5693302 (.)
 b6f667c (.)
-<<<<<<< Updated upstream
-<<<<<<< HEAD
-=======
-=======
-=======
-
->>>>>>> 5693302 (.)
-=======
-
-5693302 (.)
-b6f667c (.)
-=======
-
->>>>>>> Stashed changes
->>>>>>> 4241492 (.)
-=======
->>>>>>> 823c958 (.)
->>>>>>> bdc979b (.)
-=======
->>>>>>> Stashed changes
 ### 2. Validazione Dati
 ```php
 /**
@@ -332,24 +282,6 @@ aurmich/dev
 aurmich/dev
 5693302 (.)
 b6f667c (.)
-<<<<<<< Updated upstream
-<<<<<<< HEAD
-=======
-<<<<<<< Updated upstream
-=======
-=======
->>>>>>> Stashed changes
-=======
-
-=======
->>>>>>> aurmich/dev
->>>>>>> 5693302 (.)
->>>>>>> 4241492 (.)
-=======
->>>>>>> 823c958 (.)
->>>>>>> bdc979b (.)
-=======
->>>>>>> Stashed changes
     // ...
 }
 ```
@@ -360,26 +292,6 @@ b6f667c (.)
 
 5693302 (.)
 b6f667c (.)
-<<<<<<< Updated upstream
-<<<<<<< HEAD
-=======
-=======
-=======
-
->>>>>>> 5693302 (.)
-=======
-
-5693302 (.)
-b6f667c (.)
-=======
-
->>>>>>> Stashed changes
->>>>>>> 4241492 (.)
-=======
->>>>>>> 823c958 (.)
->>>>>>> bdc979b (.)
-=======
->>>>>>> Stashed changes
 ### 3. Gestione Relazioni
 ```php
 /**
@@ -871,21 +783,3 @@ aurmich/dev
 aurmich/dev
 5693302 (.)
 b6f667c (.)
-<<<<<<< Updated upstream
-<<<<<<< HEAD
-=======
-<<<<<<< Updated upstream
-=======
-=======
->>>>>>> Stashed changes
-=======
-
-=======
->>>>>>> aurmich/dev
->>>>>>> 5693302 (.)
->>>>>>> 4241492 (.)
-=======
->>>>>>> 823c958 (.)
->>>>>>> bdc979b (.)
-=======
->>>>>>> Stashed changes

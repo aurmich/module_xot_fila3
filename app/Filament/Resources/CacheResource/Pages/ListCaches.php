@@ -30,27 +30,7 @@ class ListCaches extends XotBaseListRecords
         ];
     }
 
-<<<<<<< Updated upstream
-<<<<<<< HEAD
     public function getTableColumns(): array
-=======
-<<<<<<< HEAD
-<<<<<<< Updated upstream
-<<<<<<< HEAD
-    public function getTableColumns(): array
-=======
-    public function getListTableColumns(): array
->>>>>>> 4241492 (.)
-=======
-    public function getTableColumns(): array
->>>>>>> Stashed changes
-=======
-    public function getListTableColumns(): array
->>>>>>> 823c958 (.)
->>>>>>> bdc979b (.)
-=======
-    public function getTableColumns(): array
->>>>>>> Stashed changes
     {
         return [
             'key' => TextColumn::make('key')
@@ -74,27 +54,7 @@ class ListCaches extends XotBaseListRecords
     public function getGridTableColumns(): array
     {
         return [
-<<<<<<< Updated upstream
-<<<<<<< HEAD
             Stack::make($this->getTableColumns()),
-=======
-<<<<<<< HEAD
-<<<<<<< Updated upstream
-<<<<<<< HEAD
-            Stack::make($this->getTableColumns()),
-=======
-            Stack::make($this->getListTableColumns()),
->>>>>>> 4241492 (.)
-=======
-            Stack::make($this->getTableColumns()),
->>>>>>> Stashed changes
-=======
-            Stack::make($this->getListTableColumns()),
->>>>>>> 823c958 (.)
->>>>>>> bdc979b (.)
-=======
-            Stack::make($this->getTableColumns()),
->>>>>>> Stashed changes
         ];
     }
 

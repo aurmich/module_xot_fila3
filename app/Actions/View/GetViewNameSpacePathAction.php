@@ -23,27 +23,7 @@ class GetViewNameSpacePathAction
         if (null !== $module_name && '' !== $module_name) {
             $module_path = Module::getModulePath($module_name);
             /** @var non-falsy-string $namespace_path */
-<<<<<<< Updated upstream
-<<<<<<< HEAD
             $namespace_path = $module_path.'resources/views';
-=======
-<<<<<<< HEAD
-<<<<<<< Updated upstream
-<<<<<<< HEAD
-            $namespace_path = $module_path.'resources/views';
-=======
-            $namespace_path = $module_path.'Resources/views';
->>>>>>> 4241492 (.)
-=======
-            $namespace_path = $module_path.'resources/views';
->>>>>>> Stashed changes
-=======
-            $namespace_path = $module_path.'Resources/views';
->>>>>>> 823c958 (.)
->>>>>>> bdc979b (.)
-=======
-            $namespace_path = $module_path.'resources/views';
->>>>>>> Stashed changes
         } else {
             /** @var non-falsy-string $namespace_path */
             $namespace_path = resource_path('views');

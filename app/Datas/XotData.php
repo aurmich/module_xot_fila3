@@ -4,15 +4,6 @@ declare(strict_types=1);
 
 namespace Modules\Xot\Datas;
 
-<<<<<<< Updated upstream
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< Updated upstream
-<<<<<<< HEAD
->>>>>>> bdc979b (.)
-=======
->>>>>>> Stashed changes
 use Livewire\Wireable;
 use function Safe\realpath;
 use Illuminate\Support\Arr;
@@ -29,55 +20,6 @@ use Modules\User\Contracts\TenantContract;
 
 use Modules\Xot\Contracts\ProfileContract;
 use Spatie\LaravelData\Concerns\WireableData;
-<<<<<<< Updated upstream
-<<<<<<< HEAD
-=======
-=======
-use Illuminate\Database\Eloquent\Model;
-use Illuminate\Support\Str;
-=======
->>>>>>> Stashed changes
-use Livewire\Wireable;
-use function Safe\realpath;
-use Illuminate\Support\Arr;
-use Illuminate\Support\Str;
-use Spatie\LaravelData\Data;
-use Webmozart\Assert\Assert;
-use Modules\User\Models\Team;
-use Modules\User\Models\Membership;
-use Illuminate\Database\Eloquent\Model;
-use Modules\Xot\Contracts\UserContract;
-use Modules\User\Contracts\TeamContract;
-use Modules\Tenant\Services\TenantService;
-use Modules\User\Contracts\TenantContract;
-
-<<<<<<< Updated upstream
-use function Safe\realpath;
->>>>>>> 4241492 (.)
-=======
-use Modules\Xot\Contracts\ProfileContract;
-use Spatie\LaravelData\Concerns\WireableData;
->>>>>>> Stashed changes
-=======
-use Illuminate\Database\Eloquent\Model;
-use Illuminate\Support\Str;
-use Livewire\Wireable;
-use Modules\Tenant\Services\TenantService;
-use Modules\User\Contracts\TeamContract;
-use Modules\User\Contracts\TenantContract;
-use Modules\User\Models\Membership;
-use Modules\User\Models\Team;
-use Modules\Xot\Contracts\ProfileContract;
-use Modules\Xot\Contracts\UserContract;
-use Spatie\LaravelData\Concerns\WireableData;
-use Spatie\LaravelData\Data;
-use Webmozart\Assert\Assert;
-
-use function Safe\realpath;
->>>>>>> 823c958 (.)
->>>>>>> bdc979b (.)
-=======
->>>>>>> Stashed changes
 
 /**
  * Class Modules\Xot\Datas\XotData.
@@ -359,17 +301,6 @@ class XotData extends Data implements Wireable
             throw new \Exception('realpath not find dir['.$path0.']'.PHP_EOL.'['.$e->getMessage().']');
         }
     }
-<<<<<<< Updated upstream
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< Updated upstream
-<<<<<<< HEAD
-=======
->>>>>>> Stashed changes
->>>>>>> bdc979b (.)
-=======
->>>>>>> Stashed changes
 
 
     /**
@@ -395,17 +326,4 @@ class XotData extends Data implements Wireable
         return $resourceClass;
     }
 
-<<<<<<< Updated upstream
-<<<<<<< HEAD
-=======
-<<<<<<< Updated upstream
-=======
->>>>>>> 4241492 (.)
-=======
->>>>>>> Stashed changes
-=======
->>>>>>> 823c958 (.)
->>>>>>> bdc979b (.)
-=======
->>>>>>> Stashed changes
 }

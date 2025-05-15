@@ -525,7 +525,6 @@ Il modulo è configurabile tramite:
 - **Religione**: Laicità, rispetto di tutte le fedi, libertà di pensiero.
 - **Etica**: Onestà, rispetto, responsabilità, attenzione all'impatto sociale e ambientale.
 - **Zen**: Semplicità, concentrazione sul presente, armonia e serenità nello sviluppo.b6f667c (.)
-<<<<<<< Updated upstream
 
 ## Service Provider: Decisione Architetturale (2025-05-13)
 
@@ -550,42 +549,3 @@ Consulta le [best practices aggiornate](./providers/service_provider_best_practi
 ## Backlink
 - [Collegamento a docs/links.md della root](../../../../docs/links.md)
 - **Zen**: Semplicità, concentrazione sul presente, armonia e serenità nello sviluppo.
-<<<<<<< HEAD
-=======
-<<<<<<< Updated upstream
-=======
->>>>>>> 4241492 (.)
-=======
->>>>>>> Stashed changes
-=======
-## Documentazione Filament
-
-- [Linee Guida per getInfolistSchema](./filament/INFOLIST_SCHEMA_GUIDELINES.md) - Guida completa per l'implementazione corretta del metodo getInfolistSchema, con focus sull'uso delle chiavi stringa negli array 
->>>>>>> 823c958 (.)
->>>>>>> bdc979b (.)
-=======
-
-## Service Provider: Decisione Architetturale (2025-05-13)
-
-Il provider `XotBaseServiceProvider` è progettato per:
-- Centralizzare la registrazione di views, config, traduzioni, componenti Blade e Livewire
-- Utilizzare actions dedicate (es. `GetModulePathByGeneratorAction`) per garantire robustezza e coerenza
-- Gestire fallback e validazioni in modo sicuro
-- Favorire l'estendibilità e la coerenza cross-modulo
-
-### Punti di forza
-- Coerenza architetturale
-- Robustezza nella gestione dei path
-- Facilità di estensione per i moduli custom
-
-### Criticità e miglioramenti
-- Logging degli errori nei fallback (oggi spesso silenziosi)
-- Maggiore chiarezza nei commenti e PHPDoc
-- Promuovere l'iniezione delle actions per testabilità
-
-Consulta le [best practices aggiornate](./providers/service_provider_best_practices.md) per dettagli, motivazioni e consigli operativi.
-
-## Backlink
-- [Collegamento a docs/links.md della root](../../../../docs/links.md)
-- **Zen**: Semplicità, concentrazione sul presente, armonia e serenità nello sviluppo.
->>>>>>> Stashed changes

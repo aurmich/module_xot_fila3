@@ -1,16 +1,5 @@
 <?php
-
-<<<<<<< Updated upstream
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< Updated upstream
-<<<<<<< HEAD
-=======
->>>>>>> Stashed changes
->>>>>>> bdc979b (.)
-=======
->>>>>>> Stashed changes
+declare(strict_types=1);
 return array (
   'fields' => 
   array (
@@ -22,28 +11,3 @@ return array (
     ),
   ),
 );
-<<<<<<< Updated upstream
-<<<<<<< HEAD
-=======
-<<<<<<< Updated upstream
-=======
-=======
->>>>>>> 823c958 (.)
-declare(strict_types=1);
-
-return [
-    'fields' => [
-        'view' => [
-            'label' => 'view',
-        ],
-    ],
-];
-<<<<<<< HEAD
->>>>>>> 4241492 (.)
-=======
->>>>>>> Stashed changes
-=======
->>>>>>> 823c958 (.)
->>>>>>> bdc979b (.)
-=======
->>>>>>> Stashed changes
