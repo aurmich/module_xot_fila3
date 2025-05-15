@@ -1,4 +1,7 @@
+<<<<<<< Updated upstream
 <<<<<<< HEAD
+=======
+>>>>>>> Stashed changes
 # Risoluzione Conflitti in GetViewByClassAction
 
 ## Contesto e Scopo
@@ -6,7 +9,10 @@
 L'action `GetViewByClassAction` è un componente strategico nel framework Laraxot PTVX che converte automaticamente un nome di classe completo (FQCN) in un percorso di vista utilizzabile. Questa funzionalità è essenziale per l'implementazione dell'architettura modulare del progetto e per la separazione tra logica e presentazione.
 
 ## Problematiche Riscontrate
+<<<<<<< Updated upstream
 =======
+=======
+>>>>>>> Stashed changes
 # Risoluzione Conflitto in GetViewByClassAction.php
 
 ## Problema
@@ -18,7 +24,10 @@ Il file presenta un marker di conflitto `
 
 Il file presenta un marker di conflitto `
 =======
+<<<<<<< Updated upstream
 <<<<<<< HEAD
+=======
+>>>>>>> Stashed changes
 b6f667c (.)Durante l'evoluzione del codice, questo file ha presentato conflitti di merge dovuti a:
 fc83074 (.)
 
@@ -107,14 +116,16 @@ Esempio:
 1. La conversione dei tipi deve sempre utilizzare verifiche appropriate prima di applicare `strval()` per valori mixed.
 2. Il controllo di esistenza della vista (`view()->exists()`) è fondamentale per prevenire errori a runtime.
 3. Per aggiungere nuovi pattern di nomi di classe, modificare l'algoritmo di elaborazione dei segmenti mantenendo la compatibilità con i pattern esistenti.
+<<<<<<< Updated upstream
 =======
+=======
+>>>>>>> Stashed changes
 
 Il file presenta un marker di conflitto `>>>>>>> origin/dev` che indica un merge non completato tra due rami di sviluppo.
 
 Il file presenta un marker di conflitto `
 
 =======
->>>>>>> aurmich/dev
 >>>>>>> aurmich/dev
 >>>>>>> 5693302 (.):docs/actions/view/GetViewByClassAction_conflict.md
 =======

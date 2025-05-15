@@ -1,6 +1,7 @@
 
 
 =======
+<<<<<<< Updated upstream
 <<<<<<< HEAD
 
 5693302 (.)
@@ -9,6 +10,13 @@ b6f667c (.)
 =======
 
 >>>>>>> 5693302 (.)
+=======
+
+5693302 (.)
+b6f667c (.)
+=======
+
+>>>>>>> Stashed changes
 >>>>>>> 4241492 (.)
 # Correzioni PHPStan nel Modulo Xot
 
@@ -125,15 +133,20 @@ public function execute(string $modelClass): AbstractSchemaManager
     Assert::subclassOf($modelClass, Model::class);
 ### Versione HEAD
 
+<<<<<<< Updated upstream
 <<<<<<< HEAD
 aurmich/dev
 5693302 (.)
 b6f667c (.)
 =======
 =======
+aurmich/dev
+5693302 (.)
+b6f667c (.)
+>>>>>>> Stashed changes
+=======
 
 =======
->>>>>>> aurmich/dev
 >>>>>>> 5693302 (.)
 >>>>>>> 4241492 (.)
 # Risoluzione Problemi PHPStan nel Modulo Xot
@@ -241,16 +254,21 @@ class XotBaseModel extends Model
 
 ---
 
+<<<<<<< Updated upstream
 <<<<<<< HEAD
+=======
+>>>>>>> Stashed changes
 aurmich/dev
 aurmich/dev
 5693302 (.)
 b6f667c (.)
+<<<<<<< Updated upstream
 =======
+=======
+>>>>>>> Stashed changes
 =======
 
 =======
->>>>>>> aurmich/dev
 >>>>>>> aurmich/dev
 >>>>>>> 5693302 (.)
 >>>>>>> 4241492 (.)
@@ -261,6 +279,7 @@ b6f667c (.)
 
 
 =======
+<<<<<<< Updated upstream
 <<<<<<< HEAD
 
 5693302 (.)
@@ -269,6 +288,13 @@ b6f667c (.)
 =======
 
 >>>>>>> 5693302 (.)
+=======
+
+5693302 (.)
+b6f667c (.)
+=======
+
+>>>>>>> Stashed changes
 >>>>>>> 4241492 (.)
 ### 2. Validazione Dati
 ```php
@@ -282,15 +308,20 @@ private function validateData(array $data): void
     Assert::string($data['required_field']);
 ### Versione HEAD
 
+<<<<<<< Updated upstream
 <<<<<<< HEAD
 aurmich/dev
 5693302 (.)
 b6f667c (.)
 =======
 =======
+aurmich/dev
+5693302 (.)
+b6f667c (.)
+>>>>>>> Stashed changes
+=======
 
 =======
->>>>>>> aurmich/dev
 >>>>>>> 5693302 (.)
 >>>>>>> 4241492 (.)
 ### Servizi e Dependency Injection
@@ -315,16 +346,21 @@ public function process(ServiceInterface $service): ResponseInterface
 
 ---
 
+<<<<<<< Updated upstream
 <<<<<<< HEAD
+=======
+>>>>>>> Stashed changes
 aurmich/dev
 aurmich/dev
 5693302 (.)
 b6f667c (.)
+<<<<<<< Updated upstream
 =======
+=======
+>>>>>>> Stashed changes
 =======
 
 =======
->>>>>>> aurmich/dev
 >>>>>>> aurmich/dev
 >>>>>>> 5693302 (.)
 >>>>>>> 4241492 (.)
@@ -335,6 +371,7 @@ b6f667c (.)
 
 
 =======
+<<<<<<< Updated upstream
 <<<<<<< HEAD
 
 5693302 (.)
@@ -343,6 +380,13 @@ b6f667c (.)
 =======
 
 >>>>>>> 5693302 (.)
+=======
+
+5693302 (.)
+b6f667c (.)
+=======
+
+>>>>>>> Stashed changes
 >>>>>>> 4241492 (.)
 ### 3. Gestione Relazioni
 ```php
@@ -665,15 +709,20 @@ Questo permette a phpstan di trovare correttamente il file durante l'analisi sta
 
 ### Versione Incoming
 
+<<<<<<< Updated upstream
 <<<<<<< HEAD
 aurmich/dev
 5693302 (.)
 b6f667c (.)
 =======
 =======
+aurmich/dev
+5693302 (.)
+b6f667c (.)
+>>>>>>> Stashed changes
+=======
 
 =======
->>>>>>> aurmich/dev
 >>>>>>> 5693302 (.)
 >>>>>>> 4241492 (.)
 ### Problemi con le Relazioni Eloquent
@@ -839,16 +888,21 @@ interface AuthenticatableRequest
 
 ---
 
+<<<<<<< Updated upstream
 <<<<<<< HEAD
+=======
+>>>>>>> Stashed changes
 aurmich/dev
 aurmich/dev
 5693302 (.)
 b6f667c (.)
+<<<<<<< Updated upstream
 =======
+=======
+>>>>>>> Stashed changes
 =======
 
 =======
->>>>>>> aurmich/dev
 >>>>>>> aurmich/dev
 >>>>>>> 5693302 (.)
 >>>>>>> 4241492 (.)

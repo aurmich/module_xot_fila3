@@ -1,4 +1,7 @@
+<<<<<<< Updated upstream
 <<<<<<< HEAD
+=======
+>>>>>>> Stashed changes
 # Changelog
 
 Tutte le modifiche notevoli a questo modulo saranno documentate in questo file.
@@ -33,8 +36,11 @@ e questo progetto aderisce al [Semantic Versioning](https://semver.org/spec/v2.0
 - Classi base per Resources, RelationManager e Widget
 - Sistema di gestione delle traduzioni automatiche
 - Documentazione base del modulo
+<<<<<<< Updated upstream
 =======
 >>>>>>> 4241492 (.)
+=======
+>>>>>>> Stashed changes
 # Changelog del Modulo Xot
 
 ## Versione Attuale (10/2023)

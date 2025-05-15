@@ -1,4 +1,7 @@
+<<<<<<< Updated upstream
 <<<<<<< HEAD
+=======
+>>>>>>> Stashed changes
 
 # Standard di Codice per il progetto
 
@@ -146,7 +149,10 @@ Ogni modifica ai dati sensibili deve essere:
 1. Registrata con timestamp e utente che ha effettuato la modifica
 2. Accessibile tramite interfaccia di audit per gli amministratori
 3. Conservata secondo le normative sulla privacy e gestione dati sanitari
+<<<<<<< Updated upstream
 =======
+=======
+>>>>>>> Stashed changes
 # Standard di Codice
 
 Questo documento contiene gli standard di codice generali per il progetto.
@@ -331,9 +337,27 @@ class StorePatientRequest extends FormRequest
     public function rules(): array
     {
         return [
+<<<<<<< Updated upstream
 <<<<<<< HEAD
 
             'tax_code' => ['required', 'string', 'size:16', 'unique:patients,tax_code'],
+=======
+
+            'tax_code' => ['required', 'string', 'size:16', 'unique:patients,tax_code'],
+            'first_name' => ['required', 'string', 'max:255'],
+            'last_name' => ['required', 'string', 'max:255'],
+            'birth_date' => ['required', 'date', 'before:today'],
+            'gender' => ['required', 'string', 'in:' . implode(',', array_column(GenderType::cases(), 'value'))],
+            'email' => ['required', 'email', 'unique:patients,email'],
+            'phone' => ['required', 'string', 'max:20'],
+            'address' => ['required', 'string', 'max:255'],
+            'city' => ['required', 'string', 'max:255'],
+            'province' => ['required', 'string', 'size:2'],
+            'postal_code' => ['required', 'string', 'size:5'],
+            'isee' => ['required', 'numeric', 'min:0'],
+            'is_pregnant' => ['boolean'],            'first_name' => ['required', 'string', 'max:255'],
+            'last_name' => ['required', 'string', 'max:255'],
+>>>>>>> Stashed changes
             'first_name' => ['required', 'string', 'max:255'],
             'last_name' => ['required', 'string', 'max:255'],
             'birth_date' => ['required', 'date', 'before:today'],
@@ -359,7 +383,10 @@ class StorePatientRequest extends FormRequest
 }
 ```
 
+<<<<<<< Updated upstream
 <<<<<<< HEAD
+=======
+>>>>>>> Stashed changes
 
 ## Collegamenti Correlati
 
@@ -367,7 +394,10 @@ class StorePatientRequest extends FormRequest
 - [Naming Conventions](../../../docs/naming-conventions.md)
 - [Documentazione Xot](../CODE-STANDARDS.md)
 - [Collegamenti Documentazione](../../../../docs/collegamenti-documentazione.md)## Documentazione del Codice
+<<<<<<< Updated upstream
 =======
+=======
+>>>>>>> Stashed changes
 ## Documentazione del Codice
 >>>>>>> 4241492 (.)
 
@@ -624,7 +654,10 @@ git commit -m "fix: correzione calcolo età paziente"
 * [coding-standards.md](../../../Xot/docs/standards/coding-standards.md)
 * [coding-standards.md](../../../Xot/docs/conventions/coding-standards.md)
 
+<<<<<<< Updated upstream
 <<<<<<< HEAD
+=======
+>>>>>>> Stashed changes
 ## Collegamenti Correlati
 
 - [Convenzioni](../../../docs/conventions.md)
@@ -632,5 +665,8 @@ git commit -m "fix: correzione calcolo età paziente"
 - [Documentazione Xot](../CODE-STANDARDS.md)
 - [Collegamenti Documentazione](../../../../docs/collegamenti-documentazione.md)
 
+<<<<<<< Updated upstream
 =======
 >>>>>>> 4241492 (.)
+=======
+>>>>>>> Stashed changes

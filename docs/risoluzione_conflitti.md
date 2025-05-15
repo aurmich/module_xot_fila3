@@ -74,7 +74,10 @@ Per le best practices complete, consultare il file [best_practices.md](conflicts
    - Testare la compatibilità
    - Validare le funzionalità
 
+<<<<<<< Updated upstream
 <<<<<<< HEAD
+=======
+>>>>>>> Stashed changes
 ## File Risolti Recentemente
 
 1. **Modulo Activity**
@@ -104,7 +107,10 @@ Per le best practices complete, consultare il file [best_practices.md](conflicts
    - Miglioramento della gestione degli errori
    - Documentazione dei metodi aggiornata
 
+<<<<<<< Updated upstream
 =======
+=======
+>>>>>>> Stashed changes
 # Risoluzione Conflitti Git - Modulo Xot
 
 ## Helper.php
@@ -152,7 +158,10 @@ Il conflitto nel file `XotBaseServiceProvider.php` è stato risolto mantenendo:
 
 - Il metodo `registerConfig()` è stato aggiornato per utilizzare il percorso corretto da `modules.paths.generator.config.path`
 - È stato rimosso il codice commentato non necessario per `registerBladeComponents()`
+<<<<<<< Updated upstream
 <<<<<<< HEAD
+=======
+>>>>>>> Stashed changes
 - Il metodo `registerConfig()` è stato aggiornato per utilizzare il percorso corretto da `modules.paths.generator.config.path`
 - È stato rimosso il codice commentato non necessario per `registerBladeComponents()`
 aurmich/dev
@@ -160,13 +169,15 @@ aurmich/dev
 - Il metodo `registerConfig()` è stato aggiornato per utilizzare il percorso corretto da `modules.paths.generator.config.path`
 - È stato rimosso il codice commentato non necessario per `registerBladeComponents()`
 b6f667c (.)
+<<<<<<< Updated upstream
 =======
+=======
+>>>>>>> Stashed changes
 =======
 
 =======
 - Il metodo `registerConfig()` è stato aggiornato per utilizzare il percorso corretto da `modules.paths.generator.config.path`
 - È stato rimosso il codice commentato non necessario per `registerBladeComponents()`
->>>>>>> aurmich/dev
 >>>>>>> 5693302 (.)
 >>>>>>> 4241492 (.)
 
@@ -193,6 +204,7 @@ La soluzione adottata ha mantenuto la versione più semplice e pulita senza la c
 
 Mantenere il codice più semplice è preferibile, soprattutto quando le funzionalità aggiuntive non sono attualmente utilizzate.
 
+<<<<<<< Updated upstream
 <<<<<<< HEAD
 5693302 (.)
 b6f667c (.)
@@ -201,6 +213,13 @@ b6f667c (.)
 
 =======
 >>>>>>> 5693302 (.)
+=======
+5693302 (.)
+b6f667c (.)
+=======
+
+=======
+>>>>>>> Stashed changes
 >>>>>>> 4241492 (.)
 
 ## Conflitti risolti (14/06/2024)
@@ -223,13 +242,19 @@ I seguenti conflitti sono stati risolti come parte dell'ultima manutenzione del 
 
 8. **Activity/database/migrations/2023_10_30_103350_create_stored_events_table.php**: Risolto il conflitto nella migrazione mantenendo l'annotazione PHPDoc per i parametri di tipo Blueprint.
 
+<<<<<<< Updated upstream
 <<<<<<< HEAD
+=======
+>>>>>>> Stashed changes
 9. **Activity/database/migrations/2023_03_31_103350_create_activity_table.php**: Risolto il conflitto nella migrazione mantenendo la versione con annotazioni PHPDoc corrette.3. **Activity/database/migrations/2023_03_31_103350_create_activity_table.php**
    - Mantenimento delle annotazioni PHPDoc per i parametri Blueprint
    - Uniformità nella struttura delle migrazioni
    - Coerenza con le convenzioni del framework
 fc83074 (.)
+<<<<<<< Updated upstream
 =======
+=======
+>>>>>>> Stashed changes
 9. **Activity/database/migrations/2023_03_31_103350_create_activity_table.php**: Risolto il conflitto nella migrazione mantenendo la versione con annotazioni PHPDoc corrette.
 >>>>>>> 4241492 (.)
 
@@ -263,7 +288,10 @@ La risoluzione dei conflitti rimanenti dovrebbe seguire questi principi:
 5. **Documentare le decisioni**: Per ogni conflitto risolto, documentare l'intento e il motivo della scelta effettuata.
 
 ## Collegamenti tra versioni di risoluzione_conflitti.md
+<<<<<<< Updated upstream
 <<<<<<< HEAD
+=======
+>>>>>>> Stashed changes
 
 * [risoluzione_conflitti.md](../../../Xot/docs/risoluzione_conflitti.md)
 * [risoluzione_conflitti.md](../../../Tenant/docs/risoluzione_conflitti.md)
@@ -273,11 +301,13 @@ aurmich/dev
 * [Risoluzione Conflitti Tenant](../../../Tenant/docs/risoluzione_conflitti.md)
 * [Linee Guida Principali Risoluzione Conflitti](../../../../docs/conflict_resolution.md)
 fc83074 (.)
+<<<<<<< Updated upstream
 =======
+=======
+>>>>>>> Stashed changes
 * [risoluzione_conflitti.md](../../../Xot/docs/risoluzione_conflitti.md)
 * [risoluzione_conflitti.md](../../../Tenant/docs/risoluzione_conflitti.md)
 
 =======
->>>>>>> aurmich/dev
 >>>>>>> 5693302 (.)
 >>>>>>> 4241492 (.)

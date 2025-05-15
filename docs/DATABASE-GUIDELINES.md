@@ -228,7 +228,10 @@ class NomeModello extends Model
 
     // Relazioni e metodi...
 }
+<<<<<<< Updated upstream
 <<<<<<< HEAD
+=======
+>>>>>>> Stashed changes
 
 ## Linee guida sulle Migrazioni
 
@@ -289,8 +292,11 @@ return new class extends XotBaseMigration {
     {
         return $this->hasMany(SocioRichiestaConvenzione::class, 'id_socio', 'id_socio');
     }
+<<<<<<< Updated upstream
 =======
 >>>>>>> 4241492 (.)
+=======
+>>>>>>> Stashed changes
 ```
 
 ### 2. Documentazione delle Relazioni

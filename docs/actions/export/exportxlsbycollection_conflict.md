@@ -1,4 +1,7 @@
+<<<<<<< Updated upstream
 <<<<<<< HEAD
+=======
+>>>>>>> Stashed changes
 # Risoluzione Conflitti in ExportXlsByCollection
 
 ## Contesto e Scopo
@@ -6,7 +9,10 @@
 L'action `ExportXlsByCollection` è un componente fondamentale nel framework Laraxot PTVX per l'esportazione di dati in formato Excel. Questa action sfrutta il pattern QueueableAction di Spatie, in linea con le linee guida del progetto che preferiscono questo approccio rispetto ai tradizionali Services.
 
 ## Problematiche Riscontrate
+<<<<<<< Updated upstream
 =======
+=======
+>>>>>>> Stashed changes
 # Risoluzione Conflitto in ExportXlsByCollection.php
 
 ## Problema
@@ -18,7 +24,10 @@ Il file presenta un marker di conflitto `
 
 Il file presenta un marker di conflitto `
 =======
+<<<<<<< Updated upstream
 <<<<<<< HEAD
+=======
+>>>>>>> Stashed changes
 b6f667c (.)Durante l'evoluzione del progetto, questo file ha avuto conflitti di merge a causa di modifiche parallele che miravano a:
 fc83074 (.)
 
@@ -91,14 +100,16 @@ La versione risolta del file presenta:
 1. L'utilizzo di `array_map` con conversione esplicita è preferibile rispetto al type casting diretto per evitare problemi con PHPStan.
 2. La separazione tra l'interfaccia pubblica (`execute`) e i metodi di supporto protetti aiuta a mantenere il codice organizzato e testabile.
 3. L'approccio di gestione sicura dei tipi deve essere mantenuto in tutte le future modifiche a questo file.
+<<<<<<< Updated upstream
 =======
+=======
+>>>>>>> Stashed changes
 
 Il file presenta un marker di conflitto `>>>>>>> origin/dev` che indica un merge non completato tra due rami di sviluppo.
 
 Il file presenta un marker di conflitto `
 
 =======
->>>>>>> aurmich/dev
 >>>>>>> aurmich/dev
 >>>>>>> 5693302 (.):docs/actions/export/ExportXlsByCollection_conflict.md
 =======

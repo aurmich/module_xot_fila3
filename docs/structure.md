@@ -240,10 +240,14 @@ laravel/Themes/[Nome]/
 ---
 
 =======
+<<<<<<< Updated upstream
 <<<<<<< HEAD
 b6f667c (.)
 =======
 >>>>>>> 4241492 (.)
+=======
+b6f667c (.)
+>>>>>>> Stashed changes
 
 # Struttura del Modulo Xot
 
@@ -1105,7 +1109,10 @@ tests_old
 
 ---
 
+<<<<<<< Updated upstream
 <<<<<<< HEAD
+=======
+>>>>>>> Stashed changes
 aurmich/dev
 5693302 (.)b6f667c (.)
 
@@ -1117,8 +1124,10 @@ aurmich/dev
 - Aggiornare la documentazione del modulo con esempi e riferimenti.
 
 Vedi anche la documentazione specifica del modulo per dettagli e casi particolari.
+<<<<<<< Updated upstream
 =======
 =======
->>>>>>> aurmich/dev
+>>>>>>> Stashed changes
+=======
 >>>>>>> 5693302 (.)
 >>>>>>> 4241492 (.)

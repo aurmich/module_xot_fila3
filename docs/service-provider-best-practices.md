@@ -113,7 +113,10 @@ class BrainServiceProvider extends XotBaseServiceProvider
 }
 ```
 
+<<<<<<< Updated upstream
 <<<<<<< HEAD
+=======
+>>>>>>> Stashed changes
 ### 4. Gestione delle Traduzioni
 
 #### ✅ DO - Usare GetModulePathByGeneratorAction per i path delle traduzioni
@@ -146,8 +149,11 @@ $this->loadTranslationsFrom($langPath, $this->nameLower);
 **Nota:**
 Applicare la stessa regola per la registrazione delle traduzioni JSON.
 
+<<<<<<< Updated upstream
 =======
 >>>>>>> 4241492 (.)
+=======
+>>>>>>> Stashed changes
 ## Implementazione Dettagliata per Tipo di Provider
 
 ### 1. Provider Principale del Modulo
@@ -456,10 +462,15 @@ class RouteServiceProvider extends ServiceProvider
 // middleware essenziali o non essere integrate con il sistema di permessi
 ```
 
+<<<<<<< Updated upstream
 <<<<<<< HEAD
 
 ### Errore: Eventi non ascoltati## Troubleshooting
 =======
+=======
+
+### Errore: Eventi non ascoltati## Troubleshooting
+>>>>>>> Stashed changes
 ## Troubleshooting
 >>>>>>> 4241492 (.)
 
@@ -502,7 +513,10 @@ class RouteServiceProvider extends ServiceProvider
 - [XotBaseServiceProvider](/var/www/html/exa/base_orisbroker_fila3/laravel/Modules/Xot/Providers/XotBaseServiceProvider.php)
 - [XotBaseRouteServiceProvider](/var/www/html/exa/base_orisbroker_fila3/laravel/Modules/Xot/Providers/XotBaseRouteServiceProvider.php)
 - [BaseEventServiceProvider](/var/www/html/exa/base_orisbroker_fila3/laravel/Modules/Xot/Providers/BaseEventServiceProvider.php)
+<<<<<<< Updated upstream
 <<<<<<< HEAD
+=======
+>>>>>>> Stashed changes
 
 
 # Best Practices per ServiceProvider
@@ -753,5 +767,8 @@ public function boot(): void
 
 **Collegamento:** Vedi anche [XotBaseServiceProvider.md](./XotBaseServiceProvider.md)
 - [filament-best-practices.md](filament-best-practices.md)
+<<<<<<< Updated upstream
 =======
 >>>>>>> 4241492 (.)
+=======
+>>>>>>> Stashed changes

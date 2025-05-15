@@ -9,7 +9,10 @@ Questo documento descrive le regole fondamentali per la creazione e la manutenzi
 - [README](../README.md) - Panoramica del modulo Xot
 - [Convenzioni di Naming](./NAMING_CONVENTIONS.md) - Regole di naming per campi, classi e directory
 - [Struttura dei Moduli](./MODULE_STRUCTURE.md) - Convenzioni di struttura dei moduli
+<<<<<<< Updated upstream
 <<<<<<< HEAD
+=======
+>>>>>>> Stashed changes
 - [Prompt di Documentazione](./prompts/DOCUMENTATION_PROMPTS.md) - Regole e best practices per i prompt
 
 ## Validazione dei Collegamenti
@@ -43,6 +46,7 @@ Questo documento descrive le regole fondamentali per la creazione e la manutenzi
 - [ ] Non contiene percorsi assoluti
 - [ ] Usa la notazione corretta per i percorsi relativi
 - [ ] I percorsi sono compatibili con diversi sistemi operativi
+<<<<<<< Updated upstream
 
 - [Prompt di Documentazione](./prompts/DOCUMENTATION_PROMPTS.md) - Regole e best practices per i prompt
 
@@ -113,6 +117,8 @@ Questo documento descrive le regole fondamentali per la creazione e la manutenzi
 - [ ] I percorsi sono compatibili con diversi sistemi operativib6f667c (.)
 =======
 >>>>>>> 4241492 (.)
+=======
+>>>>>>> Stashed changes
 
 ## 1. Regole Fondamentali
 
@@ -137,6 +143,7 @@ Questo documento descrive le regole fondamentali per la creazione e la manutenzi
 - Non devono contenere riferimenti al nome del progetto
 - Devono essere una singola stringa continua senza formattazione
 - Non devono contenere a capo o formattazione speciale
+<<<<<<< Updated upstream
 <<<<<<< HEAD
 - Devono essere documentati nelle cartelle docs appropriate
 - Ogni modifica al prompt deve essere accompagnata da aggiornamenti alla documentazione
@@ -151,6 +158,11 @@ Questo documento descrive le regole fondamentali per la creazione e la manutenzi
 - La documentazione deve spiegare il "perché" delle regole, non solo il "come"b6f667c (.)
 =======
 >>>>>>> 4241492 (.)
+=======
+- Devono essere documentati nelle cartelle docs appropriate
+- Ogni modifica al prompt deve essere accompagnata da aggiornamenti alla documentazione
+- La documentazione deve spiegare il "perché" delle regole, non solo il "come"
+>>>>>>> Stashed changes
 
 ## 2. Struttura della Documentazione
 

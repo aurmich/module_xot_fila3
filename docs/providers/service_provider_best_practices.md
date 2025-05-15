@@ -1,6 +1,9 @@
 # Best Practices nei Service Provider
 
+<<<<<<< Updated upstream
 <<<<<<< HEAD
+=======
+>>>>>>> Stashed changes
 ## Decisione Architetturale (2025-05-13)
 
 Il provider `XotBaseServiceProvider` rappresenta la base architetturale per tutti i moduli Laraxot. Le scelte implementative sono motivate da:
@@ -31,8 +34,11 @@ Il provider `XotBaseServiceProvider` rappresenta la base architetturale per tutt
 - [Torna a README.md del modulo Xot](../README.md)
 - [Collegamento a docs/links.md della root](../../../../docs/links.md)
 
+<<<<<<< Updated upstream
 =======
 >>>>>>> 4241492 (.)
+=======
+>>>>>>> Stashed changes
 ## Utilizzo di GetModulePathByGeneratorAction
 
 ### Panoramica

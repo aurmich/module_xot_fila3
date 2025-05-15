@@ -117,7 +117,10 @@ Quando si identifica una nuova regola o pattern importante:
 4. **Windsurf**
    - [ ] Aggiornare .windsurfrules
    - [ ] Verificare coerenza
+<<<<<<< Updated upstream
 <<<<<<< HEAD
+=======
+>>>>>>> Stashed changes
 
    - [ ] Testare applicabilità 
 
@@ -173,6 +176,10 @@ Modules/Xot/docs/
    - Verifica dei collegamenti    
    - [ ] Testare applicabilità 
 
+<<<<<<< Updated upstream
 =======
    - [ ] Testare applicabilità 
 >>>>>>> 4241492 (.)
+=======
+   - [ ] Testare applicabilità 
+>>>>>>> Stashed changes

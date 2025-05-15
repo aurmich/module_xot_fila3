@@ -126,11 +126,15 @@ trait HasXotTable
     public function getGridTableColumns(): array
     {
         return [
+<<<<<<< Updated upstream
 <<<<<<< HEAD
             Stack::make($this->getTableColumns()),
 =======
             Stack::make($this->getListTableColumns()),
 >>>>>>> 4241492 (.)
+=======
+            Stack::make($this->getTableColumns()),
+>>>>>>> Stashed changes
         ];
     }
 
@@ -139,11 +143,15 @@ trait HasXotTable
      *
      * @return array<string, Tables\Columns\Column>
      */
+<<<<<<< Updated upstream
 <<<<<<< HEAD
     public function getTableColumns(): array
 =======
     public function getListTableColumns(): array
 >>>>>>> 4241492 (.)
+=======
+    public function getTableColumns(): array
+>>>>>>> Stashed changes
     {
         return [];
     }
@@ -246,11 +254,16 @@ trait HasXotTable
             ->emptyStateActions($this->getTableEmptyStateActions())
             ->striped();
 
+<<<<<<< Updated upstream
 <<<<<<< HEAD
         $table = $table
             ->paginated($this->getTablePaginated());
 =======
 >>>>>>> 4241492 (.)
+=======
+        $table = $table
+            ->paginated($this->getTablePaginated());
+>>>>>>> Stashed changes
         /*
             ->defaultSort(
                 column: $this->getDefaultTableSortColumn(),
@@ -260,14 +273,20 @@ trait HasXotTable
         return $table;
     }
 
+<<<<<<< Updated upstream
 <<<<<<< HEAD
+=======
+>>>>>>> Stashed changes
     protected function getTablePaginated(): bool
     {
         return true;
     }
 
+<<<<<<< Updated upstream
 =======
 >>>>>>> 4241492 (.)
+=======
+>>>>>>> Stashed changes
     /**
      * Get default table sort column.
      */
@@ -312,7 +331,7 @@ trait HasXotTable
     {
         $actions = [];
         $resource = $this->getResource();
-        
+
         if (method_exists($resource, 'canView')) {
             $actions['view'] = Tables\Actions\ViewAction::make()
                 ->iconButton()
@@ -326,14 +345,14 @@ trait HasXotTable
                 ->tooltip(__('user::actions.edit'))
                 ->visible(fn (Model $record): bool => $resource::canEdit($record));
         }
-        
+
         if (method_exists($resource, 'canDelete')) {
             $actions['delete'] = Tables\Actions\DeleteAction::make()
                 ->iconButton()
                 ->tooltip(__('user::actions.delete'))
                 ->visible(fn (Model $record): bool => $resource::canDelete($record));
         }
-        
+
         if ($this->shouldShowReplicateAction()) {
             $actions['replicate'] = Tables\Actions\ReplicateAction::make()
                 ->iconButton()

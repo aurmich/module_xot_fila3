@@ -1,4 +1,7 @@
+<<<<<<< Updated upstream
 <<<<<<< HEAD
+=======
+>>>>>>> Stashed changes
 # Risoluzione Conflitti in ExportXlsByView
 
 ## Contesto e Scopo
@@ -83,7 +86,10 @@ La versione risolta del file presenta:
 1. La conversione dei tipi deve sempre essere eseguita con cautela, utilizzando verifiche di tipo appropriate prima di applicare `strval()`.
 2. I campi nullabili devono sempre essere gestiti correttamente per evitare errori a runtime.
 3. Le annotazioni PHPDoc devono essere mantenute aggiornate in tutte le future modifiche al file.
+<<<<<<< Updated upstream
 =======
+=======
+>>>>>>> Stashed changes
 # Risoluzione Conflitto in ExportXlsByView.php
 
 ## Problema
@@ -96,7 +102,6 @@ Il file presenta un marker di conflitto `
 Il file presenta un marker di conflitto `
 =======
 
->>>>>>> 5693302 (.):docs/actions/export/ExportXlsByView_conflict.md
 Il file presenta un marker di conflitto `>>>>>>> origin/dev` che indica un merge non completato tra due rami di sviluppo.
 
 Il file presenta un marker di conflitto `

@@ -1,6 +1,9 @@
 <?php
 
+<<<<<<< Updated upstream
 <<<<<<< HEAD
+=======
+>>>>>>> Stashed changes
 return array (
   'actions' => 
   array (
@@ -41,6 +44,7 @@ return array (
     ),
   ),
 );
+<<<<<<< Updated upstream
 =======
 declare(strict_types=1);
 
@@ -69,3 +73,5 @@ return [
     ],
 ];
 >>>>>>> 4241492 (.)
+=======
+>>>>>>> Stashed changes

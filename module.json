@@ -1,6 +1,7 @@
 {
     "name": "Xot",
     "alias": "xot",
+<<<<<<< Updated upstream
 <<<<<<< HEAD
     "description": "Modulo base che fornisce funzionalità core e strutture fondamentali per gli altri moduli",
     "keywords": ["core", "base", "foundation", "structure"],
@@ -8,6 +9,10 @@
     "description": "",
     "keywords": [],
 >>>>>>> 4241492 (.)
+=======
+    "description": "Modulo base che fornisce funzionalità core e strutture fondamentali per gli altri moduli",
+    "keywords": ["core", "base", "foundation", "structure"],
+>>>>>>> Stashed changes
     "priority": 2,
     "active": 1,
     "order": 2,

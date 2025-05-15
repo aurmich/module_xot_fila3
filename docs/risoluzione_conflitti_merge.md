@@ -1,4 +1,7 @@
+<<<<<<< Updated upstream
 <<<<<<< HEAD
+=======
+>>>>>>> Stashed changes
 # Risoluzione dei Conflitti di Merge nel Progetto
 
 ## Problema
@@ -99,7 +102,10 @@ Durante lo sviluppo del progetto <nome progetto>, sono stati identificati divers
 aurmich/dev
 
 b6f667c (.)
+<<<<<<< Updated upstream
 =======
+=======
+>>>>>>> Stashed changes
 # Risoluzione dei Conflitti di Merge in il progetto
 
 ## Problema
@@ -124,7 +130,6 @@ Durante lo sviluppo del progetto <nome progetto>, sono stati identificati divers
 
 Durante lo sviluppo del progetto <nome progetto>, sono stati identificati diversi file con conflitti di merge non risolti. Questi conflitti erano indicati dalla presenza di marcatori come ``, `origin/dev` nel codice sorgente. I conflitti non risolti causavano errori durante l'analisi statica con PHPStan e impedivano il corretto funzionamento del codice.
 aurmich/dev
->>>>>>> aurmich/dev
 =======
 
 Durante lo sviluppo del progetto <nome progetto>, sono stati identificati diversi file con conflitti di merge non risolti. Questi conflitti erano indicati dalla presenza di marcatori come ``, `origin/dev` nel codice sorgente. I conflitti non risolti causavano errori durante l'analisi statica con PHPStan e impedivano il corretto funzionamento del codice.
@@ -177,7 +182,10 @@ aurmich/dev
 In ogni file, sono stati rimossi tutti i marcatori di conflitto , mantenendo la versione più completa e corretta del codice.
 
 
+<<<<<<< Updated upstream
 <<<<<<< HEAD
+=======
+>>>>>>> Stashed changes
 
 In ogni file, sono stati rimossi tutti i marcatori di conflitto (``, `origin/dev`), mantenendo la versione più completa e corretta del codice.
 aurmich/dev
@@ -189,7 +197,10 @@ aurmich/dev
 
 In ogni file, sono stati rimossi tutti i marcatori di conflitto (``, `=======`, `origin/dev`), mantenendo la versione più completa e corretta del codice.
 b6f667c (.)
+<<<<<<< Updated upstream
 =======
+=======
+>>>>>>> Stashed changes
 =======
 
 In ogni file, sono stati rimossi tutti i marcatori di conflitto (``, `origin/dev`), mantenendo la versione più completa e corretta del codice.
@@ -199,7 +210,10 @@ aurmich/dev
 
 In ogni file, sono stati rimossi tutti i marcatori di conflitto (``, `=======`, `>>>>>>> origin/dev`), mantenendo la versione più completa e corretta del codice.
 =======
+<<<<<<< Updated upstream
 >>>>>>> 5693302 (.):docs/RISOLUZIONE_CONFLITTI_MERGE.md
+=======
+>>>>>>> Stashed changes
 >>>>>>> 4241492 (.)
 
 In ogni file, sono stati rimossi tutti i marcatori di conflitto (``, `origin/dev`), mantenendo la versione più completa e corretta del codice.
@@ -209,13 +223,18 @@ aurmich/dev
 In ogni file, sono stati rimossi tutti i marcatori di conflitto (``, `origin/dev`), mantenendo la versione più completa e corretta del codice.
 aurmich/dev
 
+<<<<<<< Updated upstream
 <<<<<<< HEAD
 aurmich/dev
 aurmich/dev
 5693302 (.):docs/RISOLUZIONE_CONFLITTI_MERGE.mdb6f667c (.)
 =======
 =======
->>>>>>> aurmich/dev
+aurmich/dev
+aurmich/dev
+5693302 (.):docs/RISOLUZIONE_CONFLITTI_MERGE.mdb6f667c (.)
+>>>>>>> Stashed changes
+=======
 >>>>>>> aurmich/dev
 >>>>>>> 5693302 (.):docs/RISOLUZIONE_CONFLITTI_MERGE.md
 >>>>>>> 4241492 (.)
@@ -392,7 +411,10 @@ Per prevenire problemi simili in futuro, si raccomanda di:
 
 
 
+<<<<<<< Updated upstream
 <<<<<<< HEAD
+=======
+>>>>>>> Stashed changes
 
 
 aurmich/dev
@@ -403,15 +425,17 @@ aurmich/dev
 
 
 b6f667c (.)
+<<<<<<< Updated upstream
 =======
 =======
+>>>>>>> Stashed changes
+=======
 
 
 =======
 
 =======
 
->>>>>>> aurmich/dev
 
 =======
 >>>>>>> aurmich/dev
@@ -426,7 +450,10 @@ b6f667c (.)
   # Verifica se ci sono marcatori di conflitto nei file in staging
 
 
+<<<<<<< Updated upstream
 <<<<<<< HEAD
+=======
+>>>>>>> Stashed changes
   if git diff --cached | grep -E '|' > /dev/null; then
 aurmich/dev
 
@@ -442,12 +469,14 @@ aurmich/dev  if git diff --cached | grep -E '|' > /dev/null; then
   if git diff --cached | grep -E '|' > /dev/null; then
 
 b6f667c (.)
+<<<<<<< Updated upstream
 =======
+=======
+>>>>>>> Stashed changes
 =======
   if git diff --cached | grep -E '|' > /dev/null; then
 =======
 
->>>>>>> aurmich/dev
 
   if git diff --cached | grep -E '|=======|>>>>>>> ' > /dev/null; then
 =======
@@ -469,7 +498,10 @@ b6f667c (.)
   ```
 
 
+<<<<<<< Updated upstream
 <<<<<<< HEAD
+=======
+>>>>>>> Stashed changes
 aurmich/dev
 aurmich/dev
 aurmich/dev
@@ -491,12 +523,14 @@ aurmich/dev
 ### 2. Esecuzione Regolare dei Test
 ### 2. Esecuzione Regolare dei Test
 b6f667c (.)
+<<<<<<< Updated upstream
 =======
+=======
+>>>>>>> Stashed changes
 =======
 aurmich/dev
 =======
 
->>>>>>> aurmich/dev
 
 =======
 aurmich/dev
@@ -543,7 +577,10 @@ Per le best practices complete, consultare il file [best_practices.md](conflicts
 
 ## Casi Risolti Recentemente
 
+<<<<<<< Updated upstream
 <<<<<<< HEAD
+=======
+>>>>>>> Stashed changes
 ### 1. Namespace e Convenzioni- [Best Practices PHPStan](phpstan/best_practices.md)
 fc83074 (.)
 - [Convenzioni Namespace](NAMESPACE-CONVENTIONS.md)
@@ -564,7 +601,10 @@ La risoluzione dei conflitti di merge richiede un approccio metodico e una conos
 3. Documentare accuratamente le decisioni prese
 4. Verificare che le modifiche non introducano regressioni
 5. Mantenere aggiornata la documentazione con collegamenti bidirezionali
+<<<<<<< Updated upstream
 =======
+=======
+>>>>>>> Stashed changes
 ### 1. Namespace e Convenzioni
 - [Convenzioni Namespace](NAMESPACE-CONVENTIONS.md)
 - Risoluzione conflitti nelle convenzioni di namespace
