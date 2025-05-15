@@ -1,6 +1,10 @@
 # Analisi PHPStan per Moduli Laravel
 
+<<<<<<< Updated upstream
 Questa documentazione spiega come utilizzare gli script forniti per analizzare i moduli Laravel con PHPStan.
+=======
+Data: Wed Apr 23 21:24:43 CEST 2025
+>>>>>>> Stashed changes
 
 ## Cos'è PHPStan?
 
