@@ -27,16 +27,11 @@ Questo documento fornisce una panoramica del sistema di gestione delle eccezioni
 2. Logging strutturato e dettagliato
 3. Gestione errori robusta
 4. Supporto per PHPStan livello 9
-<<<<<<< HEAD
 5. Conforme alle convenzioni Laraxot/<nome progetto>
-=======
-5. Conforme alle convenzioni Laraxot/PTVX
->>>>>>> 823c958 (.)
 
 ## Collegamenti
 - [Exception Handling Guidelines](../EXCEPTION-HANDLING-GUIDE.md)
 - [Logging Best Practices](../LOGGING-BEST-PRACTICES.md)
-<<<<<<< HEAD
 - [PHPStan Level 9 Guide](../PHPSTAN-LEVEL9-GUIDE.md) 
 ## Collegamenti tra versioni di README.md
 * [README.md](bashscripts/docs/README.md)
@@ -116,6 +111,3 @@ Questo documento fornisce una panoramica del sistema di gestione delle eccezioni
 * [README.md](../../../../Themes/Two/docs/README.md)
 * [README.md](../../../../Themes/One/docs/README.md)
 
-=======
-- [PHPStan Level 9 Guide](../PHPSTAN-LEVEL9-GUIDE.md) 
->>>>>>> 823c958 (.)

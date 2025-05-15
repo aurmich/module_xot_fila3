@@ -25,11 +25,7 @@ php artisan xot:search-string-in-database {search_string} {--table=} {--column=}
 2. Gestione errori robusta
 3. Query ottimizzate per performance
 4. Supporto per PHPStan livello 9
-<<<<<<< HEAD
 5. Conforme alle convenzioni Laraxot/<nome progetto>
-=======
-5. Conforme alle convenzioni Laraxot/PTVX
->>>>>>> 823c958 (.)
 
 ## Collegamenti
 - [Database Guidelines](../DATABASE-GUIDELINES.md)

@@ -41,11 +41,7 @@ interface ModelContactContract extends ModelContract
 1. Utilizzo di strict types
 2. Documentazione PHPDoc completa
 3. Supporto per PHPStan livello 9
-<<<<<<< HEAD
 4. Conforme alle convenzioni Laraxot/<nome progetto>
-=======
-4. Conforme alle convenzioni Laraxot/PTVX
->>>>>>> 823c958 (.)
 5. Gestione null-safety
 
 ## Collegamenti

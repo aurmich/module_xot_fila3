@@ -11,11 +11,7 @@ use Modules\Xot\Filament\Resources\Pages\XotBaseListRecords;
 
 
 
-<<<<<<< HEAD
 use Modules\Xot\Filament\Resources\XotBaseResource\RelationManagers\XotBaseRelationManager;
-=======
-use Modules\Xot\Filament\Resources\XotBaseResource\RelationManager\XotBaseRelationManager;
->>>>>>> 823c958 (.)
 
 
 
@@ -25,6 +21,7 @@ class ListCacheLocks extends XotBaseListRecords
 {
     protected static string $resource = CacheLockResource::class;
 
+<<<<<<< Updated upstream
 <<<<<<< HEAD
     public function getTableColumns(): array
 =======
@@ -42,6 +39,9 @@ class ListCacheLocks extends XotBaseListRecords
     public function getListTableColumns(): array
 >>>>>>> 823c958 (.)
 >>>>>>> bdc979b (.)
+=======
+    public function getTableColumns(): array
+>>>>>>> Stashed changes
     {
         return [
             'key' => TextColumn::make('key')

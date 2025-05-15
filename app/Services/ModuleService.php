@@ -81,30 +81,17 @@ class ModuleService
                 $tmp = new \stdClass();
 
                 $name = mb_substr($filename, 0, -mb_strlen($ext));
-<<<<<<< HEAD
 
                 
-=======
-                // dddx(['name' => $name, 'name1' => $file->getFilenameWithoutExtension()]);
->>>>>>> 823c958 (.)
                 /**
                  * @var class-string
                  */
                 $class = $ns.'\\'.$name;
-<<<<<<< HEAD
                 //Strict comparison using === between stdClass and null will always evaluate to false.
 
                 //if ($tmp === null) {
                 //    continue;
                 //}
-=======
-
-                //Strict comparison using === between stdClass and null will always evaluate to false.
-                //if ($tmp === null) {
-                //    continue;
-                //}
-
->>>>>>> 823c958 (.)
                 $tmp->class = $class;
                 $name = Str::snake($name);
                 $tmp->name = $name;

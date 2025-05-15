@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Risoluzione Conflitti
 
 ## Best Practices
@@ -104,6 +103,7 @@ Per le best practices complete, consultare il file [best_practices.md](conflicts
    - Miglioramento della gestione degli errori
    - Documentazione dei metodi aggiornata
 
+<<<<<<< Updated upstream
 <<<<<<< HEAD
 =======
 <<<<<<< Updated upstream
@@ -135,6 +135,8 @@ Per una panoramica completa di tutti i conflitti risolti, vedere la [documentazi
 =======
 >>>>>>> 823c958 (.)
 >>>>>>> bdc979b (.)
+=======
+>>>>>>> Stashed changes
 
 ## Collegamenti Esterni
 
@@ -158,7 +160,6 @@ Il conflitto nel file `XotBaseServiceProvider.php` è stato risolto mantenendo:
 - La struttura compatta del metodo `boot()` che richiama in sequenza i metodi di registrazione
 - La versione più pulita di `register()` che non include registrazioni duplicate
 - La versione avanzata del metodo `registerBladeIcons()` con la gestione delle eccezioni
-<<<<<<< HEAD
 - Il metodo `registerConfig()` è stato aggiornato per utilizzare il percorso corretto da `modules.paths.generator.config.path`
 - È stato rimosso il codice commentato non necessario per `registerBladeComponents()`
 
@@ -171,6 +172,7 @@ aurmich/dev
 - Il metodo `registerConfig()` è stato aggiornato per utilizzare il percorso corretto da `modules.paths.generator.config.path`
 - È stato rimosso il codice commentato non necessario per `registerBladeComponents()`
 b6f667c (.)
+<<<<<<< Updated upstream
 <<<<<<< HEAD
 =======
 <<<<<<< Updated upstream
@@ -187,6 +189,8 @@ b6f667c (.)
 =======
 >>>>>>> 823c958 (.)
 >>>>>>> bdc979b (.)
+=======
+>>>>>>> Stashed changes
 
 La soluzione adottata privilegia la chiarezza del codice e l'organizzazione logica dei metodi, eliminando commenti non necessari e duplicazioni.
 
@@ -210,7 +214,10 @@ Il file `XotBasePanelProvider.php` presentava conflitti nella configurazione dei
 La soluzione adottata ha mantenuto la versione più semplice e pulita senza la configurazione dei colori, poiché questa configurazione è commentata e non attiva. Inoltre, il tentativo di caricare il file di configurazione avrebbe potuto introdurre dipendenze inutili.
 
 Mantenere il codice più semplice è preferibile, soprattutto quando le funzionalità aggiuntive non sono attualmente utilizzate.
+<<<<<<< Updated upstream
 <<<<<<< HEAD
+=======
+>>>>>>> Stashed changes
 
 5693302 (.)
 b6f667c (.)
@@ -280,6 +287,7 @@ aurmich/dev
 * [Risoluzione Conflitti Tenant](../../../Tenant/docs/risoluzione_conflitti.md)
 * [Linee Guida Principali Risoluzione Conflitti](../../../../docs/conflict_resolution.md)
 fc83074 (.)
+<<<<<<< Updated upstream
 <<<<<<< HEAD
 =======
 <<<<<<< Updated upstream
@@ -295,3 +303,5 @@ fc83074 (.)
 =======
 >>>>>>> 823c958 (.)
 >>>>>>> bdc979b (.)
+=======
+>>>>>>> Stashed changes

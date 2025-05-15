@@ -63,12 +63,8 @@ Questa sezione documenta tutti gli errori rilevati da PHPStan nel modulo Xot.
 - Utilizzare `@phpstan-ignore` solo come ultima risorsa
 - Documentare ogni correzione con una spiegazione
 - Aggiornare il file baseline dopo ogni correzione
-<<<<<<< HEAD
 - Testare le correzioni prima di applicarle 
 ## Collegamenti tra versioni di errors.md
 * [errors.md](docs/errors.md)
 * [errors.md](../../../Xot/docs/phpstan/errors.md)
 
-=======
-- Testare le correzioni prima di applicarle 
->>>>>>> 823c958 (.)

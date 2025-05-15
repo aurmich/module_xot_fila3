@@ -4,12 +4,15 @@ declare(strict_types=1);
 
 namespace Modules\Xot\Actions\Filament;
 
+<<<<<<< Updated upstream
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< Updated upstream
 <<<<<<< HEAD
 >>>>>>> bdc979b (.)
+=======
+>>>>>>> Stashed changes
 use Illuminate\Support\Str;
 use Webmozart\Assert\Assert;
 use Filament\Facades\Filament;
@@ -18,6 +21,7 @@ use Filament\Navigation\NavigationItem;
 use Modules\Tenant\Services\TenantService;
 use Spatie\QueueableAction\QueueableAction;
 use Modules\Xot\Actions\Module\GetModulePathByGeneratorAction;
+<<<<<<< Updated upstream
 <<<<<<< HEAD
 =======
 =======
@@ -49,6 +53,8 @@ use Spatie\QueueableAction\QueueableAction;
 use Webmozart\Assert\Assert;
 >>>>>>> 823c958 (.)
 >>>>>>> bdc979b (.)
+=======
+>>>>>>> Stashed changes
 
 /**
  * Classe per gestire gli elementi di navigazione per i moduli.
@@ -74,6 +80,7 @@ class GetModulesNavigationItems
             
             $module_low = Str::lower($module);
             Assert::stringNotEmpty($module_low, 'Il nome del modulo convertito in minuscolo non può essere vuoto');
+<<<<<<< Updated upstream
 <<<<<<< HEAD
             /*
 =======
@@ -91,6 +98,9 @@ class GetModulesNavigationItems
 
 >>>>>>> 823c958 (.)
 >>>>>>> bdc979b (.)
+=======
+            /*
+>>>>>>> Stashed changes
             // Otteniamo il percorso relativo della configurazione
             $relativeConfigPath = config('modules.paths.generator.config.path');
             $relativeConfigPathStr = is_string($relativeConfigPath) ? $relativeConfigPath : 'Config';
@@ -106,6 +116,7 @@ class GetModulesNavigationItems
             
             // Verifichiamo che $configPath sia una stringa valida
             Assert::stringNotEmpty($configPath, 'Il percorso di configurazione non può essere vuoto');
+<<<<<<< Updated upstream
 <<<<<<< HEAD
             */
             $configPath = app(GetModulePathByGeneratorAction::class)->execute($module, 'config');
@@ -126,6 +137,10 @@ class GetModulesNavigationItems
             
 >>>>>>> 823c958 (.)
 >>>>>>> bdc979b (.)
+=======
+            */
+            $configPath = app(GetModulePathByGeneratorAction::class)->execute($module, 'config');
+>>>>>>> Stashed changes
             // Costruiamo il percorso completo del file di configurazione
             $configFilePath = $configPath.'/config.php';
             

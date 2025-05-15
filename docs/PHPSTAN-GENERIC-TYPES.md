@@ -44,10 +44,7 @@ public function comments(): HasMany
  */
 public function tags(): BelongsToMany
 {
-<<<<<<< HEAD
     return $this->belongsToManyX(Tag::class);
-=======
->>>>>>> 823c958 (.)
     return $this->belongsToMany(Tag::class);
 }
 ```

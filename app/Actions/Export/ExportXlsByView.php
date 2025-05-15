@@ -22,11 +22,7 @@ class ExportXlsByView
      * @param View $view Vista da esportare
      * @param string $filename Nome del file Excel
      * @param array<string>|null $fields Campi da includere nell'export
-<<<<<<< HEAD
      * 
-=======
-     *
->>>>>>> 823c958 (.)
      * @return BinaryFileResponse
      */
     public function execute(

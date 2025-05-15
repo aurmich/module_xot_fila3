@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 ### Versione HEAD
 
 # Roadmap Modulo Xot
@@ -451,8 +450,6 @@
 
 ### Versione Incoming
 
-=======
->>>>>>> 823c958 (.)
 # Xot Module Roadmap
 
 ## Module Progress Overview
@@ -530,9 +527,6 @@ Overall Module Completion: 60%
    - Query optimization
    - Cache implementation
    - Priority: High
-<<<<<<< HEAD
 
 ---
 
-=======
->>>>>>> 823c958 (.)

@@ -33,10 +33,6 @@ class ExportXlsByQuery
     ): BinaryFileResponse {
         // Assicuriamo che $fields sia un array di stringhe
         $stringFields = array_map(function ($field) {
-<<<<<<< HEAD
-=======
-
->>>>>>> 823c958 (.)
             return strval($field);
         }, array_values($fields));
 

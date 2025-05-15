@@ -12,6 +12,7 @@ use Filament\Support\Colors\Color;
 use Modules\Xot\Actions\File\AssetAction;
 use Modules\Tenant\Services\TenantService;
 use Spatie\LaravelData\Concerns\WireableData;
+<<<<<<< Updated upstream
 <<<<<<< HEAD
 use Spatie\LaravelData\Attributes\WithTransformer;
 use Modules\Xot\Datas\Transformers\AssetTransformer;
@@ -30,6 +31,10 @@ use Modules\Xot\Datas\Transformers\AssetTransformer;
 =======
 >>>>>>> 823c958 (.)
 >>>>>>> bdc979b (.)
+=======
+use Spatie\LaravelData\Attributes\WithTransformer;
+use Modules\Xot\Datas\Transformers\AssetTransformer;
+>>>>>>> Stashed changes
 
 /**
  * Class MetatagData
@@ -110,6 +115,7 @@ class MetatagData extends Data implements Wireable
     public string $logo_square = '';
 
     /** @var string */
+<<<<<<< Updated upstream
 <<<<<<< HEAD
     #[WithTransformer(AssetTransformer::class)]
 =======
@@ -125,6 +131,9 @@ class MetatagData extends Data implements Wireable
 =======
 >>>>>>> 823c958 (.)
 >>>>>>> bdc979b (.)
+=======
+    #[WithTransformer(AssetTransformer::class)]
+>>>>>>> Stashed changes
     public string $logo_header = '';
 
     /** @var string */
@@ -202,7 +211,6 @@ class MetatagData extends Data implements Wireable
     }
 
     /**
-<<<<<<< HEAD
      * Get the brand name.
      * This method reflects the semantic purpose of getting the brand name,
      * which is the title of the page.
@@ -513,6 +521,7 @@ class MetatagData extends Data implements Wireable
     }
 
     /**
+<<<<<<< Updated upstream
 <<<<<<< HEAD
      * @deprecated Use getBrandLogo() instead as it better reflects the semantic purpose
      */
@@ -534,33 +543,21 @@ class MetatagData extends Data implements Wireable
 >>>>>>> 823c958 (.)
      *
      * @return string
+=======
+     * @deprecated Use getBrandLogo() instead as it better reflects the semantic purpose
+>>>>>>> Stashed changes
      */
     public function getLogoHeader(): string
     {
-<<<<<<< HEAD
-        return $this->logo_header;
+        return $this->getBrandLogo();
     }
 
     /**
-     * Get the logo header dark.
-=======
-        try {
-            /** @var string $path */
-            $path = app(AssetAction::class)->execute($this->logo_header);
-            return asset($path);
-        } catch (\Throwable $e) {
-            return asset($this->logo_header);
-        }
-    }
-
-    /**
-     * Get the dark header logo URL.
->>>>>>> 823c958 (.)
-     *
-     * @return string
+     * @deprecated Use getDarkModeBrandLogo() instead as it better reflects the semantic purpose
      */
     public function getLogoHeaderDark(): string
     {
+<<<<<<< Updated upstream
 <<<<<<< HEAD
         return $this->logo_header_dark;
 =======
@@ -573,6 +570,9 @@ class MetatagData extends Data implements Wireable
         }
 >>>>>>> 823c958 (.)
 >>>>>>> bdc979b (.)
+=======
+        return $this->getDarkModeBrandLogo();
+>>>>>>> Stashed changes
     }
 
     /**
@@ -581,6 +581,7 @@ class MetatagData extends Data implements Wireable
     public function getLogoHeight(): string
     {
         return $this->getBrandLogoHeight();
+<<<<<<< Updated upstream
     }
 <<<<<<< HEAD
 =======
@@ -660,6 +661,7 @@ class MetatagData extends Data implements Wireable
     {
         $colors = array_keys(Color::all());
         return array_combine($colors, $colors);
+=======
+>>>>>>> Stashed changes
     }
->>>>>>> 823c958 (.)
 }

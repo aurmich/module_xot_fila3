@@ -1,8 +1,4 @@
-<<<<<<< HEAD
 # Layout in il progetto
-=======
-# Layout in SaluteOra
->>>>>>> 823c958 (.)
 
 I layout sono i template base che definiscono la struttura delle pagine. Ogni tema può definire i propri layout.
 

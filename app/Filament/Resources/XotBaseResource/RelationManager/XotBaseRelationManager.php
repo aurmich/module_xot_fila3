@@ -65,6 +65,7 @@ abstract class XotBaseRelationManager extends RelationManager
         return $this->getResource()::getFormSchema();
     }
 
+<<<<<<< Updated upstream
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -73,6 +74,8 @@ abstract class XotBaseRelationManager extends RelationManager
 =======
 >>>>>>> Stashed changes
 >>>>>>> bdc979b (.)
+=======
+>>>>>>> Stashed changes
     /**
      * Get table columns.
      *
@@ -81,6 +84,7 @@ abstract class XotBaseRelationManager extends RelationManager
     public function getTableColumns(): array
     {
         return $this->getResource()::getTableColumns();
+<<<<<<< Updated upstream
 <<<<<<< HEAD
 =======
 =======
@@ -115,6 +119,8 @@ abstract class XotBaseRelationManager extends RelationManager
 =======
 >>>>>>> 823c958 (.)
 >>>>>>> bdc979b (.)
+=======
+>>>>>>> Stashed changes
     }
 
     // public function table(Table $table): Table
@@ -124,6 +130,7 @@ abstract class XotBaseRelationManager extends RelationManager
     //     $resource = $this->getResource();
     //     Assert::classExists($resource);
 
+<<<<<<< Updated upstream
 <<<<<<< HEAD
     //     if (method_exists($resource, 'getTableColumns')) {
     //         /** @var array<string, Tables\Columns\Column> $columns */
@@ -151,6 +158,11 @@ abstract class XotBaseRelationManager extends RelationManager
     //         $columns = $resource::getListTableColumns();
 >>>>>>> 823c958 (.)
 >>>>>>> bdc979b (.)
+=======
+    //     if (method_exists($resource, 'getTableColumns')) {
+    //         /** @var array<string, Tables\Columns\Column> $columns */
+    //         $columns = $resource::getTableColumns();
+>>>>>>> Stashed changes
 
     //         return $table->columns($columns);
     //     }
@@ -187,6 +199,7 @@ abstract class XotBaseRelationManager extends RelationManager
         } catch (\Exception $e) {
             // Fallback if parent method fails
         }
+<<<<<<< Updated upstream
 <<<<<<< HEAD
         
 =======
@@ -196,6 +209,9 @@ abstract class XotBaseRelationManager extends RelationManager
         
 >>>>>>> 823c958 (.)
 >>>>>>> bdc979b (.)
+=======
+        
+>>>>>>> Stashed changes
         // Fallback: derive the resource class name from the relation manager name
         $class = get_class($this);
         $resource_name = Str::of(class_basename($this))
@@ -208,6 +224,7 @@ abstract class XotBaseRelationManager extends RelationManager
             ->append('Resources\\')
             ->toString();
         $resourceClass = $ns.'\\'.$resource_name;
+<<<<<<< Updated upstream
 <<<<<<< HEAD
         
         if (!class_exists($resourceClass)) {
@@ -222,13 +239,18 @@ abstract class XotBaseRelationManager extends RelationManager
         }
 
 =======
+=======
+>>>>>>> Stashed changes
         
         if (!class_exists($resourceClass)) {
             throw new \Exception("Cannot find resource class {$resourceClass}");
         }
         
+<<<<<<< Updated upstream
 >>>>>>> 823c958 (.)
 >>>>>>> bdc979b (.)
+=======
+>>>>>>> Stashed changes
         if (!is_subclass_of($resourceClass, \Modules\Xot\Filament\Resources\XotBaseResource::class)) {
             throw new \Exception("{$resourceClass} must extend XotBaseResource");
         }

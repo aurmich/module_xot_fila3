@@ -9,11 +9,7 @@ use Modules\Xot\Filament\Resources\SessionResource;
 
 
 
-<<<<<<< HEAD
 use Modules\Xot\Filament\Resources\XotBaseResource\RelationManagers\XotBaseRelationManager;
-=======
-use Modules\Xot\Filament\Resources\XotBaseResource\RelationManager\XotBaseRelationManager;
->>>>>>> 823c958 (.)
 
 
 

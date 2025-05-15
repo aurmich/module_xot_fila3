@@ -6,11 +6,7 @@ Il file `AutoLabelAction.php` presentava marker di conflitto (``) e duplicazioni
 ## Azioni svolte
 - Rimozione completa dei marker di conflitto e delle duplicazioni di codice.
 - Uniformazione della logica: ora la funzione applica la logica di auto-label in modo sicuro e tipizzato.
-<<<<<<< HEAD
 - Miglioramento della gestione dei tipi secondo le regole Laraxot/<nome progetto> e PHPStan livello 9.
-=======
-- Miglioramento della gestione dei tipi secondo le regole Laraxot/PTVX e PHPStan livello 9.
->>>>>>> 823c958 (.)
 - Validazione con PHPStan livello 9.
 - Aggiornamento della documentazione e creazione di collegamento bidirezionale con la doc root.
 

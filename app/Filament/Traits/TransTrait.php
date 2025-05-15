@@ -98,10 +98,6 @@ trait TransTrait
                 $trans = Arr::get($group_arr, $item);
             }
         }
-<<<<<<< HEAD
-=======
-
->>>>>>> 823c958 (.)
         if (is_numeric($trans)) {
             return strval($trans);
         }

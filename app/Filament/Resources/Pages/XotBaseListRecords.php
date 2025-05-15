@@ -27,6 +27,7 @@ abstract class XotBaseListRecords extends FilamentListRecords
 {
     use HasXotTable;
 
+<<<<<<< Updated upstream
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -41,11 +42,14 @@ abstract class XotBaseListRecords extends FilamentListRecords
 
 >>>>>>> 823c958 (.)
 >>>>>>> bdc979b (.)
+=======
+>>>>>>> Stashed changes
     /**
      * Get the table columns.
      *
      * @return array<string, Tables\Columns\Column>
      */
+<<<<<<< Updated upstream
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -54,10 +58,13 @@ abstract class XotBaseListRecords extends FilamentListRecords
 =======
 >>>>>>> Stashed changes
 >>>>>>> bdc979b (.)
+=======
+>>>>>>> Stashed changes
     public function getTableColumns(): array
     {
         return [];
     }
+<<<<<<< Updated upstream
 
     
 <<<<<<< HEAD
@@ -75,6 +82,10 @@ abstract class XotBaseListRecords extends FilamentListRecords
 
 >>>>>>> 823c958 (.)
 >>>>>>> bdc979b (.)
+=======
+
+    
+>>>>>>> Stashed changes
     /**
      * Get the default sort column and direction.
      *
@@ -116,6 +127,7 @@ abstract class XotBaseListRecords extends FilamentListRecords
      */
     protected function paginateTableQuery(Builder $query): Paginator
     {
+<<<<<<< Updated upstream
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -124,11 +136,14 @@ abstract class XotBaseListRecords extends FilamentListRecords
 =======
 >>>>>>> Stashed changes
 >>>>>>> bdc979b (.)
+=======
+>>>>>>> Stashed changes
         return $query->fastPaginate(
             ('all' === $this->getTableRecordsPerPage()) 
             ? $query->count() 
             : $this->getTableRecordsPerPage()
         );
+<<<<<<< Updated upstream
     }
 }
 
@@ -171,3 +186,8 @@ abstract class XotBaseListRecords extends FilamentListRecords
 =======
 >>>>>>> 823c958 (.)
 >>>>>>> bdc979b (.)
+=======
+    }
+}
+
+>>>>>>> Stashed changes

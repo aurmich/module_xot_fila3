@@ -77,7 +77,6 @@ Ignition::editor('vscode');
 - [Performance](performance.md)
 - [Debug](debug.md)
 - [Panoramica](../packages.md) 
-<<<<<<< HEAD
 ### Versione HEAD
 
 
@@ -91,5 +90,3 @@ Ignition::editor('vscode');
 
 ---
 
-=======
->>>>>>> 823c958 (.)

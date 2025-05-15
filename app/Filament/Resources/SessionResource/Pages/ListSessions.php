@@ -20,17 +20,21 @@ class ListSessions extends XotBaseListRecords
     public function getGridTableColumns(): array
     {
         return [
+<<<<<<< Updated upstream
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< Updated upstream
 <<<<<<< HEAD
 >>>>>>> bdc979b (.)
+=======
+>>>>>>> Stashed changes
             Stack::make($this->getTableColumns()),
         ];
     }
 
     public function getTableColumns(): array
+<<<<<<< Updated upstream
 <<<<<<< HEAD
 =======
 =======
@@ -53,6 +57,8 @@ class ListSessions extends XotBaseListRecords
 =======
 >>>>>>> 823c958 (.)
 >>>>>>> bdc979b (.)
+=======
+>>>>>>> Stashed changes
     {
         return [
             'id' => TextColumn::make('id')

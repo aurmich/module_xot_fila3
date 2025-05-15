@@ -4,12 +4,15 @@ declare(strict_types=1);
 
 namespace Modules\Xot\Datas;
 
+<<<<<<< Updated upstream
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< Updated upstream
 <<<<<<< HEAD
 >>>>>>> bdc979b (.)
+=======
+>>>>>>> Stashed changes
 use Livewire\Wireable;
 use function Safe\realpath;
 use Illuminate\Support\Arr;
@@ -26,6 +29,7 @@ use Modules\User\Contracts\TenantContract;
 
 use Modules\Xot\Contracts\ProfileContract;
 use Spatie\LaravelData\Concerns\WireableData;
+<<<<<<< Updated upstream
 <<<<<<< HEAD
 =======
 =======
@@ -72,6 +76,8 @@ use Webmozart\Assert\Assert;
 use function Safe\realpath;
 >>>>>>> 823c958 (.)
 >>>>>>> bdc979b (.)
+=======
+>>>>>>> Stashed changes
 
 /**
  * Class Modules\Xot\Datas\XotData.
@@ -353,6 +359,7 @@ class XotData extends Data implements Wireable
             throw new \Exception('realpath not find dir['.$path0.']'.PHP_EOL.'['.$e->getMessage().']');
         }
     }
+<<<<<<< Updated upstream
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -361,6 +368,8 @@ class XotData extends Data implements Wireable
 =======
 >>>>>>> Stashed changes
 >>>>>>> bdc979b (.)
+=======
+>>>>>>> Stashed changes
 
 
     /**
@@ -386,6 +395,7 @@ class XotData extends Data implements Wireable
         return $resourceClass;
     }
 
+<<<<<<< Updated upstream
 <<<<<<< HEAD
 =======
 <<<<<<< Updated upstream
@@ -396,4 +406,6 @@ class XotData extends Data implements Wireable
 =======
 >>>>>>> 823c958 (.)
 >>>>>>> bdc979b (.)
+=======
+>>>>>>> Stashed changes
 }

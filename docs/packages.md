@@ -59,7 +59,6 @@
 - [Testing](packages/testing.md)
 - [Performance](packages/performance.md)
 - [Debug](packages/debug.md) 
-<<<<<<< HEAD
 ### Versione HEAD
 
 
@@ -80,5 +79,3 @@
 
 ---
 
-=======
->>>>>>> 823c958 (.)

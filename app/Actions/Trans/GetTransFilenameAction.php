@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace Modules\Xot\Actions\Trans;
 
 use Illuminate\Support\Str;
+<<<<<<< Updated upstream
 <<<<<<< HEAD
 use Modules\Xot\Actions\Module\GetModulePathByGeneratorAction;
 =======
@@ -22,6 +23,9 @@ use Modules\Xot\Actions\Module\GetModulePathByGeneratorAction;
 use Nwidart\Modules\Facades\Module;
 >>>>>>> 823c958 (.)
 >>>>>>> bdc979b (.)
+=======
+use Modules\Xot\Actions\Module\GetModulePathByGeneratorAction;
+>>>>>>> Stashed changes
 use Webmozart\Assert\Assert;
 
 class GetTransFilenameAction
@@ -32,6 +36,7 @@ class GetTransFilenameAction
         $ns = Str::before($filename, '::');
         $file = Str::between($filename, '::', '.');
 
+<<<<<<< Updated upstream
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -40,6 +45,8 @@ class GetTransFilenameAction
 =======
 >>>>>>> Stashed changes
 >>>>>>> bdc979b (.)
+=======
+>>>>>>> Stashed changes
         try {
             $langPath = app(GetModulePathByGeneratorAction::class)->execute($ns, 'lang');
             Assert::string($langPath, 'Percorso lang non valido');
@@ -48,6 +55,7 @@ class GetTransFilenameAction
         }
 
         $lang_path_full = $langPath.'/'.$lang.'/'.$file.'.php';
+<<<<<<< Updated upstream
         $lang_path_full = str_replace(['\\', '/'], [DIRECTORY_SEPARATOR, DIRECTORY_SEPARATOR], $lang_path_full);
 
         return $lang_path_full;
@@ -74,5 +82,10 @@ class GetTransFilenameAction
 =======
 >>>>>>> 823c958 (.)
 >>>>>>> bdc979b (.)
+=======
+        $lang_path_full = str_replace(['\\', '/'], [DIRECTORY_SEPARATOR, DIRECTORY_SEPARATOR], $lang_path_full);
+
+        return $lang_path_full;
+>>>>>>> Stashed changes
     }
 }

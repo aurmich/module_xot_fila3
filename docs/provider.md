@@ -1,8 +1,4 @@
-<<<<<<< HEAD
 # Service Provider in il progetto
-=======
-# Service Provider in SaluteOra
->>>>>>> 823c958 (.)
 
 Il service provider è responsabile della registrazione e configurazione del tema. Ogni tema deve avere il proprio service provider.
 

@@ -4,12 +4,15 @@ declare(strict_types=1);
 
 namespace Modules\Xot\Filament\Pages;
 
+<<<<<<< Updated upstream
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< Updated upstream
 <<<<<<< HEAD
 >>>>>>> bdc979b (.)
+=======
+>>>>>>> Stashed changes
 use Filament\Forms\Form;
 use Filament\Pages\Page;
 use Illuminate\Support\Str;
@@ -19,6 +22,7 @@ use Illuminate\Database\Eloquent\Model;
 use Modules\Xot\Filament\Traits\TransTrait;
 use Filament\Forms\Concerns\InteractsWithForms;
 use Illuminate\Contracts\Auth\Authenticatable;
+<<<<<<< Updated upstream
 <<<<<<< HEAD
 =======
 =======
@@ -43,12 +47,15 @@ use Illuminate\Support\Str;
 use Modules\Xot\Filament\Traits\TransTrait;
 >>>>>>> 823c958 (.)
 >>>>>>> bdc979b (.)
+=======
+>>>>>>> Stashed changes
 
 /**
  * Undocumented class.
  *
  * @property ?string $model
  */
+<<<<<<< Updated upstream
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -67,10 +74,13 @@ abstract class XotBasePage extends Page
     use TransTrait;
 >>>>>>> 4241492 (.)
 =======
+=======
+>>>>>>> Stashed changes
 abstract class XotBasePage extends Page implements HasForms
 {
     use TransTrait;
     use InteractsWithForms;
+<<<<<<< Updated upstream
 >>>>>>> Stashed changes
 =======
 abstract class XotBasePage extends Page
@@ -78,12 +88,15 @@ abstract class XotBasePage extends Page
     use TransTrait;
 >>>>>>> 823c958 (.)
 >>>>>>> bdc979b (.)
+=======
+>>>>>>> Stashed changes
 
     protected static ?string $navigationIcon = 'heroicon-o-computer-desktop';
 
     protected static string $view = 'job::filament.pages.job-monitor';
 
     protected static ?string $model = null; // ---
+<<<<<<< Updated upstream
 <<<<<<< HEAD
     public ?array $data = [];
 =======
@@ -99,6 +112,9 @@ abstract class XotBasePage extends Page
 =======
 >>>>>>> 823c958 (.)
 >>>>>>> bdc979b (.)
+=======
+    public ?array $data = [];
+>>>>>>> Stashed changes
 
     // public function mount(): void {
     //     $user = auth()->user();
@@ -165,6 +181,7 @@ abstract class XotBasePage extends Page
 
         return $res;
     }
+<<<<<<< Updated upstream
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -173,6 +190,8 @@ abstract class XotBasePage extends Page
 =======
 >>>>>>> Stashed changes
 >>>>>>> bdc979b (.)
+=======
+>>>>>>> Stashed changes
 
     public function form(Form $form): Form
     {
@@ -195,6 +214,7 @@ abstract class XotBasePage extends Page
 
         return $user;
     }
+<<<<<<< Updated upstream
 <<<<<<< HEAD
 =======
 <<<<<<< Updated upstream
@@ -205,4 +225,6 @@ abstract class XotBasePage extends Page
 =======
 >>>>>>> 823c958 (.)
 >>>>>>> bdc979b (.)
+=======
+>>>>>>> Stashed changes
 }

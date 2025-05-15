@@ -818,7 +818,6 @@ protected array $listeners = [
 ```
 
 L'aggiunta dell'annotazione `@phpstan-var` fornisce a PHPStan un'informazione più specifica sul tipo della proprietà, permettendogli di verificare correttamente che tutti gli elementi dell'array siano stringhe. Questo è particolarmente utile quando si lavora con Livewire, dove i listener sono definiti come un array associativo di eventi e metodi da chiamare.
-<<<<<<< HEAD
 ### Versione HEAD
 
 
@@ -835,5 +834,3 @@ Le correzioni apportate al modulo Xot hanno migliorato significativamente la qua
 
 ---
 
-=======
->>>>>>> 823c958 (.)

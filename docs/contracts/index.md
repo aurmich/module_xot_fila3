@@ -46,7 +46,6 @@ Il [ModelWithStatusContract](model-with-status-contract.md) definisce l'interfac
 - Motivi dei cambi di stato
 - Integrazione con Spatie Laravel Model Status
 
-<<<<<<< HEAD
 [Vai alla documentazione completa](model-with-status-contract.md) 
 ## Collegamenti tra versioni di index.md
 * [index.md](../../../Xot/docs/contracts/index.md)
@@ -54,6 +53,3 @@ Il [ModelWithStatusContract](model-with-status-contract.md) definisce l'interfac
 * [index.md](../../../../Themes/One/docs/roadmap/philosophy/index.md)
 * [index.md](../../../../Themes/One/docs/roadmap/inspiration/index.md)
 
-=======
-[Vai alla documentazione completa](model-with-status-contract.md) 
->>>>>>> 823c958 (.)

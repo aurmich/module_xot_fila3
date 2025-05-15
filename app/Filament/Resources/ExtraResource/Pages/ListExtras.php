@@ -19,6 +19,7 @@ class ListExtras extends XotBaseListRecords
 {
     protected static string $resource = ExtraResource::class;
 
+<<<<<<< Updated upstream
 <<<<<<< HEAD
     public function getTableColumns(): array
 =======
@@ -36,6 +37,9 @@ class ListExtras extends XotBaseListRecords
     public function getListTableColumns(): array
 >>>>>>> 823c958 (.)
 >>>>>>> bdc979b (.)
+=======
+    public function getTableColumns(): array
+>>>>>>> Stashed changes
     {
         return [
             'id' => TextColumn::make('id')

@@ -1,6 +1,5 @@
 # MetatagData
 
-<<<<<<< HEAD
 ## Descrizione
 La classe `MetatagData` gestisce i metadati del sito, inclusi loghi, colori e configurazioni SEO.
 
@@ -112,9 +111,6 @@ $twitterCards = $metatag->getTwitterCards();
 - [Configurazione Logo](../logo_resolution.md)
 - [Gestione Colori](../colors.md)
 - [SEO Best Practices](../seo.md)
-=======
-La classe MetatagData è un Data Object che gestisce i meta tag per il SEO e i social media.
->>>>>>> 823c958 (.)
 
 ## Caratteristiche principali
 
@@ -160,17 +156,6 @@ public function toHtml(): string
 public function toArray(): array
 ```
 
-<<<<<<< HEAD
-=======
-## Best Practices
-
-- Utilizzare i metodi factory per creare nuove istanze
-- Validare i dati in ingresso con Assert
-- Mantenere l'immutabilità dell'oggetto
-- Seguire le specifiche dei vari protocolli (Open Graph, Twitter Cards)
-- Utilizzare URL assoluti per le immagini
-
->>>>>>> 823c958 (.)
 ## Esempio di utilizzo
 
 ```php
@@ -190,8 +175,4 @@ La classe utilizza `Assert` per validare:
 - Presenza dei campi obbligatori
 - Formato corretto degli URL
 - Lunghezza appropriata dei testi
-<<<<<<< HEAD
 - Valori validi per i tipi di card 
-=======
-- Valori validi per i tipi di card 
->>>>>>> 823c958 (.)

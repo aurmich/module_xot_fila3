@@ -9,6 +9,7 @@ use Filament\Tables\Actions\DeleteAction;
 use Filament\Tables\Actions\DeleteBulkAction;
 use Filament\Tables\Actions\ViewAction;
 use Filament\Tables\Columns\TextColumn;
+<<<<<<< Updated upstream
 <<<<<<< HEAD
 use Modules\Xot\Filament\Resources\LogResource;
 =======
@@ -33,6 +34,8 @@ class ListLogs extends XotBaseListRecords
     public function getTableColumns(): array
 >>>>>>> Stashed changes
 =======
+=======
+>>>>>>> Stashed changes
 use Modules\Xot\Filament\Resources\LogResource;
 use Modules\Xot\Filament\Resources\Pages\XotBaseListRecords;
 
@@ -43,9 +46,13 @@ class ListLogs extends XotBaseListRecords
 {
     protected static string $resource = LogResource::class;
 
+<<<<<<< Updated upstream
     public function getListTableColumns(): array
 >>>>>>> 823c958 (.)
 >>>>>>> bdc979b (.)
+=======
+    public function getTableColumns(): array
+>>>>>>> Stashed changes
     {
         return [
             'id' => TextColumn::make('id')

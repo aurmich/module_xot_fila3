@@ -18,6 +18,7 @@ class ListMyRecords extends XotBaseListRecords
 {
     protected static string $resource = MyResource::class;
 
+<<<<<<< Updated upstream
 <<<<<<< HEAD
     public function getTableColumns(): array
 =======
@@ -35,6 +36,9 @@ class ListMyRecords extends XotBaseListRecords
     public function getListTableColumns(): array
 >>>>>>> 823c958 (.)
 >>>>>>> bdc979b (.)
+=======
+    public function getTableColumns(): array
+>>>>>>> Stashed changes
     {
         return [
             // definizione colonne
@@ -47,6 +51,7 @@ class ListMyRecords extends XotBaseListRecords
 
 Quando si estende `XotBaseListRecords`, è necessario implementare i seguenti metodi:
 
+<<<<<<< Updated upstream
 <<<<<<< HEAD
 1. `getTableColumns()`: Definisce le colonne della tabella
 =======
@@ -64,6 +69,9 @@ Quando si estende `XotBaseListRecords`, è necessario implementare i seguenti me
 1. `getListTableColumns()`: Definisce le colonne della tabella
 >>>>>>> 823c958 (.)
 >>>>>>> bdc979b (.)
+=======
+1. `getTableColumns()`: Definisce le colonne della tabella
+>>>>>>> Stashed changes
 2. `getListTableActions()`: Definisce le azioni per singola riga
 3. `getListTableBulkActions()`: Definisce le azioni di massa
 4. `getListTableFilters()`: Definisce i filtri della tabella
@@ -72,6 +80,7 @@ Quando si estende `XotBaseListRecords`, è necessario implementare i seguenti me
 
 1. **Prefisso List**:
    - Tutti i metodi relativi alla tabella DEVONO avere il prefisso "List"
+<<<<<<< Updated upstream
 <<<<<<< HEAD
    - Es: `getTableColumns()` invece di `getListTableColumns()`
 =======
@@ -89,6 +98,9 @@ Quando si estende `XotBaseListRecords`, è necessario implementare i seguenti me
    - Es: `getListTableColumns()` invece di `getTableColumns()`
 >>>>>>> 823c958 (.)
 >>>>>>> bdc979b (.)
+=======
+   - Es: `getTableColumns()` invece di `getListTableColumns()`
+>>>>>>> Stashed changes
 
 2. **Visibilità dei Metodi**:
    - Tutti i metodi devono essere `public`
@@ -118,6 +130,7 @@ Quando si estende `XotBaseListRecords`, è necessario implementare i seguenti me
 3. **❌ Visibilità Errata**:
    ```php
    // NON cambiare la visibilità dei metodi
+<<<<<<< Updated upstream
 <<<<<<< HEAD
    protected function getTableColumns(): array
 =======
@@ -135,6 +148,9 @@ Quando si estende `XotBaseListRecords`, è necessario implementare i seguenti me
    protected function getListTableColumns(): array
 >>>>>>> 823c958 (.)
 >>>>>>> bdc979b (.)
+=======
+   protected function getTableColumns(): array
+>>>>>>> Stashed changes
    ```
 
 ## Best Practices
@@ -145,6 +161,7 @@ Quando si estende `XotBaseListRecords`, è necessario implementare i seguenti me
    {
        protected static string $resource = MyResource::class;
 
+<<<<<<< Updated upstream
 <<<<<<< HEAD
        public function getTableColumns(): array
 =======
@@ -162,6 +179,9 @@ Quando si estende `XotBaseListRecords`, è necessario implementare i seguenti me
        public function getListTableColumns(): array
 >>>>>>> 823c958 (.)
 >>>>>>> bdc979b (.)
+=======
+       public function getTableColumns(): array
+>>>>>>> Stashed changes
        {
            return [
                TextColumn::make('id')->sortable(),
@@ -205,6 +225,7 @@ Quando si estende `XotBaseListRecords`, è necessario implementare i seguenti me
 
 3. Mantenere la coerenza in tutto il progetto usando sempre XotBaseListRecords
 
+<<<<<<< Updated upstream
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -213,6 +234,8 @@ Quando si estende `XotBaseListRecords`, è necessario implementare i seguenti me
 =======
 >>>>>>> Stashed changes
 >>>>>>> bdc979b (.)
+=======
+>>>>>>> Stashed changes
 > **AVVISO IMPORTANTE (2025-05-13):**
 > Il metodo standard per la definizione delle colonne della tabella è ora `getTableColumns`. Il vecchio `getListTableColumns` è deprecato: aggiorna tutte le implementazioni e la documentazione. Questa scelta garantisce allineamento con Filament e coerenza tra tutti i moduli Laraxot.
 
@@ -238,6 +261,7 @@ public function getTableColumns(): array
 }
 ```
 
+<<<<<<< Updated upstream
 <<<<<<< HEAD
 =======
 <<<<<<< Updated upstream
@@ -248,6 +272,8 @@ public function getTableColumns(): array
 =======
 >>>>>>> 823c958 (.)
 >>>>>>> bdc979b (.)
+=======
+>>>>>>> Stashed changes
 ```php
 declare(strict_types=1);
 
@@ -293,6 +319,7 @@ class ListXXX extends XotBaseListRecords
         ];
     }
 
+<<<<<<< Updated upstream
 <<<<<<< HEAD
     public function getTableColumns(): array
 =======
@@ -310,6 +337,9 @@ class ListXXX extends XotBaseListRecords
     public function getListTableColumns(): array
 >>>>>>> 823c958 (.)
 >>>>>>> bdc979b (.)
+=======
+    public function getTableColumns(): array
+>>>>>>> Stashed changes
     {
         return [
         ];

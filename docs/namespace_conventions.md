@@ -17,7 +17,6 @@ namespace Modules\Tenant\Repositories;
 ### Esempi Errati
 ```php
 namespace Modules\Xot\app\Console\Commands;
-<<<<<<< HEAD
 ### Versione HEAD
 
 
@@ -27,8 +26,6 @@ namespace Modules\Xot\Console\Commands;
 
 ---
 
-=======
->>>>>>> 823c958 (.)
 namespace Modules\Broker\app\Models;
 namespace Modules\User\app\Services;
 namespace Modules\Tenant\app\Repositories;
