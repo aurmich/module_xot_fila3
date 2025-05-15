@@ -1,5 +1,9 @@
 <?php
+<<<<<<< HEAD
 declare(strict_types=1);
+=======
+
+>>>>>>> 96ee206 (.)
 return array (
   'actions' => 
   array (
@@ -23,6 +27,7 @@ return array (
       'label' => 'email',
       'description' => 'email',
       'helper_text' => 'email',
+      'placeholder' => 'email',
     ),
     'password' => 
     array (
