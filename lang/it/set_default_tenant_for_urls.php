@@ -1,9 +1,5 @@
 <?php
-<<<<<<< HEAD
-declare(strict_types=1);
-=======
 
->>>>>>> 96ee206 (.)
 return array (
   'actions' => 
   array (

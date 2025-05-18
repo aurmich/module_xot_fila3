@@ -1,0 +1,24 @@
+---
+description:
+globs:
+alwaysApply: false
+---
+# Relazioni tra moduli
+
+## Relazione utenti-team (doctor_team)
+- Vedi dettaglio in [User/docs/teams.mdc](mdc:../../User/docs/teams.mdc)
+
+**Struttura attuale:**
+- id (PK, autoincrement)
+- user_id (string, 36)
+- team_id (string, 36)
+- timestamps
+
+**Motivazione:**
+- UUID per compatibilità multi-db
+- Nessuna foreign key diretta per portabilità e performance
+- Gestione centralizzata dei timestamps tramite XotBaseMigration
+
+---
+
+Altre relazioni da documentare qui secondo le regole di progetto.
