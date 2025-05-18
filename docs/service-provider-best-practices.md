@@ -472,8 +472,11 @@ class RouteServiceProvider extends ServiceProvider
 4. I file di route siano nei percorsi corretti (web.php, api.php, admin.php)
 
 ### Problema: Eventi non ascoltati
+<<<<<<< Updated upstream
 b6f667c (.)
 ### Errore: Eventi non ascoltati
+=======
+>>>>>>> Stashed changes
 
 **Soluzione:** Verificare che:
 1. L'Event Provider estenda `BaseEventServiceProvider`

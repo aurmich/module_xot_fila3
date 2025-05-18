@@ -149,8 +149,11 @@ Ogni modifica ai dati sensibili deve essere:
 ## Principi Fondamentali
 
 Il codice del progetto **deve** aderire ai seguenti principi fondamentali:
+<<<<<<< Updated upstream
 b6f667c (.)
 Il codice del progetto il progetto **deve** aderire ai seguenti principi fondamentali:
+=======
+>>>>>>> Stashed changes
 
 1. **Robustezza**: Il codice deve funzionare correttamente anche in condizioni impreviste o avverse
 2. **Solidità**: La struttura deve essere manutenibile, scalabile e testabile
@@ -345,6 +348,7 @@ class StorePatientRequest extends FormRequest
             'gender' => ['required', 'string', 'in:' . implode(',', GenderType::values())],
             'birth_date' => ['required', 'date', 'before:today'],
             'tax_code' => ['required', 'string', 'size:16', 'unique:patients,tax_code'],
+<<<<<<< Updated upstream
 b6f667c (.)
             'tax_code' => ['required', 'string', 'size:16', 'unique:patients,tax_code'],
             'first_name' => ['required', 'string', 'max:255'],
@@ -359,6 +363,8 @@ b6f667c (.)
             'postal_code' => ['required', 'string', 'size:5'],
             'isee' => ['required', 'numeric', 'min:0'],
             'is_pregnant' => ['boolean'],
+=======
+>>>>>>> Stashed changes
         ];
     }
 }
@@ -624,7 +630,11 @@ git commit -m "fix: correzione calcolo età paziente"
 ## Collegamenti tra versioni di coding-standards.md
 * [coding-standards.md](../../../Xot/docs/standards/coding-standards.md)
 * [coding-standards.md](../../../Xot/docs/conventions/coding-standards.md)
+<<<<<<< Updated upstream
 b6f667c (.)
+=======
+
+>>>>>>> Stashed changes
 ## Collegamenti Correlati
 
 - [Convenzioni](../../../docs/conventions.md)

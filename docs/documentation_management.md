@@ -169,6 +169,12 @@ Modules/Xot/docs/
 3. **Manutenzione**
    - Revisione periodica
    - Aggiornamento delle regole
+<<<<<<< Updated upstream
    - Verifica dei collegamenti    - [ ] Testare applicabilità 
 b6f667c (.)
    - Verifica dei collegamenti 
+=======
+   - Verifica dei collegamenti    
+   - [ ] Testare applicabilità 
+
+>>>>>>> Stashed changes
