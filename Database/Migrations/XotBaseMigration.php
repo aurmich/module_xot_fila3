@@ -27,11 +27,7 @@ abstract class XotBaseMigration extends Migration
      *
      * @var string|null
      */
-<<<<<<< HEAD
-    protected ?string $connection = null;
-=======
     protected $connection = null;
->>>>>>> 155e791 (.)
 
     /**
      * Run the migrations.
@@ -52,11 +48,7 @@ abstract class XotBaseMigration extends Migration
      *
      * @return string
      */
-<<<<<<< HEAD
-    protected function getConnection(): string
-=======
     public function getConnection()
->>>>>>> 155e791 (.)
     {
         return $this->connection ?? config('database.default');
     }
@@ -70,12 +62,12 @@ abstract class XotBaseMigration extends Migration
     protected function tableCreate(callable $callback): void
     {
         $connection = $this->getConnection();
-        
+
         if (Schema::connection($connection)->hasTable($this->table)) {
             $this->outputWarning("Table [{$this->table}] already exists on connection [{$connection}]");
             return;
         }
-        
+
         Schema::connection($connection)->create($this->table, $callback);
         $this->outputSuccess("Table [{$this->table}] created successfully on connection [{$connection}]");
     }
@@ -89,17 +81,17 @@ abstract class XotBaseMigration extends Migration
     protected function tableUpdate(callable $callback): void
     {
         $connection = $this->getConnection();
-        
+
         if (!Schema::connection($connection)->hasTable($this->table)) {
             $this->outputWarning("Table [{$this->table}] does not exist on connection [{$connection}]");
-            
+
             // Verifica se la tabella esiste in altre connessioni
             $connections = config('database.connections');
             foreach ($connections as $connName => $connConfig) {
                 if ($connName === $connection) {
                     continue;
                 }
-                
+
                 try {
                     if (Schema::connection($connName)->hasTable($this->table)) {
                         $this->outputError("Table [{$this->table}] exists on connection [{$connName}], but not on [{$connection}]");
@@ -110,10 +102,10 @@ abstract class XotBaseMigration extends Migration
                     // Ignora errori di connessione
                 }
             }
-            
+
             return;
         }
-        
+
         Schema::connection($connection)->table($this->table, $callback);
         $this->outputSuccess("Table [{$this->table}] updated successfully on connection [{$connection}]");
     }
@@ -128,7 +120,7 @@ abstract class XotBaseMigration extends Migration
     protected function updateTimestamps(Blueprint $table, bool $softDeletes = false): void
     {
         $table->timestamps();
-        
+
         if ($softDeletes) {
             $table->softDeletes();
         }
@@ -155,10 +147,10 @@ abstract class XotBaseMigration extends Migration
     protected function hasIndex(string $index): bool
     {
         $connection = $this->getConnection();
-        
+
         $indexes = DB::connection($connection)
             ->select("SHOW INDEX FROM {$this->table} WHERE Key_name = '{$index}'");
-            
+
         return count($indexes) > 0;
     }
 

@@ -423,8 +423,5 @@ Dopo ogni restart, esegui la checklist sopra per evitare errori ricorrenti.
 - [Checklist di ripartenza](./checklist-di-ripartenza.md)
 
 ---
-<<<<<<< HEAD
-=======
 
 - [ ] Rispetta la [regola PSR-4 Namespace](./psr4-namespaces.md) per tutti i file in app/
->>>>>>> 155e791 (.)

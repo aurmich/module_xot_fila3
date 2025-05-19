@@ -3,13 +3,10 @@ description:
 globs:
 alwaysApply: false
 ---
-<<<<<<< HEAD
 # Relazioni tra moduli
 
 ## Relazione utenti-team (doctor_team)
-- Vedi dettaglio in [User/docs/teams.mdc](mdc:../../User/docs/teams.mdc)
-
-**Struttura attuale:**
+- Vedi dettaglio in @User/docs/te attuale:**
 - id (PK, autoincrement)
 - user_id (string, 36)
 - team_id (string, 36)
@@ -23,7 +20,6 @@ alwaysApply: false
 ---
 
 Altre relazioni da documentare qui secondo le regole di progetto.
-=======
 # Regole generali sulle relazioni tra moduli
 
 ## Tabelle pivot e relazioni many-to-many
@@ -37,12 +33,5 @@ Le tabelle pivot devono:
 ## Esempio: relazione utenti-team
 
 Vedi la documentazione dettagliata in:
-- [Relazione utenti-team: tabella pivot doctor_team](../../User/docs/teams.mdc)
-
-## Collegamenti correlati
-- [Migrazioni del database](../../../docs/database-migrations.md)
-- [Pattern di ereditarietà dei modelli](../../../docs/model-inheritance-patterns.md)
-- [Gestione degli utenti](../../../docs/user-management.md)
-- [Gestione delle traduzioni](../../../docs/translation-management.md)
-- [Relazione utenti-team (User)](../../User/docs/teams.mdc)
->>>>>>> 155e791 (.)
+- @Relazione utenti-tearelati
+- @Migrazioni del databarientadutea
