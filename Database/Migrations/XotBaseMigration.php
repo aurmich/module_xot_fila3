@@ -27,7 +27,11 @@ abstract class XotBaseMigration extends Migration
      *
      * @var string|null
      */
+<<<<<<< HEAD
     protected ?string $connection = null;
+=======
+    protected $connection = null;
+>>>>>>> 155e791 (.)
 
     /**
      * Run the migrations.
@@ -48,7 +52,11 @@ abstract class XotBaseMigration extends Migration
      *
      * @return string
      */
+<<<<<<< HEAD
     protected function getConnection(): string
+=======
+    public function getConnection()
+>>>>>>> 155e791 (.)
     {
         return $this->connection ?? config('database.default');
     }
