@@ -204,4 +204,9 @@ abstract class XotBaseMigration extends Migration
         $output = app()->make(\Symfony\Component\Console\Output\OutputInterface::class);
         $output->writeln($message);
     }
+
+    protected function foreignIdFor(Blueprint $table, string $model)
+    {
+        return $table->foreignIdFor($model);
+    }
 }
