@@ -63,7 +63,11 @@ class XotServiceProvider extends XotBaseServiceProvider
         $this->registerConfig();
         //$this->registerExceptionHandlersRepository();
         //$this->extendExceptionHandler();
+<<<<<<< HEAD
         //$this->registerCommands();
+=======
+        $this->registerCommands();
+>>>>>>> a7dd3a3 (.)
     }
 
     public function registerProviders(): void

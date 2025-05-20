@@ -29,6 +29,7 @@
         "laravel/folio": "^1.1",
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         "laravel/framework": "^12.0",
 =======
         "laravel/framework": "^11.9",
@@ -36,6 +37,9 @@
 =======
         "laravel/framework": "^12.0",
 >>>>>>> ca9cba8 (.)
+=======
+        "laravel/framework": "^11.9",
+>>>>>>> a7dd3a3 (.)
         "laravel/pennant": "^1.11",
         "laravel/pulse": "^1.2",
         "livewire/livewire": "*",
@@ -63,6 +67,7 @@
     "require_comment": {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
         
@@ -70,6 +75,9 @@
 =======
 
 >>>>>>> ca9cba8 (.)
+=======
+        
+>>>>>>> a7dd3a3 (.)
         "laraxot/module_tenant_fila3": "*"
     },
     "require-dev": {
