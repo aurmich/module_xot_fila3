@@ -1,6 +1,89 @@
 # Modulo Xot
 
 ## Introduzione
+<<<<<<< Updated upstream
+=======
+Il modulo Xot è il modulo base che fornisce le classi e le funzionalità fondamentali per gli altri moduli. Gestisce l'integrazione con Filament, Livewire e Volt, fornendo una base solida per lo sviluppo di applicazioni modulari.
+
+## Indice
+
+### Architettura e Componenti Base
+- [Architecture](./architecture.md) - Architettura del modulo
+- [Base Classes](./base_classes.md) - Classi base
+- [Service Providers](./service_providers.md) - Provider di servizi
+- [Volt Folio Best Practices](./VOLT_FOLIO_BEST_PRACTICES.md) - Best practices per Volt e Folio
+- [Volt Folio Best Practices](./VOLT_FOLIO_BEST_PRACTICES.md) - Best practices per Volt e Folio
+
+- [Volt Folio Best Practices](./VOLT_FOLIO_BEST_PRACTICES.md) - Best practices per Volt e Folio
+- [Volt Folio Best Practices](./VOLT_FOLIO_BEST_PRACTICES.md) - Best practices per Volt e Foliob6f667c (.)
+
+- [Volt Folio Best Practices](./VOLT_FOLIO_BEST_PRACTICES.md) - Best practices per Volt e Folio
+- [Volt Folio Best Practices](./VOLT_FOLIO_BEST_PRACTICES.md) - Best practices per Volt e Foliob6f667c (.)
+
+### Filament
+- [Filament Integration](./filament_integration.md) - Integrazione con Filament
+- [Widgets](./widgets.md) - Sistema widget
+- [Resources](./resources.md) - Gestione risorse
+
+### Service Providers
+- [Provider Structure](./provider_structure.md) - Struttura provider
+- [Provider Traits](./provider_traits.md) - Trait per provider
+- [Provider Best Practices](./provider_best_practices.md) - Best practices
+
+### Testing e Quality
+- [Testing](./testing.md) - Testing e quality assurance
+- [Best Practices](./BEST-PRACTICES.md) - Linee guida generali
+- [Security](./security.md) - Sicurezza e hardening
+
+### Documentazione Tecnica
+- [Roadmap](./roadmap.md) - Piano di sviluppo futuro
+- [Bottlenecks](./bottlenecks.md) - Analisi performance e ottimizzazioni
+- [Module Structure](./MODULE_STRUCTURE.md) - Struttura moduli
+
+### Link Esterni
+- [Laravel Framework](https://laravel.com/docs/12.x)
+- [Filament Documentation](https://filamentphp.com/docs)
+- [Livewire Documentation](https://livewire.laravel.com/docs)
+
+## Note Importanti
+
+### Estensione Classi
+- Non estendere mai direttamente le classi di Filament
+- Utilizzare sempre le classi base di Xot con prefisso XotBase
+- Seguire le convenzioni di naming del modulo
+
+### Trait e Service Provider
+- I trait per i provider devono essere in `Providers/Traits/`
+- Seguire la struttura esistente per nuovi trait
+- Documentare sempre l'uso dei trait
+
+### Traduzioni
+- Utilizzare il LangServiceProvider per le traduzioni
+- Non usare ->label() direttamente
+- Struttura corretta: 'source' => ['label'=>'Sorgente']
+
+## Esempi
+
+### Service Provider
+```php
+use Xot\XotBaseServiceProvider;
+
+class CustomServiceProvider extends XotBaseServiceProvider
+{
+    // Implementazione
+}
+```
+
+### Widget Base
+```php
+use Xot\Filament\Widgets\XotBaseWidget;
+
+class CustomWidget extends XotBaseWidget
+{
+    // Implementazione
+}
+```
+>>>>>>> Stashed changes
 
 Il modulo Xot è il core del sistema, fornisce funzionalità base e componenti riutilizzabili per tutti gli altri moduli. Implementa pattern architetturali, gestione degli errori, e componenti UI comuni.
 
@@ -290,6 +373,10 @@ La configurazione di navigazione e la definizione della tabella sono centralizza
 
 ## Documentazione Filament
 - [Linee Guida per getInfolistSchema](./filament/INFOLIST_SCHEMA_GUIDELINES.md) - Guida completa per l'implementazione corretta del metodo getInfolistSchema, con focus sull'uso delle chiavi stringa negli array 
+<<<<<<< Updated upstream
+=======
+
+>>>>>>> Stashed changes
 
 ## Politica, Filosofia, Religione, Etica, Zen
 
@@ -322,6 +409,7 @@ Consulta le [best practices aggiornate](./providers/service_provider_best_practi
 ## Backlink
 - [Collegamento a docs/links.md della root](../../../../docs/links.md)
 - **Zen**: Semplicità, concentrazione sul presente, armonia e serenità nello sviluppo.
+<<<<<<< Updated upstream
 
 ## Errori Comuni e Soluzioni (Best Practice)
 
@@ -425,3 +513,5 @@ Dopo ogni restart, esegui la checklist sopra per evitare errori ricorrenti.
 ---
 
 - [ ] Rispetta la [regola PSR-4 Namespace](./psr4-namespaces.md) per tutti i file in app/
+=======
+>>>>>>> Stashed changes
