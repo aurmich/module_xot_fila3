@@ -198,9 +198,12 @@ Applicare la stessa regola per la registrazione delle traduzioni JSON.
 Vedi anche [registerBladeIcons.md](./registerBladeIcons.md) per la gestione centralizzata dei path.
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< Updated upstream
 =======
 >>>>>>> 1459d55 (.)
+=======
+>>>>>>> ca9cba8 (.)
 ## Console Commands: Religione, Politica, Filosofia, Zen
 
 ### Principio
@@ -233,7 +236,10 @@ $this->commands([
 > "Il miglior comando è quello che non devi mai registrare a mano."
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> Stashed changes
 =======
 >>>>>>> 1459d55 (.)
+=======
+>>>>>>> ca9cba8 (.)

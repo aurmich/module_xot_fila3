@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< Updated upstream
 =======
 >>>>>>> 1459d55 (.)
@@ -59,38 +60,57 @@ This document provides guidelines for using strict typing in PHP within a Larave
 <<<<<<< HEAD
 =======
 # PHP Strict Types Convention
+=======
+# PHP Strict Types in Laravel Modules
+>>>>>>> ca9cba8 (.)
 
-## Regola Generale
+## Overview
+This document provides guidelines for using strict typing in PHP within a Laravel module, ensuring type safety and reducing runtime errors.
 
-Tutti i file PHP del progetto che contengono logica di business DEVONO iniziare con la dichiarazione `declare(strict_types=1);` subito dopo il tag di apertura PHP.
+## Key Principles
+1. **Type Safety**: Strict typing enforces type checks at runtime, preventing unexpected type coercion.
+2. **Code Reliability**: Explicit type declarations improve code reliability and readability.
 
-### File che Richiedono strict_types
-- Controllers
-- Models
-- Actions
-- Services
-- Traits
-- Interfaces
-- Tests
-- Helpers
+## Implementation Guidelines
+### 1. Declare Strict Types
+- Always declare strict types at the top of every PHP file to enable strict type checking.
+  ```php
+  declare(strict_types=1);
+  ```
 
-### File che NON Richiedono strict_types
-- File di vista Blade (.blade.php)
-- File di configurazione (config/*.php)
-- File di routing (routes/*.php)
-- File di traduzione (lang/*.php)
+### 2. Function and Method Signatures
+- Use type hints for parameters and return types in all function and method declarations.
+  ```php
+  public function processData(string $input, int $count): array
+  {
+      // Process data
+      return [];
+  }
+  ```
 
-## Formato Corretto
+### 3. Nullable Types
+- Use nullable types when a parameter or return value can be null.
+  ```php
+  public function findItem(?int $id): ?Item
+  {
+      // Find item or return null
+      return null;
+  }
+  ```
 
-```php
-<?php
+## Common Issues and Fixes
+- **Missing Strict Declaration**: Ensure `declare(strict_types=1);` is at the top of every PHP file to avoid loose typing.
+- **Type Mismatch Errors**: Correct type mismatches by updating type hints or handling nullable cases appropriately.
 
-declare(strict_types=1);
+## Testing and Verification
+- Use static analysis tools like PHPStan to verify strict type adherence across the codebase.
+- Test edge cases with different data types to ensure strict typing behaves as expected.
 
-namespace Example;
-// ... resto del codice
-```
+## Documentation and Updates
+- Document any exceptions to strict typing rules in the relevant module's documentation folder.
+- Update this document if new strict typing features or practices are introduced in PHP.
 
+<<<<<<< HEAD
 ## Motivazione
 
 L'uso di `declare(strict_types=1);` offre diversi vantaggi:
@@ -137,3 +157,11 @@ L'utilizzo di `declare(strict_types=1)` è un requisito fondamentale per la comp
 >>>>>>> Stashed changes
 =======
 >>>>>>> 1459d55 (.)
+=======
+## Links to Related Documentation
+- [Code Quality](./CODE_QUALITY.md)
+- [PHPStan Implementation Guide](./PHPSTAN-IMPLEMENTATION-GUIDE.md)
+- [Naming Conventions](./NAMING-CONVENTIONS.md)
+- [Service Provider Best Practices](./SERVICE-PROVIDER-BEST-PRACTICES.md)
+- [Filament Best Practices](./FILAMENT-BEST-PRACTICES.md)
+>>>>>>> ca9cba8 (.)

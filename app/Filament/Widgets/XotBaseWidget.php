@@ -68,6 +68,7 @@ abstract class XotBaseWidget extends FilamentWidget implements HasForms
     protected static string $view;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< Updated upstream
 
 =======
@@ -76,6 +77,8 @@ abstract class XotBaseWidget extends FilamentWidget implements HasForms
     /*
 >>>>>>> Stashed changes
 =======
+=======
+>>>>>>> ca9cba8 (.)
 
     public array $listener = [
         'filters-updated' => 'filtersUpdated',
@@ -106,15 +109,20 @@ abstract class XotBaseWidget extends FilamentWidget implements HasForms
     {
         $this->form->fill();
 <<<<<<< HEAD
+<<<<<<< HEAD
     }    
 =======
     }
 >>>>>>> 1459d55 (.)
+=======
+    }
+>>>>>>> ca9cba8 (.)
     */
 
 
     abstract public function getFormSchema(): array;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
     /*
     final public function form(Form $form): Form
@@ -122,12 +130,17 @@ abstract class XotBaseWidget extends FilamentWidget implements HasForms
 
     public function form(Form $form): Form
 >>>>>>> 1459d55 (.)
+=======
+
+    public function form(Form $form): Form
+>>>>>>> ca9cba8 (.)
     {
         return $form
             ->schema($this->getFormSchema())
             //->columns(2)
             ->statePath('data');
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
     */
     
@@ -136,6 +149,11 @@ abstract class XotBaseWidget extends FilamentWidget implements HasForms
 
 
 >>>>>>> 1459d55 (.)
+=======
+
+
+
+>>>>>>> ca9cba8 (.)
      protected function getFormActions(): array
     {
         return [

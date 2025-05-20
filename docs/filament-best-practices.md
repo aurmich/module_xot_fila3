@@ -26,13 +26,17 @@ class MyResource extends \Modules\Xot\Filament\Resources\XotBaseResource {}
 - Se le traduzioni non vengono applicate, controllare la struttura dei file lang e l'assenza di ->label() hardcoded
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< Updated upstream
 =======
 >>>>>>> 1459d55 (.)
+=======
+>>>>>>> ca9cba8 (.)
 ## Collegamenti
 - [Filament Docs](https://filamentphp.com/docs)
 - [Best practices moduli riutilizzabili](../module-documentation-neutrality.md)
 - [Ereditarietà modelli](../model-inheritance-best-practices.md)
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 ### Problema: Form non visualizzato correttamente
@@ -115,6 +119,8 @@ Consulta l'esempio completo all'inizio di questo documento per una implementazio
 * [filament-best-practices.md](filament/filament-best-practices.md)
 
 ---
+=======
+>>>>>>> ca9cba8 (.)
 
 ## Collocazione dei metodi tabellari
 
