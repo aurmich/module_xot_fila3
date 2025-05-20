@@ -5,16 +5,20 @@ declare(strict_types=1);
 namespace Modules\Xot\Filament\Widgets;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 use Filament\Forms;
 use Filament\Forms\Form;
 use Illuminate\Support\Facades\Cache;
 use Filament\Forms\Contracts\HasForms;
 use Filament\Forms\Concerns\InteractsWithForms;
 use Filament\Widgets\WidgetConfiguration;
+=======
+>>>>>>> e79de528 (.)
 use Filament\Widgets\Widget as FilamentWidget;
-use Modules\Xot\Actions\View\GetViewByClassAction;
-use Filament\Widgets\Concerns\InteractsWithPageTable;
+use Illuminate\Support\Facades\Cache;
+use Filament\Widgets\WidgetConfiguration;
 use Filament\Widgets\Concerns\InteractsWithPageFilters;
+<<<<<<< HEAD
 use Filament\Actions\Action;
 =======
 use Filament\Widgets\Widget as FilamentWidget;
@@ -23,20 +27,25 @@ use Filament\Widgets\WidgetConfiguration;
 use Filament\Widgets\Concerns\InteractsWithPageFilters;
 use Modules\Xot\Actions\View\GetViewByClassAction;
 >>>>>>> 9d6070e (.)
+=======
+use Modules\Xot\Actions\View\GetViewByClassAction;
+>>>>>>> e79de528 (.)
 
 /**
  * @property bool $shouldRender
  *
  */
 <<<<<<< HEAD
+<<<<<<< HEAD
 abstract class XotBaseWidget extends FilamentWidget implements HasForms
+=======
+abstract class XotBaseWidget extends FilamentWidget
+>>>>>>> e79de528 (.)
 {
     use InteractsWithPageFilters;
-    //use InteractsWithPageTable;
-    use InteractsWithForms;
-
     public string $title = '';
     public string $icon = '';
+<<<<<<< HEAD
     protected int|string|array $columnSpan = 'full';
 =======
 abstract class XotBaseWidget extends FilamentWidget
@@ -45,6 +54,8 @@ abstract class XotBaseWidget extends FilamentWidget
     public string $title = '';
     public string $icon = '';
 >>>>>>> 9d6070e (.)
+=======
+>>>>>>> e79de528 (.)
     /**
      * The view that should be rendered for the widget.
      *
@@ -58,6 +69,7 @@ abstract class XotBaseWidget extends FilamentWidget
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     public array $listener = [
         'filters-updated' => 'filtersUpdated',
 
@@ -68,10 +80,13 @@ abstract class XotBaseWidget extends FilamentWidget
     /*
 =======
 >>>>>>> 9d6070e (.)
+=======
+>>>>>>> e79de528 (.)
     public function __construct()
     {
         //parent::__construct();//Cannot call constructor
         $view = app(GetViewByClassAction::class)->execute(static::class);
+<<<<<<< HEAD
 <<<<<<< HEAD
         if(view()->exists($view)){
             $this->view = $view;
@@ -113,6 +128,9 @@ abstract class XotBaseWidget extends FilamentWidget
 =======
         static::$view = $view;
 >>>>>>> 9d6070e (.)
+=======
+        static::$view = $view;
+>>>>>>> e79de528 (.)
 
     }
 }
