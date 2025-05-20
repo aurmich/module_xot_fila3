@@ -1,49 +1,39 @@
 <?php
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 return array (
   'actions' => 
   array (
     'authenticate' => 
     array (
-=======
-declare(strict_types=1);
-return array(
-  'actions' =>
-  array(
-    'authenticate' =>
-    array(
->>>>>>> 1691e12 (.)
       'label' => 'authenticate',
     ),
-    'login' =>
-    array(
+    'login' => 
+    array (
       'label' => 'login',
     ),
-    'request' =>
-    array(
+    'request' => 
+    array (
       'label' => 'request',
     ),
   ),
-  'fields' =>
-  array(
-    'email' =>
-    array(
+  'fields' => 
+  array (
+    'email' => 
+    array (
       'label' => 'email',
       'description' => 'email',
       'helper_text' => 'email',
       'placeholder' => 'email',
     ),
-    'password' =>
-    array(
+    'password' => 
+    array (
       'label' => 'password',
       'description' => 'password',
       'helper_text' => 'password',
       'placeholder' => 'password',
     ),
-    'remember' =>
-    array(
+    'remember' => 
+    array (
       'label' => 'remember',
       'description' => 'remember',
       'helper_text' => 'remember',
@@ -51,31 +41,3 @@ return array(
     ),
   ),
 );
-=======
-declare(strict_types=1);
-
-return [
-    'actions' => [
-        'authenticate' => [
-            'label' => 'authenticate',
-        ],
-        'login' => [
-            'label' => 'login',
-        ],
-        'request' => [
-            'label' => 'request',
-        ],
-    ],
-    'fields' => [
-        'email' => [
-            'label' => 'email',
-        ],
-        'password' => [
-            'label' => 'password',
-        ],
-        'remember' => [
-            'label' => 'remember',
-        ],
-    ],
-];
->>>>>>> 9d6070e (.)
