@@ -15,11 +15,6 @@ use Spatie\LaravelData\DataCollection;
 class ComponentFileData extends Data
 {
     public string $name;
-<<<<<<< HEAD
-    public string $class;
-    public ?string $module = null;
-    public ?string $path = null;
-=======
 
     public string $class;
 
@@ -27,15 +22,10 @@ class ComponentFileData extends Data
 
     public ?string $path = null;
 
->>>>>>> a7dd3a3 (.)
     public ?string $ns = null;
 
     public static function collection(EloquentCollection|Collection|array $data): DataCollection
     {
         return self::collect($data, DataCollection::class);
-<<<<<<< HEAD
-        
-=======
->>>>>>> a7dd3a3 (.)
     }
 }

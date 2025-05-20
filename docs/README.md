@@ -1,10 +1,7 @@
 # Modulo Xot
 
-<<<<<<< HEAD
-=======
 ### Versione HEAD
 
->>>>>>> a7dd3a3 (.)
 ## Introduzione
 Il modulo Xot è il modulo base che fornisce le classi e le funzionalità fondamentali per gli altri moduli. Gestisce l'integrazione con Filament, Livewire e Volt, fornendo una base solida per lo sviluppo di applicazioni modulari.
 
@@ -18,18 +15,7 @@ Il modulo Xot è il modulo base che fornisce le classi e le funzionalità fondam
 - [Volt Folio Best Practices](./VOLT_FOLIO_BEST_PRACTICES.md) - Best practices per Volt e Folio
 
 - [Volt Folio Best Practices](./VOLT_FOLIO_BEST_PRACTICES.md) - Best practices per Volt e Folio
-<<<<<<< HEAD
-- [Volt Folio Best Practices](./VOLT_FOLIO_BEST_PRACTICES.md) - Best practices per Volt e Folio
-- [Volt Folio Best Practices](./VOLT_FOLIO_BEST_PRACTICES.md) - Best practices per Volt e Folio
-- [Volt Folio Best Practices](./VOLT_FOLIO_BEST_PRACTICES.md) - Best practices per Volt e Folio 
-### Filament
-- [Filament Integration](./filament_integration.md) - Integrazione con Filament
-- [Widgets](./widgets.md) - Sistema widget
-- [Resources](./resources.md) - Gestione risorse
-## Componenti Principali
-=======
 - [Volt Folio Best Practices](./VOLT_FOLIO_BEST_PRACTICES.md) - Best practices per Volt e Foliob6f667c (.)
->>>>>>> a7dd3a3 (.)
 
 - [Volt Folio Best Practices](./VOLT_FOLIO_BEST_PRACTICES.md) - Best practices per Volt e Folio
 - [Volt Folio Best Practices](./VOLT_FOLIO_BEST_PRACTICES.md) - Best practices per Volt e Foliob6f667c (.)
@@ -66,13 +52,6 @@ Il modulo Xot è il modulo base che fornisce le classi e le funzionalità fondam
 - Utilizzare sempre le classi base di Xot con prefisso XotBase
 - Seguire le convenzioni di naming del modulo
 
-<<<<<<< HEAD
-## Risoluzione conflitti e standard
-- I file `app/Filament/Widgets/XotBaseWidget.php` e `docs/PHP-STRICT-TYPES.md` sono stati risolti manualmente mantenendo una sola versione coerente, PSR-12, strict_types e solo la logica effettiva.
-- Vedi anche: [PHP-STRICT-TYPES.md](./PHP-STRICT-TYPES.md)
-
-## Dependencies
-=======
 ### Trait e Service Provider
 - I trait per i provider devono essere in `Providers/Traits/`
 - Seguire la struttura esistente per nuovi trait
@@ -106,7 +85,6 @@ class CustomWidget extends XotBaseWidget
 ```
 
 ## Dipendenze
->>>>>>> a7dd3a3 (.)
 - Laravel Framework
 - Filament
 - Livewire
@@ -411,11 +389,6 @@ Il modulo Xot è il cuore dell'architettura modulare del sistema. Fornisce le fu
 - [Architettura Generale](/docs/ARCHITECTURE.md)
 - [Documentazione Tecnica](/docs/TECHNICAL.md)
 
-<<<<<<< HEAD
-## Documentazione Filament
-- [Linee Guida per getInfolistSchema](./filament/INFOLIST_SCHEMA_GUIDELINES.md) - Guida completa per l'implementazione corretta del metodo getInfolistSchema, con focus sull'uso delle chiavi stringa negli array 
-
-=======
 ## Panoramica
 Il modulo Xot fornisce le funzionalità base e le utilities utilizzate da tutti gli altri moduli dell'applicazione.
 
@@ -545,18 +518,13 @@ Il modulo è configurabile tramite:
 - [Linee Guida per getInfolistSchema](./filament/INFOLIST_SCHEMA_GUIDELINES.md) - Guida completa per l'implementazione corretta del metodo getInfolistSchema, con focus sull'uso delle chiavi stringa negli array 
 
 
->>>>>>> a7dd3a3 (.)
 ## Politica, Filosofia, Religione, Etica, Zen
 
 - **Politica**: Il modulo Xot promuove collaborazione, trasparenza e inclusività, senza discriminazioni.
 - **Filosofia**: Minimalismo, chiarezza, miglioramento continuo.
 - **Religione**: Laicità, rispetto di tutte le fedi, libertà di pensiero.
 - **Etica**: Onestà, rispetto, responsabilità, attenzione all'impatto sociale e ambientale.
-<<<<<<< HEAD
-- **Zen**: Semplicità, concentrazione sul presente, armonia e serenità nello sviluppo.
-=======
 - **Zen**: Semplicità, concentrazione sul presente, armonia e serenità nello sviluppo.b6f667c (.)
->>>>>>> a7dd3a3 (.)
 
 ## Service Provider: Decisione Architetturale (2025-05-13)
 
@@ -580,110 +548,4 @@ Consulta le [best practices aggiornate](./providers/service_provider_best_practi
 
 ## Backlink
 - [Collegamento a docs/links.md della root](../../../../docs/links.md)
-<<<<<<< HEAD
-
-## Errori Comuni e Soluzioni (Best Practice)
-
-1. **ValidationException custom**
-   - ✅ throw ValidationException::withMessages(['email' => ['Messaggio personalizzato']]);
-
-2. **Fallback enum/status**
-   - Usare metodo privato per fallback:
-   ```php
-   private function getDoctorRegistrationStatus(): string {
-       if (!class_exists(DoctorRegistrationStatus::class)) return 'pending';
-       try {
-           foreach (DoctorRegistrationStatus::cases() as $case) {
-               if (strtolower($case->name) === 'pending') return $case->value;
-           }
-           return 'pending';
-       } catch (\Exception $e) { return 'pending'; }
-   }
-   ```
-
-3. **Controllo su modello specializzato**
-   - ✅ Doctor::where('email', ...)
-
-## Checklist Generale
-- [ ] Namespace corretti
-- [ ] Ereditarietà STI
-- [ ] Proprietà deprecate rimosse
-- [ ] Error handling idiomatico
-- [ ] Fallback enum/status
-- [ ] Collegamenti bidirezionali
-- [ ] Test e validazione
-
-## Collegamenti
-- [Patient Errori e Soluzioni](../../Patient/docs/models.md)
-- [Patient Workflow](../../Patient/docs/doctor-registration-workflow.md)
-- [Error Handling Xot](./error-handling.md)
-
-# Errori di Validazione Custom
-
-Per errori custom nei form, usa sempre:
-
-```php
-throw \Illuminate\Validation\ValidationException::withMessages([
-    'campo' => ['Messaggio di errore personalizzato.'],
-]);
-```
-
-Vedi dettagli in [error-handling.md](./error-handling.md) e [Patient: errors/validation.md](../../Patient/docs/errors/validation.md)
-
-# Regola: Non duplicare trait già presenti nei modelli base
-
-Se un trait (es. HasFactory) è già presente in un modello base, **non aggiungerlo** nei modelli che lo estendono.
-
-Motivazione: evitare ridondanza, warning, confusione e problemi di override.
-
-# Checklist di Ripartenza (dopo restart)
-- Verifica che tutte le migration siano applicate nei moduli
-- Controlla che i trait NON siano duplicati nei modelli specializzati
-- Verifica la catena di ereditarietà nei modelli STI
-- Controlla che la documentazione sia aggiornata e neutra
-- Controlla i file chiave:
-  - [BaseUser.php](../User/app/Models/BaseUser.php)
-  - [User.php](../User/app/Models/User.php)
-  - [Doctor.php](../Patient/app/Models/Doctor.php)
-  - [DoctorResource.php](../Patient/app/Filament/Resources/DoctorResource.php)
-  - [RegisterAction.php](../Patient/app/Actions/RegisterAction.php)
-  - [RegistrationWidget.php](../User/app/Filament/Widgets/RegistrationWidget.php)
-- Consulta le sezioni:
-  - [Error Handling](error-handling.md)
-  - [Best Practices](best-practices/README.md)
-  - [Ereditarietà](standards/README.md)
-  - [Migrazioni](../Patient/docs/database/migrations.md)
-
-## Reminder
-- Documentazione sempre neutra e riutilizzabile
-- Aggiornare sempre la doc PRIMA di ogni modifica
-- Validazione custom solo con ValidationException::withMessages
-- Non duplicare trait già presenti nei modelli base
-
----
-
-Dopo ogni restart, esegui la checklist sopra per evitare errori ricorrenti.
-
-# AVVISO IMPORTANTE: Regole Fondamentali e Checklist di Ripartenza
-
-> **Prima di ogni sviluppo o dopo ogni riavvio:**
-> - Consulta la [checklist di ripartenza](./checklist-di-ripartenza.md) o la versione locale se presente
-> - Applica SEMPRE le [Filament Best Practices](./filament-best-practices.md)
-> - Ricorda: nessun riferimento a progetti/brand nelle doc dei moduli
-> - Non duplicare mai trait già presenti nei modelli base
-> - Usa solo ValidationException::withMessages per errori custom
-> - Aggiorna la doc PRIMA di ogni modifica
-> - Se trovi un warning o errore, aggiorna subito la doc e segnala la regola
-
-## Collegamenti rapidi
-- [Filament Best Practices](./filament-best-practices.md)
-- [Neutralità documentazione](./module-documentation-neutrality.md)
-- [Ereditarietà modelli](./model-inheritance-best-practices.md)
-- [Checklist di ripartenza](./checklist-di-ripartenza.md)
-
----
-
-- [ ] Rispetta la [regola PSR-4 Namespace](./psr4-namespaces.md) per tutti i file in app/
-=======
 - **Zen**: Semplicità, concentrazione sul presente, armonia e serenità nello sviluppo.
->>>>>>> a7dd3a3 (.)

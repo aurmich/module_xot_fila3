@@ -4,37 +4,31 @@ declare(strict_types=1);
 
 namespace Modules\Xot\Filament\Widgets;
 
-<<<<<<< HEAD
-use Filament\Widgets\Widget as FilamentWidget;
-=======
 use Filament\Forms;
 use Filament\Forms\Form;
 use Illuminate\Support\Facades\Cache;
->>>>>>> a7dd3a3 (.)
 use Filament\Forms\Contracts\HasForms;
 use Filament\Forms\Concerns\InteractsWithForms;
-use Filament\Widgets\Concerns\InteractsWithPageFilters;
+use Filament\Widgets\WidgetConfiguration;
+use Filament\Widgets\Widget as FilamentWidget;
 use Modules\Xot\Actions\View\GetViewByClassAction;
-use Filament\Forms\Form;
+use Filament\Widgets\Concerns\InteractsWithPageTable;
+use Filament\Widgets\Concerns\InteractsWithPageFilters;
 use Filament\Actions\Action;
 
 /**
  * @property bool $shouldRender
+ *
  */
 abstract class XotBaseWidget extends FilamentWidget implements HasForms
 {
     use InteractsWithPageFilters;
+    //use InteractsWithPageTable;
     use InteractsWithForms;
     
     public string $title = '';
     public string $icon = '';
     protected int|string|array $columnSpan = 'full';
-<<<<<<< HEAD
-
-    abstract public function getFormSchema(): array;
-
-    public function form(Form $form): Form
-=======
     /**
      * The view that should be rendered for the widget.
      *
@@ -76,20 +70,15 @@ abstract class XotBaseWidget extends FilamentWidget implements HasForms
 
     /*
     final public function form(Form $form): Form
->>>>>>> a7dd3a3 (.)
     {
         return $form
             ->schema($this->getFormSchema())
+            //->columns(2)
             ->statePath('data');
     }
-<<<<<<< HEAD
-
-    protected function getFormActions(): array
-=======
     */
     
      protected function getFormActions(): array
->>>>>>> a7dd3a3 (.)
     {
         return [
             Action::make('save')
@@ -100,10 +89,6 @@ abstract class XotBaseWidget extends FilamentWidget implements HasForms
 
     public function save(): void
     {
-<<<<<<< HEAD
-        // Implementazione salvataggio
-=======
 
->>>>>>> a7dd3a3 (.)
     }
 }

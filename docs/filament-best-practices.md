@@ -599,13 +599,6 @@ public static function table(Table $table): Table
 
 ## Troubleshooting
 
-<<<<<<< HEAD
-## Collegamenti
-- [Filament Docs](https://filamentphp.com/docs)
-- [Best practices moduli riutilizzabili](../module-documentation-neutrality.md)
-- [Ereditarietà modelli](../model-inheritance-best-practices.md)
-=======
->>>>>>> a7dd3a3 (.)
 ### Problema: Form non visualizzato correttamente
 
 **Soluzione:** Assicurarsi di utilizzare `getFormSchema()` invece di `form()` e controllare che tutti i componenti siano configurati correttamente.
@@ -686,11 +679,6 @@ Consulta l'esempio completo all'inizio di questo documento per una implementazio
 * [filament-best-practices.md](filament/filament-best-practices.md)
 
 ---
-<<<<<<< HEAD
-=======
->>>>>>> ca9cba8 (.)
-=======
->>>>>>> a7dd3a3 (.)
 
 ## Collocazione dei metodi tabellari
 
@@ -731,11 +719,5 @@ Aggiornare sempre la documentazione e le regole di progetto. Applicare la stessa
 
 **Vedi anche:**
 - [Best Practices Filament per il modulo Performance](../../Performance/docs/filament.md)
-<<<<<<< HEAD
->>>>>>> Stashed changes
-=======
->>>>>>> 1459d55 (.)
-=======
->>>>>>> a7dd3a3 (.)
 
 

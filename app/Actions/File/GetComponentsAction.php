@@ -38,10 +38,6 @@ class GetComponentsAction
         }
 
         $exists = File::exists($components_json);
-<<<<<<< HEAD
-        
-=======
->>>>>>> a7dd3a3 (.)
         if ($exists && ! $force_recreate) {
             Assert::string($content = File::get($components_json), '['.__LINE__.']['.class_basename(static::class).']');
             $comps = json_decode($content, false);
@@ -50,10 +46,6 @@ class GetComponentsAction
             }
             return ComponentFileData::collection($comps);
         }
-<<<<<<< HEAD
-        
-=======
->>>>>>> a7dd3a3 (.)
 
         $files = File::allFiles($path);
         $comps = [];
@@ -100,10 +92,6 @@ class GetComponentsAction
                 ])->toArray();
 
             } catch (\Exception $e) {
-<<<<<<< HEAD
-                
-=======
->>>>>>> a7dd3a3 (.)
                 dddx([
                     'comp_name' => $comp_name,
                     'class_name' => $class_name,
@@ -113,10 +101,6 @@ class GetComponentsAction
                     'prefix' => $prefix,
                     'message' => $e->getMessage(),
                 ]);
-<<<<<<< HEAD
-                
-=======
->>>>>>> a7dd3a3 (.)
             }
         }
 
