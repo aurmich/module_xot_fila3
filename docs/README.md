@@ -1,13 +1,7 @@
 # Modulo Xot
 
 ## Introduzione
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< Updated upstream
-=======
 Il modulo Xot è il modulo base che fornisce le classi e le funzionalità fondamentali per gli altri moduli. Gestisce l'integrazione con Filament, Livewire e Volt, fornendo una base solida per lo sviluppo di applicazioni modulari.
-=======
->>>>>>> ca9cba8 (.)
 
 Il modulo Xot è il core del sistema, fornisce funzionalità base e componenti riutilizzabili per tutti gli altri moduli. Implementa pattern architetturali, gestione degli errori, e componenti UI comuni.
 
@@ -19,97 +13,14 @@ Il modulo Xot è il core del sistema, fornisce funzionalità base e componenti r
 - [RegisterAction.php](../Patient/app/Actions/RegisterAction.php)
 - [RegistrationWidget.php](../User/app/Filament/Widgets/RegistrationWidget.php)
 
-<<<<<<< HEAD
 - [Volt Folio Best Practices](./VOLT_FOLIO_BEST_PRACTICES.md) - Best practices per Volt e Folio
-- [Volt Folio Best Practices](./VOLT_FOLIO_BEST_PRACTICES.md) - Best practices per Volt e Foliob6f667c (.)
-
 - [Volt Folio Best Practices](./VOLT_FOLIO_BEST_PRACTICES.md) - Best practices per Volt e Folio
-- [Volt Folio Best Practices](./VOLT_FOLIO_BEST_PRACTICES.md) - Best practices per Volt e Foliob6f667c (.)
-
+- [Volt Folio Best Practices](./VOLT_FOLIO_BEST_PRACTICES.md) - Best practices per Volt e Folio
+- [Volt Folio Best Practices](./VOLT_FOLIO_BEST_PRACTICES.md) - Best practices per Volt e Folio 
 ### Filament
 - [Filament Integration](./filament_integration.md) - Integrazione con Filament
 - [Widgets](./widgets.md) - Sistema widget
 - [Resources](./resources.md) - Gestione risorse
-=======
-## Componenti Principali
->>>>>>> ca9cba8 (.)
-
-### 1. Base Classes
-- `BaseModel`: Classe base per tutti i modelli
-- `BaseController`: Controller base con funzionalità comuni
-- `BaseService`: Service layer base
-- `BaseRepository`: Repository pattern base
-
-### 2. Traits
-- `HasUuid`: Generazione UUID per i modelli
-- `HasSlug`: Gestione slug automatica
-- `HasStatus`: Gestione stati dei modelli
-- `HasTimestamps`: Gestione timestamp estesa
-
-### 3. Interfaces
-- `RepositoryInterface`: Contratto base per i repository
-- `ServiceInterface`: Contratto base per i service
-- `ActionInterface`: Contratto base per le actions
-
-### 4. Exceptions
-- `BaseException`: Classe base per le eccezioni
-- `ValidationException`: Gestione errori di validazione
-- `NotFoundException`: Gestione risorse non trovate
-- `AuthorizationException`: Gestione errori di autorizzazione
-
-## Best Practices
-
-### 1. Ereditarietà
-- Estendere sempre le classi base appropriate
-- Implementare le interfacce richieste
-- Usare i trait forniti quando necessario
-
-### 2. Error Handling
-- Usare le eccezioni custom fornite
-- Implementare logging appropriato
-- Gestire gli errori in modo consistente
-
-### 3. Validation
-- Usare le regole di validazione base
-- Estendere le regole quando necessario
-- Mantenere la validazione consistente
-
-<<<<<<< HEAD
-## Esempi
-
-### Service Provider
-```php
-use Xot\XotBaseServiceProvider;
-
-class CustomServiceProvider extends XotBaseServiceProvider
-{
-    // Implementazione
-}
-```
-
-### Widget Base
-```php
-use Xot\Filament\Widgets\XotBaseWidget;
-
-class CustomWidget extends XotBaseWidget
-{
-    // Implementazione
-}
-```
->>>>>>> Stashed changes
-=======
->>>>>>> 1459d55 (.)
-
-Il modulo Xot è il core del sistema, fornisce funzionalità base e componenti riutilizzabili per tutti gli altri moduli. Implementa pattern architetturali, gestione degli errori, e componenti UI comuni.
-
-## File Chiave
-- [BaseUser.php](../User/app/Models/BaseUser.php)
-- [User.php](../User/app/Models/User.php)
-- [Doctor.php](../Patient/app/Models/Doctor.php)
-- [DoctorResource.php](../Patient/app/Filament/Resources/DoctorResource.php)
-- [RegisterAction.php](../Patient/app/Actions/RegisterAction.php)
-- [RegistrationWidget.php](../User/app/Filament/Widgets/RegistrationWidget.php)
-
 ## Componenti Principali
 
 ### 1. Base Classes
@@ -152,8 +63,10 @@ Il modulo Xot è il core del sistema, fornisce funzionalità base e componenti r
 - Estendere le regole quando necessario
 - Mantenere la validazione consistente
 
-=======
->>>>>>> ca9cba8 (.)
+## Risoluzione conflitti e standard
+- I file `app/Filament/Widgets/XotBaseWidget.php` e `docs/PHP-STRICT-TYPES.md` sono stati risolti manualmente mantenendo una sola versione coerente, PSR-12, strict_types e solo la logica effettiva.
+- Vedi anche: [PHP-STRICT-TYPES.md](./PHP-STRICT-TYPES.md)
+
 ## Dependencies
 - Laravel Framework
 - Filament
@@ -390,13 +303,6 @@ La configurazione di navigazione e la definizione della tabella sono centralizza
 
 ## Documentazione Filament
 - [Linee Guida per getInfolistSchema](./filament/INFOLIST_SCHEMA_GUIDELINES.md) - Guida completa per l'implementazione corretta del metodo getInfolistSchema, con focus sull'uso delle chiavi stringa negli array 
-<<<<<<< HEAD
-<<<<<<< Updated upstream
-=======
-
->>>>>>> Stashed changes
-=======
->>>>>>> 1459d55 (.)
 
 ## Politica, Filosofia, Religione, Etica, Zen
 
@@ -404,7 +310,7 @@ La configurazione di navigazione e la definizione della tabella sono centralizza
 - **Filosofia**: Minimalismo, chiarezza, miglioramento continuo.
 - **Religione**: Laicità, rispetto di tutte le fedi, libertà di pensiero.
 - **Etica**: Onestà, rispetto, responsabilità, attenzione all'impatto sociale e ambientale.
-- **Zen**: Semplicità, concentrazione sul presente, armonia e serenità nello sviluppo.b6f667c (.)
+- **Zen**: Semplicità, concentrazione sul presente, armonia e serenità nello sviluppo.
 
 ## Service Provider: Decisione Architetturale (2025-05-13)
 
@@ -428,14 +334,6 @@ Consulta le [best practices aggiornate](./providers/service_provider_best_practi
 
 ## Backlink
 - [Collegamento a docs/links.md della root](../../../../docs/links.md)
-- **Zen**: Semplicità, concentrazione sul presente, armonia e serenità nello sviluppo.
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< Updated upstream
-=======
->>>>>>> 1459d55 (.)
-=======
->>>>>>> ca9cba8 (.)
 
 ## Errori Comuni e Soluzioni (Best Practice)
 
@@ -539,11 +437,3 @@ Dopo ogni restart, esegui la checklist sopra per evitare errori ricorrenti.
 ---
 
 - [ ] Rispetta la [regola PSR-4 Namespace](./psr4-namespaces.md) per tutti i file in app/
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> Stashed changes
-=======
->>>>>>> 1459d55 (.)
-=======
->>>>>>> ca9cba8 (.)
