@@ -1,6 +1,7 @@
 # Modulo Xot
 
 ## Introduzione
+<<<<<<< HEAD
 <<<<<<< Updated upstream
 =======
 Il modulo Xot è il modulo base che fornisce le classi e le funzionalità fondamentali per gli altri moduli. Gestisce l'integrazione con Filament, Livewire e Volt, fornendo una base solida per lo sviluppo di applicazioni modulari.
@@ -84,6 +85,8 @@ class CustomWidget extends XotBaseWidget
 }
 ```
 >>>>>>> Stashed changes
+=======
+>>>>>>> 1459d55 (.)
 
 Il modulo Xot è il core del sistema, fornisce funzionalità base e componenti riutilizzabili per tutti gli altri moduli. Implementa pattern architetturali, gestione degli errori, e componenti UI comuni.
 
@@ -373,10 +376,13 @@ La configurazione di navigazione e la definizione della tabella sono centralizza
 
 ## Documentazione Filament
 - [Linee Guida per getInfolistSchema](./filament/INFOLIST_SCHEMA_GUIDELINES.md) - Guida completa per l'implementazione corretta del metodo getInfolistSchema, con focus sull'uso delle chiavi stringa negli array 
+<<<<<<< HEAD
 <<<<<<< Updated upstream
 =======
 
 >>>>>>> Stashed changes
+=======
+>>>>>>> 1459d55 (.)
 
 ## Politica, Filosofia, Religione, Etica, Zen
 
@@ -409,7 +415,10 @@ Consulta le [best practices aggiornate](./providers/service_provider_best_practi
 ## Backlink
 - [Collegamento a docs/links.md della root](../../../../docs/links.md)
 - **Zen**: Semplicità, concentrazione sul presente, armonia e serenità nello sviluppo.
+<<<<<<< HEAD
 <<<<<<< Updated upstream
+=======
+>>>>>>> 1459d55 (.)
 
 ## Errori Comuni e Soluzioni (Best Practice)
 
@@ -513,5 +522,8 @@ Dopo ogni restart, esegui la checklist sopra per evitare errori ricorrenti.
 ---
 
 - [ ] Rispetta la [regola PSR-4 Namespace](./psr4-namespaces.md) per tutti i file in app/
+<<<<<<< HEAD
 =======
 >>>>>>> Stashed changes
+=======
+>>>>>>> 1459d55 (.)

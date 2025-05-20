@@ -25,11 +25,15 @@ class MyResource extends \Modules\Xot\Filament\Resources\XotBaseResource {}
 - Se compare un errore di override di proprietà statiche, rimuovere la proprietà dal resource e centralizzare nella base
 - Se le traduzioni non vengono applicate, controllare la struttura dei file lang e l'assenza di ->label() hardcoded
 
+<<<<<<< HEAD
 <<<<<<< Updated upstream
+=======
+>>>>>>> 1459d55 (.)
 ## Collegamenti
 - [Filament Docs](https://filamentphp.com/docs)
 - [Best practices moduli riutilizzabili](../module-documentation-neutrality.md)
 - [Ereditarietà modelli](../model-inheritance-best-practices.md)
+<<<<<<< HEAD
 =======
 ### Problema: Form non visualizzato correttamente
 
@@ -152,5 +156,7 @@ Aggiornare sempre la documentazione e le regole di progetto. Applicare la stessa
 **Vedi anche:**
 - [Best Practices Filament per il modulo Performance](../../Performance/docs/filament.md)
 >>>>>>> Stashed changes
+=======
+>>>>>>> 1459d55 (.)
 
 

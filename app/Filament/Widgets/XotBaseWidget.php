@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Modules\Xot\Filament\Widgets;
 
+<<<<<<< HEAD
 use Filament\Widgets\Widget as FilamentWidget;
 use Illuminate\Support\Facades\Cache;
 <<<<<<< Updated upstream
@@ -14,11 +15,25 @@ use Filament\Forms\Concerns\InteractsWithForms;
 use Filament\Widgets\WidgetConfiguration;
 use Filament\Widgets\Concerns\InteractsWithPageFilters;
 use Modules\Xot\Actions\View\GetViewByClassAction;
+=======
+use Filament\Forms;
+use Filament\Forms\Form;
+use Illuminate\Support\Facades\Cache;
+use Filament\Forms\Contracts\HasForms;
+use Filament\Forms\Concerns\InteractsWithForms;
+use Filament\Widgets\WidgetConfiguration;
+use Filament\Widgets\Widget as FilamentWidget;
+use Modules\Xot\Actions\View\GetViewByClassAction;
+use Filament\Widgets\Concerns\InteractsWithPageTable;
+use Filament\Widgets\Concerns\InteractsWithPageFilters;
+use Filament\Actions\Action;
+>>>>>>> 1459d55 (.)
 
 /**
  * @property bool $shouldRender
  *
  */
+<<<<<<< HEAD
 abstract class XotBaseWidget extends FilamentWidget
 {
     use InteractsWithPageFilters;
@@ -30,6 +45,17 @@ abstract class XotBaseWidget extends FilamentWidget
 >>>>>>> Stashed changes
     public string $title = '';
     public string $icon = '';
+=======
+abstract class XotBaseWidget extends FilamentWidget implements HasForms
+{
+    use InteractsWithPageFilters;
+    //use InteractsWithPageTable;
+    use InteractsWithForms;
+
+    public string $title = '';
+    public string $icon = '';
+    protected int|string|array $columnSpan = 'full';
+>>>>>>> 1459d55 (.)
     /**
      * The view that should be rendered for the widget.
      *
@@ -41,6 +67,7 @@ abstract class XotBaseWidget extends FilamentWidget
      */
     protected static string $view;
 
+<<<<<<< HEAD
 <<<<<<< Updated upstream
 
 =======
@@ -48,13 +75,27 @@ abstract class XotBaseWidget extends FilamentWidget
 
     /*
 >>>>>>> Stashed changes
+=======
+
+    public array $listener = [
+        'filters-updated' => 'filtersUpdated',
+
+    ];
+
+    public ?array $data = [];
+
+    /*
+>>>>>>> 1459d55 (.)
     public function __construct()
     {
         //parent::__construct();//Cannot call constructor
         $view = app(GetViewByClassAction::class)->execute(static::class);
+<<<<<<< HEAD
 <<<<<<< Updated upstream
         static::$view = $view;
 =======
+=======
+>>>>>>> 1459d55 (.)
         if(view()->exists($view)){
             $this->view = $view;
         }
@@ -64,22 +105,37 @@ abstract class XotBaseWidget extends FilamentWidget
     public function mount(): void
     {
         $this->form->fill();
+<<<<<<< HEAD
     }    
+=======
+    }
+>>>>>>> 1459d55 (.)
     */
 
 
     abstract public function getFormSchema(): array;
 
+<<<<<<< HEAD
     /*
     final public function form(Form $form): Form
+=======
+
+    public function form(Form $form): Form
+>>>>>>> 1459d55 (.)
     {
         return $form
             ->schema($this->getFormSchema())
             //->columns(2)
             ->statePath('data');
     }
+<<<<<<< HEAD
     */
     
+=======
+
+
+
+>>>>>>> 1459d55 (.)
      protected function getFormActions(): array
     {
         return [
@@ -91,7 +147,10 @@ abstract class XotBaseWidget extends FilamentWidget
 
     public function save(): void
     {
+<<<<<<< HEAD
 >>>>>>> Stashed changes
+=======
+>>>>>>> 1459d55 (.)
 
     }
 }

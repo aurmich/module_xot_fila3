@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 <<<<<<< Updated upstream
+=======
+>>>>>>> 1459d55 (.)
 # PHP Strict Types in Laravel Modules
 
 ## Overview
@@ -53,6 +56,7 @@ This document provides guidelines for using strict typing in PHP within a Larave
 - [Naming Conventions](./NAMING-CONVENTIONS.md)
 - [Service Provider Best Practices](./SERVICE-PROVIDER-BEST-PRACTICES.md)
 - [Filament Best Practices](./FILAMENT-BEST-PRACTICES.md)
+<<<<<<< HEAD
 =======
 # PHP Strict Types Convention
 
@@ -131,3 +135,5 @@ L'utilizzo di `declare(strict_types=1)` è un requisito fondamentale per la comp
 - [Linee Guida PHPStan Livello 10](./PHPStan/LEVEL10_LINEE_GUIDA.md)
 - [Workflow PHPStan](./PHPSTAN_WORKFLOW.md)
 >>>>>>> Stashed changes
+=======
+>>>>>>> 1459d55 (.)
