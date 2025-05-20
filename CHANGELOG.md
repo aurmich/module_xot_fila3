@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Changelog
 
 Tutte le modifiche notevoli a questo modulo saranno documentate in questo file.
@@ -32,6 +33,8 @@ e questo progetto aderisce al [Semantic Versioning](https://semver.org/spec/v2.0
 - Classi base per Resources, RelationManager e Widget
 - Sistema di gestione delle traduzioni automatiche
 - Documentazione base del modulo
+=======
+>>>>>>> 9d6070e (.)
 # Changelog del Modulo Xot
 
 ## Versione Attuale (10/2023)

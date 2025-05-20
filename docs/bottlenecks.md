@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ### Versione HEAD
 
 # Colli di Bottiglia e Soluzioni - Modulo Xot
@@ -697,6 +698,8 @@ Implementando queste soluzioni, il modulo Xot potrà superare i principali colli
 
 ### Versione Incoming
 
+=======
+>>>>>>> 9d6070e (.)
 # Analisi dei Colli di Bottiglia - Modulo Xot
 
 ## Performance Critiche
@@ -820,7 +823,11 @@ Implementando queste soluzioni, il modulo Xot potrà superare i principali colli
 ### Lungo Termine
 1. Implementare microservizi per operazioni pesanti
 2. Ottimizzare l'architettura per scalabilità
+<<<<<<< HEAD
 3. Migliorare la gestione delle risorse distribuite 
 
 ---
 
+=======
+3. Migliorare la gestione delle risorse distribuite 
+>>>>>>> 9d6070e (.)

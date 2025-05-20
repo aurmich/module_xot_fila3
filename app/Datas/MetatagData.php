@@ -12,12 +12,19 @@ use Filament\Support\Colors\Color;
 use Modules\Xot\Actions\File\AssetAction;
 use Modules\Tenant\Services\TenantService;
 use Spatie\LaravelData\Concerns\WireableData;
+<<<<<<< HEAD
 use Spatie\LaravelData\Attributes\WithTransformer;
 use Modules\Xot\Datas\Transformers\AssetTransformer;
 
 /**
  * Class MetatagData
  *
+=======
+
+/**
+ * Class MetatagData
+ * 
+>>>>>>> 9d6070e (.)
  * @property string $title
  * @property string $sitename
  * @property string $subtitle
@@ -94,7 +101,10 @@ class MetatagData extends Data implements Wireable
     public string $logo_square = '';
 
     /** @var string */
+<<<<<<< HEAD
     #[WithTransformer(AssetTransformer::class)]
+=======
+>>>>>>> 9d6070e (.)
     public string $logo_header = '';
 
     /** @var string */
@@ -144,7 +154,11 @@ class MetatagData extends Data implements Wireable
 
     /** @var string */
     public string $favicon = '/favicon.ico';
+<<<<<<< HEAD
 
+=======
+    
+>>>>>>> 9d6070e (.)
     /**
      * @var array<string, array{key?: string, color: string, hex?: string}>
      */
@@ -172,6 +186,7 @@ class MetatagData extends Data implements Wireable
     }
 
     /**
+<<<<<<< HEAD
      * Get the brand name.
      * This method reflects the semantic purpose of getting the brand name,
      * which is the title of the page.
@@ -191,6 +206,13 @@ class MetatagData extends Data implements Wireable
      * @return string
      */
     public function getBrandLogo(): string
+=======
+     * Get the header logo URL.
+     *
+     * @return string
+     */
+    public function getLogoHeader(): string
+>>>>>>> 9d6070e (.)
     {
         try {
             /** @var string $path */
@@ -202,12 +224,20 @@ class MetatagData extends Data implements Wireable
     }
 
     /**
+<<<<<<< HEAD
      * Get the dark mode brand logo.
      * This method reflects the semantic purpose of getting the dark mode brand logo.
      *
      * @return string
      */
     public function getDarkModeBrandLogo(): string
+=======
+     * Get the dark header logo URL.
+     *
+     * @return string
+     */
+    public function getLogoHeaderDark(): string
+>>>>>>> 9d6070e (.)
     {
         try {
             /** @var string $path */
@@ -219,17 +249,26 @@ class MetatagData extends Data implements Wireable
     }
 
     /**
+<<<<<<< HEAD
      * Get the brand logo height.
      * This method reflects the semantic purpose of getting the brand logo height.
      *
      * @return string
      */
     public function getBrandLogoHeight(): string
+=======
+     * Get the logo height.
+     *
+     * @return string
+     */
+    public function getLogoHeight(): string
+>>>>>>> 9d6070e (.)
     {
         return $this->logo_height;
     }
 
     /**
+<<<<<<< HEAD
      * Get the theme colors.
      * This method reflects the semantic purpose of getting theme colors,
      * rather than exposing the raw color data structure.
@@ -320,6 +359,8 @@ class MetatagData extends Data implements Wireable
     }
 
     /**
+=======
+>>>>>>> 9d6070e (.)
      * Get the favicon URL.
      *
      * @return string
@@ -336,6 +377,7 @@ class MetatagData extends Data implements Wireable
     }
 
     /**
+<<<<<<< HEAD
      * @deprecated Use getThemeColors() instead as it better reflects the semantic purpose
      */
     public function getColors(): array
@@ -344,6 +386,8 @@ class MetatagData extends Data implements Wireable
     }
 
     /**
+=======
+>>>>>>> 9d6070e (.)
      * Get the default Filament colors configuration.
      *
      * @return array<string, array<int, string>>
@@ -365,6 +409,7 @@ class MetatagData extends Data implements Wireable
      *
      * @return array<string, array<int, string>>
      */
+<<<<<<< HEAD
     public function getAllColors(): array
     {
         return array_merge($this->getFilamentColors(), $this->colors);
@@ -503,5 +548,35 @@ class MetatagData extends Data implements Wireable
     public function getLogoHeight(): string
     {
         return $this->getBrandLogoHeight();
+=======
+    public function getColors(): array
+    {
+        if (empty($this->colors)) {
+            return $this->getFilamentColors();    
+        }
+
+        /** @var array<string, array<int, string>> $mapped */
+        $mapped = Arr::mapWithKeys(
+            $this->colors,
+            function (array $item, string|int $key): array {
+                $keyStr = isset($item['key']) 
+                    ? $item['key'] 
+                    : (string) $key;
+
+                /** @var array<int, string> $value */
+                $value = match (true) {
+                    $item['color'] === 'custom' && isset($item['hex']) 
+                        => Color::hex($item['hex']),
+                    isset(Color::all()[$item['color']]) 
+                        => Color::all()[$item['color']],
+                    default => Color::Gray,
+                };
+
+                return [$keyStr => $value];
+            }
+        );
+        
+        return $mapped;
+>>>>>>> 9d6070e (.)
     }
 }

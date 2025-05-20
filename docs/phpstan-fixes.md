@@ -1,9 +1,12 @@
+<<<<<<< HEAD
 
 
 =======
 
 5693302 (.)
 b6f667c (.)
+=======
+>>>>>>> 9d6070e (.)
 # Correzioni PHPStan nel Modulo Xot
 
 ## Correzioni Implementate
@@ -32,6 +35,7 @@ b6f667c (.)
 - ✅ Migliorata gestione delle eccezioni
 - ✅ Documentazione PHPDoc completa
 
+<<<<<<< HEAD
 ### Versione HEAD
 
 ### 5. ExportXlsByView (2023-03-21)
@@ -104,6 +108,8 @@ b6f667c (.)
 
 ---
 
+=======
+>>>>>>> 9d6070e (.)
 ## Best Practices
 
 ### 1. Gestione Tipi
@@ -117,6 +123,7 @@ public function execute(string $modelClass): AbstractSchemaManager
 {
     Assert::classExists($modelClass);
     Assert::subclassOf($modelClass, Model::class);
+<<<<<<< HEAD
 ### Versione HEAD
 
 aurmich/dev
@@ -231,16 +238,21 @@ aurmich/dev
 aurmich/dev
 5693302 (.)
 b6f667c (.)
+=======
+>>>>>>> 9d6070e (.)
     // ...
 }
 ```
 
+<<<<<<< HEAD
 
 
 =======
 
 5693302 (.)
 b6f667c (.)
+=======
+>>>>>>> 9d6070e (.)
 ### 2. Validazione Dati
 ```php
 /**
@@ -251,6 +263,7 @@ private function validateData(array $data): void
 {
     Assert::keyExists($data, 'required_field');
     Assert::string($data['required_field']);
+<<<<<<< HEAD
 ### Versione HEAD
 
 aurmich/dev
@@ -282,16 +295,21 @@ aurmich/dev
 aurmich/dev
 5693302 (.)
 b6f667c (.)
+=======
+>>>>>>> 9d6070e (.)
     // ...
 }
 ```
 
+<<<<<<< HEAD
 
 
 =======
 
 5693302 (.)
 b6f667c (.)
+=======
+>>>>>>> 9d6070e (.)
 ### 3. Gestione Relazioni
 ```php
 /**
@@ -384,6 +402,7 @@ public function execute(Model $model, array $data): array
 - ✅ Risolto: Implementato `getTableColumns()` e `getTableConfiguration()`
 
 ### 2. Metodo Final Override in UsersRelationManager
+<<<<<<< HEAD
 ### Versione HEAD
 
 - ❌ Errore: Cannot override final method `Modules\Xot\Filament\Resources\XotBaseResource\RelationManager\XotBaseRelationManager::form()`
@@ -403,6 +422,9 @@ public function execute(Model $model, array $data): array
 
 ---
 
+=======
+- ❌ Errore: Cannot override final method `Modules\Xot\Filament\Resources\XotBaseResource\RelationManager\XotBaseRelationManager::form()`
+>>>>>>> 9d6070e (.)
 - 📍 Posizione: `Modules/User/app/Filament/Resources/TeamResource/RelationManagers/UsersRelationManager.php:21`
 - 🔧 Soluzione necessaria:
   - Rimuovere l'override del metodo `form()`
@@ -410,6 +432,7 @@ public function execute(Model $model, array $data): array
   - Implementare la logica corretta per la gestione delle relazioni
 
 ### 3. Metodo Final Override in DomainsRelationManager
+<<<<<<< HEAD
 ### Versione HEAD
 
 - ❌ Errore: Cannot override final method `Modules\Xot\Filament\Resources\XotBaseResource\RelationManager\XotBaseRelationManager::form()`
@@ -429,6 +452,9 @@ public function execute(Model $model, array $data): array
 
 ---
 
+=======
+- ❌ Errore: Cannot override final method `Modules\Xot\Filament\Resources\XotBaseResource\RelationManager\XotBaseRelationManager::form()`
+>>>>>>> 9d6070e (.)
 - 📍 Posizione: `Modules/User/app/Filament/Resources/TenantResource/RelationManagers/DomainsRelationManager.php:20`
 - 🔧 Soluzione necessaria:
   - Rimuovere l'override del metodo `form()`
@@ -481,6 +507,7 @@ public function execute(Model $model, array $data): array
 
 3. **Azioni e Validazione**
    ```php
+<<<<<<< HEAD
 ### Versione HEAD
 
    public function getTableActions(): array
@@ -491,6 +518,9 @@ public function execute(Model $model, array $data): array
 
 ---
 
+=======
+   protected function getTableActions(): array
+>>>>>>> 9d6070e (.)
    {
        return [
            Tables\Actions\EditAction::make()
@@ -526,6 +556,7 @@ Best Practices:
 - Utilizzare i metodi previsti per la personalizzazione invece di sovrascrivere metodi final
 - Mantenere la coerenza nella struttura dei form tra i vari RelationManager
 - Validare i dati utilizzando le regole di validazione di Laravel
+<<<<<<< HEAD
 ### Versione HEAD
 
 
@@ -783,3 +814,6 @@ aurmich/dev
 aurmich/dev
 5693302 (.)
 b6f667c (.)
+=======
+- Documentare le personalizzazioni nel codice 
+>>>>>>> 9d6070e (.)

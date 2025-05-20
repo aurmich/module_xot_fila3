@@ -10,6 +10,7 @@ section: content
 Modulo principale con cui si può utilizzare la struttura multitenant del progetto.
 Senza di esso tutta l'organizzazione della struttura della base su cui si lavora non può funzionare.
 
+<<<<<<< HEAD
 ### Versione HEAD
 
 E' la libreria di estensione di tutte le altre librerie.
@@ -25,3 +26,6 @@ E' la libreria di estensione di tutte le altre librerie.
 
 ---
 
+=======
+E' la libreria di estensione di tutte le altre librerie.
+>>>>>>> 9d6070e (.)

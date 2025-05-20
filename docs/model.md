@@ -5,6 +5,7 @@ extends: _layouts.documentation
 section: content
 ---
 
+<<<<<<< HEAD
 ### Versione HEAD
 
 # Model Queuable Actions
@@ -19,3 +20,6 @@ section: content
 
 ---
 
+=======
+# Model Queuable Actions
+>>>>>>> 9d6070e (.)

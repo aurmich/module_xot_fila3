@@ -27,17 +27,26 @@ abstract class XotBaseListRecords extends FilamentListRecords
 {
     use HasXotTable;
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 9d6070e (.)
     /**
      * Get the table columns.
      *
      * @return array<string, Tables\Columns\Column>
      */
+<<<<<<< HEAD
     public function getTableColumns(): array
     {
         return [];
     }
 
     
+=======
+    abstract public function getListTableColumns(): array;
+
+>>>>>>> 9d6070e (.)
     /**
      * Get the default sort column and direction.
      *
@@ -79,6 +88,7 @@ abstract class XotBaseListRecords extends FilamentListRecords
      */
     protected function paginateTableQuery(Builder $query): Paginator
     {
+<<<<<<< HEAD
         return $query->fastPaginate(
             ('all' === $this->getTableRecordsPerPage()) 
             ? $query->count() 
@@ -87,3 +97,29 @@ abstract class XotBaseListRecords extends FilamentListRecords
     }
 }
 
+=======
+        $perPage = $this->getTableRecordsPerPage();
+
+        if ('all' === $perPage) {
+            $count = $query->count();
+
+            /* @var \Illuminate\Contracts\Pagination\Paginator */
+            Assert::isInstanceOf($res = $query->fastPaginate($count), Paginator::class);
+            return $res;
+        }
+
+        if (is_numeric($perPage)) {
+            $perPageInt = (int) $perPage;
+            Assert::greaterThan($perPageInt, 0);
+
+            /* @var \Illuminate\Contracts\Pagination\Paginator */
+            Assert::isInstanceOf($res = $query->fastPaginate($perPageInt), Paginator::class);
+            return $res;
+        }
+
+        /* @var \Illuminate\Contracts\Pagination\Paginator */
+        Assert::isInstanceOf($res = $query->fastPaginate(10), Paginator::class);
+        return $res;
+    }
+}
+>>>>>>> 9d6070e (.)

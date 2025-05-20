@@ -1,5 +1,6 @@
 # Classi Base del Modulo Xot
 
+<<<<<<< HEAD
 ### Versione HEAD
 
 ## Panoramica
@@ -116,6 +117,8 @@ class XotBaseEditRecord
 
 ---
 
+=======
+>>>>>>> 9d6070e (.)
 ## XotBaseResource
 
 Classe base per tutte le risorse Filament dell'applicazione.
@@ -255,6 +258,7 @@ class PolizzaConvenzioneController extends XotBaseController
 - Gestione autorizzazioni integrata
 - Metodi di utilità comuni
 - Gestione errori standardizzata
+<<<<<<< HEAD
 ### Versione HEAD
 
 - Risposte JSON predefinite 
@@ -264,6 +268,8 @@ class PolizzaConvenzioneController extends XotBaseController
 
 ---
 
+=======
+>>>>>>> 9d6070e (.)
 - Risposte JSON predefinite
 
 ## Best Practices
@@ -286,6 +292,7 @@ class PolizzaConvenzioneController extends XotBaseController
 4. **Personalizzazione**
    - Estendere le funzionalità tramite trait
    - Mantenere la retrocompatibilità
+<<<<<<< HEAD
 ### Versione HEAD
 
    - Documentare le modifiche significative 
@@ -300,3 +307,6 @@ class PolizzaConvenzioneController extends XotBaseController
 
 ---
 
+=======
+   - Documentare le modifiche significative 
+>>>>>>> 9d6070e (.)

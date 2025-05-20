@@ -24,6 +24,7 @@ https://github.com/jigar-dhulla/exchange-rate
 
 
 
+<<<<<<< HEAD
 ### Versione HEAD
 
 
@@ -45,3 +46,5 @@ https://github.com/jigar-dhulla/exchange-rate
 
 ---
 
+=======
+>>>>>>> 9d6070e (.)
