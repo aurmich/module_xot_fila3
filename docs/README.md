@@ -31,7 +31,11 @@ Il modulo Xot è il modulo base che fornisce le classi e le funzionalità fondam
 - [Provider Best Practices](./provider_best_practices.md) - Best practices
 
 ### Testing e Quality
+<<<<<<< HEAD
 - [Testing](./testing.md) - Testing e quality assurance
+=======
+- [Testing](./testing.md) - Testing e quality assurance (usare Pest come test runner)
+>>>>>>> 9558171f (.)
 - [Best Practices](./BEST-PRACTICES.md) - Linee guida generali
 - [Security](./security.md) - Sicurezza e hardening
 
@@ -292,7 +296,12 @@ class User extends XotBaseModel { ... }
 1. Clona il repository
 2. Installa le dipendenze
 3. Configura l'ambiente
-4. Esegui i test
+4. Esegui i test con Pest:
+   ```bash
+   pest
+   ```
+
+> Tutti i nuovi test devono essere scritti con [Pest](https://pestphp.com/). Non usare più PHPUnit direttamente.
 
 ### Convenzioni di Codice
 - Seguire PSR-12
@@ -549,3 +558,49 @@ Consulta le [best practices aggiornate](./providers/service_provider_best_practi
 ## Backlink
 - [Collegamento a docs/links.md della root](../../../../docs/links.md)
 - **Zen**: Semplicità, concentrazione sul presente, armonia e serenità nello sviluppo.
+<<<<<<< HEAD
+=======
+
+## Regole Generali: Eventi e Spatie Laravel Data
+
+- **Pattern consigliato**: Passare agli eventi oggetti che estendono [Spatie Laravel Data](https://spatie.be/docs/laravel-data/v4/introduction) invece di array o primitive.
+- **Motivazione**: Garantisce type safety, validazione automatica, serializzazione robusta e coerenza tra eventi, actions, projectors e aggregates.
+- **Esempio**:
+  ```php
+  use Modules\Predict\Datas\BetPlacedData;
+  use Spatie\EventSourcing\StoredEvents\ShouldBeStored;
+
+  class BetPlaced extends ShouldBeStored
+  {
+      public function __construct(
+          public BetPlacedData $data
+      ) {}
+  }
+  ```
+- **Anti-pattern**: Passare array associativi o primitive agli eventi (es: `new BetPlaced(['user_id' => 1, ...])`).
+- **Collegamento**: Vedi anche la sezione corrispondente in Predict: [Pattern e Anti-pattern: Eventi e Spatie Laravel Data](../../Predict/docs/README.md#pattern-e-anti-pattern-eventi-e-spatie-laravel-data)
+
+## Regole Generali: Struttura Cartelle, Aggregates, Projectors, Namespace
+
+- **Tutte le classi di dominio di un modulo vanno sempre in `app/`**. Non usare mai `Domain/` né `App/` nel namespace.
+- **Aggregates**: sempre in `app/Aggregates/`.
+- **Projectors**: sempre in `app/Projectors/`.
+- **Listeners**: NON vanno usati se si usano gli Aggregates di Spatie Event Sourcing.
+- **Mai creare la cartella `Domain` nei moduli**.
+- **Il namespace corretto è sempre `Modules\<NomeModulo>\<Sottocartella>`**.
+- **Pattern e anti-pattern**: documentare sempre pattern corretti e errori comuni, sia qui che nella docs del modulo coinvolto.
+- **Ogni bugfix va documentato**:
+  - Contesto (versione, ambiente, condizioni di trigger)
+  - Test di regressione
+  - Commit message standardizzato (es: `fix(predict): descrizione breve`)
+  - Categorizzazione per area problematica
+- **Collegamento bidirezionale**: vedi anche la sezione [Pattern e Anti-pattern: Struttura Cartelle, Aggregates, Projectors](../../Predict/docs/README.md#pattern-e-anti-pattern-struttura-cartelle-aggregates-projectors) nella docs di Predict.
+- **Per la gestione dei dati negli eventi, vedi anche la sezione [Regole Generali: Eventi e Spatie Laravel Data](#regole-generali-eventi-e-spatie-laravel-data)**
+
+## Requisiti
+
+- PHP 8.2+
+- Laravel 12.x
+- Estensioni PHP: PDO, JSON, cURL
+- Database: MySQL 8.0+ o PostgreSQL 13+
+>>>>>>> 9558171f (.)
