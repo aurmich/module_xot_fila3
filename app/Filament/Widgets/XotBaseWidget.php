@@ -69,9 +69,12 @@ abstract class XotBaseWidget extends FilamentWidget implements HasForms
     abstract public function getFormSchema(): array;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     /*
     final public function form(Form $form): Form
 =======
+=======
+>>>>>>> 2e607732 (.)
     /**
      *  Cannot override final method Modules\Xot\Filament\Widgets\XotBaseWidget::form()
      * percio' non finalize, se togli la funzione form non funziona
@@ -85,10 +88,14 @@ abstract class XotBaseWidget extends FilamentWidget implements HasForms
             ->statePath('data');
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
     */
 =======
     
 >>>>>>> 9558171f (.)
+=======
+    
+>>>>>>> 2e607732 (.)
     
      protected function getFormActions(): array
     {

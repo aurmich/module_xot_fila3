@@ -32,10 +32,14 @@ Il modulo Xot è il modulo base che fornisce le classi e le funzionalità fondam
 
 ### Testing e Quality
 <<<<<<< HEAD
+<<<<<<< HEAD
 - [Testing](./testing.md) - Testing e quality assurance
 =======
 - [Testing](./testing.md) - Testing e quality assurance (usare Pest come test runner)
 >>>>>>> 9558171f (.)
+=======
+- [Testing](./testing.md) - Testing e quality assurance (usare Pest come test runner)
+>>>>>>> 2e607732 (.)
 - [Best Practices](./BEST-PRACTICES.md) - Linee guida generali
 - [Security](./security.md) - Sicurezza e hardening
 
@@ -603,4 +607,7 @@ Consulta le [best practices aggiornate](./providers/service_provider_best_practi
 - Laravel 12.x
 - Estensioni PHP: PDO, JSON, cURL
 - Database: MySQL 8.0+ o PostgreSQL 13+
+<<<<<<< HEAD
 >>>>>>> 9558171f (.)
+=======
+>>>>>>> 2e607732 (.)
