@@ -31,6 +31,7 @@ Applica le configurazioni metatag al pannello Filament.
 ## Note sulla Correzione
 La correzione dell'errore PHPStan richiede la modifica del metodo chiamato da `getColors()` a `getFilamentColors()`. Questo metodo è specificamente progettato per restituire i colori nel formato richiesto da Filament.
 
+<<<<<<< HEAD
 ## Migrazione brandLogo
 Quando si configura il logo del brand, sostituire la chiamata deprecata:
 ```php
@@ -55,3 +56,9 @@ con la nuova:
 
 ## Collegamenti tra versioni di applymetatagtopanelaction.md
 * [applymetatagtopanelaction.md](../applymetatagtopanelaction.md)
+=======
+## Collegamenti
+- [MetatagData](../../datas/MetatagData.md)
+- [Filament Best Practices](../../FILAMENT-BEST-PRACTICES.md)
+- [PHPStan Common Exceptions](../../PHPSTAN-COMMON-EXCEPTIONS.md) 
+>>>>>>> acf93c4 (.)

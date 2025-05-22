@@ -23,6 +23,10 @@ return array (
       'label' => 'email',
       'description' => 'email',
       'helper_text' => 'email',
+<<<<<<< HEAD
+=======
+      'placeholder' => 'email',
+>>>>>>> acf93c4 (.)
     ),
     'password' => 
     array (

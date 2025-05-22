@@ -1,7 +1,11 @@
 # XotBaseServiceProvider
 
 ## Descrizione
+<<<<<<< HEAD
 `XotBaseServiceProvider` è una classe astratta che fornisce l'implementazione base per i Service Provider di tutti i moduli in il progetto. Estende `Illuminate\Support\ServiceProvider` e implementa funzionalità comuni per la registrazione di componenti, traduzioni, configurazioni e altro.
+=======
+`XotBaseServiceProvider` è una classe astratta che fornisce l'implementazione base per i Service Provider di tutti i moduli . Estende `Illuminate\Support\ServiceProvider` e implementa funzionalità comuni per la registrazione di componenti, traduzioni, configurazioni e altro.
+>>>>>>> acf93c4 (.)
 
 ## Caratteristiche Principali
 
@@ -20,13 +24,20 @@ protected string $module_ns = __NAMESPACE__; // Namespace del modulo
 public function boot(): void
 {
     $this->registerTranslations();
+<<<<<<< HEAD
     // $this->registerConfig(); // to register
+=======
+    $this->registerConfig();
+>>>>>>> acf93c4 (.)
     $this->registerViews();
     $this->loadMigrationsFrom($this->module_dir.'/../Database/Migrations');
     $this->registerLivewireComponents();
     $this->registerBladeComponents();
     $this->registerCommands();
+<<<<<<< HEAD
     // $this->registerBladeIcons(); deve stare in register
+=======
+>>>>>>> acf93c4 (.)
 }
 ```
 
@@ -36,10 +47,16 @@ public function register(): void
 {
     $this->nameLower = Str::lower($this->name);
     $this->module_ns = collect(explode('\\', $this->module_ns))->slice(0, -1)->implode('\\');
+<<<<<<< HEAD
     $this->app->register($this->module_ns . '\\Providers\\RouteServiceProvider');
     $this->app->register($this->module_ns . '\\Providers\\EventServiceProvider');
     $this->registerConfig();
     $this->registerBladeIcons(); // to boot
+=======
+    $this->app->register($this->module_ns.'\Providers\RouteServiceProvider');
+    $this->app->register($this->module_ns.'\Providers\EventServiceProvider');
+    $this->registerBladeIcons();
+>>>>>>> acf93c4 (.)
 }
 ```
 
@@ -173,6 +190,7 @@ try {
 2. Il nome del modulo deve essere impostato nella classe figlia
 3. I percorsi sono relativi alla root del modulo
 4. Le eccezioni vengono gestite con fallback appropriati
+<<<<<<< HEAD
 5. La registrazione dei componenti è automatica ma configurabile 
 ## Collegamenti tra versioni di XotBaseServiceProvider.md
 * [XotBaseServiceProvider.md](docs/moduli/xot/XotBaseServiceProvider.md)
@@ -182,3 +200,6 @@ try {
 ## Collegamenti tra versioni di xotbaseserviceprovider.md
 * [xotbaseserviceprovider.md](../../../Notify/docs/providers/xotbaseserviceprovider.md)
 
+=======
+5. La registrazione dei componenti è automatica ma configurabile 
+>>>>>>> acf93c4 (.)

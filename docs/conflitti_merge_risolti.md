@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Risoluzione Conflitti di Merge in Laraxot PTVX
 
 ## Problema
@@ -347,6 +348,64 @@ aurmich/dev
 
 
 b6f667c (.)
+=======
+# Risoluzione Conflitti di Merge 
+
+## Problema
+
+Durante lo sviluppo del progetto SaluteOra, sono stati identificati diversi file con conflitti di merge non risolti. Questi conflitti erano indicati dalla presenza di marcatori  nel codice sorgente. I conflitti non risolti impedivano la corretta esecuzione del codice e causavano errori durante l'analisi statica con PHPStan.
+
+I file principali con conflitti erano:
+- `Modules/Xot/app/Datas/MetatagData.php`
+- `Modules/Xot/app/Actions/Array/SaveJsonArrayAction.php`
+- `Modules/Xot/app/Actions/Panel/ApplyMetatagToPanelAction.php`
+- `Modules/Xot/app/Actions/Query/GetFieldnamesByTablenameAction.php`
+- `Modules/Xot/app/Actions/Export/ExportXlsStreamByLazyCollection.php`
+- `Modules/Media/app/Support/TemporaryUploadPathGenerator.php`
+- `Modules/Media/app/Actions/Video/ConvertVideoByMediaConvertAction.php`
+- `Modules/Media/app/Actions/Video/ConvertVideoByConvertDataAction.php`
+- `Modules/Media/app/Filament/Resources/HasMediaResource/RelationManagers/MediaRelationManager.php`
+- `Modules/Lang/app/Models/Post.php`
+- `Modules/Xot/app/Exceptions/Formatters/WebhookErrorFormatter.php`
+
+## Analisi
+
+L'analisi dei file ha rivelato molteplici conflitti di merge non risolti, principalmente riguardanti:
+
+1. Dichiarazioni di importazione (use statements)
+2. Definizione delle proprietà della classe
+3. Implementazione dei metodi
+4. Tipi di ritorno e annotazioni PHPDoc
+5. Gestione delle eccezioni
+6. Parametri dei metodi e loro tipizzazione
+
+I conflitti erano il risultato di un merge incompleto tra il branch `HEAD` e `origin/dev`, con alcune sezioni che presentavano conflitti annidati (conflitti all'interno di conflitti).
+
+### Tipologie di Conflitti Riscontrati
+
+#### 1. Conflitti nelle Dichiarazioni di Tipo
+
+In `GetFieldnamesByTablenameAction.php`, c'erano conflitti relativi alla gestione dei tipi di parametri:
+
+```php
+if (! $this->isValidConnection(is_string($connectionName) ? $connectionName : (string) $connectionName)) {
+    // ...
+}
+```
+
+#### 2. Conflitti nelle Annotazioni PHPDoc
+
+In `TemporaryUploadPathGenerator.php`, c'erano conflitti nelle annotazioni PHPDoc dei metodi:
+
+```php
+/**
+ * @param \Modules\Media\Models\Media $media
+ */
+public function generatePath($media): string
+{
+    // ...
+}
+>>>>>>> acf93c4 (.)
 ```
 
 ## Soluzione Implementata
@@ -367,6 +426,7 @@ La soluzione ha privilegiato:
 - Uso di proprietà readonly quando appropriato
 - Dichiarazioni di tipo strette (`declare(strict_types=1)`)
 
+<<<<<<< HEAD
 ### Esempi di Correzioni Implementate
 
 #### 1. Miglioramento della Tipizzazione in GetFieldnamesByTablenameAction
@@ -424,6 +484,8 @@ try {
 public function execute(array $data, string $filename): bool
 ```
 
+=======
+>>>>>>> acf93c4 (.)
 ## Test e Verifica
 
 Per verificare la correttezza della soluzione, sono stati creati test Pest che verificano:
@@ -435,6 +497,7 @@ Per verificare la correttezza della soluzione, sono stati creati test Pest che v
 5. La compatibilità con PHPStan a livello massimo
 
 
+<<<<<<< HEAD
 
 
 
@@ -593,6 +656,8 @@ it('verifica che SaveJsonArrayAction funzioni correttamente', function () {
 });
 ```
 
+=======
+>>>>>>> acf93c4 (.)
 ## Prevenzione di Problemi Futuri
 
 Per prevenire problemi simili in futuro, si raccomanda di:
@@ -603,6 +668,7 @@ Per prevenire problemi simili in futuro, si raccomanda di:
 4. Documentare le decisioni di merge complesse
 5. Utilizzare revisioni del codice prima di completare i merge
 6. Creare backup dei file prima di risolvere conflitti complessi
+<<<<<<< HEAD
 7. Utilizzare un approccio sistematico per la risoluzione dei conflitti:
    - Analizzare entrambe le versioni del codice
    - Identificare le differenze semantiche
@@ -685,3 +751,24 @@ b6f667c (.)* [conflitti_merge_risolti.md](/var/www/html/_bases/base_ptvx_fila3_m
 * [conflitti_merge_risolti.md](/var/www/html/_bases/base_ptvx_fila3_mono/laravel/Modules/Media/docs/conflitti_merge_risolti.md)
 * [Risoluzione Conflitti Git](/var/www/html/_bases/base_ptvx_fila3_mono/bashscripts/docs/git_conflicts_resolution.md)
 fc83074 (.)
+=======
+
+## Standardizzazione Metodo Filament Table: getTableColumns
+
+### Caso concreto: XotBaseManageRelatedRecords.php
+
+Durante la risoluzione dei conflitti, nel file `Modules/Xot/app/Filament/Resources/XotBaseResource/Pages/XotBaseManageRelatedRecords.php` sono emerse chiamate sia a `getListTableColumns` che a `getTableColumns`. In linea con le regole di standardizzazione adottate nel progetto (vedi [FILAMENT_TABLE_COLUMNS.md](./FILAMENT_TABLE_COLUMNS.md)), è stato scelto di mantenere **solo** `getTableColumns` come metodo per la definizione delle colonne delle tabelle Filament.
+
+**Motivazione:**
+- Coerenza con lo standard Filament e con le regole di progetto
+- Migliore leggibilità e manutenibilità
+- Facilità di upgrade futuro e riduzione delle ambiguità
+
+**Backlink:**
+- [Regola generale e motivazione in FILAMENT_TABLE_COLUMNS.md](./FILAMENT_TABLE_COLUMNS.md)
+
+---
+## Conclusioni
+
+La risoluzione dei conflitti di merge ha ripristinato la corretta funzionalità delle classi nel modulo Xot, permettendo l'analisi statica con PHPStan e garantendo il corretto funzionamento dell'applicazione. Le soluzioni implementate hanno mantenuto la coerenza del codice e migliorato la robustezza delle classi interessate.
+>>>>>>> acf93c4 (.)

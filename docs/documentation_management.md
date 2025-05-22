@@ -75,6 +75,35 @@ Quando si identifica una nuova regola o pattern importante:
    - Aggiornare `.windsurfrules`
    - Mantenere coerenza con altre documentazioni
 
+<<<<<<< HEAD
+=======
+### 3. Gestione dei Prompt
+
+1. **Struttura dei Prompt**
+   - I prompt devono essere una singola stringa continua
+   - Non devono contenere formattazione o a capo
+   - Devono essere generici e riutilizzabili
+   - Non devono contenere riferimenti specifici al progetto
+
+2. **Documentazione dei Prompt**
+   - Ogni modifica al prompt deve essere documentata
+   - La documentazione deve spiegare il "perché" delle regole
+   - Deve essere aggiornata nelle cartelle docs appropriate
+   - Deve mantenere i collegamenti bidirezionali
+
+3. **Processo di Modifica**
+   - Analizzare l'impatto della modifica
+   - Aggiornare la documentazione nei moduli interessati
+   - Verificare la coerenza con altre regole
+   - Testare l'applicabilità delle modifiche
+
+4. **Best Practices**
+   - Mantenere i prompt generici e riutilizzabili
+   - Documentare le decisioni e le motivazioni
+   - Aggiornare la documentazione in tempo reale
+   - Verificare la coerenza con le convenzioni esistenti
+
+>>>>>>> acf93c4 (.)
 ### 3. Best Practices
 
 1. **Coerenza**
@@ -117,6 +146,7 @@ Quando si identifica una nuova regola o pattern importante:
 4. **Windsurf**
    - [ ] Aggiornare .windsurfrules
    - [ ] Verificare coerenza
+<<<<<<< HEAD
 
    - [ ] Testare applicabilità 
 
@@ -172,3 +202,6 @@ Modules/Xot/docs/
    - Verifica dei collegamenti    - [ ] Testare applicabilità 
 b6f667c (.)
    - Verifica dei collegamenti 
+=======
+   - [ ] Testare applicabilità 
+>>>>>>> acf93c4 (.)

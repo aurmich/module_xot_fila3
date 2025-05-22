@@ -236,6 +236,7 @@ cd /percorso/al/progetto/laravel
 
 # Analisi con output dettagliato
 ./vendor/bin/phpstan analyse Modules/NomeModulo --level=9 --verbose
+<<<<<<< HEAD
 ``` 
 ## Collegamenti tra versioni di PHPSTAN-USAGE-GUIDE.md
 * [PHPSTAN-USAGE-GUIDE.md](../../../Xot/docs/phpstan/PHPSTAN-USAGE-GUIDE.md)
@@ -254,3 +255,6 @@ cd /percorso/al/progetto/laravel
 ---
 
 
+=======
+``` 
+>>>>>>> acf93c4 (.)

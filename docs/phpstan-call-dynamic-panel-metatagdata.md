@@ -62,6 +62,7 @@ Questo pattern consente:
 6. Le eccezioni sono gestite e documentate
 7. I valori null sono esplicitamente dichiarati
 8. Le strutture dati complesse sono tipizzate con array shapes
+<<<<<<< HEAD
 
 ## Collegamenti tra versioni di PHPSTAN-CALL-DYNAMIC-PANEL-METATAGDATA.md
 * [PHPSTAN-CALL-DYNAMIC-PANEL-METATAGDATA.md](../../../Xot/docs/phpstan/PHPSTAN-CALL-DYNAMIC-PANEL-METATAGDATA.md)
@@ -71,3 +72,5 @@ Questo pattern consente:
 ## Collegamenti tra versioni di phpstan-call-dynamic-panel-metatagdata.md
 * [phpstan-call-dynamic-panel-metatagdata.md](phpstan/phpstan-call-dynamic-panel-metatagdata.md)
 
+=======
+>>>>>>> acf93c4 (.)

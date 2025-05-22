@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Best Practices
 
 ## Architettura
@@ -155,6 +156,8 @@ class LoginTest extends TestCase
 }
 ```
 
+=======
+>>>>>>> acf93c4 (.)
 # Best Practices per Laraxot
 
 ## Riferimenti al modello User
@@ -222,6 +225,7 @@ public function process(UserContract $user) {
 public function process(\Modules\User\Models\User $user) {
     // Codice
 }
+<<<<<<< HEAD
 ``` 
 ## Collegamenti tra versioni di best-practices.md
 * [best-practices.md](../../../../docs/tecnico/filament/best-practices.md)
@@ -229,3 +233,6 @@ public function process(\Modules\User\Models\User $user) {
 * [best-practices.md](../../UI/docs/best-practices.md)
 * [best-practices.md](../../../Themes/One/docs/best-practices.md)
 
+=======
+``` 
+>>>>>>> acf93c4 (.)

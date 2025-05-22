@@ -1,5 +1,8 @@
+<<<<<<< HEAD
 ### Versione HEAD
 
+=======
+>>>>>>> acf93c4 (.)
 # Colli di Bottiglia e Soluzioni - Modulo Xot
 
 ## Panoramica
@@ -682,6 +685,7 @@ Implementando queste soluzioni, il modulo Xot potrà superare i principali colli
 - [Best Practices Performance](./BEST-PRACTICES.md#performance)
 - [Struttura Moduli](./MODULE_STRUCTURE.md)
 
+<<<<<<< HEAD
 ## Collegamenti tra versioni di bottlenecks.md
 * [bottlenecks.md](../../../Gdpr/docs/performance/bottlenecks.md)
 * [bottlenecks.md](../../../Xot/docs/bottlenecks.md)
@@ -823,4 +827,11 @@ Implementando queste soluzioni, il modulo Xot potrà superare i principali colli
 3. Migliorare la gestione delle risorse distribuite 
 
 ---
+=======
+## Collegamenti tra versioni di BOTTLENECKS.md
+* [BOTTLENECKS.md](../../../Xot/docs/BOTTLENECKS.md)
+* [BOTTLENECKS.md](../../../User/docs/BOTTLENECKS.md)
+* [BOTTLENECKS.md](../../../Media/docs/BOTTLENECKS.md)
+* [BOTTLENECKS.md](../../../Cms/docs/BOTTLENECKS.md)
+>>>>>>> acf93c4 (.)
 

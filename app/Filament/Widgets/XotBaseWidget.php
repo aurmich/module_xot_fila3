@@ -25,7 +25,11 @@ abstract class XotBaseWidget extends FilamentWidget implements HasForms
     use InteractsWithPageFilters;
     //use InteractsWithPageTable;
     use InteractsWithForms;
+<<<<<<< HEAD
     
+=======
+
+>>>>>>> acf93c4 (.)
     public string $title = '';
     public string $icon = '';
     protected int|string|array $columnSpan = 'full';
@@ -39,11 +43,19 @@ abstract class XotBaseWidget extends FilamentWidget implements HasForms
      * @var view-string
      */
     protected static string $view;
+<<<<<<< HEAD
     
 
     public array $listener = [
         'filters-updated' => 'filtersUpdated',
       
+=======
+
+
+    public array $listener = [
+        'filters-updated' => 'filtersUpdated',
+
+>>>>>>> acf93c4 (.)
     ];
 
     public ?array $data = [];
@@ -62,7 +74,11 @@ abstract class XotBaseWidget extends FilamentWidget implements HasForms
     public function mount(): void
     {
         $this->form->fill();
+<<<<<<< HEAD
     }    
+=======
+    }
+>>>>>>> acf93c4 (.)
     */
 
 
@@ -70,17 +86,23 @@ abstract class XotBaseWidget extends FilamentWidget implements HasForms
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     /*
     final public function form(Form $form): Form
 =======
 =======
 >>>>>>> 2e607732 (.)
+=======
+>>>>>>> acf93c4 (.)
     /**
      *  Cannot override final method Modules\Xot\Filament\Widgets\XotBaseWidget::form()
      * percio' non finalize, se togli la funzione form non funziona
      */
     public function form(Form $form): Form
+<<<<<<< HEAD
 >>>>>>> 9558171f (.)
+=======
+>>>>>>> acf93c4 (.)
     {
         return $form
             ->schema($this->getFormSchema())
@@ -89,6 +111,7 @@ abstract class XotBaseWidget extends FilamentWidget implements HasForms
     }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     */
 =======
     
@@ -97,6 +120,10 @@ abstract class XotBaseWidget extends FilamentWidget implements HasForms
     
 >>>>>>> 2e607732 (.)
     
+=======
+
+
+>>>>>>> acf93c4 (.)
      protected function getFormActions(): array
     {
         return [

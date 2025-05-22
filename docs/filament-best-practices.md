@@ -49,6 +49,7 @@ public static function getFormSchema(): array
 }
 ```
 
+<<<<<<< HEAD
 ### Versione HEAD
 
 
@@ -133,6 +134,8 @@ Per maggiori dettagli e motivazioni, consulta la [documentazione completa sulle 
 
 ---
 
+=======
+>>>>>>> acf93c4 (.)
 #### ❌ DON'T - Non utilizzare il metodo form()
 
 ```php
@@ -663,6 +666,7 @@ Consulta l'esempio completo all'inizio di questo documento per una implementazio
 - [Documentazione Filament](https://filamentphp.com/docs)
 - [Documentazione XotBaseResource](/var/www/html/exa/base_orisbroker_fila3/laravel/Modules/Xot/docs/resource.md)
 - [Best Practices Laraxot](/var/www/html/exa/base_orisbroker_fila3/laravel/Modules/Xot/docs/best-practices.md)
+<<<<<<< HEAD
 
 ## Collegamenti tra versioni di FILAMENT-BEST-PRACTICES.md
 * [FILAMENT-BEST-PRACTICES.md](../../../Xot/docs/filament/FILAMENT-BEST-PRACTICES.md)
@@ -721,3 +725,5 @@ Aggiornare sempre la documentazione e le regole di progetto. Applicare la stessa
 - [Best Practices Filament per il modulo Performance](../../Performance/docs/filament.md)
 
 
+=======
+>>>>>>> acf93c4 (.)

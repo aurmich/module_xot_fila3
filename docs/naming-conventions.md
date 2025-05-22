@@ -142,6 +142,7 @@ Descrizione dettagliata se necessaria
 ```
 
 Tipi: `feat`, `fix`, `docs`, `style`, `refactor`, `test`, `chore`
+<<<<<<< HEAD
 
 ## Regole Fondamentali
 
@@ -258,3 +259,5 @@ class Patients extends Model  // Non usare plurale
 * [naming-conventions.md](docs/naming-conventions.md)
 * [naming-conventions.md](../../../Xot/docs/naming-conventions.md)
 
+=======
+>>>>>>> acf93c4 (.)

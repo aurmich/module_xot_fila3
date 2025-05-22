@@ -1,5 +1,6 @@
 # MetatagData
 
+<<<<<<< HEAD
 ## Filosofia dei Getter
 
 La classe `MetatagData` segue una filosofia di design basata su principi semantici piuttosto che implementativi. Questo significa che i metodi getter riflettono lo scopo semantico del dato che stanno recuperando, non i dettagli di implementazione.
@@ -117,6 +118,8 @@ $colors = $metatag->getThemeColors();
 - [Convenzioni di Naming](../naming-conventions.md)
 - [Linee Guida Filament](../filament-best-practices.md)
 
+=======
+>>>>>>> acf93c4 (.)
 ## Descrizione
 La classe `MetatagData` gestisce i meta tag e le configurazioni visive dell'applicazione, inclusi colori, loghi e favicon.
 
@@ -159,6 +162,7 @@ Restituisce i colori formattati per l'utilizzo con Filament.
 Restituisce tutti i colori configurati nel formato chiave-valore.
 
 ### getLogoHeader()
+<<<<<<< HEAD
 **@deprecated** Usa `getBrandLogo()` per operazioni di branding.
 Resituisce il percorso del logo dell'header (metodo deprecato).
 
@@ -170,6 +174,12 @@ Restituisce l'URL del logo principale per il brand, pensato per l’uso in Filam
 ```php
 $panel->brandLogo($metatag->getBrandLogo());
 ```
+=======
+Restituisce il percorso del logo dell'header.
+
+### getLogoHeaderDark()
+Restituisce il percorso del logo dell'header per la modalità scura.
+>>>>>>> acf93c4 (.)
 
 ### getFavicon()
 Restituisce il percorso del favicon.
@@ -214,6 +224,7 @@ Restituisce i colori formattati per l'uso con Filament Panel.
 Restituisce una versione semplificata dei colori.
 
 ### getLogoHeader(): string
+<<<<<<< HEAD
 **@deprecated** Usa `getBrandLogo()` per operazioni di branding.
 Resituisce il percorso del logo dell'header (metodo deprecato).
 
@@ -222,6 +233,15 @@ Resituisce il percorso del logo dell'header per il tema scuro.
 
 ### getFavicon(): string
 Resituisce il percorso del favicon.
+=======
+Restituisce il percorso del logo dell'header.
+
+### getLogoHeaderDark(): string
+Restituisce il percorso del logo dell'header per il tema scuro.
+
+### getFavicon(): string
+Restituisce il percorso del favicon.
+>>>>>>> acf93c4 (.)
 
 ## Errori PHPStan Comuni
 1. Chiamata al metodo inesistente `getColors()`
@@ -231,4 +251,8 @@ Resituisce il percorso del favicon.
 ## Collegamenti
 - [Filament Best Practices](../FILAMENT-BEST-PRACTICES.md)
 - [PHPStan Common Exceptions](../PHPSTAN-COMMON-EXCEPTIONS.md)
+<<<<<<< HEAD
 - [Data Queableactions](../DATA-QUEABLEACTIONS.md) 
+=======
+- [Data Queableactions](../DATA-QUEABLEACTIONS.md) 
+>>>>>>> acf93c4 (.)

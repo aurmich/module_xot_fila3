@@ -165,6 +165,7 @@ class MyModel extends BaseModel
      - Docs del modulo specifico
      - .cursor/rules per Cursor AI
      - .windsurfrules per Windsurf
+<<<<<<< HEAD
    - Mantenere coerenza tra le diverse documentazioni 
 ## Collegamenti tra versioni di PHPSTAN_WORKFLOW.md
 * [PHPSTAN_WORKFLOW.md](../../../Xot/docs/phpstan/PHPSTAN_WORKFLOW.md)
@@ -183,3 +184,6 @@ class MyModel extends BaseModel
 ---
 
 
+=======
+   - Mantenere coerenza tra le diverse documentazioni 
+>>>>>>> acf93c4 (.)

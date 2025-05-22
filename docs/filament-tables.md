@@ -186,6 +186,7 @@ Il trait include meccanismi di gestione degli errori, ad esempio:
 - Assicurarsi di definire correttamente il metodo `getModelClass()` per garantire il corretto funzionamento del trait
 - Utilizzare i metodi con i tipi di ritorno corretti come indicato nei PHPDoc
 - Non definire azioni duplicate con lo stesso nome
+<<<<<<< HEAD
 
 ## Collegamenti tra versioni di FILAMENT-TABLES.md
 * [FILAMENT-TABLES.md](../../../Xot/docs/filament/FILAMENT-TABLES.md)
@@ -204,3 +205,5 @@ Il trait include meccanismi di gestione degli errori, ad esempio:
 ---
 
 
+=======
+>>>>>>> acf93c4 (.)
