@@ -39,13 +39,7 @@ trait HasXotTable
     public TableLayoutEnum $layoutView = TableLayoutEnum::LIST;
 
     protected static bool $canReplicate = false;
-<<<<<<< HEAD
-
     protected static bool $canView = true;
-
-=======
-    protected static bool $canView = true;
->>>>>>> acf93c4 (.)
     protected static bool $canEdit = true;
 
     /**
@@ -222,29 +216,6 @@ trait HasXotTable
             ->filters($this->getTableFilters())
             ->filtersLayout(FiltersLayout::AboveContent)
             ->filtersFormColumns($this->getTableFiltersFormColumns())
-<<<<<<< HEAD
-            ->persistFiltersInSession();
-
-        // Verifica i metodi disponibili prima di chiamarli
-        if (method_exists($this, 'getTableHeaderActions')) {
-            $table = $table->headerActions($this->getTableHeaderActions());
-        }
-
-        if (method_exists($this, 'getTableActions')) {
-            $table = $table->actions($this->getTableActions());
-        }
-
-        if (method_exists($this, 'getTableBulkActions')) {
-            $table = $table->bulkActions($this->getTableBulkActions());
-        }
-
-        $table = $table
-            ->actionsPosition(ActionsPosition::BeforeColumns)
-            ->emptyStateActions($this->getTableEmptyStateActions())
-            ->striped();
-
-        $table = $table
-=======
             ->persistFiltersInSession()
             ->headerActions($this->getTableHeaderActions())
             ->actions($this->getTableActions())
@@ -252,7 +223,6 @@ trait HasXotTable
             ->actionsPosition(ActionsPosition::BeforeColumns)
             ->emptyStateActions($this->getTableEmptyStateActions())
             ->striped()
->>>>>>> acf93c4 (.)
             ->paginated($this->getTablePaginated());
         /*
             ->defaultSort(

@@ -375,13 +375,10 @@ abstract class XotBaseMigration extends Migration
     {
         return DB::connection($this->getConnection())->getDriverName();
     }
-<<<<<<< HEAD
-=======
     public function foreignIdFor($table, $class) {
         $table->foreignIdFor($class);
     } 
     public function hasTable($table) {
         return $this->getConn()->hasTable($table);
     } 
->>>>>>> acf93c4 (.)
 }// end XotBaseMigration

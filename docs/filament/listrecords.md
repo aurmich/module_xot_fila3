@@ -40,11 +40,7 @@ Quando si estende `XotBaseListRecords`, è necessario implementare i seguenti me
 
 1. **Prefisso List**:
    - Tutti i metodi relativi alla tabella DEVONO avere il prefisso "List"
-<<<<<<< HEAD
-   - Es: `getTableColumns()` invece di `getTableColumns()`
-=======
    - Es: `getTableColumns()` invece di `getListTableColumns()`
->>>>>>> acf93c4 (.)
 
 2. **Visibilità dei Metodi**:
    - Tutti i metodi devono essere `public`
@@ -129,10 +125,6 @@ Quando si estende `XotBaseListRecords`, è necessario implementare i seguenti me
 
 3. Mantenere la coerenza in tutto il progetto usando sempre XotBaseListRecords
 
-<<<<<<< HEAD
-## Nota storica:
-Il metodo `getListTableColumns` è stato rinominato in `getTableColumns` per aderire allo standard Filament e Laraxot. Tutte le implementazioni e la documentazione devono ora usare `getTableColumns`.
-=======
 > **AVVISO IMPORTANTE (2025-05-13):**
 > Il metodo standard per la definizione delle colonne della tabella è ora `getTableColumns`. Il vecchio `getListTableColumns` è deprecato: aggiorna tutte le implementazioni e la documentazione. Questa scelta garantisce allineamento con Filament e coerenza tra tutti i moduli Laraxot.
 
@@ -157,7 +149,6 @@ public function getTableColumns(): array
     ];
 }
 ```
->>>>>>> acf93c4 (.)
 
 ```php
 declare(strict_types=1);

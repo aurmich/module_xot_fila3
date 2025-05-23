@@ -105,11 +105,3 @@ class BlogServiceProvider extends XotBaseServiceProvider {
     }
 }
 ```
-<<<<<<< HEAD
-
-## Collegamenti tra versioni di module-structure.md
-* [module-structure.md](laraxot/module-structure.md)
-* [module-structure.md](architecture/module-structure.md)
-
-=======
->>>>>>> acf93c4 (.)

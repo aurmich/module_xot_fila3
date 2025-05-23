@@ -1,3 +1,100 @@
+# Linee Guida PHPStan Livello 10
+
+## Introduzione
+Questo documento descrive le linee guida per mantenere la compatibilità con PHPStan livello 10 nel modulo Xot.
+
+## Best Practices
+
+### 1. Tipizzazione
+- Utilizzare sempre `declare(strict_types=1)` all'inizio dei file
+- Specificare i tipi di ritorno per tutti i metodi
+- Utilizzare tipi generici per le collezioni: `Collection<int|string, mixed>`
+- Specificare i tipi degli array: `array<int, string>`
+- Utilizzare union types quando appropriato: `string|int|float|bool`
+
+### 2. Documentazione
+- Documentare tutte le classi con una descrizione
+- Utilizzare annotazioni PHPDoc complete per i metodi
+- Specificare i tipi dei parametri nelle annotazioni
+- Documentare le eccezioni lanciate
+- Utilizzare `@throws` per le eccezioni
+
+### 3. Gestione dei Tipi
+- Utilizzare `strval()` per le conversioni esplicite a stringa
+- Verificare i tipi prima delle operazioni: `is_string()`, `is_array()`, etc.
+- Utilizzare type casting sicuro: `(string)`, `(int)`, etc.
+- Gestire i casi null con l'operatore nullsafe: `?->`
+- Utilizzare l'operatore di coalescenza nulla: `??`
+
+### 4. Collezioni e Array
+- Specificare i tipi degli indici e dei valori
+- Utilizzare `array_values()` per reindexare gli array
+- Utilizzare `array_map()` con tipi specificati
+- Evitare array misti quando possibile
+- Utilizzare `Collection` con tipi generici
+
+### 5. Gestione delle Eccezioni
+- Utilizzare tipi specifici per le eccezioni
+- Documentare le eccezioni lanciate
+- Utilizzare try-catch con tipi specifici
+- Evitare di catturare `\Exception` generiche
+- Utilizzare `\Throwable` per errori fatali
+
+## Esempi
+
+### Collezioni
+```php
+/**
+ * @param Collection<int|string, mixed> $collection
+ * @return array<int, string>
+ */
+public function processCollection(Collection $collection): array
+{
+    return array_map(
+        function (string|int|float|bool $value): string {
+            return strval($value);
+        },
+        array_values($collection->toArray())
+    );
+}
+```
+
+### Array
+```php
+/**
+ * @param array<int, string> $fields
+ * @return array<int, string>
+ */
+public function processFields(array $fields): array
+{
+    return array_map(
+        function (string|int|float|bool $field): string {
+            return strval($field);
+        },
+        array_values($fields)
+    );
+}
+```
+
+### Gestione Null
+```php
+/**
+ * @param string|null $value
+ * @return string
+ */
+public function processValue(?string $value): string
+{
+    return $value ?? '';
+}
+```
+
+## Collegamenti Correlati
+
+- [PHPStan Documentation](https://phpstan.org/user-guide/getting-started)
+- [Best Practices](./BEST-PRACTICES.md)
+- [Code Standards](./CODE-STANDARDS.md)
+- [Risoluzione Conflitti](./CONFLITTI_MERGE_RISOLTI.md)
+
 # Linee Guida per PHPStan Livello 10 - Regole Comuni
 
 Questo documento contiene le linee guida generali e le regole comuni per risolvere gli errori PHPStan di livello 10 in tutti i moduli del progetto Laraxot.
@@ -102,10 +199,7 @@ Per le risorse PHP (file handles, connessioni di database, ecc.) che non possono
 private $fileHandle = null;
 ```
 
-<<<<<<< HEAD
-=======
 ### 4. Pattern per Controller
->>>>>>> acf93c4 (.)
 ### 4. Gestione delle API Fluenti di Librerie Esterne
 
 Le API fluenti (method chaining) di alcune librerie esterne come Laravel-FFMpeg possono causare problemi con PHPStan a livello 10, in particolare quando i metodi intermedi restituiscono tipi non standard o quando la catena è lunga e complessa.
@@ -163,10 +257,7 @@ public function show(string $id): \Illuminate\View\View|\Illuminate\Http\Redirec
 }
 ```
 
-<<<<<<< HEAD
-=======
 ### 5. Gestione delle Proprietà Dinamiche
->>>>>>> acf93c4 (.)
 ### 6. Gestione delle Proprietà Dinamiche
 
 Per le proprietà dinamiche nei modelli, utilizzare annotazioni PHPDoc complete:
@@ -183,10 +274,7 @@ class User extends Model
 }
 ```
 
-<<<<<<< HEAD
-=======
 ### 6. Conversione Sicura da `mixed` a Tipi Scalari
->>>>>>> acf93c4 (.)
 ### 7. Conversione Sicura da `mixed` a Tipi Scalari
 
 Quando si lavora con valori `mixed` da convertire in tipi scalari (string, int, float, bool), utilizzare controlli di tipo prima della conversione:
@@ -229,10 +317,7 @@ if ($value !== null) {
 }
 ```
 
-<<<<<<< HEAD
-=======
 ### 7. Gestione Sicura di Array con Chiavi Miste
->>>>>>> acf93c4 (.)
 ### 8. Gestione Sicura di Array con Chiavi Miste
 
 Quando si ottengono array da fonti esterne (es. funzioni Laravel che restituiscono array con chiavi miste):
@@ -250,10 +335,7 @@ foreach ($componentsWithMixedKeys as $key => $component) {
 }
 ```
 
-<<<<<<< HEAD
-=======
 ### 8. Tipi Unione con Null
->>>>>>> acf93c4 (.)
 ### 9. Tipi Unione con Null
 
 Preferire la sintassi nullable (`?tipo`) per i tipi che possono essere null:
@@ -265,10 +347,7 @@ public function findById(?int $id): ?User
 }
 ```
 
-<<<<<<< HEAD
-=======
 ### 9. Parametri Variabili (Variadic)
->>>>>>> acf93c4 (.)
 ### 10. Parametri Variabili (Variadic)
 
 Per i parametri variabili, specificare il tipo di ogni elemento nell'array risultante:
@@ -285,10 +364,7 @@ public function buildPath(string ...$segments): string
 ```
 
 ### 10. Callback e Closure
-<<<<<<< HEAD
-=======
 ### 11. Callback e Closure
->>>>>>> acf93c4 (.)
 
 Per i callback e le closure, utilizzare `callable` con specifiche di tipo dettagliate:
 
@@ -521,36 +597,16 @@ Uno degli errori più frequenti riguarda il namespace delle Actions:
 
 - ✅ **CORRETTO**: `namespace Modules\Xot\Actions;`
 - ❌ **ERRATO**: `namespace Modules\Xot\app\Actions;`
-<<<<<<< HEAD
-=======
 - ❌ **ERRATO**: `namespace Modules\Xot\Actions;`
->>>>>>> acf93c4 (.)
 
 Anche se il file Actions si trova fisicamente in `Modules/Xot/app/Actions/`, il namespace deve sempre essere `Modules\Xot\Actions` (senza il segmento `app`).
 
 Gli errori PHPStan relativi a questo problema sono spesso del tipo:
 ```
 Class 'Modules\Xot\app\Actions\MyAction' not found.
-<<<<<<< HEAD
-```
-
-#### Esempio per i Comandi Console
-
-```php
-// CORRETTO
-namespace Modules\Xot\Console\Commands;
-
-// ERRATO
-namespace Modules\Xot\app\Console\Commands;
-```
-
-Errori PHPStan come `Class Modules\Xot\app\Console\Commands\DatabaseSchemaExportCommand not found` indicano che è necessario rimuovere il segmento `app` dal namespace.
-
-=======
 Class 'Modules\Xot\Actions\MyAction' not found.
 ```
 
->>>>>>> acf93c4 (.)
 #### Namespace Corretti per i Componenti Principali
 
 | Tipo di Componente       | Percorso Fisico                         | Namespace Corretto                 |
@@ -565,18 +621,6 @@ Class 'Modules\Xot\Actions\MyAction' not found.
 
 #### Esempio per i Comandi Console
 
-<<<<<<< HEAD
-```
-
-## Collegamenti tra versioni di PHPSTAN_LIVELLO10_LINEE_GUIDA.md
-* [PHPSTAN_LIVELLO10_LINEE_GUIDA.md](../../../Xot/docs/phpstan/PHPSTAN_LIVELLO10_LINEE_GUIDA.md)
-* [PHPSTAN_LIVELLO10_LINEE_GUIDA.md](../../../Xot/docs/PHPSTAN_LIVELLO10_LINEE_GUIDA.md)
-
-
-## Collegamenti tra versioni di phpstan_livello10_linee_guida.md
-* [phpstan_livello10_linee_guida.md](phpstan/phpstan_livello10_linee_guida.md)
-
-=======
 ```php
 // CORRETTO
 namespace Modules\Xot\Console\Commands;
@@ -590,4 +634,3 @@ namespace Modules\Xot\Console\Commands;
 ```
 
 Errori PHPStan come `Class Modules\Xot\Console\Commands\DatabaseSchemaExportCommand not found` indicano che è necessario rimuovere il segmento `app` dal namespace.
->>>>>>> acf93c4 (.)

@@ -18,8 +18,6 @@
 ---
 
 *Ultimo aggiornamento: 10/2023*
-<<<<<<< HEAD
-=======
 # Changelog
 
 Tutte le modifiche notevoli a questo modulo saranno documentate in questo file.
@@ -74,4 +72,3 @@ e questo progetto aderisce al [Semantic Versioning](https://semver.org/spec/v2.0
 ---
 
 *Ultimo aggiornamento: 10/2023*
->>>>>>> acf93c4 (.)

@@ -61,8 +61,6 @@ find Modules -name "*.php" -type f -exec grep -L "declare(strict_types=1)" {} \;
 ```
 
 Questo comando mostrerà tutti i file PHP che non hanno la dichiarazione `strict_types`.
-<<<<<<< HEAD
-=======
 
 ## Implementazioni Specifiche nei Moduli
 
@@ -76,4 +74,3 @@ L'utilizzo di `declare(strict_types=1)` è un requisito fondamentale per la comp
 
 - [Linee Guida PHPStan Livello 10](./PHPStan/LEVEL10_LINEE_GUIDA.md)
 - [Workflow PHPStan](./PHPSTAN_WORKFLOW.md)
->>>>>>> acf93c4 (.)

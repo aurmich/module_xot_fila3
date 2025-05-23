@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Convenzioni per i Namespace nei Moduli
 
 ## Struttura Base
@@ -50,7 +49,6 @@ Modules/
 
 ## Motivazione
 Questa convenzione:
-=======
 # convenzioni per i namespace nei moduli
 
 ## regola assoluta e inviolabile
@@ -145,7 +143,6 @@ php artisan phpstan:analyse --level=1 Modules/SaluteOra
 ```
 
 ## motivazione di questa convenzione
->>>>>>> acf93c4 (.)
 - Mantiene i namespace puliti e coerenti
 - Evita confusione con la struttura delle directory
 - Facilita l'autoloading e la navigazione del codice
@@ -156,8 +153,6 @@ php artisan phpstan:analyse --level=1 Modules/SaluteOra
 - Non ci sono eccezioni a questa regola
 - I file possono essere fisicamente in `app/` ma il namespace non deve rifletterlo
 - Questa convenzione è obbligatoria per mantenere la compatibilità con il framework
-<<<<<<< HEAD
-=======
 
 ## Errori Comuni
 
@@ -217,4 +212,3 @@ php artisan cache:clear
 php artisan config:clear
 php artisan view:clear
 ```
->>>>>>> acf93c4 (.)

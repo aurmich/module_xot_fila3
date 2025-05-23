@@ -170,25 +170,4 @@ Per categorie specifiche:
 ```php
 /** @phpstan-ignore offsetAccess.nonOffsetAccessible */
 $value = $data['key'];
-<<<<<<< HEAD
 ``` 
-## Collegamenti tra versioni di PHPSTAN-LEVEL9-GUIDE.md
-* [PHPSTAN-LEVEL9-GUIDE.md](../../../Xot/docs/phpstan/PHPSTAN-LEVEL9-GUIDE.md)
-* [PHPSTAN-LEVEL9-GUIDE.md](../../../Xot/docs/PHPSTAN-LEVEL9-GUIDE.md)
-
-
-## Collegamenti tra versioni di phpstan-level9-guide.md
-### Versione HEAD
-
-* [phpstan-level9-guide.md](../phpstan-level9-guide.md)
-
-### Versione Incoming
-
-* [phpstan-level9-guide.md](phpstan/phpstan-level9-guide.md)
-
----
-
-
-=======
-``` 
->>>>>>> acf93c4 (.)
