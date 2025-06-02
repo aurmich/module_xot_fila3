@@ -1,7 +1,7 @@
 # XotBaseServiceProvider
 
 ## Descrizione
-`XotBaseServiceProvider` è una classe astratta che fornisce l'implementazione base per i Service Provider di tutti i moduli . Estende `Illuminate\Support\ServiceProvider` e implementa funzionalità comuni per la registrazione di componenti, traduzioni, configurazioni e altro.
+`XotBaseServiceProvider` è una classe astratta che fornisce l'implementazione base per i Service Provider di tutti i moduli in il progetto. Estende `Illuminate\Support\ServiceProvider` e implementa funzionalità comuni per la registrazione di componenti, traduzioni, configurazioni e altro.
 
 ## Caratteristiche Principali
 
@@ -20,12 +20,13 @@ protected string $module_ns = __NAMESPACE__; // Namespace del modulo
 public function boot(): void
 {
     $this->registerTranslations();
-    $this->registerConfig();
+    // $this->registerConfig(); // to register
     $this->registerViews();
     $this->loadMigrationsFrom($this->module_dir.'/../Database/Migrations');
     $this->registerLivewireComponents();
     $this->registerBladeComponents();
     $this->registerCommands();
+    // $this->registerBladeIcons(); deve stare in register
 }
 ```
 
@@ -35,9 +36,10 @@ public function register(): void
 {
     $this->nameLower = Str::lower($this->name);
     $this->module_ns = collect(explode('\\', $this->module_ns))->slice(0, -1)->implode('\\');
-    $this->app->register($this->module_ns.'\Providers\RouteServiceProvider');
-    $this->app->register($this->module_ns.'\Providers\EventServiceProvider');
-    $this->registerBladeIcons();
+    $this->app->register($this->module_ns . '\\Providers\\RouteServiceProvider');
+    $this->app->register($this->module_ns . '\\Providers\\EventServiceProvider');
+    $this->registerConfig();
+    $this->registerBladeIcons(); // to boot
 }
 ```
 
@@ -172,3 +174,11 @@ try {
 3. I percorsi sono relativi alla root del modulo
 4. Le eccezioni vengono gestite con fallback appropriati
 5. La registrazione dei componenti è automatica ma configurabile 
+## Collegamenti tra versioni di XotBaseServiceProvider.md
+* [XotBaseServiceProvider.md](docs/moduli/xot/XotBaseServiceProvider.md)
+* [XotBaseServiceProvider.md](../../../Xot/docs/providers/XotBaseServiceProvider.md)
+
+
+## Collegamenti tra versioni di xotbaseserviceprovider.md
+* [xotbaseserviceprovider.md](../../../Notify/docs/providers/xotbaseserviceprovider.md)
+

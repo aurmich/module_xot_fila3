@@ -171,7 +171,6 @@ protected $middlewareGroups = [
 È buona pratica utilizzare un Enum per gestire le lingue supportate:
 
 ```php
-namespace Modules\Xot\app\Enums;
 namespace Modules\Xot\Enums;
 
 enum SupportedLocale: string
