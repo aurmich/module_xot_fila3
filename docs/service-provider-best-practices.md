@@ -113,38 +113,6 @@ class BrainServiceProvider extends XotBaseServiceProvider
 }
 ```
 
-### 4. Gestione delle Traduzioni
-
-#### ✅ DO - Usare GetModulePathByGeneratorAction per i path delle traduzioni
-
-Utilizzare sempre l'action `GetModulePathByGeneratorAction` per ottenere il path della cartella `lang` del modulo, con fallback robusto e Assert.
-
-**Esempio corretto:**
-```php
-try {
-    $langPath = app(GetModulePathByGeneratorAction::class)->execute($this->name, 'lang');
-    \Webmozart\Assert\Assert::string($langPath, 'Percorso lang non valido');
-    $this->loadTranslationsFrom($langPath, $this->nameLower);
-} catch (\Throwable $e) {
-    $fallbackPath = base_path('Modules/'.$this->name.'/lang');
-    $this->loadTranslationsFrom($fallbackPath, $this->nameLower);
-}
-```
-
-**Esempio sbagliato:**
-```php
-$langPath = module_path($this->name, 'lang');
-$this->loadTranslationsFrom($langPath, $this->nameLower);
-```
-
-**Motivazione:**
-- Coerenza e robustezza tra i moduli
-- Fallback e validazione centralizzata
-- Facilità di manutenzione
-
-**Nota:**
-Applicare la stessa regola per la registrazione delle traduzioni JSON.
-
 ## Implementazione Dettagliata per Tipo di Provider
 
 ### 1. Provider Principale del Modulo
@@ -453,8 +421,7 @@ class RouteServiceProvider extends ServiceProvider
 // middleware essenziali o non essere integrate con il sistema di permessi
 ```
 
-
-### Errore: Eventi non ascoltati## Troubleshooting
+## Troubleshooting
 
 ### Problema: Traduzioni non caricate
 
@@ -472,8 +439,11 @@ class RouteServiceProvider extends ServiceProvider
 4. I file di route siano nei percorsi corretti (web.php, api.php, admin.php)
 
 ### Problema: Eventi non ascoltati
+<<<<<<< HEAD
 b6f667c (.)
 ### Errore: Eventi non ascoltati
+=======
+>>>>>>> 0e2182f (.)
 
 **Soluzione:** Verificare che:
 1. L'Event Provider estenda `BaseEventServiceProvider`
@@ -497,6 +467,7 @@ b6f667c (.)
 - [XotBaseServiceProvider](/var/www/html/exa/base_orisbroker_fila3/laravel/Modules/Xot/Providers/XotBaseServiceProvider.php)
 - [XotBaseRouteServiceProvider](/var/www/html/exa/base_orisbroker_fila3/laravel/Modules/Xot/Providers/XotBaseRouteServiceProvider.php)
 - [BaseEventServiceProvider](/var/www/html/exa/base_orisbroker_fila3/laravel/Modules/Xot/Providers/BaseEventServiceProvider.php)
+<<<<<<< HEAD
 
 
 # Best Practices per ServiceProvider
@@ -747,3 +718,5 @@ public function boot(): void
 
 **Collegamento:** Vedi anche [XotBaseServiceProvider.md](./XotBaseServiceProvider.md)
 - [filament-best-practices.md](filament-best-practices.md)
+=======
+>>>>>>> 0e2182f (.)

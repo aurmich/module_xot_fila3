@@ -14,6 +14,7 @@ Il modulo Xot è il core del sistema, fornisce funzionalità base e componenti r
 
 ## Componenti Principali
 
+<<<<<<< HEAD
 ### 1. Base Classes
 - `BaseModel`: Classe base per tutti i modelli
 - `BaseController`: Controller base con funzionalità comuni
@@ -25,6 +26,17 @@ Il modulo Xot è il core del sistema, fornisce funzionalità base e componenti r
 - `HasSlug`: Gestione slug automatica
 - `HasStatus`: Gestione stati dei modelli
 - `HasTimestamps`: Gestione timestamp estesa
+=======
+
+- [Volt Folio Best Practices](./VOLT_FOLIO_BEST_PRACTICES.md) - Best practices per Volt e Folio
+- [Volt Folio Best Practices](./VOLT_FOLIO_BEST_PRACTICES.md) - Best practices per Volt e Foliob6f667c (.)
+
+
+### Filament
+- [Filament Integration](./filament_integration.md) - Integrazione con Filament
+- [Widgets](./widgets.md) - Sistema widget
+- [Resources](./resources.md) - Gestione risorse
+>>>>>>> 0e2182f (.)
 
 ### 3. Interfaces
 - `RepositoryInterface`: Contratto base per i repository
@@ -299,6 +311,7 @@ La configurazione di navigazione e la definizione della tabella sono centralizza
 - **Etica**: Onestà, rispetto, responsabilità, attenzione all'impatto sociale e ambientale.
 - **Zen**: Semplicità, concentrazione sul presente, armonia e serenità nello sviluppo.b6f667c (.)
 
+
 ## Service Provider: Decisione Architetturale (2025-05-13)
 
 Il provider `XotBaseServiceProvider` è progettato per:
@@ -323,6 +336,7 @@ Consulta le [best practices aggiornate](./providers/service_provider_best_practi
 - [Collegamento a docs/links.md della root](../../../../docs/links.md)
 - **Zen**: Semplicità, concentrazione sul presente, armonia e serenità nello sviluppo.
 
+<<<<<<< HEAD
 ## Errori Comuni e Soluzioni (Best Practice)
 
 1. **ValidationException custom**
@@ -425,3 +439,58 @@ Dopo ogni restart, esegui la checklist sopra per evitare errori ricorrenti.
 ---
 
 - [ ] Rispetta la [regola PSR-4 Namespace](./psr4-namespaces.md) per tutti i file in app/
+=======
+## Proprietà fondamentali del ServiceProvider (Laraxot/PTVX)
+
+Tutti i provider dei moduli che estendono XotBaseServiceProvider **devono** dichiarare:
+- `protected string $module_dir = __DIR__;`
+- `protected string $module_ns = __NAMESPACE__;`
+- `public string $name = 'Xot';`
+
+Queste proprietà sono necessarie per:
+- La risoluzione automatica dei path delle risorse
+- Il corretto namespace per autoloading e publish
+- L'identificazione del modulo nelle operazioni di asset publish
+
+### Esempio
+```php
+class XotServiceProvider extends XotBaseServiceProvider
+{
+    protected string $module_dir = __DIR__;
+    protected string $module_ns = __NAMESPACE__;
+    public string $name = 'Xot';
+}
+```
+
+**Motivazione:**  
+- Se mancano queste proprietà, alcune risorse potrebbero non essere caricate correttamente.
+- La dichiarazione esplicita garantisce portabilità, manutenibilità e coerenza tra tutti i moduli.
+
+**Approfondimenti:**  
+- Vedi anche [../../../../docs/provider_overview.md](../../../../docs/provider_overview.md)
+- Vedi anche [model_base_rules.md](model_base_rules.md)
+
+## Regola per i file .sh (script shell)
+
+Tutti i file `.sh` (script shell) devono essere posizionati esclusivamente in una sottocartella dedicata chiamata `bashscripts` (ad esempio `docs/bashscripts/`).
+Non devono mai trovarsi direttamente nella root di `docs/` o in altre sottocartelle generiche.
+
+**Motivazione:**
+- Ordine e reperibilità: tutti gli script shell sono facilmente individuabili e gestibili.
+- Sicurezza: si evita l'esecuzione accidentale di script non previsti.
+- Coerenza cross-modulo e tra root/moduli.
+
+**Esempio di struttura corretta:**
+```
+docs/
+└── bashscripts/
+    ├── deploy.sh
+    ├── clear_cache.sh
+    └── backup_db.sh
+```
+
+**Checklist aggiornata:**
+- [x] Nessun file .sh fuori da bashscripts/
+- [x] Documentazione aggiornata
+- [x] Struttura coerente in tutti i moduli
+>>>>>>> 0e2182f (.)

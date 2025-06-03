@@ -162,7 +162,7 @@ Line 147: Method Modules\Xot\Filament\Resources\XotBaseResource::getRelations() 
 ### 22. Errori in Filament/Resources/XotBaseResource/RelationManager/XotBaseRelationManager.php
 
 ```
-Line 111: Static access to instance property Modules\Xot\Filament\Resources\XotBaseResource\RelationManagers\XotBaseRelationManager::$resource.
+Line 111: Static access to instance property Modules\Xot\Filament\Resources\XotBaseResource\RelationManager\XotBaseRelationManager::$resource.
 Line 112: Dead catch - Exception is never thrown in the try block.
 ```
 
@@ -818,3 +818,11 @@ protected array $listeners = [
 ```
 
 L'aggiunta dell'annotazione `@phpstan-var` fornisce a PHPStan un'informazione più specifica sul tipo della proprietà, permettendogli di verificare correttamente che tutti gli elementi dell'array siano stringhe. Questo è particolarmente utile quando si lavora con Livewire, dove i listener sono definiti come un array associativo di eventi e metodi da chiamare.
+
+## Collegamenti tra versioni di PHPSTAN_FIXES.md
+* [PHPSTAN_FIXES.md](../../../Xot/docs/phpstan/PHPSTAN_FIXES.md)
+* [PHPSTAN_FIXES.md](../../../Xot/docs/PHPSTAN_FIXES.md)
+* [PHPSTAN_FIXES.md](../../../User/docs/PHPSTAN_FIXES.md)
+* [PHPSTAN_FIXES.md](../../../UI/docs/PHPSTAN_FIXES.md)
+* [PHPSTAN_FIXES.md](../../../Media/docs/PHPSTAN_FIXES.md)
+
