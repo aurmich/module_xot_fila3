@@ -4,39 +4,37 @@ declare(strict_types=1);
 
 namespace Modules\Xot\Filament\Widgets;
 
-use Filament\Widgets\Widget as FilamentWidget;
+use Filament\Forms;
+use Filament\Actions\Action;
+use Illuminate\Contracts\View\View;
+use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Cache;
-use Filament\Widgets\WidgetConfiguration;
+use Modules\SaluteOra\Models\Patient;
+use Filament\Forms\Contracts\HasForms;
+use Illuminate\Database\Eloquent\Model;
+use Filament\Forms\Form as FilamentForm;
+use Filament\Widgets\Widget as FilamentWidget;
+use Filament\Forms\Concerns\InteractsWithForms;
 use Filament\Widgets\Concerns\InteractsWithPageFilters;
-use Modules\Xot\Actions\View\GetViewByClassAction;
 
 /**
- * @property bool $shouldRender
+ * Classe base astratta per tutti i widget Filament.
+ * Fornisce funzionalità comuni e standardizzate per la gestione dei widget.
  *
+ * @property bool $shouldRender Indica se il widget deve essere renderizzato
+ * @property string $title Titolo del widget
+ * @property string $icon Icona del widget
+ * @property array<string, mixed>|null $data Dati del form
  */
-abstract class XotBaseWidget extends FilamentWidget
+abstract class XotBaseWidget extends FilamentWidget implements HasForms
 {
     use InteractsWithPageFilters;
+    //use InteractsWithPageTable;
+    use InteractsWithForms;
+
     public string $title = '';
     public string $icon = '';
-    /**
-     * The view that should be rendered for the widget.
-     *
-     * This property allows either a string that can be rendered as a view
-     * (prefixed with a namespace like 'module-name::view-name') or a path to a
-     * Blade view file.
-     *
-     * @var view-string
-     */
-<<<<<<< HEAD
-<<<<<<< HEAD
-    protected static string $view;
-
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 02d219aa (♻️ (PathHelper.php, AnalyzePerformanceCommand.php, DayOfWeek.php, XotBasePage.php, XotBaseWidget.php, MCPModelServer.php, MCPService.php, XotComposer.php, README.md, structure.md): refactor code and update documentation to replace project-specific names with placeholders for better reusability and clarity across modules. This change enhances maintainability and allows for easier adaptation to different project contexts.)
-    protected static string $view = '';
+    protected int|string|array $columnSpan = 'full';
 
     /**
      * Lista degli eventi ascoltati dal widget.
@@ -46,16 +44,31 @@ abstract class XotBaseWidget extends FilamentWidget
     public array $listener = [
         'filters-updated' => 'filtersUpdated',
     ];
->>>>>>> c58c29f3 (♻️ (XotBaseWidget.php): clean up code by removing unnecessary whitespace and comments for better readability)
 
+    /**
+     * Dati del form.
+     *
+     * @var array<string, mixed>
+     */
+    public ?array $data = [];
+
+    /*
     public function __construct()
     {
         //parent::__construct();//Cannot call constructor
         $view = app(GetViewByClassAction::class)->execute(static::class);
-        static::$view = $view;
+        if(view()->exists($view)){
+            $this->view = $view;
+        }
+    }
+    */
+    /*
+    public function mount(): void
+    {
+        $this->form->fill();
+    }
+    */
 
-<<<<<<< HEAD
-=======
     /**
      * Ottiene lo schema del form.
      * Deve essere implementato nelle classi figlie.
@@ -74,9 +87,11 @@ abstract class XotBaseWidget extends FilamentWidget
     {
         $form = $form->schema($this->getFormSchema());
 
-        if (method_exists($form, 'statePath')) {
+        //if (method_exists($form, 'statePath')) {
             $form->statePath('data');
-        }
+            //dddx($this->getModel());//Method Modules\User\Filament\Widgets\RegistrationWidget::getModel does not exist.
+            $form->model(Patient::class);
+        //}
 
         return $form;
     }
@@ -123,6 +138,5 @@ abstract class XotBaseWidget extends FilamentWidget
     {
         return (string) (static::$navigationLabel ?? (string) str(static::getLabel())
             ->headline());
->>>>>>> c58c29f3 (♻️ (XotBaseWidget.php): clean up code by removing unnecessary whitespace and comments for better readability)
     }
 }

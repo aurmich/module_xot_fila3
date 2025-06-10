@@ -49,8 +49,6 @@ Modules/
 
 ## Motivazione
 Questa convenzione:
-<<<<<<< HEAD
-=======
 # convenzioni per i namespace nei moduli
 
 ## regola assoluta e inviolabile
@@ -65,10 +63,10 @@ Questo è l'errore più comune e grave nelle convenzioni di namespace:
 
 ```php
 // GRAVEMENTE ERRATO
-namespace Modules\<nome progetto>\App\Controllers;
+namespace Modules\SaluteOra\App\Controllers;
 
 // CORRETTO
-namespace Modules\<nome progetto>\Controllers;
+namespace Modules\SaluteOra\Controllers;
 ```
 
 ## esempi corretti vs errati
@@ -76,19 +74,19 @@ namespace Modules\<nome progetto>\Controllers;
 ### corretti ✓
 ```php
 namespace Modules\Xot\Console\Commands;
-namespace Modules\<nome progetto>\Models;
+namespace Modules\SaluteOra\Models;
 namespace Modules\User\Services;
 namespace Modules\Tenant\Repositories;
-namespace Modules\<nome progetto>\Filament\Resources;
+namespace Modules\SaluteOra\Filament\Resources;
 ```
 
 ### errati ✗
 ```php
 namespace Modules\Xot\app\Console\Commands;       // errato: 'app' nel namespace
-namespace Modules\<nome progetto>\App\Models;           // errato: 'App' nel namespace
+namespace Modules\SaluteOra\App\Models;           // errato: 'App' nel namespace
 namespace Modules\User\App\Services;              // errato: 'App' nel namespace
 namespace Modules\Tenant\app\Repositories;        // errato: 'app' nel namespace
-namespace App\Modules\<nome progetto>\Controllers;      // errato: struttura completamente sbagliata
+namespace App\Modules\SaluteOra\Controllers;      // errato: struttura completamente sbagliata
 ```
 
 ## struttura fisica vs namespace
@@ -98,32 +96,32 @@ namespace App\Modules\<nome progetto>\Controllers;      // errato: struttura com
 Anche se i file sono fisicamente collocati in una directory `app/`, il namespace **non deve mai riflettere** questa struttura.
 
 ```
-Percorso fisico:    /Modules/<directory progetto>/app/Models/Patient.php
-Namespace corretto: namespace Modules\<nome progetto>\Models;
+Percorso fisico:    /Modules/SaluteOra/app/Models/Patient.php
+Namespace corretto: namespace Modules\SaluteOra\Models;
 ```
 
 ### mappatura corretta percorso-namespace
 
 | percorso fisico | namespace corretto |
 |-----------------|--------------------|
-| `/Modules/<directory progetto>/app/Models/Patient.php` | `Modules\<nome progetto>\Models` |
-| `/Modules/<directory progetto>/app/Filament/Resources/PatientResource.php` | `Modules\<nome progetto>\Filament\Resources` |
+| `/Modules/SaluteOra/app/Models/Patient.php` | `Modules\SaluteOra\Models` |
+| `/Modules/SaluteOra/app/Filament/Resources/PatientResource.php` | `Modules\SaluteOra\Filament\Resources` |
 | `/Modules/Xot/app/Providers/XotServiceProvider.php` | `Modules\Xot\Providers` |
 
 ### struttura directory completa
 
 ```
 Modules/
-  <nome progetto>/
+  SaluteOra/
     app/                        // directory fisica
       Console/
         Commands/
-          ImportPatient.php     // namespace Modules\<nome progetto>\Console\Commands;
+          ImportPatient.php     // namespace Modules\SaluteOra\Console\Commands;
       Models/
-        Patient.php            // namespace Modules\<nome progetto>\Models;
+        Patient.php            // namespace Modules\SaluteOra\Models;
       Filament/
         Resources/
-          PatientResource.php  // namespace Modules\<nome progetto>\Filament\Resources;
+          PatientResource.php  // namespace Modules\SaluteOra\Filament\Resources;
 ```
 
 ## come verificare i namespace
@@ -141,11 +139,10 @@ Prima di committare un file, verifica sempre che:
 Utilizza phpstan per verificare automaticamente i namespace:
 
 ```bash
-php artisan phpstan:analyse --level=1 Modules/<nome progetto>
+php artisan phpstan:analyse --level=1 Modules/SaluteOra
 ```
 
 ## motivazione di questa convenzione
->>>>>>> 02d219aa (♻️ (PathHelper.php, AnalyzePerformanceCommand.php, DayOfWeek.php, XotBasePage.php, XotBaseWidget.php, MCPModelServer.php, MCPService.php, XotComposer.php, README.md, structure.md): refactor code and update documentation to replace project-specific names with placeholders for better reusability and clarity across modules. This change enhances maintainability and allows for easier adaptation to different project contexts.)
 - Mantiene i namespace puliti e coerenti
 - Evita confusione con la struttura delle directory
 - Facilita l'autoloading e la navigazione del codice
@@ -156,8 +153,6 @@ php artisan phpstan:analyse --level=1 Modules/<nome progetto>
 - Non ci sono eccezioni a questa regola
 - I file possono essere fisicamente in `app/` ma il namespace non deve rifletterlo
 - Questa convenzione è obbligatoria per mantenere la compatibilità con il framework
-<<<<<<< HEAD
-=======
 
 ## Errori Comuni
 
@@ -167,10 +162,10 @@ Un errore comune è includere `App` nel namespace:
 
 ```php
 // ERRATO ❌
-namespace Modules\<nome progetto>\App\Console\Commands;
+namespace Modules\SaluteOra\App\Console\Commands;
 
 // CORRETTO ✓
-namespace Modules\<nome progetto>\Console\Commands;
+namespace Modules\SaluteOra\Console\Commands;
 ```
 
 ### Conseguenze dell'Errore
@@ -186,7 +181,7 @@ namespace Modules\<nome progetto>\Console\Commands;
 Utilizzare grep per trovare tutti i file con namespace errato:
 
 ```bash
-grep -r "namespace Modules\\\\.*\\\\App\\" /var/www/html/base_generic/laravel/Modules
+grep -r "namespace Modules\\\\.*\\\\App\\\\" /var/www/html/base_saluteora/laravel/Modules
 ```
 
 ### PHP Stan
@@ -217,4 +212,3 @@ php artisan cache:clear
 php artisan config:clear
 php artisan view:clear
 ```
->>>>>>> 02d219aa (♻️ (PathHelper.php, AnalyzePerformanceCommand.php, DayOfWeek.php, XotBasePage.php, XotBaseWidget.php, MCPModelServer.php, MCPService.php, XotComposer.php, README.md, structure.md): refactor code and update documentation to replace project-specific names with placeholders for better reusability and clarity across modules. This change enhances maintainability and allows for easier adaptation to different project contexts.)

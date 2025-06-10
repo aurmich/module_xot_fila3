@@ -242,7 +242,6 @@ laravel/Themes/[Nome]/
 =======
 b6f667c (.)
 
-
 # Struttura del Modulo Xot
 
 ## Struttura delle Directory
@@ -1057,9 +1056,7 @@ tests_old
 ---
 
 aurmich/dev
-5693302 (.)
-b6f667c (.)
-
+5693302 (.)b6f667c (.)
 
 ## Regole sui Comandi Artisan Custom nei Moduli
 
@@ -1069,15 +1066,3 @@ b6f667c (.)
 - Aggiornare la documentazione del modulo con esempi e riferimenti.
 
 Vedi anche la documentazione specifica del modulo per dettagli e casi particolari.
-
-## [REGOLA FONDAMENTALE] Uso di web.php
-
-Non usare `web.php` né nel frontoffice (usare folio+volt+laraxot) né nel backoffice (usare laravel+filament+laraxot), tranne casi eccezionali come la rotta di logout.
-
-- Per il frontoffice: usare sempre folio + volt + laraxot
-- Per il backoffice: usare sempre laravel + filament + laraxot
-- Eccezione: solo per rotte come il logout
-
-Vedi anche:
-- .cursor/rules/webphp_usage.mdc
-- .windsurf/rules/webphp_usage.mdc

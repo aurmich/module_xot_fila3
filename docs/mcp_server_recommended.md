@@ -21,7 +21,3 @@ Modulo base/framework: fornisce servizi trasversali, integrazione tra componenti
 
 ## Note
 - Xot non richiede MCP custom, ma può essere esteso da altri moduli.
-
-## Collegamenti ad altri moduli
-
-- [Server MCP consigliati per il modulo Comment](../../../Comment/docs/structure.md)

@@ -180,9 +180,3 @@ Questo documento riassume le migliori pratiche per la creazione e gestione delle
    - **Indirizzo e contatti**: via, cap, regione_id, provincia_id, etc.
    - **Dati bancari**: iban, intestatario, banca, filiale
    - **Modalità di ricezione**: Lista di modalità selezionabili
-
-## Localizzazione delle label nei form Filament
-
-Non usare ->label() direttamente nei form Filament. Utilizzare sempre i file di traduzione del modulo (es. Modules/<modulo>/lang/it/...).
-
-[Link bidirezionale: vedere anche Predict/docs/filament-best-practices.mdc]

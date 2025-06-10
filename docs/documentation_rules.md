@@ -17,7 +17,7 @@ Questo documento descrive le regole fondamentali per la creazione e la manutenzi
 - MAI usare percorsi assoluti nei collegamenti
 - MAI includere il nome del progetto nei percorsi
 - MAI usare percorsi che iniziano con `/var/www/html/` o simili
-- MAI usare percorsi che includono `generic` o altri nomi specifici
+- MAI usare percorsi che includono `saluteora` o altri nomi specifici
 
 ### Formato Corretto
 ```markdown
@@ -31,9 +31,9 @@ Questo documento descrive le regole fondamentali per la creazione e la manutenzi
 ### Formato Non Corretto
 ```markdown
 # Collegamenti Non Corretti
-[Documento Correlato](/var/www/html/<directory progetto>/laravel/Modules/Xot/docs/documento.md)
-[Documento in Sottodirectory](https://github.com/<directory progetto>/progetto/blob/main/docs/documento.md)
-[Documento in Modulo Altro](C:\progetti\generic\laravel\Modules\Xot\docs\documento.md)
+[Documento Correlato](/var/www/html/saluteora/laravel/Modules/Xot/docs/documento.md)
+[Documento in Sottodirectory](https://github.com/saluteora/progetto/blob/main/docs/documento.md)
+[Documento in Modulo Altro](C:\progetti\saluteora\laravel\Modules\Xot\docs\documento.md)
 ```
 
 ### Checklist di Validazione
@@ -51,7 +51,7 @@ Questo documento descrive le regole fondamentali per la creazione e la manutenzi
 - MAI usare percorsi assoluti nei collegamenti
 - MAI includere il nome del progetto nei percorsi
 - MAI usare percorsi che iniziano con `/var/www/html/` o simili
-- MAI usare percorsi che includono `generic` o altri nomi specifici
+- MAI usare percorsi che includono `saluteora` o altri nomi specifici
 
 ### Formato Corretto
 ```markdown
@@ -65,9 +65,9 @@ Questo documento descrive le regole fondamentali per la creazione e la manutenzi
 ### Formato Non Corretto
 ```markdown
 # Collegamenti Non Corretti
-[Documento Correlato](/var/www/html/<directory progetto>/laravel/Modules/Xot/docs/documento.md)
-[Documento in Sottodirectory](https://github.com/<directory progetto>/progetto/blob/main/docs/documento.md)
-[Documento in Modulo Altro](C:\progetti\generic\laravel\Modules\Xot\docs\documento.md)
+[Documento Correlato](/var/www/html/saluteora/laravel/Modules/Xot/docs/documento.md)
+[Documento in Sottodirectory](https://github.com/saluteora/progetto/blob/main/docs/documento.md)
+[Documento in Modulo Altro](C:\progetti\saluteora\laravel\Modules\Xot\docs\documento.md)
 ```
 
 ### Checklist di Validazione
@@ -76,7 +76,6 @@ Questo documento descrive le regole fondamentali per la creazione e la manutenzi
 - [ ] Non contiene percorsi assoluti
 - [ ] Usa la notazione corretta per i percorsi relativi
 - [ ] I percorsi sono compatibili con diversi sistemi operativib6f667c (.)
-
 
 - [Prompt di Documentazione](./prompts/DOCUMENTATION_PROMPTS.md) - Regole e best practices per i prompt
 
@@ -86,7 +85,7 @@ Questo documento descrive le regole fondamentali per la creazione e la manutenzi
 - MAI usare percorsi assoluti nei collegamenti
 - MAI includere il nome del progetto nei percorsi
 - MAI usare percorsi che iniziano con `/var/www/html/` o simili
-- MAI usare percorsi che includono `generic` o altri nomi specifici
+- MAI usare percorsi che includono `saluteora` o altri nomi specifici
 
 ### Formato Corretto
 ```markdown
@@ -100,9 +99,9 @@ Questo documento descrive le regole fondamentali per la creazione e la manutenzi
 ### Formato Non Corretto
 ```markdown
 # Collegamenti Non Corretti
-[Documento Correlato](/var/www/html/<directory progetto>/laravel/Modules/Xot/docs/documento.md)
-[Documento in Sottodirectory](https://github.com/<directory progetto>/progetto/blob/main/docs/documento.md)
-[Documento in Modulo Altro](C:\progetti\generic\laravel\Modules\Xot\docs\documento.md)
+[Documento Correlato](/var/www/html/saluteora/laravel/Modules/Xot/docs/documento.md)
+[Documento in Sottodirectory](https://github.com/saluteora/progetto/blob/main/docs/documento.md)
+[Documento in Modulo Altro](C:\progetti\saluteora\laravel\Modules\Xot\docs\documento.md)
 ```
 
 ### Checklist di Validazione
@@ -111,7 +110,6 @@ Questo documento descrive le regole fondamentali per la creazione e la manutenzi
 - [ ] Non contiene percorsi assoluti
 - [ ] Usa la notazione corretta per i percorsi relativi
 - [ ] I percorsi sono compatibili con diversi sistemi operativib6f667c (.)
-
 
 ## 1. Regole Fondamentali
 
@@ -144,11 +142,9 @@ Questo documento descrive le regole fondamentali per la creazione e la manutenzi
 - Ogni modifica al prompt deve essere accompagnata da aggiornamenti alla documentazione
 - La documentazione deve spiegare il "perché" delle regole, non solo il "come"b6f667c (.)
 
-
 - Devono essere documentati nelle cartelle docs appropriate
 - Ogni modifica al prompt deve essere accompagnata da aggiornamenti alla documentazione
 - La documentazione deve spiegare il "perché" delle regole, non solo il "come"b6f667c (.)
-
 
 ## 2. Struttura della Documentazione
 

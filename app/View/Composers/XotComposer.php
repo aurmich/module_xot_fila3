@@ -27,9 +27,6 @@ class XotComposer
      */
     public function __call(string $name, array $arguments): mixed
     {
-
-
-        // If not found in Cms, try other modules
         $modules = Module::getOrdered();
 
         $module = Arr::first(
@@ -40,26 +37,19 @@ class XotComposer
                     return false;
                 }
 
+                Assert::string($moduleName = $module->getName());
+                $class = '\Modules\\'.$moduleName.'\View\Composers\ThemeComposer';
 
-
-                $moduleName = $module->getName();
-                // Handle case sensitivity: convert module name to proper namespace format
-                $namespaceModuleName = Str::studly(Str::lower($moduleName));
-                $class = '\Modules\\'.$namespaceModuleName.'\\View\\Composers\\ThemeComposer';
-
-                return class_exists($class) && method_exists($class, $name);
+                return method_exists($class, $name);
             }
         );
 
-        if (!\is_object($module)) {
+        if (! \is_object($module)) {
             throw new \Exception('Create a View\Composers\ThemeComposer.php inside a module with ['.$name.'] method');
         }
 
         Assert::isInstanceOf($module, LaravelModule::class, '['.__LINE__.']['.class_basename($this).']');
-        $moduleName = $module->getName();
-        // Handle case sensitivity: convert module name to proper namespace format
-        $namespaceModuleName = Str::studly(Str::lower($moduleName));
-        $class = '\Modules\\'.$namespaceModuleName.'\\View\\Composers\\ThemeComposer';
+        $class = '\Modules\\'.$module->getName().'\View\Composers\ThemeComposer';
 
         $app = app($class);
         $callback = [$app, $name];
