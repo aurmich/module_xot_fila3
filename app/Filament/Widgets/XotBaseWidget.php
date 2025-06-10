@@ -29,15 +29,14 @@ abstract class XotBaseWidget extends FilamentWidget
      * @var view-string
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     protected static string $view;
 
 =======
 <<<<<<< HEAD
-    protected static string $view = '';
 =======
-    protected static string $view;
-
->>>>>>> 5529cf84 (♻️ (XotBaseWidget.php): clean up code by removing unnecessary whitespace and comments for better readability)
+>>>>>>> 02d219aa (♻️ (PathHelper.php, AnalyzePerformanceCommand.php, DayOfWeek.php, XotBasePage.php, XotBaseWidget.php, MCPModelServer.php, MCPService.php, XotComposer.php, README.md, structure.md): refactor code and update documentation to replace project-specific names with placeholders for better reusability and clarity across modules. This change enhances maintainability and allows for easier adaptation to different project contexts.)
+    protected static string $view = '';
 
     /**
      * Lista degli eventi ascoltati dal widget.
@@ -46,10 +45,6 @@ abstract class XotBaseWidget extends FilamentWidget
      */
     public array $listener = [
         'filters-updated' => 'filtersUpdated',
-<<<<<<< HEAD
-=======
-
->>>>>>> 5529cf84 (♻️ (XotBaseWidget.php): clean up code by removing unnecessary whitespace and comments for better readability)
     ];
 >>>>>>> c58c29f3 (♻️ (XotBaseWidget.php): clean up code by removing unnecessary whitespace and comments for better readability)
 
@@ -75,11 +70,7 @@ abstract class XotBaseWidget extends FilamentWidget
      * @param FilamentForm $form Il form da configurare
      * @return FilamentForm Il form configurato
      */
-<<<<<<< HEAD
     public function form(FilamentForm $form): FilamentForm
-=======
-    public function form(Form $form): Form
->>>>>>> 5529cf84 (♻️ (XotBaseWidget.php): clean up code by removing unnecessary whitespace and comments for better readability)
     {
         $form = $form->schema($this->getFormSchema());
 
@@ -90,14 +81,11 @@ abstract class XotBaseWidget extends FilamentWidget
         return $form;
     }
 
-<<<<<<< HEAD
     /**
      * Ottiene le azioni del form.
      *
      * @return array<int|string, Action>
      */
-=======
->>>>>>> 5529cf84 (♻️ (XotBaseWidget.php): clean up code by removing unnecessary whitespace and comments for better readability)
     protected function getFormActions(): array
     {
         return [

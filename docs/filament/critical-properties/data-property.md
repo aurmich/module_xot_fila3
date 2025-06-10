@@ -77,21 +77,5 @@ Se la proprietà `$data` viene rimossa da `XotBaseWidget`, si verificano i segue
 Prima di ogni commit che coinvolge `XotBaseWidget`, eseguire questo controllo:
 
 ```bash
-grep -n "public ?array \$data" /var/www/html/base_saluteora/laravel/Modules/Xot/app/Filament/Widgets/XotBaseWidget.php
+grep -n "public ?array \$data" /var/www/html/base_generic/laravel/Modules/Xot/app/Filament/Widgets/XotBaseWidget.php
 ```
-
-Se il comando non restituisce risultati, LA PROPRIETÀ È STATA RIMOSSA e deve essere ripristinata immediatamente.
-
-## Origine dell'Architettura
-
-Questa struttura deriva dall'architettura Livewire+Filament in cui:
-
-1. I componenti Livewire utilizzano proprietà pubbliche per il data binding
-2. Filament standardizza il pattern utilizzando un array `$data` per organizzare tutti i valori dei form
-3. `XotBaseWidget` implementa questo pattern per tutti i widget del progetto
-
-## Collegamenti Correlati
-
-- [Livewire Properties Documentation](https://livewire.laravel.com/docs/properties)
-- [Filament Forms Documentation](https://filamentphp.com/docs/3.x/forms/installation)
-- [RegistrationWidget Example](../../User/docs/filament/widgets/registration-widget.md)

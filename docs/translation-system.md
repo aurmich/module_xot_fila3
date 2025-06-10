@@ -6,6 +6,55 @@ La regola più importante del sistema di traduzione è:
 
 **MAI utilizzare il metodo `->label()` nei componenti Filament.**
 
+## 🚨 REGOLA CRITICA: CreateRecord con Modello Translatable
+
+**IMPORTANTE**: Se il MODELLO utilizza il trait `HasTranslations`, NON estendere `XotBaseCreateRecord`, ma estendere `LangBaseCreateRecord`.
+
+- ❌ Modello con `use HasTranslations` + `extends XotBaseCreateRecord`
+- ✅ Modello con `use HasTranslations` + `extends LangBaseCreateRecord`
+- **SEMPRE verificare**: Se il MODELLO ha `use Spatie\Translatable\HasTranslations`, usare `LangBase*` invece di `XotBase*`
+- **Controllo**: Verificare il MODELLO associato alla risorsa, non il CreateRecord stesso
+- **Applicazione**: Tutti i record (Create, Edit, View, etc.) devono usare `LangBase*`
+
+### Esempio Corretto con Modello Translatable
+
+```php
+// MODELLO con HasTranslations
+class Patient extends Model
+{
+    use Spatie\Translatable\HasTranslations; // ← QUESTO è il trigger!
+}
+
+// ❌ ERRATO - Modello ha HasTranslations ma uso XotBase
+class CreatePatient extends \Modules\Xot\Filament\Resources\Pages\XotBaseCreateRecord
+{
+    // Errore! Il modello Patient ha HasTranslations
+}
+
+// ✅ CORRETTO - Modello ha HasTranslations quindi uso LangBase
+class CreatePatient extends \Modules\Xot\Filament\Resources\Pages\LangBaseCreateRecord
+{
+    // Corretto! Il modello Patient ha HasTranslations
+}
+```
+
+### Perché Usare LangBase* con Modelli Translatable?
+
+1. **Gestione Automatica delle Traduzioni**
+   - `LangBaseCreateRecord` gestisce automaticamente i campi tradotti del modello
+   - Integrazione nativa con il sistema di traduzione quando il modello ha `HasTranslations`
+   - Validazione corretta per i campi multilingua del modello
+
+2. **Compatibilità con Spatie Translatable**
+   - Supporto nativo per modelli che usano il trait `HasTranslations`
+   - Gestione automatica dei fallback linguistici per i campi del modello
+   - Sincronizzazione con i file di traduzione del modulo
+
+3. **Prevenzione Errori**
+   - Evita conflitti tra sistemi di traduzione quando il modello è translatable
+   - Gestione corretta degli array di traduzione per i campi del modello
+   - Validazione appropriata per campi multilingua definiti nel modello
+
 ### Perché Non Usare ->label()?
 
 1. **Bypass del Sistema di Traduzione**
@@ -192,6 +241,11 @@ TextColumn::make('name')
 4. **Documentazione**
    - Commentare i file di traduzione
    - Mantenere un README aggiornato
+
+5. **🚨 CRITICO: Verificare Translatable**
+   - Se usi `use Translatable`, estendi `LangBase*`
+   - Non mescolare `XotBase*` con `Translatable`
+   - Controllare sempre prima di estendere
 
 ## Troubleshooting
 

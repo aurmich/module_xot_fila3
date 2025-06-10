@@ -293,6 +293,15 @@ Per cancellare la cache:
 php artisan lang:clear
 ```
 
+## Alias middleware 'localize'
+
+Il middleware `localize` usato in vari moduli (es. Predict, Cms) è un alias di `Modules\UI\Http\Middleware\SetLocale::class`, registrato in `app/Http/Kernel.php`.
+
+Per dettagli sull'uso e la configurazione vedere anche:
+- Predict/docs/namespace-rules.mdc
+
+[Link bidirezionale: vedere anche Predict/docs/namespace-rules.mdc]
+
 ## Conclusione
 
 Seguendo queste linee guida, potrai implementare un sistema di localizzazione robusto e manutenibile all'interno del framework Laraxot <nome progetto>. Ricorda che i file di localizzazione devono rimanere nella directory `lang` alla radice del modulo, rispettando le convenzioni standard di Laravel. 

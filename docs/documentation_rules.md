@@ -17,7 +17,7 @@ Questo documento descrive le regole fondamentali per la creazione e la manutenzi
 - MAI usare percorsi assoluti nei collegamenti
 - MAI includere il nome del progetto nei percorsi
 - MAI usare percorsi che iniziano con `/var/www/html/` o simili
-- MAI usare percorsi che includono `saluteora` o altri nomi specifici
+- MAI usare percorsi che includono `generic` o altri nomi specifici
 
 ### Formato Corretto
 ```markdown
@@ -31,9 +31,9 @@ Questo documento descrive le regole fondamentali per la creazione e la manutenzi
 ### Formato Non Corretto
 ```markdown
 # Collegamenti Non Corretti
-[Documento Correlato](/var/www/html/saluteora/laravel/Modules/Xot/docs/documento.md)
-[Documento in Sottodirectory](https://github.com/saluteora/progetto/blob/main/docs/documento.md)
-[Documento in Modulo Altro](C:\progetti\saluteora\laravel\Modules\Xot\docs\documento.md)
+[Documento Correlato](/var/www/html/<directory progetto>/laravel/Modules/Xot/docs/documento.md)
+[Documento in Sottodirectory](https://github.com/<directory progetto>/progetto/blob/main/docs/documento.md)
+[Documento in Modulo Altro](C:\progetti\generic\laravel\Modules\Xot\docs\documento.md)
 ```
 
 ### Checklist di Validazione
@@ -51,7 +51,7 @@ Questo documento descrive le regole fondamentali per la creazione e la manutenzi
 - MAI usare percorsi assoluti nei collegamenti
 - MAI includere il nome del progetto nei percorsi
 - MAI usare percorsi che iniziano con `/var/www/html/` o simili
-- MAI usare percorsi che includono `saluteora` o altri nomi specifici
+- MAI usare percorsi che includono `generic` o altri nomi specifici
 
 ### Formato Corretto
 ```markdown
@@ -65,9 +65,9 @@ Questo documento descrive le regole fondamentali per la creazione e la manutenzi
 ### Formato Non Corretto
 ```markdown
 # Collegamenti Non Corretti
-[Documento Correlato](/var/www/html/saluteora/laravel/Modules/Xot/docs/documento.md)
-[Documento in Sottodirectory](https://github.com/saluteora/progetto/blob/main/docs/documento.md)
-[Documento in Modulo Altro](C:\progetti\saluteora\laravel\Modules\Xot\docs\documento.md)
+[Documento Correlato](/var/www/html/<directory progetto>/laravel/Modules/Xot/docs/documento.md)
+[Documento in Sottodirectory](https://github.com/<directory progetto>/progetto/blob/main/docs/documento.md)
+[Documento in Modulo Altro](C:\progetti\generic\laravel\Modules\Xot\docs\documento.md)
 ```
 
 ### Checklist di Validazione
@@ -86,7 +86,7 @@ Questo documento descrive le regole fondamentali per la creazione e la manutenzi
 - MAI usare percorsi assoluti nei collegamenti
 - MAI includere il nome del progetto nei percorsi
 - MAI usare percorsi che iniziano con `/var/www/html/` o simili
-- MAI usare percorsi che includono `saluteora` o altri nomi specifici
+- MAI usare percorsi che includono `generic` o altri nomi specifici
 
 ### Formato Corretto
 ```markdown
@@ -100,9 +100,9 @@ Questo documento descrive le regole fondamentali per la creazione e la manutenzi
 ### Formato Non Corretto
 ```markdown
 # Collegamenti Non Corretti
-[Documento Correlato](/var/www/html/saluteora/laravel/Modules/Xot/docs/documento.md)
-[Documento in Sottodirectory](https://github.com/saluteora/progetto/blob/main/docs/documento.md)
-[Documento in Modulo Altro](C:\progetti\saluteora\laravel\Modules\Xot\docs\documento.md)
+[Documento Correlato](/var/www/html/<directory progetto>/laravel/Modules/Xot/docs/documento.md)
+[Documento in Sottodirectory](https://github.com/<directory progetto>/progetto/blob/main/docs/documento.md)
+[Documento in Modulo Altro](C:\progetti\generic\laravel\Modules\Xot\docs\documento.md)
 ```
 
 ### Checklist di Validazione

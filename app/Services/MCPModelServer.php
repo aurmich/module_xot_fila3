@@ -67,7 +67,11 @@ class MCPModelServer extends MCPServer
         // Validazione estensioni
         if (isset($context['extends'])) {
             $parent = $class->getParentClass();
+<<<<<<< HEAD
             if (!$parent || $parent->getName() !== "Modules\\Patient\\Models\\{$context['extends']}") {
+=======
+            if (!$parent || $parent->getName() !== "Modules\\<nome progetto>\\Models\\{$context['extends']}") {
+>>>>>>> 02d219aa (♻️ (PathHelper.php, AnalyzePerformanceCommand.php, DayOfWeek.php, XotBasePage.php, XotBaseWidget.php, MCPModelServer.php, MCPService.php, XotComposer.php, README.md, structure.md): refactor code and update documentation to replace project-specific names with placeholders for better reusability and clarity across modules. This change enhances maintainability and allows for easier adaptation to different project contexts.)
                 return false;
             }
         }
@@ -77,7 +81,11 @@ class MCPModelServer extends MCPServer
 
     protected function getModelClass(string $model): ?ReflectionClass
     {
+<<<<<<< HEAD
         $namespace = "Modules\\Patient\\Models\\{$model}";
+=======
+        $namespace = "Modules\\<nome progetto>\\Models\\{$model}";
+>>>>>>> 02d219aa (♻️ (PathHelper.php, AnalyzePerformanceCommand.php, DayOfWeek.php, XotBasePage.php, XotBaseWidget.php, MCPModelServer.php, MCPService.php, XotComposer.php, README.md, structure.md): refactor code and update documentation to replace project-specific names with placeholders for better reusability and clarity across modules. This change enhances maintainability and allows for easier adaptation to different project contexts.)
         return class_exists($namespace) ? new ReflectionClass($namespace) : null;
     }
 

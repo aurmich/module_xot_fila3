@@ -31,12 +31,34 @@ abstract class XotBasePage extends Page implements HasForms
     protected static ?string $model = null; // ---
     public ?array $data = [];
 
+<<<<<<< HEAD
     // public function mount(): void {
     //     $user = auth()->user();
     //     if(!$user->hasRole('super-admin')){
     //         redirect('/admin');
     //     }
     // }
+=======
+    /**
+     * Dati del form.
+     * Contiene i dati del form durante la gestione della pagina.
+     *
+     * @var array<string, mixed>
+     */
+    public array $data = [];
+
+    /**
+     * Cache timeout per operazioni di cache (in secondi).
+     */
+    protected static int $cacheTimeout = 3600;
+
+    /**
+     * Ottiene il nome del modulo dalla classe.
+     * Estrae il nome del modulo dal namespace della classe.
+     *
+     * @return string Il nome del modulo (es. '<nome progetto>', 'User', ecc.)
+     */
+>>>>>>> 02d219aa (♻️ (PathHelper.php, AnalyzePerformanceCommand.php, DayOfWeek.php, XotBasePage.php, XotBaseWidget.php, MCPModelServer.php, MCPService.php, XotComposer.php, README.md, structure.md): refactor code and update documentation to replace project-specific names with placeholders for better reusability and clarity across modules. This change enhances maintainability and allows for easier adaptation to different project contexts.)
     public static function getModuleName(): string
     {
         return Str::between(static::class, 'Modules\\', '\Filament');
@@ -118,4 +140,111 @@ abstract class XotBasePage extends Page implements HasForms
 
         return $user;
     }
+<<<<<<< HEAD
+=======
+
+    /**
+     * Verifica se l'utente ha l'accesso alla pagina.
+     * Utilizza il sistema di autorizzazioni per controllare l'accesso.
+     *
+     * @throws \Illuminate\Auth\Access\AuthorizationException Se l'utente non è autorizzato
+     */
+    protected function authorizeAccess(): void
+    {
+        $this->authorize('view', static::class);
+    }
+
+    /**
+     * Verifica se l'utente ha un permesso specifico.
+     * Utile per controlli granulari all'interno delle pagine.
+     *
+     * @param string $permission Il permesso da verificare
+     * @return bool True se l'utente ha il permesso, false altrimenti
+     */
+    protected function hasPermissionTo(string $permission): bool
+    {
+        $user = $this->getUser();
+
+        // Verifiamo che il metodo hasPermissionTo esista sull'utente
+        if (!method_exists($user, 'hasPermissionTo')) {
+            throw new \RuntimeException('Il modello utente deve implementare il metodo hasPermissionTo');
+        }
+
+        return $user->hasPermissionTo($permission);
+    }
+
+    /**
+     * Ottiene la vista associata alla pagina.
+     *
+     * @return string Il percorso della vista
+     */
+    public function getView(): string
+    {
+        if (static::$view === '') {
+            $view = app(GetViewByClassAction::class)->execute(static::class);
+            if (view()->exists($view)) {
+                return (string) $view;
+            }
+
+            // Se non troviamo una vista, lanciamo un'eccezione
+            throw new \RuntimeException("Nessuna vista trovata per la classe: " . static::class);
+        }
+
+        return static::$view;
+    }
+
+    /**
+     * Risolve il percorso della vista.
+     *
+     * @return string Il percorso della vista
+     * @throws \RuntimeException Se la vista non esiste
+     */
+    protected function resolveViewPath(): string
+    {
+        $view = $this->getView();
+        if (view()->exists($view)) {
+            return $view;
+        }
+
+        throw new \RuntimeException("View [{$view}] not found for page: " . static::class);
+    }
+
+    /**
+     * Ottiene una query builder per il modello associato alla pagina.
+     *
+     * @return Builder<Model>
+     * @throws \LogicException Se il modello non è definito
+     */
+    protected function getQuery(): Builder
+    {
+        $modelClass = $this->getModel();
+
+        if (!class_exists($modelClass)) {
+            throw new \LogicException("Model class {$modelClass} does not exist");
+        }
+
+        /** @var class-string<Model> $modelClass */
+        $instance = new $modelClass();
+        if (!$instance instanceof Model) {
+            throw new \LogicException("Class {$modelClass} must extend Eloquent Model");
+        }
+
+        /** @var Builder<Model> $query */
+        $query = $modelClass::query();
+        return $query;
+    }
+
+    /**
+     * Invalida la cache per il modello specificato.
+     *
+     * @param class-string<Model>|null $modelClass
+     * @param int|string|null $id
+     * @return void
+     */
+    protected function invalidateCache(?string $modelClass = null, int|string|null $id = null): void
+    {
+        // Implementazione custom se necessaria
+        // Per ora lasciamo vuoto, può essere implementato nelle classi figlie
+    }
+>>>>>>> 02d219aa (♻️ (PathHelper.php, AnalyzePerformanceCommand.php, DayOfWeek.php, XotBasePage.php, XotBaseWidget.php, MCPModelServer.php, MCPService.php, XotComposer.php, README.md, structure.md): refactor code and update documentation to replace project-specific names with placeholders for better reusability and clarity across modules. This change enhances maintainability and allows for easier adaptation to different project contexts.)
 }

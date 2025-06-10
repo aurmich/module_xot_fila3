@@ -3,6 +3,7 @@
 ## Introduzione
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 Il modulo Xot è il core del sistema, fornisce funzionalità base e componenti riutilizzabili per tutti gli altri moduli. Implementa pattern architetturali, gestione degli errori, e componenti UI comuni.
 
 ## File Chiave
@@ -21,8 +22,9 @@ Il modulo Xot è il core del sistema, fornisce funzionalità base e componenti r
 
 =======
 <<<<<<< HEAD
-Altre sezioni...
 =======
+>>>>>>> 02d219aa (♻️ (PathHelper.php, AnalyzePerformanceCommand.php, DayOfWeek.php, XotBasePage.php, XotBaseWidget.php, MCPModelServer.php, MCPService.php, XotComposer.php, README.md, structure.md): refactor code and update documentation to replace project-specific names with placeholders for better reusability and clarity across modules. This change enhances maintainability and allows for easier adaptation to different project contexts.)
+Altre sezioni...
 ## Introduzione
 Il modulo Xot è il modulo base che fornisce le classi e le funzionalità fondamentali per gli altri moduli. Gestisce l'integrazione con Filament, Livewire e Volt, fornendo una base solida per lo sviluppo di applicazioni modulari.
 
@@ -596,5 +598,8 @@ docs/
 - Laravel 12.x
 - Estensioni PHP: PDO, JSON, cURL
 - Database: MySQL 8.0+ o PostgreSQL 13+
+<<<<<<< HEAD
 >>>>>>> 5529cf84 (♻️ (XotBaseWidget.php): clean up code by removing unnecessary whitespace and comments for better readability)
 >>>>>>> c58c29f3 (♻️ (XotBaseWidget.php): clean up code by removing unnecessary whitespace and comments for better readability)
+=======
+>>>>>>> 02d219aa (♻️ (PathHelper.php, AnalyzePerformanceCommand.php, DayOfWeek.php, XotBasePage.php, XotBaseWidget.php, MCPModelServer.php, MCPService.php, XotComposer.php, README.md, structure.md): refactor code and update documentation to replace project-specific names with placeholders for better reusability and clarity across modules. This change enhances maintainability and allows for easier adaptation to different project contexts.)

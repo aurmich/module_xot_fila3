@@ -473,8 +473,13 @@ class AnalyzePerformanceCommand extends Command
             }
         } elseif ($module === 'Patient') {
             // Simula operazioni paziente
+<<<<<<< HEAD
             if (class_exists('\\Modules\\Patient\\Models\\Patient')) {
                 $patientClass = '\\Modules\\Patient\\Models\\Patient';
+=======
+            if (class_exists('\\Modules\\<nome progetto>\\Models\\Patient')) {
+                $patientClass = '\\Modules\\<nome progetto>\\Models\\Patient';
+>>>>>>> 02d219aa (♻️ (PathHelper.php, AnalyzePerformanceCommand.php, DayOfWeek.php, XotBasePage.php, XotBaseWidget.php, MCPModelServer.php, MCPService.php, XotComposer.php, README.md, structure.md): refactor code and update documentation to replace project-specific names with placeholders for better reusability and clarity across modules. This change enhances maintainability and allows for easier adaptation to different project contexts.)
                 $patientClass::first();
                 $patientClass::count();
             }

@@ -73,7 +73,7 @@ enum DayOfWeek: int implements HasLabel, HasColor, HasIcon, HasDescription
             self::SUNDAY => 'heroicon-o-calendar',
         };
     }
-    
+
     /**
      * Restituisce la descrizione dettagliata di questo giorno della settimana.
      * Implementazione dell'interfaccia HasDescription di Filament.
@@ -81,6 +81,7 @@ enum DayOfWeek: int implements HasLabel, HasColor, HasIcon, HasDescription
     public function getDescription(): ?string
     {
         return match($this) {
+<<<<<<< HEAD
             self::MONDAY => __('patient::common.days.description.monday'),
             self::TUESDAY => __('patient::common.days.description.tuesday'),
             self::WEDNESDAY => __('patient::common.days.description.wednesday'),
@@ -88,6 +89,15 @@ enum DayOfWeek: int implements HasLabel, HasColor, HasIcon, HasDescription
             self::FRIDAY => __('patient::common.days.description.friday'),
             self::SATURDAY => __('patient::common.days.description.saturday'),
             self::SUNDAY => __('patient::common.days.description.sunday'),
+=======
+            self::MONDAY => __('xot::common.days.description.monday'),
+            self::TUESDAY => __('xot::common.days.description.tuesday'),
+            self::WEDNESDAY => __('xot::common.days.description.wednesday'),
+            self::THURSDAY => __('xot::common.days.description.thursday'),
+            self::FRIDAY => __('xot::common.days.description.friday'),
+            self::SATURDAY => __('xot::common.days.description.saturday'),
+            self::SUNDAY => __('xot::common.days.description.sunday'),
+>>>>>>> 02d219aa (♻️ (PathHelper.php, AnalyzePerformanceCommand.php, DayOfWeek.php, XotBasePage.php, XotBaseWidget.php, MCPModelServer.php, MCPService.php, XotComposer.php, README.md, structure.md): refactor code and update documentation to replace project-specific names with placeholders for better reusability and clarity across modules. This change enhances maintainability and allows for easier adaptation to different project contexts.)
         };
     }
 
