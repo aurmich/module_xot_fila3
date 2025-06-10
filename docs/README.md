@@ -2,6 +2,7 @@
 
 ## Introduzione
 
+<<<<<<< HEAD
 Il modulo Xot è il core del sistema, fornisce funzionalità base e componenti riutilizzabili per tutti gli altri moduli. Implementa pattern architetturali, gestione degli errori, e componenti UI comuni.
 
 ## File Chiave
@@ -18,12 +19,28 @@ Il modulo Xot è il core del sistema, fornisce funzionalità base e componenti r
 - [Volt Folio Best Practices](./VOLT_FOLIO_BEST_PRACTICES.md) - Best practices per Volt e Folio
 - [Volt Folio Best Practices](./VOLT_FOLIO_BEST_PRACTICES.md) - Best practices per Volt e Foliob6f667c (.)
 
+=======
+<<<<<<< HEAD
+Altre sezioni...
+=======
+## Introduzione
+Il modulo Xot è il modulo base che fornisce le classi e le funzionalità fondamentali per gli altri moduli. Gestisce l'integrazione con Filament, Livewire e Volt, fornendo una base solida per lo sviluppo di applicazioni modulari.
+
+## Indice
+
+### Architettura e Componenti Base
+- [Architecture](./architecture.md) - Architettura del modulo
+- [Base Classes](./base_classes.md) - Classi base
+- [Service Providers](./service_providers.md) - Provider di servizi
+- [Volt Folio Best Practices](./VOLT_FOLIO_BEST_PRACTICES.md) - Best practices per Volt e Folio
+>>>>>>> c58c29f3 (♻️ (XotBaseWidget.php): clean up code by removing unnecessary whitespace and comments for better readability)
 
 ### Filament
 - [Filament Integration](./filament_integration.md) - Integrazione con Filament
 - [Widgets](./widgets.md) - Sistema widget
 - [Resources](./resources.md) - Gestione risorse
 
+<<<<<<< HEAD
 ### 3. Interfaces
 - `RepositoryInterface`: Contratto base per i repository
 - `ServiceInterface`: Contratto base per i service
@@ -61,6 +78,135 @@ Il modulo Xot è il core del sistema, fornisce funzionalità base e componenti r
 ## Struttura
 ```
 Xot/
+=======
+### Service Providers
+- [Provider Structure](./provider_structure.md) - Struttura provider
+- [Provider Traits](./provider_traits.md) - Trait per provider
+- [Provider Best Practices](./provider_best_practices.md) - Best practices
+
+### Testing e Quality
+- [Testing](./testing.md) - Testing e quality assurance (usare Pest come test runner)
+- [Best Practices](./BEST-PRACTICES.md) - Linee guida generali
+- [Security](./security.md) - Sicurezza e hardening
+
+### Documentazione Tecnica
+- [Roadmap](./roadmap.md) - Piano di sviluppo futuro
+- [Bottlenecks](./bottlenecks.md) - Analisi performance e ottimizzazioni
+- [Module Structure](./MODULE_STRUCTURE.md) - Struttura moduli
+
+### Link Esterni
+- [Laravel Framework](https://laravel.com/docs/12.x)
+- [Filament Documentation](https://filamentphp.com/docs)
+- [Livewire Documentation](https://livewire.laravel.com/docs)
+
+## Note Importanti
+
+### Estensione Classi
+- Non estendere mai direttamente le classi di Filament
+- Utilizzare sempre le classi base di Xot con prefisso XotBase
+- Seguire le convenzioni di naming del modulo
+
+### Trait e Service Provider
+- I trait per i provider devono essere in `Providers/Traits/`
+- Seguire la struttura esistente per nuovi trait
+- Documentare sempre l'uso dei trait
+
+### Traduzioni
+- Utilizzare il LangServiceProvider per le traduzioni
+- Non usare ->label() direttamente
+- Struttura corretta: 'source' => ['label'=>'Sorgente']
+
+## Esempi
+
+### Service Provider
+```php
+use Xot\XotBaseServiceProvider;
+
+class CustomServiceProvider extends XotBaseServiceProvider
+{
+    // Implementazione
+}
+```
+
+### Widget Base
+```php
+use Xot\Filament\Widgets\XotBaseWidget;
+
+class CustomWidget extends XotBaseWidget
+{
+    // Implementazione
+}
+```
+
+## Dipendenze
+- Laravel Framework
+- Filament
+- Livewire
+- Volt
+- Folio
+
+## Utilizzo
+Il modulo Xot fornisce funzionalità base attraverso:
+- Classi base estensibili
+- Service provider modulari
+- Integrazione Filament
+- Sistema widget
+- Gestione risorse
+
+## Panoramica
+Il modulo Xot è il cuore dell'architettura dell'applicazione. Fornisce le classi base, i trait e le interfacce fondamentali utilizzate da tutti gli altri moduli.
+
+### Versione HEAD
+
+
+### Versione Incoming
+
+##> **Collegamenti correlati**
+> - [README.md documentazione generale](../../docs/README.md)
+> - [README.md toolkit bashscripts](../../bashscripts/docs/README.md)
+> - [README.md modulo GDPR](../Gdpr/docs/README.md)
+> - [README.md modulo User](../User/docs/README.md)
+> - [README.md modulo Lang](../Lang/docs/README.md)
+> - [README.md modulo CMS](../../laravel/Modules/Cms/docs/README.md) <!-- TODO: documento non presente -->
+> - [README.md modulo Reporting](../../laravel/Modules/Reporting/docs/README.md) <!-- TODO: documento non presente -->
+> - [README.md modulo Chart](../../laravel/Modules/Chart/docs/README.md) <!-- TODO: documento non presente -->
+> - [README.md modulo UI](../UI/docs/README.md)
+> - [README.md modulo Xot](../Xot/docs/README.md)
+> - [Collegamenti documentazione centrale](../../docs/collegamenti-documentazione.md)
+
+
+---
+
+## Collegamenti Principali
+
+### Documentazione Core
+- [Struttura del Modulo](./structure.md)
+- [Base Classes](./base-classes.md)
+- [Service Provider](./SERVICE-PROVIDER-BEST-PRACTICES.md)
+- [Filament Integration](./FILAMENT_BEST_PRACTICES.md)
+- [Module Structure](./MODULE_STRUCTURE.md)
+
+### Integrazioni
+- [Integrazione con User](../User/docs/README.md)
+- [Integrazione con Lang](../Lang/docs/README.md)
+- [Integrazione con UI](../UI/docs/README.md)
+
+### Best Practices
+- [Best Practices Generali](./BEST-PRACTICES.md)
+- [Convenzioni Namespace](./namespace-conventions.md)
+- [PHPStan Fixes](./phpstan-fixes.md)
+- [Risoluzione Conflitti](./RISOLUZIONE_CONFLITTI_MERGE.md)
+
+### Testing e Qualità
+- [PHPStan Level 9](./PHPSTAN_LEVEL9_FIXES.md)
+- [PHPStan Level 10](./PHPSTAN_LEVEL10_FIXES.md)
+- [Testing Best Practices](./testing-best-practices.md)
+
+## Struttura del Modulo
+
+```
+Modules/Xot/
+>>>>>>> c58c29f3 (♻️ (XotBaseWidget.php): clean up code by removing unnecessary whitespace and comments for better readability)
 ├── app/
 │   ├── Models/
 │   │   └── XotBaseModel.php
@@ -201,7 +347,16 @@ class User extends XotBaseModel { ... }
 1. Clona il repository
 2. Installa le dipendenze
 3. Configura l'ambiente
+<<<<<<< HEAD
 4. Esegui i test
+=======
+4. Esegui i test con Pest:
+   ```bash
+   pest
+   ```
+
+> Tutti i nuovi test devono essere scritti con [Pest](https://pestphp.com/). Non usare più PHPUnit direttamente.
+>>>>>>> c58c29f3 (♻️ (XotBaseWidget.php): clean up code by removing unnecessary whitespace and comments for better readability)
 
 ### Convenzioni di Codice
 - Seguire PSR-12
@@ -260,6 +415,7 @@ class User extends XotBaseModel { ... }
 - Problemi di configurazione
 - Errori di integrazione
 
+<<<<<<< HEAD
 ## Best Practices XotBaseResource
 
 > **Regola vincolante:** Se una risorsa estende `XotBaseResource`, NON deve mai dichiarare:
@@ -317,10 +473,27 @@ Il provider `XotBaseServiceProvider` è progettato per:
 - Promuovere l'iniezione delle actions per testabilità
 
 Consulta le [best practices aggiornate](./providers/service_provider_best_practices.md) per dettagli, motivazioni e consigli operativi.
+=======
+## Obiettivi Funzionali
+- Fornire classi base per l'estensione di Filament
+- Gestione delle traduzioni e localizzazione
+- Implementazione di widget e componenti riutilizzabili
+
+## Decisioni Architetturali
+- Utilizzo di XotBaseResource per le risorse Filament
+- Implementazione di traduzioni tramite file di lingua
+- Gestione delle relazioni tra modelli
+
+## Collegamenti
+- [Documentazione Principale](../../docs/README.md)
+- [Regole Globali](../../docs/REGOLE_GLOBALI.md)
+- [Convenzioni di Denominazione](../../docs/NAMING_CONVENTIONS.md)
+>>>>>>> c58c29f3 (♻️ (XotBaseWidget.php): clean up code by removing unnecessary whitespace and comments for better readability)
 
 ## Backlink
 - [Collegamento a docs/links.md della root](../../../../docs/links.md)
 - **Zen**: Semplicità, concentrazione sul presente, armonia e serenità nello sviluppo.
+<<<<<<< HEAD
 
 ## Proprietà fondamentali del ServiceProvider (Laraxot/PTVX)
 
@@ -375,3 +548,53 @@ docs/
 - [x] Nessun file .sh fuori da bashscripts/
 - [x] Documentazione aggiornata
 - [x] Struttura coerente in tutti i moduli
+=======
+- [Modulo User](../User/docs/README.md)
+- [Modulo Cms](../Cms/docs/README.md)
+- [Modulo Blog](../Blog/docs/README.md)
+- [Modulo Predict](../Predict/docs/README.md)
+
+## Regole Generali: Eventi e Spatie Laravel Data
+
+- **Pattern consigliato**: Passare agli eventi oggetti che estendono [Spatie Laravel Data](https://spatie.be/docs/laravel-data/v4/introduction) invece di array o primitive.
+- **Motivazione**: Garantisce type safety, validazione automatica, serializzazione robusta e coerenza tra eventi, actions, projectors e aggregates.
+- **Esempio**:
+  ```php
+  use Modules\Predict\Datas\BetPlacedData;
+  use Spatie\EventSourcing\StoredEvents\ShouldBeStored;
+
+  class BetPlaced extends ShouldBeStored
+  {
+      public function __construct(
+          public BetPlacedData $data
+      ) {}
+  }
+  ```
+- **Anti-pattern**: Passare array associativi o primitive agli eventi (es: `new BetPlaced(['user_id' => 1, ...])`).
+- **Collegamento**: Vedi anche la sezione corrispondente in Predict: [Pattern e Anti-pattern: Eventi e Spatie Laravel Data](../../Predict/docs/README.md#pattern-e-anti-pattern-eventi-e-spatie-laravel-data)
+
+## Regole Generali: Struttura Cartelle, Aggregates, Projectors, Namespace
+
+- **Tutte le classi di dominio di un modulo vanno sempre in `app/`**. Non usare mai `Domain/` né `App/` nel namespace.
+- **Aggregates**: sempre in `app/Aggregates/`.
+- **Projectors**: sempre in `app/Projectors/`.
+- **Listeners**: NON vanno usati se si usano gli Aggregates di Spatie Event Sourcing.
+- **Mai creare la cartella `Domain` nei moduli**.
+- **Il namespace corretto è sempre `Modules\<NomeModulo>\<Sottocartella>`**.
+- **Pattern e anti-pattern**: documentare sempre pattern corretti e errori comuni, sia qui che nella docs del modulo coinvolto.
+- **Ogni bugfix va documentato**:
+  - Contesto (versione, ambiente, condizioni di trigger)
+  - Test di regressione
+  - Commit message standardizzato (es: `fix(predict): descrizione breve`)
+  - Categorizzazione per area problematica
+- **Collegamento bidirezionale**: vedi anche la sezione [Pattern e Anti-pattern: Struttura Cartelle, Aggregates, Projectors](../../Predict/docs/README.md#pattern-e-anti-pattern-struttura-cartelle-aggregates-projectors) nella docs di Predict.
+- **Per la gestione dei dati negli eventi, vedi anche la sezione [Regole Generali: Eventi e Spatie Laravel Data](#regole-generali-eventi-e-spatie-laravel-data)**
+
+## Requisiti
+
+- PHP 8.2+
+- Laravel 12.x
+- Estensioni PHP: PDO, JSON, cURL
+- Database: MySQL 8.0+ o PostgreSQL 13+
+>>>>>>> 5529cf84 (♻️ (XotBaseWidget.php): clean up code by removing unnecessary whitespace and comments for better readability)
+>>>>>>> c58c29f3 (♻️ (XotBaseWidget.php): clean up code by removing unnecessary whitespace and comments for better readability)
