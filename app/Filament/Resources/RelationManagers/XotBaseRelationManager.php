@@ -68,7 +68,11 @@ abstract class XotBaseRelationManager extends FilamentRelationManager
         return [
             Tables\Actions\EditAction::make(),
             //Tables\Actions\DeleteAction::make(),
+<<<<<<< HEAD
             Tables\Actions\DetachAction::make(),
+=======
+            Tables\Actions\DetachAction::make()
+>>>>>>> f27d150 (.)
         ];
     }
 
@@ -83,7 +87,11 @@ abstract class XotBaseRelationManager extends FilamentRelationManager
     public function getTableHeaderActions(): array
     {
         return [
+<<<<<<< HEAD
             Tables\Actions\AttachAction::make(),
+=======
+            \Filament\Tables\Actions\AttachAction::make()
+>>>>>>> f27d150 (.)
         ];
     }
 

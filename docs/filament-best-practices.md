@@ -17,6 +17,11 @@ Best practice generiche per l'utilizzo di Filament in moduli Laravel riutilizzab
 // ❌ Anti-pattern
 class MyResource extends \Filament\Resources\Resource {}
 
+<<<<<<< HEAD
+=======
+// ✅ Best practice
+class MyResource extends \Modules\Xot\Filament\Resources\XotBaseResource {}
+>>>>>>> f27d150 (.)
 class UserResource extends XotBaseResource
 {
     // ...
@@ -527,7 +532,6 @@ public static function table(Table $table): Table
 - [Ereditarietà modelli](../model-inheritance-best-practices.md)
 
 
-=======
 ### Problema: Form non visualizzato correttamente
 
 **Soluzione:** Assicurarsi di utilizzare `getFormSchema()` invece di `form()` e controllare che tutti i componenti siano configurati correttamente.
@@ -593,6 +597,7 @@ Consulta l'esempio completo all'inizio di questo documento per una implementazio
 - [Documentazione XotBaseResource](/var/www/html/exa/base_orisbroker_fila3/laravel/Modules/Xot/docs/resource.md)
 - [Best Practices Laraxot](/var/www/html/exa/base_orisbroker_fila3/laravel/Modules/Xot/docs/best-practices.md)
 
+<<<<<<< HEAD
 ## Regole per Widget Filament: Path View e Localizzazione
 
 - Tutti i widget Filament devono avere la view in `modulo::filament.widgets.nome-widget`.
@@ -664,3 +669,88 @@ Appointment::where('doctor_id', $doctorId)
 - DRY, KISS, serenità del codice
 - Refactoring sicuro, massima estendibilità
 >>>>>>> 460d425 (.)
+=======
+## XotBaseRelationManager: regola di estensione per RelationManager custom
+
+Tutti i RelationManager custom dei moduli Laraxot/PTVX devono estendere **sempre**
+
+```php
+use Modules\Xot\Filament\Resources\RelationManagers\XotBaseRelationManager;
+
+class MyRelationManager extends XotBaseRelationManager
+{
+    // ...
+}
+```
+
+Mai estendere direttamente `Filament\Resources\RelationManagers\RelationManager`.
+
+**Motivazione:**
+- Centralizza la logica tabellare e di form custom
+- Garantisce coerenza, DRY, aggiornabilità e riduce errori/duplicazioni
+- Permette override solo per personalizzazioni reali (es. campi extra nel form di attach)
+
+**Pattern corretto:**
+- Usa solo `getFormSchema()` per i form custom
+- Personalizza solo ciò che serve davvero (es. azioni, headerActions, ecc.)
+- Non ridefinire metodi già gestiti dalla base
+
+**Anti-pattern:**
+- Estendere direttamente la classe Filament
+- Duplicare metodi standard già gestiti dalla base
+- Usare `form()` invece di `getFormSchema()`
+
+**Checklist:**
+- [x] Tutti i RelationManager custom estendono XotBaseRelationManager
+- [x] Nessun override inutile di metodi base
+- [x] Solo personalizzazioni reali
+- [x] Documentazione aggiornata
+
+**Esempio pratico:**
+```php
+class TeamsRelationManager extends XotBaseRelationManager
+{
+    protected static string $relationship = 'teams';
+
+    public function getFormSchema(): array
+    {
+        return [
+            TextInput::make('role')
+                ->default('editor')
+                ->required(),
+        ];
+    }
+
+    // ...
+}
+```
+
+**Backlink:**
+- [Root FILAMENT-BEST-PRACTICES.md](../../../docs/FILAMENT-BEST-PRACTICES.md)
+- [Modulo User README](../../User/docs/README.md)
+
+# ⚠️ Regola fondamentale: NIENTE ->label(), ->helperText(), ->modalHeading() nei componenti Filament
+
+**Tutte le label, help text e heading DEVONO essere gestite solo tramite la struttura espansa delle traduzioni.**
+
+## Pattern corretto
+```php
+TextInput::make('role')->required()
+```
+
+## Anti-pattern (da evitare)
+```php
+TextInput::make('role')->label('Ruolo') // ❌ VIETATO
+TextInput::make('role')->helperText('Testo di aiuto') // ❌ VIETATO
+EditAction::make()->modalHeading('Modifica') // ❌ VIETATO
+```
+
+## Checklist
+- [ ] Nessun ->label(), ->helperText(), ->modalHeading() nei componenti Filament
+- [ ] Tutte le label e testi solo tramite traduzioni espanse
+- [ ] Aggiorna sempre la struttura delle traduzioni se serve
+
+## Backlink
+- [docs/FILAMENT-BEST-PRACTICES.md](../../../docs/FILAMENT-BEST-PRACTICES.md)
+- [User/docs/README.md](../../User/docs/README.md)
+>>>>>>> f27d150 (.)
