@@ -17,11 +17,8 @@ Best practice generiche per l'utilizzo di Filament in moduli Laravel riutilizzab
 // ❌ Anti-pattern
 class MyResource extends \Filament\Resources\Resource {}
 
-<<<<<<< HEAD
-=======
 // ✅ Best practice
 class MyResource extends \Modules\Xot\Filament\Resources\XotBaseResource {}
->>>>>>> f27d150 (.)
 class UserResource extends XotBaseResource
 {
     // ...
@@ -597,7 +594,7 @@ Consulta l'esempio completo all'inizio di questo documento per una implementazio
 - [Documentazione XotBaseResource](/var/www/html/exa/base_orisbroker_fila3/laravel/Modules/Xot/docs/resource.md)
 - [Best Practices Laraxot](/var/www/html/exa/base_orisbroker_fila3/laravel/Modules/Xot/docs/best-practices.md)
 
-<<<<<<< HEAD
+
 ## Regole per Widget Filament: Path View e Localizzazione
 
 - Tutti i widget Filament devono avere la view in `modulo::filament.widgets.nome-widget`.

@@ -21,12 +21,9 @@ return array (
     array (
       'label' => 'detach',
     ),
-<<<<<<< HEAD
     'attach' => 
     array (
       'label' => 'attach',
     ),
-=======
->>>>>>> f27d150 (.)
   ),
 );
