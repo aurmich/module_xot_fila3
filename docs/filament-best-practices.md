@@ -716,5 +716,9 @@ Appointment::where('doctor_id', $doctorId)
 - Un solo punto di verità: nessuna duplicazione, nessun lock-in
 - DRY, KISS, serenità del codice
 - Refactoring sicuro, massima estendibilità
+<<<<<<< HEAD
 >>>>>>> 460d425 (.)
 >>>>>>> 7ec6ffa (.)
+=======
+>>>>>>> 3fc99caa662508b51bcbc764ddca541111daeb21
+>>>>>>> 07b734cd (.)

@@ -40,6 +40,11 @@ This document outlines the best practices for maintaining high code quality with
 - Use dependency injection to avoid direct instantiation of dependencies, promoting testability and flexibility.
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 07b734cd (.)
 ## Strumenti di Qualità del Codice
 
 ### Scripts di Automazione
@@ -48,6 +53,10 @@ This document outlines the best practices for maintaining high code quality with
 
 =======
 >>>>>>> 7ec6ffa (.)
+<<<<<<< HEAD
+=======
+>>>>>>> 3fc99caa662508b51bcbc764ddca541111daeb21
+>>>>>>> 07b734cd (.)
 ## Common Issues and Fixes
 - **Type Errors**: Ensure all methods and functions have explicit return types and parameter types to avoid type-related bugs.
 - **Static Analysis Failures**: Address PHPStan errors by refining code or updating the baseline for existing code.

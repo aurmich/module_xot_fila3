@@ -42,6 +42,11 @@ Questo documento descrive le convenzioni di denominazione da seguire all'interno
   ```
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 07b734cd (.)
 ## Convenzioni di Naming
 
 ### Documentazione
@@ -51,6 +56,10 @@ Questo documento descrive le convenzioni di denominazione da seguire all'interno
 
 =======
 >>>>>>> 7ec6ffa (.)
+<<<<<<< HEAD
+=======
+>>>>>>> 3fc99caa662508b51bcbc764ddca541111daeb21
+>>>>>>> 07b734cd (.)
 ## Problemi comuni e soluzioni
 - **Denominazione incoerente**: Evitare di mescolare stili di denominazione (ad esempio, snake_case con camelCase) per mantenere la leggibilità.
 - **Nomi vaghi**: Rinominare nomi vaghi come `$data` o `$temp` in qualcosa di più descrittivo come `$userData` o `$temporaryResult`.
