@@ -10,6 +10,10 @@ use Illuminate\Contracts\View\View;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Cache;
 use Modules\SaluteOra\Models\Patient;
+<<<<<<< HEAD
+=======
+use Filament\Forms\ComponentContainer;
+>>>>>>> ebf7989 (.)
 use Filament\Forms\Contracts\HasForms;
 use Illuminate\Database\Eloquent\Model;
 use Filament\Forms\Form as FilamentForm;
@@ -25,6 +29,10 @@ use Filament\Widgets\Concerns\InteractsWithPageFilters;
  * @property string $title Titolo del widget
  * @property string $icon Icona del widget
  * @property array<string, mixed>|null $data Dati del form
+<<<<<<< HEAD
+=======
+ * @property ComponentContainer $form
+>>>>>>> ebf7989 (.)
  */
 abstract class XotBaseWidget extends FilamentWidget implements HasForms
 {
@@ -86,16 +94,36 @@ abstract class XotBaseWidget extends FilamentWidget implements HasForms
     public function form(FilamentForm $form): FilamentForm
     {
         $form = $form->schema($this->getFormSchema());
+<<<<<<< HEAD
 
         //if (method_exists($form, 'statePath')) {
             $form->statePath('data');
             //dddx($this->getModel());//Method Modules\User\Filament\Widgets\RegistrationWidget::getModel does not exist.
             $form->model(Patient::class);
         //}
+=======
+        $form->statePath('data');
+        $data=$this->getFormFill();
+        
+        $form->model($this->getFormModel());
+        if(!empty($data)){
+           //$form->fill($data);
+           //$this->data=$data;
+        }
+            
+        
+>>>>>>> ebf7989 (.)
 
         return $form;
     }
 
+<<<<<<< HEAD
+=======
+    public function getFormFill(): array{
+        return [];
+    }
+
+>>>>>>> ebf7989 (.)
     /**
      * Ottiene le azioni del form.
      *
@@ -111,6 +139,20 @@ abstract class XotBaseWidget extends FilamentWidget implements HasForms
     }
 
     /**
+<<<<<<< HEAD
+=======
+     * Ottiene il modello per il form.
+     * Può essere sovrascritto nelle classi figlie per fornire un modello specifico.
+     *
+     * @return \Illuminate\Database\Eloquent\Model|string|null
+     */
+    protected function getFormModel(): Model|string|null
+    {
+        return null;
+    }
+
+    /**
+>>>>>>> ebf7989 (.)
      * Salva i dati del form.
      * Override nelle classi figlie se necessario.
      *

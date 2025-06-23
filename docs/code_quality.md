@@ -41,6 +41,7 @@ This document outlines the best practices for maintaining high code quality with
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 <<<<<<< HEAD
@@ -57,6 +58,8 @@ This document outlines the best practices for maintaining high code quality with
 =======
 >>>>>>> 3fc99caa662508b51bcbc764ddca541111daeb21
 >>>>>>> 07b734cd (.)
+=======
+>>>>>>> ebf7989 (.)
 ## Common Issues and Fixes
 - **Type Errors**: Ensure all methods and functions have explicit return types and parameter types to avoid type-related bugs.
 - **Static Analysis Failures**: Address PHPStan errors by refining code or updating the baseline for existing code.
