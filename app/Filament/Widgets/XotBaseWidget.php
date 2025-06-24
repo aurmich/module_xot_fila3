@@ -6,15 +6,25 @@ namespace Modules\Xot\Filament\Widgets;
 
 use Filament\Forms;
 use Filament\Forms\Form as FilamentForm;
+<<<<<<< HEAD
+=======
+use Illuminate\Support\Facades\Cache;
+use Filament\Forms\Contracts\HasForms;
+>>>>>>> 3cf20ee5 (.)
 use Filament\Forms\Concerns\InteractsWithForms;
 use Filament\Widgets\Widget as FilamentWidget;
 use Filament\Widgets\Concerns\InteractsWithPageFilters;
 use Filament\Actions\Action;
 use Illuminate\Contracts\View\View;
 use Illuminate\Support\Facades\Log;
+<<<<<<< HEAD
 use Illuminate\Support\Facades\Cache;
 use Filament\Forms\ComponentContainer;
 use Filament\Forms\Contracts\HasForms;
+=======
+// use Modules\SaluteOra\Models\Patient;
+use Filament\Forms\ComponentContainer;
+>>>>>>> 3cf20ee5 (.)
 use Illuminate\Database\Eloquent\Model;
 
 /**
@@ -94,6 +104,7 @@ abstract class XotBaseWidget extends FilamentWidget implements HasForms
     public function form(FilamentForm $form): FilamentForm
     {
         $form = $form->schema($this->getFormSchema());
+<<<<<<< HEAD
         $form->statePath('data');
         $data=$this->getFormFill();
         
@@ -104,6 +115,14 @@ abstract class XotBaseWidget extends FilamentWidget implements HasForms
         }
             
         
+=======
+
+        $data = $this->getFormFill();
+        if (!empty($data)) {
+            // $form->fill($data); // Uncomment if needed
+            // $this->data = $data; // Uncomment if needed
+        }
+>>>>>>> 3cf20ee5 (.)
 
         return $form;
     }

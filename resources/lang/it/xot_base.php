@@ -1,0 +1,34 @@
+<?php
+
+return array (
+  'fields' => 
+  array (
+    'attach' => 
+    array (
+      'label' => 'attach',
+    ),
+    'detach' => 
+    array (
+      'label' => 'detach',
+    ),
+    'layout' => 
+    array (
+      'label' => 'layout',
+    ),
+    'create' => 
+    array (
+      'label' => 'create',
+    ),
+    'edit' => 
+    array (
+      'label' => 'edit',
+    ),
+    'view' => 
+    array (
+      'description' => 'view',
+      'helper_text' => 'view',
+      'placeholder' => 'view',
+      'label' => 'view',
+    ),
+  ),
+);
