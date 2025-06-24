@@ -5,8 +5,15 @@ declare(strict_types=1);
 namespace Modules\Xot\Filament\Widgets;
 
 use Filament\Forms;
+use Filament\Forms\Form as FilamentForm;
+use Illuminate\Support\Facades\Cache;
+use Filament\Forms\Contracts\HasForms;
+use Filament\Forms\Concerns\InteractsWithForms;
+use Filament\Widgets\Widget as FilamentWidget;
+use Filament\Widgets\Concerns\InteractsWithPageFilters;
 use Filament\Actions\Action;
 use Illuminate\Contracts\View\View;
+<<<<<<< HEAD
 use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Cache;
 use Modules\SaluteOra\Models\Patient;
@@ -15,11 +22,10 @@ use Modules\SaluteOra\Models\Patient;
 use Filament\Forms\ComponentContainer;
 >>>>>>> ebf7989 (.)
 use Filament\Forms\Contracts\HasForms;
+=======
+>>>>>>> b26594b (.)
 use Illuminate\Database\Eloquent\Model;
-use Filament\Forms\Form as FilamentForm;
-use Filament\Widgets\Widget as FilamentWidget;
-use Filament\Forms\Concerns\InteractsWithForms;
-use Filament\Widgets\Concerns\InteractsWithPageFilters;
+use Illuminate\Support\Facades\Log;
 
 /**
  * Classe base astratta per tutti i widget Filament.
@@ -43,6 +49,13 @@ abstract class XotBaseWidget extends FilamentWidget implements HasForms
     public string $title = '';
     public string $icon = '';
     protected int|string|array $columnSpan = 'full';
+    /**
+     * La vista che deve essere renderizzata per il widget.
+     * Può essere un namespace (es. 'module-name::view-name') o un percorso Blade.
+     *
+     * @var view-string
+     */
+    protected static string $view = '';
 
     /**
      * Lista degli eventi ascoltati dal widget.
@@ -96,8 +109,9 @@ abstract class XotBaseWidget extends FilamentWidget implements HasForms
         $form = $form->schema($this->getFormSchema());
 <<<<<<< HEAD
 
-        //if (method_exists($form, 'statePath')) {
+        if (method_exists($form, 'statePath')) {
             $form->statePath('data');
+<<<<<<< HEAD
             //dddx($this->getModel());//Method Modules\User\Filament\Widgets\RegistrationWidget::getModel does not exist.
             $form->model(Patient::class);
         //}
@@ -113,6 +127,9 @@ abstract class XotBaseWidget extends FilamentWidget implements HasForms
             
         
 >>>>>>> ebf7989 (.)
+=======
+        }
+>>>>>>> b26594b (.)
 
         return $form;
     }

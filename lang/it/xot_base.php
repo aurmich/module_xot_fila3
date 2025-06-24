@@ -8,6 +8,7 @@ return array (
       'label' => 'view',
       'description' => 'view',
       'helper_text' => 'view',
+      'placeholder' => 'view',
     ),
     'delete' => 
     array (
