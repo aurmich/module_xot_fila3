@@ -51,6 +51,7 @@ This document outlines the best practices for maintaining high code quality with
 
 - Use dependency injection to avoid direct instantiation of dependencies, promoting testability and flexibility.
 
+<<<<<<< HEAD
 ## Code Quality Tools
 
 ### Automation Scripts
@@ -58,6 +59,8 @@ This document outlines the best practices for maintaining high code quality with
 - [fix_docs_case](../../../../../bashscripts/docs/docs/fix_docs_case.md) - Automatic standardization of documentation filenames
 - Run automation scripts regularly to maintain code consistency
 
+=======
+>>>>>>> 207b1a7 (.)
 ## Strumenti di Qualità del Codice
 
 ### Scripts di Automazione

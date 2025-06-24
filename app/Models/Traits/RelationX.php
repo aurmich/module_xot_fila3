@@ -81,6 +81,16 @@ trait RelationX
             ->append('\\'.$pivot_name)
             ->toString();
         if (! class_exists($pivot_class)) {
+<<<<<<< HEAD
+=======
+            $pivot_class = Str::of($related)
+                ->beforeLast('\\')
+                ->append('\\'.$pivot_name)
+                ->toString();
+        }
+        
+        if (! class_exists($pivot_class)) {
+>>>>>>> 207b1a7 (.)
             /*
             //$pivot_class = 'Modules\Xot\Models\Pivot\\'.$pivot_name;
             dddx([
@@ -93,8 +103,13 @@ trait RelationX
             return $this->guessPivot($related, get_parent_class($class));
         }
         
+<<<<<<< HEAD
         $pivot = app($pivot_class);
         Assert::isInstanceOf($pivot, \Illuminate\Database\Eloquent\Relations\Pivot::class);
+=======
+       $pivot = app($pivot_class);
+       Assert::isInstanceOf($pivot, \Illuminate\Database\Eloquent\Relations\Pivot::class);
+>>>>>>> 207b1a7 (.)
 
         return $pivot;
     }
