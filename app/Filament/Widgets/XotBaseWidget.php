@@ -4,29 +4,17 @@ declare(strict_types=1);
 
 namespace Modules\Xot\Filament\Widgets;
 
-<<<<<<< HEAD
-use Filament\Actions\Action;
-=======
->>>>>>> 14d98a8 (.)
 use Filament\Forms;
 use Filament\Forms\Form as FilamentForm;
-use Illuminate\Support\Facades\Cache;
-use Filament\Forms\Contracts\HasForms;
 use Filament\Forms\Concerns\InteractsWithForms;
 use Filament\Widgets\Widget as FilamentWidget;
 use Filament\Widgets\Concerns\InteractsWithPageFilters;
 use Filament\Actions\Action;
 use Illuminate\Contracts\View\View;
 use Illuminate\Support\Facades\Log;
-<<<<<<< HEAD
-// use Modules\SaluteOra\Models\Patient;
-use Filament\Forms\ComponentContainer;
-=======
 use Illuminate\Support\Facades\Cache;
-use Modules\SaluteOra\Models\Patient;
 use Filament\Forms\ComponentContainer;
 use Filament\Forms\Contracts\HasForms;
->>>>>>> 207b1a7 (.)
 use Illuminate\Database\Eloquent\Model;
 
 /**
@@ -106,14 +94,6 @@ abstract class XotBaseWidget extends FilamentWidget implements HasForms
     public function form(FilamentForm $form): FilamentForm
     {
         $form = $form->schema($this->getFormSchema());
-<<<<<<< HEAD
-
-        $data = $this->getFormFill();
-        if (!empty($data)) {
-            // $form->fill($data); // Uncomment if needed
-            // $this->data = $data; // Uncomment if needed
-        }
-=======
         $form->statePath('data');
         $data=$this->getFormFill();
         
@@ -124,12 +104,10 @@ abstract class XotBaseWidget extends FilamentWidget implements HasForms
         }
             
         
->>>>>>> 207b1a7 (.)
 
         return $form;
     }
 
-<<<<<<< HEAD
     public function getFormFill(): array {
         return [];
     }
@@ -144,12 +122,6 @@ abstract class XotBaseWidget extends FilamentWidget implements HasForms
     {
         return null;
     }
-=======
-    public function getFormFill(): array{
-        return [];
-    }
-
->>>>>>> 207b1a7 (.)
     /**
      * Ottiene le azioni del form.
      *
@@ -165,20 +137,6 @@ abstract class XotBaseWidget extends FilamentWidget implements HasForms
     }
 
     /**
-<<<<<<< HEAD
-=======
-     * Ottiene il modello per il form.
-     * Può essere sovrascritto nelle classi figlie per fornire un modello specifico.
-     *
-     * @return \Illuminate\Database\Eloquent\Model|string|null
-     */
-    protected function getFormModel(): Model|string|null
-    {
-        return null;
-    }
-
-    /**
->>>>>>> 207b1a7 (.)
      * Salva i dati del form.
      * Override nelle classi figlie se necessario.
      *
