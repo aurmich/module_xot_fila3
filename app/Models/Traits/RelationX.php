@@ -63,27 +63,22 @@ trait RelationX
     /**
      * @return \Illuminate\Database\Eloquent\Relations\Pivot
      */
-    public function guessPivot(string $related,?string $class=null)
+    public function guessPivot(string $related)
     {
-        if($class==null){
-            $class = $this::class;
-        }
         $model_names = [
-            class_basename($class),
+            class_basename($this::class),
             class_basename($related),
         ];
         sort($model_names);
         $pivot_name = implode('', $model_names);
-        $pivot_class = Str::of($class)
+        $pivot_class = Str::of($this::class)
             ->beforeLast('\\')
             ->append('\\'.$pivot_name)
             ->toString();
         if (! class_exists($pivot_class)) {
-            $pivot_class = Str::of($related)
-                ->beforeLast('\\')
-                ->append('\\'.$pivot_name)
-                ->toString();
+            return $this->guessPivot($related, get_parent_class($class));
         }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
         $pivot = app($pivot_class);
@@ -111,6 +106,10 @@ trait RelationX
 >>>>>>> ebf7989 (.)
 =======
 >>>>>>> 4ec8f92 (.)
+=======
+        $pivot = app($pivot_class);
+        Assert::isInstanceOf($pivot, \Illuminate\Database\Eloquent\Relations\Pivot::class);
+>>>>>>> d050dae (.)
 
         return $pivot;
     }

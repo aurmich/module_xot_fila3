@@ -44,12 +44,13 @@ This document outlines the best practices for maintaining high code quality with
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> b26594b (.)
 =======
+>>>>>>> d050dae (.)
 =======
-<<<<<<< HEAD
->>>>>>> 07b734cd (.)
+=======
 ## Strumenti di Qualità del Codice
 
 ### Scripts di Automazione
@@ -58,13 +59,7 @@ This document outlines the best practices for maintaining high code quality with
 
 =======
 >>>>>>> 7ec6ffa (.)
-<<<<<<< HEAD
-=======
->>>>>>> 3fc99caa662508b51bcbc764ddca541111daeb21
 >>>>>>> 07b734cd (.)
-<<<<<<< HEAD
-=======
->>>>>>> ebf7989 (.)
 =======
 >>>>>>> b26594b (.)
 =======

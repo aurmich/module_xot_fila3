@@ -14,18 +14,11 @@ use Filament\Widgets\Widget as FilamentWidget;
 use Filament\Widgets\Concerns\InteractsWithPageFilters;
 use Filament\Actions\Action;
 use Illuminate\Contracts\View\View;
-<<<<<<< HEAD
 use Illuminate\Support\Facades\Log;
-use Illuminate\Support\Facades\Cache;
-use Modules\SaluteOra\Models\Patient;
-<<<<<<< HEAD
-=======
+// use Modules\SaluteOra\Models\Patient;
 use Filament\Forms\ComponentContainer;
->>>>>>> ebf7989 (.)
-use Filament\Forms\Contracts\HasForms;
-=======
->>>>>>> b26594b (.)
 use Illuminate\Database\Eloquent\Model;
+<<<<<<< HEAD
 use Illuminate\Support\Facades\Log;
 =======
 use Filament\Actions\Action;
@@ -41,6 +34,8 @@ use Filament\Widgets\Widget as FilamentWidget;
 use Filament\Forms\Concerns\InteractsWithForms;
 use Filament\Widgets\Concerns\InteractsWithPageFilters;
 >>>>>>> 4ec8f92 (.)
+=======
+>>>>>>> d050dae (.)
 
 /**
  * Classe base astratta per tutti i widget Filament.
@@ -52,12 +47,16 @@ use Filament\Widgets\Concerns\InteractsWithPageFilters;
  * @property array<string, mixed>|null $data Dati del form
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
  * @property ComponentContainer $form
 >>>>>>> ebf7989 (.)
 =======
  * @property ComponentContainer $form
 >>>>>>> 4ec8f92 (.)
+=======
+ * @property ComponentContainer $form
+>>>>>>> d050dae (.)
  */
 abstract class XotBaseWidget extends FilamentWidget implements HasForms
 {
@@ -131,6 +130,7 @@ abstract class XotBaseWidget extends FilamentWidget implements HasForms
         $form = $form->schema($this->getFormSchema());
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
         if (method_exists($form, 'statePath')) {
             $form->statePath('data');
@@ -158,10 +158,18 @@ abstract class XotBaseWidget extends FilamentWidget implements HasForms
 >>>>>>> b26594b (.)
 =======
 >>>>>>> 4ec8f92 (.)
+=======
+
+        if (method_exists($form, 'statePath')) {
+            $form->statePath('data');
+            // $form->model(Patient::class); // Commentato: Patient non definito
+        }
+>>>>>>> d050dae (.)
 
         return $form;
     }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -175,6 +183,23 @@ abstract class XotBaseWidget extends FilamentWidget implements HasForms
 >>>>>>> ebf7989 (.)
 =======
 >>>>>>> 4ec8f92 (.)
+=======
+    public function getFormFill(): array {
+        return [];
+    }
+
+    /**
+     * Ottiene il modello per il form.
+     * Può essere sovrascritto nelle classi figlie per fornire un modello specifico.
+     *
+     * @return \Illuminate\Database\Eloquent\Model|string|null
+     */
+    protected function getFormModel(): Model|string|null
+    {
+        return null;
+    }
+
+>>>>>>> d050dae (.)
     /**
      * Ottiene le azioni del form.
      *
@@ -190,6 +215,7 @@ abstract class XotBaseWidget extends FilamentWidget implements HasForms
     }
 
     /**
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -210,6 +236,8 @@ abstract class XotBaseWidget extends FilamentWidget implements HasForms
 >>>>>>> ebf7989 (.)
 =======
 >>>>>>> 4ec8f92 (.)
+=======
+>>>>>>> d050dae (.)
      * Salva i dati del form.
      * Override nelle classi figlie se necessario.
      *

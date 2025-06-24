@@ -46,12 +46,13 @@ Questo documento descrive le convenzioni di denominazione da seguire all'interno
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> b26594b (.)
 =======
+>>>>>>> d050dae (.)
 =======
-<<<<<<< HEAD
->>>>>>> 07b734cd (.)
+=======
 ## Convenzioni di Naming
 
 ### Documentazione
@@ -61,9 +62,6 @@ Questo documento descrive le convenzioni di denominazione da seguire all'interno
 
 =======
 >>>>>>> 7ec6ffa (.)
-<<<<<<< HEAD
-=======
->>>>>>> 3fc99caa662508b51bcbc764ddca541111daeb21
 >>>>>>> 07b734cd (.)
 =======
 >>>>>>> 4ec8f92 (.)

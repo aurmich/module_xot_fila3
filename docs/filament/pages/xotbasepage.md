@@ -114,6 +114,7 @@ class MyCustomPage extends Page // ⚠️ ERRATO!
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 4ec8f92 (.)
@@ -173,6 +174,8 @@ class MyPage extends XotBasePage
 >>>>>>> ebf7989 (.)
 =======
 >>>>>>> 4ec8f92 (.)
+=======
+>>>>>>> d050dae (.)
 ## Compatibilità con Filament
 
 La classe è progettata per essere compatibile con Filament v3+ e garantisce il corretto funzionamento di tutte le funzionalità native di Filament\Pages\Page.
