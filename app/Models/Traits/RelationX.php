@@ -85,9 +85,12 @@ trait RelationX
                 ->toString();
         }
 <<<<<<< HEAD
+<<<<<<< HEAD
         $pivot = app($pivot_class);
         Assert::isInstanceOf($pivot, \Illuminate\Database\Eloquent\Relations\Pivot::class);
 =======
+=======
+>>>>>>> 4ec8f92 (.)
         
         if (! class_exists($pivot_class)) {
             /*
@@ -104,7 +107,10 @@ trait RelationX
         
        $pivot = app($pivot_class);
        Assert::isInstanceOf($pivot, \Illuminate\Database\Eloquent\Relations\Pivot::class);
+<<<<<<< HEAD
 >>>>>>> ebf7989 (.)
+=======
+>>>>>>> 4ec8f92 (.)
 
         return $pivot;
     }

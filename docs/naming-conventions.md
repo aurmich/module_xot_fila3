@@ -45,6 +45,7 @@ Questo documento descrive le convenzioni di denominazione da seguire all'interno
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> b26594b (.)
 =======
@@ -64,6 +65,8 @@ Questo documento descrive le convenzioni di denominazione da seguire all'interno
 =======
 >>>>>>> 3fc99caa662508b51bcbc764ddca541111daeb21
 >>>>>>> 07b734cd (.)
+=======
+>>>>>>> 4ec8f92 (.)
 ## Problemi comuni e soluzioni
 - **Denominazione incoerente**: Evitare di mescolare stili di denominazione (ad esempio, snake_case con camelCase) per mantenere la leggibilità.
 - **Nomi vaghi**: Rinominare nomi vaghi come `$data` o `$temp` in qualcosa di più descrittivo come `$userData` o `$temporaryResult`.
@@ -72,6 +75,7 @@ Questo documento descrive le convenzioni di denominazione da seguire all'interno
 - Documentare eventuali deviazioni da queste convenzioni di denominazione nella cartella di documentazione del modulo pertinente.
 - Aggiornare questo documento se vengono introdotti nuovi schemi di denominazione o convenzioni.
 
+<<<<<<< HEAD
 =======
 ## Problemi comuni e soluzioni
 - **Denominazione incoerente**: Evitare di mescolare stili di denominazione (ad esempio, snake_case con camelCase) per mantenere la leggibilità.
@@ -82,6 +86,8 @@ Questo documento descrive le convenzioni di denominazione da seguire all'interno
 - Aggiornare questo documento se vengono introdotti nuovi schemi di denominazione o convenzioni.
 
 >>>>>>> ebf7989 (.)
+=======
+>>>>>>> 4ec8f92 (.)
 ## Collegamenti alla documentazione correlata
 - [Qualità del codice](./CODE_QUALITY.md)
 - [Tipi rigorosi PHP](./PHP-STRICT-TYPES.md)
