@@ -61,10 +61,15 @@ trait RelationX
     }
 
     /**
+     * Guess the pivot class for a many-to-many relationship.
+     *
+     * @param string $related The related model class name
+     * @param string|null $class The class to use for parent class lookup (used internally)
      * @return \Illuminate\Database\Eloquent\Relations\Pivot
      */
-    public function guessPivot(string $related)
+    public function guessPivot(string $related, ?string $class = null)
     {
+        $class = $class ?? $this::class;
         $model_names = [
             class_basename($this::class),
             class_basename($related),
@@ -76,18 +81,6 @@ trait RelationX
             ->append('\\'.$pivot_name)
             ->toString();
         if (! class_exists($pivot_class)) {
-            return $this->guessPivot($related, get_parent_class($class));
-        }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-        $pivot = app($pivot_class);
-        Assert::isInstanceOf($pivot, \Illuminate\Database\Eloquent\Relations\Pivot::class);
-=======
-=======
->>>>>>> 4ec8f92 (.)
-        
-        if (! class_exists($pivot_class)) {
             /*
             //$pivot_class = 'Modules\Xot\Models\Pivot\\'.$pivot_name;
             dddx([
@@ -97,19 +90,11 @@ trait RelationX
                 'class1' => get_parent_class($class),
             ]);
             */
-            return $this->guessPivot($related,get_parent_class($class));
+            return $this->guessPivot($related, get_parent_class($class));
         }
         
-       $pivot = app($pivot_class);
-       Assert::isInstanceOf($pivot, \Illuminate\Database\Eloquent\Relations\Pivot::class);
-<<<<<<< HEAD
->>>>>>> ebf7989 (.)
-=======
->>>>>>> 4ec8f92 (.)
-=======
         $pivot = app($pivot_class);
         Assert::isInstanceOf($pivot, \Illuminate\Database\Eloquent\Relations\Pivot::class);
->>>>>>> d050dae (.)
 
         return $pivot;
     }
