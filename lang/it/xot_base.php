@@ -9,6 +9,10 @@ return array (
       'description' => 'view',
       'helper_text' => 'view',
       'placeholder' => 'view',
+<<<<<<< HEAD
+=======
+      'placeholder' => 'view',
+>>>>>>> f3714d8 (.)
     ),
     'delete' => 
     array (

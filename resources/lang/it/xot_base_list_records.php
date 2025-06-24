@@ -1,14 +1,27 @@
 <?php
 
-declare(strict_types=1);
-
-return [
-    'fields' => [
-        'create' => [
-            'label' => 'create',
-        ],
-        'layout' => [
-            'label' => 'layout',
-        ],
-    ],
-];
+return array (
+  'fields' => 
+  array (
+    'create' => 
+    array (
+      'label' => 'create',
+    ),
+    'layout' => 
+    array (
+      'label' => 'layout',
+    ),
+    'delete' => 
+    array (
+      'label' => 'delete',
+    ),
+    'edit' => 
+    array (
+      'label' => 'edit',
+    ),
+    'view' => 
+    array (
+      'label' => 'view',
+    ),
+  ),
+);

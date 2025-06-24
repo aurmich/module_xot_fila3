@@ -81,6 +81,15 @@ trait RelationX
             ->append('\\'.$pivot_name)
             ->toString();
         if (! class_exists($pivot_class)) {
+<<<<<<< HEAD
+=======
+            return $this->guessPivot($related, get_parent_class($class));
+        }
+        $pivot = app($pivot_class);
+        Assert::isInstanceOf($pivot, \Illuminate\Database\Eloquent\Relations\Pivot::class);
+        
+        if (! class_exists($pivot_class)) {
+>>>>>>> f3714d8 (.)
             /*
             //$pivot_class = 'Modules\Xot\Models\Pivot\\'.$pivot_name;
             dddx([
