@@ -4,18 +4,20 @@ declare(strict_types=1);
 
 namespace Modules\Xot\Filament\Resources\Pages;
 
-use Filament\Forms\Components\Component;
-use Filament\Forms\Concerns\InteractsWithForms;
-use Filament\Forms\Contracts\HasForms;
+use Closure;
 use Filament\Forms\Form;
-use Filament\Pages\Page as FilamentPage;
-use Illuminate\Contracts\View\View;
-use Illuminate\Support\Collection;
 use Illuminate\Support\Str;
-use Modules\Xot\Filament\Traits\NavigationLabelTrait;
-use Modules\Xot\Filament\Traits\TransTrait;
 use Webmozart\Assert\Assert;
+use Illuminate\Support\Collection;
+use Illuminate\Contracts\View\View;
+use Filament\Forms\ComponentContainer;
+use Filament\Forms\Contracts\HasForms;
+use Filament\Forms\Components\Component;
+use Filament\Pages\Page as FilamentPage;
+use Modules\Xot\Filament\Traits\TransTrait;
+use Filament\Forms\Concerns\InteractsWithForms;
 use Filament\Pages\Concerns\InteractsWithFormActions;
+use Modules\Xot\Filament\Traits\NavigationLabelTrait;
 /**
  * Base class for all custom pages in the application.
  *
@@ -24,7 +26,8 @@ use Filament\Pages\Concerns\InteractsWithFormActions;
  *
  * @property ?string $model
  * @property ?array $data
- */
+ * @property ComponentContainer $form
+*/
 abstract class XotBasePage extends FilamentPage implements HasForms
 {
     use InteractsWithForms;
@@ -35,7 +38,7 @@ abstract class XotBasePage extends FilamentPage implements HasForms
     /**
      * The model class associated with this page, if any.
      */
-    protected static ?string $model = null;
+    public static ?string $model = null;
 
     /**
      * The form data.
@@ -44,11 +47,7 @@ abstract class XotBasePage extends FilamentPage implements HasForms
      */
     public ?array $data = [];
 
-    /**
-     * Default icon for navigation.
-     */
-    protected static ?string $navigationIcon = 'heroicon-o-document-text';
-
+    
     /**
      * Get the view that should be used for the page.
      */
@@ -66,6 +65,7 @@ abstract class XotBasePage extends FilamentPage implements HasForms
             ->append(Str::of(static::class)
                 ->afterLast('\\')
                 ->kebab()
+                ->toString()
             );
 
         return $view->toString();
@@ -84,7 +84,7 @@ abstract class XotBasePage extends FilamentPage implements HasForms
      */
     public function getTitle(): string
     {
-        return static::transTitle();
+        return static::transFunc(__FUNCTION__);
     }
 
     /**
@@ -108,7 +108,7 @@ abstract class XotBasePage extends FilamentPage implements HasForms
     /**
      * Get the form schema for the page.
      *
-     * @return array<string, Component|array<string, Component>>
+     * @return array<string, Component>
      */
     protected function getFormSchema(): array
     {
@@ -120,6 +120,7 @@ abstract class XotBasePage extends FilamentPage implements HasForms
      */
     public static function getModel(): ?string
     {
+        /** @phpstan-ignore-next-line */
         return static::$model;
     }
 
@@ -133,15 +134,15 @@ abstract class XotBasePage extends FilamentPage implements HasForms
         return collect();
     }
 
-    /**
+    /*
      * Hook chiamato all'inizializzazione del componente.
-     */
+     
     public function mount(int|string $record): void
     {
         parent::mount($record);
         $this->form->fill($this->data ?? []);
     }
-
+    */
     /**
      * Get the view data for the page.
      *

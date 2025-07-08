@@ -5,17 +5,32 @@ declare(strict_types=1);
 namespace Modules\Xot\Filament\Widgets;
 
 use Filament\Forms;
+<<<<<<< HEAD
 use Filament\Forms\Form as FilamentForm;
 use Filament\Forms\Concerns\InteractsWithForms;
 use Filament\Widgets\Widget as FilamentWidget;
 use Filament\Widgets\Concerns\InteractsWithPageFilters;
+=======
+use Illuminate\Support\Arr;
+use Illuminate\Support\Str;
+>>>>>>> 40d6a28 (.)
 use Filament\Actions\Action;
+use Webmozart\Assert\Assert;
 use Illuminate\Contracts\View\View;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Cache;
+<<<<<<< HEAD
+=======
+use Modules\SaluteOra\Models\Patient;
+>>>>>>> 40d6a28 (.)
 use Filament\Forms\ComponentContainer;
 use Filament\Forms\Contracts\HasForms;
 use Illuminate\Database\Eloquent\Model;
+use Filament\Forms\Form as FilamentForm;
+use Modules\Xot\Filament\Traits\TransTrait;
+use Filament\Widgets\Widget as FilamentWidget;
+use Filament\Forms\Concerns\InteractsWithForms;
+use Filament\Widgets\Concerns\InteractsWithPageFilters;
 
 /**
  * Classe base astratta per tutti i widget Filament.
@@ -29,6 +44,7 @@ use Illuminate\Database\Eloquent\Model;
  */
 abstract class XotBaseWidget extends FilamentWidget implements HasForms
 {
+    use TransTrait;
     use InteractsWithPageFilters;
     //use InteractsWithPageTable;
     use InteractsWithForms;
@@ -36,13 +52,6 @@ abstract class XotBaseWidget extends FilamentWidget implements HasForms
     public string $title = '';
     public string $icon = '';
     protected int|string|array $columnSpan = 'full';
-    /**
-     * La vista che deve essere renderizzata per il widget.
-     * Può essere un namespace (es. 'module-name::view-name') o un percorso Blade.
-     *
-     * @var view-string
-     */
-    protected static string $view = '';
 
     /**
      * Lista degli eventi ascoltati dal widget.
@@ -108,20 +117,69 @@ abstract class XotBaseWidget extends FilamentWidget implements HasForms
         return $form;
     }
 
-    public function getFormFill(): array {
-        return [];
+    public function getFormFill(): array
+    {
+        $model = $this->getFormModel();
+        if($model==null){
+            return [];
+        }
+        if(is_string($model)){
+            Assert::isInstanceOf($model=app($model),Model::class);
+        }
+
+       
+        // Se il modello ha un ID, significa che è stato trovato nel database
+        if ($model->exists) {
+            try {
+                
+                //dddx($model->getArrayableRelations());
+                $res= $model->toArray();
+                
+                if(method_exists($model,'getDataDefaults')){
+                    $defaults=$model->getDataDefaults();
+                    $merge1=array_merge($defaults,$res);
+                    $merge1=Arr::map($merge1, function ($value, $key) use ($defaults) {
+                        if($value==null){
+                            $value=Arr::get($defaults,$key,null);
+                        }
+                        return $value;
+                    });
+                    $res=$merge1;
+                }
+                
+                return $res;
+                //dddx($model->with('studio')->relationsToArray());
+                
+            } catch (\Exception $e) {
+                // Se toArray() fallisce (problemi con enum), usa getAttributes()
+                //Log::warning("Errore in toArray() per modello {$this->model}: " . $e->getMessage());
+                $attributes = $model->getAttributes();
+                
+                // Gestisci specificamente gli enum se presenti
+                //if (isset($attributes['type']) && $model->type instanceof \BackedEnum) {
+                //    $attributes['type'] = $model->type->value;
+                //}
+                
+                return $attributes;
+            }
+        }
+        
+        // Se è un nuovo modello, restituisci solo i campi fillable con valori null
+        $fillable = $model->getFillable();
+        $appends = $model->getAppends();
+        $attributes=$model->attributesToArray();
+        
+        $fields = array_merge($fillable, $appends);
+        $fields= array_fill_keys($fields, null);
+        $fields=array_merge($fields,$attributes);
+        if(method_exists($model,'getDataDefaults')){
+            $defaults=$model->getDataDefaults();
+            $fields=array_merge($fields,$defaults);
+        }
+        
+        return $fields;
     }
 
-    /**
-     * Gets the form model.
-     * Can be overridden in child classes to provide a specific model.
-     *
-     * @return \Illuminate\Database\Eloquent\Model|string|null
-     */
-    protected function getFormModel(): Model|string|null
-    {
-        return null;
-    }
     /**
      * Ottiene le azioni del form.
      *
@@ -134,6 +192,17 @@ abstract class XotBaseWidget extends FilamentWidget implements HasForms
                 ->label(__('filament-panels::resources/pages/edit-record.form.actions.save.label'))
                 ->submit('save'),
         ];
+    }
+
+    /**
+     * Ottiene il modello per il form.
+     * Può essere sovrascritto nelle classi figlie per fornire un modello specifico.
+     *
+     * @return \Illuminate\Database\Eloquent\Model|string|null
+     */
+    protected function getFormModel(): Model|string|null
+    {
+        return null;
     }
 
     /**
@@ -162,7 +231,27 @@ abstract class XotBaseWidget extends FilamentWidget implements HasForms
      */
     public static function getNavigationLabel(): string
     {
+        /*
         return (string) (static::$navigationLabel ?? (string) str(static::getLabel())
             ->headline());
+        */
+        return static::transFunc(__FUNCTION__);
+    }
+
+    protected function getStepByName(string $name): Forms\Components\Wizard\Step
+    {
+        $schema=Str::of($name)->snake()->studly()->prepend('get')->append('Schema')->toString();
+        
+        return Forms\Components\Wizard\Step::make($name)
+            ->schema($this->$schema());
+    }
+
+
+    public function getWizardSubmitAction(): Action{
+        $submit_view='pub_theme::filament.wizard.submit-button';
+        return Action::make('submit')
+            ->label(__('filament-panels::resources/pages/edit-record.form.actions.save.label'))
+            ->submit('save')
+            ->view($submit_view);
     }
 }
