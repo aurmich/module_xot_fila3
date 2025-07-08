@@ -314,4 +314,11 @@ return array (
       'description' => 'Il file caricato non è valido o è troppo grande',
     ),
   ),
+  'actions' => 
+  array (
+    'save' => 
+    array (
+      'label' => 'save',
+    ),
+  ),
 );
