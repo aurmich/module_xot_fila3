@@ -49,93 +49,6 @@ public static function getFormSchema(): array
 }
 ```
 
-<<<<<<< HEAD
-=======
-### Versione HEAD
-
-
-### Versione Incoming
-
-### 3. Gestione delle Traduzioni
-
-#### ✅ DO - Utilizzare il Sistema di Traduzioni Automatiche
-
-**Non utilizzare mai** il metodo `->label()` nei componenti Filament. Le etichette vengono gestite automaticamente dal `LangServiceProvider` attraverso i file di traduzione.
-
-```php
-// ✅ CORRETTO: Non specificare l'etichetta
-Forms\Components\TextInput::make('first_name')
-    ->required();
-```
-
-#### ❌ DON'T - Non Specificare Manualmente le Etichette
-
-```php
-// ❌ ERRATO: Specificare manualmente l'etichetta
-Forms\Components\TextInput::make('first_name')
-    ->label('Nome')
-    ->required();
-```
-
-Per maggiori dettagli e motivazioni, consulta la [documentazione completa sulle traduzioni automatiche](../../Lang/docs/automatic-translations.md).
-
-### 4. Implementazione dei Wizard
-
-#### ✅ DO - Estrarre gli Step in Metodi Dedicati
-
-Quando si implementa un `Wizard` in Filament, ogni step deve essere definito in un metodo dedicato che restituisce un oggetto `Forms\Components\Wizard\Step`:
-
-```php
-// ✅ CORRETTO
-public static function getFormSchemaWidget(): array
-{
-    return [
-        Forms\Components\Wizard::make([
-            self::getPersonalDataStep(),
-            self::getContactsStep(),
-            self::getPrivacyStep(),
-        ])
-        ->skippable(false)
-    ];
-}
-
-protected static function getPersonalDataStep(): Forms\Components\Wizard\Step
-{
-    return Forms\Components\Wizard\Step::make('Dati Personali')
-        ->icon('heroicon-o-user')
-        ->description('Inserisci i tuoi dati personali')
-        ->schema([
-            // ...componenti del form
-        ]);
-}
-```
-
-#### ❌ DON'T - Non Definire gli Step Direttamente nel Wizard
-
-```php
-// ❌ ERRATO
-public static function getFormSchemaWidget(): array
-{
-    return [
-        Forms\Components\Wizard::make([
-            Forms\Components\Wizard\Step::make('Dati Personali')
-                ->icon('heroicon-o-user')
-                ->description('Inserisci i tuoi dati personali')
-                ->schema([
-                    // ...componenti del form
-                ]),
-            // ...altri step
-        ])
-    ];
-}
-```
-
-Per maggiori dettagli e motivazioni, consulta la [documentazione completa sulle best practices per i wizard](../../UI/docs/filament/wizard-best-practices.md).
-
-
----
-
->>>>>>> 7bf59db (.)
 #### ❌ DON'T - Non utilizzare il metodo form()
 
 ```php
@@ -148,63 +61,7 @@ public static function form(Form $form): Form
 }
 ```
 
-<<<<<<< HEAD
-### 3. Proprietà e Metodi da NON Definire
-
-#### ✅ DO - Omettere proprietà e metodi gestiti dalla classe base
-
-Quando si estende `XotBaseResource`, NON definire le seguenti proprietà e metodi:
-
-1. **NON definire** `protected static ?string $navigationIcon`
-   - Questa proprietà è gestita automaticamente da `XotBaseResource`
-
-2. **NON definire** `protected static ?string $navigationGroup`
-   - Questa proprietà è gestita automaticamente da `XotBaseResource`
-
-3. **NON definire** `protected static ?int $navigationSort`
-   - Questa proprietà è gestita automaticamente da `XotBaseResource`
-
-4. **NON definire** `public static function getTableColumns()`
-   - Utilizzare invece `getListTableColumns()` definito in `XotBaseResource`
-
-5. **NON definire** `public static function getRelations()`
-   - Se restituisce un array vuoto, non definirlo affatto
-
-6. **NON definire** `public static function getPages()`
-   - Se restituisce solo le route standard (index, create, edit), non definirlo affatto
-
-#### ❌ DON'T - Non ridefinire proprietà e metodi gestiti dalla classe base
-
-```php
-// NON FARE MAI QUESTO
-class DoctorResource extends XotBaseResource
-{
-    protected static ?string $navigationIcon = 'heroicon-o-user'; // ERRORE
-    
-    protected static ?string $navigationGroup = 'Pazienti'; // ERRORE
-    
-    protected static ?int $navigationSort = 3; // ERRORE
-    
-    public static function getRelations(): array
-    {
-        return []; // ERRORE: se vuoto, non definire
-    }
-    
-    public static function getPages(): array
-    {
-        return [
-            'index' => Pages\ListDoctors::route('/'),
-            'create' => Pages\CreateDoctor::route('/create'),
-            'edit' => Pages\EditDoctor::route('/{record}/edit'),
-        ]; // ERRORE: se standard, non definire
-    }
-}
-```
-
-### 4. Traduzioni e Label
-=======
 ### 3. Traduzioni e Label
->>>>>>> 7bf59db (.)
 
 #### ✅ DO - Utilizzare i file di traduzione
 
@@ -262,14 +119,9 @@ class SocioResource extends XotBaseResource
 {
     protected static ?string $model = Socio::class;
     
-<<<<<<< HEAD
-    // NON definire $navigationIcon quando si estende XotBaseResource
-    // NON definire $navigationSort quando si estende XotBaseResource
-=======
     protected static ?string $navigationIcon = 'heroicon-o-user';
     
     protected static ?int $navigationSort = 1;
->>>>>>> 7bf59db (.)
     
     // Form Schema - CORRETTO ✅
     public static function getFormSchema(): array
@@ -663,72 +515,17 @@ public static function table(Table $table): Table
 
 ## Troubleshooting
 
-<<<<<<< HEAD
-## Riferimenti
-
-- [Documentazione Filament](https://filamentphp.com/docs)
-- [Documentazione XotBaseResource](/var/www/html/exa/base_orisbroker_fila3/laravel/Modules/Xot/docs/resource.md)
-- [Best Practices Laraxot](/var/www/html/exa/base_orisbroker_fila3/laravel/Modules/Xot/docs/best-practices.md)
-
-## Regole per Widget Filament: Path View e Localizzazione
-
-- Tutti i widget Filament devono avere la view in `modulo::filament.widgets.nome-widget`.
-- Non usare mai `modulo::widgets.nome-widget` o altri path non standard.
-- Non usare mai ->label(), ->placeholder(), __() o trans() nei form component (TextInput, Select, ecc).
-- La localizzazione è centralizzata tramite LangServiceProvider e i file di lingua del modulo.
-- Le chiavi dei campi devono corrispondere a quelle dei file di lingua.
-
-### Esempio corretto
-```php
-protected static string $view = 'saluteora::filament.widgets.find-doctor-and-appointment';
-TextInput::make('location')->required()
-```
-
-### Esempio errato
-```php
-protected static string $view = 'saluteora::widgets.find-doctor-and-appointment';
-TextInput::make('location')->label(__('modulo::campo.label'))
-```
-
-**Motivazione:** coerenza, manutenzione, override, policy di qualità.
-
-> Aggiornare sempre anche i file .mdc in .windsurf/rules e .cursor/rules
-
-**Vedi anche:** [filament-best-practices.mdc](../../../.windsurf/rules/filament-best-practices.mdc)
-
-## Regole di Ereditarietà: Trait e Interfacce
-
-- Non replicare mai trait, interfacce o logica già presenti nella classe base che si estende (es. XotBaseWidget).
-- Studiare sempre la classe base prima di estendere.
-- Se serve estendere il comportamento, usare override o metodi custom, non duplicare trait/interfacce.
-
-## Collegamenti
-- [Filament Docs](https://filamentphp.com/docs)
-- [Best practices moduli riutilizzabili](../module-documentation-neutrality.md)
-- [Ereditarietà modelli](../model-inheritance-best-practices.md)
-
-## Problema: Form non visualizzato correttamente
-=======
 ### Problema: Form non visualizzato correttamente
->>>>>>> 7bf59db (.)
 
 **Soluzione:** Assicurarsi di utilizzare `getFormSchema()` invece di `form()` e controllare che tutti i componenti siano configurati correttamente.
 
-## Problema: Label non tradotte
-
-### Problema: Form non visualizzato correttamente
-=======
-
-**Soluzione:** Assicurarsi di utilizzare `getFormSchema()` invece di `form()` e controllare che tutti i componenti siano configurati correttamente.
-
-## Problema: Label non tradotte
+### Problema: Label non tradotte
 
 **Soluzione:** Verificare che:
 1. Non si stia utilizzando `->label()` direttamente sui componenti
 2. I file di traduzione siano nella posizione corretta e seguano la struttura espansa
 3. Le chiavi dei campi nel form corrispondano esattamente alle chiavi dei campi nel file di traduzione
 
-## Problema: Relazioni non caricate correttamente
 ### Problema: Relazioni non caricate correttamente
 
 **Soluzione:** Verificare che:
@@ -782,82 +579,3 @@ Consulta l'esempio completo all'inizio di questo documento per una implementazio
 - [Documentazione Filament](https://filamentphp.com/docs)
 - [Documentazione XotBaseResource](/var/www/html/exa/base_orisbroker_fila3/laravel/Modules/Xot/docs/resource.md)
 - [Best Practices Laraxot](/var/www/html/exa/base_orisbroker_fila3/laravel/Modules/Xot/docs/best-practices.md)
-
-
-
-## Regole per Widget Filament: Path View e Localizzazione
-
-- Tutti i widget Filament devono avere la view in `modulo::filament.widgets.nome-widget`.
-- Non usare mai `modulo::widgets.nome-widget` o altri path non standard.
-- Non usare mai ->label(), ->placeholder(), __() o trans() nei form component (TextInput, Select, ecc).
-- La localizzazione è centralizzata tramite LangServiceProvider e i file di lingua del modulo.
-- Le chiavi dei campi devono corrispondere a quelle dei file di lingua.
-
-### Esempio corretto
-```php
-protected static string $view = 'saluteora::filament.widgets.find-doctor-and-appointment';
-TextInput::make('location')->required()
-```
-
-### Esempio errato
-```php
-protected static string $view = 'saluteora::widgets.find-doctor-and-appointment';
-TextInput::make('location')->label(__('modulo::campo.label'))
-```
-
-**Motivazione:** coerenza, manutenzione, override, policy di qualità.
-
-> Aggiornare sempre anche i file .mdc in .windsurf/rules e .cursor/rules
-
-**Vedi anche:** [filament-best-practices.mdc](../../../.windsurf/rules/filament-best-practices.mdc)
-
-## Regole di Ereditarietà: Trait e Interfacce
-
-- Non replicare mai trait, interfacce o logica già presenti nella classe base che si estende (es. XotBaseWidget).
-- Studiare sempre la classe base prima di estendere.
-- Se serve estendere il comportamento, usare override o metodi custom, non duplicare trait/interfacce.
-
-### Esempio errato
-```php
-class FindDoctorAndAppointmentWidget extends XotBaseWidget implements HasForms
-{
-    use InteractsWithForms; // ERRORE: già presente in XotBaseWidget
-}
-```
-
-### Esempio corretto
-```php
-class FindDoctorAndAppointmentWidget extends XotBaseWidget
-{
-    // NIENTE implements HasForms, NIENTE use InteractsWithForms
-}
-```
-
-**Motivazione:** DRY, KISS, manutenzione, coerenza, evitare conflitti e ridondanza.
-
-<<<<<<< HEAD
-> Aggiornare sempre anche i file .mdc in .windsurf/rules e .cursor/rules
-=======
-**Vedi anche:**
-- [Best Practices Filament per il modulo Performance](../../Performance/docs/filament.md)
->>>>>>> 7bf59db (.)
-
-**Vedi anche:** [filament-best-practices.mdc](../../../.windsurf/rules/filament-best-practices.mdc)
-
-## Policy DRY su Disponibilità e Prenotazione
-
-La disponibilità e la prenotazione sono sempre rappresentate da record Appointment con type=status specifici (es. type=availability, status=available). Non vanno mai create tabelle custom per la disponibilità. Tutte le logiche di calendario, slot, prenotazione e approvazione sono centralizzate su Appointment.
-
-### Esempio di query DRY
-```php
-Appointment::where('doctor_id', $doctorId)
-    ->where('type', AppointmentTypeEnum::AVAILABILITY)
-    ->where('status', AppointmentStatusEnum::AVAILABLE)
-    ->get();
-```
-
-### Motivazione filosofica, politica, zen
-- Un solo punto di verità: nessuna duplicazione, nessun lock-in
-- DRY, KISS, serenità del codice
-- Refactoring sicuro, massima estendibilità
-

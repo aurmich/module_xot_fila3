@@ -87,6 +87,7 @@ trait RelationX
             ->append('\\'.$pivot_name)
             ->toString();
         }
+<<<<<<< HEAD
         
         if (! class_exists($pivot_class)) {
             /*
@@ -103,6 +104,8 @@ trait RelationX
             }
         }
         
+=======
+>>>>>>> 7bf59db (.)
         $pivot = app($pivot_class);
         Assert::isInstanceOf($pivot, \Illuminate\Database\Eloquent\Relations\Pivot::class);
 

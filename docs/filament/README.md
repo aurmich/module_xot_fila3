@@ -90,6 +90,7 @@ Questa documentazione si applica a tutti i moduli che utilizzano Filament per il
 * [README.md](../../../../Themes/Two/docs/README.md)
 * [README.md](../../../../Themes/One/docs/README.md)
 
+<<<<<<< HEAD
 ## Regola sulle closure void nelle azioni custom Filament
 
 ### Motivazione
@@ -122,3 +123,5 @@ Questa documentazione si applica a tutti i moduli che utilizzano Filament per il
 - [ ] Nessuna closure void restituisce un valore
 - [ ] Tutte le azioni custom rispettano la signature void
 
+=======
+>>>>>>> 7bf59db (.)
