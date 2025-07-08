@@ -5,24 +5,13 @@ declare(strict_types=1);
 namespace Modules\Xot\Filament\Widgets;
 
 use Filament\Forms;
-<<<<<<< HEAD
-use Filament\Forms\Form as FilamentForm;
-use Filament\Forms\Concerns\InteractsWithForms;
-use Filament\Widgets\Widget as FilamentWidget;
-use Filament\Widgets\Concerns\InteractsWithPageFilters;
-=======
 use Illuminate\Support\Arr;
 use Illuminate\Support\Str;
->>>>>>> 40d6a28 (.)
 use Filament\Actions\Action;
 use Webmozart\Assert\Assert;
 use Illuminate\Contracts\View\View;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Cache;
-<<<<<<< HEAD
-=======
-use Modules\SaluteOra\Models\Patient;
->>>>>>> 40d6a28 (.)
 use Filament\Forms\ComponentContainer;
 use Filament\Forms\Contracts\HasForms;
 use Illuminate\Database\Eloquent\Model;
@@ -31,6 +20,9 @@ use Modules\Xot\Filament\Traits\TransTrait;
 use Filament\Widgets\Widget as FilamentWidget;
 use Filament\Forms\Concerns\InteractsWithForms;
 use Filament\Widgets\Concerns\InteractsWithPageFilters;
+
+
+
 
 /**
  * Classe base astratta per tutti i widget Filament.

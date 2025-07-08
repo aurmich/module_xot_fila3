@@ -89,9 +89,6 @@ trait RelationX
         }
         
         if (! class_exists($pivot_class)) {
-<<<<<<< HEAD
-            return $this->guessPivot($related, get_parent_class($class));
-=======
             /*
             //$pivot_class = 'Modules\Xot\Models\Pivot\\'.$pivot_name;
             dddx([
@@ -104,7 +101,6 @@ trait RelationX
             if(get_parent_class($class)!==false){
                 return $this->guessPivot($related, get_parent_class($class));
             }
->>>>>>> 40d6a28 (.)
         }
         
         $pivot = app($pivot_class);

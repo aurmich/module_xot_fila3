@@ -689,10 +689,7 @@ Consulta l'esempio completo all'inizio di questo documento per una implementazio
 - [Best Practices Laraxot](/var/www/html/exa/base_orisbroker_fila3/laravel/Modules/Xot/docs/best-practices.md)
 
 
-<<<<<<< HEAD
 
-=======
->>>>>>> 40d6a28 (.)
 ## Regole per Widget Filament: Path View e Localizzazione
 
 - Tutti i widget Filament devono avere la view in `modulo::filament.widgets.nome-widget`.
@@ -763,13 +760,4 @@ Appointment::where('doctor_id', $doctorId)
 - Un solo punto di verità: nessuna duplicazione, nessun lock-in
 - DRY, KISS, serenità del codice
 - Refactoring sicuro, massima estendibilità
-<<<<<<< HEAD
->>>>>>> 207b1a7 (.)
-=======
->>>>>>> 7ec6ffa (.)
-=======
->>>>>>> 3fc99caa662508b51bcbc764ddca541111daeb21
->>>>>>> 07b734cd (.)
->>>>>>> 3cf20ee5 (.)
-=======
->>>>>>> 40d6a28 (.)
+
