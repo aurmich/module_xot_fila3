@@ -1,333 +1,319 @@
 <?php
 
-return array (
-  'fields' => 
-  array (
-    'view' => 
-    array (
-      'label' => 'Visualizza',
-      'description' => 'Visualizza dettagli elemento',
-      'placeholder' => 'Clicca per visualizzare',
-      'help' => 'Visualizza i dettagli completi dell\'elemento selezionato',
-      'helper_text' => '',
-    ),
-    'delete' => 
-    array (
-      'label' => 'Elimina',
-      'description' => 'Elimina elemento',
-      'placeholder' => 'Clicca per eliminare',
-      'help' => 'Elimina definitivamente l\'elemento selezionato',
-      'helper_text' => '',
-    ),
-    'edit' => 
-    array (
-      'label' => 'Modifica',
-      'description' => 'Modifica elemento',
-      'placeholder' => 'Clicca per modificare',
-      'help' => 'Modifica i dati dell\'elemento selezionato',
-      'helper_text' => '',
-    ),
-    'detach' => 
-    array (
-      'label' => 'Scollega',
-      'description' => 'Scollega elemento',
-      'placeholder' => 'Clicca per scollegare',
-      'help' => 'Rimuovi la connessione con l\'elemento selezionato',
-      'helper_text' => '',
-    ),
-    'attach' => 
-    array (
-      'label' => 'Collega',
-      'description' => 'Collega elemento',
-      'placeholder' => 'Clicca per collegare',
-      'help' => 'Crea una connessione con l\'elemento selezionato',
-      'helper_text' => '',
-    ),
-    'pregnancy_certificate' => 
-    array (
-      'label' => 'Certificato di Gravidanza',
-      'description' => 'Documento attestante lo stato di gravidanza',
-      'placeholder' => 'Carica certificato di gravidanza',
-      'help' => 'Carica il certificato medico che attesta lo stato di gravidanza',
-      'helper_text' => '',
-    ),
-    'health_card' => 
-    array (
-      'label' => 'Tessera Sanitaria',
-      'description' => 'Tessera sanitaria del Sistema Sanitario Nazionale',
-      'placeholder' => 'Carica tessera sanitaria',
-      'help' => 'Carica la foto fronte/retro della tessera sanitaria',
-      'helper_text' => '',
-    ),
-    'identity_document' => 
-    array (
-      'label' => 'Documento di Identità',
-      'description' => 'Documento di identità valido (CI, Patente, Passaporto)',
-      'placeholder' => 'Carica documento di identità',
-      'help' => 'Carica un documento di identità valido e non scaduto',
-      'helper_text' => '',
-    ),
-    'isee_certificate' => 
-    array (
-      'label' => 'Certificazione ISEE',
-      'description' => 'Indicatore della Situazione Economica Equivalente',
-      'placeholder' => 'Carica certificazione ISEE',
-      'help' => 'Carica la certificazione ISEE per eventuali agevolazioni economiche',
-      'helper_text' => '',
-    ),
-    'certifications' => 
-    array (
-      'label' => 'Certificazioni',
-      'description' => 'Certificazioni e documenti aggiuntivi',
-      'placeholder' => 'Carica certificazioni',
-      'help' => 'Carica eventuali certificazioni mediche o documenti aggiuntivi richiesti',
-      'helper_text' => '',
-    ),
-    'certification' => 
-    array (
-      'description' => 'certificato',
-      'helper_text' => 'Tesserino sanitario O certificato di iscrizione all\'Ordine',
-      'label' => 'certificato',
-      'placeholder' => 'certificato',
-    ),
-    'doctor_certificate' => 
-    array (
-      'description' => 'certificato',
-      'helper_text' => 'Tesserino sanitario O certificato di iscrizione all\'Ordine',
-      'placeholder' => 'certificato',
-      'label' => 'certificato',
-    ),
-  ),
-  'steps' => 
-  array (
-    'documents_step' => 
-    array (
-      'label' => 'Documenti',
-      'description' => 'Caricamento documenti richiesti',
-      'help' => 'Carica tutti i documenti necessari per procedere',
-      'icon' => 'heroicon-o-document-arrow-up',
-    ),
-    'personal_data_step' => 
-    array (
-      'label' => 'Dati Personali',
-      'description' => 'Inserimento dati anagrafici',
-      'help' => 'Inserisci i tuoi dati personali e anagrafici',
-      'icon' => 'heroicon-o-user',
-    ),
-    'privacy_step' => 
-    array (
-      'label' => 'Privacy e Consensi',
-      'description' => 'Informativa privacy e consensi',
-      'help' => 'Leggi l\'informativa sulla privacy e esprimi i tuoi consensi',
-      'icon' => 'heroicon-o-shield-check',
-    ),
-    'previsit_step' => 
-    array (
-      'label' => 'Pre-Visita',
-      'description' => 'Informazioni preliminari alla visita',
-      'help' => 'Compila le informazioni preliminari richieste per la visita',
-      'icon' => 'heroicon-o-clipboard-document-list',
-    ),
-    'search_step' => 
-    array (
-      'label' => 'Ricerca',
-      'description' => 'Ricerca medico e specializzazione',
-      'help' => 'Cerca il medico o la specializzazione di cui hai bisogno',
-      'icon' => 'heroicon-o-magnifying-glass',
-    ),
-    'date_step' => 
-    array (
-      'label' => 'Selezione Data',
-      'description' => 'Scelta della data dell\'appuntamento',
-      'help' => 'Seleziona la data preferita per il tuo appuntamento',
-      'icon' => 'heroicon-o-calendar-days',
-    ),
-    'time_step' => 
-    array (
-      'label' => 'Selezione Orario',
-      'description' => 'Scelta dell\'orario dell\'appuntamento',
-      'help' => 'Seleziona l\'orario disponibile per il tuo appuntamento',
-      'icon' => 'heroicon-o-clock',
-    ),
-    'confirm_step' => 
-    array (
-      'label' => 'Conferma',
-      'description' => 'Conferma finale dell\'appuntamento',
-      'help' => 'Rivedi e conferma tutti i dettagli del tuo appuntamento',
-      'icon' => 'heroicon-o-check-circle',
-    ),
-    'doctor_step' => 
-    array (
-      'label' => 'Selezione Medico',
-      'description' => 'Scelta del medico specialista',
-      'help' => 'Seleziona il medico specialista per la tua visita',
-      'icon' => 'heroicon-o-user-circle',
-    ),
-    'studio_step' => 
-    array (
-      'label' => 'Studio',
-      'description' => 'Scelta dello studio medico',
-      'help' => 'Seleziona lo studio medico dove effettuare la visita',
-      'icon' => 'heroicon-o-building-office-2',
-    ),
-    'test_step' => 
-    array (
-      'label' => 'Test e Esami',
-      'description' => 'Selezione di test ed esami',
-      'help' => 'Seleziona eventuali test o esami da effettuare',
-      'icon' => 'heroicon-o-beaker',
-    ),
-    'personal_info_step' => 
-    array (
-      'label' => 'Informazioni Personali',
-      'description' => 'Completamento informazioni personali',
-      'help' => 'Completa le tue informazioni personali e di contatto',
-      'icon' => 'heroicon-o-identification',
-    ),
-    'availability_step' => 
-    array (
-      'label' => 'Disponibilità',
-      'description' => 'Verifica disponibilità orari',
-      'help' => 'Controlla la disponibilità degli orari per il tuo appuntamento',
-      'icon' => 'heroicon-o-calendar-days',
-    ),
-  ),
-  'actions' => 
-  array (
-    'submit' => 
-    array (
-      'label' => 'Invia',
-      'description' => 'Invia i dati inseriti',
-      'tooltip' => 'Clicca per inviare i dati',
-      'help' => 'Conferma e invia tutti i dati inseriti nel modulo',
-      'success' => 'Dati inviati con successo',
-      'error' => 'Errore durante l\'invio dei dati',
-      'confirmation' => 'Sei sicuro di voler inviare i dati?',
-    ),
-    'save' => 
-    array (
-      'label' => 'Salva',
-      'description' => 'Salva le modifiche',
-      'tooltip' => 'Clicca per salvare',
-      'help' => 'Salva tutte le modifiche apportate',
-      'success' => 'Modifiche salvate con successo',
-      'error' => 'Errore durante il salvataggio',
-    ),
-    'cancel' => 
-    array (
-      'label' => 'Annulla',
-      'description' => 'Annulla l\'operazione',
-      'tooltip' => 'Clicca per annullare',
-    ),
-    'back' => 
-    array (
-      'label' => 'Indietro',
-      'description' => 'Torna al passaggio precedente',
-    ),
-  ),
-  'messages' => 
-  array (
-    'loading' => 
-    array (
-      'label' => 'Caricamento in corso...',
-      'description' => 'Attendere il completamento dell\'operazione',
-    ),
-    'success' => 
-    array (
-      'label' => 'Operazione completata',
-      'description' => 'L\'operazione è stata completata con successo',
-    ),
-    'error' => 
-    array (
-      'label' => 'Errore',
-      'description' => 'Si è verificato un errore durante l\'operazione',
-    ),
-    'warning' => 
-    array (
-      'label' => 'Attenzione',
-      'description' => 'Prestare attenzione alle informazioni seguenti',
-    ),
-    'info' => 
-    array (
-      'label' => 'Informazione',
-      'description' => 'Informazioni aggiuntive importanti',
-    ),
-  ),
-  'navigation' => 
-  array (
-    'home' => 
-    array (
-      'label' => 'Home',
-      'description' => 'Pagina principale',
-      'tooltip' => 'Torna alla pagina principale',
-    ),
-    'dashboard' => 
-    array (
-      'label' => 'Dashboard',
-      'description' => 'Pannello di controllo principale',
-      'tooltip' => 'Visualizza il pannello di controllo',
-    ),
-    'settings' => 
-    array (
-      'label' => 'Impostazioni',
-      'description' => 'Configurazioni di sistema',
-      'tooltip' => 'Accedi alle impostazioni',
-    ),
-    'profile' => 
-    array (
-      'label' => 'Profilo',
-      'description' => 'Profilo utente',
-      'tooltip' => 'Gestisci il tuo profilo',
-    ),
-    'logout' => 
-    array (
-      'label' => 'Esci',
-      'description' => 'Disconnetti dall\'applicazione',
-      'tooltip' => 'Esci dall\'applicazione',
-    ),
-  ),
-  'validation' => 
-  array (
-    'required' => 
-    array (
-      'label' => 'Campo obbligatorio',
-      'description' => 'Questo campo è obbligatorio e deve essere compilato',
-    ),
-    'email' => 
-    array (
-      'label' => 'Email non valida',
-      'description' => 'Inserisci un indirizzo email valido',
-    ),
-    'numeric' => 
-    array (
-      'label' => 'Deve essere un numero',
-      'description' => 'Questo campo deve contenere solo numeri',
-    ),
-    'date' => 
-    array (
-      'label' => 'Data non valida',
-      'description' => 'Inserisci una data valida nel formato richiesto',
-    ),
-    'file' => 
-    array (
-      'label' => 'File non valido',
-      'description' => 'Il file caricato non è valido o è troppo grande',
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-    ),
-  ),
-  'actions' => 
-  array (
-    'save' => 
-    array (
-      'label' => 'save',
-=======
->>>>>>> 882f25f (.)
-=======
->>>>>>> 57838a14 (.)
-=======
->>>>>>> 5929911 (.)
-    ),
-  ),
-);
+declare(strict_types=1);
+
+return [
+    'fields' => [
+        'view' => [
+            'label' => 'Visualizza',
+            'description' => 'Visualizza dettagli elemento',
+            'placeholder' => 'Clicca per visualizzare',
+            'help' => 'Visualizza i dettagli completi dell\'elemento selezionato',
+        ],
+        'delete' => [
+            'label' => 'Elimina',
+            'description' => 'Elimina elemento',
+            'placeholder' => 'Clicca per eliminare',
+            'help' => 'Elimina definitivamente l\'elemento selezionato',
+        ],
+        'edit' => [
+            'label' => 'Modifica',
+            'description' => 'Modifica elemento',
+            'placeholder' => 'Clicca per modificare',
+            'help' => 'Modifica i dati dell\'elemento selezionato',
+        ],
+        'detach' => [
+            'label' => 'Scollega',
+            'description' => 'Scollega elemento',
+            'placeholder' => 'Clicca per scollegare',
+            'help' => 'Rimuovi la connessione con l\'elemento selezionato',
+        ],
+        'attach' => [
+            'label' => 'Collega',
+            'description' => 'Collega elemento',
+            'placeholder' => 'Clicca per collegare',
+            'help' => 'Crea una connessione con l\'elemento selezionato',
+        ],
+        'pregnancy_certificate' => [
+            'label' => 'Certificato di Gravidanza',
+            'description' => 'Documento attestante lo stato di gravidanza',
+            'placeholder' => 'Carica certificato di gravidanza',
+            'help' => 'Carica il certificato medico che attesta lo stato di gravidanza',
+        ],
+        'health_card' => [
+            'label' => 'Tessera Sanitaria',
+            'description' => 'Tessera sanitaria del Sistema Sanitario Nazionale',
+            'placeholder' => 'Carica tessera sanitaria',
+            'help' => 'Carica la foto fronte/retro della tessera sanitaria',
+        ],
+        'identity_document' => [
+            'label' => 'Documento di Identità',
+            'description' => 'Documento di identità valido (CI, Patente, Passaporto)',
+            'placeholder' => 'Carica documento di identità',
+            'help' => 'Carica un documento di identità valido e non scaduto',
+        ],
+        'isee_certificate' => [
+            'label' => 'Certificazione ISEE',
+            'description' => 'Indicatore della Situazione Economica Equivalente',
+            'placeholder' => 'Carica certificazione ISEE',
+            'help' => 'Carica la certificazione ISEE per eventuali agevolazioni economiche',
+        ],
+        'certifications' => [
+            'label' => 'Certificazioni',
+            'description' => 'Certificazioni e documenti aggiuntivi',
+            'placeholder' => 'Carica certificazioni',
+            'help' => 'Carica eventuali certificazioni mediche o documenti aggiuntivi richiesti',
+        ],
+        'certification' => [
+            'label' => 'Certificato',
+            'description' => 'Certificato professionale',
+            'placeholder' => 'Carica certificato',
+            'help' => 'Tesserino sanitario o certificato di iscrizione all\'Ordine',
+        ],
+        'doctor_certificate' => [
+            'label' => 'Certificato Medico',
+            'description' => 'Certificato di abilitazione professionale',
+            'placeholder' => 'Carica certificato medico',
+            'help' => 'Tesserino sanitario o certificato di iscrizione all\'Ordine',
+        ],
+    ],
+
+    'steps' => [
+        'documents_step' => [
+            'label' => 'Documenti',
+            'description' => 'Caricamento documenti richiesti',
+            'help' => 'Carica tutti i documenti necessari per procedere',
+            'icon' => 'heroicon-o-document-arrow-up',
+        ],
+        'personal_data_step' => [
+            'label' => 'Dati Personali',
+            'description' => 'Inserimento dati anagrafici',
+            'help' => 'Inserisci i tuoi dati personali e anagrafici',
+            'icon' => 'heroicon-o-user',
+        ],
+        'privacy_step' => [
+            'label' => 'Privacy e Consensi',
+            'description' => 'Informativa privacy e consensi',
+            'help' => 'Leggi l\'informativa sulla privacy e esprimi i tuoi consensi',
+            'icon' => 'heroicon-o-shield-check',
+        ],
+        'previsit_step' => [
+            'label' => 'Pre-Visita',
+            'description' => 'Informazioni preliminari alla visita',
+            'help' => 'Compila le informazioni preliminari richieste per la visita',
+            'icon' => 'heroicon-o-clipboard-document-list',
+        ],
+        'search_step' => [
+            'label' => 'Ricerca',
+            'description' => 'Ricerca medico e specializzazione',
+            'help' => 'Cerca il medico o la specializzazione di cui hai bisogno',
+            'icon' => 'heroicon-o-magnifying-glass',
+        ],
+        'date_step' => [
+            'label' => 'Selezione Data',
+            'description' => 'Scelta della data dell\'appuntamento',
+            'help' => 'Seleziona la data preferita per il tuo appuntamento',
+            'icon' => 'heroicon-o-calendar-days',
+        ],
+        'time_step' => [
+            'label' => 'Selezione Orario',
+            'description' => 'Scelta dell\'orario dell\'appuntamento',
+            'help' => 'Seleziona l\'orario disponibile per il tuo appuntamento',
+            'icon' => 'heroicon-o-clock',
+        ],
+        'confirm_step' => [
+            'label' => 'Conferma',
+            'description' => 'Conferma finale dell\'appuntamento',
+            'help' => 'Rivedi e conferma tutti i dettagli del tuo appuntamento',
+            'icon' => 'heroicon-o-check-circle',
+        ],
+        'doctor_step' => [
+            'label' => 'Selezione Medico',
+            'description' => 'Scelta del medico specialista',
+            'help' => 'Seleziona il medico specialista per la tua visita',
+            'icon' => 'heroicon-o-user-circle',
+        ],
+        'studio_step' => [
+            'label' => 'Studio',
+            'description' => 'Scelta dello studio medico',
+            'help' => 'Seleziona lo studio medico dove effettuare la visita',
+            'icon' => 'heroicon-o-building-office-2',
+        ],
+        'test_step' => [
+            'label' => 'Test e Esami',
+            'description' => 'Selezione di test ed esami',
+            'help' => 'Seleziona eventuali test o esami da effettuare',
+            'icon' => 'heroicon-o-beaker',
+        ],
+        'personal_info_step' => [
+            'label' => 'Informazioni Personali',
+            'description' => 'Completamento informazioni personali',
+            'help' => 'Completa le tue informazioni personali e di contatto',
+            'icon' => 'heroicon-o-identification',
+        ],
+        'availability_step' => [
+            'label' => 'Disponibilità',
+            'description' => 'Verifica disponibilità orari',
+            'help' => 'Controlla la disponibilità degli orari per il tuo appuntamento',
+            'icon' => 'heroicon-o-calendar-days',
+        ],
+    ],
+
+    'actions' => [
+        'submit' => [
+            'label' => 'Invia',
+            'description' => 'Invia i dati inseriti',
+            'success' => 'Dati inviati con successo',
+            'error' => 'Errore durante l\'invio dei dati',
+        ],
+        'save' => [
+            'label' => 'Salva',
+            'description' => 'Salva le modifiche',
+            'success' => 'Modifiche salvate con successo',
+            'error' => 'Errore durante il salvataggio',
+        ],
+        'cancel' => [
+            'label' => 'Annulla',
+            'description' => 'Annulla l\'operazione',
+        ],
+        'back' => [
+            'label' => 'Indietro',
+            'description' => 'Torna al passo precedente',
+        ],
+        'next' => [
+            'label' => 'Avanti',
+            'description' => 'Procedi al passo successivo',
+        ],
+        'previous' => [
+            'label' => 'Precedente',
+            'description' => 'Torna al passo precedente',
+        ],
+        'finish' => [
+            'label' => 'Completa',
+            'description' => 'Completa il processo',
+            'success' => 'Processo completato con successo',
+        ],
+        'reset' => [
+            'label' => 'Ripristina',
+            'description' => 'Ripristina i valori originali',
+            'confirmation' => 'Sei sicuro di voler ripristinare i valori originali?',
+        ],
+        'search' => [
+            'label' => 'Cerca',
+            'description' => 'Avvia la ricerca',
+            'placeholder' => 'Inserisci termini di ricerca',
+        ],
+        'filter' => [
+            'label' => 'Filtra',
+            'description' => 'Applica filtri di ricerca',
+        ],
+        'clear' => [
+            'label' => 'Pulisci',
+            'description' => 'Rimuovi tutti i filtri',
+        ],
+        'refresh' => [
+            'label' => 'Aggiorna',
+            'description' => 'Ricarica i dati',
+        ],
+        'download' => [
+            'label' => 'Scarica',
+            'description' => 'Scarica il file',
+        ],
+        'upload' => [
+            'label' => 'Carica',
+            'description' => 'Carica un file',
+            'success' => 'File caricato con successo',
+            'error' => 'Errore durante il caricamento',
+        ],
+        'preview' => [
+            'label' => 'Anteprima',
+            'description' => 'Visualizza l\'anteprima',
+        ],
+        'print' => [
+            'label' => 'Stampa',
+            'description' => 'Stampa il documento',
+        ],
+        'share' => [
+            'label' => 'Condividi',
+            'description' => 'Condividi il contenuto',
+        ],
+        'copy' => [
+            'label' => 'Copia',
+            'description' => 'Copia negli appunti',
+            'success' => 'Contenuto copiato negli appunti',
+        ],
+        'paste' => [
+            'label' => 'Incolla',
+            'description' => 'Incolla dagli appunti',
+        ],
+        'cut' => [
+            'label' => 'Taglia',
+            'description' => 'Taglia e copia negli appunti',
+        ],
+        'undo' => [
+            'label' => 'Annulla',
+            'description' => 'Annulla l\'ultima azione',
+        ],
+        'redo' => [
+            'label' => 'Ripeti',
+            'description' => 'Ripeti l\'ultima azione annullata',
+        ],
+        'select_all' => [
+            'label' => 'Seleziona tutto',
+            'description' => 'Seleziona tutti gli elementi',
+        ],
+        'deselect_all' => [
+            'label' => 'Deseleziona tutto',
+            'description' => 'Rimuovi tutte le selezioni',
+        ],
+    ],
+
+    'messages' => [
+        'welcome' => 'Benvenuto nel sistema',
+        'loading' => 'Caricamento in corso...',
+        'saving' => 'Salvataggio in corso...',
+        'saved' => 'Dati salvati correttamente',
+        'error' => 'Si è verificato un errore',
+        'success' => 'Operazione completata con successo',
+        'warning' => 'Attenzione',
+        'info' => 'Informazione',
+        'confirm' => 'Conferma',
+        'cancel' => 'Annulla',
+        'close' => 'Chiudi',
+        'back' => 'Indietro',
+        'next' => 'Avanti',
+        'previous' => 'Precedente',
+        'finish' => 'Completa',
+        'search' => 'Cerca',
+        'filter' => 'Filtra',
+        'clear' => 'Pulisci',
+        'refresh' => 'Aggiorna',
+        'download' => 'Scarica',
+        'upload' => 'Carica',
+        'preview' => 'Anteprima',
+        'print' => 'Stampa',
+        'share' => 'Condividi',
+        'copy' => 'Copia',
+        'paste' => 'Incolla',
+        'cut' => 'Taglia',
+        'undo' => 'Annulla',
+        'redo' => 'Ripeti',
+        'select_all' => 'Seleziona tutto',
+        'deselect_all' => 'Deseleziona tutto',
+        'no_results' => 'Nessun risultato trovato',
+        'no_data' => 'Nessun dato disponibile',
+        'empty_state' => 'Nessun elemento presente',
+        'permission_denied' => 'Permesso negato',
+        'not_found' => 'Elemento non trovato',
+        'validation_error' => 'Errore di validazione',
+        'server_error' => 'Errore del server',
+        'network_error' => 'Errore di rete',
+        'timeout_error' => 'Timeout della richiesta',
+        'session_expired' => 'Sessione scaduta, effettua nuovamente l\'accesso',
+        'unauthorized' => 'Non autorizzato ad accedere a questa risorsa',
+        'forbidden' => 'Accesso negato',
+        'unsaved_changes' => 'Ci sono modifiche non salvate',
+        'operation_successful' => 'Operazione eseguita con successo',
+        'operation_failed' => 'Operazione fallita, controllare i dati',
+    ],
+];
