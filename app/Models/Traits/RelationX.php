@@ -153,6 +153,7 @@ trait RelationX
             ->toString();
         if (! class_exists($pivot_class)) {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
             $pivot_class = Str::of($related)
             ->beforeLast('\\')
@@ -161,6 +162,8 @@ trait RelationX
         }
         if (! class_exists($pivot_class)) {
 >>>>>>> 57838a14 (.)
+=======
+>>>>>>> 5929911 (.)
             /*
             //$pivot_class = 'Modules\Xot\Models\Pivot\\'.$pivot_name;
             dddx([
