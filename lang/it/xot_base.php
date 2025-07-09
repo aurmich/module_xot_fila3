@@ -313,6 +313,7 @@ return array (
       'label' => 'File non valido',
       'description' => 'Il file caricato non è valido o è troppo grande',
 <<<<<<< HEAD
+<<<<<<< HEAD
     ),
   ),
   'actions' => 
@@ -322,6 +323,8 @@ return array (
       'label' => 'save',
 =======
 >>>>>>> 882f25f (.)
+=======
+>>>>>>> 57838a14 (.)
     ),
   ),
 );
