@@ -66,18 +66,29 @@ return [
         ],
         'certification' => [
             'label' => 'Certificato',
+<<<<<<< HEAD
             'description' => 'Certificato professionale',
+=======
+            'description' => 'Certificato medico o documentazione sanitaria',
+>>>>>>> a0c5791 (.)
             'placeholder' => 'Carica certificato',
             'help' => 'Tesserino sanitario o certificato di iscrizione all\'Ordine',
         ],
         'doctor_certificate' => [
             'label' => 'Certificato Medico',
+<<<<<<< HEAD
             'description' => 'Certificato di abilitazione professionale',
+=======
+            'description' => 'Certificato di abilitazione o iscrizione all\'Ordine',
+>>>>>>> a0c5791 (.)
             'placeholder' => 'Carica certificato medico',
             'help' => 'Tesserino sanitario o certificato di iscrizione all\'Ordine',
         ],
     ],
+<<<<<<< HEAD
 
+=======
+>>>>>>> a0c5791 (.)
     'steps' => [
         'documents_step' => [
             'label' => 'Documenti',
@@ -158,23 +169,40 @@ return [
             'icon' => 'heroicon-o-calendar-days',
         ],
     ],
+<<<<<<< HEAD
 
+=======
+>>>>>>> a0c5791 (.)
     'actions' => [
         'submit' => [
             'label' => 'Invia',
             'description' => 'Invia i dati inseriti',
+<<<<<<< HEAD
             'success' => 'Dati inviati con successo',
             'error' => 'Errore durante l\'invio dei dati',
+=======
+            'tooltip' => 'Clicca per inviare i dati',
+            'help' => 'Conferma e invia tutti i dati inseriti nel modulo',
+            'success' => 'Dati inviati con successo',
+            'error' => 'Errore durante l\'invio dei dati',
+            'confirmation' => 'Sei sicuro di voler inviare i dati?',
+>>>>>>> a0c5791 (.)
         ],
         'save' => [
             'label' => 'Salva',
             'description' => 'Salva le modifiche',
+<<<<<<< HEAD
+=======
+            'tooltip' => 'Clicca per salvare',
+            'help' => 'Salva tutte le modifiche apportate',
+>>>>>>> a0c5791 (.)
             'success' => 'Modifiche salvate con successo',
             'error' => 'Errore durante il salvataggio',
         ],
         'cancel' => [
             'label' => 'Annulla',
             'description' => 'Annulla l\'operazione',
+<<<<<<< HEAD
         ],
         'back' => [
             'label' => 'Indietro',
@@ -315,5 +343,87 @@ return [
         'unsaved_changes' => 'Ci sono modifiche non salvate',
         'operation_successful' => 'Operazione eseguita con successo',
         'operation_failed' => 'Operazione fallita, controllare i dati',
+=======
+            'tooltip' => 'Clicca per annullare',
+            'help' => 'Annulla l\'operazione corrente senza salvare le modifiche',
+        ],
+        'back' => [
+            'label' => 'Indietro',
+            'description' => 'Torna al passaggio precedente',
+            'tooltip' => 'Torna al passaggio precedente',
+            'help' => 'Torna al passaggio precedente del wizard',
+        ],
+    ],
+    'messages' => [
+        'loading' => [
+            'label' => 'Caricamento in corso...',
+            'description' => 'Attendere il completamento dell\'operazione',
+        ],
+        'success' => [
+            'label' => 'Operazione completata',
+            'description' => 'L\'operazione è stata completata con successo',
+        ],
+        'error' => [
+            'label' => 'Errore',
+            'description' => 'Si è verificato un errore durante l\'operazione',
+        ],
+        'warning' => [
+            'label' => 'Attenzione',
+            'description' => 'Prestare attenzione alle informazioni seguenti',
+        ],
+        'info' => [
+            'label' => 'Informazione',
+            'description' => 'Informazioni aggiuntive importanti',
+        ],
+    ],
+    'navigation' => [
+        'home' => [
+            'label' => 'Home',
+            'description' => 'Pagina principale',
+            'tooltip' => 'Torna alla pagina principale',
+        ],
+        'dashboard' => [
+            'label' => 'Dashboard',
+            'description' => 'Pannello di controllo principale',
+            'tooltip' => 'Visualizza il pannello di controllo',
+        ],
+        'settings' => [
+            'label' => 'Impostazioni',
+            'description' => 'Configurazioni di sistema',
+            'tooltip' => 'Accedi alle impostazioni',
+        ],
+        'profile' => [
+            'label' => 'Profilo',
+            'description' => 'Profilo utente',
+            'tooltip' => 'Gestisci il tuo profilo',
+        ],
+        'logout' => [
+            'label' => 'Esci',
+            'description' => 'Disconnetti dall\'applicazione',
+            'tooltip' => 'Esci dall\'applicazione',
+        ],
+    ],
+    'validation' => [
+        'required' => [
+            'label' => 'Campo obbligatorio',
+            'description' => 'Questo campo è obbligatorio e deve essere compilato',
+        ],
+        'email' => [
+            'label' => 'Email non valida',
+            'description' => 'Inserisci un indirizzo email valido',
+        ],
+        'numeric' => [
+            'label' => 'Deve essere un numero',
+            'description' => 'Questo campo deve contenere solo numeri',
+        ],
+        'date' => [
+            'label' => 'Data non valida',
+            'description' => 'Inserisci una data valida nel formato richiesto',
+        ],
+        'file' => [
+            'label' => 'File non valido',
+            'description' => 'Il file caricato non è valido o è troppo grande',
+        ],
+>>>>>>> a0c5791 (.)
     ],
 ];

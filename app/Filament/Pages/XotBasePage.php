@@ -10,12 +10,27 @@ use Filament\Forms\Concerns\InteractsWithForms;
 use Filament\Forms\Contracts\HasForms;
 use Filament\Forms\Form;
 use Filament\Pages\Page;
+<<<<<<< HEAD
 use Illuminate\Contracts\Auth\Authenticatable;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Str;
+=======
+use Illuminate\Support\Str;
+use Filament\Actions\Action;
+use Webmozart\Assert\Assert;
+use Filament\Facades\Filament;
+use Illuminate\Support\Facades\App;
+use Illuminate\Support\Facades\Log;
+use Filament\Forms\Contracts\HasForms;
+use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Builder;
+use Modules\Xot\Filament\Traits\TransTrait;
+use Illuminate\Contracts\Auth\Authenticatable;
+use Filament\Forms\Concerns\InteractsWithForms;
+>>>>>>> a0c5791 (.)
 use Modules\Xot\Actions\View\GetViewByClassAction;
 use Modules\Xot\Filament\Traits\TransTrait;
 
@@ -173,12 +188,19 @@ abstract class XotBasePage extends Page implements HasForms
 
         // Verifica che la classe del modello esista
         if (! class_exists($modelNamespace)) {
+<<<<<<< HEAD
             if (App::environment('local', 'development', 'testing')) {
                 Log::warning("Modello {$modelNamespace} non trovato. Specificare static::\$model nella classe ".static::class);
             }
             throw new \LogicException("Model class {$modelNamespace} does not exist");
         }
 
+=======
+            throw new \LogicException("Model class {$modelNamespace} does not exist");
+        }
+        Assert::classExists($modelNamespace);
+        Assert::isInstanceOf($modelNamespace, Model::class);
+>>>>>>> a0c5791 (.)
         /* @var class-string<Model> $modelNamespace */
         return $modelNamespace;
     }
