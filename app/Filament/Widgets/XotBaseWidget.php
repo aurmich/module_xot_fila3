@@ -21,11 +21,8 @@ use Modules\Xot\Filament\Traits\TransTrait;
 use Filament\Widgets\Widget as FilamentWidget;
 use Filament\Forms\Concerns\InteractsWithForms;
 use Filament\Widgets\Concerns\InteractsWithPageFilters;
-<<<<<<< HEAD
-=======
 use Filament\Actions\Concerns\InteractsWithActions;
 use Filament\Actions\Contracts\HasActions;
->>>>>>> a0c5791 (.)
 
 /**
  * Classe base astratta per tutti i widget Filament.
