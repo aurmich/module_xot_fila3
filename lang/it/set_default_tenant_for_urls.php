@@ -323,6 +323,16 @@ return array (
         'placeholder' => 'zeusData.2',
         'label' => 'zeusData.2',
       ),
+<<<<<<< HEAD
+=======
+      4 => 
+      array (
+        'description' => 'zeusData.4',
+        'helper_text' => 'zeusData.4',
+        'placeholder' => 'zeusData.4',
+        'label' => 'zeusData.4',
+      ),
+>>>>>>> e4cf0bb (.)
     ),
     'user_id' => 
     array (
