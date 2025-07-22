@@ -6,6 +6,7 @@ namespace Modules\Xot\Filament\Pages;
 
 use Filament\Facades\Filament;
 use Filament\Pages\Dashboard;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Str;
 use Webmozart\Assert\Assert;
 
@@ -27,19 +28,27 @@ class MainDashboard extends Dashboard
     public function mount(): void
     {
         
-        Assert::notNull($user = auth()->user(), '['.__LINE__.']['.class_basename($this).']');
+        $user = Auth::user();
+        Assert::notNull($user, '['.__LINE__.']['.class_basename($this).']');
         $modules = $user->roles->filter(
             static function ($item) {
                 return Str::endsWith($item->name, '::admin');
             }
         );
+
+       
         
         if (1 === $modules->count()) {
             Assert::notNull($module_first = $modules->first(), '['.__LINE__.']['.class_basename($this).']');
             $panel_name = $module_first->name;
             $module_name = Str::before($panel_name, '::admin');
-            $url = '/'.$module_name.'/admin';
-            redirect($url);
+            $current_path = request()->path();
+            
+            // ✅ FIX: Controlla se già nel panel corretto per evitare redirect loop
+            if ($current_path !== $module_name.'/admin') {
+                $url = '/'.$module_name.'/admin';
+                redirect($url);
+            }
         }
 
         if (0 === $modules->count()) {

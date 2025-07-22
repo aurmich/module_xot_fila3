@@ -1,6 +1,7 @@
 <?php
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 declare(strict_types=1);
 
 return [
@@ -102,6 +103,8 @@ return [
     ],
 ];
 =======
+=======
+>>>>>>> d179af3 (.)
 return array (
   'fields' => 
   array (
@@ -220,6 +223,7 @@ return array (
   ),
   'actions' => 
   array (
+<<<<<<< HEAD
     'submit' => 
     array (
       'label' => 'submit',
@@ -246,3 +250,11 @@ return array (
   ),
 );
 >>>>>>> e4cf0bb (.)
+=======
+    'save' => 
+    array (
+      'label' => 'save',
+    ),
+  ),
+);
+>>>>>>> d179af3 (.)
