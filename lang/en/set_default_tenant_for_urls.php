@@ -1,6 +1,7 @@
 <?php
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 return [
     'actions' => [
         'authenticate' => [
@@ -11,10 +12,32 @@ return [
         ],
         'request' => [
             'label' => 'request',
+=======
+declare(strict_types=1);
+
+return [
+    'actions' => [
+        'authenticate' => [
+            'label' => 'Authenticate',
+            'help' => 'Authenticate the user for this tenant',
+        ],
+        'login' => [
+            'label' => 'Login',
+            'help' => 'Login to your tenant account',
+        ],
+        'request' => [
+            'label' => 'Request',
+            'help' => 'Request tenant access',
+        ],
+        'test' => [
+            'label' => 'Test',
+            'help' => 'Test tenant configuration',
+>>>>>>> 560b5e9 (.)
         ],
     ],
     'fields' => [
         'email' => [
+<<<<<<< HEAD
             'label' => 'email',
             'description' => 'email',
             'helper_text' => '',
@@ -101,3 +124,36 @@ return array (
   ),
 );
 >>>>>>> e4cf0bb (.)
+=======
+            'label' => 'Email',
+            'description' => 'User email address',
+            'helper_text' => 'Enter your email address',
+            'placeholder' => 'Email',
+        ],
+        'password' => [
+            'label' => 'Password',
+            'description' => 'User password',
+            'helper_text' => 'Enter your password',
+            'placeholder' => 'Password',
+        ],
+        'remember' => [
+            'label' => 'Remember me',
+            'description' => 'Keep me logged in',
+            'helper_text' => 'Check to stay logged in',
+            'placeholder' => '',
+        ],
+        'cap' => [
+            'label' => 'Postal Code',
+            'description' => 'Postal code for the address',
+            'helper_text' => 'Enter your postal code',
+            'placeholder' => 'Postal code',
+        ],
+        'city' => [
+            'label' => 'City',
+            'description' => 'City of residence',
+            'helper_text' => 'Enter your city',
+            'placeholder' => 'City',
+        ],
+    ],
+};
+>>>>>>> 560b5e9 (.)

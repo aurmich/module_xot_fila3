@@ -324,7 +324,10 @@ return array (
         'label' => 'zeusData.2',
       ),
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 560b5e9 (.)
       4 => 
       array (
         'description' => 'zeusData.4',
@@ -332,7 +335,10 @@ return array (
         'placeholder' => 'zeusData.4',
         'label' => 'zeusData.4',
       ),
+<<<<<<< HEAD
 >>>>>>> e4cf0bb (.)
+=======
+>>>>>>> 560b5e9 (.)
     ),
     'user_id' => 
     array (

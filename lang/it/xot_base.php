@@ -2,6 +2,9 @@
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 560b5e9 (.)
 declare(strict_types=1);
 
 return [
@@ -101,6 +104,7 @@ return [
             'description' => 'Il file caricato non è valido o è troppo grande',
         ],
     ],
+<<<<<<< HEAD
 ];
 =======
 =======
@@ -258,3 +262,34 @@ return array (
   ),
 );
 >>>>>>> d179af3 (.)
+=======
+    'actions' => [
+        'submit' => [
+            'label' => 'Invia',
+            'help' => 'Invia il modulo',
+        ],
+        'save' => [
+            'label' => 'Salva',
+            'help' => 'Salva le modifiche',
+        ],
+    ],
+    'steps' => [
+        'confirm_step' => [
+            'label' => 'Conferma',
+            'help' => 'Conferma i dati inseriti',
+        ],
+        'date_step' => [
+            'label' => 'Data',
+            'help' => 'Seleziona la data',
+        ],
+        'studio_step' => [
+            'label' => 'Studio',
+            'help' => 'Inserisci i dati dello studio',
+        ],
+        'search_step' => [
+            'label' => 'Ricerca',
+            'help' => 'Cerca tra gli elementi',
+        ],
+    ],
+];
+>>>>>>> 560b5e9 (.)
