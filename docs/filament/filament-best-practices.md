@@ -61,8 +61,4 @@ public function getTableActions(): array
 ## Collegamenti
 - [Documentazione Filament Ufficiale](https://filamentphp.com/)
 - [Principio di Sostituzione di Liskov](https://it.wikipedia.org/wiki/Principio_di_sostituzione_di_Liskov)
-<<<<<<< HEAD
 - [Best Practices PHP](../php-strict-types.md) 
-=======
-- [Best Practices PHP](../php-strict-types.md) 
->>>>>>> d37e17ac (.)

@@ -224,7 +224,6 @@ trait HasXotTable
             ->actionsPosition(ActionsPosition::BeforeColumns)
             ->emptyStateActions($this->getTableEmptyStateActions())
             ->striped()
-            ->recordUrl(null) // Disabilita il click sulla riga
             ->paginated($this->getTablePaginated());
         /*
             ->defaultSort(

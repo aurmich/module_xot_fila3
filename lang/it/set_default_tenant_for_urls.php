@@ -485,8 +485,6 @@ return array (
       'helper_text' => 'itemValue',
       'description' => 'itemValue',
     ),
-<<<<<<< HEAD
-=======
   ),
   'steps' => 
   array (
@@ -494,6 +492,5 @@ return array (
     array (
       'label' => 'Credenziali',
     ),
->>>>>>> d37e17ac (.)
   ),
 );
