@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Modules\Xot\Contracts;
 
+<<<<<<< HEAD
 use Modules\User\Models\Role;
 use Spatie\MediaLibrary\HasMedia;
 use Illuminate\Database\Query\Builder;
@@ -12,6 +13,15 @@ use Spatie\ModelStates\HasStatesContract;
 use Spatie\Permission\Contracts\Permission;
 use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
+=======
+use Illuminate\Database\Eloquent\Collection;
+use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Database\Query\Builder;
+use Modules\User\Models\Role;
+use Spatie\MediaLibrary\HasMedia;
+use Spatie\Permission\Contracts\Permission;
+>>>>>>> 5bb5e55 (.)
 use Spatie\Permission\Exceptions\PermissionDoesNotExist;
 
 /**

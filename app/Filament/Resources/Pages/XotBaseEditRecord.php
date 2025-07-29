@@ -4,7 +4,10 @@ declare(strict_types=1);
 
 namespace Modules\Xot\Filament\Resources\Pages;
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 5bb5e55 (.)
 use Filament\Forms\Form;
 use Filament\Resources\Pages\EditRecord as FilamentEditRecord;
 
