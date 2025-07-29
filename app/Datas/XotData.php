@@ -42,10 +42,7 @@ class XotData extends Data implements Wireable
     public string $register_type = '0';
     public string $verification_type = '';
     public bool $login_verified = false;
-<<<<<<< HEAD
     public bool $force_ssl = false;
-=======
->>>>>>> 5bb5e55 (.)
     public bool $disable_frontend_dynamic_route = false;
     public bool $disable_admin_dynamic_route = false;
     public bool $disable_database_notifications = true;
@@ -353,7 +350,6 @@ class XotData extends Data implements Wireable
         //return $userInstance->getChildTypes();
     }
 
-<<<<<<< HEAD
 
     public function forceSSL(): bool
     {
@@ -375,6 +371,4 @@ class XotData extends Data implements Wireable
         return true;
     }
 
-=======
->>>>>>> 5bb5e55 (.)
 }

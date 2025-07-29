@@ -1,31 +1,5 @@
 <?php
 
-<<<<<<< HEAD
-declare(strict_types=1);
-
-return [
-    'actions' => [
-        'set_default_tenant' => [
-            'label' => 'Imposta tenant di default per gli URL',
-            'success' => 'Tenant di default impostato correttamente per tutti gli URL.',
-            'error' => 'Errore durante l’impostazione del tenant di default per gli URL.',
-            'confirmation' => 'Sei sicuro di voler impostare il tenant di default per tutti gli URL?',
-            'tooltip' => 'Imposta il tenant di default per tutti gli URL generati',
-        ],
-    ],
-    'messages' => [
-        'success' => 'Tenant di default impostato per tutti gli URL.',
-        'error' => 'Si è verificato un errore durante l’impostazione del tenant di default.',
-    ],
-    'fields' => [
-        'tenant_id' => [
-            'label' => 'Tenant',
-            'placeholder' => 'Seleziona il tenant',
-            'help' => 'Scegli il tenant da impostare come default per tutti gli URL.',
-        ],
-    ],
-];
-=======
 return array (
   'actions' => 
   array (
@@ -349,6 +323,13 @@ return array (
         'placeholder' => 'zeusData.2',
         'label' => 'zeusData.2',
       ),
+      4 => 
+      array (
+        'description' => 'zeusData.4',
+        'helper_text' => 'zeusData.4',
+        'placeholder' => 'zeusData.4',
+        'label' => 'zeusData.4',
+      ),
     ),
     'user_id' => 
     array (
@@ -506,4 +487,3 @@ return array (
     ),
   ),
 );
->>>>>>> 5bb5e55 (.)

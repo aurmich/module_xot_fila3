@@ -16,6 +16,48 @@
 - DO NOT define table() method in Resource classes
 - DO NOT use ->label() method (handled by LangServiceProvider)
 - DO NOT define $navigationIcon, $modelLabel (handled by translations)
+- ALWAYS include `use Filament\Forms;` in Resource files
+
+### XotBaseResource Forbidden Methods
+Classes extending XotBaseResource MUST NEVER implement:
+- ❌ `protected static ?string $navigationIcon` (handled by translations)
+- ❌ `public static function table(Table $table): Table` (handled by ListRecords pages)
+- ❌ `public static function getPages()` (if returns standard routes only)
+- ❌ `public static function getRelations()` (if returns empty array)
+
+### Required Imports for Resources
+All Resource files MUST include:
+```php
+use Filament\Forms;
+```
+
+## CRITICAL: Model Fields Validation
+- **ALWAYS** verify that form fields match the actual model fields
+- **NEVER** use fields that don't exist in the model or migration
+- **CHECK** both the model's `$fillable` array and the migration schema
+- **VALIDATE** that table columns in ListRecords match model fields
+- **ERROR**: Using non-existent fields breaks the application
+
+### Model Fields Verification Process
+1. **Check Model**: Read the model's `$fillable` array and PHPDoc properties
+2. **Check Migration**: Verify the database schema in the migration file
+3. **Match Form Fields**: Ensure `getFormSchema()` only uses existing fields
+4. **Match Table Columns**: Ensure `getTableColumns()` only uses existing fields
+5. **Document**: Create a plan with all model fields for verification
+
+### Common Errors Found
+- ❌ Using `name` instead of `categoria` (CategoriaPropro)
+- ❌ Using `descr` instead of `lista_propro` (CategoriaPropro)
+- ❌ Using `matr_valutatore`, `cognome_valutatore` instead of real fields (Valutatore)
+- ❌ Using `matr`, `cognome`, `nome`, `giorni_assenza` instead of real fields (Assenze)
+
+### Verification Checklist
+- [ ] Read model's `$fillable` array
+- [ ] Check migration schema
+- [ ] Verify `getFormSchema()` uses only real fields
+- [ ] Verify `getTableColumns()` uses only real fields
+- [ ] Test resource functionality
+- [ ] Document any corrections made
 
 ## LIST PAGES
 - ALWAYS extend XotBaseListRecords
@@ -26,6 +68,7 @@
   - getTableBulkActions(): array - For bulk actions
   - getTableHeaderActions(): array - For header actions
 - Use associative arrays with string keys for components
+- **CRITICAL**: Only use fields that exist in the model
 
 ## MODELS
 - Follow proper namespace: Modules\*\Models

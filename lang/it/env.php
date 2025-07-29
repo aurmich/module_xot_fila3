@@ -87,10 +87,6 @@ return array (
     'telegram_bot_token' => 
     array (
       'description' => 'telegram_bot_token',
-<<<<<<< HEAD
-=======
-      'helper_text' => 'telegram_bot_token',
->>>>>>> 5bb5e55 (.)
     ),
   ),
   'actions' => 
