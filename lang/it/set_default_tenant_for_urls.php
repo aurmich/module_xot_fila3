@@ -485,5 +485,15 @@ return array (
       'helper_text' => 'itemValue',
       'description' => 'itemValue',
     ),
+<<<<<<< HEAD
+=======
+  ),
+  'steps' => 
+  array (
+    'Credenziali' => 
+    array (
+      'label' => 'Credenziali',
+    ),
+>>>>>>> d37e17ac (.)
   ),
 );
