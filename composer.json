@@ -25,28 +25,17 @@
         "coolsam/panel-modules": "*",
         "doctrine/dbal": "*",
         "fidum/laravel-eloquent-morph-to-one": "*",
-<<<<<<< HEAD
-        "filament/filament": "^4.0",
-        "filament/spatie-laravel-media-library-plugin": "^4.0",
-        "filament/spatie-laravel-translatable-plugin": "^3.2",
-=======
         "filament/filament": "*",
         "filament/spatie-laravel-media-library-plugin": "*",
         "filament/spatie-laravel-translatable-plugin": "*",
->>>>>>> 5fc7c49 (.)
         "guzzlehttp/guzzle": "*",
         "laravel/folio": "^1.1",
         "laravel/framework": "*",
         "laravel/pennant": "^1.11",
         "laravel/pulse": "^1.2",
         "laravel/tinker": "^2.10.1",
-<<<<<<< HEAD
-        "livewire/livewire": "^3.0",
-        "livewire/flux": "^2.1.1",
-=======
         "livewire/flux": "^2.1.1",
         "livewire/livewire": "^3.0",
->>>>>>> 5fc7c49 (.)
         "livewire/volt": "^1.0",
         "maatwebsite/excel": "^3.1",
         "nwidart/laravel-modules": "*",
@@ -58,11 +47,7 @@
         "spatie/laravel-model-status": "*",
         "spatie/laravel-package-tools": "*",
         "spatie/laravel-permission": "*",
-<<<<<<< HEAD
-        "spatie/laravel-queueable-action": "*",
-=======
         "spatie/laravel-queueable-action": "^2.16",
->>>>>>> 5fc7c49 (.)
         "spatie/laravel-responsecache": "^7.6",
         "spatie/laravel-schemaless-attributes": "^2.5",
         "spatie/laravel-sluggable": "^3.6",
