@@ -13,11 +13,7 @@ class GetSicureArrayByModelAction
     use QueueableAction;
 
     /**
-<<<<<<< HEAD
-    
-=======
-     * @return array<Index>
->>>>>>> 894eeac (.)
+     * @return array<string, mixed>
      */
     public function execute(Model $model): array
     {
