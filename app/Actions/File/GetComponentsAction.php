@@ -47,7 +47,6 @@ class GetComponentsAction
             }
             return ComponentFileData::collection($comps);
         }
-        
 
         $files = File::allFiles($path);
         $comps = [];
@@ -94,11 +93,7 @@ class GetComponentsAction
                 ])->toArray();
                 
             } catch (\Exception $e) {
-<<<<<<< HEAD
                 /*
-=======
-                
->>>>>>> ae153998 (.)
                 dddx([
                     'comp_name' => $comp_name,
                     'class_name' => $class_name,
@@ -108,12 +103,8 @@ class GetComponentsAction
                     'prefix' => $prefix,
                     'message' => $e->getMessage(),
                 ]);
-<<<<<<< HEAD
                 */
                 throw $e;
-=======
-                
->>>>>>> ae153998 (.)
             }
         }
 

@@ -27,7 +27,6 @@ abstract class XotBaseListRecords extends FilamentListRecords
 {
     use HasXotTable;
 
-<<<<<<< HEAD
     /*
      * Get the table columns.
      *
@@ -35,35 +34,8 @@ abstract class XotBaseListRecords extends FilamentListRecords
      
     abstract public function getTableColumns(): array;
     */
-=======
-<<<<<<< Updated upstream
-<<<<<<< HEAD
-=======
 
->>>>>>> 4241492 (.)
-=======
->>>>>>> Stashed changes
-    /**
-     * Get the table columns.
-     *
-     * @return array<string, Tables\Columns\Column>
-     */
-    public function getTableColumns(): array
-    {
-        return [];
-    }
-<<<<<<< Updated upstream
->>>>>>> ae153998 (.)
-
-
-=======
-    abstract public function getListTableColumns(): array;
-
->>>>>>> 4241492 (.)
-=======
-
-
->>>>>>> Stashed changes
+    
     /**
      * Get the default sort column and direction.
      *
@@ -77,7 +49,7 @@ abstract class XotBaseListRecords extends FilamentListRecords
     /**
      * Get the header actions.
      *
-     * @return array<int, \Filament\Actions\Action>
+     * @return array<string, \Filament\Actions\Action>
      */
     protected function getHeaderActions(): array
     {
@@ -106,42 +78,10 @@ abstract class XotBaseListRecords extends FilamentListRecords
     protected function paginateTableQueryTMP(Builder $query): Paginator
     {
         return $query->fastPaginate(
-            ('all' === $this->getTableRecordsPerPage())
-            ? $query->count()
+            ('all' === $this->getTableRecordsPerPage()) 
+            ? $query->count() 
             : $this->getTableRecordsPerPage()
         );
-<<<<<<< Updated upstream
     }
 }
 
-=======
-        $perPage = $this->getTableRecordsPerPage();
-
-        if ('all' === $perPage) {
-            $count = $query->count();
-
-            /* @var \Illuminate\Contracts\Pagination\Paginator */
-            Assert::isInstanceOf($res = $query->fastPaginate($count), Paginator::class);
-            return $res;
-        }
-
-        if (is_numeric($perPage)) {
-            $perPageInt = (int) $perPage;
-            Assert::greaterThan($perPageInt, 0);
-
-            /* @var \Illuminate\Contracts\Pagination\Paginator */
-            Assert::isInstanceOf($res = $query->fastPaginate($perPageInt), Paginator::class);
-            return $res;
-        }
-
-        /* @var \Illuminate\Contracts\Pagination\Paginator */
-        Assert::isInstanceOf($res = $query->fastPaginate(10), Paginator::class);
-        return $res;
-    }
-}
->>>>>>> 4241492 (.)
-=======
-    }
-}
-
->>>>>>> Stashed changes

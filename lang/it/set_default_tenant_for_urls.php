@@ -1,17 +1,17 @@
 <?php
 
 return array (
-  'actions' =>
+  'actions' => 
   array (
-    'authenticate' =>
+    'authenticate' => 
     array (
       'label' => 'authenticate',
     ),
-    'login' =>
+    'login' => 
     array (
       'label' => 'login',
     ),
-    'request' =>
+    'request' => 
     array (
       'label' => 'request',
     ),
@@ -40,27 +40,23 @@ return array (
       'label' => 'create',
     ),
   ),
-  'fields' =>
+  'fields' => 
   array (
-    'email' =>
+    'email' => 
     array (
       'label' => 'email',
       'description' => 'email',
-<<<<<<< HEAD
       'helper_text' => '',
-=======
-      'helper_text' => 'email',
->>>>>>> ae153998 (.)
       'placeholder' => 'email',
     ),
-    'password' =>
+    'password' => 
     array (
       'label' => 'password',
       'description' => 'password',
       'helper_text' => '',
       'placeholder' => 'password',
     ),
-    'remember' =>
+    'remember' => 
     array (
       'label' => 'remember',
       'description' => 'remember',
@@ -498,34 +494,3 @@ return array (
     ),
   ),
 );
-<<<<<<< Updated upstream
-=======
-declare(strict_types=1);
-
-return [
-    'actions' => [
-        'authenticate' => [
-            'label' => 'authenticate',
-        ],
-        'login' => [
-            'label' => 'login',
-        ],
-        'request' => [
-            'label' => 'request',
-        ],
-    ],
-    'fields' => [
-        'email' => [
-            'label' => 'email',
-        ],
-        'password' => [
-            'label' => 'password',
-        ],
-        'remember' => [
-            'label' => 'remember',
-        ],
-    ],
-];
->>>>>>> 4241492 (.)
-=======
->>>>>>> Stashed changes

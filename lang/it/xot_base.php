@@ -1,9 +1,9 @@
 <?php
 
 return array (
-  'fields' =>
+  'fields' => 
   array (
-    'view' =>
+    'view' => 
     array (
       'label' => 'Visualizza',
       'description' => 'Visualizza dettagli elemento',
@@ -143,17 +143,3 @@ return array (
     ),
   ),
 );
-<<<<<<< Updated upstream
-=======
-declare(strict_types=1);
-
-return [
-    'fields' => [
-        'view' => [
-            'label' => 'view',
-        ],
-    ],
-];
->>>>>>> 4241492 (.)
-=======
->>>>>>> Stashed changes
