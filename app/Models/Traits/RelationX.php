@@ -60,6 +60,30 @@ trait RelationX
             ->withTimestamps();
     }
 
+<<<<<<< HEAD
+=======
+    /*
+    public function ratings(): MorphToMany
+    {
+        $class = static::class;
+        $alias = Str::of(class_basename($class))->snake()->toString();
+        Relation::morphMap([
+            $alias => $class,
+        ]);
+        $pivot_class = RatingMorph::class;
+        $pivot = app($pivot_class);
+        $pivot_table = $pivot->getTable();
+        $pivot_db_name = $pivot->getConnection()->getDatabaseName();
+        $pivot_table_full = $pivot_db_name.'.'.$pivot_table;
+        $pivot_fields = $pivot->getFillable();
+
+        return $this->morphToMany(Rating::class, 'model', $pivot_table_full)
+            ->using($pivot_class)
+            ->withPivot($pivot_fields)
+            ->withTimestamps();
+    }
+    */
+>>>>>>> ae153998 (.)
 
     /**
      * Define a polymorphic many-to-many relationship.
@@ -81,6 +105,7 @@ trait RelationX
                                 $relatedPivotKey = null, $parentKey = null,
                                 $relatedKey = null, $relation = null, $inverse = false)
     {
+<<<<<<< HEAD
        
         $pivot = $this->guessMorphPivot($related);
         $table = $pivot->getTable();
@@ -116,16 +141,27 @@ trait RelationX
         $class = $this::class;
         $pivot_name = class_basename($related).'Morph';
         /*
+=======
+        $model_names = [
+            class_basename($this::class),
+            class_basename($related),
+        ];
+        sort($model_names);
+        $msg='';
+        $pivot_name = implode('', $model_names);
+>>>>>>> ae153998 (.)
         $pivot_class = Str::of($this::class)
             ->beforeLast('\\')
             ->append('\\'.$pivot_name)
             ->toString();
         if (! class_exists($pivot_class)) {
+            $msg .= 'pivot['.$pivot_class.'] not exists';
             $pivot_class = Str::of($related)
             ->beforeLast('\\')
             ->append('\\'.$pivot_name)
             ->toString();
         }
+<<<<<<< HEAD
         */
         $pivot_class = $this->guessPivotFullClass($pivot_name, $related, $class);
         $pivot = app($pivot_class);
@@ -168,6 +204,12 @@ trait RelationX
         */
         $pivot_class = $this->guessPivotFullClass($pivot_name, $related, $class);
         
+=======
+        if (! class_exists($pivot_class)) {
+            $msg .= ' pivot['.$pivot_class.'] not exists';
+            throw new \Exception($msg);
+        }
+>>>>>>> ae153998 (.)
         $pivot = app($pivot_class);
         Assert::isInstanceOf($pivot, \Illuminate\Database\Eloquent\Relations\Pivot::class);
 

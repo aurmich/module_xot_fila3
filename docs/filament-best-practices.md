@@ -1,18 +1,23 @@
-# Best Practices per Filament Resources in Laraxot
+# Filament Best Practices (Moduli Riutilizzabili)
 
-Questo documento definisce le linee guida ufficiali e le best practices per l'implementazione delle risorse Filament all'interno del framework Laraxot.
+## Descrizione
+Best practice generiche per l'utilizzo di Filament in moduli Laravel riutilizzabili. Nessun riferimento a nomi di progetto o brand.
 
-## Regole Fondamentali
+## Regole principali
+- NON estendere mai direttamente le classi di Filament: creare sempre wrapper personalizzati
+- Utilizzare traits per funzionalità riutilizzabili
+- Seguire il pattern di composizione invece dell'ereditarietà
+- Mantenere la compatibilità con gli aggiornamenti di Filament
+- Centralizzare le configurazioni comuni nelle classi base
+- Non inserire proprietà statiche custom nei resource (es. $navigationIcon, $navigationGroup, $translationPrefix)
+- Non usare ->label() direttamente nei form: usare sempre i file di traduzione
 
-### 1. Utilizzo delle Classi Base Corrette
-
-#### ✅ DO - Estendere XotBaseResource
-
-È **obbligatorio** che tutte le risorse Filament estendano `XotBaseResource` invece della classe standard di Filament:
-
+## Esempi
 ```php
-use Modules\Xot\Filament\Resources\XotBaseResource;
+// ❌ Anti-pattern
+class MyResource extends \Filament\Resources\Resource {}
 
+<<<<<<< HEAD
 class UserResource extends XotBaseResource
 {
     // ...
@@ -511,10 +516,17 @@ public static function table(Table $table): Table
         ->defaultPaginationPageOption(25)
         ->paginated([10, 25, 50, 100]);
 }
+=======
+// ✅ Best practice
+class MyResource extends \Modules\Xot\Filament\Resources\XotBaseResource {}
+>>>>>>> ae153998 (.)
 ```
 
 ## Troubleshooting
+- Se compare un errore di override di proprietà statiche, rimuovere la proprietà dal resource e centralizzare nella base
+- Se le traduzioni non vengono applicate, controllare la struttura dei file lang e l'assenza di ->label() hardcoded
 
+<<<<<<< HEAD
 ### Problema: Form non visualizzato correttamente
 
 **Soluzione:** Assicurarsi di utilizzare `getFormSchema()` invece di `form()` e controllare che tutti i componenti siano configurati correttamente.
@@ -579,3 +591,11 @@ Consulta l'esempio completo all'inizio di questo documento per una implementazio
 - [Documentazione Filament](https://filamentphp.com/docs)
 - [Documentazione XotBaseResource](/var/www/html/exa/base_orisbroker_fila3/laravel/Modules/Xot/docs/resource.md)
 - [Best Practices Laraxot](/var/www/html/exa/base_orisbroker_fila3/laravel/Modules/Xot/docs/best-practices.md)
+=======
+## Collegamenti
+- [Filament Docs](https://filamentphp.com/docs)
+- [Best practices moduli riutilizzabili](../module-documentation-neutrality.md)
+- [Ereditarietà modelli](../model-inheritance-best-practices.md)
+
+
+>>>>>>> ae153998 (.)
