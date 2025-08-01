@@ -8687,10 +8687,18 @@ Un errore particolarmente frequente riguarda le Actions. La convenzione corretta
 
 - ❌ **ERRATO**: `namespace Modules\Xot\app\Actions;`
  bb08ed4 (.)
+<<<<<<< HEAD
+=======
+
+>>>>>>> cb26a2b (.)
 - ❌ **ERRATO**: `namespace Modules\Xot\app\Actions;`
 - ❌ **ERRATO**: `namespace Modules\Xot\app\Actions;`
 b6f667c (.)
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> cb26a2b (.)
 Anche se il file si trova nel percorso fisico `Modules/Xot/app/Actions/`, il namespace non deve mai includere il segmento `app`.
 
 Questo errore causa spesso problemi di PHPStan come:
@@ -8717,9 +8725,17 @@ Class 'Modules\Xot\Actions\MyAction' not found.
 
 Class 'Modules\Xot\app\Actions\MyAction' not found.
  bb08ed4 (.)
+<<<<<<< HEAD
 Class 'Modules\Xot\app\Actions\MyAction' not found.
 Class 'Modules\Xot\app\Actions\MyAction' not found.
 b6f667c (.)
+=======
+
+Class 'Modules\Xot\app\Actions\MyAction' not found.
+Class 'Modules\Xot\app\Actions\MyAction' not found.
+b6f667c (.)
+
+>>>>>>> cb26a2b (.)
 ```
 
 La correzione è sempre la stessa: rimuovere il segmento `app` dal namespace.

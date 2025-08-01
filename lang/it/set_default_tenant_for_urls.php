@@ -46,7 +46,11 @@ return array (
     array (
       'label' => 'email',
       'description' => 'email',
+<<<<<<< HEAD
       'helper_text' => '',
+=======
+      'helper_text' => 'email',
+>>>>>>> cb26a2b (.)
       'placeholder' => 'email',
     ),
     'password' => 

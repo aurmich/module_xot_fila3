@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Modules\Xot\Filament\Widgets;
 
+<<<<<<< HEAD
 use Filament\Forms;
 use Illuminate\Support\Arr;
 use Illuminate\Support\Str;
@@ -23,6 +24,13 @@ use Filament\Forms\Concerns\InteractsWithForms;
 use Filament\Widgets\Concerns\InteractsWithPageFilters;
 use Filament\Actions\Concerns\InteractsWithActions;
 use Filament\Actions\Contracts\HasActions;
+=======
+use Filament\Widgets\Widget as FilamentWidget;
+use Illuminate\Support\Facades\Cache;
+use Filament\Widgets\WidgetConfiguration;
+use Filament\Widgets\Concerns\InteractsWithPageFilters;
+use Modules\Xot\Actions\View\GetViewByClassAction;
+>>>>>>> cb26a2b (.)
 
 /**
  * Classe base astratta per tutti i widget Filament.
@@ -34,10 +42,15 @@ use Filament\Actions\Contracts\HasActions;
  * @property array<string, mixed>|null $data Dati del form
  * @property ComponentContainer $form
  */
+<<<<<<< HEAD
 abstract class XotBaseWidget extends FilamentWidget implements HasForms,HasActions
+=======
+abstract class XotBaseWidget extends FilamentWidget
+>>>>>>> cb26a2b (.)
 {
     use TransTrait;
     use InteractsWithPageFilters;
+<<<<<<< HEAD
     //use InteractsWithPageTable;
     use InteractsWithForms;
     use InteractsWithActions;
@@ -63,10 +76,27 @@ abstract class XotBaseWidget extends FilamentWidget implements HasForms,HasActio
     public ?array $data = [];
 
     /*
+=======
+    public string $title = '';
+    public string $icon = '';
+    /**
+     * The view that should be rendered for the widget.
+     *
+     * This property allows either a string that can be rendered as a view
+     * (prefixed with a namespace like 'module-name::view-name') or a path to a
+     * Blade view file.
+     *
+     * @var view-string
+     */
+    protected static string $view;
+
+
+>>>>>>> cb26a2b (.)
     public function __construct()
     {
         //parent::__construct();//Cannot call constructor
         $view = app(GetViewByClassAction::class)->execute(static::class);
+<<<<<<< HEAD
         if(view()->exists($view)){
             $this->view = $view;
         }
@@ -208,6 +238,9 @@ abstract class XotBaseWidget extends FilamentWidget implements HasForms,HasActio
     {
         // Implementare nelle classi figlie
     }
+=======
+        static::$view = $view;
+>>>>>>> cb26a2b (.)
 
     /**
      * Eseguito quando i filtri vengono aggiornati.
