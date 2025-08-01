@@ -14,10 +14,7 @@ class SafeStringCastAction
 {
     /**
      * Converte in modo sicuro un valore mixed in string.
-<<<<<<< HEAD
      * impostare delle eccezzioni ?
-=======
->>>>>>> 4c1ba76 (.)
      *
      * @param mixed $value Il valore da convertire
      *
