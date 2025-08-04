@@ -94,11 +94,7 @@ class GetComponentsAction
                 ])->toArray();
                 
             } catch (\Exception $e) {
-<<<<<<< HEAD
                 /*
-=======
-                
->>>>>>> cb26a2b (.)
                 dddx([
                     'comp_name' => $comp_name,
                     'class_name' => $class_name,
@@ -108,12 +104,8 @@ class GetComponentsAction
                     'prefix' => $prefix,
                     'message' => $e->getMessage(),
                 ]);
-<<<<<<< HEAD
                 */
                 throw $e;
-=======
-                
->>>>>>> cb26a2b (.)
             }
         }
 

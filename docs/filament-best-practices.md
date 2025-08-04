@@ -527,7 +527,6 @@ public static function table(Table $table): Table
 - [Ereditarietà modelli](../model-inheritance-best-practices.md)
 
 
-=======
 ### Problema: Form non visualizzato correttamente
 
 **Soluzione:** Assicurarsi di utilizzare `getFormSchema()` invece di `form()` e controllare che tutti i componenti siano configurati correttamente.
@@ -592,8 +591,6 @@ Consulta l'esempio completo all'inizio di questo documento per una implementazio
 - [Documentazione Filament](https://filamentphp.com/docs)
 - [Documentazione XotBaseResource](/var/www/html/exa/base_orisbroker_fila3/laravel/Modules/Xot/docs/resource.md)
 - [Best Practices Laraxot](/var/www/html/exa/base_orisbroker_fila3/laravel/Modules/Xot/docs/best-practices.md)
-<<<<<<< HEAD
-=======
 
 ## Regole per Widget Filament: Path View e Localizzazione
 
@@ -665,5 +662,4 @@ Appointment::where('doctor_id', $doctorId)
 - Un solo punto di verità: nessuna duplicazione, nessun lock-in
 - DRY, KISS, serenità del codice
 - Refactoring sicuro, massima estendibilità
->>>>>>> 460d425 (.)
->>>>>>> cb26a2b (.)
+

@@ -60,30 +60,6 @@ trait RelationX
             ->withTimestamps();
     }
 
-<<<<<<< HEAD
-=======
-    /*
-    public function ratings(): MorphToMany
-    {
-        $class = static::class;
-        $alias = Str::of(class_basename($class))->snake()->toString();
-        Relation::morphMap([
-            $alias => $class,
-        ]);
-        $pivot_class = RatingMorph::class;
-        $pivot = app($pivot_class);
-        $pivot_table = $pivot->getTable();
-        $pivot_db_name = $pivot->getConnection()->getDatabaseName();
-        $pivot_table_full = $pivot_db_name.'.'.$pivot_table;
-        $pivot_fields = $pivot->getFillable();
-
-        return $this->morphToMany(Rating::class, 'model', $pivot_table_full)
-            ->using($pivot_class)
-            ->withPivot($pivot_fields)
-            ->withTimestamps();
-    }
-    */
->>>>>>> cb26a2b (.)
 
     /**
      * Define a polymorphic many-to-many relationship.
@@ -163,27 +139,9 @@ trait RelationX
         sort($model_names);
         $msg='';
         $pivot_name = implode('', $model_names);
-<<<<<<< HEAD
         
         $pivot_class = $this->guessPivotFullClass($pivot_name, $related, $class);
         
-=======
-        $pivot_class = Str::of($this::class)
-            ->beforeLast('\\')
-            ->append('\\'.$pivot_name)
-            ->toString();
-        if (! class_exists($pivot_class)) {
-            $msg .= 'pivot['.$pivot_class.'] not exists';
-            $pivot_class = Str::of($related)
-                ->beforeLast('\\')
-                ->append('\\'.$pivot_name)
-                ->toString();
-        }
-        if (! class_exists($pivot_class)) {
-            $msg .= ' pivot['.$pivot_class.'] not exists';
-            throw new \Exception($msg);
-        }
->>>>>>> cb26a2b (.)
         $pivot = app($pivot_class);
         Assert::isInstanceOf($pivot, \Illuminate\Database\Eloquent\Relations\Pivot::class);
 

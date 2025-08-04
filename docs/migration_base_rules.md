@@ -31,8 +31,6 @@
 - [Ripresa lavoro migrazioni in root](../../../docs/MODULE_NAMESPACE_RULES.md)
 
 Ultimo aggiornamento: 2025-05-13
-<<<<<<< HEAD
-=======
 
 ---
 
@@ -77,4 +75,3 @@ Ultimo aggiornamento: 2025-05-13
 > ⚠️ **Warning**: Estendere Xot\BaseModel può causare override indesiderati, perdita di flessibilità e problemi di compatibilità con logiche locali. Seguire sempre la regola sopra per tutti i modelli di totali/aggregati in Performance.
 
 ---
->>>>>>> cb26a2b (.)

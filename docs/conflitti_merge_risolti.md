@@ -1,8 +1,6 @@
-<<<<<<< HEAD
 # Risoluzione Conflitti di Merge 
-=======
+
 # Risoluzione Conflitti di Merge in SaluteOra
->>>>>>> cb26a2b (.)
 
 ## Problema
 
