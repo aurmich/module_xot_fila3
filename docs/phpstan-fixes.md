@@ -2,9 +2,18 @@
 
 Questo documento traccia gli errori PHPStan di livello 7 identificati nel modulo Xot e le relative soluzioni implementate.
 
+<<<<<<< HEAD
 ## Errori Identificati
 
 ### 1. Errore in Helpers/Helper.php
+=======
+
+5693302 (.)
+
+b6f667c (.)
+
+# Correzioni PHPStan nel Modulo Xot
+>>>>>>> 7dd92412 (.)
 
 ```
 Line 406: Call to function is_array() with array{0?: string, 1?: 'container'|'item', 2?: numeric-string} will always evaluate to true.
@@ -78,12 +87,35 @@ Line 87: Function json_encode is unsafe to use. It can return FALSE instead of t
 Line 87: Parameter #2 $contents of static method Illuminate\Support\Facades\File::put() expects string, string|false given.
 ```
 
+<<<<<<< HEAD
 ### 12. Errori in Console/Commands/GenerateDbDocumentationCommand.php
 
 ```
 Line 40: Function json_decode is unsafe to use. It can return FALSE instead of throwing an exception.
 Line 239: Function json_encode is unsafe to use. It can return FALSE instead of throwing an exception.
 ```
+=======
+### 1. Gestione Tipi
+```php
+/**
+ * @param class-string<Model> $modelClass
+ * @return AbstractSchemaManager
+ * @throws \RuntimeException
+ */
+public function execute(string $modelClass): AbstractSchemaManager
+{
+    Assert::classExists($modelClass);
+    Assert::subclassOf($modelClass, Model::class);
+
+### Versione HEAD
+
+aurmich/dev
+5693302 (.)
+
+b6f667c (.)
+
+# Risoluzione Problemi PHPStan nel Modulo Xot
+>>>>>>> 7dd92412 (.)
 
 ### 13. Errori in Console/Commands/GenerateFilamentResources.php
 
@@ -188,11 +220,26 @@ Il problema è che PHPStan rileva che la chiamata a `is_array($matches)` sarà s
 $pattern = '/(container|item)(\d+)/';
 preg_match($pattern, $k, $matches);
 
+<<<<<<< HEAD
 if (!empty($matches) && isset($matches[1]) && isset($matches[2])) {
     $sk = $matches[1];
     $sv = $matches[2];
     // @phpstan-ignore offsetAccess.nonOffsetAccessible
     ${$sk}[$sv] = $v;
+=======
+### Versione Incoming
+
+
+---
+
+aurmich/dev
+aurmich/dev
+5693302 (.)
+
+b6f667c (.)
+
+    // ...
+>>>>>>> 7dd92412 (.)
 }
 ```
 
@@ -200,14 +247,88 @@ Questo controllo è più appropriato perché verifica che l'array `$matches` con
 
 ### 2. Correzione in Actions/Filament/AutoLabelAction.php
 
+<<<<<<< HEAD
 Il problema è che il codice chiamava il metodo `getName()` sui componenti Filament, ma non tutti i componenti hanno questo metodo. La soluzione è stata modificare il metodo `getComponentName()` per utilizzare un approccio più robusto:
+=======
+
+5693302 (.)
+
+b6f667c (.)
+
+### 2. Validazione Dati
+```php
+/**
+ * @param array<string, mixed> $data
+ * @throws InvalidArgumentException
+ */
+private function validateData(array $data): void
+{
+    Assert::keyExists($data, 'required_field');
+    Assert::string($data['required_field']);
+
+### Versione HEAD
+
+aurmich/dev
+5693302 (.)
+
+b6f667c (.)
+
+### Servizi e Dependency Injection
+
+**Problema**: Metodi che utilizzano dependency injection non avevano tipi ben definiti.
+
+**Soluzione**:
+1. Specificare i tipi di parametro e di ritorno in modo esplicito
+2. Utilizzare interfacce per i servizi iniettati
+3. Aggiungere annotazioni PHPDoc quando necessario
+>>>>>>> 7dd92412 (.)
 
 ```php
 private function getComponentName(Field|Component $component): string
 {
+<<<<<<< HEAD
     // Per i componenti Field di Filament
     if (method_exists($component, 'getName')) {
         return $component->getName();
+=======
+
+### Versione Incoming
+
+
+---
+
+aurmich/dev
+aurmich/dev
+5693302 (.)
+
+b6f667c (.)
+
+    // ...
+}
+```
+
+
+
+
+5693302 (.)
+
+b6f667c (.)
+
+### 3. Gestione Relazioni
+```php
+/**
+ * @param Model $model
+ * @param array<string, mixed> $data
+ * @return array<string, object>
+ */
+public function execute(Model $model, array $data): array
+{
+    $filtered = [];
+    foreach ($data as $name => $value) {
+        if ($this->isValidRelation($model, $name)) {
+            $filtered[$name] = $this->processRelation($model, $name, $value);
+        }
+>>>>>>> 7dd92412 (.)
     }
     
     // Per i componenti generali di Filament che hanno getStatePath
@@ -658,7 +779,326 @@ private function exportTablesToCSV(string $mdbFile): void
  * 
  * @return string[] Array di nomi di tabelle esportate
  */
+<<<<<<< HEAD
 private function exportTablesToCSV(string $mdbFile): array
+=======
+```
+
+## Problemi Comuni e Soluzioni
+
+1. **Undefined Method**
+   - Utilizzare `method_exists()` prima di chiamare metodi dinamici
+   - Implementare metodi di fallback
+   - Documentare i metodi magici
+
+2. **Type Mismatch**
+   - Utilizzare type hints PHP 8
+   - Aggiungere asserzioni per i tipi
+   - Documentare i tipi nei PHPDoc
+
+3. **Null Safety**
+   - Utilizzare operatore null-safe (`?->`)
+   - Implementare controlli null espliciti
+   - Utilizzare tipi nullable quando appropriato
+
+## Prossimi Passi
+
+1. **Miglioramenti Prioritari**
+   - [ ] Implementare test unitari per ogni azione
+   - [ ] Aggiungere logging strutturato
+   - [ ] Migliorare la gestione delle eccezioni
+   - [ ] Completare la documentazione API
+
+2. **Refactoring**
+   - [ ] Estrarre logica comune in trait
+   - [ ] Implementare pattern repository
+   - [ ] Migliorare la gestione delle dipendenze
+   - [ ] Ottimizzare le query al database
+
+3. **Documentazione**
+   - [ ] Aggiornare esempi di codice
+   - [ ] Documentare casi d'uso comuni
+   - [ ] Aggiungere diagrammi di flusso
+   - [ ] Creare guida per sviluppatori
+
+## Note Importanti
+
+1. **Sicurezza**
+   - Validare sempre input utente
+   - Utilizzare prepared statements
+   - Implementare autorizzazioni appropriate
+
+2. **Performance**
+   - Ottimizzare query N+1
+   - Implementare caching dove appropriato
+   - Utilizzare code per operazioni pesanti
+
+3. **Manutenibilità**
+   - Seguire PSR-12
+   - Mantenere documentazione aggiornata
+   - Implementare CI/CD
+
+## Errori Critici (Livello 7)
+
+### 1. Metodo Final Override in ListRatings
+- ❌ Errore: Cannot override final method `Modules\Xot\Filament\Resources\Pages\XotBaseListRecords::table()`
+- 📍 Posizione: `Modules/Rating/app/Filament/Resources/RatingResource/Pages/ListRatings.php:79`
+- ✅ Risolto: Implementato `getTableColumns()` e `getTableConfiguration()`
+
+### 2. Metodo Final Override in UsersRelationManager
+
+### Versione HEAD
+
+- ❌ Errore: Cannot override final method `Modules\Xot\Filament\Resources\XotBaseResource\RelationManager\XotBaseRelationManager::form()`
+
+
+- ❌ Errore: Cannot override final method `Modules\Xot\Filament\Resources\XotBaseResource\RelationManagers\XotBaseRelationManager::form()`
+
+- ❌ Errore: Cannot override final method `Modules\Xot\Filament\Resources\XotBaseResource\RelationManager\XotBaseRelationManager::form()`
+ d9307de (fix: auto resolve conflict)
+
+- ❌ Errore: Cannot override final method `Modules\Xot\Filament\Resources\XotBaseResource\RelationManagers\XotBaseRelationManager::form()`
+ 7b67053 (fix: auto resolve conflict)
+
+### Versione Incoming
+
+- ❌ Errore: Cannot override final method `Modules\Xot\Filament\Resources\XotBaseResource\RelationManagers\XotBaseRelationManager::form()`
+
+---
+
+- 📍 Posizione: `Modules/User/app/Filament/Resources/TeamResource/RelationManagers/UsersRelationManager.php:21`
+- 🔧 Soluzione necessaria:
+  - Rimuovere l'override del metodo `form()`
+  - Utilizzare `getFormSchema()` per personalizzare il form
+  - Implementare la logica corretta per la gestione delle relazioni
+
+### 3. Metodo Final Override in DomainsRelationManager
+
+### Versione HEAD
+
+- ❌ Errore: Cannot override final method `Modules\Xot\Filament\Resources\XotBaseResource\RelationManager\XotBaseRelationManager::form()`
+
+
+- ❌ Errore: Cannot override final method `Modules\Xot\Filament\Resources\XotBaseResource\RelationManagers\XotBaseRelationManager::form()`
+
+- ❌ Errore: Cannot override final method `Modules\Xot\Filament\Resources\XotBaseResource\RelationManager\XotBaseRelationManager::form()`
+ d9307de (fix: auto resolve conflict)
+
+- ❌ Errore: Cannot override final method `Modules\Xot\Filament\Resources\XotBaseResource\RelationManagers\XotBaseRelationManager::form()`
+ 7b67053 (fix: auto resolve conflict)
+
+### Versione Incoming
+
+- ❌ Errore: Cannot override final method `Modules\Xot\Filament\Resources\XotBaseResource\RelationManagers\XotBaseRelationManager::form()`
+
+---
+
+- 📍 Posizione: `Modules/User/app/Filament/Resources/TenantResource/RelationManagers/DomainsRelationManager.php:20`
+- 🔧 Soluzione necessaria:
+  - Rimuovere l'override del metodo `form()`
+  - Implementare `getFormSchema()` per la configurazione del form
+  - Mantenere la stessa logica di validazione e struttura
+
+### Pattern Comuni di Errore
+1. **Override di Metodi Final**
+   - Problema: Tentativo di sovrascrivere metodi marcati come `final`
+   - Soluzione: Utilizzare i metodi di configurazione previsti
+   - Esempio: `getFormSchema()` invece di `form()`
+
+2. **Incompatibilità di Firma**
+   - Problema: Metodi con firma non compatibile con la classe base
+   - Soluzione: Rispettare la firma esatta del metodo base
+   - Esempio: `public function getFormSchema(): array`
+
+3. **Gestione delle Relazioni**
+   - Problema: Configurazione non corretta delle relazioni
+   - Soluzione: Utilizzare i metodi dedicati per ogni aspetto
+   - Esempio: Separare form, tabelle e azioni
+
+### Best Practices per RelationManager
+1. **Configurazione Form**
+   ```php
+   public function getFormSchema(): array
+   {
+       return [
+           Forms\Components\TextInput::make('name')
+               ->required()
+               ->maxLength(255),
+           Forms\Components\TextInput::make('domain')
+               ->required()
+               ->url(),
+       ];
+   }
+   ```
+
+2. **Configurazione Tabella**
+   ```php
+   protected function getTableColumns(): array
+   {
+       return [
+           Tables\Columns\TextColumn::make('name')
+               ->sortable()
+               ->searchable(),
+       ];
+   }
+   ```
+
+3. **Azioni e Validazione**
+   ```php
+
+### Versione HEAD
+
+   public function getTableActions(): array
+
+### Versione Incoming
+
+   protected function getTableActions(): array
+
+---
+
+   {
+       return [
+           Tables\Actions\EditAction::make()
+               ->using(function (Model $record, array $data) {
+                   $record->update($this->mutateFormDataBeforeSave($data));
+               }),
+       ];
+   }
+   ```
+
+## Prossimi Passi
+
+1. **Correzioni Immediate**
+   - [ ] Correggere override metodo final in ListRatings
+   - [ ] Verificare altri possibili override di metodi final
+   - [ ] Aggiornare la documentazione delle classi base
+   - [ ] Implementare test per verificare la corretta estensione
+
+### Override di metodi final in RelationManager
+
+Errore trovato in:
+- `Modules/User/app/Filament/Resources/TenantResource/RelationManagers/UsersRelationManager.php:21`
+
+Il metodo `form()` è dichiarato come final nella classe base `XotBaseRelationManager` e non può essere sovrascritto.
+
+Soluzione:
+- Rimuovere l'override del metodo `form()`
+- Utilizzare `getFormSchema()` per personalizzare il form
+- Implementare `getTableColumns()` per definire le colonne
+- Utilizzare `getTableConfiguration()` per le impostazioni della tabella
+
+Best Practices:
+- Utilizzare i metodi previsti per la personalizzazione invece di sovrascrivere metodi final
+- Mantenere la coerenza nella struttura dei form tra i vari RelationManager
+- Validare i dati utilizzando le regole di validazione di Laravel
+
+### Versione HEAD
+
+
+- Documentare le personalizzazioni nel codice 
+
+## Problema: File Helper.php mancante
+
+### Descrizione
+Durante l'esecuzione di phpstan è stato rilevato che il file `Helper.php` viene cercato in `Modules/Xot/Helpers/Helper.php`, ma attualmente si trova nella directory principale in `/var/www/html/_bases/base_fixcity_fila3_mono/Helpers/Helper.php`.
+
+### Analisi
+Il problema è causato dalla configurazione dell'autoload in composer, che cerca il file nel percorso `Modules/Xot/Helpers/Helper.php`, mentre il file effettivamente esiste in un'altra posizione.
+
+### Soluzione
+1. Creare la cartella `Helpers` nel modulo Xot (se non esiste già)
+2. Copiare il file `Helper.php` dalla directory principale alla directory `Modules/Xot/Helpers/`
+3. Assicurarsi che il namespace sia corretto
+
+Questo permette a phpstan di trovare correttamente il file durante l'analisi statica del codice. 
+
+## Problema: Modulo Tenant mancante
+
+### Descrizione
+Durante l'esecuzione di phpstan è stato rilevato che il file `TenantService.php` viene cercato in `Modules/Tenant/app/Services/TenantService.php`, ma attualmente si trova nella directory principale in `/var/www/html/_bases/base_fixcity_fila3_mono/app/Services/TenantService.php`. Il namespace del file è correttamente impostato come `Modules\Tenant\Services`, ma il modulo Tenant non esiste nella cartella Modules.
+
+### Analisi
+Il problema è causato da un conflitto tra la posizione fisica del file e il namespace dichiarato. Phpstan si aspetta che il file si trovi nel percorso che corrisponde al suo namespace, ma attualmente è posizionato in una cartella differente.
+
+### Soluzione
+1. Creare la cartella del modulo Tenant in `laravel/Modules/Tenant`
+2. Creare la struttura delle sottocartelle necessarie (`app/Services`)
+3. Copiare il file `TenantService.php` dalla directory principale nella nuova posizione
+
+Questo permette a phpstan di trovare correttamente il file durante l'analisi statica del codice. 
+
+## Problema: File FixPathAction.php mancante
+
+### Descrizione
+Durante l'esecuzione di phpstan è stato rilevato che il file `FixPathAction.php` viene cercato in `Modules/Xot/app/Actions/File/FixPathAction.php`, ma attualmente si trova nella directory principale in `/var/www/html/_bases/base_fixcity_fila3_mono/app/Actions/File/FixPathAction.php`. 
+
+### Analisi
+Questo è un altro caso in cui il namespace della classe sembra essere impostato per i moduli, ma il file è fisicamente posizionato in una cartella diversa. Phpstan si aspetta che tutti i file siano nel percorso corrispondente al loro namespace.
+
+### Soluzione
+1. Creare la struttura delle cartelle necessarie in `laravel/Modules/Xot/app/Actions/File/`
+2. Copiare il file `FixPathAction.php` dalla directory principale alla nuova posizione
+3. Verificare che il namespace sia corretto
+
+Questo permette a phpstan di trovare correttamente il file durante l'analisi statica del codice. 
+
+## Problema: File GetTenantNameAction.php mancante
+
+### Descrizione
+Durante l'esecuzione di phpstan è stato rilevato che il file `GetTenantNameAction.php` viene cercato in `Modules/Tenant/app/Actions/GetTenantNameAction.php`, ma questo file non esiste nel progetto.
+
+### Analisi
+Il file `TenantService.php` fa riferimento alla classe `Modules\Tenant\Actions\GetTenantNameAction`, ma questa classe non è stata implementata. È necessario creare questo file per permettere a phpstan di completare l'analisi.
+
+### Soluzione
+1. Creare la struttura delle cartelle necessarie in `laravel/Modules/Tenant/app/Actions/`
+2. Creare il file `GetTenantNameAction.php` con l'implementazione appropriata
+3. Assicurarsi che il namespace sia corretto (`Modules\Tenant\Actions`)
+
+Questo permette a phpstan di trovare correttamente il file durante l'analisi statica del codice. 
+
+- Documentare le personalizzazioni nel codice 
+
+
+
+Questo permette a phpstan di trovare correttamente il file durante l'analisi statica del codice. 
+
+
+ e06b7b401b19a629db99ac2a1abdc82075a443cf
+
+## Commands
+
+### DatabaseSchemaExportCommand ✅
+- Aggiunta tipizzazione corretta per i parametri del comando
+- Aggiunta asserzioni di tipo per gli input del comando
+- Migliorata la gestione degli errori con sprintf
+- Aggiunta documentazione PHPDoc completa
+- Aggiunta tipizzazione per i metodi getColumns, getIndexes e getForeignKeys
+- Aggiunta asserzione per la codifica JSON
+- Aggiunta tipizzazione per il DoctrineSchemaManager
+
+### Versione Incoming
+
+aurmich/dev
+5693302 (.)
+
+b6f667c (.)
+
+### Problemi con le Relazioni Eloquent
+
+**Problema**: PHPStan non riconosceva correttamente i tipi restituiti dalle relazioni Eloquent.
+
+**Soluzione**:
+1. Definire correttamente i tipi di ritorno delle relazioni
+2. Utilizzare i tipi generici di Collection
+3. Aggiungere annotazioni per i metodi magici di Eloquent
+
+```php
+/**
+ * @return \Illuminate\Database\Eloquent\Relations\HasMany<Comment>
+ */
+public function comments(): HasMany
+>>>>>>> 7dd92412 (.)
 {
     $tables = [];
     // ... codice per popolare $tables ...
@@ -817,4 +1257,42 @@ protected array $listeners = [
 ];
 ```
 
+<<<<<<< HEAD
 L'aggiunta dell'annotazione `@phpstan-var` fornisce a PHPStan un'informazione più specifica sul tipo della proprietà, permettendogli di verificare correttamente che tutti gli elementi dell'array siano stringhe. Questo è particolarmente utile quando si lavora con Livewire, dove i listener sono definiti come un array associativo di eventi e metodi da chiamare.
+=======
+## Prossimi Passi
+
+1. Risolvere i 12 errori rimanenti al livello 8
+2. Affrontare i 34 errori al livello 9
+3. Iniziare a lavorare sui più complessi errori di livello 10
+4. Implementare test automatici per verificare che nuove modifiche non introducano problemi PHPStan
+
+## Linee Guida per il Futuro
+
+1. **Scrivere nuovo codice già conforme**: Tutto il nuovo codice dovrebbe essere scritto considerando già i requisiti di PHPStan.
+2. **Utilizzare i generatori**: Utilizzare generator di codice che producono codice PHPStan-friendly.
+3. **Code Review focalizzata**: Le code review dovrebbero includere un controllo di conformità PHPStan.
+4. **Preferire le interfacce**: Utilizzare interfacce per definire contratti e migliorare la type safety.
+5. **Aggiornare la documentazione**: Mantenere aggiornato questo documento con nuove soluzioni e pattern.
+
+## Riferimenti
+
+- [Documentazione ufficiale PHPStan](https://phpstan.org/user-guide/getting-started)
+- [PHPStan e Laravel](https://phpstan.org/blog/laravel-extension)
+- [Tipi generici in PHP](https://phpstan.org/blog/generics-in-php-using-phpdocs)
+- [Larastan](https://github.com/nunomaduro/larastan)
+- [Guida PHPStan Livello 10](PHPSTAN_LIVELLO10_LINEE_GUIDA.md)
+
+### Versione Incoming
+
+- Documentare le personalizzazioni nel codice 
+
+---
+
+aurmich/dev
+aurmich/dev
+5693302 (.)
+
+b6f667c (.)
+
+>>>>>>> 7dd92412 (.)

@@ -3,6 +3,7 @@
 ## Panoramica
 Questo documento descrive la struttura standard dei moduli nel progetto il progetto.
 
+<<<<<<< HEAD
 ## Struttura Base
 ```
 ModuleName/
@@ -29,6 +30,43 @@ ModuleName/
 ├── routes/
 ├── tests/
 └── composer.json
+=======
+---
+
+## Gestione dati geografici statici: GeoJsonModel readonly (ispirato a Squire)
+
+Per tutti i dati geografici statici (regioni, province, comuni, cap) di dimensioni gestibili, NON creare tabelle/migration dedicate. Utilizzare invece un modello base readonly (`GeoJsonModel`) che legge i dati direttamente da file JSON (es: `Modules/Geo/resources/json/comuni.json`).
+
+- I model specialistici (Region, Province, City, Cap) devono estendere la base GeoJsonModel e fornire metodi di filtro.
+- Versionare sempre il file json e documentare la struttura.
+- Aggiornare la documentazione di Geo/docs, SaluteOra/docs e questa stessa doc con collegamenti bidirezionali.
+
+Per dettagli implementativi e best practice vedi:
+- [Geo/docs/geo-json-model.md](../../Geo/docs/geo-json-model.md)
+- [SaluteOra/docs/geo-integration.md](../../SaluteOra/docs/geo-integration.md)
+- [Questa stessa doc (Xot/module-structure.md)](module-structure.md)
+
+---
+
+## Service Provider
+
+### Convenzioni Base
+
+Ogni modulo deve avere un ServiceProvider che estende `XotBaseServiceProvider`. Questo provider è responsabile della registrazione delle risorse del modulo (routes, views, translations, etc.) nell'applicazione.
+
+```php
+<?php
+
+declare(strict_types=1);
+
+namespace Modules\NomeModulo\Providers;
+
+use Modules\Xot\Providers\XotBaseServiceProvider;
+
+class NomeModuloServiceProvider extends XotBaseServiceProvider {
+    // Implementazione
+}
+>>>>>>> 7dd92412 (.)
 ```
 
 ## Collegamenti
@@ -153,6 +191,7 @@ Utilizzare il comando di analisi per verificare la conformità:
 ```bash
 php artisan xot:analyze-naming
 ```
+<<<<<<< HEAD
 
 Per ulteriori dettagli, consultare la [documentazione completa sulle convenzioni di naming](/docs/convenzioni-naming-campi.md).
 
@@ -410,3 +449,5 @@ Se trovi una directory con case errato:
 ## Collegamenti tra versioni di module_structure.md
 * [module_structure.md](../../../../docs/error_analysis/module_structure.md)
 
+=======
+>>>>>>> 7dd92412 (.)
