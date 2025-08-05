@@ -47,7 +47,11 @@
         "spatie/laravel-model-status": "*",
         "spatie/laravel-package-tools": "*",
         "spatie/laravel-permission": "*",
+<<<<<<< HEAD
         "spatie/laravel-queueable-action": "^2.16",
+=======
+        "spatie/laravel-queueable-action": "*",
+>>>>>>> aea6513 (.)
         "spatie/laravel-responsecache": "^7.6",
         "spatie/laravel-schemaless-attributes": "^2.5",
         "spatie/laravel-sluggable": "^3.6",

@@ -178,11 +178,14 @@ abstract class XotBaseMigration extends Migration
         return $this->getConn()->hasColumn($this->getTable(), $column);
     }
 
+<<<<<<< HEAD
     public function hasTable(string $table): bool
     {
         return $this->getConn()->hasTable($table);
     }
 
+=======
+>>>>>>> aea6513 (.)
     public function getColumnType(string $column): string
     {
         try {
@@ -432,5 +435,17 @@ abstract class XotBaseMigration extends Migration
         return $table->foreignIdFor($class, $column);
     } 
     
+<<<<<<< HEAD
    
+=======
+    /**
+     * Determine if the given table exists.
+     *
+     * @param  string  $table
+     * @return bool
+     */
+    public function hasTable(string $table): bool {
+        return $this->getConn()->hasTable($table);
+    } 
+>>>>>>> aea6513 (.)
 }// end XotBaseMigration

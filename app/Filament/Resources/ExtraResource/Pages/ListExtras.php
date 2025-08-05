@@ -49,7 +49,11 @@ class ListExtras extends XotBaseListRecords
     }
 
     /**
+<<<<<<< HEAD
      * @return array<string, Tables\Actions\Action|Tables\Actions\ActionGroup>
+=======
+     * @return array<Tables\Actions\Action|Tables\Actions\ActionGroup>
+>>>>>>> aea6513 (.)
      */
     public function getTableActions(): array
     {

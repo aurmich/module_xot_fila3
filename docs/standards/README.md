@@ -11,7 +11,10 @@ Questa cartella contiene gli standard di codice e le convenzioni utilizzate nel 
 ## Note
 
 Questi standard si applicano a tutti i moduli del progetto e devono essere seguiti per mantenere la coerenza del codice. 
+<<<<<<< HEAD
 
+=======
+>>>>>>> aea6513 (.)
 ## Collegamenti tra versioni di README.md
 * [README.md](bashscripts/docs/README.md)
 * [README.md](bashscripts/docs/it/README.md)
@@ -90,6 +93,7 @@ Questi standard si applicano a tutti i moduli del progetto e devono essere segui
 * [README.md](../../../../Themes/Two/docs/README.md)
 * [README.md](../../../../Themes/One/docs/README.md)
 
+<<<<<<< HEAD
 # Standard Xot: Ereditarietà dei Modelli
 
 ## Gestione campi e Single Table Inheritance (STI)
@@ -129,3 +133,5 @@ class Doctor extends User
 - [Patient: Modello Doctor](../../../Patient/docs/Models/Doctor.md)
 // Aggiungere qui altri moduli se necessario
 
+=======
+>>>>>>> aea6513 (.)

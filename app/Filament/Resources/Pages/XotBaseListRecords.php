@@ -49,7 +49,11 @@ abstract class XotBaseListRecords extends FilamentListRecords
     /**
      * Get the header actions.
      *
+<<<<<<< HEAD
      * @return array<string, \Filament\Actions\Action>
+=======
+     * @return array<int, \Filament\Actions\Action>
+>>>>>>> aea6513 (.)
      */
     protected function getHeaderActions(): array
     {

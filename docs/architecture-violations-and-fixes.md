@@ -302,7 +302,10 @@ $userClass::factory()->create();
 
 ### **Fase 1: Identificazione Violazioni**
 ```bash
+<<<<<<< HEAD
 
+=======
+>>>>>>> aea6513 (.)
 # Cerca import diretti tra moduli
 grep -r "use Modules\.*Models\User" --include="*.php" ./
 
@@ -344,3 +347,7 @@ grep -r "function.*\\\Modules\\\.*\\\Models\\\User" --include="*.php" ./
 
 **Ultimo Aggiornamento**: Gennaio 2025  
 **Stato**: ✅ Pattern Documentato e Implementato  
+<<<<<<< HEAD
+=======
+**Responsabile**: Team Architettura Laraxot 
+>>>>>>> aea6513 (.)

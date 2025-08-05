@@ -6,10 +6,17 @@ namespace Modules\Xot\Actions\Collection;
 
 // use Modules\Xot\Services\ArrayService;
 
+<<<<<<< HEAD
 use Webmozart\Assert\Assert;
 use Illuminate\Support\Collection;
 use Spatie\QueueableAction\QueueableAction;
 use Modules\Xot\Actions\Cast\SafeStringCastAction;
+=======
+use Illuminate\Support\Collection;
+use Illuminate\Support\Str;
+use Spatie\QueueableAction\QueueableAction;
+use Webmozart\Assert\Assert;
+>>>>>>> aea6513 (.)
 
 /**
  * Action per la traduzione di elementi di una collezione.
@@ -33,7 +40,11 @@ class TransCollectionAction
         ?string $transKey,
     ): Collection {
         if (null === $transKey) {
+<<<<<<< HEAD
             return $collection->map(fn (mixed $item): string => SafeStringCastAction::cast($item));
+=======
+            return $collection->map(fn (mixed $item): string => (string) $item);
+>>>>>>> aea6513 (.)
         }
 
         $this->transKey = $transKey;
@@ -52,7 +63,11 @@ class TransCollectionAction
     {
         // Converte l'item in stringa se non lo è già
         if (!\is_string($item)) {
+<<<<<<< HEAD
             $item = SafeStringCastAction::cast($item);
+=======
+            $item = (string) $item;
+>>>>>>> aea6513 (.)
         }
 
         if (empty($item) || null === $this->transKey) {
@@ -69,7 +84,11 @@ class TransCollectionAction
         }
 
         // Seconda prova: sostituisce i punti con underscore
+<<<<<<< HEAD
         $itemWithUnderscore = str_replace('.', '_', $item);
+=======
+        $itemWithUnderscore = Str::replace('.', '_', $item);
+>>>>>>> aea6513 (.)
         $keyWithUnderscore = $this->transKey.'.'.$itemWithUnderscore;
         $transWithUnderscore = trans($keyWithUnderscore);
 

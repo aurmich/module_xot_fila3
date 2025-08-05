@@ -132,7 +132,10 @@ find /var/www/html/<nome progetto>/laravel/Modules/Chart -type f -name "*.php" |
 done
 
 # Ripeti lo stesso processo per gli altri moduli
+<<<<<<< HEAD
 
+=======
+>>>>>>> aea6513 (.)
 # ...
 ```
 
@@ -226,7 +229,10 @@ laravel/Themes/[Nome]/
    - Mantenere la struttura standard
    - Non modificare la gerarchia delle cartelle
    - Usare sempre percorsi relativi
+<<<<<<< HEAD
 
+=======
+>>>>>>> aea6513 (.)
 ### Versione HEAD
 
    - Documentare le personalizzazioni 
@@ -241,9 +247,15 @@ laravel/Themes/[Nome]/
 
 ---
 
+<<<<<<< HEAD
 b6f667c (.)
 
 
+=======
+=======
+b6f667c (.)
+
+>>>>>>> aea6513 (.)
 # Struttura del Modulo Xot
 
 ## Struttura delle Directory
@@ -280,11 +292,17 @@ Modules/Xot/
 3. **Best Practices**
    - Mantenere una struttura di directory pulita e organizzata
    - Seguire le convenzioni di Laravel per la struttura delle directory
+<<<<<<< HEAD
 
 ### Versione HEAD
 
    - Utilizzare i namespace appropriati che riflettono la struttura delle directory 
 
+=======
+### Versione HEAD
+
+   - Utilizzare i namespace appropriati che riflettono la struttura delle directory 
+>>>>>>> aea6513 (.)
 # Modulo Xot
 
 Data: 2025-04-23 19:09:56
@@ -1060,9 +1078,13 @@ tests_old
 ---
 
 aurmich/dev
+<<<<<<< HEAD
 5693302 (.)
 b6f667c (.)
 
+=======
+5693302 (.)b6f667c (.)
+>>>>>>> aea6513 (.)
 
 ## Regole sui Comandi Artisan Custom nei Moduli
 

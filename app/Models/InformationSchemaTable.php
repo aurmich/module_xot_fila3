@@ -140,6 +140,7 @@ class InformationSchemaTable extends Model
         'TABLE_COMMENT' => 'string',
     ];
 
+<<<<<<< HEAD
     
     /**
      * Get the attributes that should be cast.
@@ -163,6 +164,27 @@ class InformationSchemaTable extends Model
             'VERSION' => 'integer',
         ]);
     }
+=======
+    /**
+     * The attributes that should be cast.
+     *
+     * @var array<string, string>
+     */
+    protected $casts = [
+        'TABLE_ROWS' => 'integer',
+        'AVG_ROW_LENGTH' => 'integer',
+        'DATA_LENGTH' => 'integer',
+        'MAX_DATA_LENGTH' => 'integer',
+        'INDEX_LENGTH' => 'integer',
+        'DATA_FREE' => 'integer',
+        'AUTO_INCREMENT' => 'integer',
+        'CHECKSUM' => 'integer',
+        'CREATE_TIME' => 'datetime',
+        'UPDATE_TIME' => 'datetime',
+        'CHECK_TIME' => 'datetime',
+        'VERSION' => 'integer',
+    ];
+>>>>>>> aea6513 (.)
 
     /**
      * Get the rows array for the Sushi model.

@@ -421,7 +421,10 @@
 - [Bottlenecks](bottlenecks.md)
 - [Best Practices](BEST-PRACTICES.md)
 - [Testing](testing.md)
+<<<<<<< HEAD
 
+=======
+>>>>>>> aea6513 (.)
 ### Versione HEAD
 
 

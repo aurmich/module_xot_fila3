@@ -32,7 +32,10 @@ cd <nome progetto>
 
 ### 2. Installare le Dipendenze
 ```bash
+<<<<<<< HEAD
 
+=======
+>>>>>>> aea6513 (.)
 # Installare le dipendenze PHP
 composer install
 
@@ -42,7 +45,10 @@ npm install
 
 ### 3. Configurazione
 ```bash
+<<<<<<< HEAD
 
+=======
+>>>>>>> aea6513 (.)
 # Copiare il file di ambiente
 cp .env.example .env
 
@@ -60,7 +66,10 @@ DB_PASSWORD=password
 
 ### 4. Migrazione del Database
 ```bash
+<<<<<<< HEAD
 
+=======
+>>>>>>> aea6513 (.)
 # Eseguire le migrazioni
 php artisan migrate
 
@@ -70,7 +79,10 @@ php artisan db:seed
 
 ### 5. Compilazione degli Assets
 ```bash
+<<<<<<< HEAD
 
+=======
+>>>>>>> aea6513 (.)
 # Compilare gli assets
 npm run build
 ```
@@ -79,7 +91,10 @@ npm run build
 
 ### 1. Attivare i Moduli
 ```bash
+<<<<<<< HEAD
 
+=======
+>>>>>>> aea6513 (.)
 # Attivare il modulo Xot
 php artisan module:enable Xot
 
@@ -89,7 +104,10 @@ php artisan module:enable Cms
 
 ### 2. Configurare i Temi
 ```bash
+<<<<<<< HEAD
 
+=======
+>>>>>>> aea6513 (.)
 # Pubblicare gli assets del tema
 php artisan vendor:publish --tag=theme-one-assets
 

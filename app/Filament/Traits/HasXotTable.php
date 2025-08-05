@@ -45,7 +45,11 @@ trait HasXotTable
     /**
      * Get table header actions.
      *
+<<<<<<< HEAD
      * @return array<string, \Filament\Tables\Actions\Action|\Filament\Tables\Actions\ActionGroup>
+=======
+     * @return array<string, Action|ActionGroup>
+>>>>>>> aea6513 (.)
      */
     public function getTableHeaderActions(): array
     {
@@ -224,6 +228,10 @@ trait HasXotTable
             ->actionsPosition(ActionsPosition::BeforeColumns)
             ->emptyStateActions($this->getTableEmptyStateActions())
             ->striped()
+<<<<<<< HEAD
+=======
+            ->recordUrl(null) // Disabilita il click sulla riga
+>>>>>>> aea6513 (.)
             ->paginated($this->getTablePaginated());
         /*
             ->defaultSort(

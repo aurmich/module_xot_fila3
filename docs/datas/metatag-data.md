@@ -44,6 +44,7 @@ $darkLogo = $metatag->getLogoHeaderDark();
 
 // Ottiene l'altezza del logo
 $height = $metatag->getLogoHeight();
+<<<<<<< HEAD
 
 // 🆕 Ottiene il logo come data URI base64 per embedding inline
 $base64Logo = $metatag->getBrandLogoBase64();
@@ -163,6 +164,8 @@ function getCompanyLogo(): string
 // Utilizzo
 $logoSrc = getCompanyLogo();
 echo "<img src='{$logoSrc}' alt='Logo'>";
+=======
+>>>>>>> aea6513 (.)
 ```
 
 ### Gestione Colori

@@ -486,6 +486,7 @@ return array (
       'description' => 'itemValue',
     ),
   ),
+<<<<<<< HEAD
   'steps' => 
   array (
     'Credenziali' => 
@@ -493,4 +494,6 @@ return array (
       'label' => 'Credenziali',
     ),
   ),
+=======
+>>>>>>> aea6513 (.)
 );

@@ -49,8 +49,11 @@ use Modules\Xot\Datas\Transformers\AssetTransformer;
  * @property string $color_banner
  * @property string $favicon
  * @property array<string, array{key?: string, color: string, hex?: string}> $colors
+<<<<<<< HEAD
  * 
  * @method string getBrandLogoBase64() Get the brand logo as base64 data URI for inline embedding
+=======
+>>>>>>> aea6513 (.)
  */
 class MetatagData extends Data implements Wireable
 {
@@ -232,6 +235,7 @@ class MetatagData extends Data implements Wireable
     }
 
     /**
+<<<<<<< HEAD
      * Get the brand logo as base64 data URI for inline embedding.
      * This method reflects the semantic purpose of getting the brand logo
      * as a base64 data URI that can be embedded directly in HTML img tags.
@@ -312,6 +316,8 @@ class MetatagData extends Data implements Wireable
     }
 
     /**
+=======
+>>>>>>> aea6513 (.)
      * Get the theme colors.
      * This method reflects the semantic purpose of getting theme colors,
      * rather than exposing the raw color data structure.

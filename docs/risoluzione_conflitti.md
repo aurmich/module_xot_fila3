@@ -135,12 +135,18 @@ Il conflitto nel file `XotBaseServiceProvider.php` è stato risolto mantenendo:
 - È stato rimosso il codice commentato non necessario per `registerBladeComponents()`
 aurmich/dev
 5693302 (.)
+<<<<<<< HEAD
 
+=======
+>>>>>>> aea6513 (.)
 - Il metodo `registerConfig()` è stato aggiornato per utilizzare il percorso corretto da `modules.paths.generator.config.path`
 - È stato rimosso il codice commentato non necessario per `registerBladeComponents()`
 b6f667c (.)
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> aea6513 (.)
 La soluzione adottata privilegia la chiarezza del codice e l'organizzazione logica dei metodi, eliminando commenti non necessari e duplicazioni.
 
 ## XotBaseRouteServiceProvider.php
@@ -165,10 +171,15 @@ La soluzione adottata ha mantenuto la versione più semplice e pulita senza la c
 Mantenere il codice più semplice è preferibile, soprattutto quando le funzionalità aggiuntive non sono attualmente utilizzate.
 
 5693302 (.)
+<<<<<<< HEAD
 
 b6f667c (.)
 
 
+=======
+b6f667c (.)
+
+>>>>>>> aea6513 (.)
 ## Conflitti risolti (14/06/2024)
 
 I seguenti conflitti sono stati risolti come parte dell'ultima manutenzione del modulo:
@@ -195,7 +206,10 @@ I seguenti conflitti sono stati risolti come parte dell'ultima manutenzione del 
    - Coerenza con le convenzioni del framework
 fc83074 (.)
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> aea6513 (.)
 Le modifiche sono state applicate seguendo le best practice documentate in `CONFLITTI_MERGE_RISOLTI.md`, privilegiando la chiarezza del codice e la coerenza con gli standard di progetto.
 
 ## Conflitti ancora da risolvere
@@ -231,6 +245,7 @@ La risoluzione dei conflitti rimanenti dovrebbe seguire questi principi:
 * [risoluzione_conflitti.md](../../../Tenant/docs/risoluzione_conflitti.md)
 
 aurmich/dev
+<<<<<<< HEAD
 5693302 (.)
 b6f667c (.)
 * [Risoluzione Conflitti Xot](../../../Xot/docs/risoluzione_conflitti.md)
@@ -238,3 +253,9 @@ b6f667c (.)
 * [Linee Guida Principali Risoluzione Conflitti](../../../../docs/conflict_resolution.md)
 fc83074 (.)
 
+=======
+5693302 (.)b6f667c (.)* [Risoluzione Conflitti Xot](../../../Xot/docs/risoluzione_conflitti.md)
+* [Risoluzione Conflitti Tenant](../../../Tenant/docs/risoluzione_conflitti.md)
+* [Linee Guida Principali Risoluzione Conflitti](../../../../docs/conflict_resolution.md)
+fc83074 (.)
+>>>>>>> aea6513 (.)

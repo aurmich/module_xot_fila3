@@ -235,7 +235,10 @@ Questa regola è stata identificata come **CRITICA** e deve essere sempre verifi
 
 ### Modelli Verificati con HasTranslations
 ```bash
+<<<<<<< HEAD
 
+=======
+>>>>>>> aea6513 (.)
 # Comando di verifica eseguito:
 grep -r "use HasTranslations" Modules/*/app/Models/
 

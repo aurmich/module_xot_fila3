@@ -4,9 +4,13 @@ declare(strict_types=1);
 
 namespace Modules\Xot\Providers;
 
+<<<<<<< HEAD
 use Filament\Forms\Set;
 use function Safe\realpath;
 use Illuminate\Support\Str;
+=======
+use function Safe\realpath;
+>>>>>>> aea6513 (.)
 use Webmozart\Assert\Assert;
 use Illuminate\Support\Carbon;
 use Modules\Xot\Datas\XotData;
@@ -32,9 +36,15 @@ use Illuminate\Auth\AuthenticationException;
 use Filament\Forms\Components\DateTimePicker;
 use Illuminate\Database\Events\MigrationsEnded;
 use Illuminate\Contracts\Debug\ExceptionHandler;
+<<<<<<< HEAD
 
 use Modules\Xot\Exceptions\Handlers\HandlerDecorator;
 use Modules\Xot\Exceptions\Handlers\HandlersRepository;
+=======
+use Modules\Xot\Exceptions\Handlers\HandlerDecorator;
+use Modules\Xot\Exceptions\Handlers\HandlersRepository;
+
+>>>>>>> aea6513 (.)
 use Modules\Xot\Exceptions\Formatters\WebhookErrorFormatter;
 use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 
@@ -57,7 +67,10 @@ class XotServiceProvider extends XotBaseServiceProvider
         $this->registerEvents();
         //$this->registerExceptionHandler(); // guardare come fa sentry
         $this->registerTimezone();
+<<<<<<< HEAD
         $this->registerFilamentMacros();
+=======
+>>>>>>> aea6513 (.)
         $this->registerProviders();
     }
 
@@ -67,7 +80,11 @@ class XotServiceProvider extends XotBaseServiceProvider
         $this->registerConfig();
         //$this->registerExceptionHandlersRepository();
         //$this->extendExceptionHandler();
+<<<<<<< HEAD
         //$this->registerCommands();
+=======
+        $this->registerCommands();
+>>>>>>> aea6513 (.)
     }
 
     public function registerProviders(): void
@@ -89,6 +106,7 @@ class XotServiceProvider extends XotBaseServiceProvider
         DatePicker::configureUsing(fn (DatePicker $component) => $component->timezone($timezone)->displayFormat($date_format));
         TimePicker::configureUsing(fn (TimePicker $component) => $component->timezone($timezone));
         TextColumn::configureUsing(fn (TextColumn $column) => $column->timezone($timezone));
+<<<<<<< HEAD
 
         
     }
@@ -107,6 +125,8 @@ class XotServiceProvider extends XotBaseServiceProvider
             });
             return $this;
         });
+=======
+>>>>>>> aea6513 (.)
     }
 
     /*

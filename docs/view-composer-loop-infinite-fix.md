@@ -201,7 +201,10 @@ La **prevenzione** è superiore alla **cura**. Meglio controlli preventivi che d
 
 ### Pattern da Verificare
 ```bash
+<<<<<<< HEAD
 
+=======
+>>>>>>> aea6513 (.)
 # Cerca altri composer che potrebbero avere problemi simili
 grep -r "Auth::check()" Modules/*/View/Composers/
 grep -r "auth()->user()" Modules/*/View/Composers/
@@ -227,3 +230,7 @@ grep -r "auth()->user()" Modules/*/View/Composers/
 **Priorità**: P0 (Critical) - Bloccava sistema completo  
 **Impatto**: Sistema completamente non funzionale  
 **Tempo di risoluzione**: 15 minuti  
+<<<<<<< HEAD
+=======
+**Pattern**: View Composer Loop Prevention 
+>>>>>>> aea6513 (.)

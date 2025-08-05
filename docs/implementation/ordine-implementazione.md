@@ -7,7 +7,10 @@ Questa guida definisce l'ordine corretto per l'implementazione del progetto il p
 ### 1. Installazione Base Laravel
 
 ```bash
+<<<<<<< HEAD
 
+=======
+>>>>>>> aea6513 (.)
 # Installazione Laravel Installer
 composer global require laravel/installer
 
@@ -26,7 +29,10 @@ php artisan vendor:publish --provider="Nwidart\Modules\LaravelModulesServiceProv
 ### 2. Installazione Moduli Core (in ordine)
 
 ```bash
+<<<<<<< HEAD
 
+=======
+>>>>>>> aea6513 (.)
 # 1. Modulo Xot (base)
 git subtree add --prefix laravel/Modules/Xot git@github.com:laraxot/module_xot_fila3.git dev --squash
 
@@ -43,7 +49,10 @@ git subtree add --prefix laravel/Modules/UI git@github.com:laraxot/module_ui_fil
 ### 3. Installazione Tema
 
 ```bash
+<<<<<<< HEAD
 
+=======
+>>>>>>> aea6513 (.)
 # Tema One (dipende da UI)
 git subtree add --prefix laravel/Themes/One git@github.com:laraxot/theme_one_fila3.git dev --squash
 ```
@@ -51,7 +60,10 @@ git subtree add --prefix laravel/Themes/One git@github.com:laraxot/theme_one_fil
 ### 4. Installazione Moduli Funzionali (in ordine)
 
 ```bash
+<<<<<<< HEAD
 
+=======
+>>>>>>> aea6513 (.)
 # 5. Modulo User (dipende da Xot, Tenant)
 git subtree add --prefix laravel/Modules/User git@github.com:laraxot/module_user_fila3.git dev --squash
 
@@ -77,7 +89,10 @@ git subtree add --prefix laravel/Modules/Job git@github.com:laraxot/module_job_f
 ### 5. Configurazione Post-Installazione
 
 ```bash
+<<<<<<< HEAD
 
+=======
+>>>>>>> aea6513 (.)
 # Aggiornamento dipendenze
 composer update
 
@@ -105,7 +120,10 @@ Dopo l'installazione dei moduli base Laraxot, procedere con l'implementazione de
 ### 7. Configurazione Filament Admin Panel
 
 ```bash
+<<<<<<< HEAD
 
+=======
+>>>>>>> aea6513 (.)
 # Pubblicazione configurazione Filament
 php artisan vendor:publish --tag=filament-config
 
