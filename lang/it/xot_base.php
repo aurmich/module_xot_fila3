@@ -141,7 +141,6 @@ return array (
     array (
       'label' => 'search_step',
     ),
-<<<<<<< HEAD
     'delete' => 
     array (
       'label' => 'delete',
@@ -158,7 +157,5 @@ return array (
     array (
       'label' => 'attach',
     ),
-=======
->>>>>>> aea6513 (.)
   ),
 );

@@ -6,10 +6,7 @@
 
 #### Composer
 ```bash
-<<<<<<< HEAD
 
-=======
->>>>>>> aea6513 (.)
 # Pulire la cache di Composer
 composer clear-cache
 
@@ -19,10 +16,7 @@ composer install --no-scripts
 
 #### NPM
 ```bash
-<<<<<<< HEAD
 
-=======
->>>>>>> aea6513 (.)
 # Pulire la cache di NPM
 npm cache clean --force
 
@@ -34,10 +28,7 @@ npm install
 
 #### Migrazioni
 ```bash
-<<<<<<< HEAD
 
-=======
->>>>>>> aea6513 (.)
 # Ripristinare le migrazioni
 php artisan migrate:fresh
 
@@ -47,10 +38,7 @@ php artisan db:seed
 
 #### Connessione
 ```bash
-<<<<<<< HEAD
 
-=======
->>>>>>> aea6513 (.)
 # Verificare la connessione
 php artisan db:monitor
 
@@ -62,10 +50,7 @@ php artisan db:test
 
 #### Pulizia Cache
 ```bash
-<<<<<<< HEAD
 
-=======
->>>>>>> aea6513 (.)
 # Pulire la cache dell'applicazione
 php artisan cache:clear
 
@@ -83,10 +68,7 @@ php artisan route:clear
 
 ### 1. Errori di Attivazione
 ```bash
-<<<<<<< HEAD
 
-=======
->>>>>>> aea6513 (.)
 # Verificare lo stato dei moduli
 php artisan module:list
 
@@ -99,10 +81,7 @@ php artisan module:disable ModuleName
 
 ### 2. Errori di Pubblicazione
 ```bash
-<<<<<<< HEAD
 
-=======
->>>>>>> aea6513 (.)
 # Pubblicare gli assets
 php artisan module:publish ModuleName
 
@@ -117,10 +96,7 @@ php artisan module:publish-migration ModuleName
 
 ### 1. Errori di Compilazione
 ```bash
-<<<<<<< HEAD
 
-=======
->>>>>>> aea6513 (.)
 # Compilare gli assets
 npm run build
 
@@ -130,10 +106,7 @@ npm run theme:build
 
 ### 2. Errori di Visualizzazione
 ```bash
-<<<<<<< HEAD
 
-=======
->>>>>>> aea6513 (.)
 # Pulire la cache delle viste
 php artisan view:clear
 
@@ -153,10 +126,7 @@ Assicurarsi che l'utente del web server (es. www-data) abbia i permessi di scrit
 
 ### 1. Errori del Pannello
 ```bash
-<<<<<<< HEAD
 
-=======
->>>>>>> aea6513 (.)
 # Pubblicare gli assets
 php artisan filament:assets
 
@@ -166,10 +136,7 @@ php artisan filament:config
 
 ### 2. Errori dei Widget
 ```bash
-<<<<<<< HEAD
 
-=======
->>>>>>> aea6513 (.)
 # Pubblicare i widget
 php artisan filament:widgets
 
@@ -183,10 +150,7 @@ php artisan filament:check
 
 #### Pubblicazione Assets e Configurazioni
 ```bash
-<<<<<<< HEAD
 
-=======
->>>>>>> aea6513 (.)
 # Pubblicare gli assets
 php artisan livewire:publish --assets
 
@@ -230,10 +194,7 @@ Per ulteriori dettagli, consulta la [documentazione sui componenti Volt](../../T
 
 ### 2. Errori di Compilazione
 ```bash
-<<<<<<< HEAD
 
-=======
->>>>>>> aea6513 (.)
 # Compilare gli assets
 npm run dev
 
@@ -245,10 +206,7 @@ npm run build
 
 ### 1. Log dell'Applicazione
 ```bash
-<<<<<<< HEAD
 
-=======
->>>>>>> aea6513 (.)
 # Visualizzare i log
 tail -f storage/logs/laravel.log
 

@@ -37,10 +37,7 @@ php artisan database:schema-exporter
 
 ## Utilizzo
 ```bash
-<<<<<<< HEAD
 
-=======
->>>>>>> aea6513 (.)
 # Esportazione schema database
 php artisan database:schema-exporter
 
@@ -53,10 +50,7 @@ Tabelle trovate: users, migrations, password_resets
 - Migliorata la gestione degli errori
 - Aggiunta validazione input
 - Ottimizzata la query di estrazione tabelle 
-<<<<<<< HEAD
 
-=======
->>>>>>> aea6513 (.)
 ## Collegamenti tra versioni di database-schema-exporter.md
 * [database-schema-exporter.md](../../../Xot/docs/commands/database-schema-exporter.md)
 * [database-schema-exporter.md](../../../Xot/docs/console/commands/database-schema-exporter.md)

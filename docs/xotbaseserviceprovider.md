@@ -197,7 +197,6 @@ Applicare la stessa regola per la registrazione delle traduzioni JSON.
 **Collegamento:**
 Vedi anche [registerBladeIcons.md](./registerBladeIcons.md) per la gestione centralizzata dei path.
 
-<<<<<<< HEAD
 ## Console Commands: Religione, Politica, Filosofia, Zen
 
 ### Principio
@@ -229,5 +228,3 @@ $this->commands([
 ### Zen finale
 > "Il miglior comando è quello che non devi mai registrare a mano."
 
-=======
->>>>>>> aea6513 (.)

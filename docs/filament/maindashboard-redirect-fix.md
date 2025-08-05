@@ -71,41 +71,27 @@ public function mount(): void
 
 ### 1. Test Accesso Diretto al Panel
 ```bash
-<<<<<<< HEAD
 
 # Accedere direttamente al panel PDND
 curl -I http://personale2022.prov.tv.local/pdnd/admin
 
-=======
-# Accedere direttamente al panel PDND
-curl -I http://personale2022.prov.tv.local/pdnd/admin
->>>>>>> aea6513 (.)
 # Risultato atteso: 200 OK (non più redirect loop)
 ```
 
 ### 2. Test Accesso al Dashboard Principale
 ```bash
-<<<<<<< HEAD
 
 # Accedere al dashboard principale
 curl -I http://personale2022.prov.tv.local/admin
 
-=======
-# Accedere al dashboard principale
-curl -I http://personale2022.prov.tv.local/admin
->>>>>>> aea6513 (.)
 # Risultato atteso: 302 Redirect a /pdnd/admin (se utente ha ruolo pdnd::admin)
 ```
 
 ### 3. Test Utenti Multi-Ruolo
 ```bash
-<<<<<<< HEAD
 
 # Utente con più ruoli admin dovrebbe vedere la lista dei moduli
 
-=======
-# Utente con più ruoli admin dovrebbe vedere la lista dei moduli
->>>>>>> aea6513 (.)
 # senza redirect automatico
 ```
 
@@ -129,10 +115,7 @@ class AdminPanelProvider extends XotBasePanelProvider
 I ruoli devono seguire il pattern `{module}::admin`:
 
 ```bash
-<<<<<<< HEAD
 
-=======
->>>>>>> aea6513 (.)
 # Esempi di ruoli corretti
 pdnd::admin
 user::admin
@@ -190,7 +173,3 @@ performance::admin
 - ✅ **Multi-Ruolo**: Supporto mantenuto
 - ✅ **Performance**: Nessun impatto negativo
 
-<<<<<<< HEAD
-=======
-*Ultimo aggiornamento: 2025-01-27* 
->>>>>>> aea6513 (.)

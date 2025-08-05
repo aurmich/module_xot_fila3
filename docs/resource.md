@@ -603,10 +603,7 @@ public function getTableBulkActions(): array
 ### Versione HEAD
 
 // ... existing code ... 
-<<<<<<< HEAD
 
-=======
->>>>>>> aea6513 (.)
 ## Collegamenti tra versioni di resource.md
 * [resource.md](../../../Xot/docs/filament/resource.md)
 * [resource.md](../../../Xot/docs/resource.md)

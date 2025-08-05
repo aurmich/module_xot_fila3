@@ -24,10 +24,7 @@ You can read more about Multiple Context for Filament [Here](https://github.com/
 
 If this is your goal, then you are in the right place.
  
-<<<<<<< HEAD
 
-=======
->>>>>>> aea6513 (.)
 ## Installation
 Before you proceed, this guide assumes that you have configured your app fully to work with Laravel Modules. If you haven't, follow the [Laravel Modules Docs](https://docs.laravelmodules.com/v9/installation-and-setup) before proceeding.
 
@@ -51,10 +48,7 @@ You can read more about Multiple Context for Filament [Here](https://github.com/
 
 If this is your goal, then you are in the right place.
  
-<<<<<<< HEAD
 
-=======
->>>>>>> aea6513 (.)
 ## Installation
 Before you proceed, this guide assumes that you have configured your app fully to work with Laravel Modules. If you haven't, follow the [Laravel Modules Docs](https://docs.laravelmodules.com/v9/installation-and-setup) before proceeding.
 
@@ -90,10 +84,7 @@ id `blog::admin`. This ID should be used in the next step when generating resour
 From here on, use filament as you would normally to generate `resources`, `Pages` and `Widgets`. Be sure to specify the `--panel` option as the ID generated earlier.
 If the `--panel` option is not passed, the command will ask for it interactively.
 ```bash
-<<<<<<< HEAD
 
-=======
->>>>>>> aea6513 (.)
 # For each of these commands, the package will ask for the Model and Panel.
 php artisan make:filament-resource
 php artisan make:filament-page
@@ -101,10 +92,7 @@ php artisan make:filament-widget
 ```
 
 ```bash
-<<<<<<< HEAD
 
-=======
->>>>>>> aea6513 (.)
 # The Model and Panel arguments are passed inline
 php artisan make:filament-resource Author blog::admin
 php artisan make:filament-page Library blog::admin
@@ -112,10 +100,7 @@ php artisan make:filament-widget BookStats blog::admin
 ```
 
 **All Done!** For each of the panels generated, you can navigate to your `module-path/panel-path` e.g `blog/admin` to acess your panel and links to resources and pages.
-<<<<<<< HEAD
 
-=======
->>>>>>> aea6513 (.)
 ## Testing
 
 ```bash

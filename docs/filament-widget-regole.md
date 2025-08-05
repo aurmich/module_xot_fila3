@@ -16,11 +16,7 @@
 
 ## Label e Placeholder
 
-<<<<<<< HEAD
 - Non usare MAI // Label gestita automaticamente da LangServiceProvider, ->placeholder(), né stringhe tradotte direttamente nei componenti Filament.
-=======
-- Non usare MAI ->label(), ->placeholder(), né stringhe tradotte direttamente nei componenti Filament.
->>>>>>> aea6513 (.)
 - Tutte le label, placeholder, titoli e descrizioni sono risolte tramite i file di traduzione del modulo (es: Modules/SaluteOra/lang/it/widgets.php).
 - Chi estende XotBaseWidget, XotBaseResource, XotBasePage deve affidarsi solo alle chiavi di traduzione.
 - **Esempio corretto:**
@@ -29,11 +25,7 @@
   ```
 - **Esempio sbagliato:**
   ```php
-<<<<<<< HEAD
   Forms\Components\TextInput::make('location')// Label gestita automaticamente da LangServiceProvider);
-=======
-  Forms\Components\TextInput::make('location')->label(__('saluteora::widgets.find_doctor.location_label'));
->>>>>>> aea6513 (.)
   ```
 
 ---

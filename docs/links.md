@@ -8,11 +8,7 @@
 ## Documentazione Tecnica
 - [Regole di Progetto](./rules/PROMPT_RULES.md)
 - [Standard di Codice](./standards/CODE-STANDARDS.md)
-<<<<<<< HEAD
 - [Convenzioni di Nomenclatura](./conventions/NAMING-CONVENTIONS.md)
-=======
-- [Convenzioni di Nomenclatura](./conventions/naming-conventions.md)
->>>>>>> aea6513 (.)
 - [Installazione](./installation.md)
 - [Configurazione](./configuration.md)
 - [Risoluzione Problemi](./troubleshooting.md)

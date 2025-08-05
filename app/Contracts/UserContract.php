@@ -5,10 +5,7 @@ declare(strict_types=1);
 namespace Modules\Xot\Contracts;
 
 use Laravel\Passport\Token;
-<<<<<<< HEAD
 use Spatie\MediaLibrary\HasMedia;
-=======
->>>>>>> aea6513 (.)
 use Spatie\Permission\Contracts\Role;
 use Illuminate\Database\Eloquent\Model;
 use Filament\Models\Contracts\FilamentUser;
@@ -18,10 +15,7 @@ use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Contracts\Auth\CanResetPassword;
 use Illuminate\Contracts\Auth\Access\Authorizable;
 use Illuminate\Database\Eloquent\Relations\HasOne;
-<<<<<<< HEAD
 use Spatie\MediaLibrary\MediaCollections\FileAdder;
-=======
->>>>>>> aea6513 (.)
 use Illuminate\Database\Eloquent\Relations\MorphMany;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 
@@ -44,21 +38,14 @@ use Illuminate\Database\Eloquent\Relations\BelongsToMany;
  * @property \Illuminate\Database\Eloquent\Collection<int, \Modules\User\Models\Role>   $roles
  * @property \Illuminate\Database\Eloquent\Collection<int, \Modules\User\Models\Tenant> $tenants
  *
-<<<<<<< HEAD
  * @method  FileAdder addMediaFromDisk(string $key, ?string $disk = null)
-=======
->>>>>>> aea6513 (.)
  * @method bool canAccessSocialite()
  *
  * @phpstan-require-extends Model
  *
  * @mixin \Eloquent
  */
-<<<<<<< HEAD
 interface UserContract extends Authenticatable, Authorizable, CanResetPassword, FilamentUser, HasTeamsContract, ModelContract, MustVerifyEmail, PassportHasApiTokensContract,HasMedia
-=======
-interface UserContract extends Authenticatable, Authorizable, CanResetPassword, FilamentUser, HasTeamsContract, ModelContract, MustVerifyEmail, PassportHasApiTokensContract
->>>>>>> aea6513 (.)
 {
     /*
     public function isSuperAdmin();

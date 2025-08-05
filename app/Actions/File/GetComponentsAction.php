@@ -47,10 +47,7 @@ class GetComponentsAction
             }
             return ComponentFileData::collection($comps);
         }
-<<<<<<< HEAD
         
-=======
->>>>>>> aea6513 (.)
 
         $files = File::allFiles($path);
         $comps = [];

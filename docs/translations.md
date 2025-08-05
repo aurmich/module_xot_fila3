@@ -64,10 +64,7 @@ Modules/<NomeModulo>/
 ## Esempio di File translations.md
 
 ```markdown
-<<<<<<< HEAD
 
-=======
->>>>>>> aea6513 (.)
 # Traduzioni del Modulo <NomeModulo>
 
 ## Collegamenti
@@ -328,10 +325,7 @@ TextInput::make('cognome')
 // Utilizzo in Actions
 Action::make('save')
 Action::make('delete')
-<<<<<<< HEAD
 
-=======
->>>>>>> aea6513 (.)
 ### Versione HEAD
 
 ```
@@ -373,10 +367,7 @@ Action::make('delete')
 - Test di coerenza
 - Validazione formati
 - Test di performance 
-<<<<<<< HEAD
 
-=======
->>>>>>> aea6513 (.)
 ## Collegamenti tra versioni di translations.md
 * [translations.md](../../../Chart/docs/translations.md)
 * [translations.md](../../../Reporting/docs/translations.md)

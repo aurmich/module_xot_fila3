@@ -5,7 +5,6 @@ declare(strict_types=1);
 return [
     'fields' => [
         'message' => [
-<<<<<<< HEAD
             'label' => 'Messaggio',
             'placeholder' => 'Inserisci un messaggio',
             'tooltip' => 'Messaggio informativo',
@@ -46,29 +45,10 @@ return [
             'tooltip' => 'Modifica la disposizione degli elementi',
             'description' => 'Configurazione del layout di visualizzazione',
             'helper_text' => '',
-=======
-            'label' => 'message',
-        ],
-        'delete' => [
-            'label' => 'delete',
-        ],
-        'edit' => [
-            'label' => 'edit',
-        ],
-        'view' => [
-            'label' => 'view',
-        ],
-        'create' => [
-            'label' => 'create',
-        ],
-        'layout' => [
-            'label' => 'layout',
->>>>>>> aea6513 (.)
         ],
     ],
     'actions' => [
         'create' => [
-<<<<<<< HEAD
             'label' => 'Crea Nuovo',
             'tooltip' => 'Crea un nuovo elemento',
             'description' => 'Azione per aggiungere un nuovo record al sistema',
@@ -77,12 +57,6 @@ return [
             'label' => 'Esporta Excel',
             'tooltip' => 'Esporta dati in formato Excel',
             'description' => 'Azione per esportare i dati in un file Excel',
-=======
-            'label' => 'create',
-        ],
-        'export_xls' => [
-            'label' => 'export_xls',
->>>>>>> aea6513 (.)
         ],
     ],
 ];

@@ -25,10 +25,7 @@
 
 ### 1. Intestazione
 ```markdown
-<<<<<<< HEAD
 
-=======
->>>>>>> aea6513 (.)
 # Titolo del Documento
 
 Breve descrizione dello scopo del documento (1-2 frasi).
@@ -40,10 +37,7 @@ Breve descrizione dello scopo del documento (1-2 frasi).
 
 ### 2. Struttura delle Sezioni
 ```markdown
-<<<<<<< HEAD
 
-=======
->>>>>>> aea6513 (.)
 ## Nome Sezione
 
 ### Sottosezione
@@ -97,10 +91,7 @@ Modules/{ModuleName}/docs/
 
 ### 2. File README.md
 ```markdown
-<<<<<<< HEAD
 
-=======
->>>>>>> aea6513 (.)
 # Nome Modulo
 
 Breve descrizione...
@@ -135,10 +126,7 @@ Breve descrizione...
 ## Testing della Documentazione
 
 ```bash
-<<<<<<< HEAD
 
-=======
->>>>>>> aea6513 (.)
 # Verifica collegamenti
 markdown-link-check **/*.md
 

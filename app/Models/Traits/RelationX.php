@@ -115,22 +115,7 @@ trait RelationX
     {
         $class = $this::class;
         $pivot_name = class_basename($related).'Morph';
-<<<<<<< HEAD
         
-=======
-        /*
-        $pivot_class = Str::of($this::class)
-            ->beforeLast('\\')
-            ->append('\\'.$pivot_name)
-            ->toString();
-        if (! class_exists($pivot_class)) {
-            $pivot_class = Str::of($related)
-            ->beforeLast('\\')
-            ->append('\\'.$pivot_name)
-            ->toString();
-        }
-        */
->>>>>>> aea6513 (.)
         $pivot_class = $this->guessPivotFullClass($pivot_name, $related, $class);
         $pivot = app($pivot_class);
         Assert::isInstanceOf($pivot,\Illuminate\Database\Eloquent\Relations\MorphPivot::class);
@@ -152,30 +137,9 @@ trait RelationX
             class_basename($related),
         ];
         sort($model_names);
-<<<<<<< HEAD
         $msg='';
         $pivot_name = implode('', $model_names);
         
-=======
-        $pivot_name = implode('', $model_names);
-        /*
-        $pivot_class = Str::of($this::class)
-            ->beforeLast('\\')
-            ->append('\\'.$pivot_name)
-            ->toString();
-        if (! class_exists($pivot_class)) {
-            $pivot_class = Str::of($related)
-            ->beforeLast('\\')
-            ->append('\\'.$pivot_name)
-            ->toString();
-        }
-        if (! class_exists($pivot_class)) {
-            if(get_parent_class($class)!==false){
-                return $this->guessPivot($related, get_parent_class($class));
-            }
-        }
-        */
->>>>>>> aea6513 (.)
         $pivot_class = $this->guessPivotFullClass($pivot_name, $related, $class);
         
         $pivot = app($pivot_class);
@@ -197,7 +161,6 @@ trait RelationX
             ->toString();
         }
         if (! class_exists($pivot_class)) {
-<<<<<<< HEAD
             
             if(get_parent_class($class)!==false){
                 if(!Str::endsWith(get_parent_class($class),'Morph')){
@@ -209,9 +172,6 @@ trait RelationX
                     $pivot_name = implode('', $model_names);
                     
                 }
-=======
-            if(get_parent_class($class)!==false){
->>>>>>> aea6513 (.)
                 return $this->guessPivotFullClass($pivot_name, $related, get_parent_class($class));
             }
         }

@@ -23,7 +23,6 @@ interface StateContract
 {
     public function label(): string;
     public function color(): string;
-<<<<<<< HEAD
     public function bgColor(): string;
     public function icon(): string;
     public function modalHeading(): string;
@@ -32,9 +31,4 @@ interface StateContract
     public function modalFillFormByRecord(Model $record): array;
     public function modalActionByRecord(Model $record,array $data): void;
 
-=======
-    public function icon(): string;
-    public function modalHeading(): string;
-    public function modalDescription(): string;
->>>>>>> aea6513 (.)
 }

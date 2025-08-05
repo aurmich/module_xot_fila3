@@ -54,7 +54,6 @@ Restituisce il percorso del favicon.
 Restituisce l'altezza configurata per il logo.
 
 ### getBrandName(): string
-<<<<<<< HEAD
 Restituisce il nome del brand (title).
 
 ### getBrandLogo(): string  
@@ -84,9 +83,6 @@ data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAA...
 **Gestione errori:** Restituisce stringa vuota se il file non esiste, con logging degli errori.
 
 **Formati supportati:** PNG, JPG, JPEG, GIF, SVG, WebP, BMP, ICO
-=======
-Restituisce il nome del brand, che corrisponde al titolo della pagina.
->>>>>>> aea6513 (.)
 
 ## Utilizzo con Filament Panel
 

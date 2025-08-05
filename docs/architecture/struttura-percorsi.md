@@ -86,10 +86,7 @@ Il rispetto di questa struttura è fondamentale per:
 Prima di ogni commit, eseguire questi comandi per verificare la presenza di percorsi errati:
 
 ```bash
-<<<<<<< HEAD
 
-=======
->>>>>>> aea6513 (.)
 # Verifica percorsi errati
 grep -r "/var/www/html/base_saluteora/app" --include="*.php" /var/www/html/base_saluteora/laravel
 grep -r "/var/www/html/base_saluteora/Modules" --include="*.php" /var/www/html/base_saluteora/laravel
@@ -102,10 +99,7 @@ grep -r "/var/www/html/base_saluteora/resources" --include="*.php" /var/www/html
 Se si trovano percorsi errati, è possibile correggerli automaticamente con:
 
 ```bash
-<<<<<<< HEAD
 
-=======
->>>>>>> aea6513 (.)
 # Correzione automatica (uso con cautela)
 find /var/www/html/base_saluteora/laravel -type f -name "*.php" -exec sed -i 's|/var/www/html/base_saluteora/app|/var/www/html/base_saluteora/laravel/app|g' {} \;
 find /var/www/html/base_saluteora/laravel -type f -name "*.php" -exec sed -i 's|/var/www/html/base_saluteora/Modules|/var/www/html/base_saluteora/laravel/Modules|g' {} \;

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Modulo Xot
 
 ## Descrizione
@@ -94,14 +93,25 @@ php artisan module:make <NomeModulo>
 php artisan module:migrate <NomeModulo>
 ```
 
+## Modifiche Recenti (Giugno 2025)
+
+### Deprecazione Comandi MCP
+I comandi MCP sono stati temporaneamente deprecati e rinominati con estensione `.old`:
+- `McpValidateCommand.php` → `McpValidateCommand.php.old`
+- `McpServerCommand.php` → `McpServerCommand.php.old`
+- `McpCheckCommand.php` → `McpCheckCommand.php.old`
+
+### Migrazione Azioni Database
+Le azioni relative al database sono state migrate al modulo DbForge per una migliore separazione delle responsabilità.
+
+**Per dettagli completi**: [Documentazione Modifiche](docs/mcp-commands-deprecation.md)
+
 ## Configurazione
 Il modulo può essere configurato tramite il file `config/module_xot.php`:
 - Gestione delle rotte
 - Permessi
 - Configurazioni specifiche per modulo
 
-=======
->>>>>>> aea6513 (.)
 # Module Xot Fila3 🔥 The Ultimate Laravel Multi-module Solution 🚀
 
 [![Latest Release](https://img.shields.io/github/v/release/laraxot/module_xot_fila3)](https://github.com/laraxot/module_xot_fila3/releases)
