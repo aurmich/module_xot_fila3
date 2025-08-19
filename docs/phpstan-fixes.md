@@ -6,6 +6,7 @@ Questo documento traccia gli errori PHPStan di livello 7 identificati nel modulo
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 ## Errori Identificati
 
 ### 1. Errore in Helpers/Helper.php
@@ -28,6 +29,8 @@ Questo documento traccia gli errori PHPStan di livello 7 identificati nel modulo
 ### 1. Errore in Helpers/Helper.php
 =======
 >>>>>>> a2645e2c (.)
+=======
+>>>>>>> 1da726f (.)
 
 5693302 (.)
 
@@ -483,6 +486,7 @@ Questo controllo è più appropriato perché verifica che l'array `$matches` con
 ### 2. Correzione in Actions/Filament/AutoLabelAction.php
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 Il problema è che il codice chiamava il metodo `getName()` sui componenti Filament, ma non tutti i componenti hanno questo metodo. La soluzione è stata modificare il metodo `getComponentName()` per utilizzare un approccio più robusto:
 =======
 =======
@@ -505,6 +509,8 @@ Questo controllo è più appropriato perché verifica che l'array `$matches` con
 Il problema è che il codice chiamava il metodo `getName()` sui componenti Filament, ma non tutti i componenti hanno questo metodo. La soluzione è stata modificare il metodo `getComponentName()` per utilizzare un approccio più robusto:
 =======
 >>>>>>> a2645e2c (.)
+=======
+>>>>>>> 1da726f (.)
 
 5693302 (.)
 

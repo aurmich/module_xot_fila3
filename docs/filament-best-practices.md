@@ -986,7 +986,19 @@ class ListReports extends XotBaseListRecords
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 ## Checklist di Conformità
+=======
+### Risorsa Avanzata
+
+Consulta l'esempio completo all'inizio di questo documento per una implementazione avanzata.
+
+## Riferimenti
+
+- [Documentazione Filament](https://filamentphp.com/docs)
+- [Documentazione XotBaseResource](/var/www/html/exa/base_orisbroker_fila3/laravel/Modules/Xot/docs/resource.md)
+- [Best Practices Laraxot](/var/www/html/exa/base_orisbroker_fila3/laravel/Modules/Xot/docs/best-practices.md)
+>>>>>>> 1da726f (.)
 
 Prima di considerare completa una risorsa Filament, verificare:
 
@@ -1345,6 +1357,7 @@ Appointment::where('doctor_id', $doctorId)
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> a2645e2c (.)
 >>>>>>> 7dd92412 (.)
@@ -1366,3 +1379,6 @@ Appointment::where('doctor_id', $doctorId)
 >>>>>>> 995f7cae (.)
 =======
 >>>>>>> a2645e2c (.)
+=======
+
+>>>>>>> 1da726f (.)

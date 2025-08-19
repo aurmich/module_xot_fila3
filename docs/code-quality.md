@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> a2645e2c (.)
 # Code Quality Guidelines for Laravel Modules
@@ -91,6 +92,8 @@ This document outlines the best practices for maintaining high code quality with
 >>>>>>> 995f7cae (.)
 =======
 >>>>>>> a2645e2c (.)
+=======
+>>>>>>> 1da726f (.)
 # Laraxot Code Quality Standards
 
 ## Overview
@@ -378,6 +381,7 @@ unset($translations['existing_key']); // MAI!
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 7dd92412 (.)
 =======
 >>>>>>> 7ce328e (.)
@@ -386,3 +390,5 @@ unset($translations['existing_key']); // MAI!
 =======
 >>>>>>> 7dd92412 (.)
 >>>>>>> a2645e2c (.)
+=======
+>>>>>>> 1da726f (.)
