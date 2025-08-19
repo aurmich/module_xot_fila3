@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Best Practices per Risorse Filament in Laraxot
 
 Questo documento riassume le migliori pratiche per la creazione e gestione delle risorse Filament all'interno dell'ecosistema Laraxot. Seguire queste linee guida garantirà compatibilità e coerenza in tutto il progetto.
@@ -16,6 +17,27 @@ Questo documento riassume le migliori pratiche per la creazione e gestione delle
    class ClienteResource extends Resource
    ```
 =======
+=======
+# Filament Best Practices (Moduli Riutilizzabili)
+
+## Descrizione
+Best practice generiche per l'utilizzo di Filament in moduli Laravel riutilizzabili. Nessun riferimento a nomi di progetto o brand.
+
+## Regole principali
+- NON estendere mai direttamente le classi di Filament: creare sempre wrapper personalizzati
+- Utilizzare traits per funzionalità riutilizzabili
+- Seguire il pattern di composizione invece dell'ereditarietà
+- Mantenere la compatibilità con gli aggiornamenti di Filament
+- Centralizzare le configurazioni comuni nelle classi base
+- Non inserire proprietà statiche custom nei resource (es. $navigationIcon, $navigationGroup, $translationPrefix)
+- Non usare ->label() direttamente nei form: usare sempre i file di traduzione
+
+## Esempi
+```php
+// ❌ Anti-pattern
+class MyResource extends \Filament\Resources\Resource {}
+
+>>>>>>> 7ce328e (.)
 class UserResource extends XotBaseResource
 {
     // ...
@@ -515,6 +537,7 @@ public static function table(Table $table): Table
         ->paginated([10, 25, 50, 100]);
 }
 ```
+<<<<<<< HEAD
 >>>>>>> 7dd92412 (.)
 
 2. **SEMPRE** implementare `getFormSchema()`:
@@ -544,6 +567,13 @@ public static function table(Table $table): Table
    }
    ```
 =======
+=======
+
+## Troubleshooting
+- Se compare un errore di override di proprietà statiche, rimuovere la proprietà dal resource e centralizzare nella base
+- Se le traduzioni non vengono applicate, controllare la struttura dei file lang e l'assenza di ->label() hardcoded
+
+>>>>>>> 7ce328e (.)
 ## Collegamenti
 - [Filament Docs](https://filamentphp.com/docs)
 - [Best practices moduli riutilizzabili](../module-documentation-neutrality.md)
@@ -551,6 +581,7 @@ public static function table(Table $table): Table
 
 
 ### Problema: Form non visualizzato correttamente
+<<<<<<< HEAD
 >>>>>>> 7dd92412 (.)
 
 4. **MAI** usare `->label()` nei form components:
@@ -584,10 +615,33 @@ public static function table(Table $table): Table
 ### Metodo Obbligatorio: getTableColumns()
 
 **⚠️ IMPORTANTE**: Tutte le classi che estendono `XotBaseListRecords` DEVONO implementare il metodo `getTableColumns()`:
+=======
+
+**Soluzione:** Assicurarsi di utilizzare `getFormSchema()` invece di `form()` e controllare che tutti i componenti siano configurati correttamente.
+
+### Problema: Label non tradotte
+
+**Soluzione:** Verificare che:
+1. Non si stia utilizzando `->label()` direttamente sui componenti
+2. I file di traduzione siano nella posizione corretta e seguano la struttura espansa
+3. Le chiavi dei campi nel form corrispondano esattamente alle chiavi dei campi nel file di traduzione
+
+### Problema: Relazioni non caricate correttamente
+
+**Soluzione:** Verificare che:
+1. I nomi delle relazioni e delle colonne siano corretti
+2. Le relazioni siano definite correttamente nel modello
+3. Sia utilizzato l'eager loading appropriato in `getEloquentQuery()`
+
+## Esempi Pratici
+
+### Risorsa Base
+>>>>>>> 7ce328e (.)
 
 ```php
 <?php
 
+<<<<<<< HEAD
 declare(strict_types=1);
 
 namespace Modules\SaluteMo\Filament\Resources\ReportResource\Pages;
@@ -805,10 +859,39 @@ class ReportResource extends XotBaseResource
             'create' => Pages\CreateReport::route('/create'),
             'edit' => Pages\EditReport::route('/{record}/edit'),
         ];
+=======
+namespace Modules\Brain\Filament\Resources;
+
+use Filament\Forms\Components\TextInput;
+use Filament\Tables\Columns\TextColumn;
+use Modules\Xot\Filament\Resources\XotBaseResource;
+use Modules\Brain\Models\Socio;
+
+class SocioResource extends XotBaseResource
+{
+    protected static ?string $model = Socio::class;
+    
+    public static function getFormSchema(): array
+    {
+        return [
+            TextInput::make('nome')->required(),
+            TextInput::make('cognome')->required(),
+        ];
+    }
+    
+    public static function table(\Filament\Tables\Table $table): \Filament\Tables\Table
+    {
+        return $table
+            ->columns([
+                TextColumn::make('nome'),
+                TextColumn::make('cognome'),
+            ]);
+>>>>>>> 7ce328e (.)
     }
 }
 ```
 
+<<<<<<< HEAD
 ## Checklist di Conformità
 
 Prima di considerare completa una risorsa Filament, verificare:
@@ -864,6 +947,18 @@ Prima di considerare completa una risorsa Filament, verificare:
 - `CreateAppointment.php` - Estende `XotBaseCreateRecord`
 - `EditAppointment.php` - Estende `XotBaseEditRecord`
 =======
+=======
+### Risorsa Avanzata
+
+Consulta l'esempio completo all'inizio di questo documento per una implementazione avanzata.
+
+## Riferimenti
+
+- [Documentazione Filament](https://filamentphp.com/docs)
+- [Documentazione XotBaseResource](/var/www/html/exa/base_orisbroker_fila3/laravel/Modules/Xot/docs/resource.md)
+- [Best Practices Laraxot](/var/www/html/exa/base_orisbroker_fila3/laravel/Modules/Xot/docs/best-practices.md)
+
+>>>>>>> 7ce328e (.)
 ## Regole per Widget Filament: Path View e Localizzazione
 
 - Tutti i widget Filament devono avere la view in `modulo::filament.widgets.nome-widget`.
@@ -934,6 +1029,7 @@ Appointment::where('doctor_id', $doctorId)
 - Un solo punto di verità: nessuna duplicazione, nessun lock-in
 - DRY, KISS, serenità del codice
 - Refactoring sicuro, massima estendibilità
+<<<<<<< HEAD
 >>>>>>> 7dd92412 (.)
 
 *Ultimo aggiornamento: gennaio 2025 - Correzioni per campi reali e rimozione label hardcoded*
@@ -944,3 +1040,6 @@ Appointment::where('doctor_id', $doctorId)
    - **Indirizzo e contatti**: via, cap, regione_id, provincia_id, etc.
    - **Dati bancari**: iban, intestatario, banca, filiale
    - **Modalità di ricezione**: Lista di modalità selezionabili
+=======
+
+>>>>>>> 7ce328e (.)

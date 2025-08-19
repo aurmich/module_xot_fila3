@@ -87,6 +87,12 @@ return array (
     'telegram_bot_token' => 
     array (
       'description' => 'telegram_bot_token',
+<<<<<<< HEAD
+=======
+      'helper_text' => 'telegram_bot_token',
+      'placeholder' => 'telegram_bot_token',
+      'label' => 'telegram_bot_token',
+>>>>>>> 7ce328e (.)
     ),
   ),
   'actions' => 

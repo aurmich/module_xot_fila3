@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Correzioni PHPStan Livello 7 - Modulo Xot
 
 Questo documento traccia gli errori PHPStan di livello 7 identificati nel modulo Xot e le relative soluzioni implementate.
@@ -7,12 +8,17 @@ Questo documento traccia gli errori PHPStan di livello 7 identificati nel modulo
 
 ### 1. Errore in Helpers/Helper.php
 =======
+=======
+
+
+>>>>>>> 7ce328e (.)
 
 5693302 (.)
 
 b6f667c (.)
 
 # Correzioni PHPStan nel Modulo Xot
+<<<<<<< HEAD
 >>>>>>> 7dd92412 (.)
 
 ```
@@ -95,6 +101,109 @@ Line 40: Function json_decode is unsafe to use. It can return FALSE instead of t
 Line 239: Function json_encode is unsafe to use. It can return FALSE instead of throwing an exception.
 ```
 =======
+=======
+
+## Correzioni Implementate
+
+### 1. Gestione Email
+- ✅ Implementato `RecordMail` con tipo di ritorno corretto
+- ✅ Aggiunto controllo tipi nei parametri del costruttore
+- ✅ Migliorata la gestione dei dati del record
+- ✅ Template email con validazione dei dati
+
+### 2. Schema Manager
+- ✅ Corretto tipo di ritorno per `getDoctrineSchemaManager()`
+- ✅ Aggiunta validazione del modello
+- ✅ Implementata gestione errori con eccezioni tipizzate
+- ✅ Migliorata documentazione PHPDoc
+
+### 3. Store Action
+- ✅ Corretta gestione delle relazioni
+- ✅ Implementata validazione dei dati
+- ✅ Aggiunto controllo tipi per i parametri
+- ✅ Migliorata gestione degli ID utente
+
+### 4. Count Action
+- ✅ Implementato metodo statico con tipo di ritorno corretto
+- ✅ Aggiunta validazione della classe modello
+- ✅ Migliorata gestione delle eccezioni
+- ✅ Documentazione PHPDoc completa
+
+### Versione HEAD
+
+### 5. ExportXlsByView (2023-03-21)
+- ✅ Rimossi controlli ridondanti dei tipi in `is_string()` e `is_scalar()`
+- ✅ Migliorata la documentazione dei parametri
+- ✅ Semplificata la conversione dei campi in stringhe
+- ✅ Aggiornata la tipizzazione del parametro `$fields` a `list<mixed>|null`
+
+### 6. ExportXlsStreamByLazyCollection (2023-03-21)
+- ✅ Rimosso controllo ridondante `is_string()`
+- ✅ Ottimizzata la conversione delle intestazioni usando arrow function
+- ✅ Semplificata la conversione dei valori in stringhe
+- ✅ Mantenuta la gestione corretta dei valori null
+
+### 7. GetPropertiesFromMethodsByModelAction (2023-03-21)
+- ✅ Aggiunto controllo esplicito del tipo di ritorno di `preg_replace`
+- ✅ Migliorata la gestione delle stringhe con Assert
+- ✅ Aggiunta validazione del tipo stringa prima del trim
+- ✅ Mantenuta la logica di estrazione del corpo della funzione
+
+### 8. AutoLabelAction (2023-03-21)
+- ✅ Rimossi controlli ridondanti `is_string()`
+- ✅ Aggiunte annotazioni `@var mixed` per variabili con tipo non definito
+- ✅ Migliorata la gestione dei tipi con cast espliciti a stringa
+- ✅ Ottimizzata la logica di controllo delle traduzioni
+- ✅ Aggiunto cast esplicito a stringa per l'etichetta del componente
+
+### 9. GetAllModelsByModuleNameAction (2023-03-21)
+- ✅ Aggiunta tipizzazione corretta per l'array dei modelli
+- ✅ Aggiunto controllo `class_exists()` prima della reflection
+- ✅ Migliorata la gestione dei tipi delle classi con annotazioni PHPDoc
+- ✅ Aggiunta annotazione esplicita per il cast a `class-string`
+
+### 10. MorphToOneAction (2023-03-21)
+- ✅ Rimossi controlli ridondanti su null
+- ✅ Aggiunta documentazione PHPDoc completa
+- ✅ Semplificata la logica di creazione della relazione
+- ✅ Rimosso controllo inutile su `$rows !== null`
+
+### 11. FakeSeederAction (2023-03-21)
+- ✅ Rimosso metodo inutilizzato `getTableName()`
+- ✅ Migliorata la pulizia del codice
+- ✅ Mantenuta la funzionalità core della classe
+- ✅ Rimosso codice morto
+
+### 12. PdfByHtmlAction (2023-03-21)
+- ✅ Corretto il tipo di ritorno per rispettare l'interfaccia
+- ✅ Aggiunta generazione esplicita del PDF con `fromHtml()`
+- ✅ Sostituito metodo inesistente `save()` con `getPath()`
+- ✅ Migliorata la documentazione della classe e dei metodi
+- ✅ Corretta la sintassi dell'array di configurazione
+
+### 13. SanitizeAction (2023-03-21)
+- ✅ Aggiunto controllo esplicito del tipo di ritorno di `preg_replace`
+- ✅ Migliorata la gestione delle variabili temporanee
+- ✅ Aggiunta documentazione PHPDoc completa
+- ✅ Ottimizzata la logica di rimozione dei trattini iniziali
+- ✅ Migliorata la leggibilità del codice
+
+### 14. AddStrictTypesDeclarationCommand (2023-03-21)
+- ✅ Aggiunta validazione del tipo di `$moduleOption`
+- ✅ Utilizzato `DIRECTORY_SEPARATOR` per la compatibilità cross-platform
+- ✅ Migliorata la gestione delle stringhe con `sprintf`
+- ✅ Aggiunte annotazioni PHPDoc per le variabili di opzione
+- ✅ Aggiunta documentazione della classe
+
+
+### Versione Incoming
+
+
+---
+
+## Best Practices
+
+>>>>>>> 7ce328e (.)
 ### 1. Gestione Tipi
 ```php
 /**
@@ -115,6 +224,7 @@ aurmich/dev
 b6f667c (.)
 
 # Risoluzione Problemi PHPStan nel Modulo Xot
+<<<<<<< HEAD
 >>>>>>> 7dd92412 (.)
 
 ### 13. Errori in Console/Commands/GenerateFilamentResources.php
@@ -227,6 +337,107 @@ if (!empty($matches) && isset($matches[1]) && isset($matches[2])) {
     // @phpstan-ignore offsetAccess.nonOffsetAccessible
     ${$sk}[$sv] = $v;
 =======
+=======
+
+Questo documento descrive i principali problemi PHPStan risolti nel modulo Xot e le strategie adottate per la loro risoluzione.
+
+## Problemi Comuni
+
+### 1. Chiamate a Metodi Dinamici
+
+**Problema**: PHPStan non riconosce chiamate a metodi definiti dinamicamente, generando errori del tipo "Call to an undefined method".
+
+**Soluzione**:
+1. Utilizzare annotazioni PHPDoc per indicare a PHPStan quali metodi sono disponibili:
+   ```php
+   /** @method void someMethod() */
+   class MyClass {}
+   ```
+
+2. Introdurre interfacce che definiscono i metodi utilizzati:
+   ```php
+   interface HasSomeMethod {
+       public function someMethod(): void;
+   }
+   ```
+
+3. Utilizzare asserzioni per garantire il tipo corretto:
+   ```php
+   Assert::methodExists($object, 'someMethod');
+   $object->someMethod();
+   ```
+
+### 2. Tipi Generici non Specificati
+
+**Problema**: Collezioni e array che utilizzano tipi generici non specifici.
+
+**Soluzione**:
+1. Specificare i tipi generici nelle annotazioni PHPDoc:
+   ```php
+   /** @var Collection<int, User> $users */
+   $users = User::all();
+   ```
+
+2. Utilizzare tipi per le proprietà:
+   ```php
+   /** @var array<string, mixed> */
+   protected $attributes = [];
+   ```
+
+3. Migliorare i return type nei metodi:
+   ```php
+   /**
+    * @return array<string, mixed>
+    */
+   public function getAttributes(): array
+   {
+       return $this->attributes;
+   }
+   ```
+
+### 3. Confusione tra null e tipi scalari
+
+**Problema**: PHPStan segnala errori quando si trattano valori potenzialmente null come non-null.
+
+**Soluzione**:
+1. Utilizzare operatori di coalescenza null:
+   ```php
+   $value = $object->getValue() ?? '';
+   ```
+
+2. Utilizzare controlli condizionali espliciti:
+   ```php
+   if (null !== $value) {
+       // $value è sicuramente non-null qui
+   }
+   ```
+
+3. Utilizzare asserzioni:
+   ```php
+   Assert::notNull($value);
+   // $value è sicuramente non-null qui
+   ```
+
+## Problemi Specifici Risolti
+
+### Model XotBaseModel
+
+**Problema**: PHPStan segnalava errori sui metodi dinamici generati da Laravel come `whereName()`.
+
+**Soluzione**:
+1. Aggiunta di annotazioni PHPDoc per i metodi dinamici generati automaticamente
+2. Introduzione di tipi di ritorno specifici per i metodi builder
+3. Utilizzo di interfacce e traits per definire i metodi utilizzati
+
+```php
+/**
+ * @method static \Illuminate\Database\Eloquent\Builder|static whereId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|static whereName($value)
+ */
+class XotBaseModel extends Model
+{
+
+>>>>>>> 7ce328e (.)
 ### Versione Incoming
 
 
@@ -239,6 +450,7 @@ aurmich/dev
 b6f667c (.)
 
     // ...
+<<<<<<< HEAD
 >>>>>>> 7dd92412 (.)
 }
 ```
@@ -250,6 +462,13 @@ Questo controllo è più appropriato perché verifica che l'array `$matches` con
 <<<<<<< HEAD
 Il problema è che il codice chiamava il metodo `getName()` sui componenti Filament, ma non tutti i componenti hanno questo metodo. La soluzione è stata modificare il metodo `getComponentName()` per utilizzare un approccio più robusto:
 =======
+=======
+}
+```
+
+
+
+>>>>>>> 7ce328e (.)
 
 5693302 (.)
 
@@ -281,6 +500,7 @@ b6f667c (.)
 1. Specificare i tipi di parametro e di ritorno in modo esplicito
 2. Utilizzare interfacce per i servizi iniettati
 3. Aggiungere annotazioni PHPDoc quando necessario
+<<<<<<< HEAD
 >>>>>>> 7dd92412 (.)
 
 ```php
@@ -291,6 +511,16 @@ private function getComponentName(Field|Component $component): string
     if (method_exists($component, 'getName')) {
         return $component->getName();
 =======
+=======
+
+```php
+/**
+ * @param ServiceInterface $service
+ * @return ResponseInterface
+ */
+public function process(ServiceInterface $service): ResponseInterface
+{
+>>>>>>> 7ce328e (.)
 
 ### Versione Incoming
 
@@ -328,6 +558,7 @@ public function execute(Model $model, array $data): array
         if ($this->isValidRelation($model, $name)) {
             $filtered[$name] = $this->processRelation($model, $name, $value);
         }
+<<<<<<< HEAD
 >>>>>>> 7dd92412 (.)
     }
     
@@ -782,6 +1013,22 @@ private function exportTablesToCSV(string $mdbFile): void
 <<<<<<< HEAD
 private function exportTablesToCSV(string $mdbFile): array
 =======
+=======
+    }
+    return $filtered;
+}
+```
+
+### 4. Documentazione
+```php
+/**
+ * Class ExampleAction
+ * 
+ * @property string $name Nome dell'azione
+ * @property array<string, mixed> $config Configurazione
+ * @method void execute(array $data)
+ */
+>>>>>>> 7ce328e (.)
 ```
 
 ## Problemi Comuni e Soluzioni
@@ -1098,6 +1345,7 @@ b6f667c (.)
  * @return \Illuminate\Database\Eloquent\Relations\HasMany<Comment>
  */
 public function comments(): HasMany
+<<<<<<< HEAD
 >>>>>>> 7dd92412 (.)
 {
     $tables = [];
@@ -1131,10 +1379,95 @@ private function importDataToMySQL(string $mdbFile, string $mysqlUser, string $m
 
     foreach ($tables as $table) {
         // ... codice per importare i dati ...
+=======
+{
+    return $this->hasMany(Comment::class);
+}
+```
+
+### Problemi con il Cast dei Tipi
+
+**Problema**: I cast automatici di Eloquent non venivano riconosciuti da PHPStan.
+
+**Soluzione**:
+1. Utilizzare il metodo `casts()` per definire i cast:
+   ```php
+   protected function casts(): array
+   {
+       return [
+           'id' => 'integer',
+           'is_active' => 'boolean',
+           'data' => 'array',
+           'created_at' => 'datetime',
+       ];
+   }
+   ```
+
+2. Utilizzare annotazioni PHPDoc per indicare i tipi effettivi dopo il cast:
+   ```php
+   /**
+    * @property int $id
+    * @property bool $is_active
+    * @property array $data
+    * @property \Carbon\Carbon $created_at
+    */
+   class MyModel extends Model
+   {
+       // ...
+   }
+   ```
+
+## Convenzioni Adottate
+
+Per garantire uniformità nella risoluzione dei problemi PHPStan, sono state adottate le seguenti convenzioni:
+
+1. **Preferire tipi espliciti**: Utilizzare sempre dichiarazioni di tipo esplicite quando possibile.
+2. **Utilizzare nullable dove necessario**: Utilizzare il tipo `?Type` invece di `Type|null`.
+3. **Evitare la soppressione degli errori**: Utilizzare `@phpstan-ignore-line` solo come ultima risorsa.
+4. **Documentare le soluzioni di workaround**: Aggiungere commenti quando si adottano soluzioni non standard.
+5. **Mantenere la compatibilità con Laravel**: Le soluzioni non devono compromettere le funzionalità di Laravel.
+
+## Progressi PHPStan
+
+| Livello | Stato | Data | Errori Rimanenti |
+|---------|-------|------|------------------|
+| 1       | ✅    | 2023-09-01 | 0 |
+| 2       | ✅    | 2023-09-05 | 0 |
+| 3       | ✅    | 2023-09-10 | 0 |
+| 4       | ✅    | 2023-09-15 | 0 |
+| 5       | ✅    | 2023-09-20 | 0 |
+| 6       | ✅    | 2023-09-25 | 0 |
+| 7       | ✅    | 2023-10-01 | 0 |
+| 8       | ⚠️    | 2023-10-05 | 12 |
+| 9       | ⚠️    | 2023-10-10 | 34 |
+| 10      | ❌    | 2023-10-15 | 87 |
+
+## Problemi Particolari e Soluzioni
+
+### Soluzione per il Dynamic Panel MetaTagData
+
+Il problema "Call to a method getMetaTagData() on an unknown class XotBasePanel" è stato risolto aggiungendo un trait `HasMetaTagData` che implementa il metodo `getMetaTagData()`:
+
+```php
+/**
+ * Trait che aggiunge la funzionalità di MetaTagData ai panel.
+ */
+trait HasMetaTagData
+{
+    /**
+     * Restituisce i metadati per i tag SEO.
+     *
+     * @return array<string, string>
+     */
+    public function getMetaTagData(): array
+    {
+        // Implementazione...
+>>>>>>> 7ce328e (.)
     }
 }
 ```
 
+<<<<<<< HEAD
 Queste modifiche garantiscono che:
 1. Il metodo exportTablesToCSV restituisca effettivamente l'array di tabelle che viene costruito al suo interno
 2. Il metodo importDataToMySQL verifichi che l'array di tabelle non sia vuoto prima di tentare di iterarlo
@@ -1260,6 +1593,42 @@ protected array $listeners = [
 <<<<<<< HEAD
 L'aggiunta dell'annotazione `@phpstan-var` fornisce a PHPStan un'informazione più specifica sul tipo della proprietà, permettendogli di verificare correttamente che tutti gli elementi dell'array siano stringhe. Questo è particolarmente utile quando si lavora con Livewire, dove i listener sono definiti come un array associativo di eventi e metodi da chiamare.
 =======
+=======
+Questo trait viene poi utilizzato nelle classi Panel che necessitano di questa funzionalità.
+
+### Soluzione per QueryBuilder Dynamic Methods
+
+Per risolvere i problemi con i metodi dinamici del QueryBuilder, sono stati aggiunti mixin PHPDoc:
+
+```php
+/**
+ * @mixin \Illuminate\Database\Eloquent\Builder<static>
+ * @mixin \Illuminate\Database\Query\Builder
+ */
+class MyModel extends Model
+{
+    // ...
+}
+```
+
+### Soluzione per le Property Dinamiche
+
+Per le proprietà dinamiche come `$request->user()`, è stata adottata una soluzione con interfacce e annotazioni:
+
+```php
+/**
+ * @property-read User|null $user
+ */
+interface AuthenticatableRequest
+{
+    /**
+     * @return User|null
+     */
+    public function user();
+}
+```
+
+>>>>>>> 7ce328e (.)
 ## Prossimi Passi
 
 1. Risolvere i 12 errori rimanenti al livello 8
@@ -1295,4 +1664,7 @@ aurmich/dev
 
 b6f667c (.)
 
+<<<<<<< HEAD
 >>>>>>> 7dd92412 (.)
+=======
+>>>>>>> 7ce328e (.)

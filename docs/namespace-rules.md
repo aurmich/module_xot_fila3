@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 # Regole Namespace PSR-4 per Tutti i Moduli (Regola Globale)
 
 ## Regola Fondamentale
@@ -33,10 +34,23 @@ Questo documento definisce le regole ufficiali per l'utilizzo dei namespace all'
 <<<<<<< HEAD
 ---
 =======
+=======
+# Regole per i Namespace nei Moduli Laraxot
+
+Questo documento definisce le regole ufficiali per l'utilizzo dei namespace all'interno dei moduli Laraxot.
+
+## Struttura Corretta dei Namespace
+
+La struttura corretta dei namespace nei moduli **NON** include il segmento `app` anche se il file è fisicamente posizionato nella directory `app`.
+
+### ✅ CORRETTO
+
+>>>>>>> 7ce328e (.)
 ```php
 namespace Modules\NomeModulo\Providers;
 namespace Modules\NomeModulo\Http\Controllers;
 ```
+<<<<<<< HEAD
 >>>>>>> 7dd92412 (.)
 
 **Ultimo aggiornamento:** 2025-05-13
@@ -44,6 +58,11 @@ namespace Modules\NomeModulo\Http\Controllers;
 <<<<<<< HEAD
 **Link bidirezionale:** Aggiornare anche la root docs e la docs dei moduli coinvolti.
 =======
+=======
+
+### ❌ ERRATO
+
+>>>>>>> 7ce328e (.)
 ```php
 namespace Modules\NomeModulo\app\Providers;
 namespace Modules\NomeModulo\app\Http\Controllers;
@@ -95,5 +114,9 @@ Se incontri errori come `name is empty on [Modules\NomeModulo\Providers\RouteSer
 
 1. Che il namespace sia corretto (senza `app`)
 2. Che la proprietà `$name` sia definita e valorizzata
+<<<<<<< HEAD
 3. Che il `$moduleNamespace` punti alla posizione corretta dei controller 
 >>>>>>> 7dd92412 (.)
+=======
+3. Che il `$moduleNamespace` punti alla posizione corretta dei controller 
+>>>>>>> 7ce328e (.)

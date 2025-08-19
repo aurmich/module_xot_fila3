@@ -178,12 +178,20 @@ class HasTableWithXot implements HasTable
         return null;
     }
 
+<<<<<<< HEAD
     public function getTableFilterState(): array
+=======
+    public function getTableFilterState(string $name): ?array
+>>>>>>> 7ce328e (.)
     {
         return [];
     }
 
+<<<<<<< HEAD
     public function getTableGrouping(): ?string
+=======
+    public function getTableGrouping(): ?\Filament\Tables\Grouping\Group
+>>>>>>> 7ce328e (.)
     {
         return null;
     }
@@ -218,9 +226,15 @@ class HasTableWithXot implements HasTable
         return null;
     }
 
+<<<<<<< HEAD
     public function getSelectedTableRecords(): array
     {
         return [];
+=======
+    public function getSelectedTableRecords(bool $shouldFetchSelectedRecords = true): \Illuminate\Support\Collection
+    {
+        return collect([]);
+>>>>>>> 7ce328e (.)
     }
 
     public function getAllTableRecordsCount(): int
@@ -323,7 +337,11 @@ class HasTableWithXot implements HasTable
         return null;
     }
 
+<<<<<<< HEAD
     public function callTableColumnAction(): mixed
+=======
+    public function callTableColumnAction(string $name, string $recordKey): mixed
+>>>>>>> 7ce328e (.)
     {
         return null;
     }
@@ -365,9 +383,15 @@ class HasTableWithXot implements HasTable
     {
     }
 
+<<<<<<< HEAD
     public function parseTableFilterName(): string
     {
         return '';
+=======
+    public function parseTableFilterName(string $name): string
+    {
+        return $name;
+>>>>>>> 7ce328e (.)
     }
 
     public function makeFilamentTranslatableContentDriver(): mixed
@@ -426,12 +450,20 @@ class HasTableWithoutOptionalMethods implements HasTable
         return null;
     }
 
+<<<<<<< HEAD
     public function getTableFilterState(): array
+=======
+    public function getTableFilterState(string $name): ?array
+>>>>>>> 7ce328e (.)
     {
         return [];
     }
 
+<<<<<<< HEAD
     public function getTableGrouping(): ?string
+=======
+    public function getTableGrouping(): ?\Filament\Tables\Grouping\Group
+>>>>>>> 7ce328e (.)
     {
         return null;
     }
@@ -466,9 +498,15 @@ class HasTableWithoutOptionalMethods implements HasTable
         return null;
     }
 
+<<<<<<< HEAD
     public function getSelectedTableRecords(): array
     {
         return [];
+=======
+    public function getSelectedTableRecords(bool $shouldFetchSelectedRecords = true): \Illuminate\Support\Collection
+    {
+        return collect([]);
+>>>>>>> 7ce328e (.)
     }
 
     public function getAllTableRecordsCount(): int
@@ -571,7 +609,11 @@ class HasTableWithoutOptionalMethods implements HasTable
         return null;
     }
 
+<<<<<<< HEAD
     public function callTableColumnAction(): mixed
+=======
+    public function callTableColumnAction(string $name, string $recordKey): mixed
+>>>>>>> 7ce328e (.)
     {
         return null;
     }
@@ -613,9 +655,15 @@ class HasTableWithoutOptionalMethods implements HasTable
     {
     }
 
+<<<<<<< HEAD
     public function parseTableFilterName(): string
     {
         return '';
+=======
+    public function parseTableFilterName(string $name): string
+    {
+        return $name;
+>>>>>>> 7ce328e (.)
     }
 
     public function makeFilamentTranslatableContentDriver(): mixed
