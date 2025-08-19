@@ -4,6 +4,7 @@
 Questo documento traccia gli errori PHPStan di livello 7 identificati nel modulo Xot e le relative soluzioni implementate.
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 ## Errori Identificati
 
 ### 1. Errore in Helpers/Helper.php
@@ -12,6 +13,8 @@ Questo documento traccia gli errori PHPStan di livello 7 identificati nel modulo
 
 
 >>>>>>> 7ce328e (.)
+=======
+>>>>>>> 995f7cae (.)
 
 5693302 (.)
 
@@ -468,7 +471,10 @@ Il problema è che il codice chiamava il metodo `getName()` sui componenti Filam
 
 
 
+<<<<<<< HEAD
 >>>>>>> 7ce328e (.)
+=======
+>>>>>>> 995f7cae (.)
 
 5693302 (.)
 

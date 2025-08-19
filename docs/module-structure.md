@@ -37,7 +37,10 @@ ModuleName/
 
 Questo documento definisce le linee guida ufficiali per la struttura dei moduli all'interno del framework <nome progetto>.
 
+<<<<<<< HEAD
 >>>>>>> 7ce328e (.)
+=======
+>>>>>>> 995f7cae (.)
 ---
 
 ## Gestione dati geografici statici: GeoJsonModel readonly (ispirato a Squire)

@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 # Code Quality Guidelines for Laravel Modules
 
 ## Overview
@@ -82,6 +83,8 @@ This document outlines the best practices for maintaining high code quality with
 =======
 =======
 >>>>>>> 7ce328e (.)
+=======
+>>>>>>> 995f7cae (.)
 # Laraxot Code Quality Standards
 
 ## Overview
@@ -367,6 +370,9 @@ unset($translations['existing_key']); // MAI!
 
 *"Nel codice Laraxot, ogni riga è un verso della sinfonia dell'architettura perfetta."*
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 7dd92412 (.)
 =======
 >>>>>>> 7ce328e (.)
+=======
+>>>>>>> 995f7cae (.)

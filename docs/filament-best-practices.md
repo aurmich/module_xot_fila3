@@ -1030,6 +1030,7 @@ Appointment::where('doctor_id', $doctorId)
 - DRY, KISS, serenità del codice
 - Refactoring sicuro, massima estendibilità
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 7dd92412 (.)
 
 *Ultimo aggiornamento: gennaio 2025 - Correzioni per campi reali e rimozione label hardcoded*
@@ -1043,3 +1044,6 @@ Appointment::where('doctor_id', $doctorId)
 =======
 
 >>>>>>> 7ce328e (.)
+=======
+
+>>>>>>> 995f7cae (.)

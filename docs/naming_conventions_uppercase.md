@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< HEAD:docs/naming-conventions.md
 # Convenzioni di Nomenclatura in Laravel Modules
 
@@ -60,6 +61,8 @@ Questo documento descrive le convenzioni di denominazione da seguire all'interno
 =======
 =======
 >>>>>>> 7ce328e (.)
+=======
+>>>>>>> 995f7cae (.)
 # Convenzioni di Nomenclatura in <nome progetto>
 
 Questo documento definisce le convenzioni ufficiali di nomenclatura da utilizzare in tutto il progetto <nome progetto>.
@@ -205,6 +208,9 @@ Descrizione dettagliata se necessaria
 
 Tipi: `feat`, `fix`, `docs`, `style`, `refactor`, `test`, `chore`
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 7dd92412 (.):docs/naming_conventions_uppercase.md
 =======
 >>>>>>> 7ce328e (.)
+=======
+>>>>>>> 995f7cae (.)
