@@ -1,5 +1,8 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> a2645e2c (.)
 # Best Practices per Risorse Filament in Laraxot
 
 Questo documento riassume le migliori pratiche per la creazione e gestione delle risorse Filament all'interno dell'ecosistema Laraxot. Seguire queste linee guida garantirà compatibilità e coerenza in tutto il progetto.
@@ -196,8 +199,11 @@ Questo documento riassume le migliori pratiche per la creazione e gestione delle
 * [filament_best_practices.md](../../../User/docs/filament_best_practices.md)
 * [filament_best_practices.md](../../../Job/docs/filament_best_practices.md)
 =======
+<<<<<<< HEAD
 =======
 >>>>>>> 7ce328e (.)
+=======
+>>>>>>> a2645e2c (.)
 # Filament Best Practices
 
 ## Visibilità dei Metodi
@@ -258,9 +264,13 @@ public function getTableActions(): Collection
 public function getTableActions(): array
 ```
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 7dd92412 (.)
 =======
 >>>>>>> 7ce328e (.)
+=======
+>>>>>>> 7dd92412 (.)
+>>>>>>> a2645e2c (.)
 
 ## Collegamenti
 - [Documentazione Filament Ufficiale](https://filamentphp.com/)

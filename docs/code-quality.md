@@ -1,6 +1,9 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> a2645e2c (.)
 # Code Quality Guidelines for Laravel Modules
 
 ## Overview
@@ -81,10 +84,13 @@ This document outlines the best practices for maintaining high code quality with
 - [Service Provider Best Practices](./SERVICE-PROVIDER-BEST-PRACTICES.md)
 - [Filament Best Practices](./FILAMENT-BEST-PRACTICES.md)
 =======
+<<<<<<< HEAD
 =======
 >>>>>>> 7ce328e (.)
 =======
 >>>>>>> 995f7cae (.)
+=======
+>>>>>>> a2645e2c (.)
 # Laraxot Code Quality Standards
 
 ## Overview
@@ -371,8 +377,12 @@ unset($translations['existing_key']); // MAI!
 *"Nel codice Laraxot, ogni riga è un verso della sinfonia dell'architettura perfetta."*
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 7dd92412 (.)
 =======
 >>>>>>> 7ce328e (.)
 =======
 >>>>>>> 995f7cae (.)
+=======
+>>>>>>> 7dd92412 (.)
+>>>>>>> a2645e2c (.)

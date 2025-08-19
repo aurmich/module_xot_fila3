@@ -1,5 +1,8 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> a2645e2c (.)
 # Regole Namespace PSR-4 per Tutti i Moduli (Regola Globale)
 
 ## Regola Fondamentale
@@ -10,6 +13,7 @@
   ```
   Anche se la classe si trova in `app/`, il namespace NON deve includere `App`.
 =======
+<<<<<<< HEAD
 # Regole per i Namespace nei Moduli Laraxot
 
 Questo documento definisce le regole ufficiali per l'utilizzo dei namespace all'interno dei moduli Laraxot.
@@ -35,21 +39,41 @@ Questo documento definisce le regole ufficiali per l'utilizzo dei namespace all'
 ---
 =======
 =======
+=======
+>>>>>>> a2645e2c (.)
 # Regole per i Namespace nei Moduli Laraxot
 
 Questo documento definisce le regole ufficiali per l'utilizzo dei namespace all'interno dei moduli Laraxot.
+>>>>>>> 7dd92412 (.)
 
-## Struttura Corretta dei Namespace
+## Regola PSR-4
+- Il namespace riflette la struttura delle directory a partire da `Modules/<NomeModulo>/app/`, senza includere `app`.
+- Esempio:
+  - File: `Modules/Notify/app/Console/Commands/AnalyzeTranslationFiles.php`
+  - Namespace: `Modules\Notify\Console\Commands`
 
-La struttura corretta dei namespace nei moduli **NON** include il segmento `app` anche se il file è fisicamente posizionato nella directory `app`.
+## Applicazione
+- Questa regola si applica a **tutti** i moduli (Notify, Cms, Xot, ecc.), **inclusi i modelli**.
+- Evitare l'uso di proprietà deprecate come `protected $casts` nei modelli: preferire override tramite metodo `casts()`.
+- Per esempi specifici, vedere la documentazione nei singoli moduli:
+  - [Patient: Regole Modelli](../../Patient/docs/models.md)
+  - [Notify Namespace Rules](../../Notify/docs/NAMESPACE_RULES.md)
 
-### ✅ CORRETTO
+## Collegamenti
+- [Regole Namespace Moduli - Root Docs](../../../docs/namespace-moduli.md)
 
+<<<<<<< HEAD
 >>>>>>> 7ce328e (.)
+=======
+<<<<<<< HEAD
+---
+=======
+>>>>>>> a2645e2c (.)
 ```php
 namespace Modules\NomeModulo\Providers;
 namespace Modules\NomeModulo\Http\Controllers;
 ```
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 7dd92412 (.)
 
@@ -59,10 +83,19 @@ namespace Modules\NomeModulo\Http\Controllers;
 **Link bidirezionale:** Aggiornare anche la root docs e la docs dei moduli coinvolti.
 =======
 =======
+=======
+>>>>>>> 7dd92412 (.)
+>>>>>>> a2645e2c (.)
 
-### ❌ ERRATO
+**Ultimo aggiornamento:** 2025-05-13
 
+<<<<<<< HEAD
 >>>>>>> 7ce328e (.)
+=======
+<<<<<<< HEAD
+**Link bidirezionale:** Aggiornare anche la root docs e la docs dei moduli coinvolti.
+=======
+>>>>>>> a2645e2c (.)
 ```php
 namespace Modules\NomeModulo\app\Providers;
 namespace Modules\NomeModulo\app\Http\Controllers;
@@ -115,8 +148,13 @@ Se incontri errori come `name is empty on [Modules\NomeModulo\Providers\RouteSer
 1. Che il namespace sia corretto (senza `app`)
 2. Che la proprietà `$name` sia definita e valorizzata
 <<<<<<< HEAD
+<<<<<<< HEAD
 3. Che il `$moduleNamespace` punti alla posizione corretta dei controller 
 >>>>>>> 7dd92412 (.)
 =======
 3. Che il `$moduleNamespace` punti alla posizione corretta dei controller 
 >>>>>>> 7ce328e (.)
+=======
+3. Che il `$moduleNamespace` punti alla posizione corretta dei controller 
+>>>>>>> 7dd92412 (.)
+>>>>>>> a2645e2c (.)

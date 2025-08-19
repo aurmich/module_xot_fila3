@@ -29,6 +29,23 @@ class EnvWidget extends Widget implements HasForms
 
     protected static string $view = 'xot::filament.widgets.env';
 
+    /**
+     * Create a new widget instance with configuration.
+     *
+     * @param array<string, mixed> $properties
+     */
+    public static function make(array $properties = []): \Filament\Widgets\WidgetConfiguration
+    {
+        $config = parent::make($properties);
+        
+        // Apply custom properties to the widget configuration if needed
+        if (isset($properties['only'])) {
+            $config->properties['only'] = $properties['only'];
+        }
+        
+        return $config;
+    }
+
     public function mount(): void
     {
         /** @var array<string, mixed> */

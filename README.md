@@ -94,6 +94,9 @@ php artisan module:migrate <NomeModulo>
 ```
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> a2645e2c (.)
 ## Modifiche Recenti (Giugno 2025)
 
 ### Deprecazione Comandi MCP
@@ -107,8 +110,11 @@ Le azioni relative al database sono state migrate al modulo DbForge per una migl
 
 **Per dettagli completi**: [Documentazione Modifiche](docs/mcp-commands-deprecation.md)
 
+<<<<<<< HEAD
 =======
 >>>>>>> 7ce328e (.)
+=======
+>>>>>>> a2645e2c (.)
 ## Configurazione
 Il modulo può essere configurato tramite il file `config/module_xot.php`:
 - Gestione delle rotte

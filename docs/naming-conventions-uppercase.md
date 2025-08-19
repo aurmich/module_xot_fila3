@@ -1,6 +1,9 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> a2645e2c (.)
 # Convenzioni di Nomenclatura in <nome progetto>
 
 Questo documento definisce le convenzioni ufficiali di nomenclatura da utilizzare in tutto il progetto <nome progetto>.
@@ -146,10 +149,13 @@ Descrizione dettagliata se necessaria
 
 Tipi: `feat`, `fix`, `docs`, `style`, `refactor`, `test`, `chore`
 =======
+<<<<<<< HEAD
 =======
 >>>>>>> 7ce328e (.)
 =======
 >>>>>>> 995f7cae (.)
+=======
+>>>>>>> a2645e2c (.)
 # Convenzioni di Nomenclatura in Laravel Modules
 
 Questo documento definisce le convenzioni ufficiali di nomenclatura da utilizzare in tutto il progetto Laravel Modules.
@@ -209,8 +215,12 @@ Questo documento descrive le convenzioni di denominazione da seguire all'interno
 - [Best practice per Filament](./FILAMENT-BEST-PRACTICES.md)
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 7dd92412 (.)
 =======
 >>>>>>> 7ce328e (.)
 =======
 >>>>>>> 995f7cae (.)
+=======
+>>>>>>> 7dd92412 (.)
+>>>>>>> a2645e2c (.)

@@ -93,6 +93,9 @@ $res=Locality::query()
 ## Verifiche Post-Correzione
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> a2645e2c (.)
 
 ### 2. Validazione PHPStan
 ```bash
@@ -200,8 +203,12 @@ php artisan lang:check
 
 **Ultimo aggiornamento**: 2025-01-06
 **Autore**: Sistema di correzione automatica
+<<<<<<< HEAD
 **Stato**: ✅ Completato
 =======
 ### 1. Controllo Conflitti
 ```bash
 >>>>>>> 995f7cae (.)
+=======
+**Stato**: ✅ Completato
+>>>>>>> a2645e2c (.)

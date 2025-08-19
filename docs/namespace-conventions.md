@@ -1,5 +1,8 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> a2645e2c (.)
 # Convenzioni per i Namespace nei Moduli
 
 ## Struttura Base
@@ -218,8 +221,11 @@ php artisan config:clear
 php artisan view:clear
 ```
 =======
+<<<<<<< HEAD
 =======
 >>>>>>> 7ce328e (.)
+=======
+>>>>>>> a2645e2c (.)
 # Convenzioni dei Namespace nel Modulo Xot
 
 ## Panoramica
@@ -9480,6 +9486,10 @@ php scripts/check-namespaces.php
  aurmich/dev
 Seguire queste convenzioni di namespace aiuterà a mantenere un codebase coerente e a evitare errori comuni durante l'analisi statica del codice con PHPStan. 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 7dd92412 (.)
 =======
 >>>>>>> 7ce328e (.)
+=======
+>>>>>>> 7dd92412 (.)
+>>>>>>> a2645e2c (.)

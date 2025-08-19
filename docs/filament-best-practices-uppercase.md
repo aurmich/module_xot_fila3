@@ -62,6 +62,7 @@ public static function form(Form $form): Form
 ```
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 ### 3. Traduzioni e Label
 =======
 ### 3. Proprietà e Metodi da NON Definire
@@ -118,6 +119,9 @@ class DoctorResource extends XotBaseResource
 
 ### 4. Traduzioni e Label
 >>>>>>> 7ce328e (.)
+=======
+### 3. Traduzioni e Label
+>>>>>>> a2645e2c (.)
 
 #### ✅ DO - Utilizzare i file di traduzione
 
@@ -176,6 +180,7 @@ class SocioResource extends XotBaseResource
     protected static ?string $model = Socio::class;
     
 <<<<<<< HEAD
+<<<<<<< HEAD
     protected static ?string $navigationIcon = 'heroicon-o-user';
     
     protected static ?int $navigationSort = 1;
@@ -183,6 +188,11 @@ class SocioResource extends XotBaseResource
     // NON definire $navigationIcon quando si estende XotBaseResource
     // NON definire $navigationSort quando si estende XotBaseResource
 >>>>>>> 7ce328e (.)
+=======
+    protected static ?string $navigationIcon = 'heroicon-o-user';
+    
+    protected static ?int $navigationSort = 1;
+>>>>>>> a2645e2c (.)
     
     // Form Schema - CORRETTO ✅
     public static function getFormSchema(): array
