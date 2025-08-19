@@ -1,8 +1,11 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> a2645e2c (.)
+=======
+>>>>>>> 376bc0e6 (fix conflitti sync remote repo aurmich)
 <<<<<<< HEAD:docs/naming-conventions.md
 # Convenzioni di Nomenclatura in Laravel Modules
 
@@ -63,12 +66,18 @@ Questo documento descrive le convenzioni di denominazione da seguire all'interno
 - [Best practice per Filament](./FILAMENT-BEST-PRACTICES.md)
 =======
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 376bc0e6 (fix conflitti sync remote repo aurmich)
 =======
 >>>>>>> 7ce328e (.)
 =======
 >>>>>>> 995f7cae (.)
+<<<<<<< HEAD
 =======
 >>>>>>> a2645e2c (.)
+=======
+>>>>>>> 376bc0e6 (fix conflitti sync remote repo aurmich)
 # Convenzioni di Nomenclatura in <nome progetto>
 
 Questo documento definisce le convenzioni ufficiali di nomenclatura da utilizzare in tutto il progetto <nome progetto>.
@@ -216,11 +225,17 @@ Tipi: `feat`, `fix`, `docs`, `style`, `refactor`, `test`, `chore`
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 376bc0e6 (fix conflitti sync remote repo aurmich)
 >>>>>>> 7dd92412 (.):docs/naming_conventions_uppercase.md
 =======
 >>>>>>> 7ce328e (.)
 =======
 >>>>>>> 995f7cae (.)
+<<<<<<< HEAD
 =======
 >>>>>>> 7dd92412 (.):docs/naming_conventions_uppercase.md
 >>>>>>> a2645e2c (.)
+=======
+>>>>>>> 376bc0e6 (fix conflitti sync remote repo aurmich)

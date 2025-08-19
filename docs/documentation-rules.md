@@ -1,5 +1,8 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 376bc0e6 (fix conflitti sync remote repo aurmich)
 # Regole di Documentazione
 
 ## Panoramica
@@ -252,6 +255,7 @@ Questo documento descrive le regole fondamentali per la creazione e la manutenzi
 - [Contributing](../../../Xot/docs/contributing.md)
 - [Security](../../../Xot/docs/security.md) 
 >>>>>>> 7ce328e (.)
+<<<<<<< HEAD
 =======
 # Collegamenti Non Corretti
 [Documento Correlato](/var/www/html/saluteora/laravel/Modules/Xot/docs/documento.md)
@@ -428,3 +432,5 @@ Questo documento descrive le regole fondamentali per la creazione e la manutenzi
 - La documentazione deve evolversi insieme al codice
 - I collegamenti bidirezionali sono essenziali per la navigabilità
 >>>>>>> a2645e2c (.)
+=======
+>>>>>>> 376bc0e6 (fix conflitti sync remote repo aurmich)

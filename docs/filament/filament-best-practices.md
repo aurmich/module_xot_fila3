@@ -1,8 +1,11 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> a2645e2c (.)
+=======
+>>>>>>> 376bc0e6 (fix conflitti sync remote repo aurmich)
 # Best Practices per Risorse Filament in Laraxot
 
 Questo documento riassume le migliori pratiche per la creazione e gestione delle risorse Filament all'interno dell'ecosistema Laraxot. Seguire queste linee guida garantirà compatibilità e coerenza in tutto il progetto.
@@ -200,10 +203,15 @@ Questo documento riassume le migliori pratiche per la creazione e gestione delle
 * [filament_best_practices.md](../../../Job/docs/filament_best_practices.md)
 =======
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 7ce328e (.)
 =======
 >>>>>>> a2645e2c (.)
+=======
+=======
+>>>>>>> 7ce328e (.)
+>>>>>>> 376bc0e6 (fix conflitti sync remote repo aurmich)
 # Filament Best Practices
 
 ## Visibilità dei Metodi
@@ -265,12 +273,18 @@ public function getTableActions(): array
 ```
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 7dd92412 (.)
 =======
 >>>>>>> 7ce328e (.)
 =======
 >>>>>>> 7dd92412 (.)
 >>>>>>> a2645e2c (.)
+=======
+>>>>>>> 7dd92412 (.)
+=======
+>>>>>>> 7ce328e (.)
+>>>>>>> 376bc0e6 (fix conflitti sync remote repo aurmich)
 
 ## Collegamenti
 - [Documentazione Filament Ufficiale](https://filamentphp.com/)

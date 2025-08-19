@@ -1,8 +1,11 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> a2645e2c (.)
+=======
+>>>>>>> 376bc0e6 (fix conflitti sync remote repo aurmich)
 # Convenzioni per i Namespace nei Moduli
 
 ## Struttura Base
@@ -222,10 +225,15 @@ php artisan view:clear
 ```
 =======
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 7ce328e (.)
 =======
 >>>>>>> a2645e2c (.)
+=======
+=======
+>>>>>>> 7ce328e (.)
+>>>>>>> 376bc0e6 (fix conflitti sync remote repo aurmich)
 # Convenzioni dei Namespace nel Modulo Xot
 
 ## Panoramica
@@ -9487,9 +9495,15 @@ php scripts/check-namespaces.php
 Seguire queste convenzioni di namespace aiuterà a mantenere un codebase coerente e a evitare errori comuni durante l'analisi statica del codice con PHPStan. 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 7dd92412 (.)
 =======
 >>>>>>> 7ce328e (.)
 =======
 >>>>>>> 7dd92412 (.)
 >>>>>>> a2645e2c (.)
+=======
+>>>>>>> 7dd92412 (.)
+=======
+>>>>>>> 7ce328e (.)
+>>>>>>> 376bc0e6 (fix conflitti sync remote repo aurmich)

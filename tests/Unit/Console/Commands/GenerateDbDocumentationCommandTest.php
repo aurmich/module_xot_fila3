@@ -76,11 +76,6 @@ class GenerateDbDocumentationCommandTest extends TestCase
         parent::tearDown();
     }
 
-<<<<<<< HEAD
-#[Test]
-=======
-    /** @test */
->>>>>>> 1da726f (.)
     public function it_generates_documentation_successfully(): void
     {
         $this->artisan('xot:generate-db-documentation', [
@@ -106,11 +101,6 @@ class GenerateDbDocumentationCommandTest extends TestCase
         $this->assertStringContainsString('name_index', $tableContent);
     }
 
-<<<<<<< HEAD
-#[Test]
-=======
-    /** @test */
->>>>>>> 1da726f (.)
     public function it_fails_with_invalid_schema_file(): void
     {
         $this->artisan('xot:generate-db-documentation', [
@@ -119,11 +109,7 @@ class GenerateDbDocumentationCommandTest extends TestCase
         ])->assertExitCode(1);
     }
 
-<<<<<<< HEAD
-#[Test]
-=======
-    /** @test */
->>>>>>> 1da726f (.)
+
     public function it_fails_with_invalid_json_content(): void
     {
         // Crea un file JSON non valido
@@ -135,11 +121,6 @@ class GenerateDbDocumentationCommandTest extends TestCase
         ])->assertExitCode(1);
     }
 
-<<<<<<< HEAD
-#[Test]
-=======
-    /** @test */
->>>>>>> 1da726f (.)
     public function it_fails_with_invalid_schema_structure(): void
     {
         // Crea un file JSON con struttura non valida

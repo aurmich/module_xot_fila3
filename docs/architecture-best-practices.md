@@ -13,8 +13,11 @@ Questa convenzione migliora la leggibilità e la chiarezza del codice, rendendo 
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> a2645e2c (.)
+=======
+>>>>>>> 376bc0e6 (fix conflitti sync remote repo aurmich)
 ### 🚨 REGOLA CRITICA FONDAMENTALE: Estensione Classi XotBase
 
 **MAI ESTENDERE CLASSI FILAMENT DIRETTAMENTE - SEMPRE USARE XOTBASE***
@@ -43,10 +46,15 @@ class AdminPanelProvider extends Modules\Xot\Providers\Filament\XotBasePanelProv
 ### Altre Regole Operative
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 7ce328e (.)
 =======
 >>>>>>> a2645e2c (.)
+=======
+=======
+>>>>>>> 7ce328e (.)
+>>>>>>> 376bc0e6 (fix conflitti sync remote repo aurmich)
 - **Un solo model per ogni concetto aggregato**: per ogni tipo di aggregazione (es. valutatore_id, stabi, ecc.), deve esistere un solo model, con nome e tabella coerenti e documentati. Usare sempre `BaseModel` come classe base.
 - **Un solo file per ogni azione di aggregazione**: mantenere solo la versione con il suffisso `By<Chiave>` (es. `ByValutatoreId`, `ByStabi`) per chiarezza, coerenza e ricerca.
 - **Tutte le azioni e i model devono essere documentati** e collegati alle regole generali del progetto (vedi root docs e docs di ogni modulo).

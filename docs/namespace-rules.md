@@ -1,8 +1,11 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> a2645e2c (.)
+=======
+>>>>>>> 376bc0e6 (fix conflitti sync remote repo aurmich)
 # Regole Namespace PSR-4 per Tutti i Moduli (Regola Globale)
 
 ## Regola Fondamentale
@@ -14,6 +17,8 @@
   Anche se la classe si trova in `app/`, il namespace NON deve includere `App`.
 =======
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
 # Regole per i Namespace nei Moduli Laraxot
 
 Questo documento definisce le regole ufficiali per l'utilizzo dei namespace all'interno dei moduli Laraxot.
@@ -35,6 +40,33 @@ Questo documento definisce le regole ufficiali per l'utilizzo dei namespace all'
 ## Collegamenti
 - [Regole Namespace Moduli - Root Docs](../../../docs/namespace-moduli.md)
 
+<<<<<<< HEAD
+---
+=======
+=======
+>>>>>>> 376bc0e6 (fix conflitti sync remote repo aurmich)
+# Regole per i Namespace nei Moduli Laraxot
+
+Questo documento definisce le regole ufficiali per l'utilizzo dei namespace all'interno dei moduli Laraxot.
+>>>>>>> 7dd92412 (.)
+
+## Regola PSR-4
+- Il namespace riflette la struttura delle directory a partire da `Modules/<NomeModulo>/app/`, senza includere `app`.
+- Esempio:
+  - File: `Modules/Notify/app/Console/Commands/AnalyzeTranslationFiles.php`
+  - Namespace: `Modules\Notify\Console\Commands`
+
+## Applicazione
+- Questa regola si applica a **tutti** i moduli (Notify, Cms, Xot, ecc.), **inclusi i modelli**.
+- Evitare l'uso di proprietà deprecate come `protected $casts` nei modelli: preferire override tramite metodo `casts()`.
+- Per esempi specifici, vedere la documentazione nei singoli moduli:
+  - [Patient: Regole Modelli](../../Patient/docs/models.md)
+  - [Notify Namespace Rules](../../Notify/docs/NAMESPACE_RULES.md)
+
+## Collegamenti
+- [Regole Namespace Moduli - Root Docs](../../../docs/namespace-moduli.md)
+
+<<<<<<< HEAD
 <<<<<<< HEAD
 ---
 =======
@@ -69,16 +101,31 @@ Questo documento definisce le regole ufficiali per l'utilizzo dei namespace all'
 ---
 =======
 >>>>>>> a2645e2c (.)
+=======
+>>>>>>> 7ce328e (.)
+>>>>>>> 376bc0e6 (fix conflitti sync remote repo aurmich)
 ```php
 namespace Modules\NomeModulo\Providers;
 namespace Modules\NomeModulo\Http\Controllers;
 ```
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> 7dd92412 (.)
+=======
 >>>>>>> 7dd92412 (.)
 
 **Ultimo aggiornamento:** 2025-05-13
 
+<<<<<<< HEAD
+**Link bidirezionale:** Aggiornare anche la root docs e la docs dei moduli coinvolti.
+=======
+=======
+>>>>>>> 376bc0e6 (fix conflitti sync remote repo aurmich)
+
+**Ultimo aggiornamento:** 2025-05-13
+
+<<<<<<< HEAD
 <<<<<<< HEAD
 **Link bidirezionale:** Aggiornare anche la root docs e la docs dei moduli coinvolti.
 =======
@@ -96,6 +143,9 @@ namespace Modules\NomeModulo\Http\Controllers;
 **Link bidirezionale:** Aggiornare anche la root docs e la docs dei moduli coinvolti.
 =======
 >>>>>>> a2645e2c (.)
+=======
+>>>>>>> 7ce328e (.)
+>>>>>>> 376bc0e6 (fix conflitti sync remote repo aurmich)
 ```php
 namespace Modules\NomeModulo\app\Providers;
 namespace Modules\NomeModulo\app\Http\Controllers;
@@ -149,12 +199,18 @@ Se incontri errori come `name is empty on [Modules\NomeModulo\Providers\RouteSer
 2. Che la proprietà `$name` sia definita e valorizzata
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 376bc0e6 (fix conflitti sync remote repo aurmich)
 3. Che il `$moduleNamespace` punti alla posizione corretta dei controller 
 >>>>>>> 7dd92412 (.)
 =======
 3. Che il `$moduleNamespace` punti alla posizione corretta dei controller 
 >>>>>>> 7ce328e (.)
+<<<<<<< HEAD
 =======
 3. Che il `$moduleNamespace` punti alla posizione corretta dei controller 
 >>>>>>> 7dd92412 (.)
 >>>>>>> a2645e2c (.)
+=======
+>>>>>>> 376bc0e6 (fix conflitti sync remote repo aurmich)
