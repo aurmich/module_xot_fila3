@@ -61,13 +61,7 @@ public static function form(Form $form): Form
 }
 ```
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 376bc0e6 (fix conflitti sync remote repo aurmich)
 ### 3. Traduzioni e Label
-=======
 ### 3. Proprietà e Metodi da NON Definire
 
 #### ✅ DO - Omettere proprietà e metodi gestiti dalla classe base
@@ -121,13 +115,6 @@ class DoctorResource extends XotBaseResource
 ```
 
 ### 4. Traduzioni e Label
->>>>>>> 7ce328e (.)
-<<<<<<< HEAD
-=======
-### 3. Traduzioni e Label
->>>>>>> a2645e2c (.)
-=======
->>>>>>> 376bc0e6 (fix conflitti sync remote repo aurmich)
 
 #### ✅ DO - Utilizzare i file di traduzione
 
@@ -185,26 +172,11 @@ class SocioResource extends XotBaseResource
 {
     protected static ?string $model = Socio::class;
     
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 376bc0e6 (fix conflitti sync remote repo aurmich)
     protected static ?string $navigationIcon = 'heroicon-o-user';
     
     protected static ?int $navigationSort = 1;
-=======
     // NON definire $navigationIcon quando si estende XotBaseResource
     // NON definire $navigationSort quando si estende XotBaseResource
->>>>>>> 7ce328e (.)
-<<<<<<< HEAD
-=======
-    protected static ?string $navigationIcon = 'heroicon-o-user';
-    
-    protected static ?int $navigationSort = 1;
->>>>>>> a2645e2c (.)
-=======
->>>>>>> 376bc0e6 (fix conflitti sync remote repo aurmich)
     
     // Form Schema - CORRETTO ✅
     public static function getFormSchema(): array

@@ -1,12 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> a2645e2c (.)
-=======
->>>>>>> 376bc0e6 (fix conflitti sync remote repo aurmich)
 # Convenzioni di Nomenclatura in <nome progetto>
 
 Questo documento definisce le convenzioni ufficiali di nomenclatura da utilizzare in tutto il progetto <nome progetto>.
@@ -151,20 +142,6 @@ Descrizione dettagliata se necessaria
 ```
 
 Tipi: `feat`, `fix`, `docs`, `style`, `refactor`, `test`, `chore`
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 376bc0e6 (fix conflitti sync remote repo aurmich)
-=======
->>>>>>> 7ce328e (.)
-=======
->>>>>>> 995f7cae (.)
-<<<<<<< HEAD
-=======
->>>>>>> a2645e2c (.)
-=======
->>>>>>> 376bc0e6 (fix conflitti sync remote repo aurmich)
 # Convenzioni di Nomenclatura in Laravel Modules
 
 Questo documento definisce le convenzioni ufficiali di nomenclatura da utilizzare in tutto il progetto Laravel Modules.
@@ -217,25 +194,8 @@ Questo documento descrive le convenzioni di denominazione da seguire all'interno
 - Aggiornare questo documento se vengono introdotti nuovi schemi di denominazione o convenzioni.
 
 ## Collegamenti alla documentazione correlata
-- [Qualità del codice](./CODE_QUALITY.md)
-- [Tipi rigorosi PHP](./PHP-STRICT-TYPES.md)
+- [Qualità del codice](./code_quality.md)
+- [Tipi rigorosi PHP](./php-strict-types.md)
 - [Guida all'implementazione di PHPStan](./PHPSTAN-IMPLEMENTATION-GUIDE.md)
 - [Best practice per i provider di servizi](./SERVICE-PROVIDER-BEST-PRACTICES.md)
 - [Best practice per Filament](./FILAMENT-BEST-PRACTICES.md)
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 376bc0e6 (fix conflitti sync remote repo aurmich)
->>>>>>> 7dd92412 (.)
-=======
->>>>>>> 7ce328e (.)
-=======
->>>>>>> 995f7cae (.)
-<<<<<<< HEAD
-=======
->>>>>>> 7dd92412 (.)
->>>>>>> a2645e2c (.)
-=======
->>>>>>> 376bc0e6 (fix conflitti sync remote repo aurmich)

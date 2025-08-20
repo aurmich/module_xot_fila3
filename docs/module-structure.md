@@ -1,14 +1,8 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 376bc0e6 (fix conflitti sync remote repo aurmich)
 # Struttura dei Moduli in il progetto
 
 ## Panoramica
 Questo documento descrive la struttura standard dei moduli nel progetto il progetto.
 
-<<<<<<< HEAD
 ## Struttura Base
 ```
 ModuleName/
@@ -35,23 +29,10 @@ ModuleName/
 ├── routes/
 ├── tests/
 └── composer.json
-=======
-=======
-# Struttura dei Moduli in <nome progetto>
-=======
-# Struttura dei Moduli in il progetto
->>>>>>> a2645e2c (.)
 
 ## Panoramica
 Questo documento descrive la struttura standard dei moduli nel progetto il progetto.
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 7ce328e (.)
-=======
->>>>>>> 995f7cae (.)
-=======
 ## Struttura Base
 ```
 ModuleName/
@@ -78,13 +59,6 @@ ModuleName/
 ├── routes/
 ├── tests/
 └── composer.json
-=======
->>>>>>> a2645e2c (.)
-=======
->>>>>>> 7ce328e (.)
-=======
->>>>>>> 995f7cae (.)
->>>>>>> 376bc0e6 (fix conflitti sync remote repo aurmich)
 ---
 
 ## Gestione dati geografici statici: GeoJsonModel readonly (ispirato a Squire)
@@ -120,12 +94,6 @@ use Modules\Xot\Providers\XotBaseServiceProvider;
 class NomeModuloServiceProvider extends XotBaseServiceProvider {
     // Implementazione
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 7dd92412 (.)
-=======
->>>>>>> 7dd92412 (.)
 ```
 
 ## Collegamenti
@@ -250,7 +218,6 @@ Utilizzare il comando di analisi per verificare la conformità:
 ```bash
 php artisan xot:analyze-naming
 ```
-<<<<<<< HEAD
 
 Per ulteriori dettagli, consultare la [documentazione completa sulle convenzioni di naming](/docs/convenzioni-naming-campi.md).
 
@@ -508,10 +475,6 @@ Se trovi una directory con case errato:
 ## Collegamenti tra versioni di module_structure.md
 * [module_structure.md](../../../../docs/error_analysis/module_structure.md)
 
-=======
->>>>>>> 7dd92412 (.)
-=======
->>>>>>> 376bc0e6 (fix conflitti sync remote repo aurmich)
 ```
 
 ## Collegamenti
@@ -636,7 +599,6 @@ Utilizzare il comando di analisi per verificare la conformità:
 ```bash
 php artisan xot:analyze-naming
 ```
-<<<<<<< HEAD
 
 Per ulteriori dettagli, consultare la [documentazione completa sulle convenzioni di naming](/docs/convenzioni-naming-campi.md).
 
@@ -894,12 +856,6 @@ Se trovi una directory con case errato:
 ## Collegamenti tra versioni di module_structure.md
 * [module_structure.md](../../../../docs/error_analysis/module_structure.md)
 
-=======
->>>>>>> 7dd92412 (.)
-=======
-=======
->>>>>>> 7dd92412 (.)
->>>>>>> a2645e2c (.)
 ```
 
 ## Collegamenti
@@ -1010,7 +966,6 @@ protected $fillable = [
     'email',
 ];
 ```
-<<<<<<< HEAD
 
 #### Altri Campi Standard
 
@@ -1025,10 +980,6 @@ Utilizzare il comando di analisi per verificare la conformità:
 ```bash
 php artisan xot:analyze-naming
 ```
-<<<<<<< HEAD
->>>>>>> 7ce328e (.)
-=======
-<<<<<<< HEAD
 
 Per ulteriori dettagli, consultare la [documentazione completa sulle convenzioni di naming](/docs/convenzioni-naming-campi.md).
 
@@ -1286,9 +1237,3 @@ Se trovi una directory con case errato:
 ## Collegamenti tra versioni di module_structure.md
 * [module_structure.md](../../../../docs/error_analysis/module_structure.md)
 
-=======
->>>>>>> 7dd92412 (.)
->>>>>>> a2645e2c (.)
-=======
->>>>>>> 7ce328e (.)
->>>>>>> 376bc0e6 (fix conflitti sync remote repo aurmich)

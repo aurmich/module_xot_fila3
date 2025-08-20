@@ -1,13 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 376bc0e6 (fix conflitti sync remote repo aurmich)
 # Best Practices per Risorse Filament in Laraxot
-=======
 # Filament Best Practices - Laraxot PTVX
->>>>>>> 0057ece (.)
 
 ## ERRORE CRITICO IDENTIFICATO E RISOLTO
 
@@ -19,8 +11,6 @@
 - `ListValutatores` usava: `matr_valutatore`, `cognome_valutatore` (NON esistenti)
 - `ListCategoriaPropros` usava: `name`, `descr` (NON esistenti)
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 1. **SEMPRE** estendere `Modules\Xot\Filament\Resources\XotBaseResource`:
    ```php
    // CORRETTO ✅
@@ -29,12 +19,6 @@
    // ERRATO ❌
    class ClienteResource extends Resource
    ```
-=======
-=======
-# Filament Best Practices (Moduli Riutilizzabili)
-=======
-# Best Practices per Risorse Filament in Laraxot
->>>>>>> a2645e2c (.)
 
 Questo documento riassume le migliori pratiche per la creazione e gestione delle risorse Filament all'interno dell'ecosistema Laraxot. Seguire queste linee guida garantirà compatibilità e coerenza in tutto il progetto.
 
@@ -42,11 +26,6 @@ Questo documento riassume le migliori pratiche per la creazione e gestione delle
 
 ### Risorse
 
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 7ce328e (.)
-=======
-<<<<<<< HEAD
 1. **SEMPRE** estendere `Modules\Xot\Filament\Resources\XotBaseResource`:
    ```php
    // CORRETTO ✅
@@ -55,11 +34,6 @@ Questo documento riassume le migliori pratiche per la creazione e gestione delle
    // ERRATO ❌
    class ClienteResource extends Resource
    ```
-=======
->>>>>>> a2645e2c (.)
-=======
->>>>>>> 7ce328e (.)
->>>>>>> 376bc0e6 (fix conflitti sync remote repo aurmich)
 class UserResource extends XotBaseResource
 {
     // ...
@@ -559,12 +533,6 @@ public static function table(Table $table): Table
         ->paginated([10, 25, 50, 100]);
 }
 ```
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 7dd92412 (.)
-=======
->>>>>>> 7dd92412 (.)
 
 2. **SEMPRE** implementare `getFormSchema()`:
    ```php
@@ -577,7 +545,6 @@ public static function table(Table $table): Table
    }
    ```
 
-<<<<<<< HEAD
 3. **MAI** definire `navigationIcon` se si estende `XotBaseResource`:
    ```php
    // ❌ ERRATO
@@ -592,9 +559,6 @@ public static function table(Table $table): Table
        // Navigation icon gestita automaticamente da XotBaseResource
    }
    ```
-=======
-=======
->>>>>>> 376bc0e6 (fix conflitti sync remote repo aurmich)
 
 2. **SEMPRE** implementare `getFormSchema()`:
    ```php
@@ -607,8 +571,6 @@ public static function table(Table $table): Table
    }
    ```
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 3. **MAI** definire `navigationIcon` se si estende `XotBaseResource`:
    ```php
    // ❌ ERRATO
@@ -623,11 +585,6 @@ public static function table(Table $table): Table
        // Navigation icon gestita automaticamente da XotBaseResource
    }
    ```
-=======
-=======
-=======
->>>>>>> 7dd92412 (.)
->>>>>>> a2645e2c (.)
 
 2. **SEMPRE** implementare `getFormSchema()`:
    ```php
@@ -640,10 +597,6 @@ public static function table(Table $table): Table
    }
    ```
 
-<<<<<<< HEAD
->>>>>>> 7ce328e (.)
-=======
-<<<<<<< HEAD
 3. **MAI** definire `navigationIcon` se si estende `XotBaseResource`:
    ```php
    // ❌ ERRATO
@@ -658,11 +611,6 @@ public static function table(Table $table): Table
        // Navigation icon gestita automaticamente da XotBaseResource
    }
    ```
-=======
->>>>>>> a2645e2c (.)
-=======
->>>>>>> 7ce328e (.)
->>>>>>> 376bc0e6 (fix conflitti sync remote repo aurmich)
 ## Collegamenti
 - [Filament Docs](https://filamentphp.com/docs)
 - [Best practices moduli riutilizzabili](../module-documentation-neutrality.md)
@@ -670,12 +618,6 @@ public static function table(Table $table): Table
 
 
 ### Problema: Form non visualizzato correttamente
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 7dd92412 (.)
-=======
->>>>>>> 7dd92412 (.)
 
 4. **MAI** usare `->label()` nei form components:
    ```php
@@ -708,8 +650,6 @@ public static function table(Table $table): Table
 ### Metodo Obbligatorio: getTableColumns()
 
 **⚠️ IMPORTANTE**: Tutte le classi che estendono `XotBaseListRecords` DEVONO implementare il metodo `getTableColumns()`:
-=======
->>>>>>> 376bc0e6 (fix conflitti sync remote repo aurmich)
 
 4. **MAI** usare `->label()` nei form components:
    ```php
@@ -742,10 +682,6 @@ public static function table(Table $table): Table
 ### Metodo Obbligatorio: getTableColumns()
 
 **⚠️ IMPORTANTE**: Tutte le classi che estendono `XotBaseListRecords` DEVONO implementare il metodo `getTableColumns()`:
-=======
-=======
->>>>>>> 7dd92412 (.)
->>>>>>> a2645e2c (.)
 
 4. **MAI** usare `->label()` nei form components:
    ```php
@@ -777,18 +713,9 @@ public static function table(Table $table): Table
 
 ### Metodo Obbligatorio: getTableColumns()
 
-<<<<<<< HEAD
 ## Esempi Pratici
 
 ### Risorsa Base
->>>>>>> 7ce328e (.)
-<<<<<<< HEAD
-=======
-**⚠️ IMPORTANTE**: Tutte le classi che estendono `XotBaseListRecords` DEVONO implementare il metodo `getTableColumns()`:
->>>>>>> a2645e2c (.)
-=======
->>>>>>> 376bc0e6 (fix conflitti sync remote repo aurmich)
-=======
 ### ✅ Soluzione Implementata
 1. **Verifica Sistematica**: Controllo di ogni modello e migrazione
 2. **Correzione Risorse**: Aggiornamento di tutte le risorse Filament
@@ -796,30 +723,12 @@ public static function table(Table $table): Table
 4. **Regole Aggiornate**: Nuove regole per prevenire il problema
 
 ## Processo di Verifica Campi Modello
->>>>>>> 0057ece (.)
 
 ### 1. Leggere il Modello
 ```php
-<<<<<<< HEAD
 <?php
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 declare(strict_types=1);
-=======
-declare(strict_types=1);
-
-namespace Modules\SaluteMo\Filament\Resources\ReportResource\Pages;
-
-use Modules\SaluteMo\Filament\Resources\ReportResource;
-use Modules\Xot\Filament\Resources\Pages\XotBaseListRecords;
-use Filament\Actions;
-use Filament\Tables;
-=======
-// Controllare l'array $fillable
-protected $fillable = ['id', 'name', 'email'];
->>>>>>> 0057ece (.)
 
 // Controllare le proprietà PHPDoc
 /**
@@ -921,7 +830,6 @@ public static function getFormSchema(): array
 // AssenzeResource.php
 public static function getFormSchema(): array
 {
-<<<<<<< HEAD
     protected static ?string $model = Report::class;
 
     /**
@@ -950,9 +858,6 @@ public static function getFormSchema(): array
             'create' => Pages\CreateReport::route('/create'),
             'edit' => Pages\EditReport::route('/{record}/edit'),
         ];
-=======
-namespace Modules\Brain\Filament\Resources;
->>>>>>> 376bc0e6 (fix conflitti sync remote repo aurmich)
 
 namespace Modules\SaluteMo\Filament\Resources\ReportResource\Pages;
 
@@ -1169,11 +1074,8 @@ class ReportResource extends XotBaseResource
             'create' => Pages\CreateReport::route('/create'),
             'edit' => Pages\EditReport::route('/{record}/edit'),
         ];
-=======
 namespace Modules\Brain\Filament\Resources;
-=======
 declare(strict_types=1);
->>>>>>> a2645e2c (.)
 
 namespace Modules\SaluteMo\Filament\Resources\ReportResource\Pages;
 
@@ -1219,51 +1121,16 @@ class ListReports extends XotBaseListRecords
 
     protected function getHeaderActions(): array
     {
-<<<<<<< HEAD
         return $table
             ->columns([
                 TextColumn::make('nome'),
                 TextColumn::make('cognome'),
             ]);
->>>>>>> 7ce328e (.)
-<<<<<<< HEAD
-=======
-        return [
-            Actions\CreateAction::make(), // ✅ NO ->label() hardcoded
-        ];
->>>>>>> a2645e2c (.)
-=======
->>>>>>> 376bc0e6 (fix conflitti sync remote repo aurmich)
     }
 }
 ```
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 ## Checklist di Conformità
-=======
-## Checklist di Conformità
-=======
-    return [
-        TextInput::make('id')->disabled(),
-        TextInput::make('tipo')->numeric(),
-        TextInput::make('codice')->numeric(),
-        TextInput::make('descr')->maxLength(250),
-        TextInput::make('anno')->numeric(),
-        TextInput::make('umi')->numeric(),
-        TextInput::make('dur')->numeric(),
-    ];
-}
-```
-
-## Documentazione Correlata
-- [Regole Laraxot](../laravel/Modules/Xot/docs/rules/laraxot-rules.md)
-- [Verifica Campi Modello](../laravel/Modules/Xot/docs/memories/model-fields-validation.md)
-- [Piano Verifica Progressioni](../laravel/Modules/Progressioni/docs/model-fields-verification-plan.md)
-- [Best Practice Filament](../laravel/Modules/Xot/docs/filament_best_practices.md)
->>>>>>> 0057ece (.)
 
 ## Note Importanti
 - **CRITICO**: Verificare sempre la corrispondenza tra modello, migrazione e risorsa Filament
@@ -1271,7 +1138,6 @@ class ListReports extends XotBaseListRecords
 - **PREVENIRE**: Implementare controlli automatici per evitare regressioni
 - **TESTARE**: Verificare che le risorse funzionino correttamente dopo le correzioni
 
-<<<<<<< HEAD
 ### ✅ Estensione Base
 - [ ] Estende `XotBaseResource` invece di `Resource`
 - [ ] Estende `XotBaseListRecords` invece di `ListRecords`
@@ -1284,7 +1150,6 @@ class ListReports extends XotBaseListRecords
 - [ ] NESSUN `->helperText()` hardcoded
 - [ ] Tutte le traduzioni nei file di lingua del modulo
 
-<<<<<<< HEAD
 ### ✅ Campi Reali
 - [ ] Tutti i campi della tabella esistono nel modello
 - [ ] Tutti i campi del form esistono nel modello
@@ -1322,9 +1187,6 @@ class ListReports extends XotBaseListRecords
 - `ListAppointments.php` - Estende `XotBaseListRecords`
 - `CreateAppointment.php` - Estende `XotBaseCreateRecord`
 - `EditAppointment.php` - Estende `XotBaseEditRecord`
-=======
->>>>>>> 376bc0e6 (fix conflitti sync remote repo aurmich)
-=======
 ### Risorsa Avanzata
 
 Consulta l'esempio completo all'inizio di questo documento per una implementazione avanzata.
@@ -1334,9 +1196,7 @@ Consulta l'esempio completo all'inizio di questo documento per una implementazio
 - [Documentazione Filament](https://filamentphp.com/docs)
 - [Documentazione XotBaseResource](/var/www/html/exa/base_orisbroker_fila3/laravel/Modules/Xot/docs/resource.md)
 - [Best Practices Laraxot](/var/www/html/exa/base_orisbroker_fila3/laravel/Modules/Xot/docs/best-practices.md)
->>>>>>> 1da726f (.)
 
-<<<<<<< HEAD
 Prima di considerare completa una risorsa Filament, verificare:
 
 ### ✅ Estensione Base
@@ -1351,7 +1211,6 @@ Prima di considerare completa una risorsa Filament, verificare:
 - [ ] NESSUN `->helperText()` hardcoded
 - [ ] Tutte le traduzioni nei file di lingua del modulo
 
-<<<<<<< HEAD
 ### ✅ Campi Reali
 - [ ] Tutti i campi della tabella esistono nel modello
 - [ ] Tutti i campi del form esistono nel modello
@@ -1389,12 +1248,6 @@ Prima di considerare completa una risorsa Filament, verificare:
 - `ListAppointments.php` - Estende `XotBaseListRecords`
 - `CreateAppointment.php` - Estende `XotBaseCreateRecord`
 - `EditAppointment.php` - Estende `XotBaseEditRecord`
-=======
-=======
-### Risorsa Avanzata
-=======
-### Regole per getTableColumns()
->>>>>>> a2645e2c (.)
 
 1. **Visibilità**: SEMPRE `public`
 2. **Tipo di ritorno**: SEMPRE `array<string, \Filament\Tables\Columns\Column>`
@@ -1435,9 +1288,6 @@ public function getTableColumns(): array
 }
 ```
 
-<<<<<<< HEAD
->>>>>>> 7ce328e (.)
-=======
 ## Regole per XotBaseEditRecord
 
 ### Implementazione Corretta
@@ -1581,7 +1431,6 @@ Prima di considerare completa una risorsa Filament, verificare:
 - [ ] NESSUN `->helperText()` hardcoded
 - [ ] Tutte le traduzioni nei file di lingua del modulo
 
-<<<<<<< HEAD
 ### ✅ Campi Reali
 - [ ] Tutti i campi della tabella esistono nel modello
 - [ ] Tutti i campi del form esistono nel modello
@@ -1619,11 +1468,6 @@ Prima di considerare completa una risorsa Filament, verificare:
 - `ListAppointments.php` - Estende `XotBaseListRecords`
 - `CreateAppointment.php` - Estende `XotBaseCreateRecord`
 - `EditAppointment.php` - Estende `XotBaseEditRecord`
-=======
->>>>>>> a2645e2c (.)
-=======
->>>>>>> 7ce328e (.)
->>>>>>> 376bc0e6 (fix conflitti sync remote repo aurmich)
 ## Regole per Widget Filament: Path View e Localizzazione
 
 - Tutti i widget Filament devono avere la view in `modulo::filament.widgets.nome-widget`.
@@ -1694,16 +1538,6 @@ Appointment::where('doctor_id', $doctorId)
 - Un solo punto di verità: nessuna duplicazione, nessun lock-in
 - DRY, KISS, serenità del codice
 - Refactoring sicuro, massima estendibilità
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> a2645e2c (.)
-=======
->>>>>>> 376bc0e6 (fix conflitti sync remote repo aurmich)
->>>>>>> 7dd92412 (.)
 
 *Ultimo aggiornamento: gennaio 2025 - Correzioni per campi reali e rimozione label hardcoded*
 1. **ESATTA SEQUENZA** di campi da mantenere:
@@ -1713,24 +1547,7 @@ Appointment::where('doctor_id', $doctorId)
    - **Indirizzo e contatti**: via, cap, regione_id, provincia_id, etc.
    - **Dati bancari**: iban, intestatario, banca, filiale
    - **Modalità di ricezione**: Lista di modalità selezionabili
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 376bc0e6 (fix conflitti sync remote repo aurmich)
-=======
 
->>>>>>> 7ce328e (.)
-=======
 
->>>>>>> 995f7cae (.)
-<<<<<<< HEAD
-=======
->>>>>>> a2645e2c (.)
-=======
 
->>>>>>> 1da726f (.)
-=======
->>>>>>> 376bc0e6 (fix conflitti sync remote repo aurmich)
-=======
 *Ultimo aggiornamento: Giugno 2025* 
->>>>>>> 0057ece (.)

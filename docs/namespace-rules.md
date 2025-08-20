@@ -1,11 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> a2645e2c (.)
-=======
->>>>>>> 376bc0e6 (fix conflitti sync remote repo aurmich)
 # Regole Namespace PSR-4 per Tutti i Moduli (Regola Globale)
 
 ## Regola Fondamentale
@@ -15,14 +7,6 @@
   namespace Modules\<NomeModulo>\<Directory>;
   ```
   Anche se la classe si trova in `app/`, il namespace NON deve includere `App`.
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-# Regole per i Namespace nei Moduli Laraxot
-
-Questo documento definisce le regole ufficiali per l'utilizzo dei namespace all'interno dei moduli Laraxot.
->>>>>>> 7dd92412 (.)
 
 ## Regola PSR-4
 - Il namespace riflette la struttura delle directory a partire da `Modules/<NomeModulo>/app/`, senza includere `app`.
@@ -40,15 +24,10 @@ Questo documento definisce le regole ufficiali per l'utilizzo dei namespace all'
 ## Collegamenti
 - [Regole Namespace Moduli - Root Docs](../../../docs/namespace-moduli.md)
 
-<<<<<<< HEAD
 ---
-=======
-=======
->>>>>>> 376bc0e6 (fix conflitti sync remote repo aurmich)
 # Regole per i Namespace nei Moduli Laraxot
 
 Questo documento definisce le regole ufficiali per l'utilizzo dei namespace all'interno dei moduli Laraxot.
->>>>>>> 7dd92412 (.)
 
 ## Regola PSR-4
 - Il namespace riflette la struttura delle directory a partire da `Modules/<NomeModulo>/app/`, senza includere `app`.
@@ -66,17 +45,10 @@ Questo documento definisce le regole ufficiali per l'utilizzo dei namespace all'
 ## Collegamenti
 - [Regole Namespace Moduli - Root Docs](../../../docs/namespace-moduli.md)
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 ---
-=======
-=======
-=======
->>>>>>> a2645e2c (.)
 # Regole per i Namespace nei Moduli Laraxot
 
 Questo documento definisce le regole ufficiali per l'utilizzo dei namespace all'interno dei moduli Laraxot.
->>>>>>> 7dd92412 (.)
 
 ## Regola PSR-4
 - Il namespace riflette la struttura delle directory a partire da `Modules/<NomeModulo>/app/`, senza includere `app`.
@@ -94,58 +66,23 @@ Questo documento definisce le regole ufficiali per l'utilizzo dei namespace all'
 ## Collegamenti
 - [Regole Namespace Moduli - Root Docs](../../../docs/namespace-moduli.md)
 
-<<<<<<< HEAD
->>>>>>> 7ce328e (.)
-=======
-<<<<<<< HEAD
 ---
-=======
->>>>>>> a2645e2c (.)
-=======
->>>>>>> 7ce328e (.)
->>>>>>> 376bc0e6 (fix conflitti sync remote repo aurmich)
 ```php
 namespace Modules\NomeModulo\Providers;
 namespace Modules\NomeModulo\Http\Controllers;
 ```
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 7dd92412 (.)
-=======
->>>>>>> 7dd92412 (.)
 
 **Ultimo aggiornamento:** 2025-05-13
 
-<<<<<<< HEAD
 **Link bidirezionale:** Aggiornare anche la root docs e la docs dei moduli coinvolti.
-=======
-=======
->>>>>>> 376bc0e6 (fix conflitti sync remote repo aurmich)
 
 **Ultimo aggiornamento:** 2025-05-13
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 **Link bidirezionale:** Aggiornare anche la root docs e la docs dei moduli coinvolti.
-=======
-=======
-=======
->>>>>>> 7dd92412 (.)
->>>>>>> a2645e2c (.)
 
 **Ultimo aggiornamento:** 2025-05-13
 
-<<<<<<< HEAD
->>>>>>> 7ce328e (.)
-=======
-<<<<<<< HEAD
 **Link bidirezionale:** Aggiornare anche la root docs e la docs dei moduli coinvolti.
-=======
->>>>>>> a2645e2c (.)
-=======
->>>>>>> 7ce328e (.)
->>>>>>> 376bc0e6 (fix conflitti sync remote repo aurmich)
 ```php
 namespace Modules\NomeModulo\app\Providers;
 namespace Modules\NomeModulo\app\Http\Controllers;
@@ -197,20 +134,5 @@ Se incontri errori come `name is empty on [Modules\NomeModulo\Providers\RouteSer
 
 1. Che il namespace sia corretto (senza `app`)
 2. Che la proprietà `$name` sia definita e valorizzata
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 376bc0e6 (fix conflitti sync remote repo aurmich)
 3. Che il `$moduleNamespace` punti alla posizione corretta dei controller 
->>>>>>> 7dd92412 (.)
-=======
 3. Che il `$moduleNamespace` punti alla posizione corretta dei controller 
->>>>>>> 7ce328e (.)
-<<<<<<< HEAD
-=======
-3. Che il `$moduleNamespace` punti alla posizione corretta dei controller 
->>>>>>> 7dd92412 (.)
->>>>>>> a2645e2c (.)
-=======
->>>>>>> 376bc0e6 (fix conflitti sync remote repo aurmich)

@@ -1,13 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> a2645e2c (.)
-=======
->>>>>>> 376bc0e6 (fix conflitti sync remote repo aurmich)
 # Code Quality Guidelines for Laravel Modules
 
 ## Overview
@@ -87,22 +77,6 @@ This document outlines the best practices for maintaining high code quality with
 - [Naming Conventions](./NAMING-CONVENTIONS.md)
 - [Service Provider Best Practices](./SERVICE-PROVIDER-BEST-PRACTICES.md)
 - [Filament Best Practices](./FILAMENT-BEST-PRACTICES.md)
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 376bc0e6 (fix conflitti sync remote repo aurmich)
-=======
->>>>>>> 7ce328e (.)
-=======
->>>>>>> 995f7cae (.)
-<<<<<<< HEAD
-=======
->>>>>>> a2645e2c (.)
-=======
->>>>>>> 1da726f (.)
-=======
->>>>>>> 376bc0e6 (fix conflitti sync remote repo aurmich)
 # Laraxot Code Quality Standards
 
 ## Overview
@@ -387,23 +361,3 @@ unset($translations['existing_key']); // MAI!
 ---
 
 *"Nel codice Laraxot, ogni riga è un verso della sinfonia dell'architettura perfetta."*
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 376bc0e6 (fix conflitti sync remote repo aurmich)
->>>>>>> 7dd92412 (.)
-=======
->>>>>>> 7ce328e (.)
-=======
->>>>>>> 995f7cae (.)
-<<<<<<< HEAD
-=======
->>>>>>> 7dd92412 (.)
->>>>>>> a2645e2c (.)
-=======
->>>>>>> 1da726f (.)
-=======
->>>>>>> 376bc0e6 (fix conflitti sync remote repo aurmich)

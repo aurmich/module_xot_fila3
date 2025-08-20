@@ -1,16 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> a2645e2c (.)
-=======
->>>>>>> 376bc0e6 (fix conflitti sync remote repo aurmich)
 # Best Practices per Risorse Filament in Laraxot
-=======
 # Filament Best Practices - Laraxot PTVX
->>>>>>> 0057ece (.)
 
 ## ERRORE CRITICO IDENTIFICATO E RISOLTO
 
@@ -153,7 +142,6 @@ public static function getFormSchema(): array
 - [Piano Verifica Progressioni](../laravel/Modules/Progressioni/docs/model-fields-verification-plan.md)
 - [Best Practice Filament](../laravel/Modules/Xot/docs/filament_best_practices.md)
 
-<<<<<<< HEAD
 2. **SEMPRE** usare il campo corretto basato sul database:
    ```php
    // Per modelli Brain (CORRETTO ✅)
@@ -205,17 +193,6 @@ public static function getFormSchema(): array
 * [filament_best_practices.md](../filament_best_practices.md)
 * [filament_best_practices.md](../../../User/docs/filament_best_practices.md)
 * [filament_best_practices.md](../../../Job/docs/filament_best_practices.md)
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 7ce328e (.)
-=======
->>>>>>> a2645e2c (.)
-=======
-=======
->>>>>>> 7ce328e (.)
->>>>>>> 376bc0e6 (fix conflitti sync remote repo aurmich)
 # Filament Best Practices
 
 ## Visibilità dei Metodi
@@ -275,27 +252,12 @@ public function getTableActions(): Collection
 // ✅ CORRETTO: Tipo di ritorno compatibile
 public function getTableActions(): array
 ```
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 7dd92412 (.)
-=======
->>>>>>> 7ce328e (.)
-=======
->>>>>>> 7dd92412 (.)
->>>>>>> a2645e2c (.)
-=======
->>>>>>> 7dd92412 (.)
-=======
->>>>>>> 7ce328e (.)
->>>>>>> 376bc0e6 (fix conflitti sync remote repo aurmich)
 
 ## Collegamenti
 - [Documentazione Filament Ufficiale](https://filamentphp.com/)
 - [Principio di Sostituzione di Liskov](https://it.wikipedia.org/wiki/Principio_di_sostituzione_di_Liskov)
 - [Best Practices PHP](../php-strict-types.md) 
 - [Best Practices PHP](../PHP-STRICT-TYPES.md) 
-=======
 ## Note Importanti
 - **CRITICO**: Verificare sempre la corrispondenza tra modello, migrazione e risorsa Filament
 - **DOCUMENTARE**: Ogni verifica deve essere documentata nel piano del modulo
@@ -303,4 +265,3 @@ public function getTableActions(): array
 - **TESTARE**: Verificare che le risorse funzionino correttamente dopo le correzioni
 
 *Ultimo aggiornamento: Giugno 2025* 
->>>>>>> 0057ece (.)

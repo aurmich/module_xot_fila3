@@ -4,30 +4,18 @@ declare(strict_types=1);
 
 namespace Modules\Xot\Providers;
 
-<<<<<<< HEAD
 use BladeUI\Icons\Factory as BladeIconsFactory;
 use Illuminate\Support\Facades\Blade;
 use Illuminate\Support\Facades\Config;
+use Illuminate\Support\Facades\File;
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Support\Str;
 use Modules\Xot\Actions\Blade\RegisterBladeComponentsAction;
 use Modules\Xot\Actions\Livewire\RegisterLivewireComponentsAction;
 use Modules\Xot\Actions\Module\GetModulePathByGeneratorAction;
-=======
-use function Safe\realpath;
-use Illuminate\Support\Str;
-use Webmozart\Assert\Assert;
-use Illuminate\Support\Facades\File;
-use Illuminate\Support\Facades\Blade;
-use Illuminate\Support\Facades\Config;
-use Illuminate\Support\ServiceProvider;
->>>>>>> 0057ece (.)
 use Nwidart\Modules\Traits\PathNamespace;
 use Illuminate\Contracts\Container\Container;
-use BladeUI\Icons\Factory as BladeIconsFactory;
-use Modules\Xot\Actions\Blade\RegisterBladeComponentsAction;
-use Modules\Xot\Actions\Module\GetModulePathByGeneratorAction;
-use Modules\Xot\Actions\Livewire\RegisterLivewireComponentsAction;
+use Webmozart\Assert\Assert;
 
 /**
  * Class XotBaseServiceProvider.

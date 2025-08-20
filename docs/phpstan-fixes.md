@@ -1,73 +1,28 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 # Correzioni PHPStan Livello 7 - Modulo Xot
-=======
-# Correzioni PHPStan Livello 7 - Modulo Xot
-=======
-# Correzioni PHPStan Livello 7 - Modulo User
->>>>>>> 0057ece (.)
 
 Questo documento traccia gli errori PHPStan di livello 7 identificati nel modulo User e le relative soluzioni implementate.
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 ## Errori Identificati
 
-<<<<<<< HEAD
 ### 1. Errore in Helpers/Helper.php
-=======
-=======
->>>>>>> 376bc0e6 (fix conflitti sync remote repo aurmich)
 
 Questo documento traccia gli errori PHPStan di livello 7 identificati nel modulo Xot e le relative soluzioni implementate.
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 ## Errori Identificati
 
 ### 1. Errore in Helpers/Helper.php
-=======
-=======
-=======
-# Correzioni PHPStan Livello 7 - Modulo Xot
->>>>>>> a2645e2c (.)
 
 Questo documento traccia gli errori PHPStan di livello 7 identificati nel modulo Xot e le relative soluzioni implementate.
 
-<<<<<<< HEAD
->>>>>>> 7ce328e (.)
-=======
->>>>>>> 995f7cae (.)
-=======
-<<<<<<< HEAD
 ## Errori Identificati
 
 ### 1. Errore in Helpers/Helper.php
-=======
->>>>>>> a2645e2c (.)
-=======
->>>>>>> 1da726f (.)
-=======
->>>>>>> 7ce328e (.)
-=======
->>>>>>> 995f7cae (.)
->>>>>>> 376bc0e6 (fix conflitti sync remote repo aurmich)
 
 5693302 (.)
 
 b6f667c (.)
 
 # Correzioni PHPStan nel Modulo Xot
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 7dd92412 (.)
-=======
->>>>>>> 7dd92412 (.)
 
 ```
 Line 406: Call to function is_array() with array{0?: string, 1?: 'container'|'item', 2?: numeric-string} will always evaluate to true.
@@ -141,16 +96,12 @@ Line 87: Function json_encode is unsafe to use. It can return FALSE instead of t
 Line 87: Parameter #2 $contents of static method Illuminate\Support\Facades\File::put() expects string, string|false given.
 ```
 
-<<<<<<< HEAD
 ### 12. Errori in Console/Commands/GenerateDbDocumentationCommand.php
 
 ```
 Line 40: Function json_decode is unsafe to use. It can return FALSE instead of throwing an exception.
 Line 239: Function json_encode is unsafe to use. It can return FALSE instead of throwing an exception.
 ```
-=======
-=======
->>>>>>> 376bc0e6 (fix conflitti sync remote repo aurmich)
 
 ```
 Line 406: Call to function is_array() with array{0?: string, 1?: 'container'|'item', 2?: numeric-string} will always evaluate to true.
@@ -224,19 +175,12 @@ Line 87: Function json_encode is unsafe to use. It can return FALSE instead of t
 Line 87: Parameter #2 $contents of static method Illuminate\Support\Facades\File::put() expects string, string|false given.
 ```
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 ### 12. Errori in Console/Commands/GenerateDbDocumentationCommand.php
 
 ```
 Line 40: Function json_decode is unsafe to use. It can return FALSE instead of throwing an exception.
 Line 239: Function json_encode is unsafe to use. It can return FALSE instead of throwing an exception.
 ```
-=======
-=======
-=======
->>>>>>> 7dd92412 (.)
->>>>>>> a2645e2c (.)
 
 ```
 Line 406: Call to function is_array() with array{0?: string, 1?: 'container'|'item', 2?: numeric-string} will always evaluate to true.
@@ -310,21 +254,12 @@ Line 87: Function json_encode is unsafe to use. It can return FALSE instead of t
 Line 87: Parameter #2 $contents of static method Illuminate\Support\Facades\File::put() expects string, string|false given.
 ```
 
-<<<<<<< HEAD
->>>>>>> 7ce328e (.)
-=======
-<<<<<<< HEAD
 ### 12. Errori in Console/Commands/GenerateDbDocumentationCommand.php
 
 ```
 Line 40: Function json_decode is unsafe to use. It can return FALSE instead of throwing an exception.
 Line 239: Function json_encode is unsafe to use. It can return FALSE instead of throwing an exception.
 ```
-=======
->>>>>>> a2645e2c (.)
-=======
->>>>>>> 7ce328e (.)
->>>>>>> 376bc0e6 (fix conflitti sync remote repo aurmich)
 ### 1. Gestione Tipi
 ```php
 /**
@@ -345,12 +280,6 @@ aurmich/dev
 b6f667c (.)
 
 # Risoluzione Problemi PHPStan nel Modulo Xot
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 7dd92412 (.)
-=======
->>>>>>> 7dd92412 (.)
 
 ### 13. Errori in Console/Commands/GenerateFilamentResources.php
 
@@ -443,7 +372,6 @@ Line 33: Static property Modules\Xot\Filament\Widgets\XotBaseWidget::$view (view
 
 ```
 Line 146: Offset 1 on array{list<string>, list<string>} in isset() always exists and is not nullable.
-=======
 ### 1. Errori in Profile.php
 
 ```
@@ -452,29 +380,23 @@ Line 49: PHPDoc tag @method for method Modules\User\Models\Profile::role() retur
 Line 49: PHPDoc tag @method for method Modules\User\Models\Profile::withExtraAttributes() return type contains unknown class Modules\User\Models\Builder.
 Line 49: PHPDoc tag @method for method Modules\User\Models\Profile::withoutPermission() return type contains unknown class Modules\User\Models\Builder.
 Line 49: PHPDoc tag @method for method Modules\User\Models\Profile::withoutRole() return type contains unknown class Modules\User\Models\Builder.
->>>>>>> 0057ece (.)
 ```
 
 ## Soluzioni Implementate
 
 ### 1. Correzione in Profile.php
 
-<<<<<<< HEAD
 Il problema è che PHPStan rileva che la chiamata a `is_array($matches)` sarà sempre vera perché `$matches` è già tipizzato come array. Abbiamo modificato il controllo per verificare se l'array non è vuoto invece di verificare se è un array:
 
 ```php
 $pattern = '/(container|item)(\d+)/';
 preg_match($pattern, $k, $matches);
 
-<<<<<<< HEAD
 if (!empty($matches) && isset($matches[1]) && isset($matches[2])) {
     $sk = $matches[1];
     $sv = $matches[2];
     // @phpstan-ignore offsetAccess.nonOffsetAccessible
     ${$sk}[$sv] = $v;
-=======
-=======
->>>>>>> 376bc0e6 (fix conflitti sync remote repo aurmich)
 
 ### 13. Errori in Console/Commands/GenerateFilamentResources.php
 
@@ -579,18 +501,11 @@ Il problema è che PHPStan rileva che la chiamata a `is_array($matches)` sarà s
 $pattern = '/(container|item)(\d+)/';
 preg_match($pattern, $k, $matches);
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 if (!empty($matches) && isset($matches[1]) && isset($matches[2])) {
     $sk = $matches[1];
     $sv = $matches[2];
     // @phpstan-ignore offsetAccess.nonOffsetAccessible
     ${$sk}[$sv] = $v;
-=======
-=======
-=======
->>>>>>> 7dd92412 (.)
->>>>>>> a2645e2c (.)
 
 ### 13. Errori in Console/Commands/GenerateFilamentResources.php
 
@@ -695,20 +610,11 @@ Il problema è che PHPStan rileva che la chiamata a `is_array($matches)` sarà s
 $pattern = '/(container|item)(\d+)/';
 preg_match($pattern, $k, $matches);
 
-<<<<<<< HEAD
->>>>>>> 7ce328e (.)
-=======
-<<<<<<< HEAD
 if (!empty($matches) && isset($matches[1]) && isset($matches[2])) {
     $sk = $matches[1];
     $sv = $matches[2];
     // @phpstan-ignore offsetAccess.nonOffsetAccessible
     ${$sk}[$sv] = $v;
-=======
->>>>>>> a2645e2c (.)
-=======
->>>>>>> 7ce328e (.)
->>>>>>> 376bc0e6 (fix conflitti sync remote repo aurmich)
 ### Versione Incoming
 
 
@@ -721,12 +627,6 @@ aurmich/dev
 b6f667c (.)
 
     // ...
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 7dd92412 (.)
-=======
->>>>>>> 7dd92412 (.)
 }
 ```
 
@@ -734,11 +634,7 @@ Questo controllo è più appropriato perché verifica che l'array `$matches` con
 
 ### 2. Correzione in Actions/Filament/AutoLabelAction.php
 
-<<<<<<< HEAD
 Il problema è che il codice chiamava il metodo `getName()` sui componenti Filament, ma non tutti i componenti hanno questo metodo. La soluzione è stata modificare il metodo `getComponentName()` per utilizzare un approccio più robusto:
-=======
-=======
->>>>>>> 376bc0e6 (fix conflitti sync remote repo aurmich)
 }
 ```
 
@@ -746,15 +642,7 @@ Questo controllo è più appropriato perché verifica che l'array `$matches` con
 
 ### 2. Correzione in Actions/Filament/AutoLabelAction.php
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 Il problema è che il codice chiamava il metodo `getName()` sui componenti Filament, ma non tutti i componenti hanno questo metodo. La soluzione è stata modificare il metodo `getComponentName()` per utilizzare un approccio più robusto:
-=======
-=======
-=======
->>>>>>> 7dd92412 (.)
->>>>>>> a2645e2c (.)
 }
 ```
 
@@ -762,22 +650,7 @@ Questo controllo è più appropriato perché verifica che l'array `$matches` con
 
 ### 2. Correzione in Actions/Filament/AutoLabelAction.php
 
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 7ce328e (.)
-=======
->>>>>>> 995f7cae (.)
-=======
 Il problema è che il codice chiamava il metodo `getName()` sui componenti Filament, ma non tutti i componenti hanno questo metodo. La soluzione è stata modificare il metodo `getComponentName()` per utilizzare un approccio più robusto:
-=======
->>>>>>> a2645e2c (.)
-=======
->>>>>>> 1da726f (.)
-=======
->>>>>>> 7ce328e (.)
-=======
->>>>>>> 995f7cae (.)
->>>>>>> 376bc0e6 (fix conflitti sync remote repo aurmich)
 
 5693302 (.)
 
@@ -809,53 +682,27 @@ b6f667c (.)
 1. Specificare i tipi di parametro e di ritorno in modo esplicito
 2. Utilizzare interfacce per i servizi iniettati
 3. Aggiungere annotazioni PHPDoc quando necessario
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 7dd92412 (.)
-=======
->>>>>>> 7dd92412 (.)
 
 ```php
 private function getComponentName(Field|Component $component): string
 {
-<<<<<<< HEAD
     // Per i componenti Field di Filament
     if (method_exists($component, 'getName')) {
         return $component->getName();
-=======
-=======
->>>>>>> 376bc0e6 (fix conflitti sync remote repo aurmich)
 
 ```php
 private function getComponentName(Field|Component $component): string
 {
-<<<<<<< HEAD
-<<<<<<< HEAD
     // Per i componenti Field di Filament
     if (method_exists($component, 'getName')) {
         return $component->getName();
-=======
-=======
-=======
->>>>>>> 7dd92412 (.)
->>>>>>> a2645e2c (.)
 
 ```php
 private function getComponentName(Field|Component $component): string
 {
-<<<<<<< HEAD
->>>>>>> 7ce328e (.)
-=======
-<<<<<<< HEAD
     // Per i componenti Field di Filament
     if (method_exists($component, 'getName')) {
         return $component->getName();
-=======
->>>>>>> a2645e2c (.)
-=======
->>>>>>> 7ce328e (.)
->>>>>>> 376bc0e6 (fix conflitti sync remote repo aurmich)
 
 ### Versione Incoming
 
@@ -893,12 +740,6 @@ public function execute(Model $model, array $data): array
         if ($this->isValidRelation($model, $name)) {
             $filtered[$name] = $this->processRelation($model, $name, $value);
         }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 7dd92412 (.)
-=======
->>>>>>> 7dd92412 (.)
     }
     
     // Per i componenti generali di Filament che hanno getStatePath
@@ -1349,11 +1190,7 @@ private function exportTablesToCSV(string $mdbFile): void
  * 
  * @return string[] Array di nomi di tabelle esportate
  */
-<<<<<<< HEAD
 private function exportTablesToCSV(string $mdbFile): array
-=======
-=======
->>>>>>> 376bc0e6 (fix conflitti sync remote repo aurmich)
     }
     
     // Per i componenti generali di Filament che hanno getStatePath
@@ -1804,14 +1641,7 @@ private function exportTablesToCSV(string $mdbFile): void
  * 
  * @return string[] Array di nomi di tabelle esportate
  */
-<<<<<<< HEAD
-<<<<<<< HEAD
 private function exportTablesToCSV(string $mdbFile): array
-=======
-=======
-=======
->>>>>>> 7dd92412 (.)
->>>>>>> a2645e2c (.)
     }
     
     // Per i componenti generali di Filament che hanno getStatePath
@@ -2262,16 +2092,7 @@ private function exportTablesToCSV(string $mdbFile): void
  * 
  * @return string[] Array di nomi di tabelle esportate
  */
-<<<<<<< HEAD
->>>>>>> 7ce328e (.)
-=======
-<<<<<<< HEAD
 private function exportTablesToCSV(string $mdbFile): array
-=======
->>>>>>> a2645e2c (.)
-=======
->>>>>>> 7ce328e (.)
->>>>>>> 376bc0e6 (fix conflitti sync remote repo aurmich)
 ```
 
 ## Problemi Comuni e Soluzioni
@@ -2588,12 +2409,6 @@ b6f667c (.)
  * @return \Illuminate\Database\Eloquent\Relations\HasMany<Comment>
  */
 public function comments(): HasMany
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 7dd92412 (.)
-=======
->>>>>>> 7dd92412 (.)
 {
     $tables = [];
     // ... codice per popolare $tables ...
@@ -2626,8 +2441,6 @@ private function importDataToMySQL(string $mdbFile, string $mysqlUser, string $m
 
     foreach ($tables as $table) {
         // ... codice per importare i dati ...
-=======
->>>>>>> 376bc0e6 (fix conflitti sync remote repo aurmich)
 {
     $tables = [];
     // ... codice per popolare $tables ...
@@ -2660,10 +2473,6 @@ private function importDataToMySQL(string $mdbFile, string $mysqlUser, string $m
 
     foreach ($tables as $table) {
         // ... codice per importare i dati ...
-=======
-=======
->>>>>>> 7dd92412 (.)
->>>>>>> a2645e2c (.)
 {
     $tables = [];
     // ... codice per popolare $tables ...
@@ -2676,7 +2485,6 @@ private function importDataToMySQL(string $mdbFile, string $mysqlUser, string $m
 // Prima:
 private function importDataToMySQL(string $mdbFile, string $mysqlUser, string $mysqlPassword, string $mysqlDb): void
 {
-<<<<<<< HEAD
     /**
      * Restituisce i metadati per i tag SEO.
      *
@@ -2685,52 +2493,15 @@ private function importDataToMySQL(string $mdbFile, string $mysqlUser, string $m
     public function getMetaTagData(): array
     {
         // Implementazione...
->>>>>>> 7ce328e (.)
-<<<<<<< HEAD
-=======
-    $tables = $this->exportTablesToCSV($mdbFile);
-
-    foreach ($tables as $table) {
-        // ... codice per importare i dati ...
-    }
-}
-
-// Dopo:
-private function importDataToMySQL(string $mdbFile, string $mysqlUser, string $mysqlPassword, string $mysqlDb): void
-{
-    $tables = $this->exportTablesToCSV($mdbFile);
-
-    // Verifica che $tables non sia vuoto
-    if (empty($tables)) {
-        $this->error('Nessuna tabella da importare');
-        return;
-    }
-
-    foreach ($tables as $table) {
-        // ... codice per importare i dati ...
->>>>>>> a2645e2c (.)
-=======
->>>>>>> 376bc0e6 (fix conflitti sync remote repo aurmich)
     }
 }
 ```
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> a2645e2c (.)
-=======
->>>>>>> 376bc0e6 (fix conflitti sync remote repo aurmich)
 Queste modifiche garantiscono che:
 1. Il metodo exportTablesToCSV restituisca effettivamente l'array di tabelle che viene costruito al suo interno
 2. Il metodo importDataToMySQL verifichi che l'array di tabelle non sia vuoto prima di tentare di iterarlo
 3. Il codice sia più robusto e gestisca correttamente i casi limite
 4. I tipi di dati siano coerenti e correttamente documentati
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 376bc0e6 (fix conflitti sync remote repo aurmich)
 
 ### 17. Correzione in Console/Commands/ImportMdbToSQLite.php
 
@@ -2802,9 +2573,7 @@ Questa modifica garantisce che PHPStan possa verificare correttamente la compati
 
 ### 19. Correzione in app/Datas/XotData.php
 L'errore riguardava il tipo di ritorno del metodo `getProfileClass()`, che era dichiarato come `string` ma doveva essere `class-string<Model&ProfileContract>`. Ecco la correzione implementata:
-=======
 Il problema è che i tag PHPDoc facevano riferimento a una classe `Builder` nel namespace `Modules\User\Models` che non esiste. Abbiamo corretto i riferimenti utilizzando il namespace completo per la classe Builder:
->>>>>>> 0057ece (.)
 
 ```php
 /**
@@ -2819,7 +2588,6 @@ Il problema è che i tag PHPDoc facevano riferimento a una classe `Builder` nel 
  */
 ```
 
-<<<<<<< HEAD
 #### Miglioramenti:
 
 - **Tipizzazione corretta del valore di ritorno**: Abbiamo aggiunto una annotazione PHPDoc che specifica che il metodo restituisce una stringa che rappresenta una classe, più specificamente una classe che estende Model e implementa ProfileContract.
@@ -2850,13 +2618,7 @@ protected array $listeners = [
 ];
 ```
 
-<<<<<<< HEAD
 L'aggiunta dell'annotazione `@phpstan-var` fornisce a PHPStan un'informazione più specifica sul tipo della proprietà, permettendogli di verificare correttamente che tutti gli elementi dell'array siano stringhe. Questo è particolarmente utile quando si lavora con Livewire, dove i listener sono definiti come un array associativo di eventi e metodi da chiamare.
-=======
-=======
-Questo trait viene poi utilizzato nelle classi Panel che necessitano di questa funzionalità.
-=======
->>>>>>> a2645e2c (.)
 
 ### 17. Correzione in Console/Commands/ImportMdbToSQLite.php
 
@@ -2974,17 +2736,7 @@ protected array $listeners = [
 ];
 ```
 
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 7ce328e (.)
-=======
-<<<<<<< HEAD
 L'aggiunta dell'annotazione `@phpstan-var` fornisce a PHPStan un'informazione più specifica sul tipo della proprietà, permettendogli di verificare correttamente che tutti gli elementi dell'array siano stringhe. Questo è particolarmente utile quando si lavora con Livewire, dove i listener sono definiti come un array associativo di eventi e metodi da chiamare.
-=======
->>>>>>> a2645e2c (.)
-=======
->>>>>>> 7ce328e (.)
->>>>>>> 376bc0e6 (fix conflitti sync remote repo aurmich)
 ## Prossimi Passi
 
 1. Risolvere i 12 errori rimanenti al livello 8
@@ -3020,20 +2772,4 @@ aurmich/dev
 
 b6f667c (.)
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 7dd92412 (.)
-=======
->>>>>>> 7ce328e (.)
-=======
->>>>>>> 7dd92412 (.)
->>>>>>> a2645e2c (.)
-=======
->>>>>>> 7dd92412 (.)
-=======
->>>>>>> 7ce328e (.)
->>>>>>> 376bc0e6 (fix conflitti sync remote repo aurmich)
-=======
 Questo garantisce che PHPStan possa risolvere correttamente il tipo `Builder` utilizzando il namespace completo `\Illuminate\Database\Eloquent\Builder`. 
->>>>>>> 0057ece (.)

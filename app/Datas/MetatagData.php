@@ -4,23 +4,17 @@ declare(strict_types=1);
 
 namespace Modules\Xot\Datas;
 
-use Filament\Support\Colors\Color;
-use Illuminate\Support\Arr;
 use Livewire\Wireable;
+use Illuminate\Support\Arr;
+use Spatie\LaravelData\Data;
+use Filament\Support\Colors\Color;
+use function Safe\file_get_contents;
+use Modules\Xot\Actions\File\AssetAction;
 use Modules\Tenant\Services\TenantService;
-<<<<<<< HEAD
 use Modules\Xot\Actions\File\AssetPathAction;
 use Spatie\LaravelData\Concerns\WireableData;
 use Spatie\LaravelData\Attributes\WithTransformer;
 use Modules\Xot\Datas\Transformers\AssetTransformer;
-use function Safe\file_get_contents;
-=======
-use Modules\Xot\Actions\File\AssetAction;
-use Modules\Xot\Datas\Transformers\AssetTransformer;
-use Spatie\LaravelData\Attributes\WithTransformer;
-use Spatie\LaravelData\Concerns\WireableData;
-use Spatie\LaravelData\Data;
->>>>>>> 0057ece (.)
 
 /**
  * Class MetatagData.

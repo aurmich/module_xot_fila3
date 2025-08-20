@@ -92,13 +92,6 @@ $res=Locality::query()
 
 ## Verifiche Post-Correzione
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> a2645e2c (.)
-=======
->>>>>>> 376bc0e6 (fix conflitti sync remote repo aurmich)
 
 ### 2. Validazione PHPStan
 ```bash
@@ -206,18 +199,6 @@ php artisan lang:check
 
 **Ultimo aggiornamento**: 2025-01-06
 **Autore**: Sistema di correzione automatica
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 376bc0e6 (fix conflitti sync remote repo aurmich)
 **Stato**: ✅ Completato
-=======
 ### 1. Controllo Conflitti
 ```bash
->>>>>>> 995f7cae (.)
-<<<<<<< HEAD
-=======
-**Stato**: ✅ Completato
->>>>>>> a2645e2c (.)
-=======
->>>>>>> 376bc0e6 (fix conflitti sync remote repo aurmich)

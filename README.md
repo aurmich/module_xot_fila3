@@ -92,7 +92,6 @@ class XotBaseUser extends Authenticatable
 }
 ```
 
-<<<<<<< HEAD
 ### 🎨 **Componenti Filament Base**
 ```php
 // Resource base con funzionalità comuni
@@ -111,8 +110,6 @@ class XotBaseResource extends Resource
     }
 }
 ```
-=======
-<<<<<<< HEAD
 ## Modifiche Recenti (Giugno 2025)
 
 ### Deprecazione Comandi MCP
@@ -126,14 +123,11 @@ Le azioni relative al database sono state migrate al modulo DbForge per una migl
 
 **Per dettagli completi**: [Documentazione Modifiche](docs/mcp-commands-deprecation.md)
 
-=======
->>>>>>> 7ce328e (.)
 ## Configurazione
 Il modulo può essere configurato tramite il file `config/module_xot.php`:
 - Gestione delle rotte
 - Permessi
 - Configurazioni specifiche per modulo
->>>>>>> 376bc0e6 (fix conflitti sync remote repo aurmich)
 
 ## 🚀 Installazione SUPER VELOCE
 
