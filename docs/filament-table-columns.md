@@ -1,30 +1,48 @@
-# Regola Globale: Metodo getTableColumns per Filament Table
-
-## Descrizione
-Questa pagina raccoglie la regola e i collegamenti per l’adozione del metodo `getTableColumns` in tutte le Filament Table dei moduli del progetto.
+# Regola Generale: Metodo getTableColumns per Filament Table (Xot)
 
 ## Regola
-- **Usare sempre:** `getTableColumns`
+Tutte le Filament Table (Pages, RelationManagers, ecc.) nei moduli devono usare il metodo `getTableColumns` per definire le colonne della tabella.
+
 - **Non usare più:** `getListTableColumns`
+- **Usare sempre:** `getTableColumns`
 
 ## Motivazione
 - Uniformità con lo standard Filament
 - Migliore leggibilità e manutenibilità
 - Facilità di upgrade e adozione di nuove versioni
 
-## Collegamenti Specifici
-- [Regola Generale - Modulo Xot](../laravel/Modules/Xot/docs/FILAMENT_TABLE_COLUMNS.md)
-- [Regola e Applicazione - Modulo Performance](../laravel/Modules/Performance/docs/filament-resources.md)
-- [Esempio e Applicazione - Modulo User](../laravel/Modules/User/docs/filament/FILAMENT_TABLE_COLUMNS.md)
+## Esempio
+```php
+// Corretto
+public function getTableColumns(): array
+{
+    return [ ... ];
+}
+```
 
-**Nota:** Nei moduli Laraxot, le pagine tabellari devono estendere `Modules\Xot\Filament\Resources\Pages\XotBaseListRecords` e non la classe base Filament.
+## Applicazione
+- Obbligatorio per tutti i moduli
+- Ogni modulo deve documentare l'adozione nella sua docs/
+- Aggiornare override, chiamate e test
 
-## Note
-- Ogni modulo deve documentare l’adozione nella sua docs/
-- Aggiornare i link bidirezionali in caso di modifiche
+**Nota:** Nei moduli come Performance, la logica tabellare (colonne, filtri, azioni) va sempre nelle pagine (che estendono `Modules\Xot\Filament\Resources\Pages\XotBaseListRecords`), non nelle Resource. Vedi esempio e motivazione nella [documentazione Performance](../../Performance/docs/filament-resources.md).
+
+## Collegamenti
+- [Esempio e Applicazione - Modulo User](../../../User/docs/filament/FILAMENT_TABLE_COLUMNS.md)
+- [Regola Globale - Root Docs](../../../../docs/filament-table-columns.md)
+
+## Nota storica: correzione XotBaseManageRelatedRecords
+
+- La classe XotBaseManageRelatedRecords è stata aggiornata per rispettare PHPStan livello 10.
+- Tutti i metodi pubblici sono ora tipizzati e documentati con PHPDoc.
+- Uso sistematico di Assert e fallback robusti.
+- Vietato l'uso di return impliciti, mixed o cast forzati.
+- Il metodo per le colonne della tabella è sempre getTableColumns.
+
+**Collegamento:** Vedi anche [filament_components.md](./filament_components.md)
 
 ---
 
 **Ultimo aggiornamento:** 2025-05-13
 
-**Link bidirezionale:** Aggiornare anche le docs dei moduli coinvolti.
+**Link bidirezionale:** Aggiornare anche la root docs e la docs dei moduli coinvolti.

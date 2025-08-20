@@ -232,7 +232,7 @@ abstract class XotBaseMigration extends Migration
         }
 
         // If it's an object, access the property directly
-        if (is_object($result) && property_exists($result, 'count')) {
+        if (is_object($result) && isset($result->count)) {
             return $result->count > 0;
         }
 

@@ -46,5 +46,7 @@ cache/
 # Backup files
 *.bak
 *.old
+*.no
+*.wip
 # PHPStan documentation
 docs/phpstan/

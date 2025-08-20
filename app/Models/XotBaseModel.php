@@ -4,15 +4,13 @@ declare(strict_types=1);
 
 namespace Modules\Xot\Models;
 
-use Illuminate\Database\Eloquent\Model;
-// use Laravel\Scout\Searchable;
-// ---- Traits ----
+use Illuminate\Database\Eloquent\Model as EloquentModel;
 use Modules\Xot\Traits\Updater;
 
 /**
  * Class XotBaseModel.
  */
-abstract class XotBaseModel extends Model
+abstract class XotBaseModel extends EloquentModel
 {
     // use Searchable;
     use Updater;

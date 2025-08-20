@@ -54,17 +54,15 @@ $schema = Str::of($name)
 | `availability_step` | `getAvailabilityStepSchema()` |
 | `personal_info_step` | `getPersonalInfoStepSchema()` |
 
-## 🛡️ **Fix Secondario: property_exists Check**
+## ��️ **Fix Secondario: isset Check**
 
-### **Problema Aggiuntivo**
+Per le proprietà magiche dei modelli Eloquent, utilizzare sempre `isset()` invece di `property_exists()`:
+
 ```php
-// ❌ ERRATO - Proprietà potrebbe non esistere
-$attachments = $model::$attachments;
-```
+// ✅ CORRETTO - Per proprietà magiche
+$attachments = isset($model->attachments) ? $model::$attachments : [];
 
-### **Correzione Applicata**
-```php  
-// ✅ CORRETTO - Check esistenza proprietà
+// ❌ ERRATO - Per proprietà magiche
 $attachments = property_exists($model, 'attachments') ? $model::$attachments : [];
 ```
 
