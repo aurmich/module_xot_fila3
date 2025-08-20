@@ -1,16 +1,25 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 376bc0e6 (fix conflitti sync remote repo aurmich)
 # Best Practices per Risorse Filament in Laraxot
+=======
+# Filament Best Practices - Laraxot PTVX
+>>>>>>> 0057ece (.)
 
-Questo documento riassume le migliori pratiche per la creazione e gestione delle risorse Filament all'interno dell'ecosistema Laraxot. Seguire queste linee guida garantirà compatibilità e coerenza in tutto il progetto.
+## ERRORE CRITICO IDENTIFICATO E RISOLTO
 
-## Estensione delle Classi Base
+### ❌ Problema: Campi Inesistenti nelle Risorse Filament
+**GRAVISSIMO**: Le risorse Filament stavano usando campi che NON esistono nei modelli corrispondenti.
 
-### Risorse
+**Esempi trovati nel modulo Progressioni**:
+- `AssenzeResource` usava: `matr`, `cognome`, `nome`, `giorni_assenza` (NON esistenti)
+- `ListValutatores` usava: `matr_valutatore`, `cognome_valutatore` (NON esistenti)
+- `ListCategoriaPropros` usava: `name`, `descr` (NON esistenti)
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 1. **SEMPRE** estendere `Modules\Xot\Filament\Resources\XotBaseResource`:
    ```php
@@ -779,8 +788,19 @@ public static function table(Table $table): Table
 >>>>>>> a2645e2c (.)
 =======
 >>>>>>> 376bc0e6 (fix conflitti sync remote repo aurmich)
+=======
+### ✅ Soluzione Implementata
+1. **Verifica Sistematica**: Controllo di ogni modello e migrazione
+2. **Correzione Risorse**: Aggiornamento di tutte le risorse Filament
+3. **Documentazione**: Piano di verifica per ogni modulo
+4. **Regole Aggiornate**: Nuove regole per prevenire il problema
 
+## Processo di Verifica Campi Modello
+>>>>>>> 0057ece (.)
+
+### 1. Leggere il Modello
 ```php
+<<<<<<< HEAD
 <?php
 
 <<<<<<< HEAD
@@ -796,187 +816,112 @@ use Modules\SaluteMo\Filament\Resources\ReportResource;
 use Modules\Xot\Filament\Resources\Pages\XotBaseListRecords;
 use Filament\Actions;
 use Filament\Tables;
+=======
+// Controllare l'array $fillable
+protected $fillable = ['id', 'name', 'email'];
+>>>>>>> 0057ece (.)
 
+// Controllare le proprietà PHPDoc
 /**
- * Pagina di elenco per i report.
- * 
- * ✅ IMPLEMENTAZIONE CORRETTA: Estende XotBaseListRecords
- * ✅ SEGUE IL PATTERN LARAXOT: Non estende ListRecords di Filament direttamente
- * ✅ IMPLEMENTA getTableColumns(): Metodo obbligatorio per XotBaseListRecords
- * ✅ DOCUMENTAZIONE AGGIORNATA: PHPDoc completo e chiaro
- * ✅ CAMPI REALI: Solo campi che esistono nel modello Report
- * ✅ NO LABEL: Non uso ->label() perché gestito da LangServiceProvider
+ * @property int $id
+ * @property string $name
+ * @property string $email
  */
-class ListReports extends XotBaseListRecords
-{
-    protected static string $resource = ReportResource::class;
-
-    /**
-     * Get the table columns.
-     *
-     * @return array<string, \Filament\Tables\Columns\Column>
-     */
-    public function getTableColumns(): array
-    {
-        return [
-            'id' => Tables\Columns\TextColumn::make('id')
-                ->searchable()
-                ->sortable(),
-            'patient_id' => Tables\Columns\TextColumn::make('patient_id')
-                ->searchable()
-                ->sortable(),
-            'has_mouth_or_teeth_pain' => Tables\Columns\IconColumn::make('has_mouth_or_teeth_pain')
-                ->boolean()
-                ->sortable(),
-            // Altri campi reali del modello Report...
-        ];
-    }
-
-    protected function getHeaderActions(): array
-    {
-        return [
-            Actions\CreateAction::make(), // ✅ NO ->label() hardcoded
-        ];
-    }
-}
 ```
 
-### Regole per getTableColumns()
-
-1. **Visibilità**: SEMPRE `public`
-2. **Tipo di ritorno**: SEMPRE `array<string, \Filament\Tables\Columns\Column>`
-3. **Struttura**: Array associativo con chiavi stringa
-4. **Campi Reali**: MAI inventare campi, usare solo quelli del modello
-5. **Traduzioni**: MAI usare `->label()`, gestite da LangServiceProvider
-6. **Tipizzazione**: Includere PHPDoc completo
-
-### Esempio di Implementazione Corretta
-
+### 2. Controllare la Migrazione
 ```php
-/**
- * Get the table columns.
- *
- * @return array<string, \Filament\Tables\Columns\Column>
- */
-public function getTableColumns(): array
+// Verificare lo schema della tabella
+Schema::create('example_table', function (Blueprint $table) {
+    $table->id();
+    $table->string('name');
+    $table->string('email');
+    $table->timestamps();
+});
+```
+
+### 3. Verificare Form Schema
+```php
+// ✅ CORRETTO - Solo campi esistenti
+public static function getFormSchema(): array
 {
     return [
-        'id' => Tables\Columns\TextColumn::make('id')
-            ->searchable()
-            ->sortable(),
-        'name' => Tables\Columns\TextColumn::make('name')
-            ->searchable()
-            ->sortable(),
-        'email' => Tables\Columns\TextColumn::make('email')
-            ->searchable()
-            ->sortable(),
-        'status' => Tables\Columns\BadgeColumn::make('status')
-            ->colors([
-                'primary' => 'active',
-                'danger' => 'inactive',
-            ]),
-        'created_at' => Tables\Columns\TextColumn::make('created_at')
-            ->dateTime('d/m/Y H:i')
-            ->sortable(),
+        TextInput::make('id')->disabled(),
+        TextInput::make('name')->required(),
+        TextInput::make('email')->email(),
     ];
 }
 ```
 
-## Regole per XotBaseEditRecord
-
-### Implementazione Corretta
-
+### 4. Verificare Table Columns
 ```php
-<?php
-
-declare(strict_types=1);
-
-namespace Modules\SaluteMo\Filament\Resources\AppointmentResource\Pages;
-
-use Modules\SaluteMo\Filament\Resources\AppointmentResource;
-use Modules\Xot\Filament\Resources\Pages\XotBaseEditRecord;
-use Filament\Actions;
-
-/**
- * Pagina di modifica per gli appuntamenti.
- * 
- * ✅ IMPLEMENTAZIONE CORRETTA: Estende XotBaseEditRecord
- * ✅ SEGUE IL PATTERN LARAXOT: Non estende EditRecord di Filament direttamente
- * ✅ DOCUMENTAZIONE AGGIORNATA: PHPDoc completo e chiaro
- * ✅ NO FORM: Il metodo form() è già implementato in XotBaseEditRecord
- * ✅ UTILIZZA getFormSchema(): Dalla risorsa AppointmentResource
- */
-class EditAppointment extends XotBaseEditRecord
+// ✅ CORRETTO - Solo campi esistenti
+public function getTableColumns(): array
 {
-    protected static string $resource = AppointmentResource::class;
-
-    protected function getHeaderActions(): array
-    {
-        return [
-            Actions\DeleteAction::make(), // ✅ NO ->label() hardcoded
-        ];
-    }
+    return [
+        'id' => TextColumn::make('id')->sortable(),
+        'name' => TextColumn::make('name')->searchable(),
+        'email' => TextColumn::make('email')->searchable(),
+    ];
 }
 ```
 
-## Regole per XotBaseCreateRecord
+## Regole Fondamentali Aggiornate
 
-### Implementazione Corretta
+### Estensione Classi
+- **SEMPRE** estendere `XotBaseResource` invece di `Resource`
+- **SEMPRE** estendere `XotBaseListRecords` invece di `ListRecords`
+- **MAI** estendere direttamente le classi base di Laravel o Filament
 
+### Metodi Filament
+- **USARE** `getFormSchema()` invece di `form()`
+- **NON DEFINIRE** il metodo `table()` nelle classi Resource
+- **NON USARE** `->label()`, `->placeholder()`, `->helperText()`
+- **INCLUDERE** `use Filament\\Forms;` nelle Resource
+
+### Verifica Campi
+- **CONTROLLARE** sempre che i campi del form esistano nel modello
+- **CONTROLLARE** sempre che le colonne della tabella esistano nel modello
+- **VERIFICARE** sia il modello che la migrazione
+- **DOCUMENTARE** ogni verifica nel piano del modulo
+
+## Checklist Completa
+
+Prima di considerare completa una risorsa Filament:
+
+- [ ] Estende `XotBaseResource`
+- [ ] Usa `getFormSchema()` invece di `form()`
+- [ ] Non definisce metodo `table()`
+- [ ] Non usa `->label()`, `->placeholder()`, `->helperText()`
+- [ ] Include `use Filament\\Forms;`
+- [ ] **VERIFICA**: Tutti i campi del form esistono nel modello
+- [ ] **VERIFICA**: Tutte le colonne della tabella esistono nel modello
+- [ ] **VERIFICA**: Controlla sia il modello che la migrazione
+- [ ] **VERIFICA**: Documenta nel piano di verifica del modulo
+- [ ] Documentazione aggiornata
+
+## Esempi di Errori Corretti
+
+### ❌ Prima (ERRATO)
 ```php
-<?php
-
-declare(strict_types=1);
-
-namespace Modules\SaluteMo\Filament\Resources\AppointmentResource\Pages;
-
-use Modules\SaluteMo\Filament\Resources\AppointmentResource;
-use Modules\Xot\Filament\Resources\Pages\XotBaseCreateRecord;
-
-/**
- * Pagina di creazione per gli appuntamenti.
- * 
- * ✅ IMPLEMENTAZIONE CORRETTA: Estende XotBaseCreateRecord
- * ✅ SEGUE IL PATTERN LARAXOT: Non estende CreateRecord di Filament direttamente
- * ✅ DOCUMENTAZIONE AGGIORNATA: PHPDoc completo e chiaro
- * ✅ NO FORM: Il metodo form() è già implementato in XotBaseCreateRecord
- * ✅ UTILIZZA getFormSchema(): Dalla risorsa AppointmentResource
- */
-class CreateAppointment extends XotBaseCreateRecord
+// AssenzeResource.php
+public static function getFormSchema(): array
 {
-    protected static string $resource = AppointmentResource::class;
+    return [
+        TextInput::make('matr'),           // ❌ NON esiste nel modello
+        TextInput::make('cognome'),        // ❌ NON esiste nel modello
+        TextInput::make('nome'),           // ❌ NON esiste nel modello
+        TextInput::make('giorni_assenza'), // ❌ NON esiste nel modello
+    ];
 }
 ```
 
-## Esempi di Implementazione Corretta
-
-### ReportResource.php - IMPLEMENTAZIONE CORRETTA
-
+### ✅ Dopo (CORRETTO)
 ```php
-<?php
-
-declare(strict_types=1);
-
-namespace Modules\SaluteMo\Filament\Resources;
-
-use Modules\SaluteMo\Filament\Resources\ReportResource\Pages;
-use Modules\SaluteOra\Models\Report;
-use Modules\Xot\Filament\Resources\XotBaseResource;
-use Filament\Forms;
-
-/**
- * Risorsa Filament per i report.
- * 
- * ✅ IMPLEMENTAZIONE CORRETTA: Estende XotBaseResource
- * ✅ SEGUE IL PATTERN LARAXOT: Non estende Resource di Filament direttamente
- * ✅ IMPLEMENTA getFormSchema(): Metodo obbligatorio per XotBaseResource
- * ✅ DOCUMENTAZIONE AGGIORNATA: PHPDoc completo e chiaro
- * ✅ NO NAVIGATION ICON: Non definito perché gestito da XotBaseResource
- * ✅ NO FORM/TABLE: Metodi gestiti automaticamente da XotBaseResource
- * ✅ NO LABEL HARDCODED: Tutte le label gestite da LangServiceProvider
- */
-class ReportResource extends XotBaseResource
+// AssenzeResource.php
+public static function getFormSchema(): array
 {
+<<<<<<< HEAD
     protected static ?string $model = Report::class;
 
     /**
@@ -1300,9 +1245,33 @@ class ListReports extends XotBaseListRecords
 ## Checklist di Conformità
 =======
 ## Checklist di Conformità
+=======
+    return [
+        TextInput::make('id')->disabled(),
+        TextInput::make('tipo')->numeric(),
+        TextInput::make('codice')->numeric(),
+        TextInput::make('descr')->maxLength(250),
+        TextInput::make('anno')->numeric(),
+        TextInput::make('umi')->numeric(),
+        TextInput::make('dur')->numeric(),
+    ];
+}
+```
 
-Prima di considerare completa una risorsa Filament, verificare:
+## Documentazione Correlata
+- [Regole Laraxot](../laravel/Modules/Xot/docs/rules/laraxot-rules.md)
+- [Verifica Campi Modello](../laravel/Modules/Xot/docs/memories/model-fields-validation.md)
+- [Piano Verifica Progressioni](../laravel/Modules/Progressioni/docs/model-fields-verification-plan.md)
+- [Best Practice Filament](../laravel/Modules/Xot/docs/filament_best_practices.md)
+>>>>>>> 0057ece (.)
 
+## Note Importanti
+- **CRITICO**: Verificare sempre la corrispondenza tra modello, migrazione e risorsa Filament
+- **DOCUMENTARE**: Ogni verifica deve essere documentata nel piano del modulo
+- **PREVENIRE**: Implementare controlli automatici per evitare regressioni
+- **TESTARE**: Verificare che le risorse funzionino correttamente dopo le correzioni
+
+<<<<<<< HEAD
 ### ✅ Estensione Base
 - [ ] Estende `XotBaseResource` invece di `Resource`
 - [ ] Estende `XotBaseListRecords` invece di `ListRecords`
@@ -1762,3 +1731,6 @@ Appointment::where('doctor_id', $doctorId)
 >>>>>>> 1da726f (.)
 =======
 >>>>>>> 376bc0e6 (fix conflitti sync remote repo aurmich)
+=======
+*Ultimo aggiornamento: Giugno 2025* 
+>>>>>>> 0057ece (.)

@@ -1,16 +1,21 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 # Correzioni PHPStan Livello 7 - Modulo Xot
 =======
 # Correzioni PHPStan Livello 7 - Modulo Xot
+=======
+# Correzioni PHPStan Livello 7 - Modulo User
+>>>>>>> 0057ece (.)
 
-Questo documento traccia gli errori PHPStan di livello 7 identificati nel modulo Xot e le relative soluzioni implementate.
+Questo documento traccia gli errori PHPStan di livello 7 identificati nel modulo User e le relative soluzioni implementate.
 
 <<<<<<< HEAD
 <<<<<<< HEAD
 ## Errori Identificati
 
+<<<<<<< HEAD
 ### 1. Errore in Helpers/Helper.php
 =======
 =======
@@ -438,12 +443,23 @@ Line 33: Static property Modules\Xot\Filament\Widgets\XotBaseWidget::$view (view
 
 ```
 Line 146: Offset 1 on array{list<string>, list<string>} in isset() always exists and is not nullable.
+=======
+### 1. Errori in Profile.php
+
+```
+Line 49: PHPDoc tag @method for method Modules\User\Models\Profile::permission() return type contains unknown class Modules\User\Models\Builder.
+Line 49: PHPDoc tag @method for method Modules\User\Models\Profile::role() return type contains unknown class Modules\User\Models\Builder.
+Line 49: PHPDoc tag @method for method Modules\User\Models\Profile::withExtraAttributes() return type contains unknown class Modules\User\Models\Builder.
+Line 49: PHPDoc tag @method for method Modules\User\Models\Profile::withoutPermission() return type contains unknown class Modules\User\Models\Builder.
+Line 49: PHPDoc tag @method for method Modules\User\Models\Profile::withoutRole() return type contains unknown class Modules\User\Models\Builder.
+>>>>>>> 0057ece (.)
 ```
 
 ## Soluzioni Implementate
 
-### 1. Correzione in Helpers/Helper.php
+### 1. Correzione in Profile.php
 
+<<<<<<< HEAD
 Il problema è che PHPStan rileva che la chiamata a `is_array($matches)` sarà sempre vera perché `$matches` è già tipizzato come array. Abbiamo modificato il controllo per verificare se l'array non è vuoto invece di verificare se è un array:
 
 ```php
@@ -2786,22 +2802,24 @@ Questa modifica garantisce che PHPStan possa verificare correttamente la compati
 
 ### 19. Correzione in app/Datas/XotData.php
 L'errore riguardava il tipo di ritorno del metodo `getProfileClass()`, che era dichiarato come `string` ma doveva essere `class-string<Model&ProfileContract>`. Ecco la correzione implementata:
+=======
+Il problema è che i tag PHPDoc facevano riferimento a una classe `Builder` nel namespace `Modules\User\Models` che non esiste. Abbiamo corretto i riferimenti utilizzando il namespace completo per la classe Builder:
+>>>>>>> 0057ece (.)
 
 ```php
 /**
- * Get the profile class.
- *
- * @return class-string<\Illuminate\Database\Eloquent\Model&\Modules\Xot\Contracts\ProfileContract>
+ * ...
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Profile permission($permissions, $without = false)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Profile query()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Profile role($roles, $guard = null, $without = false)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Profile withExtraAttributes()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Profile withoutPermission($permissions)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Profile withoutRole($roles, $guard = null)
+ * ...
  */
-public function getProfileClass(): string
-{
-    // ... implementazione ...
-    
-    /** @var class-string<\Illuminate\Database\Eloquent\Model&\Modules\Xot\Contracts\ProfileContract> */
-    return $class;
-}
 ```
 
+<<<<<<< HEAD
 #### Miglioramenti:
 
 - **Tipizzazione corretta del valore di ritorno**: Abbiamo aggiunto una annotazione PHPDoc che specifica che il metodo restituisce una stringa che rappresenta una classe, più specificamente una classe che estende Model e implementa ProfileContract.
@@ -3016,3 +3034,6 @@ b6f667c (.)
 =======
 >>>>>>> 7ce328e (.)
 >>>>>>> 376bc0e6 (fix conflitti sync remote repo aurmich)
+=======
+Questo garantisce che PHPStan possa risolvere correttamente il tipo `Builder` utilizzando il namespace completo `\Illuminate\Database\Eloquent\Builder`. 
+>>>>>>> 0057ece (.)

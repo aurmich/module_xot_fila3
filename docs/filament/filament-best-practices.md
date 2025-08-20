@@ -2,154 +2,158 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> a2645e2c (.)
 =======
 >>>>>>> 376bc0e6 (fix conflitti sync remote repo aurmich)
 # Best Practices per Risorse Filament in Laraxot
+=======
+# Filament Best Practices - Laraxot PTVX
+>>>>>>> 0057ece (.)
 
-Questo documento riassume le migliori pratiche per la creazione e gestione delle risorse Filament all'interno dell'ecosistema Laraxot. Seguire queste linee guida garantirà compatibilità e coerenza in tutto il progetto.
+## ERRORE CRITICO IDENTIFICATO E RISOLTO
 
-## Estensione delle Classi Base
+### ❌ Problema: Campi Inesistenti nelle Risorse Filament
+**GRAVISSIMO**: Le risorse Filament stavano usando campi che NON esistono nei modelli corrispondenti.
 
-### Risorse
+**Esempi trovati nel modulo Progressioni**:
+- `AssenzeResource` usava: `matr`, `cognome`, `nome`, `giorni_assenza` (NON esistenti)
+- `ListValutatores` usava: `matr_valutatore`, `cognome_valutatore` (NON esistenti)
+- `ListCategoriaPropros` usava: `name`, `descr` (NON esistenti)
 
-1. **SEMPRE** estendere `Modules\Xot\Filament\Resources\XotBaseResource`:
-   ```php
-   // CORRETTO ✅
-   class ClienteResource extends XotBaseResource
-   
-   // ERRATO ❌
-   class ClienteResource extends Resource
-   ```
+### ✅ Soluzione Implementata
+1. **Verifica Sistematica**: Controllo di ogni modello e migrazione
+2. **Correzione Risorse**: Aggiornamento di tutte le risorse Filament
+3. **Documentazione**: Piano di verifica per ogni modulo
+4. **Regole Aggiornate**: Nuove regole per prevenire il problema
 
-2. **SEMPRE** impostare correttamente le proprietà statiche:
-   ```php
-   protected static ?string $model = Cliente::class;
-   protected static ?string $navigationIcon = 'heroicon-o-users';
-   protected static ?string $cluster = ClienteCluster::class; // Se applicabile
-   ```
+## Processo di Verifica Campi Modello
 
-### Pagine
+### 1. Leggere il Modello
+```php
+// Controllare l'array $fillable
+protected $fillable = ['id', 'name', 'email'];
 
-1. Per le pagine di **creazione**:
-   ```php
-   // CORRETTO ✅
-   class CreateCliente extends XotBaseCreateRecord
-   
-   // ERRATO ❌
-   class CreateCliente extends CreateRecord
-   ```
+// Controllare le proprietà PHPDoc
+/**
+ * @property int $id
+ * @property string $name
+ * @property string $email
+ */
+```
 
-2. Per le pagine di **modifica**:
-   ```php
-   // CORRETTO ✅
-   class EditCliente extends XotBaseEditRecord
-   
-   // ERRATO ❌
-   class EditCliente extends EditRecord
-   ```
+### 2. Controllare la Migrazione
+```php
+// Verificare lo schema della tabella
+Schema::create('example_table', function (Blueprint $table) {
+    $table->id();
+    $table->string('name');
+    $table->string('email');
+    $table->timestamps();
+});
+```
 
-3. Per le pagine di **elenco**:
-   ```php
-   // CORRETTO ✅
-   class ListClienti extends XotBaseListRecords
-   
-   // ERRATO ❌
-   class ListClienti extends ListRecords
-   ```
+### 3. Verificare Form Schema
+```php
+// ✅ CORRETTO - Solo campi esistenti
+public static function getFormSchema(): array
+{
+    return [
+        TextInput::make('id')->disabled(),
+        TextInput::make('name')->required(),
+        TextInput::make('email')->email(),
+    ];
+}
+```
 
-## Definizione dei Form
+### 4. Verificare Table Columns
+```php
+// ✅ CORRETTO - Solo campi esistenti
+public function getTableColumns(): array
+{
+    return [
+        'id' => TextColumn::make('id')->sortable(),
+        'name' => TextColumn::make('name')->searchable(),
+        'email' => TextColumn::make('email')->searchable(),
+    ];
+}
+```
 
-1. **SEMPRE** utilizzare `getFormSchema()` invece di `form()`:
-   ```php
-   // CORRETTO ✅
-   public static function getFormSchema(): array
-   {
-       return [
-           TextInput::make('nome'),
-           // altri componenti...
-       ];
-   }
-   
-   // ERRATO ❌
-   public static function form(Form $form): Form
-   {
-       return $form->schema([...]);
-   }
-   ```
+## Regole Fondamentali Aggiornate
 
-2. **MAI** avvolgere i componenti in una chiamata `schema()` nel metodo `getFormSchema()`:
-   ```php
-   // CORRETTO ✅
-   return [
-       TextInput::make('nome'),
-       // altri componenti...
-   ];
-   
-   // ERRATO ❌
-   return $form->schema([
-       TextInput::make('nome'),
-   ]);
-   ```
+### Estensione Classi
+- **SEMPRE** estendere `XotBaseResource` invece di `Resource`
+- **SEMPRE** estendere `XotBaseListRecords` invece di `ListRecords`
+- **MAI** estendere direttamente le classi base di Laravel o Filament
 
-## Localizzazione e Label
+### Metodi Filament
+- **USARE** `getFormSchema()` invece di `form()`
+- **NON DEFINIRE** il metodo `table()` nelle classi Resource
+- **NON USARE** `->label()`, `->placeholder()`, `->helperText()`
+- **INCLUDERE** `use Filament\\Forms;` nelle Resource
 
-1. **MAI** utilizzare il metodo `->label()` sui campi o colonne:
-   ```php
-   // CORRETTO ✅
-   TextInput::make('nome')
-   
-   // ERRATO ❌
-   TextInput::make('nome')->label('Nome Cliente')
-   ```
+### Verifica Campi
+- **CONTROLLARE** sempre che i campi del form esistano nel modello
+- **CONTROLLARE** sempre che le colonne della tabella esistano nel modello
+- **VERIFICARE** sia il modello che la migrazione
+- **DOCUMENTARE** ogni verifica nel piano del modulo
 
-2. **SEMPRE** aggiungere le traduzioni nei file di lingua appropriati:
-   ```php
-   // Nel file lang/it/resource.php
-   return [
-       'fields' => [
-           'nome' => [
-               'label' => 'Nome Cliente'
-           ]
-       ]
-   ];
-   ```
+## Checklist Completa
 
-## Ciclo di Vita dei Componenti
+Prima di considerare completa una risorsa Filament:
 
-1. **SEMPRE** implementare il metodo `fillForm()` nelle pagine di modifica, anche se vuoto:
-   ```php
-   /**
-    * Metodo fillForm per rispettare il ciclo di vita dei componenti Filament
-    */
-   public function fillForm(): void
-   {
-       // Può essere vuoto, ma deve essere presente
-   }
-   ```
+- [ ] Estende `XotBaseResource`
+- [ ] Usa `getFormSchema()` invece di `form()`
+- [ ] Non definisce metodo `table()`
+- [ ] Non usa `->label()`, `->placeholder()`, `->helperText()`
+- [ ] Include `use Filament\\Forms;`
+- [ ] **VERIFICA**: Tutti i campi del form esistono nel modello
+- [ ] **VERIFICA**: Tutte le colonne della tabella esistono nel modello
+- [ ] **VERIFICA**: Controlla sia il modello che la migrazione
+- [ ] **VERIFICA**: Documenta nel piano di verifica del modulo
+- [ ] Documentazione aggiornata
 
-2. **SEMPRE** utilizzare il metodo `mount()` appropriato:
-   ```php
-   public function mount(): void
-   {
-       parent::mount();
-       // Inizializzazione specifica
-   }
-   ```
+## Esempi di Errori Corretti
 
-## Relazioni con Database 
+### ❌ Prima (ERRATO)
+```php
+// AssenzeResource.php
+public static function getFormSchema(): array
+{
+    return [
+        TextInput::make('matr'),           // ❌ NON esiste nel modello
+        TextInput::make('cognome'),        // ❌ NON esiste nel modello
+        TextInput::make('nome'),           // ❌ NON esiste nel modello
+        TextInput::make('giorni_assenza'), // ❌ NON esiste nel modello
+    ];
+}
+```
 
-### Differenze tra Brain e Orisbroker
+### ✅ Dopo (CORRETTO)
+```php
+// AssenzeResource.php
+public static function getFormSchema(): array
+{
+    return [
+        TextInput::make('id')->disabled(),
+        TextInput::make('tipo')->numeric(),
+        TextInput::make('codice')->numeric(),
+        TextInput::make('descr')->maxLength(250),
+        TextInput::make('anno')->numeric(),
+        TextInput::make('umi')->numeric(),
+        TextInput::make('dur')->numeric(),
+    ];
+}
+```
 
-1. **ATTENZIONE** alle differenze strutturali tra database:
-   - In **braindb**:
-     - Le tabelle geografiche hanno il campo `nome` ma NON `descrizione`
-     - Esempio: `nazione`, `regione`, `provincia`, `comune`
-   
-   - In **orisbroker**:
-     - Le stesse tabelle hanno sia `nome` che `descrizione`
+## Documentazione Correlata
+- [Regole Laraxot](../laravel/Modules/Xot/docs/rules/laraxot-rules.md)
+- [Verifica Campi Modello](../laravel/Modules/Xot/docs/memories/model-fields-validation.md)
+- [Piano Verifica Progressioni](../laravel/Modules/Progressioni/docs/model-fields-verification-plan.md)
+- [Best Practice Filament](../laravel/Modules/Xot/docs/filament_best_practices.md)
 
+<<<<<<< HEAD
 2. **SEMPRE** usare il campo corretto basato sul database:
    ```php
    // Per modelli Brain (CORRETTO ✅)
@@ -291,3 +295,12 @@ public function getTableActions(): array
 - [Principio di Sostituzione di Liskov](https://it.wikipedia.org/wiki/Principio_di_sostituzione_di_Liskov)
 - [Best Practices PHP](../php-strict-types.md) 
 - [Best Practices PHP](../PHP-STRICT-TYPES.md) 
+=======
+## Note Importanti
+- **CRITICO**: Verificare sempre la corrispondenza tra modello, migrazione e risorsa Filament
+- **DOCUMENTARE**: Ogni verifica deve essere documentata nel piano del modulo
+- **PREVENIRE**: Implementare controlli automatici per evitare regressioni
+- **TESTARE**: Verificare che le risorse funzionino correttamente dopo le correzioni
+
+*Ultimo aggiornamento: Giugno 2025* 
+>>>>>>> 0057ece (.)
