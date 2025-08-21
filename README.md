@@ -110,6 +110,7 @@ class XotBaseResource extends Resource
     }
 }
 ```
+<<<<<<< HEAD
 ## Modifiche Recenti (Giugno 2025)
 
 ### Deprecazione Comandi MCP
@@ -129,6 +130,9 @@ Il modulo può essere configurato tramite il file `config/module_xot.php`:
 - Permessi
 - Configurazioni specifiche per modulo
 
+=======
+
+>>>>>>> b258042 (.)
 ## 🚀 Installazione SUPER VELOCE
 
 ```bash

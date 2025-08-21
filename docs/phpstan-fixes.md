@@ -2,9 +2,32 @@
 
 Questo documento traccia gli errori PHPStan di livello 7 identificati nel modulo Xot e le relative soluzioni implementate.
 
+<<<<<<< HEAD
 ## Errori Identificati
 
 ### 1. Errore in Helpers/Helper.php
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+## Errori Identificati
+
+### 1. Errore in Helpers/Helper.php
+=======
+=======
+
+
+>>>>>>> 7ce328e (.)
+=======
+>>>>>>> 995f7cae (.)
+
+5693302 (.)
+
+b6f667c (.)
+
+# Correzioni PHPStan nel Modulo Xot
+<<<<<<< HEAD
+>>>>>>> 7dd92412 (.)
+>>>>>>> b258042 (.)
 
 ```
 Line 406: Call to function is_array() with array{0?: string, 1?: 'container'|'item', 2?: numeric-string} will always evaluate to true.
@@ -201,6 +224,53 @@ Questo controllo è più appropriato perché verifica che l'array `$matches` con
 ### 2. Correzione in Actions/Filament/AutoLabelAction.php
 
 Il problema è che il codice chiamava il metodo `getName()` sui componenti Filament, ma non tutti i componenti hanno questo metodo. La soluzione è stata modificare il metodo `getComponentName()` per utilizzare un approccio più robusto:
+<<<<<<< HEAD
+=======
+=======
+=======
+}
+```
+
+
+
+<<<<<<< HEAD
+>>>>>>> 7ce328e (.)
+=======
+>>>>>>> 995f7cae (.)
+
+5693302 (.)
+
+b6f667c (.)
+
+### 2. Validazione Dati
+```php
+/**
+ * @param array<string, mixed> $data
+ * @throws InvalidArgumentException
+ */
+private function validateData(array $data): void
+{
+    Assert::keyExists($data, 'required_field');
+    Assert::string($data['required_field']);
+
+### Versione HEAD
+
+aurmich/dev
+5693302 (.)
+
+b6f667c (.)
+
+### Servizi e Dependency Injection
+
+**Problema**: Metodi che utilizzano dependency injection non avevano tipi ben definiti.
+
+**Soluzione**:
+1. Specificare i tipi di parametro e di ritorno in modo esplicito
+2. Utilizzare interfacce per i servizi iniettati
+3. Aggiungere annotazioni PHPDoc quando necessario
+<<<<<<< HEAD
+>>>>>>> 7dd92412 (.)
+>>>>>>> b258042 (.)
 
 ```php
 private function getComponentName(Field|Component $component): string

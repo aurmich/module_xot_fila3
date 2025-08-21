@@ -29,6 +29,56 @@ ModuleName/
 ├── routes/
 ├── tests/
 └── composer.json
+<<<<<<< HEAD
+=======
+=======
+=======
+# Struttura dei Moduli in <nome progetto>
+
+Questo documento definisce le linee guida ufficiali per la struttura dei moduli all'interno del framework <nome progetto>.
+
+<<<<<<< HEAD
+>>>>>>> 7ce328e (.)
+=======
+>>>>>>> 995f7cae (.)
+---
+
+## Gestione dati geografici statici: GeoJsonModel readonly (ispirato a Squire)
+
+Per tutti i dati geografici statici (regioni, province, comuni, cap) di dimensioni gestibili, NON creare tabelle/migration dedicate. Utilizzare invece un modello base readonly (`GeoJsonModel`) che legge i dati direttamente da file JSON (es: `Modules/Geo/resources/json/comuni.json`).
+
+- I model specialistici (Region, Province, City, Cap) devono estendere la base GeoJsonModel e fornire metodi di filtro.
+- Versionare sempre il file json e documentare la struttura.
+- Aggiornare la documentazione di Geo/docs, SaluteOra/docs e questa stessa doc con collegamenti bidirezionali.
+
+Per dettagli implementativi e best practice vedi:
+- [Geo/docs/geo-json-model.md](../../Geo/docs/geo-json-model.md)
+- [SaluteOra/docs/geo-integration.md](../../SaluteOra/docs/geo-integration.md)
+- [Questa stessa doc (Xot/module-structure.md)](module-structure.md)
+
+---
+
+## Service Provider
+
+### Convenzioni Base
+
+Ogni modulo deve avere un ServiceProvider che estende `XotBaseServiceProvider`. Questo provider è responsabile della registrazione delle risorse del modulo (routes, views, translations, etc.) nell'applicazione.
+
+```php
+<?php
+
+declare(strict_types=1);
+
+namespace Modules\NomeModulo\Providers;
+
+use Modules\Xot\Providers\XotBaseServiceProvider;
+
+class NomeModuloServiceProvider extends XotBaseServiceProvider {
+    // Implementazione
+}
+<<<<<<< HEAD
+>>>>>>> 7dd92412 (.)
+>>>>>>> b258042 (.)
 ```
 
 ## Collegamenti

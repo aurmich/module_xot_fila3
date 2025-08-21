@@ -77,7 +77,13 @@ describe('XotBaseTransition', function () {
         expect($this->transition::$name)->toBe('test_transition');
     });
 
+<<<<<<< HEAD
    
+=======
+    it('has record property', function () {
+        expect(property_exists($this->transition, 'record'))->toBeTrue();
+    });
+>>>>>>> b258042 (.)
 
     it('can get record', function () {
         $record = $this->transition->getRecord();

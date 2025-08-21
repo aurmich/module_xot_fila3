@@ -1,3 +1,9 @@
+<<<<<<< HEAD:docs.backup.before-optimization/naming_conventions_uppercase.md
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD:docs/naming-conventions.md
+>>>>>>> b258042 (.):docs/naming_conventions_uppercase.md
 # Convenzioni di Nomenclatura in Laravel Modules
 
 Questo documento definisce le convenzioni ufficiali di nomenclatura da utilizzare in tutto il progetto Laravel Modules.
@@ -55,6 +61,14 @@ Questo documento descrive le convenzioni di denominazione da seguire all'interno
 - [Guida all'implementazione di PHPStan](./PHPSTAN-IMPLEMENTATION-GUIDE.md)
 - [Best practice per i provider di servizi](./SERVICE-PROVIDER-BEST-PRACTICES.md)
 - [Best practice per Filament](./FILAMENT-BEST-PRACTICES.md)
+<<<<<<< HEAD:docs.backup.before-optimization/naming_conventions_uppercase.md
+=======
+=======
+=======
+>>>>>>> 7ce328e (.)
+=======
+>>>>>>> 995f7cae (.)
+>>>>>>> b258042 (.):docs/naming_conventions_uppercase.md
 # Convenzioni di Nomenclatura in <nome progetto>
 
 Questo documento definisce le convenzioni ufficiali di nomenclatura da utilizzare in tutto il progetto <nome progetto>.
@@ -199,3 +213,13 @@ Descrizione dettagliata se necessaria
 ```
 
 Tipi: `feat`, `fix`, `docs`, `style`, `refactor`, `test`, `chore`
+<<<<<<< HEAD:docs.backup.before-optimization/naming_conventions_uppercase.md
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> 7dd92412 (.):docs/naming_conventions_uppercase.md
+=======
+>>>>>>> 7ce328e (.)
+=======
+>>>>>>> 995f7cae (.)
+>>>>>>> b258042 (.):docs/naming_conventions_uppercase.md

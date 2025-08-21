@@ -178,12 +178,12 @@ class HasTableWithXot implements HasTable
         return null;
     }
 
-    public function getTableFilterState(string $name): ?array
+    public function getTableFilterState(): array
     {
         return [];
     }
 
-    public function getTableGrouping(): ?\Filament\Tables\Grouping\Group
+    public function getTableGrouping(): ?string
     {
         return null;
     }
@@ -218,9 +218,9 @@ class HasTableWithXot implements HasTable
         return null;
     }
 
-    public function getSelectedTableRecords(bool $shouldFetchSelectedRecords = true): \Illuminate\Support\Collection
+    public function getSelectedTableRecords(): array
     {
-        return collect([]);
+        return [];
     }
 
     public function getAllTableRecordsCount(): int
@@ -365,9 +365,9 @@ class HasTableWithXot implements HasTable
     {
     }
 
-    public function parseTableFilterName(string $name): string
+    public function parseTableFilterName(): string
     {
-        return $name;
+        return '';
     }
 
     public function makeFilamentTranslatableContentDriver(): mixed
@@ -426,12 +426,12 @@ class HasTableWithoutOptionalMethods implements HasTable
         return null;
     }
 
-    public function getTableFilterState(string $name): ?array
+    public function getTableFilterState(): array
     {
         return [];
     }
 
-    public function getTableGrouping(): ?\Filament\Tables\Grouping\Group
+    public function getTableGrouping(): ?string
     {
         return null;
     }
@@ -466,9 +466,9 @@ class HasTableWithoutOptionalMethods implements HasTable
         return null;
     }
 
-    public function getSelectedTableRecords(bool $shouldFetchSelectedRecords = true): \Illuminate\Support\Collection
+    public function getSelectedTableRecords(): array
     {
-        return collect([]);
+        return [];
     }
 
     public function getAllTableRecordsCount(): int
@@ -613,9 +613,9 @@ class HasTableWithoutOptionalMethods implements HasTable
     {
     }
 
-    public function parseTableFilterName(string $name): string
+    public function parseTableFilterName(): string
     {
-        return $name;
+        return '';
     }
 
     public function makeFilamentTranslatableContentDriver(): mixed
