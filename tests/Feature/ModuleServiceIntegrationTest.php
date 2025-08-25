@@ -5,6 +5,7 @@ declare(strict_types=1);
 use Modules\Xot\Services\ModuleService;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 use Nwidart\Modules\Facades\Module;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 
@@ -15,6 +16,9 @@ use Illuminate\Support\Facades\File;
 =======
 use Illuminate\Support\Facades\File;
 >>>>>>> abfbbdf (.)
+=======
+use Illuminate\Support\Facades\File;
+>>>>>>> 1fd4ceb6 (.)
 
 describe('ModuleService Integration', function () {
     beforeEach(function () {

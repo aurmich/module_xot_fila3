@@ -107,6 +107,7 @@ class FakeSeederAction
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     /*
      * Get the table name for a model class.
      *
@@ -120,6 +121,8 @@ class FakeSeederAction
 >>>>>>> 5852845d (.)
 =======
 >>>>>>> abfbbdf (.)
+=======
+>>>>>>> 1fd4ceb6 (.)
     private function getTableName(string $modelClass): string
     {
         Assert::classExists($modelClass, 'La classe del modello deve esistere');

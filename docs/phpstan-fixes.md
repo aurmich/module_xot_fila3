@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Correzioni PHPStan Livello 7 - Modulo Xot
 =======
 # Correzioni PHPStan - 6 Gennaio 2025
@@ -6,6 +5,11 @@
 
 ## Errori Risolti
 
+<<<<<<< HEAD
+## Errori Identificati
+
+### 1. Errore in Helpers/Helper.php
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 ## Errori Identificati
@@ -740,6 +744,7 @@ private function exportTablesToCSV(string $mdbFile): array
     return $tables;
 }
 ```
+<<<<<<< HEAD
 =======
 ### 1. Chart/app/Datas/AnswersChartData.php
 
@@ -776,6 +781,32 @@ private function exportTablesToCSV(string $mdbFile): array
 - Metodo doveva restituire `array<string, Component>` ma restituiva `array<int|string, Component>`
 
 <<<<<<< HEAD
+=======
+
+#### 2. Gestione del caso in cui $tables potrebbe essere vuoto
+```php
+// Prima:
+private function importDataToMySQL(string $mdbFile, string $mysqlUser, string $mysqlPassword, string $mysqlDb): void
+{
+    $tables = $this->exportTablesToCSV($mdbFile);
+
+    foreach ($tables as $table) {
+        // ... codice per importare i dati ...
+    }
+}
+
+// Dopo:
+private function importDataToMySQL(string $mdbFile, string $mysqlUser, string $mysqlPassword, string $mysqlDb): void
+{
+    $tables = $this->exportTablesToCSV($mdbFile);
+
+    // Verifica che $tables non sia vuoto
+    if (empty($tables)) {
+        $this->error('Nessuna tabella da importare');
+        return;
+    }
+
+>>>>>>> 1fd4ceb6 (.)
     foreach ($tables as $table) {
         // ... codice per importare i dati ...
     }
@@ -926,6 +957,9 @@ protected array $listeners = [
 ```
 
 L'aggiunta dell'annotazione `@phpstan-var` fornisce a PHPStan un'informazione più specifica sul tipo della proprietà, permettendogli di verificare correttamente che tutti gli elementi dell'array siano stringhe. Questo è particolarmente utile quando si lavora con Livewire, dove i listener sono definiti come un array associativo di eventi e metodi da chiamare.
+<<<<<<< HEAD
 =======
 *Ultimo aggiornamento: 6 Gennaio 2025*
 >>>>>>> abfbbdf (.)
+=======
+>>>>>>> 1fd4ceb6 (.)

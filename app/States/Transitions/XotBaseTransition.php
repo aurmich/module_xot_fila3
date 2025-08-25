@@ -9,9 +9,13 @@ use Illuminate\Support\Facades\Notification;
 use Illuminate\Support\Str;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 use Modules\Notify\Datas\RecordNotificationData;
 >>>>>>> abfbbdf (.)
+=======
+use Modules\Notify\Datas\RecordNotificationData;
+>>>>>>> 1fd4ceb6 (.)
 use Modules\Notify\Notifications\RecordNotification;
 use Modules\Xot\Contracts\UserContract;
 use Spatie\ModelStates\Transition;
@@ -19,6 +23,7 @@ use Filament\Notifications\Notification as FilamentNotification;
 
 abstract class XotBaseTransition extends Transition
 {
+<<<<<<< HEAD
 <<<<<<< HEAD
     public function __construct(public Model $record, public ?string $message = '') {}
 =======
@@ -39,6 +44,11 @@ abstract class XotBaseTransition extends Transition
     {
     }
 >>>>>>> abfbbdf (.)
+=======
+    public function __construct(public Model $record, public ?string $message = '')
+    {
+    }
+>>>>>>> 1fd4ceb6 (.)
 
     public function handle(): Model
     {
@@ -51,6 +61,7 @@ abstract class XotBaseTransition extends Transition
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         /** @phpstan-ignore-next-line */
 =======
         /* @phpstan-ignore-next-line */
@@ -58,6 +69,9 @@ abstract class XotBaseTransition extends Transition
 =======
         /* @phpstan-ignore-next-line */
 >>>>>>> abfbbdf (.)
+=======
+        /* @phpstan-ignore-next-line */
+>>>>>>> 1fd4ceb6 (.)
         $this->record->state = new $newStateClass($this->record);
         $this->record->save();
 
@@ -66,6 +80,7 @@ abstract class XotBaseTransition extends Transition
 
     public function sendNotifications(): void
     {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -77,11 +92,14 @@ abstract class XotBaseTransition extends Transition
                 $this->sendRecipientNotification(null);
             }
 =======
+=======
+>>>>>>> 1fd4ceb6 (.)
         $recipients = $this->getNotificationRecipients();
         foreach ($recipients as $recipient) {
             
             $this->sendRecipientNotification($recipient);
             
+<<<<<<< HEAD
 >>>>>>> 5852845d (.)
 =======
         $recipients = $this->getNotificationRecipients();
@@ -90,10 +108,13 @@ abstract class XotBaseTransition extends Transition
             $this->sendRecipientNotification($recipient);
             
 >>>>>>> abfbbdf (.)
+=======
+>>>>>>> 1fd4ceb6 (.)
         }
     }
 
     /**
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
      * @return array<string, Model|null>
@@ -103,22 +124,29 @@ abstract class XotBaseTransition extends Transition
 =======
      * @return  array<string, RecordNotificationData>
 >>>>>>> abfbbdf (.)
+=======
+     * @return  array<string, RecordNotificationData>
+>>>>>>> 1fd4ceb6 (.)
      */
     public function getNotificationRecipients(): array
     {
         return [
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             'me' => $this->record,
             // 'patient' => $this->record->patient,
             // 'doctor' => $this->record->doctor,
 =======
+=======
+>>>>>>> 1fd4ceb6 (.)
             // 'me' => $this->record,
             'me_mail' => RecordNotificationData::from(['record' => $this->record, 'channel' => 'mail']),
             // 'patient' => $this->record->patient,
             // 'doctor' => $this->record->doctor,
             // 'patient_mail' => RecordNotificationData::from(['record' => $record->patient, 'channel' => 'mail']),
             // 'doctor_mail' => RecordNotificationData::from(['record' => $record->doctor, 'channel' => 'mail']),
+<<<<<<< HEAD
 >>>>>>> 5852845d (.)
 =======
             // 'me' => $this->record,
@@ -128,6 +156,8 @@ abstract class XotBaseTransition extends Transition
             // 'patient_mail' => RecordNotificationData::from(['record' => $record->patient, 'channel' => 'mail']),
             // 'doctor_mail' => RecordNotificationData::from(['record' => $record->doctor, 'channel' => 'mail']),
 >>>>>>> abfbbdf (.)
+=======
+>>>>>>> 1fd4ceb6 (.)
         ];
     }
 
@@ -143,11 +173,14 @@ abstract class XotBaseTransition extends Transition
     {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 5852845d (.)
 =======
 >>>>>>> abfbbdf (.)
+=======
+>>>>>>> 1fd4ceb6 (.)
         $type = $recipient->type->value;
         $slug = class_basename($this->record).'-'.$type.'-'.Str::of(class_basename(static::class))->kebab()->toString();
         $slug = Str::slug($slug);
@@ -155,6 +188,7 @@ abstract class XotBaseTransition extends Transition
         return $slug;
     }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     public function sendRecipientNotification(?UserContract $recipient): void
@@ -176,6 +210,13 @@ abstract class XotBaseTransition extends Transition
 =======
         $slug = $this->getNotificationSlug($recipient->record);
 >>>>>>> abfbbdf (.)
+=======
+    public function sendRecipientNotification(RecordNotificationData $recipient): void
+    {
+       
+
+        $slug = $this->getNotificationSlug($recipient->record);
+>>>>>>> 1fd4ceb6 (.)
 
         $notify = new RecordNotification(
             $this->record,
@@ -185,6 +226,7 @@ abstract class XotBaseTransition extends Transition
         $data = $this->getNotificationData();
         $notify = $notify->mergeData($data);
         $notify = $notify->addAttachments($this->getNotificationAttachments());
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
         // appointment-patient-pending-to-confirmed
@@ -198,12 +240,17 @@ abstract class XotBaseTransition extends Transition
         } catch (\TypeError $e) {
             dddx($e);
 =======
+=======
+>>>>>>> 1fd4ceb6 (.)
         
         try {
             Notification::route($recipient->getChannel(), $recipient->getRoute())
                 ->notify($notify);
+<<<<<<< HEAD
 =======
 >>>>>>> abfbbdf (.)
+=======
+>>>>>>> 1fd4ceb6 (.)
         } catch (\TypeError|\Webmozart\Assert\InvalidArgumentException $e) {
             $message = 'channel :['.$recipient->getChannel() .'] error: ['.$e->getMessage().']';
             FilamentNotification::make()
@@ -213,9 +260,12 @@ abstract class XotBaseTransition extends Transition
                 ->send();
             
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 5852845d (.)
 =======
 >>>>>>> abfbbdf (.)
+=======
+>>>>>>> 1fd4ceb6 (.)
         }
     }
 

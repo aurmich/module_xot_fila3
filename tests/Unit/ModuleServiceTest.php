@@ -8,15 +8,19 @@ use Nwidart\Modules\Facades\Module as ModuleFacade;
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 describe('ModuleService', function () {
     beforeEach(function () {
         $this->service = new ModuleService('TestModule');
 =======
+=======
+>>>>>>> 1fd4ceb6 (.)
 uses(Tests\TestCase::class);
 
 describe('ModuleService', function () {
     beforeEach(function () {
         $this->service = (new ModuleService())->setName('TestModule');
+<<<<<<< HEAD
 >>>>>>> 5852845d (.)
 =======
 uses(Tests\TestCase::class);
@@ -25,6 +29,8 @@ describe('ModuleService', function () {
     beforeEach(function () {
         $this->service = (new ModuleService())->setName('TestModule');
 >>>>>>> abfbbdf (.)
+=======
+>>>>>>> 1fd4ceb6 (.)
     });
 
     it('can be instantiated', function () {
@@ -42,6 +48,7 @@ describe('ModuleService', function () {
     it('can be instantiated with different module names', function () {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         $service1 = new ModuleService('Chart');
         $service2 = new ModuleService('User');
 =======
@@ -52,6 +59,10 @@ describe('ModuleService', function () {
         $service1 = (new ModuleService())->setName('Chart');
         $service2 = (new ModuleService())->setName('User');
 >>>>>>> abfbbdf (.)
+=======
+        $service1 = (new ModuleService())->setName('Chart');
+        $service2 = (new ModuleService())->setName('User');
+>>>>>>> 1fd4ceb6 (.)
         
         expect($service1)->toBeInstanceOf(ModuleService::class)
             ->and($service2)->toBeInstanceOf(ModuleService::class);
@@ -122,6 +133,7 @@ describe('ModuleService', function () {
     it('handles empty module gracefully', function () {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         $emptyService = new ModuleService('NonExistentModule');
 =======
         $emptyService = (new ModuleService())->setName('NonExistentModule');
@@ -129,6 +141,9 @@ describe('ModuleService', function () {
 =======
         $emptyService = (new ModuleService())->setName('NonExistentModule');
 >>>>>>> abfbbdf (.)
+=======
+        $emptyService = (new ModuleService())->setName('NonExistentModule');
+>>>>>>> 1fd4ceb6 (.)
         $result = $emptyService->getModels();
         
         expect($result)->toBeArray()
@@ -142,6 +157,7 @@ describe('ModuleService', function () {
         expect($reflection->hasProperty('name'))->toBeTrue();
     });
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     it('has proper constructor', function () {
@@ -160,6 +176,8 @@ describe('ModuleService', function () {
         expect(count($parameters))->toBeGreaterThanOrEqual(1)
             ->and($parameters[0]->getName())->toBe('name');
 =======
+=======
+>>>>>>> 1fd4ceb6 (.)
     it('uses setName method for configuration', function () {
         // ModuleService doesn't have a constructor with parameters
         // It uses setName() method for configuration (fluent interface)
@@ -167,11 +185,14 @@ describe('ModuleService', function () {
         
         expect($reflection->hasMethod('setName'))->toBeTrue()
             ->and($reflection->getMethod('setName')->isPublic())->toBeTrue();
+<<<<<<< HEAD
 >>>>>>> 5852845d (.)
 =======
         expect($reflection->hasMethod('setName'))->toBeTrue()
             ->and($reflection->getMethod('setName')->isPublic())->toBeTrue();
 >>>>>>> abfbbdf (.)
+=======
+>>>>>>> 1fd4ceb6 (.)
     });
 
     it('validates class structure', function () {
