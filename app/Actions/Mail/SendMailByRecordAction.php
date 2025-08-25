@@ -39,8 +39,13 @@ class SendMailByRecordAction
         //$res=Mail::to('marco.sottana@gmail.com')->send($mail);
         
         // Verifica che il model abbia le proprietà/metodi necessari
+<<<<<<< HEAD
         if (!isset($record->email)) {
             throw new \InvalidArgumentException('Model must have email attribute');
+=======
+        if (($record->email ?? null) === null || empty($record->email)) {
+            throw new \InvalidArgumentException('Model must have email property');
+>>>>>>> 5852845d (.)
         }
         
         if (!method_exists($record, 'option')) {

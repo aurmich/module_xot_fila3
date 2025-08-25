@@ -5,7 +5,11 @@
 
     <x-filament-widgets::widgets 
         :columns="$this->getColumns()" 
+<<<<<<< HEAD
         :data="[...isset($this->filters) ? ['filters' => $this->filters] : [], ...$this->getWidgetData()]" 
+=======
+        :data="[...(data_get($this, 'filters') !== null ? ['filters' => data_get($this, 'filters')] : []), ...$this->getWidgetData()]" 
+>>>>>>> 5852845d (.)
         :widgets="$this->getVisibleWidgets()" 
     />
 </x-filament-panels::page>
