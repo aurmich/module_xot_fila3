@@ -196,15 +196,21 @@ abstract class XotBaseMigration extends Migration
         }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         // If it's an object, access the property directly
         if (is_object($result) && isset($result->count)) {
             return $result->count > 0;
 =======
+=======
+>>>>>>> abfbbdf (.)
         // If it's an object, cast to array to avoid undefined property issues
         if (is_object($result)) {
             $resArray = (array) $result;
             return isset($resArray['count']) && (int) $resArray['count'] > 0;
+<<<<<<< HEAD
 >>>>>>> 5852845d (.)
+=======
+>>>>>>> abfbbdf (.)
         }
 
         // If neither, handle the error or unexpected case

@@ -66,6 +66,7 @@ docs/phpstan/
 docs/cache/
 cache/
 <<<<<<< HEAD
+<<<<<<< HEAD
 .git-blame-ignore-revs
 .php-cs-fixer.cache
 *.exe
@@ -79,3 +80,5 @@ cache/
 docs/phpstan/
 =======
 >>>>>>> 5852845d (.)
+=======
+>>>>>>> abfbbdf (.)

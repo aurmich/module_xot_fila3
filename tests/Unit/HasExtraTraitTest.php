@@ -3,6 +3,7 @@
 declare(strict_types=1);
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 use Modules\Xot\Models\Traits\HasExtraTrait;
 use Modules\Xot\Contracts\ExtraContract;
 use Illuminate\Database\Eloquent\Model;
@@ -15,11 +16,21 @@ namespace Modules\Xot\Tests\Unit;
 use Modules\Xot\Models\Traits\HasExtraTrait;
 use Modules\Xot\Contracts\ExtraContract;
 use Illuminate\Database\Eloquent\Model;
+=======
+namespace Modules\Xot\Tests\Unit;
+
+use Modules\Xot\Models\Traits\HasExtraTrait;
+use Modules\Xot\Contracts\ExtraContract;
+use Illuminate\Database\Eloquent\Model;
+>>>>>>> abfbbdf (.)
 use ReflectionClass;
 use ReflectionMethod;
 use stdClass;
 use Exception;
+<<<<<<< HEAD
 >>>>>>> 5852845d (.)
+=======
+>>>>>>> abfbbdf (.)
 
 describe('HasExtraTrait', function () {
     beforeEach(function () {
@@ -34,10 +45,14 @@ describe('HasExtraTrait', function () {
             public function getExtraClass(): string
             {
 <<<<<<< HEAD
+<<<<<<< HEAD
                 return TestExtra::class;
 =======
                 return HasExtraTraitTest::class;
 >>>>>>> 5852845d (.)
+=======
+                return HasExtraTraitTest::class;
+>>>>>>> abfbbdf (.)
             }
         };
 
@@ -72,11 +87,17 @@ describe('HasExtraTrait', function () {
 
     it('returns null for non-existent extra', function () {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
         // Mock the extra relationship to be null
         $this->testModel->extra = null;
         
 >>>>>>> 5852845d (.)
+=======
+        // Mock the extra relationship to be null
+        $this->testModel->extra = null;
+        
+>>>>>>> abfbbdf (.)
         $result = $this->testModel->getExtra('non_existent_key');
         
         expect($result)->toBeNull();
@@ -220,12 +241,22 @@ describe('HasExtraTrait', function () {
 });
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 // Helper class for testing
 class TestExtra extends Model implements ExtraContract 
+=======
+/**
+ * Helper class for testing HasExtraTrait.
+ */
+class HasExtraTraitTest extends Model implements ExtraContract 
+>>>>>>> abfbbdf (.)
 {
     protected $table = 'test_extras';
+    
+    /** @var list<string> */
     protected $fillable = ['model_id', 'model_type', 'extra_attributes'];
     
+<<<<<<< HEAD
 =======
 /**
  * Helper class for testing HasExtraTrait.
@@ -237,12 +268,17 @@ class HasExtraTraitTest extends Model implements ExtraContract
     /** @var list<string> */
     protected $fillable = ['model_id', 'model_type', 'extra_attributes'];
     
+=======
+>>>>>>> abfbbdf (.)
     /**
      * Get the attributes that should be cast.
      *
      * @return array<string, string>
      */
+<<<<<<< HEAD
 >>>>>>> 5852845d (.)
+=======
+>>>>>>> abfbbdf (.)
     protected function casts(): array
     {
         return [
@@ -251,13 +287,19 @@ class HasExtraTraitTest extends Model implements ExtraContract
     }
     
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> abfbbdf (.)
     /**
      * Get the parent model.
      *
      * @return \Illuminate\Database\Eloquent\Relations\MorphTo
      */
+<<<<<<< HEAD
 >>>>>>> 5852845d (.)
+=======
+>>>>>>> abfbbdf (.)
     public function model()
     {
         return $this->morphTo();

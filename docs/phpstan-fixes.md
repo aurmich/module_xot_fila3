@@ -1,7 +1,12 @@
+<<<<<<< HEAD
 # Correzioni PHPStan Livello 7 - Modulo Xot
+=======
+# Correzioni PHPStan - 6 Gennaio 2025
+>>>>>>> abfbbdf (.)
 
-Questo documento traccia gli errori PHPStan di livello 7 identificati nel modulo Xot e le relative soluzioni implementate.
+## Errori Risolti
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 ## Errori Identificati
 
@@ -735,30 +740,42 @@ private function exportTablesToCSV(string $mdbFile): array
     return $tables;
 }
 ```
+=======
+### 1. Chart/app/Datas/AnswersChartData.php
 
-#### 2. Gestione del caso in cui $tables potrebbe essere vuoto
-```php
-// Prima:
-private function importDataToMySQL(string $mdbFile, string $mysqlUser, string $mysqlPassword, string $mysqlDb): void
-{
-    $tables = $this->exportTablesToCSV($mdbFile);
+**Problema**: Errori `argument.type` e `offsetAccess.nonOffsetAccessible`
+- Linee 208, 254: `count()` su mixed
+- Linee 450, 460, 492, 496: Accesso offset su mixed
 
-    foreach ($tables as $table) {
-        // ... codice per importare i dati ...
-    }
-}
+**Soluzione**:
+- Aggiunto controllo `\is_array()` prima di `count()`
+- Aggiunto controllo esistenza `$options['plugins']` prima dell'accesso
+- Utilizzato variabile intermedia per evitare chiamate multiple
 
-// Dopo:
-private function importDataToMySQL(string $mdbFile, string $mysqlUser, string $mysqlPassword, string $mysqlDb): void
-{
-    $tables = $this->exportTablesToCSV($mdbFile);
+### 2. Chart/app/Models/Chart.php
 
-    // Verifica che $tables non sia vuoto
-    if (empty($tables)) {
-        $this->error('Nessuna tabella da importare');
-        return;
-    }
+**Problema**: Linea 187 - Tipo di ritorno errato
+- Metodo `getSettings()` doveva restituire `array<string, mixed>` ma restituiva `array<int, array<mixed>>`
 
+**Soluzione**:
+- Corretto tipo di ritorno a `array<string, array<string, mixed>>`
+- Aggiunto cast esplicito con `@var` per il risultato
+
+### 3. Job/app/Actions/GetTaskFrequenciesAction.php
+>>>>>>> abfbbdf (.)
+
+**Problema**: Linea 21 - Tipo di ritorno errato
+- Metodo doveva restituire `array<string, mixed>` ma restituiva `array<mixed, mixed>`
+
+**Soluzione**:
+- Aggiunto cast esplicito `@var array<string, mixed>` al risultato
+
+### 4. SaluteOra/app/States/Appointment/ReportPending.php
+
+**Problema**: Linea 27 - Tipo di ritorno errato
+- Metodo doveva restituire `array<string, Component>` ma restituiva `array<int|string, Component>`
+
+<<<<<<< HEAD
     foreach ($tables as $table) {
         // ... codice per importare i dati ...
     }
@@ -770,49 +787,70 @@ Queste modifiche garantiscono che:
 2. Il metodo importDataToMySQL verifichi che l'array di tabelle non sia vuoto prima di tentare di iterarlo
 3. Il codice sia più robusto e gestisca correttamente i casi limite
 4. I tipi di dati siano coerenti e correttamente documentati
+=======
+**Soluzione**:
+- Aggiunto PHPDoc con tipo di ritorno corretto
+- Aggiunto cast esplicito al risultato
 
-### 17. Correzione in Console/Commands/ImportMdbToSQLite.php
+### 5. User/app/Console/Commands/ChangeTypeCommand.php
 
-L'errore riguardava metodi senza tipo di ritorno specificato. Abbiamo implementato le seguenti correzioni:
+**Problema**: Linea 80 - Accesso proprietà su mixed
+- `$item->value` e `$item->getLabel()` su mixed
 
-#### 1. Aggiunta del tipo di ritorno al metodo createTablesInSQLite
-```php
-// Prima:
-private function createTablesInSQLite($mdbFile, $sqliteDb)
+**Soluzione**:
+- Aggiunto controllo `is_object($item) && method_exists($item, 'getLabel')`
+- Gestito caso fallback per valori sconosciuti
 
-// Dopo:
-/**
- * Crea le tabelle nel database SQLite basandosi sullo schema del file .mdb.
- *
- * @param string $mdbFile Percorso del file .mdb
- * @param string $sqliteDb Percorso del database SQLite
- * @return void
- */
-private function createTablesInSQLite(string $mdbFile, string $sqliteDb): void
-```
+### 6. Xot/app/Models/Traits/HasExtraTrait.php
 
-#### 2. Aggiunta del tipo di ritorno al metodo importDataToSQLite
-```php
-// Prima:
-private function importDataToSQLite($tables, $sqliteDb)
+**Problema**: Linea 62 - Tipo di ritorno errato
+- Metodo doveva restituire tipo specifico ma restituiva `array<mixed, mixed>`
 
-// Dopo:
-/**
- * Importa i dati CSV nelle tabelle SQLite.
- *
- * @param string[] $tables Array di nomi di tabelle
- * @param string $sqliteDb Percorso del database SQLite
- * @return void
- */
-private function importDataToSQLite(array $tables, string $sqliteDb): void
-```
+**Soluzione**:
+- Aggiunto tipo di ritorno esplicito al metodo
+- Aggiunto cast esplicito con `@var` al risultato
 
-Queste modifiche garantiscono che:
-1. Tutti i metodi abbiano un tipo di ritorno esplicito, come richiesto da PHPStan a livello 7
-2. I parametri dei metodi abbiano tipi espliciti, migliorando la type safety del codice
-3. La documentazione PHPDoc sia completa e accurata, facilitando la comprensione del codice
-4. Il codice sia più robusto e meno soggetto a errori di tipo
+### 7. Xot/app/Services/ModuleService.php
 
+**Problema**: Linea 112 - Tipo di ritorno errato
+- Metodo doveva restituire `array<int, string>` ma restituiva `array<string, class-string>`
+
+**Soluzione**:
+- Corretto tipo di ritorno PHPDoc a `array<string, class-string>`
+
+### 8. Xot/app/States/Transitions/XotBaseTransition.php
+
+**Problema**: Linea 39 - Tipo parametro errato
+- `sendRecipientNotification()` aspettava `UserContract|null` ma riceveva `Model|null`
+>>>>>>> abfbbdf (.)
+
+**Soluzione**:
+- Separato controllo per `UserContract` e `null`
+- Chiamate esplicite per ogni tipo
+
+## Pattern Comuni Identificati
+
+1. **Array Types**: Sempre specificare tipi degli array con `array<key, value>`
+2. **Mixed Handling**: Controllare tipi prima dell'uso con `is_array()`, `is_object()`
+3. **Offset Access**: Verificare esistenza chiavi prima dell'accesso
+4. **Return Types**: Usare cast espliciti `@var` quando necessario
+5. **Union Types**: Separare logica per ogni tipo possibile
+
+## Regole Applicate
+
+- **REGOLA ASSOLUTA**: Non modificare `phpstan.neon`
+- Specificare sempre tipi degli array: `array<string, mixed>` per associativi
+- Utilizzare controlli di tipo prima dell'uso
+- Aggiungere PHPDoc completi per tutti i metodi
+- Cast espliciti quando necessario per compatibilità PHPStan
+
+## Collegamenti
+
+- [PHPStan Critical Rules](./phpstan-critical-rules.md)
+- [Array Types Fixes](./phpstan-array-types-fixes.md)
+- [PHPStan Level 10 Guidelines](./phpstan-level10-guidelines.md)
+
+<<<<<<< HEAD
 ### 18. Correzione in Console/Commands/SearchStringInDatabaseCommand.php
 
 L'errore riguardava una discrepanza tra il tipo dichiarato nel PHPDoc e il tipo effettivo del parametro $results nel metodo formatResults. Il metodo si aspettava una Collection di oggetti generici, ma in realtà riceveva una Collection di oggetti stdClass:
@@ -888,3 +926,6 @@ protected array $listeners = [
 ```
 
 L'aggiunta dell'annotazione `@phpstan-var` fornisce a PHPStan un'informazione più specifica sul tipo della proprietà, permettendogli di verificare correttamente che tutti gli elementi dell'array siano stringhe. Questo è particolarmente utile quando si lavora con Livewire, dove i listener sono definiti come un array associativo di eventi e metodi da chiamare.
+=======
+*Ultimo aggiornamento: 6 Gennaio 2025*
+>>>>>>> abfbbdf (.)

@@ -8,12 +8,18 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\Notification;
 use Illuminate\Support\Str;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+use Modules\Notify\Datas\RecordNotificationData;
+>>>>>>> abfbbdf (.)
 use Modules\Notify\Notifications\RecordNotification;
 use Modules\Xot\Contracts\UserContract;
 use Spatie\ModelStates\Transition;
+use Filament\Notifications\Notification as FilamentNotification;
 
 abstract class XotBaseTransition extends Transition
 {
+<<<<<<< HEAD
     public function __construct(public Model $record, public ?string $message = '') {}
 =======
 use Modules\Notify\Datas\RecordNotificationData;
@@ -28,6 +34,11 @@ abstract class XotBaseTransition extends Transition
     {
     }
 >>>>>>> 5852845d (.)
+=======
+    public function __construct(public Model $record, public ?string $message = '')
+    {
+    }
+>>>>>>> abfbbdf (.)
 
     public function handle(): Model
     {
@@ -39,10 +50,14 @@ abstract class XotBaseTransition extends Transition
         $newStateClass = $stateNamespace.'\\'.$stateClassName;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         /** @phpstan-ignore-next-line */
 =======
         /* @phpstan-ignore-next-line */
 >>>>>>> 5852845d (.)
+=======
+        /* @phpstan-ignore-next-line */
+>>>>>>> abfbbdf (.)
         $this->record->state = new $newStateClass($this->record);
         $this->record->save();
 
@@ -51,6 +66,7 @@ abstract class XotBaseTransition extends Transition
 
     public function sendNotifications(): void
     {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
         $recipients = $this->getNotificationRecipients();
@@ -67,19 +83,31 @@ abstract class XotBaseTransition extends Transition
             $this->sendRecipientNotification($recipient);
             
 >>>>>>> 5852845d (.)
+=======
+        $recipients = $this->getNotificationRecipients();
+        foreach ($recipients as $recipient) {
+            
+            $this->sendRecipientNotification($recipient);
+            
+>>>>>>> abfbbdf (.)
         }
     }
 
     /**
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @return array<string, Model|null>
 =======
      * @return  array<string, RecordNotificationData>
 >>>>>>> 5852845d (.)
+=======
+     * @return  array<string, RecordNotificationData>
+>>>>>>> abfbbdf (.)
      */
     public function getNotificationRecipients(): array
     {
         return [
+<<<<<<< HEAD
 <<<<<<< HEAD
             'me' => $this->record,
             // 'patient' => $this->record->patient,
@@ -92,6 +120,14 @@ abstract class XotBaseTransition extends Transition
             // 'patient_mail' => RecordNotificationData::from(['record' => $record->patient, 'channel' => 'mail']),
             // 'doctor_mail' => RecordNotificationData::from(['record' => $record->doctor, 'channel' => 'mail']),
 >>>>>>> 5852845d (.)
+=======
+            // 'me' => $this->record,
+            'me_mail' => RecordNotificationData::from(['record' => $this->record, 'channel' => 'mail']),
+            // 'patient' => $this->record->patient,
+            // 'doctor' => $this->record->doctor,
+            // 'patient_mail' => RecordNotificationData::from(['record' => $record->patient, 'channel' => 'mail']),
+            // 'doctor_mail' => RecordNotificationData::from(['record' => $record->doctor, 'channel' => 'mail']),
+>>>>>>> abfbbdf (.)
         ];
     }
 
@@ -106,9 +142,12 @@ abstract class XotBaseTransition extends Transition
     public function getNotificationSlug(UserContract $recipient): string
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 5852845d (.)
+=======
+>>>>>>> abfbbdf (.)
         $type = $recipient->type->value;
         $slug = class_basename($this->record).'-'.$type.'-'.Str::of(class_basename(static::class))->kebab()->toString();
         $slug = Str::slug($slug);
@@ -117,12 +156,15 @@ abstract class XotBaseTransition extends Transition
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function sendRecipientNotification(?UserContract $recipient): void
+=======
+    public function sendRecipientNotification(RecordNotificationData $recipient): void
+>>>>>>> abfbbdf (.)
     {
-        if ($recipient == null) {
-            return;
-        }
+       
 
+<<<<<<< HEAD
         $slug = $this->getNotificationSlug($recipient);
 =======
     public function sendRecipientNotification(RecordNotificationData $recipient): void
@@ -131,6 +173,9 @@ abstract class XotBaseTransition extends Transition
 
         $slug = $this->getNotificationSlug($recipient->record);
 >>>>>>> 5852845d (.)
+=======
+        $slug = $this->getNotificationSlug($recipient->record);
+>>>>>>> abfbbdf (.)
 
         $notify = new RecordNotification(
             $this->record,
@@ -141,10 +186,15 @@ abstract class XotBaseTransition extends Transition
         $notify = $notify->mergeData($data);
         $notify = $notify->addAttachments($this->getNotificationAttachments());
 <<<<<<< HEAD
+<<<<<<< HEAD
         // appointment-patient-pending-to-confirmed
+=======
+        
+>>>>>>> abfbbdf (.)
         try {
-            Notification::route('mail', $recipient->email)
+            Notification::route($recipient->getChannel(), $recipient->getRoute())
                 ->notify($notify);
+<<<<<<< HEAD
         } catch (\TypeError $e) {
             dddx($e);
 =======
@@ -152,6 +202,8 @@ abstract class XotBaseTransition extends Transition
         try {
             Notification::route($recipient->getChannel(), $recipient->getRoute())
                 ->notify($notify);
+=======
+>>>>>>> abfbbdf (.)
         } catch (\TypeError|\Webmozart\Assert\InvalidArgumentException $e) {
             $message = 'channel :['.$recipient->getChannel() .'] error: ['.$e->getMessage().']';
             FilamentNotification::make()
@@ -160,7 +212,10 @@ abstract class XotBaseTransition extends Transition
                 ->body($message)
                 ->send();
             
+<<<<<<< HEAD
 >>>>>>> 5852845d (.)
+=======
+>>>>>>> abfbbdf (.)
         }
     }
 

@@ -40,9 +40,12 @@ class SendMailByRecordAction
         
         // Verifica che il model abbia le proprietà/metodi necessari
 <<<<<<< HEAD
+<<<<<<< HEAD
         if (!isset($record->email)) {
             throw new \InvalidArgumentException('Model must have email attribute');
 =======
+=======
+>>>>>>> abfbbdf (.)
         if (($record->email ?? null) === null || empty($record->email)) {
             throw new \InvalidArgumentException('Model must have email property');
 >>>>>>> 5852845d (.)
