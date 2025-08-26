@@ -365,6 +365,7 @@ public function execute(string $model_class): Factory
 1. Continuare con la correzione degli altri file nel modulo Xot.
 2. Procedere con la correzione degli errori nei moduli User e Notify.
 3. Verificare che le correzioni non introducano regressioni nel codice.
+<<<<<<< HEAD
 <<<<<<<< HEAD:docs/archive/phpstan/correzioni-effettuate.md
 4. Eseguire nuovamente PHPStan per verificare che gli errori siano stati risolti.
 ========
@@ -387,3 +388,6 @@ public function execute(string $model_class): Factory
 
 
 >>>>>>>> 1c7b79f (.):docs.backup.before-optimization/phpstan/correzioni-effettuate.md
+=======
+4. Eseguire nuovamente PHPStan per verificare che gli errori siano stati risolti.
+>>>>>>> 9109118 (.)

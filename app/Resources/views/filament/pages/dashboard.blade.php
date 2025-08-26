@@ -9,6 +9,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         :data="[...isset($this->filters) ? ['filters' => $this->filters] : [], ...$this->getWidgetData()]" 
 =======
         :data="[...(data_get($this, 'filters') !== null ? ['filters' => data_get($this, 'filters')] : []), ...$this->getWidgetData()]" 
@@ -22,6 +23,9 @@
 =======
         :data="[...(data_get($this, 'filters') !== null ? ['filters' => data_get($this, 'filters')] : []), ...$this->getWidgetData()]" 
 >>>>>>> 1c7b79f (.)
+=======
+        :data="[...($this->filters ?? null) !== null ? ['filters' => $this->filters] : [], ...$this->getWidgetData()]" 
+>>>>>>> 9109118 (.)
         :widgets="$this->getVisibleWidgets()" 
     />
 </x-filament-panels::page>

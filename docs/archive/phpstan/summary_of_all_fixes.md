@@ -72,6 +72,7 @@ Il progetto segue un'architettura basata esclusivamente su Filament, senza l'uso
 3. **Meno Errori Runtime**: Validazione dei tipi previene errori a runtime
 4. **Documentazione Migliorata**: PHPDoc più accurati facilitano la comprensione del codice
 5. **Mantenimento Standard Filament**: Tutte le correzioni rispettano l'architettura Filament-only
+<<<<<<< HEAD
 <<<<<<<< HEAD:docs/archive/phpstan/summary_of_all_fixes.md
 ========
 
@@ -84,3 +85,5 @@ Il progetto segue un'architettura basata esclusivamente su Filament, senza l'uso
 * [summary_of_all_fixes.md](../PHPStan/summary_of_all_fixes.md)
 
 >>>>>>>> 1c7b79f (.):docs.backup.before-optimization/phpstan/summary-of-all-fixes.md
+=======
+>>>>>>> 9109118 (.)

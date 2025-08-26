@@ -259,6 +259,7 @@ public function user()
 7. **Utilizzare collections invece di array quando possibile**
 8. **Configurare .phpstan.neon per ignorare errori non risolvibili**
 
+<<<<<<< HEAD
 <<<<<<<< HEAD:docs/archive/phpstan/phpstan-solutions.md
 Implementando queste soluzioni sistematicamente, sarà possibile risolvere la maggior parte degli errori PHPStan di livello 9. 
 ========
@@ -272,3 +273,6 @@ Implementando queste soluzioni sistematicamente, sarà possibile risolvere la ma
 * [phpstan-solutions.md](../PHPStan/phpstan-solutions.md)
 
 >>>>>>>> 1c7b79f (.):docs.backup.before-optimization/phpstan/phpstan-solutions.md
+=======
+Implementando queste soluzioni sistematicamente, sarà possibile risolvere la maggior parte degli errori PHPStan di livello 9. 
+>>>>>>> 9109118 (.)

@@ -435,10 +435,14 @@ public function test_b(): void
 **Sintomo**
 ```
 <<<<<<< HEAD
+<<<<<<< HEAD
 // Codice locale
 =======
 // Codice remoto
 >>>>>>> branch-name
+=======
+// Codice locale
+>>>>>>> 9109118 (.)
 ```
 
 **Soluzione**

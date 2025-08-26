@@ -37,6 +37,7 @@ The static property `$view` in XotBaseWidget is declared with a type of `view-st
 - Update the property type annotation to match the expected value type
 - Use PHPDoc or type casting to ensure type compatibility
 - Follow Laravel view-string conventions
+<<<<<<< HEAD
 <<<<<<<< HEAD:docs/archive/phpstan/property_type_fixes.md
 ========
 
@@ -49,3 +50,5 @@ The static property `$view` in XotBaseWidget is declared with a type of `view-st
 * [property_type_fixes.md](../PHPStan/property_type_fixes.md)
 
 >>>>>>>> 1c7b79f (.):docs.backup.before-optimization/phpstan/property-type-fixes.md
+=======
+>>>>>>> 9109118 (.)

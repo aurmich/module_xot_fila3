@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 9109118 (.)
 # Xot Module - Framework Base Laraxot
 
 ## Overview
@@ -42,6 +45,7 @@ Per accedere alla documentazione dettagliata originale, vedere il backup in:
 - [Root Documentation](../../../docs/)
 - [SaluteOra Module](../SaluteOra/docs/)
 - [Original Documentation Backup](../../../docs-consolidation-backup-*/Xot-docs-original/)
+<<<<<<< HEAD
 =======
 # Modulo Xot - Documentazione Completa
 
@@ -141,3 +145,5 @@ Il modulo Xot è il core del sistema Laraxot, fornendo funzionalità base e conv
 
 *Ultimo aggiornamento: Gennaio 2025*
 >>>>>>> 1c7b79f (.)
+=======
+>>>>>>> 9109118 (.)

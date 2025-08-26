@@ -144,6 +144,7 @@ function processData(array $data): string {
 }
 ```
 
+<<<<<<< HEAD
 <<<<<<<< HEAD:docs/archive/phpstan/mixed-type-solutions.md
 Seguendo queste linee guida, sarà possibile risolvere la maggior parte degli errori legati al tipo `mixed` segnalati da PHPStan al livello 9. 
 ========
@@ -166,3 +167,6 @@ Seguendo queste linee guida, sarà possibile risolvere la maggior parte degli er
 
 
 >>>>>>>> 1c7b79f (.):docs.backup.before-optimization/phpstan/mixed-type-solutions.md
+=======
+Seguendo queste linee guida, sarà possibile risolvere la maggior parte degli errori legati al tipo `mixed` segnalati da PHPStan al livello 9. 
+>>>>>>> 9109118 (.)

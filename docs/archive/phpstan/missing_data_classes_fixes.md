@@ -73,6 +73,7 @@ Implementeremo quindi le classi Data mancanti, iniziando da RouteData che sembra
 ## Impatto sulle Dipendenze
 
 Poiché il progetto utilizza esclusivamente Filament senza controller o Blade, queste classi Data servono principalmente come strutture per configurazione e trasferimento dati tra componenti Filament, non impattando l'architettura generale ma migliorando la manutenibilità del codice.
+<<<<<<< HEAD
 <<<<<<<< HEAD:docs/archive/phpstan/missing_data_classes_fixes.md
 ========
 
@@ -85,3 +86,5 @@ Poiché il progetto utilizza esclusivamente Filament senza controller o Blade, q
 * [missing_data_classes_fixes.md](../PHPStan/missing_data_classes_fixes.md)
 
 >>>>>>>> 1c7b79f (.):docs.backup.before-optimization/phpstan/missing-data-classes-fixes.md
+=======
+>>>>>>> 9109118 (.)

@@ -32,6 +32,7 @@ While the docblock indicates the correct return type, the actual implementation 
 - Improved type safety at a high PHPStan level
 - Better code reliability and maintainability
 - Clear expectations for extending classes
+<<<<<<< HEAD
 <<<<<<<< HEAD:docs/archive/phpstan/return_type_fixes.md
 ========
 
@@ -53,3 +54,5 @@ While the docblock indicates the correct return type, the actual implementation 
 
 
 >>>>>>>> 1c7b79f (.):docs.backup.before-optimization/phpstan/return-type-fixes.md
+=======
+>>>>>>> 9109118 (.)

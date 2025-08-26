@@ -87,6 +87,7 @@ For maximum efficiency, we'll implement fixes in the following order:
 - [ ] Fix SocioResource.php method call on mixed issues
 - [ ] Fix ListSoci.php method call on mixed issues
 - [ ] Run PHPStan after each batch of fixes to verify improvements
+<<<<<<< HEAD
 <<<<<<<< HEAD:docs/archive/phpstan/fix_implementation_plan.md
 ========
 
@@ -108,3 +109,5 @@ For maximum efficiency, we'll implement fixes in the following order:
 
 
 >>>>>>>> 1c7b79f (.):docs.backup.before-optimization/phpstan/fix-implementation-plan.md
+=======
+>>>>>>> 9109118 (.)

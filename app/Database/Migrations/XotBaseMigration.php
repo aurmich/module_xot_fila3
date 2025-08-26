@@ -200,7 +200,7 @@ abstract class XotBaseMigration extends Migration
 <<<<<<< HEAD
 <<<<<<< HEAD
         // If it's an object, access the property directly
-        if (is_object($result) && isset($result->count)) {
+        if (is_object($result) && ($result->count ?? null) !== null) {
             return $result->count > 0;
 =======
 =======

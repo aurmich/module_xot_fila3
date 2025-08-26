@@ -234,11 +234,12 @@ try {
 - [Filament Extension Pattern Analysis](../../Notify/docs/FILAMENT_EXTENSION_PATTERN_ANALYSIS.md)
 - [Patient Module - Namespace Conventions](../../Patient/docs/NAMESPACE_CONVENTIONS.md)
 - [Patient Module - Validation Errors](../../Patient/docs/VALIDATION_ERRORS.md)
-- [PHP Strict Types](./php-strict-types.md)
+- [PHP Strict Types](./PHP-STRICT-TYPES.md)
 - [PHPStan Implementation Guide](./PHPSTAN-IMPLEMENTATION-GUIDE.md)
 - [Naming Conventions](./NAMING-CONVENTIONS.md)
 - [Service Provider Best Practices](./SERVICE-PROVIDER-BEST-PRACTICES.md)
 - [Filament Best Practices](./FILAMENT-BEST-PRACTICES.md)
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -247,6 +248,8 @@ try {
 >>>>>>> 7ce328e (.)
 =======
 >>>>>>> 995f7cae (.)
+=======
+>>>>>>> 9109118 (.)
 # Laraxot Code Quality Standards
 
 ## Overview
@@ -533,6 +536,7 @@ unset($translations['existing_key']); // MAI!
 *"Nel codice Laraxot, ogni riga è un verso della sinfonia dell'architettura perfetta."*
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 7dd92412 (.)
 =======
 >>>>>>> 7ce328e (.)
@@ -545,3 +549,5 @@ unset($translations['existing_key']); // MAI!
 
 *Laraxot Code Quality Standards - Ensuring Excellence Across All Modules*
 >>>>>>> 1c7b79f (.)
+=======
+>>>>>>> 9109118 (.)

@@ -206,3 +206,42 @@ Questo documento descrive le regole fondamentali per la creazione e la manutenzi
 - Una buona documentazione riduce il tempo di onboarding
 - La documentazione deve evolversi insieme al codice
 - I collegamenti bidirezionali sono essenziali per la navigabilità
+# Documentazione
+# Regole di Documentazione
+
+## Panoramica
+Questo documento descrive le regole fondamentali per la creazione e la manutenzione della documentazione tecnica nel progetto.
+
+## Collegamenti
+
+### Documentazione Correlata
+- [README](../README.md) - Panoramica del modulo Xot
+- [Convenzioni di Naming](./NAMING_CONVENTIONS.md) - Regole di naming per campi, classi e directory
+- [Struttura dei Moduli](./MODULE_STRUCTURE.md) - Convenzioni di struttura dei moduli
+- [Prompt di Documentazione](./prompts/DOCUMENTATION_PROMPTS.md) - Regole e best practices per i prompt
+
+## Validazione dei Collegamenti
+
+### Regole Fondamentali
+- MAI usare percorsi assoluti nei collegamenti
+- MAI includere il nome del progetto nei percorsi
+- MAI usare percorsi che iniziano con `/var/www/html/` o simili
+- MAI usare percorsi che includono `saluteora` o altri nomi specifici
+
+### Formato Corretto
+```markdown
+
+# Collegamenti Corretti
+[Documento Correlato](./documento.md)
+[Documento in Sottodirectory](./sottodirectory/documento.md)
+[Documento in Modulo Altro](../../AltroModulo/docs/documento.md)
+[Documento in Root](../../../docs/documento.md)
+```
+
+### Formato Non Corretto
+```markdown
+
+## Risorse Aggiuntive
+- [Changelog](../../../Xot/docs/changelog/README.md)
+- [Contributing](../../../Xot/docs/contributing.md)
+- [Security](../../../Xot/docs/security.md) 
