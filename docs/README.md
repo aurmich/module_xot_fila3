@@ -1,425 +1,1065 @@
-# 🏗️ **Xot Module** - Fondamento Architetturale Laraxot PTVX
+# Modulo Xot - Fondamento Architetturale Laraxot
 
-## 📋 **Panoramica**
+## Panoramica
 
-Il modulo **Xot** è il fondamento architetturale dell'ecosistema Laraxot PTVX, implementando i principi **DRY**, **KISS**, **SOLID** e **Robustezza** per tutti i moduli derivati. Fornisce classi base, pattern architetturali e convenzioni standardizzate.
+Il modulo Xot è il fondamento architetturale dell'ecosistema Laraxot PTVX. Fornisce classi base, trait, service provider e funzionalità core che vengono estesi e utilizzati da tutti gli altri moduli dell'applicazione. Implementa i principi DRY, KISS, SOLID e robustezza per garantire coerenza e manutenibilità.
 
-## 🎯 **Principi Fondamentali**
+## Caratteristiche Principali
 
-### **DRY (Don't Repeat Yourself)**
-- **Centralizzazione**: Classi base e trait condivisi per evitare duplicazioni
-- **Riusabilità**: Pattern architetturali standardizzati e riutilizzabili
-- **Manutenibilità**: Aggiornamenti centralizzati che si propagano automaticamente
+- **Classi Base**: Modelli, controller e resource base per tutti i moduli
+- **Service Provider Base**: Service provider base con funzionalità comuni
+- **Trait Condivisi**: Trait riutilizzabili per funzionalità comuni
+- **Middleware Base**: Middleware base per autenticazione e autorizzazione
+- **Configurazioni Base**: Configurazioni standard per tutti i moduli
+- **Utilities**: Helper e utility functions condivise
 
-### **KISS (Keep It Simple, Stupid)**
-- **Struttura lineare**: Organizzazione intuitiva e facile da navigare
-- **Naming coerente**: Convenzioni uniformi in tutto il sistema
-- **Navigazione semplice**: Massimo 3 livelli di profondità nella documentazione
+## Struttura del Modulo
 
-### **SOLID**
-- **Single Responsibility**: Ogni classe ha uno scopo specifico e ben definito
-- **Open/Closed**: Estendibile senza modificare il codice esistente
-- **Liskov Substitution**: Sottoclassi perfettamente sostituibili
-- **Interface Segregation**: Interfacce specifiche per ogni responsabilità
-- **Dependency Inversion**: Dipendenze da astrazioni, non da implementazioni
-
-### **Robust**
-- **Gestione errori**: Sistema robusto di gestione delle eccezioni
-- **Validazione**: Controlli automatici e validazione dei dati
-- **Fallback**: Meccanismi di recupero per situazioni critiche
-
-### **Laraxot**
-- **Architettura modulare**: Sistema modulare scalabile e manutenibile
-- **Convenzioni standard**: Regole uniformi per tutti i moduli
-- **Integrazione Filament**: Supporto nativo per l'ecosistema Filament
-
-## 🏗️ **Componenti Core**
-
-### **Classi Base Fondamentali**
-
-#### **BaseModel**
-```php
-use Modules\Xot\Models\BaseModel;
-
-class MioModello extends BaseModel
-{
-    // Implementazione specifica del modulo
-    protected $fillable = ['nome', 'descrizione'];
-}
+```
+Modules/Xot/
+├── app/
+│   ├── Models/
+│   │   ├── XotBaseModel.php
+│   │   └── BaseModel.php
+│   ├── Http/
+│   │   ├── Controllers/
+│   │   │   └── XotBaseController.php
+│   │   └── Middleware/
+│   │       ├── XotBaseMiddleware.php
+│   │       └── CheckPermission.php
+│   ├── Filament/
+│   │   ├── Resources/
+│   │   │   └── XotBaseResource.php
+│   │   ├── Pages/
+│   │   │   └── XotBasePage.php
+│   │   └── RelationManagers/
+│   │       └── XotBaseRelationManager.php
+│   ├── Providers/
+│   │   └── XotBaseServiceProvider.php
+│   ├── Traits/
+│   │   ├── HasUuid.php
+│   │   ├── HasSlug.php
+│   │   └── HasStatus.php
+│   └── Services/
+│       ├── BaseService.php
+│       └── CacheService.php
+├── config/
+├── database/
+│   └── migrations/
+│       └── XotBaseMigration.php
+├── docs/
+├── lang/
+├── resources/
+└── tests/
 ```
 
-**Caratteristiche:**
-- Gestione automatica dei campi `extra`
-- Trait condivisi per funzionalità comuni
-- Convenzioni standard per relazioni e validazioni
+## Componenti Principali
 
-#### **XotBaseResource**
+### XotBaseModel
+
+Modello base per tutti i moduli:
+
 ```php
-use Modules\Xot\Filament\Resources\XotBaseResource;
-
-class MiaRisorsa extends XotBaseResource
+abstract class XotBaseModel extends Model
 {
-    // Configurazione specifica della risorsa
-    public static function getFormSchema(): array
+    use HasFactory, HasUuid, HasSlug, HasStatus;
+
+    protected $guarded = [];
+
+    protected $casts = [
+        'created_at' => 'datetime',
+        'updated_at' => 'datetime',
+        'deleted_at' => 'datetime',
+    ];
+
+    /**
+     * Get the table associated with the model.
+     */
+    public function getTable(): string
     {
-        return [
-            // Schema del form
-        ];
+        return $this->table ?? Str::snake(Str::pluralStudly(class_basename($this)));
+    }
+
+    /**
+     * Get the connection name for the model.
+     */
+    public function getConnectionName(): string
+    {
+        return $this->connection ?? config('database.default');
+    }
+
+    /**
+     * Get the attributes that should be cast.
+     */
+    protected function casts(): array
+    {
+        return $this->casts;
     }
 }
 ```
 
-**Caratteristiche:**
-- Gestione automatica delle traduzioni
-- Pattern standardizzati per tabelle e form
-- Integrazione nativa con Filament
+### XotBaseController
 
-#### **XotBaseServiceProvider**
-```php
-use Modules\Xot\Providers\XotBaseServiceProvider;
-
-class MioServiceProvider extends XotBaseServiceProvider
-{
-    protected string $module_name = 'MioModulo';
-    
-    public function boot(): void
-    {
-        parent::boot();
-        // Personalizzazioni specifiche del modulo
-    }
-}
-```
-
-**Caratteristiche:**
-- Bootstrap automatico di views, traduzioni e migrazioni
-- Registrazione automatica di componenti Filament
-- Gestione centralizzata degli asset
-
-### **Pattern Architetturali**
-
-#### **Architettura Modulare**
-- **Struttura standardizzata**: Organizzazione uniforme per tutti i moduli
-- **Dipendenze gestite**: Sistema di dipendenze tra moduli
-- **Isolamento**: Ogni modulo è indipendente e testabile
-
-#### **Sistema Moduli**
-- **Auto-discovery**: Rilevamento automatico di componenti
-- **Lazy loading**: Caricamento on-demand per ottimizzare le performance
-- **Configurazione centralizzata**: Gestione unificata delle configurazioni
-
-#### **Pattern Database**
-- **Migrazioni standardizzate**: Estensione di `XotBaseMigration`
-- **Modelli base**: Ereditarietà da `BaseModel`
-- **Relazioni**: Pattern standardizzati per le relazioni Eloquent
-
-## 🚀 **Quick Start**
-
-### **1. Creazione di un Nuovo Modulo**
-
-```bash
-# Struttura standard del modulo
-Modules/
-└── MioModulo/
-    ├── app/
-    │   ├── Models/
-    │   ├── Http/
-    │   └── Filament/
-    ├── config/
-    ├── database/
-    ├── docs/
-    ├── lang/
-    ├── resources/
-    └── routes/
-```
-
-### **2. Estendere Classi Base**
+Controller base per tutti i moduli:
 
 ```php
-// Modello
-namespace Modules\MioModulo\app\Models;
-
-use Modules\Xot\Models\BaseModel;
-
-class MioModello extends BaseModel
+abstract class XotBaseController extends Controller
 {
-    protected $fillable = ['nome', 'descrizione'];
-    
-    public function relazioni()
+    use AuthorizesRequests, ValidatesRequests;
+
+    /**
+     * The model class for this controller.
+     */
+    protected string $modelClass;
+
+    /**
+     * The resource class for this controller.
+     */
+    protected string $resourceClass;
+
+    /**
+     * The request class for validation.
+     */
+    protected string $requestClass;
+
+    /**
+     * Display a listing of the resource.
+     */
+    public function index(Request $request)
     {
-        return $this->hasMany(AltroModello::class);
-    }
-}
+        $this->authorize('viewAny', $this->modelClass);
 
-// Risorsa Filament
-namespace Modules\MioModulo\app\Filament\Resources;
-
-use Modules\Xot\Filament\Resources\XotBaseResource;
-
-class MioModelloResource extends XotBaseResource
-{
-    public static function getFormSchema(): array
-    {
-        return [
-            // Schema del form
-        ];
-    }
-}
-```
-
-### **3. Service Provider**
-
-```php
-namespace Modules\MioModulo\Providers;
-
-use Modules\Xot\Providers\XotBaseServiceProvider;
-
-class MioModuloServiceProvider extends XotBaseServiceProvider
-{
-    protected string $module_name = 'MioModulo';
-    
-    public function boot(): void
-    {
-        parent::boot();
+        $query = $this->modelClass::query();
         
-        // Personalizzazioni specifiche
-        $this->registerCustomComponents();
+        if (method_exists($this, 'applyFilters')) {
+            $query = $this->applyFilters($query, $request);
+        }
+
+        $items = $query->paginate($request->get('per_page', 15));
+
+        return $this->resourceClass::collection($items);
     }
-    
-    protected function registerCustomComponents(): void
+
+    /**
+     * Store a newly created resource in storage.
+     */
+    public function store(Request $request)
     {
-        // Registrazione componenti custom
+        $this->authorize('create', $this->modelClass);
+
+        $validated = $request->validate((new $this->requestClass)->rules());
+
+        $item = $this->modelClass::create($validated);
+
+        return new $this->resourceClass($item);
     }
 }
 ```
 
-## 📚 **Documentazione Completa**
+### XotBaseResource
 
-### **Core Architecture**
-- **Base Classes**: Classi base e loro utilizzo
-- **Service Providers**: Pattern per i service provider
-- **Database Patterns**: Migrazioni e modelli
-- **Testing Standards**: Standard di testing e best practices
-
-### **Development Guidelines**
-- **Code Quality**: Standard di qualità del codice
-- **Best Practices**: Pattern e convenzioni
-- **Troubleshooting**: Risoluzione problemi comuni
-
-### **API Reference**
-- **Interfaces**: Interfacce disponibili
-- **Methods**: Metodi pubblici e loro utilizzo
-- **Examples**: Esempi pratici di implementazione
-
-## 🧪 **Testing Standards**
-
-### **Test Coverage Goals**
-- **100%** per le classi base Xot
-- **80%+** per tutti i moduli derivati
-- **Critical paths** devono avere copertura completa
-
-### **Base Test Classes**
+Resource base per Filament:
 
 ```php
-use Modules\Xot\Tests\XotBaseTestCase;
-
-class MioModuloTest extends XotBaseTestCase
+abstract class XotBaseResource extends Resource
 {
-    public function test_creazione_modello()
+    protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
+    protected static ?string $navigationGroup = 'Sistema';
+    protected static ?int $navigationSort = 100;
+
+    /**
+     * Get the form schema for the resource.
+     */
+    public static function getFormSchema(): array
     {
-        $modello = MioModello::create([
-            'nome' => 'Test',
-            'descrizione' => 'Descrizione test'
+        return [
+            Forms\Components\Section::make('Informazioni Base')
+                ->schema([
+                    Forms\Components\TextInput::make('name')
+                        ->required()
+                        ->maxLength(255),
+                    Forms\Components\Textarea::make('description')
+                        ->maxLength(65535)
+                        ->columnSpanFull(),
+                ])
+                ->columns(2),
+        ];
+    }
+
+    /**
+     * Get the table columns for the resource.
+     */
+    public static function getTableColumns(): array
+    {
+        return [
+            Tables\Columns\TextColumn::make('name')
+                ->searchable()
+                ->sortable(),
+            Tables\Columns\TextColumn::make('created_at')
+                ->dateTime()
+                ->sortable()
+                ->toggleable(isToggledHiddenByDefault: true),
+        ];
+    }
+
+    /**
+     * Get the table actions for the resource.
+     */
+    public static function getTableActions(): array
+    {
+        return [
+            Tables\Actions\EditAction::make(),
+            Tables\Actions\DeleteAction::make(),
+        ];
+    }
+}
+```
+
+### XotBaseRelationManager
+
+Relation manager base per Filament:
+
+```php
+abstract class XotBaseRelationManager extends RelationManager
+{
+    use HasXotTable;
+
+    protected static ?string $recordTitleAttribute = 'name';
+
+    /**
+     * Get the form schema for the relation manager.
+     */
+    public function getFormSchema(): array
+    {
+        return [
+            Forms\Components\TextInput::make('name')
+                ->required()
+                ->maxLength(255),
+        ];
+    }
+
+    /**
+     * Get the table columns for the relation manager.
+     */
+    public function getTableColumns(): array
+    {
+        return [
+            Tables\Columns\TextColumn::make('name')
+                ->searchable()
+                ->sortable(),
+        ];
+    }
+
+    /**
+     * Get the table header actions for the relation manager.
+     */
+    public function getTableHeaderActions(): array
+    {
+        return [
+            Tables\Actions\AttachAction::make(),
+        ];
+    }
+
+    /**
+     * Get the table actions for the relation manager.
+     */
+    public function getTableActions(): array
+    {
+        return [
+            Tables\Actions\EditAction::make(),
+            Tables\Actions\DetachAction::make(),
+        ];
+    }
+}
+```
+
+### XotBaseServiceProvider
+
+Service provider base per tutti i moduli:
+
+```php
+abstract class XotBaseServiceProvider extends ServiceProvider
+{
+    /**
+     * The module namespace.
+     */
+    protected string $module_name;
+
+    /**
+     * Register any application services.
+     */
+    public function register(): void
+    {
+        $this->registerConfig();
+        $this->registerBindings();
+    }
+
+    /**
+     * Bootstrap any application services.
+     */
+    public function boot(): void
+    {
+        $this->loadViewsFrom(module_path($this->module_name, 'resources/views'), strtolower($this->module_name));
+        $this->loadTranslationsFrom(module_path($this->module_name, 'lang'), strtolower($this->module_name));
+        $this->loadMigrationsFrom(module_path($this->module_name, 'database/migrations'));
+        $this->loadRoutesFrom(module_path($this->module_name, 'routes'));
+        
+        $this->publishes([
+            module_path($this->module_name, 'config') => config_path(strtolower($this->module_name)),
+        ], 'config');
+        
+        $this->publishes([
+            module_path($this->module_name, 'resources/views') => resource_path('views/vendor/'.strtolower($this->module_name)),
+        ], 'views');
+    }
+
+    /**
+     * Register the module configuration.
+     */
+    protected function registerConfig(): void
+    {
+        $this->mergeConfigFrom(
+            module_path($this->module_name, 'config/config.php'),
+            strtolower($this->module_name)
+        );
+    }
+
+    /**
+     * Register the module bindings.
+     */
+    protected function registerBindings(): void
+    {
+        // Override in child classes to register specific bindings
+    }
+}
+```
+
+### XotBaseMigration
+
+Migrazione base per tutti i moduli:
+
+```php
+abstract class XotBaseMigration extends Migration
+{
+    /**
+     * The name of the table.
+     */
+    protected string $table_name;
+
+    /**
+     * Run the migrations.
+     */
+    public function up(): void
+    {
+        if (Schema::hasTable($this->table_name)) {
+            echo 'Table ['.$this->table_name.'] already exists';
+            return;
+        }
+
+        Schema::create($this->table_name, function (Blueprint $table) {
+            $this->createTableSchema($table);
+        });
+
+        echo 'Table ['.$this->table_name.'] created successfully!';
+    }
+
+    /**
+     * Create the table schema.
+     */
+    abstract protected function createTableSchema(Blueprint $table): void;
+
+    /**
+     * Check if the table exists.
+     */
+    protected function hasTable(string $table): bool
+    {
+        return Schema::hasTable($table);
+    }
+
+    /**
+     * Check if the column exists.
+     */
+    protected function hasColumn(string $table, string $column): bool
+    {
+        return Schema::hasColumn($table, $column);
+    }
+
+    /**
+     * Add a comment to the table.
+     */
+    protected function tableComment(string $table, string $comment): void
+    {
+        DB::statement("ALTER TABLE `{$table}` COMMENT = '{$comment}'");
+    }
+
+    /**
+     * Add a comment to the column.
+     */
+    protected function columnComment(string $table, string $column, string $comment): void
+    {
+        DB::statement("ALTER TABLE `{$table}` MODIFY COLUMN `{$column}` COMMENT '{$comment}'");
+    }
+}
+```
+
+## Traits Condivisi
+
+### HasUuid Trait
+
+Gestione UUID per i modelli:
+
+```php
+trait HasUuid
+{
+    protected static function bootHasUuid(): void
+    {
+        static::creating(function ($model) {
+            if (empty($model->uuid)) {
+                $model->uuid = Str::uuid()->toString();
+            }
+        });
+    }
+
+    /**
+     * Get the route key for the model.
+     */
+    public function getRouteKeyName(): string
+    {
+        return 'uuid';
+    }
+
+    /**
+     * Find a model by its UUID.
+     */
+    public static function findByUuid(string $uuid): ?static
+    {
+        return static::where('uuid', $uuid)->first();
+    }
+}
+```
+
+### HasSlug Trait
+
+Gestione slug per i modelli:
+
+```php
+trait HasSlug
+{
+    protected static function bootHasSlug(): void
+    {
+        static::creating(function ($model) {
+            if (empty($model->slug) && !empty($model->name)) {
+                $model->slug = Str::slug($model->name);
+            }
+        });
+
+        static::updating(function ($model) {
+            if ($model->isDirty('name') && empty($model->slug)) {
+                $model->slug = Str::slug($model->name);
+            }
+        });
+    }
+
+    /**
+     * Find a model by its slug.
+     */
+    public static function findBySlug(string $slug): ?static
+    {
+        return static::where('slug', $slug)->first();
+    }
+
+    /**
+     * Generate a unique slug.
+     */
+    public function generateUniqueSlug(): string
+    {
+        $baseSlug = Str::slug($this->name);
+        $slug = $baseSlug;
+        $counter = 1;
+
+        while (static::where('slug', $slug)->where('id', '!=', $this->id)->exists()) {
+            $slug = $baseSlug . '-' . $counter;
+            $counter++;
+        }
+
+        return $slug;
+    }
+}
+```
+
+### HasStatus Trait
+
+Gestione stati per i modelli:
+
+```php
+trait HasStatus
+{
+    /**
+     * Get the status options.
+     */
+    public static function getStatusOptions(): array
+    {
+        return [
+            'active' => 'Attivo',
+            'inactive' => 'Inattivo',
+            'draft' => 'Bozza',
+            'published' => 'Pubblicato',
+        ];
+    }
+
+    /**
+     * Check if the model is active.
+     */
+    public function isActive(): bool
+    {
+        return $this->status === 'active';
+    }
+
+    /**
+     * Check if the model is published.
+     */
+    public function isPublished(): bool
+    {
+        return $this->status === 'published';
+    }
+
+    /**
+     * Scope a query to only include active models.
+     */
+    public function scopeActive(Builder $query): Builder
+    {
+        return $query->where('status', 'active');
+    }
+
+    /**
+     * Scope a query to only include published models.
+     */
+    public function scopePublished(Builder $query): Builder
+    {
+        return $query->where('status', 'published');
+    }
+}
+```
+
+## Configurazione
+
+### Configurazione Base
+
+```php
+// config/xot.php
+return [
+    'models' => [
+        'base_model' => \Modules\Xot\Models\XotBaseModel::class,
+        'user_model' => \Modules\User\Models\User::class,
+    ],
+    
+    'filament' => [
+        'base_resource' => \Modules\Xot\Filament\Resources\XotBaseResource::class,
+        'base_page' => \Modules\Xot\Filament\Pages\XotBasePage::class,
+        'base_relation_manager' => \Modules\Xot\Filament\Resources\RelationManagers\XotBaseRelationManager::class,
+    ],
+    
+    'migrations' => [
+        'base_migration' => \Modules\Xot\Database\Migrations\XotBaseMigration::class,
+    ],
+    
+    'cache' => [
+        'enabled' => env('XOT_CACHE_ENABLED', true),
+        'ttl' => env('XOT_CACHE_TTL', 3600),
+    ],
+];
+```
+
+### Environment Variables
+
+```env
+# Configurazione Xot
+XOT_CACHE_ENABLED=true
+XOT_CACHE_TTL=3600
+XOT_DEBUG=false
+XOT_LOG_ENABLED=true
+
+# Database
+XOT_DB_CONNECTION=mysql
+XOT_DB_PREFIX=xot_
+
+# Cache
+XOT_CACHE_DRIVER=redis
+XOT_CACHE_PREFIX=xot_
+```
+
+## Utilizzo
+
+### Estensione Modelli
+
+```php
+use Modules\Xot\Models\XotBaseModel;
+
+class MyModel extends XotBaseModel
+{
+    protected $table = 'my_models';
+    
+    protected $fillable = [
+        'name',
+        'description',
+        'status',
+    ];
+
+    protected function createTableSchema(Blueprint $table): void
+    {
+        $table->id();
+        $table->uuid('uuid')->unique();
+        $table->string('name');
+        $table->text('description')->nullable();
+        $table->string('slug')->unique();
+        $table->enum('status', ['active', 'inactive'])->default('active');
+        $table->timestamps();
+        $table->softDeletes();
+    }
+}
+```
+
+### Estensione Controller
+
+```php
+use Modules\Xot\Http\Controllers\XotBaseController;
+
+class MyController extends XotBaseController
+{
+    protected string $modelClass = MyModel::class;
+    protected string $resourceClass = MyResource::class;
+    protected string $requestClass = MyRequest::class;
+
+    protected function applyFilters(Builder $query, Request $request): Builder
+    {
+        if ($request->has('status')) {
+            $query->where('status', $request->get('status'));
+        }
+
+        if ($request->has('search')) {
+            $query->where('name', 'like', '%' . $request->get('search') . '%');
+        }
+
+        return $query;
+    }
+}
+```
+
+### Estensione Resource
+
+```php
+use Modules\Xot\Filament\Resources\XotBaseResource;
+
+class MyResource extends XotBaseResource
+{
+    protected static ?string $model = MyModel::class;
+    protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
+    protected static ?string $navigationGroup = 'Il Mio Modulo';
+
+    public static function getFormSchema(): array
+    {
+        return array_merge(parent::getFormSchema(), [
+            Forms\Components\Section::make('Dettagli Aggiuntivi')
+                ->schema([
+                    Forms\Components\Select::make('category_id')
+                        ->relationship('category', 'name')
+                        ->searchable()
+                        ->preload(),
+                    Forms\Components\Toggle::make('is_featured')
+                        ->label('In Evidenza'),
+                ]),
         ]);
-        
-        $this->assertModelExists($modello);
-        $this->assertEquals('Test', $modello->nome);
+    }
+
+    public static function getTableColumns(): array
+    {
+        return array_merge(parent::getTableColumns(), [
+            Tables\Columns\TextColumn::make('category.name')
+                ->label('Categoria')
+                ->sortable(),
+            Tables\Columns\IconColumn::make('is_featured')
+                ->boolean()
+                ->label('In Evidenza'),
+        ]);
     }
 }
 ```
 
-### **Testing Patterns**
+### Estensione Service Provider
 
-#### **Model Testing**
 ```php
-public function test_relazioni_modello()
+use Modules\Xot\Providers\XotBaseServiceProvider;
+
+class MyServiceProvider extends XotBaseServiceProvider
 {
-    $user = User::factory()->create();
-    $prodotti = Prodotto::factory()->count(3)->for($user)->create();
+    protected string $module_name = 'MyModule';
+
+    protected function registerBindings(): void
+    {
+        $this->app->bind(MyInterface::class, MyImplementation::class);
+        $this->app->singleton(MyService::class);
+    }
+
+    public function boot(): void
+    {
+        parent::boot();
+        
+        // Registrazione aggiuntiva specifica del modulo
+        $this->registerPolicies();
+        $this->registerCommands();
+    }
+
+    protected function registerPolicies(): void
+    {
+        Gate::policy(MyModel::class, MyPolicy::class);
+    }
+
+    protected function registerCommands(): void
+    {
+        if ($this->app->runningInConsole()) {
+            $this->commands([
+                MyCommand::class,
+            ]);
+        }
+    }
+}
+```
+
+### Estensione Migration
+
+```php
+use Modules\Xot\Database\Migrations\XotBaseMigration;
+
+return new class extends XotBaseMigration
+{
+    protected string $table_name = 'my_models';
+
+    protected function createTableSchema(Blueprint $table): void
+    {
+        $table->id();
+        $table->uuid('uuid')->unique();
+        $table->string('name');
+        $table->text('description')->nullable();
+        $table->string('slug')->unique();
+        $table->enum('status', ['active', 'inactive'])->default('active');
+        $table->foreignId('category_id')->constrained()->onDelete('cascade');
+        $table->boolean('is_featured')->default(false);
+        $table->timestamps();
+        $table->softDeletes();
+        
+        // Indici
+        $table->index(['status', 'is_featured']);
+        $table->index('category_id');
+    }
+};
+```
+
+## Best Practices
+
+### Naming Convention
+
+1. **Classi Base**: Prefisso `XotBase` per tutte le classi base
+2. **Namespace**: Utilizzare namespace modulari `Modules\Xot\...`
+3. **Metodi**: Metodi pubblici per API, protetti per estensioni
+4. **Proprietà**: Proprietà protette per estensione, private per interno
+
+### Estensione
+
+1. **Composizione**: Preferire composizione a ereditarietà multipla
+2. **Interfacce**: Definire interfacce per funzionalità estendibili
+3. **Hook**: Utilizzare hook e eventi per estensioni
+4. **Configurazione**: Rendere configurabili le funzionalità base
+
+### Performance
+
+1. **Lazy Loading**: Carica funzionalità solo quando necessario
+2. **Caching**: Cache per configurazioni e metadati
+3. **Indici**: Indici database ottimizzati
+4. **Query**: Query ottimizzate e eager loading
+
+## Testing
+
+### Test Base
+
+```php
+// Test modelli base
+it('creates model with uuid', function () {
+    $model = MyModel::create(['name' => 'Test']);
     
-    $this->assertCount(3, $user->prodotti);
-    $this->assertEquals($user->id, $prodotti->first()->user_id);
-}
-```
+    expect($model->uuid)->not->toBeEmpty();
+    expect(Str::isUuid($model->uuid))->toBeTrue();
+});
 
-#### **API Testing**
-```php
-public function test_api_endpoint()
-{
-    $response = $this->getJson('/api/mio-modulo');
+// Test trait status
+it('has correct status options', function () {
+    $options = MyModel::getStatusOptions();
     
-    $response->assertSuccessful()
-             ->assertJsonStructure(['data', 'meta']);
-}
+    expect($options)->toHaveKey('active');
+    expect($options)->toHaveKey('inactive');
+});
+
+// Test scope active
+it('filters active models', function () {
+    MyModel::create(['name' => 'Active', 'status' => 'active']);
+    MyModel::create(['name' => 'Inactive', 'status' => 'inactive']);
+    
+    $activeModels = MyModel::active()->get();
+    
+    expect($activeModels)->toHaveCount(1);
+    expect($activeModels->first()->name)->toBe('Active');
+});
 ```
 
-## 🔧 **Best Practices**
+### Test di Copertura
 
-### **Sempre Estendere Classi Base**
-```php
-// ✅ CORRETTO
-class MioModello extends BaseModel
+```bash
+# Test unitari
+php artisan test Modules/Xot/tests/Unit
 
-// ❌ ERRATO
-class MioModello extends Model
+# Test feature
+php artisan test Modules/Xot/tests/Feature
+
+# Test Pest
+./vendor/bin/pest Modules/Xot/tests
 ```
 
-### **Utilizzare i Trait Xot**
-```php
-use HasXotTable;
-use HasExtra;
+## Sicurezza
 
-class MioModello extends BaseModel
+### Validazione
+
+```php
+// Validazione input
+protected function validateInput(array $data): array
 {
-    use HasXotTable, HasExtra;
+    return Validator::make($data, [
+        'name' => 'required|string|max:255',
+        'description' => 'nullable|string|max:65535',
+        'status' => 'required|in:active,inactive,draft,published',
+    ])->validate();
+}
+
+// Sanitizzazione
+protected function sanitizeInput(array $data): array
+{
+    return array_map('trim', $data);
 }
 ```
 
-### **Seguire le Convenzioni Naming**
+### Autorizzazione
+
 ```php
-// Nomi delle classi in PascalCase
-class MioModello extends BaseModel
+// Verifica permessi
+protected function checkPermission(string $permission): void
+{
+    if (!auth()->user()->can($permission)) {
+        abort(403, 'Unauthorized action.');
+    }
+}
 
-// Nomi dei metodi in camelCase
-public function getNomeCompleto(): string
-
-// Nomi delle proprietà in snake_case
-protected $fillable = ['nome', 'cognome'];
+// Verifica proprietà
+protected function checkOwnership(Model $model): void
+{
+    if ($model->user_id !== auth()->id()) {
+        abort(403, 'Unauthorized action.');
+    }
+}
 ```
 
-### **Gestire i Campi Extra**
+## Monitoraggio e Logging
+
+### Log Base
+
 ```php
-// Store dati aggiuntivi
-$modello->setExtra('campo_custom', 'valore');
+// Log operazioni
+protected function logOperation(string $operation, array $context = []): void
+{
+    Log::info("Xot operation: {$operation}", array_merge([
+        'user_id' => auth()->id(),
+        'model' => static::class,
+        'timestamp' => now(),
+    ], $context));
+}
 
-// Retrieve dati
-$valore = $modello->getExtra('campo_custom');
+// Log errori
+protected function logError(string $message, \Throwable $exception): void
+{
+    Log::error("Xot error: {$message}", [
+        'exception' => $exception->getMessage(),
+        'trace' => $exception->getTraceAsString(),
+        'user_id' => auth()->id(),
+    ]);
+}
 ```
 
-## 📊 **Metriche Qualità**
+### Metriche
 
-### **PHPStan**
-- **Livello 10** obbligatorio per tutto il codice
-- **Zero errori** di analisi statica
-- **Type safety** completa
+- Numero estensioni per classe base
+- Performance operazioni base
+- Utilizzo trait condivisi
+- Errori e eccezioni
 
-### **PSR-12**
-- **Conformità completa** agli standard PSR
-- **Code style** uniforme in tutto il progetto
-- **Linting automatico** nel CI/CD
+## Troubleshooting
 
-### **Test Coverage**
-- **Minimo 90%** per tutti i moduli
-- **100%** per le classi base critiche
-- **Test di regressione** per ogni modifica
+### Problemi Comuni
 
-### **Documentazione**
-- **100%** dei metodi pubblici documentati
-- **PHPDoc completo** per tutte le classi
-- **Esempi pratici** per ogni funzionalità
+1. **Classi Base Non Trovate**
+   - Verificare autoloading
+   - Controllare namespace
+   - Verificare estensioni corrette
 
-## 🚨 **Troubleshooting**
+2. **Trait Non Funzionanti**
+   - Verificare use statement
+   - Controllare metodi richiesti
+   - Verificare compatibilità
 
-### **Problemi Comuni**
+3. **Service Provider Non Registrati**
+   - Controllare config/app.php
+   - Verificare estensione corretta
+   - Controllare errori di sintassi
 
-#### **1. Classe Base Non Trovata**
-```bash
-# Verificare autoload
-composer dump-autoload
+### Debug
 
-# Controllare namespace
-use Modules\Xot\Models\BaseModel;
-```
-
-#### **2. Traduzioni Non Caricate**
-```bash
-# Pulire cache
-php artisan cache:clear
-php artisan config:clear
-php artisan view:clear
-
-# Verificare service provider
-php artisan module:list
-```
-
-#### **3. Errori PHPStan**
-```bash
-# Eseguire analisi
-./vendor/bin/phpstan analyse --level=10
-
-# Verificare configurazione
-cat phpstan.neon
-```
-
-### **Debug e Logging**
 ```php
-// Abilitare debug
-config(['app.debug' => true]);
+// Debug configurazione
+config(['xot.debug' => true]);
 
-// Logging dettagliato
-Log::debug('Debug info', ['context' => 'value']);
+// Log dettagliato
+Log::debug('Xot debug', [
+    'config' => config('xot'),
+    'models' => get_declared_classes(),
+    'traits' => get_declared_traits(),
+]);
 ```
 
-## 🔗 **Collegamenti e Riferimenti**
+## Testing e Qualità del Codice
 
-### **1. Documentazione Modulo**
-- [**Indice Completo**](index.md) - Navigazione rapida per tutti i documenti
-- [**Architettura**](architecture.md) - Architettura dettagliata del modulo
-- [**Best Practices**](best-practices.md) - Linee guida complete per lo sviluppo
-- [**Troubleshooting**](troubleshooting.md) - Risoluzione problemi e debug
-- [**Esempi**](examples.md) - Casi d'uso pratici e implementazioni
+### Struttura dei Test
 
-### **2. Documentazione Principale**
-- [**Root Documentation**](../../../docs/README.md) - Documentazione generale del progetto
-- [**Best Practices**](../../../docs/best-practices/) - Best practices globali
-- [**Troubleshooting**](../../../docs/troubleshooting/) - Risoluzione problemi
+Il modulo Xot utilizza Pest per i test, con una struttura organizzata per garantire copertura completa:
 
-### **3. Moduli Correlati**
-- [**UI Module**](../UI/docs/README.md) - Componenti UI condivisi
-- [**User Module**](../User/docs/README.md) - Gestione utenti e autenticazione
-- [**Tenant Module**](../Tenant/docs/README.md) - Multi-tenancy
+- **Unit Tests**: Test dei modelli, traits e servizi base
+- **Feature Tests**: Test delle funzionalità complete
+- **Integration Tests**: Test dell'integrazione con altri moduli
 
-### **4. Risorse Esterne**
-- [**Laravel Documentation**](https://laravel.com/docs) - Documentazione ufficiale Laravel
-- [**Filament Documentation**](https://filamentphp.com/docs) - Documentazione Filament
-- [**PHPStan Documentation**](https://phpstan.org/) - Analisi statica del codice
+### Documentazione Testing
 
-## 📈 **Roadmap e Sviluppi Futuri**
+Per informazioni complete sui test del modulo Xot, consultare:
+- [Miglioramenti Testing](testing-improvements.md) - Miglioramenti implementati e best practice
+- [Strategia Testing Globale](../../../../docs/testing/strategy.md) - Approccio generale al testing
 
-### **Versioni Pianificate**
-- **v2.0**: Miglioramenti performance e caching
-- **v2.1**: Nuove classi base per API REST
-- **v2.2**: Supporto per GraphQL e real-time
+### Best Practices per i Test
 
-### **Contributi**
-- **Issue reporting**: GitHub Issues per bug e feature requests
-- **Pull requests**: Contributi alla codebase
-- **Documentazione**: Miglioramenti alla documentazione
+1. **Struttura Standardizzata**: Utilizzo di describe() e beforeEach() per organizzazione
+2. **Assertions Specifiche**: Uso di custom expectations per i modelli e servizi
+3. **Isolamento**: Ogni test è indipendente e non dipende da altri
+4. **Type Safety**: Utilizzo di type hints e strict types
+5. **Mocking Appropriato**: Utilizzo di mock per test isolati
+
+### Esecuzione Test
+
+```bash
+cd /var/www/html/ptvx/laravel
+
+# Tutti i test del modulo Xot
+./vendor/bin/pest Modules/Xot/tests/
+
+# Solo test unitari
+./vendor/bin/pest Modules/Xot/tests/Unit/
+
+# Solo test di integrazione
+./vendor/bin/pest Modules/Xot/tests/Feature/
+
+# Test con coverage
+./vendor/bin/pest --coverage Modules/Xot/tests/
+```
+
+### Miglioramenti Recenti
+
+- ✅ Rimossi separatori duplicati da tutti i file di test
+- ✅ Consolidato codice duplicato causato da merge conflitti
+- ✅ Standardizzata struttura test seguendo best practice Pest
+- ✅ Migliorata leggibilità e manutenibilità dei test
+
+## Integrazione con Altri Moduli
+
+### Registrazione Modulo
+
+```php
+// Nel ServiceProvider del modulo
+public function boot(): void
+{
+    parent::boot();
+    
+    // Registrazione specifica del modulo
+    $this->registerResources();
+    $this->registerCommands();
+}
+```
+
+### Utilizzo Cross-Module
+
+```php
+// In qualsiasi modulo
+use Modules\Xot\Models\XotBaseModel;
+use Modules\Xot\Traits\HasUuid;
+
+class MyModel extends XotBaseModel
+{
+    use HasUuid;
+    
+    // Implementazione specifica del modulo
+}
+```
+
+## Roadmap
+
+### Funzionalità Future
+
+- [ ] Sistema di plugin avanzato
+- [ ] API REST base
+- [ ] Sistema di eventi avanzato
+- [ ] Cache intelligente
+- [ ] Monitoring avanzato
+- [ ] Sistema di backup automatico
+
+### Miglioramenti
+
+- [ ] Performance optimization
+- [ ] Advanced caching
+- [ ] Real-time updates
+- [ ] Analytics avanzate
+- [ ] API REST completa
+
+## Contributi
+
+### Sviluppo
+
+1. Fork del repository
+2. Creazione branch feature
+3. Implementazione funzionalità
+4. Test completi
+5. Pull request con documentazione
+
+### Standard di Codice
+
+- PSR-12 coding standards
+- PHPStan livello 9+
+- Test coverage >90%
+- Documentazione PHPDoc completa
+
+## Licenza
+
+Questo modulo è rilasciato sotto la licenza MIT. Vedi il file LICENSE per i dettagli.
+
+## Supporto
+
+Per supporto tecnico o domande:
+
+- **Issues**: GitHub Issues
+- **Documentazione**: Questa documentazione
+- **Wiki**: Wiki del progetto
+- **Chat**: Canale Slack/Teams
 
 ---
 
-## 📝 **Changelog**
-
-### **v2.0.0** - Giugno 2025
-- ✅ Rifattorizzazione completa della documentazione
-- ✅ Consolidamento in file singoli per DRY
-- ✅ Aggiornamento principi SOLID e Robust
-- ✅ Integrazione completa con Laraxot
-
-### **v1.5.0** - Maggio 2025
-- ✅ Supporto Laravel 11
-- ✅ Aggiornamento PHPStan livello 10
-- ✅ Miglioramenti performance
-
----
-
-*Ultimo aggiornamento: giugno 2025 - Versione 2.0.0*
+*Ultimo aggiornamento: {{ date('Y-m-d') }}*

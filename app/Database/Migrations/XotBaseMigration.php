@@ -195,15 +195,10 @@ abstract class XotBaseMigration extends Migration
             return isset($result['count']) && (int) $result['count'] > 0;
         }
 
-=======
-=======
-=======
         // If it's an object, cast to array to avoid undefined property issues
         if (is_object($result)) {
             $resArray = (array) $result;
             return isset($resArray['count']) && (int) $resArray['count'] > 0;
-=======
-=======
         }
 
         return false;

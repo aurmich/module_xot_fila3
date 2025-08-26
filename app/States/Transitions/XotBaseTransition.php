@@ -8,35 +8,17 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\Notification;
 use Illuminate\Support\Str;
 use Modules\Notify\Datas\RecordNotificationData;
-=======
-use Modules\Notify\Datas\RecordNotificationData;
 use Modules\Notify\Notifications\RecordNotification;
 use Modules\Xot\Contracts\UserContract;
 use Spatie\ModelStates\Transition;
 use Filament\Notifications\Notification as FilamentNotification;
-
-abstract class XotBaseTransition extends Transition
-{
-=======
-use Modules\Notify\Datas\RecordNotificationData;
-use Modules\Notify\Notifications\RecordNotification;
-use Modules\Xot\Contracts\UserContract;
-use Spatie\ModelStates\Transition;
-use Filament\Notifications\Notification as FilamentNotification;
+use Illuminate\Support\Facades\Log;
 
 abstract class XotBaseTransition extends Transition
 {
     public function __construct(public Model $record, public ?string $message = '')
     {
     }
-    public function __construct(public Model $record, public ?string $message = '')
-    {
-    }
-=======
-    public function __construct(public Model $record, public ?string $message = '')
-    {
-    }
-=======
 
     public function handle(): Model
     {
@@ -48,12 +30,6 @@ abstract class XotBaseTransition extends Transition
         $newStateClass = $stateNamespace.'\\'.$stateClassName;
 
         /* @phpstan-ignore-next-line */
-=======
-        /* @phpstan-ignore-next-line */
-=======
-        /* @phpstan-ignore-next-line */
-=======
-        /* @phpstan-ignore-next-line */
         $this->record->state = new $newStateClass($this->record);
         $this->record->save();
 
@@ -62,19 +38,6 @@ abstract class XotBaseTransition extends Transition
 
     public function sendNotifications(): void
     {
-=======
-        $recipients = $this->getNotificationRecipients();
-        foreach ($recipients as $recipient) {
-            
-            $this->sendRecipientNotification($recipient);
-            
-        $recipients = $this->getNotificationRecipients();
-        foreach ($recipients as $recipient) {
-            
-            $this->sendRecipientNotification($recipient);
-            
-=======
-=======
         $recipients = $this->getNotificationRecipients();
         foreach ($recipients as $recipient) {
             $this->sendRecipientNotification($recipient);
@@ -82,32 +45,11 @@ abstract class XotBaseTransition extends Transition
     }
 
     /**
-     * @return  array<string, RecordNotificationData>
-=======
-     * @return  array<string, RecordNotificationData>
-=======
-     * @return  array<string, RecordNotificationData>
-=======
      * @return array<string, RecordNotificationData>
      */
     public function getNotificationRecipients(): array
     {
         return [
-=======
-            // 'me' => $this->record,
-            'me_mail' => RecordNotificationData::from(['record' => $this->record, 'channel' => 'mail']),
-            // 'patient' => $this->record->patient,
-            // 'doctor' => $this->record->doctor,
-            // 'patient_mail' => RecordNotificationData::from(['record' => $record->patient, 'channel' => 'mail']),
-            // 'doctor_mail' => RecordNotificationData::from(['record' => $record->doctor, 'channel' => 'mail']),
-            // 'me' => $this->record,
-            'me_mail' => RecordNotificationData::from(['record' => $this->record, 'channel' => 'mail']),
-            // 'patient' => $this->record->patient,
-            // 'doctor' => $this->record->doctor,
-            // 'patient_mail' => RecordNotificationData::from(['record' => $record->patient, 'channel' => 'mail']),
-            // 'doctor_mail' => RecordNotificationData::from(['record' => $record->doctor, 'channel' => 'mail']),
-=======
-=======
             'me_mail' => RecordNotificationData::from(['record' => $this->record, 'channel' => 'mail']),
         ];
     }
@@ -122,9 +64,6 @@ abstract class XotBaseTransition extends Transition
 
     public function getNotificationSlug(UserContract $recipient): string
     {
-=======
-=======
-=======
         $type = $recipient->type->value;
         $slug = class_basename($this->record).'-'.$type.'-'.Str::of(class_basename(static::class))->kebab()->toString();
         $slug = Str::slug($slug);
@@ -132,24 +71,6 @@ abstract class XotBaseTransition extends Transition
         return $slug;
     }
 
-    public function sendRecipientNotification(RecordNotificationData $recipient): void
-    {
-       
-
-    public function sendRecipientNotification(RecordNotificationData $recipient): void
-    {
-       
-
-        $slug = $this->getNotificationSlug($recipient->record);
-=======
-        $slug = $this->getNotificationSlug($recipient->record);
-=======
-    public function sendRecipientNotification(RecordNotificationData $recipient): void
-    {
-       
-
-        $slug = $this->getNotificationSlug($recipient->record);
-=======
     public function sendRecipientNotification(RecordNotificationData $recipient): void
     {
         $slug = $this->getNotificationSlug($recipient->record);
@@ -166,19 +87,6 @@ abstract class XotBaseTransition extends Transition
         try {
             Notification::route($recipient->getChannel(), $recipient->getRoute())
                 ->notify($notify);
-=======
-        
-        try {
-            Notification::route($recipient->getChannel(), $recipient->getRoute())
-                ->notify($notify);
-=======
-        } catch (\TypeError|\Webmozart\Assert\InvalidArgumentException $e) {
-            $message = 'channel :['.$recipient->getChannel() .'] error: ['.$e->getMessage().']';
-=======
-
-        try {
-            Notification::route($recipient->getChannel(), $recipient->getRoute())
-                ->notify($notify);
         } catch (\TypeError|\Webmozart\Assert\InvalidArgumentException $e) {
             $message = 'channel :['.$recipient->getChannel().'] error: ['.$e->getMessage().']';
             FilamentNotification::make()
@@ -186,8 +94,6 @@ abstract class XotBaseTransition extends Transition
                 ->danger()
                 ->body($message)
                 ->send();
-=======
-=======
         }
     }
 
@@ -198,9 +104,6 @@ abstract class XotBaseTransition extends Transition
     {
         return [
             'message' => $this->message,
-            // 'appointment_date' => $this->appointment->starts_at?->format('d/m/Y H:i') ?? 'N/A',
-            // 'patient_name' => $this->appointment->patient->name ?? 'N/A',
-            // 'doctor_name' => $this->appointment->doctor->name ?? 'N/A',
         ];
     }
 }

@@ -90,6 +90,7 @@ class HasXotTableTest extends TestCase
         $tableMock->shouldReceive('paginated')->andReturnSelf();
 
         // Call the table method
+        /* @phpstan-ignore-next-line */
         $result = $mock->table($tableMock);
 
         // Assert the result is a Table instance
@@ -151,6 +152,7 @@ class HasXotTableTest extends TestCase
         $tableMock->shouldReceive('paginated')->andReturnSelf();
 
         // Call the table method
+        /* @phpstan-ignore-next-line */
         $result = $mock->table($tableMock);
 
         // Assert the result is a Table instance
@@ -253,18 +255,6 @@ class HasTableWithXot
         return null;
     }
 
-    public function getSelectedTableRecords(bool $shouldFetchSelectedRecords = true): Collection
-    {
-        return new Collection();
-=======
-    public function getSelectedTableRecords(bool $shouldFetchSelectedRecords = true): Collection
-    {
-        return new Collection();
-=======
-    public function getSelectedTableRecords(bool $shouldFetchSelectedRecords = true): Collection
-    {
-        return new Collection();
-=======
     public function getSelectedTableRecords(bool $shouldFetchSelectedRecords = true): Collection
     {
         return new Collection();
