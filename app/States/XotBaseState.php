@@ -8,7 +8,23 @@ use Filament\Forms\Components;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Arr;
 use Illuminate\Support\Str;
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
 use Webmozart\Assert\Assert;
+<<<<<<< HEAD
+=======
+use Spatie\ModelStates\State;
+use Filament\Forms\Components;
+use Spatie\ModelStates\StateConfig;
+use Illuminate\Database\Eloquent\Model;
+=======
+>>>>>>> 5852845d (.)
+=======
+>>>>>>> abfbbdf (.)
+=======
+>>>>>>> 1fd4ceb6 (.)
+>>>>>>> 5207ce7 (.)
 use Modules\Xot\Contracts\StateContract;
 use Modules\Xot\Filament\Traits\TransTrait;
 use Spatie\ModelStates\State;
@@ -19,7 +35,19 @@ use Spatie\ModelStates\State;
  * Defines the state machine configuration and required methods
  * that must be implemented by each concrete state class.
  *
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
  * @property string $name Il nome dello stato
+=======
+ * @property string $name  Il nome dello stato
+>>>>>>> 5852845d (.)
+=======
+ * @property string $name  Il nome dello stato
+>>>>>>> abfbbdf (.)
+=======
+ * @property string $name  Il nome dello stato
+>>>>>>> 1fd4ceb6 (.)
  * @property string $value Il valore dello stato nel database
  */
 abstract class XotBaseState extends State implements StateContract
@@ -28,6 +56,62 @@ abstract class XotBaseState extends State implements StateContract
 
     public static string $name;
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+    /*
+    public static function config(): StateConfig
+        {
+            return parent::config()
+                ->default(Pending::class)
+
+                // Pending transitions (In entrata)
+                ->allowTransition(Pending::class, Confirmed::class, Transitions\PendingToConfirmed::class)
+                ->allowTransition(Pending::class, Rejected::class, Transitions\PendingToRejected::class)
+
+                // Confirmed transitions (Accettati)
+                ->allowTransition(Confirmed::class, ReportPending::class, Transitions\ConfirmedToReportPending::class)
+                ->allowTransition(Confirmed::class, Cancelled::class, Transitions\ConfirmedToCancelled::class)
+                ->allowTransition(Confirmed::class, NoShow::class, Transitions\ConfirmedToNoShow::class)
+
+                // NoShow transitions (gestione interna del conteggio)
+                ->allowTransition(NoShow::class, Banned::class, Transitions\NoShowToBanned::class)
+
+                // Completed transitions (Conclusi)
+                //->allowTransition(Completed::class, RefundPending::class, Transitions\CompletedToRefundPending::class)
+                //->allowTransition(Completed::class, ProBono::class, Transitions\CompletedToProBono::class)
+                ->allowTransition(ReportCompleted::class, RefundPending::class, Transitions\ReportCompletedToRefundPending::class)
+                ->allowTransition(ReportCompleted::class, ProBono::class, Transitions\ReportCompletedToProBono::class)
+
+                // Report transitions
+                ->allowTransition(ReportPending::class, ReportPending::class)
+
+                ->allowTransition(ReportPending::class, ReportCompleted::class, Transitions\ReportPendingToReportCompleted::class)
+
+                // ReportCompleted transitions
+                //->allowTransition(ReportCompleted::class, Completed::class, Transitions\ReportCompletedToCompleted::class)
+                //->allowTransition(ReportCompleted::class, RefundPending::class, Transitions\ReportCompletedToRefundPending::class)
+                //->allowTransition(ReportCompleted::class, ProBono::class, Transitions\ReportCompletedToProBono::class)
+
+                // Refund transitions
+                ->allowTransition(RefundPending::class, RefundAccepted::class, Transitions\RefundPendingToRefundAccepted::class)
+                ->allowTransition(RefundPending::class, RefundToIntegrate::class, Transitions\RefundPendingToRefundToIntegrate::class)
+                ->allowTransition(RefundPending::class, RefundCompleted::class, Transitions\RefundPendingToRefundCompleted::class)
+
+                ->allowTransition(RefundAccepted::class, RefundCompleted::class, Transitions\RefundAcceptedToRefundCompleted::class)
+                ->allowTransition(RefundToIntegrate::class, RefundCompleted::class, Transitions\RefundToIntegrateToRefundCompleted::class);
+
+    }
+    */
+=======
+>>>>>>> 5852845d (.)
+=======
+>>>>>>> abfbbdf (.)
+=======
+>>>>>>> 1fd4ceb6 (.)
+>>>>>>> 5207ce7 (.)
     public static function getName(): string
     {
         /* @phpstan-ignore-next-line */
@@ -36,12 +120,43 @@ abstract class XotBaseState extends State implements StateContract
 
     public function label(): string
     {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> 5852845d (.)
+=======
+>>>>>>> abfbbdf (.)
+=======
+>>>>>>> 1fd4ceb6 (.)
+>>>>>>> 5207ce7 (.)
         return static::transClass(static::class, 'states.'.static::getName().'.label');
     }
 
     public function color(): string
     {
+<<<<<<< HEAD
         return static::transClass(static::class, 'states.'.static::getName().'.color');
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+        return static::transClass(static::class, 'states.'.static::getName().'.color');
+
+=======
+        return static::transClass(static::class, 'states.'.static::getName().'.color');
+>>>>>>> 5852845d (.)
+=======
+        return static::transClass(static::class, 'states.'.static::getName().'.color');
+>>>>>>> abfbbdf (.)
+=======
+        return static::transClass(static::class, 'states.'.static::getName().'.color');
+>>>>>>> 1fd4ceb6 (.)
+>>>>>>> 5207ce7 (.)
     }
 
     public function bgColor(): string
@@ -65,7 +180,23 @@ abstract class XotBaseState extends State implements StateContract
     }
 
     /**
+<<<<<<< HEAD
      * @return array<string, Components\Component>
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+     * @return array<string, \Filament\Forms\Components\Component>
+=======
+     * @return array<string, Components\Component>
+>>>>>>> 5852845d (.)
+=======
+     * @return array<string, Components\Component>
+>>>>>>> abfbbdf (.)
+=======
+     * @return array<string, Components\Component>
+>>>>>>> 1fd4ceb6 (.)
+>>>>>>> 5207ce7 (.)
      */
     public function modalFormSchema(): array
     {
@@ -73,15 +204,51 @@ abstract class XotBaseState extends State implements StateContract
             'message' => Components\Textarea::make('message')
                 ->required()
                 ->maxLength(255),
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> 5852845d (.)
+=======
+>>>>>>> abfbbdf (.)
+=======
+>>>>>>> 1fd4ceb6 (.)
+>>>>>>> 5207ce7 (.)
         ];
     }
 
     /**
      * Fill form data for modal.
      *
+<<<<<<< HEAD
      * @param array<string, mixed> $arguments
      * @param array<string, mixed> $data
      *
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+     * @param  array<string, mixed>  $arguments
+     * @param  array<string, mixed>  $data
+=======
+     * @param array<string, mixed> $arguments
+     * @param array<string, mixed> $data
+     *
+>>>>>>> 5852845d (.)
+=======
+     * @param array<string, mixed> $arguments
+     * @param array<string, mixed> $data
+     *
+>>>>>>> abfbbdf (.)
+=======
+     * @param array<string, mixed> $arguments
+     * @param array<string, mixed> $data
+     *
+>>>>>>> 1fd4ceb6 (.)
+>>>>>>> 5207ce7 (.)
      * @return array<string, mixed>
      */
     public function modalFillForm(array $arguments, array $data): array
@@ -102,8 +269,28 @@ abstract class XotBaseState extends State implements StateContract
     /**
      * Execute modal action.
      *
+<<<<<<< HEAD
      * @param array<string, mixed> $arguments
      * @param array<string, mixed> $data
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+     * @param  array<string, mixed>  $arguments
+     * @param  array<string, mixed>  $data
+=======
+     * @param array<string, mixed> $arguments
+     * @param array<string, mixed> $data
+>>>>>>> 5852845d (.)
+=======
+     * @param array<string, mixed> $arguments
+     * @param array<string, mixed> $data
+>>>>>>> abfbbdf (.)
+=======
+     * @param array<string, mixed> $arguments
+     * @param array<string, mixed> $data
+>>>>>>> 1fd4ceb6 (.)
+>>>>>>> 5207ce7 (.)
      */
     public function modalAction(array $arguments, array $data): void
     {
@@ -113,8 +300,28 @@ abstract class XotBaseState extends State implements StateContract
     /**
      * Process state action.
      *
+<<<<<<< HEAD
      * @param array<string, mixed> $arguments
      * @param array<string, mixed> $data
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+     * @param  array<string, mixed>  $arguments
+     * @param  array<string, mixed>  $data
+=======
+     * @param array<string, mixed> $arguments
+     * @param array<string, mixed> $data
+>>>>>>> 5852845d (.)
+=======
+     * @param array<string, mixed> $arguments
+     * @param array<string, mixed> $data
+>>>>>>> abfbbdf (.)
+=======
+     * @param array<string, mixed> $arguments
+     * @param array<string, mixed> $data
+>>>>>>> 1fd4ceb6 (.)
+>>>>>>> 5207ce7 (.)
      */
     public function processStateAction(array $arguments, array $data): void
     {
@@ -122,14 +329,42 @@ abstract class XotBaseState extends State implements StateContract
         $stateClass = static::class;
         
         $record = $this->getModel();
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
         /** @phpstan-ignore-next-line */
+=======
+        /* @phpstan-ignore-next-line */
+>>>>>>> 5852845d (.)
+=======
+        /* @phpstan-ignore-next-line */
+>>>>>>> abfbbdf (.)
+=======
+        /* @phpstan-ignore-next-line */
+>>>>>>> 1fd4ceb6 (.)
         $record->state->transitionTo($stateClass, $message);
     }
 
     /**
      * Execute modal action by record.
      *
+<<<<<<< HEAD
      * @param array<string, mixed> $data
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+     * @param  array<string, mixed>  $data
+=======
+     * @param array<string, mixed> $data
+>>>>>>> 5852845d (.)
+=======
+     * @param array<string, mixed> $data
+>>>>>>> abfbbdf (.)
+=======
+     * @param array<string, mixed> $data
+>>>>>>> 1fd4ceb6 (.)
+>>>>>>> 5207ce7 (.)
      */
     public function modalActionByRecord(Model $record, array $data): void
     {
@@ -139,15 +374,45 @@ abstract class XotBaseState extends State implements StateContract
     /**
      * Process state action by record.
      *
+<<<<<<< HEAD
      * @param array<string, mixed> $data
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+     * @param  array<string, mixed>  $data
+=======
+     * @param array<string, mixed> $data
+>>>>>>> 5852845d (.)
+=======
+     * @param array<string, mixed> $data
+>>>>>>> abfbbdf (.)
+=======
+     * @param array<string, mixed> $data
+>>>>>>> 1fd4ceb6 (.)
+>>>>>>> 5207ce7 (.)
      */
     public function processStateActionByRecord(Model $record, array $data): void
     {
         $message = Arr::get($data, 'message');
         $stateClass = static::class;
+<<<<<<< HEAD
         
         /** @phpstan-ignore-next-line */
         $record->state->transitionTo($stateClass, $message);
+=======
+        /*
+
+        $appointmentId = $arguments['appointment'];
+        $appointment = Appointment::firstWhere('id',$appointmentId);
+
+        $appointment?->state->transitionTo($stateClass,$message);
+        */
+        /* @phpstan-ignore-next-line */
+        $record->state->transitionTo($stateClass, $message);
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> 5207ce7 (.)
     }
 
     public function isMessageRequired(): bool
@@ -155,6 +420,29 @@ abstract class XotBaseState extends State implements StateContract
         return false;
     }
 
+<<<<<<< HEAD
+=======
+    public static function getOptions(): array
+    {
+        $states = static::getStateMapping()->toArray();
+
+        $states = Arr::map($states, function ($stateClass, $state) {
+            return static::transClass(static::class, 'states.'.$state.'.label');
+        });
+
+        return $states;
+=======
+>>>>>>> abfbbdf (.)
+=======
+>>>>>>> 1fd4ceb6 (.)
+    }
+
+    public function isMessageRequired(): bool
+    {
+        return false;
+    }
+
+>>>>>>> 5207ce7 (.)
     public static function getOptions(): array
     {
         $states = static::getStateMapping()->toArray();

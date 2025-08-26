@@ -255,9 +255,33 @@ class HasTableWithXot
         return null;
     }
 
+<<<<<<< HEAD
     public function getSelectedTableRecords(bool $shouldFetchSelectedRecords = true): Collection
     {
         return new Collection();
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+    public function getSelectedTableRecords(): array
+    {
+        return [];
+=======
+    public function getSelectedTableRecords(bool $shouldFetchSelectedRecords = true): Collection
+    {
+        return new Collection();
+>>>>>>> 5852845d (.)
+=======
+    public function getSelectedTableRecords(bool $shouldFetchSelectedRecords = true): Collection
+    {
+        return new Collection();
+>>>>>>> abfbbdf (.)
+=======
+    public function getSelectedTableRecords(bool $shouldFetchSelectedRecords = true): Collection
+    {
+        return new Collection();
+>>>>>>> 1fd4ceb6 (.)
+>>>>>>> 5207ce7 (.)
     }
 
     public function getAllTableRecordsCount(): int

@@ -6,11 +6,39 @@ use Modules\Xot\Services\ModuleService;
 use Nwidart\Modules\Module;
 use Nwidart\Modules\Facades\Module as ModuleFacade;
 
+<<<<<<< HEAD
 uses(Tests\TestCase::class);
 
 describe('ModuleService', function () {
     beforeEach(function () {
         $this->service = (new ModuleService())->setName('TestModule');
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+describe('ModuleService', function () {
+    beforeEach(function () {
+        $this->service = new ModuleService('TestModule');
+=======
+=======
+>>>>>>> 1fd4ceb6 (.)
+uses(Tests\TestCase::class);
+
+describe('ModuleService', function () {
+    beforeEach(function () {
+        $this->service = (new ModuleService())->setName('TestModule');
+<<<<<<< HEAD
+>>>>>>> 5852845d (.)
+=======
+uses(Tests\TestCase::class);
+
+describe('ModuleService', function () {
+    beforeEach(function () {
+        $this->service = (new ModuleService())->setName('TestModule');
+>>>>>>> abfbbdf (.)
+=======
+>>>>>>> 1fd4ceb6 (.)
+>>>>>>> 5207ce7 (.)
     });
 
     it('can be instantiated', function () {
@@ -26,8 +54,28 @@ describe('ModuleService', function () {
     });
 
     it('can be instantiated with different module names', function () {
+<<<<<<< HEAD
         $service1 = (new ModuleService())->setName('Chart');
         $service2 = (new ModuleService())->setName('User');
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+        $service1 = new ModuleService('Chart');
+        $service2 = new ModuleService('User');
+=======
+        $service1 = (new ModuleService())->setName('Chart');
+        $service2 = (new ModuleService())->setName('User');
+>>>>>>> 5852845d (.)
+=======
+        $service1 = (new ModuleService())->setName('Chart');
+        $service2 = (new ModuleService())->setName('User');
+>>>>>>> abfbbdf (.)
+=======
+        $service1 = (new ModuleService())->setName('Chart');
+        $service2 = (new ModuleService())->setName('User');
+>>>>>>> 1fd4ceb6 (.)
+>>>>>>> 5207ce7 (.)
         
         expect($service1)->toBeInstanceOf(ModuleService::class)
             ->and($service2)->toBeInstanceOf(ModuleService::class);
@@ -92,9 +140,27 @@ describe('ModuleService', function () {
         expect($service->getName())->toBeNull();
     });
 
+<<<<<<< HEAD
     it('can set and get module name', function () {
         $service = new ModuleService();
         $service->setName('TestModule');
+=======
+    it('handles empty module gracefully', function () {
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+        $emptyService = new ModuleService('NonExistentModule');
+=======
+        $emptyService = (new ModuleService())->setName('NonExistentModule');
+>>>>>>> 5852845d (.)
+=======
+        $emptyService = (new ModuleService())->setName('NonExistentModule');
+>>>>>>> abfbbdf (.)
+=======
+        $emptyService = (new ModuleService())->setName('NonExistentModule');
+>>>>>>> 1fd4ceb6 (.)
+        $result = $emptyService->getModels();
+>>>>>>> 5207ce7 (.)
         
         expect($service->getName())->toBe('TestModule');
     });
@@ -124,12 +190,45 @@ describe('ModuleService', function () {
         expect(class_exists('Nwidart\Modules\Module'))->toBeTrue();
     });
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
     it('has proper constructor', function () {
+=======
+    it('uses setName method for configuration', function () {
+        // ModuleService doesn't have a constructor with parameters
+        // It uses setName() method for configuration (fluent interface)
+>>>>>>> abfbbdf (.)
         $reflection = new ReflectionClass($this->service);
-        $constructor = $reflection->getConstructor();
         
+<<<<<<< HEAD
         expect($constructor)->not->toBeNull()
             ->and($constructor->isPublic())->toBeTrue();
+<<<<<<< HEAD
+=======
+            
+        $parameters = $constructor->getParameters();
+        expect(count($parameters))->toBeGreaterThanOrEqual(1)
+            ->and($parameters[0]->getName())->toBe('name');
+=======
+=======
+>>>>>>> 1fd4ceb6 (.)
+    it('uses setName method for configuration', function () {
+        // ModuleService doesn't have a constructor with parameters
+        // It uses setName() method for configuration (fluent interface)
+        $reflection = new ReflectionClass($this->service);
+        
+        expect($reflection->hasMethod('setName'))->toBeTrue()
+            ->and($reflection->getMethod('setName')->isPublic())->toBeTrue();
+<<<<<<< HEAD
+>>>>>>> 5852845d (.)
+=======
+        expect($reflection->hasMethod('setName'))->toBeTrue()
+            ->and($reflection->getMethod('setName')->isPublic())->toBeTrue();
+>>>>>>> abfbbdf (.)
+=======
+>>>>>>> 1fd4ceb6 (.)
+>>>>>>> 5207ce7 (.)
     });
 
     it('can be extended', function () {

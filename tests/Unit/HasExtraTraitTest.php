@@ -2,15 +2,55 @@
 
 declare(strict_types=1);
 
+<<<<<<< HEAD
 namespace Modules\Xot\Tests\Unit;
 
 use Modules\Xot\Models\Traits\HasExtraTrait;
 use Modules\Xot\Contracts\ExtraContract;
 use Illuminate\Database\Eloquent\Model;
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+use Modules\Xot\Models\Traits\HasExtraTrait;
+use Modules\Xot\Contracts\ExtraContract;
+use Illuminate\Database\Eloquent\Model;
+use Illuminate\Foundation\Testing\RefreshDatabase;
+
+uses(RefreshDatabase::class);
+=======
+=======
+>>>>>>> 1fd4ceb6 (.)
+namespace Modules\Xot\Tests\Unit;
+
+use Modules\Xot\Models\Traits\HasExtraTrait;
+use Modules\Xot\Contracts\ExtraContract;
+use Illuminate\Database\Eloquent\Model;
+<<<<<<< HEAD
+=======
+namespace Modules\Xot\Tests\Unit;
+
+use Modules\Xot\Models\Traits\HasExtraTrait;
+use Modules\Xot\Contracts\ExtraContract;
+use Illuminate\Database\Eloquent\Model;
+>>>>>>> abfbbdf (.)
+=======
+>>>>>>> 1fd4ceb6 (.)
+>>>>>>> 5207ce7 (.)
 use ReflectionClass;
 use ReflectionMethod;
 use stdClass;
 use Exception;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> 5852845d (.)
+=======
+>>>>>>> abfbbdf (.)
+=======
+>>>>>>> 1fd4ceb6 (.)
+>>>>>>> 5207ce7 (.)
 
 describe('HasExtraTrait', function () {
     beforeEach(function () {
@@ -24,7 +64,23 @@ describe('HasExtraTrait', function () {
             // Mock the getExtraClass method
             public function getExtraClass(): string
             {
+<<<<<<< HEAD
                 return HasExtraTraitTest::class;
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+                return TestExtra::class;
+=======
+                return HasExtraTraitTest::class;
+>>>>>>> 5852845d (.)
+=======
+                return HasExtraTraitTest::class;
+>>>>>>> abfbbdf (.)
+=======
+                return HasExtraTraitTest::class;
+>>>>>>> 1fd4ceb6 (.)
+>>>>>>> 5207ce7 (.)
             }
         };
 
@@ -58,9 +114,30 @@ describe('HasExtraTrait', function () {
     });
 
     it('returns null for non-existent extra', function () {
+<<<<<<< HEAD
         // Mock the extra relationship to be null
         $this->testModel->extra = null;
         
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+        // Mock the extra relationship to be null
+        $this->testModel->extra = null;
+        
+>>>>>>> 5852845d (.)
+=======
+        // Mock the extra relationship to be null
+        $this->testModel->extra = null;
+        
+>>>>>>> abfbbdf (.)
+=======
+        // Mock the extra relationship to be null
+        $this->testModel->extra = null;
+        
+>>>>>>> 1fd4ceb6 (.)
+>>>>>>> 5207ce7 (.)
         $result = $this->testModel->getExtra('non_existent_key');
         
         expect($result)->toBeNull();
@@ -179,6 +256,35 @@ describe('HasExtraTrait', function () {
     });
 });
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+// Helper class for testing
+class TestExtra extends Model implements ExtraContract 
+=======
+>>>>>>> 5207ce7 (.)
+/**
+ * Helper class for testing HasExtraTrait.
+ */
+class HasExtraTraitTest extends Model implements ExtraContract 
+<<<<<<< HEAD
+=======
+>>>>>>> abfbbdf (.)
+>>>>>>> 5207ce7 (.)
+{
+    protected $table = 'test_extras';
+    
+    /** @var list<string> */
+    protected $fillable = ['model_id', 'model_type', 'extra_attributes'];
+    
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 1fd4ceb6 (.)
 /**
  * Helper class for testing HasExtraTrait.
  */
@@ -189,11 +295,27 @@ class HasExtraTraitTest extends Model implements ExtraContract
     /** @var list<string> */
     protected $fillable = ['model_id', 'model_type', 'extra_attributes'];
     
+<<<<<<< HEAD
+=======
+>>>>>>> abfbbdf (.)
+=======
+>>>>>>> 1fd4ceb6 (.)
+>>>>>>> 5207ce7 (.)
     /**
      * Get the attributes that should be cast.
      *
      * @return array<string, string>
      */
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> 5852845d (.)
+=======
+>>>>>>> abfbbdf (.)
+=======
+>>>>>>> 1fd4ceb6 (.)
+>>>>>>> 5207ce7 (.)
     protected function casts(): array
     {
         return [
@@ -201,11 +323,32 @@ class HasExtraTraitTest extends Model implements ExtraContract
         ];
     }
     
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> abfbbdf (.)
+=======
+>>>>>>> 1fd4ceb6 (.)
+>>>>>>> 5207ce7 (.)
     /**
      * Get the parent model.
      *
      * @return \Illuminate\Database\Eloquent\Relations\MorphTo
      */
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> 5852845d (.)
+=======
+>>>>>>> abfbbdf (.)
+=======
+>>>>>>> 1fd4ceb6 (.)
+>>>>>>> 5207ce7 (.)
     public function model()
     {
         return $this->morphTo();
