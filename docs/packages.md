@@ -13,7 +13,11 @@
     "require": {
         "php": "^8.1",
         "guzzlehttp/guzzle": "^7.2",
+<<<<<<< HEAD
         "laravel/framework": "^10.0",
+=======
+        "laravel/framework": "*",
+>>>>>>> 1c7b79f (.)
         "laravel/sanctum": "^3.2",
         "laravel/tinker": "^2.8"
     },

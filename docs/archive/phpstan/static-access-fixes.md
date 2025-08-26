@@ -4,7 +4,11 @@
 
 ### Error
 ```
+<<<<<<<< HEAD:docs/archive/phpstan/static-access-fixes.md
 Static access to instance property Modules\Xot\Filament\Resources\XotBaseResource\RelationManagers\XotBaseRelationManager::$resource.
+========
+Static access to instance property Modules\Xot\Filament\Resources\XotBaseResource\RelationManager\XotBaseRelationManager::$resource.
+>>>>>>>> 1c7b79f (.):docs.backup.before-optimization/phpstan/static-access-fixes.md
 ```
 
 ### Additional Error
@@ -42,3 +46,13 @@ protected function getResource(): string
 - Elimination of dead code
 - Improved type safety
 - Better performance without unnecessary exception handling
+
+## Collegamenti tra versioni di STATIC_ACCESS_FIXES.md
+* [STATIC_ACCESS_FIXES.md](../../../Xot/docs/phpstan/STATIC_ACCESS_FIXES.md)
+* [STATIC_ACCESS_FIXES.md](../../../Xot/docs/PHPStan/STATIC_ACCESS_FIXES.md)
+
+
+## Collegamenti tra versioni di static_access_fixes.md
+* [static_access_fixes.md](../phpstan/static_access_fixes.md)
+* [static_access_fixes.md](../PHPStan/static_access_fixes.md)
+

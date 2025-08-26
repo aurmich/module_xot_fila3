@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -44,6 +45,99 @@ This document outlines the best practices for maintaining high code quality with
 
 ### 5. Dependency Injection
 - Use dependency injection to avoid direct instantiation of dependencies, promoting testability and flexibility.
+=======
+# Laraxot Code Quality Standards
+
+## Overview
+
+This document defines the mandatory code quality standards for Laraxot projects. These rules ensure consistency, maintainability, and adherence to the Laraxot framework philosophy across all modules.
+
+## Core Principles
+
+### 1. **Strict Typing**
+- Always use `declare(strict_types=1);` at the beginning of every PHP file
+- Explicit return types for all methods and functions
+- Explicit parameter types for all methods and functions
+- Avoid `mixed` type - use specific types or union types
+
+### 2. **Static Analysis with PHPStan**
+- Minimum PHPStan level 9 for new code
+- Level 10 for critical business logic
+- Regular analysis with `./vendor/bin/phpstan analyze --level=9`
+- Address all PHPStan errors before committing
+
+### 3. **Code Structure and Organization**
+- Single responsibility principle for classes and methods
+- Maximum 20 lines per method
+- Maximum 200 lines per class
+- Use dependency injection instead of direct instantiation
+
+### 4. **Documentation Standards**
+- Complete PHPDoc for all public methods and classes
+- Use `@property` annotations for model properties
+- Use `@var` annotations for complex variables
+- Document exceptions and edge cases
+
+## Implementation Guidelines
+
+### PHP Strict Types
+```php
+<?php
+
+declare(strict_types=1);
+
+namespace Modules\ModuleName\Models;
+
+use Modules\Xot\Models\XotBaseModel;
+
+class ExampleModel extends XotBaseModel
+{
+    /**
+     * @var list<string>
+     */
+    protected $fillable = ['name', 'email'];
+
+    /**
+     * @return array<string, string>
+     */
+    protected function casts(): array
+    {
+        return [
+            'created_at' => 'datetime',
+            'updated_at' => 'datetime',
+        ];
+    }
+}
+```
+
+### PHPStan Configuration
+```neon
+# phpstan.neon.dist
+parameters:
+    level: 9
+    paths:
+        - app
+    excludePaths:
+        - app/Console/Kernel.php
+    checkMissingIterableValueType: true
+    checkGenericClassInNonGenericObjectType: true
+```
+
+### Safe Library Usage
+```php
+use function Safe\file_get_contents;
+use function Safe\json_decode;
+
+try {
+    $content = Safe\file_get_contents('file.txt');
+    $data = Safe\json_decode($content, true);
+} catch (\Safe\Exceptions\FilesystemException $e) {
+    // Handle file error
+} catch (\Safe\Exceptions\JsonException $e) {
+    // Handle JSON error
+}
+```
+>>>>>>> 1c7b79f (.)
 
 ## Code Quality Tools
 
@@ -60,6 +154,7 @@ This document outlines the best practices for maintaining high code quality with
 - Eseguire gli script di automazione regolarmente per mantenere la coerenza del codice
 
 ## Common Issues and Fixes
+<<<<<<< HEAD
 - **Type Errors**: Ensure all methods and functions have explicit return types and parameter types to avoid type-related bugs.
 - **Static Analysis Failures**: Address PHPStan errors by refining code or updating the baseline for existing code.
 - **Code Duplication**: Refactor duplicated code into reusable methods or traits to reduce maintenance overhead.
@@ -73,6 +168,67 @@ This document outlines the best practices for maintaining high code quality with
 - Update this document if new tools or standards for code quality are introduced.
 
 ## Links to Related Documentation
+=======
+
+### Type Errors
+- **Problem**: Missing return types or parameter types
+- **Solution**: Add explicit types to all methods and functions
+- **Example**:
+  ```php
+  // ❌ Wrong
+  public function process($data) { }
+  
+  // ✅ Correct
+  public function process(array $data): void { }
+  ```
+
+### Static Analysis Failures
+- **Problem**: PHPStan level 9+ errors
+- **Solution**: Fix type issues or update baseline for existing code
+- **Command**: `./vendor/bin/phpstan analyze --level=9`
+
+### Code Duplication
+- **Problem**: Repeated code patterns
+- **Solution**: Extract to reusable methods, traits, or base classes
+- **Principle**: DRY (Don't Repeat Yourself)
+
+## Testing and Verification
+
+### PHPStan Analysis
+```bash
+# Run PHPStan analysis
+./vendor/bin/phpstan analyze --level=9
+
+# Generate baseline for existing code
+./vendor/bin/phpstan analyze --generate-baseline
+
+# Analyze with baseline
+./vendor/bin/phpstan analyze --baseline=phpstan-baseline.neon
+```
+
+### Code Quality Checks
+- Run PHPStan before every commit
+- Use automated tools in CI/CD pipelines
+- Regular code reviews focusing on quality standards
+- Address technical debt in dedicated sprints
+
+## Documentation and Updates
+
+### Maintenance
+- Document any deviations from guidelines
+- Update standards when new tools are introduced
+- Regular review and improvement of quality standards
+- Share lessons learned across modules
+
+### Module-Specific Rules
+- Each module can extend these standards
+- Document custom rules in module's docs folder
+- Ensure consistency with Laraxot framework principles
+- Regular alignment with core standards
+
+## Links to Related Documentation
+
+>>>>>>> 1c7b79f (.)
 - [Xot Base Classes](../Xot/docs/XOT_BASE_CLASSES.md)
 - [Filament Extension Pattern](../../Notify/docs/FILAMENT_EXTENSION_PATTERN.md)
 - [Filament Extension Pattern Analysis](../../Notify/docs/FILAMENT_EXTENSION_PATTERN_ANALYSIS.md)
@@ -83,6 +239,7 @@ This document outlines the best practices for maintaining high code quality with
 - [Naming Conventions](./NAMING-CONVENTIONS.md)
 - [Service Provider Best Practices](./SERVICE-PROVIDER-BEST-PRACTICES.md)
 - [Filament Best Practices](./FILAMENT-BEST-PRACTICES.md)
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -382,3 +539,9 @@ unset($translations['existing_key']); // MAI!
 =======
 >>>>>>> 995f7cae (.)
 >>>>>>> b258042 (.)
+=======
+
+---
+
+*Laraxot Code Quality Standards - Ensuring Excellence Across All Modules*
+>>>>>>> 1c7b79f (.)

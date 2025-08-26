@@ -79,9 +79,12 @@ cache/
 *.wip
 # PHPStan documentation
 docs/phpstan/
+<<<<<<< HEAD
 =======
 >>>>>>> 5852845d (.)
 =======
 >>>>>>> abfbbdf (.)
 =======
 >>>>>>> 1fd4ceb6 (.)
+=======
+>>>>>>> 1c7b79f (.)

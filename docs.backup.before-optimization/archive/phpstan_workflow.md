@@ -165,4 +165,25 @@ class MyModel extends BaseModel
      - Docs del modulo specifico
      - .cursor/rules per Cursor AI
      - .windsurfrules per Windsurf
+<<<<<<<< HEAD:docs.backup.before-optimization/archive/phpstan_workflow.md
    - Mantenere coerenza tra le diverse documentazioni 
+========
+   - Mantenere coerenza tra le diverse documentazioni 
+## Collegamenti tra versioni di PHPSTAN_WORKFLOW.md
+* [PHPSTAN_WORKFLOW.md](../../../Xot/docs/phpstan/PHPSTAN_WORKFLOW.md)
+* [PHPSTAN_WORKFLOW.md](../../../Xot/docs/PHPSTAN_WORKFLOW.md)
+
+
+## Collegamenti tra versioni di phpstan_workflow.md
+### Versione HEAD
+
+* [phpstan_workflow.md](phpstan/phpstan_workflow.md)
+
+### Versione Incoming
+
+* [phpstan_workflow.md](../phpstan_workflow.md)
+
+---
+
+
+>>>>>>>> 1c7b79f (.):docs.backup.before-optimization/phpstan/phpstan-workflow.md

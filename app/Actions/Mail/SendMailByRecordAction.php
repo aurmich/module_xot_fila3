@@ -42,6 +42,7 @@ class SendMailByRecordAction
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         if (!isset($record->email)) {
             throw new \InvalidArgumentException('Model must have email attribute');
 =======
@@ -52,6 +53,10 @@ class SendMailByRecordAction
         if (($record->email ?? null) === null || empty($record->email)) {
             throw new \InvalidArgumentException('Model must have email property');
 >>>>>>> 5852845d (.)
+=======
+        if (($record->email ?? null) === null || empty($record->email)) {
+            throw new \InvalidArgumentException('Model must have email property');
+>>>>>>> 1c7b79f (.)
         }
         
         if (!method_exists($record, 'option')) {

@@ -11,6 +11,7 @@ use Illuminate\Support\Str;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 use Webmozart\Assert\Assert;
 use Spatie\ModelStates\State;
 use Filament\Forms\Components;
@@ -22,6 +23,9 @@ use Illuminate\Database\Eloquent\Model;
 >>>>>>> abfbbdf (.)
 =======
 >>>>>>> 1fd4ceb6 (.)
+=======
+use Webmozart\Assert\Assert;
+>>>>>>> 1c7b79f (.)
 use Modules\Xot\Contracts\StateContract;
 use Modules\Xot\Filament\Traits\TransTrait;
 use Spatie\ModelStates\State;
@@ -35,6 +39,7 @@ use Spatie\ModelStates\State;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
  * @property string $name Il nome dello stato
 =======
  * @property string $name  Il nome dello stato
@@ -45,6 +50,9 @@ use Spatie\ModelStates\State;
 =======
  * @property string $name  Il nome dello stato
 >>>>>>> 1fd4ceb6 (.)
+=======
+ * @property string $name Il nome dello stato
+>>>>>>> 1c7b79f (.)
  * @property string $value Il valore dello stato nel database
  */
 abstract class XotBaseState extends State implements StateContract
@@ -56,6 +64,9 @@ abstract class XotBaseState extends State implements StateContract
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 1c7b79f (.)
     /*
     public static function config(): StateConfig
         {
@@ -100,12 +111,15 @@ abstract class XotBaseState extends State implements StateContract
 
     }
     */
+<<<<<<< HEAD
 =======
 >>>>>>> 5852845d (.)
 =======
 >>>>>>> abfbbdf (.)
 =======
 >>>>>>> 1fd4ceb6 (.)
+=======
+>>>>>>> 1c7b79f (.)
     public static function getName(): string
     {
         /* @phpstan-ignore-next-line */
@@ -117,6 +131,7 @@ abstract class XotBaseState extends State implements StateContract
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 5852845d (.)
@@ -124,6 +139,8 @@ abstract class XotBaseState extends State implements StateContract
 >>>>>>> abfbbdf (.)
 =======
 >>>>>>> 1fd4ceb6 (.)
+=======
+>>>>>>> 1c7b79f (.)
         return static::transClass(static::class, 'states.'.static::getName().'.label');
         // return 'Annullato';
     }
@@ -133,6 +150,7 @@ abstract class XotBaseState extends State implements StateContract
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
         return static::transClass(static::class, 'states.'.static::getName().'.color');
 
@@ -145,6 +163,9 @@ abstract class XotBaseState extends State implements StateContract
 =======
         return static::transClass(static::class, 'states.'.static::getName().'.color');
 >>>>>>> 1fd4ceb6 (.)
+=======
+        return static::transClass(static::class, 'states.'.static::getName().'.color');
+>>>>>>> 1c7b79f (.)
     }
 
     public function bgColor(): string
@@ -177,6 +198,7 @@ abstract class XotBaseState extends State implements StateContract
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @return array<string, \Filament\Forms\Components\Component>
 =======
      * @return array<string, Components\Component>
@@ -187,6 +209,9 @@ abstract class XotBaseState extends State implements StateContract
 =======
      * @return array<string, Components\Component>
 >>>>>>> 1fd4ceb6 (.)
+=======
+     * @return array<string, Components\Component>
+>>>>>>> 1c7b79f (.)
      */
     public function modalFormSchema(): array
     {
@@ -197,6 +222,7 @@ abstract class XotBaseState extends State implements StateContract
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 5852845d (.)
@@ -204,12 +230,15 @@ abstract class XotBaseState extends State implements StateContract
 >>>>>>> abfbbdf (.)
 =======
 >>>>>>> 1fd4ceb6 (.)
+=======
+>>>>>>> 1c7b79f (.)
         ];
     }
 
     /**
      * Fill form data for modal.
      *
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -230,6 +259,11 @@ abstract class XotBaseState extends State implements StateContract
      * @param array<string, mixed> $data
      *
 >>>>>>> 1fd4ceb6 (.)
+=======
+     * @param array<string, mixed> $arguments
+     * @param array<string, mixed> $data
+     *
+>>>>>>> 1c7b79f (.)
      * @return array<string, mixed>
      */
     public function modalFillForm(array $arguments, array $data): array
@@ -253,6 +287,7 @@ abstract class XotBaseState extends State implements StateContract
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @param  array<string, mixed>  $arguments
      * @param  array<string, mixed>  $data
 =======
@@ -267,6 +302,10 @@ abstract class XotBaseState extends State implements StateContract
      * @param array<string, mixed> $arguments
      * @param array<string, mixed> $data
 >>>>>>> 1fd4ceb6 (.)
+=======
+     * @param array<string, mixed> $arguments
+     * @param array<string, mixed> $data
+>>>>>>> 1c7b79f (.)
      */
     public function modalAction(array $arguments, array $data): void
     {
@@ -279,6 +318,7 @@ abstract class XotBaseState extends State implements StateContract
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @param  array<string, mixed>  $arguments
      * @param  array<string, mixed>  $data
 =======
@@ -293,6 +333,10 @@ abstract class XotBaseState extends State implements StateContract
      * @param array<string, mixed> $arguments
      * @param array<string, mixed> $data
 >>>>>>> 1fd4ceb6 (.)
+=======
+     * @param array<string, mixed> $arguments
+     * @param array<string, mixed> $data
+>>>>>>> 1c7b79f (.)
      */
     public function processStateAction(array $arguments, array $data): void
     {
@@ -309,6 +353,7 @@ abstract class XotBaseState extends State implements StateContract
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         /** @phpstan-ignore-next-line */
 =======
         /* @phpstan-ignore-next-line */
@@ -319,12 +364,16 @@ abstract class XotBaseState extends State implements StateContract
 =======
         /* @phpstan-ignore-next-line */
 >>>>>>> 1fd4ceb6 (.)
+=======
+        /** @phpstan-ignore-next-line */
+>>>>>>> 1c7b79f (.)
         $record->state->transitionTo($stateClass, $message);
     }
 
     /**
      * Execute modal action by record.
      *
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -338,6 +387,9 @@ abstract class XotBaseState extends State implements StateContract
 =======
      * @param array<string, mixed> $data
 >>>>>>> 1fd4ceb6 (.)
+=======
+     * @param array<string, mixed> $data
+>>>>>>> 1c7b79f (.)
      */
     public function modalActionByRecord(Model $record, array $data): void
     {
@@ -350,6 +402,7 @@ abstract class XotBaseState extends State implements StateContract
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @param  array<string, mixed>  $data
 =======
      * @param array<string, mixed> $data
@@ -360,6 +413,9 @@ abstract class XotBaseState extends State implements StateContract
 =======
      * @param array<string, mixed> $data
 >>>>>>> 1fd4ceb6 (.)
+=======
+     * @param array<string, mixed> $data
+>>>>>>> 1c7b79f (.)
      */
     public function processStateActionByRecord(Model $record, array $data): void
     {
@@ -372,6 +428,7 @@ abstract class XotBaseState extends State implements StateContract
 
         $appointment?->state->transitionTo($stateClass,$message);
         */
+<<<<<<< HEAD
         /* @phpstan-ignore-next-line */
         $record->state->transitionTo($stateClass, $message);
 <<<<<<< HEAD
@@ -396,6 +453,10 @@ abstract class XotBaseState extends State implements StateContract
 >>>>>>> abfbbdf (.)
 =======
 >>>>>>> 1fd4ceb6 (.)
+=======
+        /** @phpstan-ignore-next-line */
+        $record->state->transitionTo($stateClass, $message);
+>>>>>>> 1c7b79f (.)
     }
 
     public function isMessageRequired(): bool

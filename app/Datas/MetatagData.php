@@ -15,7 +15,10 @@ use Modules\Xot\Actions\File\AssetPathAction;
 use Spatie\LaravelData\Concerns\WireableData;
 use Spatie\LaravelData\Attributes\WithTransformer;
 use Modules\Xot\Datas\Transformers\AssetTransformer;
+<<<<<<< HEAD
 use function Safe\file_get_contents;
+=======
+>>>>>>> 1c7b79f (.)
 
 /**
  * Class MetatagData.
@@ -580,6 +583,9 @@ class MetatagData extends Data implements Wireable
         $xot=XotData::make();
         $path=base_path('Modules/'.$xot->main_module.'/resources/svg/logo.svg');
         return file_get_contents($path);
+<<<<<<< HEAD
 
+=======
+>>>>>>> 1c7b79f (.)
     }
 }

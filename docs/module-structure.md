@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Struttura dei Moduli in il progetto
 
 ## Panoramica
@@ -34,9 +35,13 @@ ModuleName/
 =======
 =======
 # Struttura dei Moduli in <nome progetto>
+=======
+# Laraxot Module Structure Standards
+>>>>>>> 1c7b79f (.)
 
-Questo documento definisce le linee guida ufficiali per la struttura dei moduli all'interno del framework <nome progetto>.
+## Overview
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 7ce328e (.)
 =======
@@ -59,28 +64,97 @@ Per dettagli implementativi e best practice vedi:
 ---
 
 ## Service Provider
+=======
+This document defines the mandatory structure and organization standards for Laraxot modules. Following these standards ensures consistency, maintainability, and proper integration with the Laraxot framework.
+>>>>>>> 1c7b79f (.)
 
-### Convenzioni Base
+## Core Module Structure
 
-Ogni modulo deve avere un ServiceProvider che estende `XotBaseServiceProvider`. Questo provider è responsabile della registrazione delle risorse del modulo (routes, views, translations, etc.) nell'applicazione.
+### 1. **Directory Organization**
+```
+Modules/
+└── ModuleName/
+    ├── app/
+    │   ├── Actions/
+    │   ├── Console/
+    │   ├── Datas/
+    │   ├── Enums/
+    │   ├── Events/
+    │   ├── Exceptions/
+    │   ├── Facades/
+    │   ├── Filament/
+    │   ├── Http/
+    │   ├── Jobs/
+    │   ├── Listeners/
+    │   ├── Mail/
+    │   ├── Models/
+    │   ├── Notifications/
+    │   ├── Observers/
+    │   ├── Policies/
+    │   ├── Providers/
+    │   ├── Repositories/
+    │   ├── Rules/
+    │   ├── Services/
+    │   └── Traits/
+    ├── database/
+    │   ├── factories/
+    │   ├── migrations/
+    │   └── seeders/
+    ├── docs/
+    ├── lang/
+    ├── resources/
+    │   ├── views/
+    │   ├── js/
+    │   └── css/
+    ├── routes/
+    ├── tests/
+    ├── composer.json
+    ├── module.json
+    └── README.md
+```
+
+### 2. **Namespace Conventions**
+- **NEVER** include 'App' segment in module namespaces
+- **ALWAYS** use `Modules\{ModuleName}\{Directory}\{ClassName}` pattern
+- **NEVER** use `App\Modules\{ModuleName}` or similar patterns
+
+```php
+// ✅ CORRECT
+namespace Modules\Performance\Models;
+namespace Modules\Performance\Http\Controllers;
+namespace Modules\Performance\Filament\Resources;
+
+// ❌ WRONG
+namespace Modules\Performance\App\Models;
+namespace App\Modules\Performance\Models;
+```
+
+## Model Standards
+
+### 1. **Inheritance Rules**
+- **ALWAYS** extend `BaseModel` of the same module
+- **NEVER** extend `Illuminate\Database\Eloquent\Model` directly
+- **NEVER** extend `Modules\Xot\Models\XotBaseModel` directly
 
 ```php
 <?php
 
 declare(strict_types=1);
 
-namespace Modules\NomeModulo\Providers;
+namespace Modules\ModuleName\Models;
 
-use Modules\Xot\Providers\XotBaseServiceProvider;
+use Modules\ModuleName\Models\BaseModel;
 
-class NomeModuloServiceProvider extends XotBaseServiceProvider {
-    // Implementazione
+class ExampleModel extends BaseModel
+{
+    // Implementation
 }
 <<<<<<< HEAD
 >>>>>>> 7dd92412 (.)
 >>>>>>> b258042 (.)
 ```
 
+<<<<<<< HEAD
 ## Collegamenti
 
 ### Documentazione Correlata
@@ -459,4 +533,334 @@ Se trovi una directory con case errato:
 
 ## Collegamenti tra versioni di module_structure.md
 * [module_structure.md](../../../../docs/error_analysis/module_structure.md)
+=======
+### 2. **Model Properties**
+```php
+/**
+ * @property int $id
+ * @property string $name
+ * @property Carbon|null $created_at
+ * @property Carbon|null $updated_at
+ * @property-read Collection<int, RelatedModel> $relatedModels
+ */
+class ExampleModel extends BaseModel
+{
+    /** @var list<string> */
+    protected $fillable = ['name', 'email'];
+
+    /** @var list<string> */
+    protected $hidden = ['password'];
+
+    /**
+     * @return array<string, string>
+     */
+    protected function casts(): array
+    {
+        return [
+            'created_at' => 'datetime',
+            'updated_at' => 'datetime',
+            'is_active' => 'boolean',
+        ];
+    }
+}
+```
+
+## Migration Standards
+
+### 1. **Base Class Extension**
+- **ALWAYS** use anonymous classes extending `XotBaseMigration`
+- **NEVER** implement `down()` method
+- **ALWAYS** use `hasTable()` and `hasColumn()` checks
+
+```php
+<?php
+
+declare(strict_types=1);
+
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
+use Modules\Xot\Database\Migrations\XotBaseMigration;
+
+return new class extends XotBaseMigration {
+    protected string $table_name = 'example_table';
+
+    public function up(): void
+    {
+        if ($this->hasTable($this->table_name)) {
+            return;
+        }
+
+        Schema::create($this->table_name, function (Blueprint $table) {
+            $table->id();
+            $table->string('name');
+            $table->timestamps();
+        });
+    }
+};
+```
+
+### 2. **Adding Columns to Existing Tables**
+- **NEVER** create new migrations for adding columns
+- **ALWAYS** copy the original migration with updated timestamp
+- **ALWAYS** check column existence before adding
+
+## Filament Standards
+
+### 1. **Resource Extension**
+- **ALWAYS** extend `XotBaseResource` instead of `Resource`
+- **ALWAYS** implement `getFormSchema()` method
+- **NEVER** use `->label()` in form components
+
+```php
+<?php
+
+declare(strict_types=1);
+
+namespace Modules\ModuleName\Filament\Resources;
+
+use Modules\Xot\Filament\Resources\XotBaseResource;
+
+class ExampleResource extends XotBaseResource
+{
+    /**
+     * @return array<string, \Filament\Forms\Components\Component>
+     */
+    public static function getFormSchema(): array
+    {
+        return [
+            'name' => TextInput::make('name'),
+            'email' => TextInput::make('email'),
+        ];
+    }
+}
+```
+
+### 2. **Page Extension**
+- **ALWAYS** extend XotBase page classes
+- **NEVER** extend Filament base page classes directly
+
+```php
+use Modules\Xot\Filament\Resources\Pages\XotBaseListRecords;
+use Modules\Xot\Filament\Resources\Pages\XotBaseCreateRecord;
+use Modules\Xot\Filament\Resources\Pages\XotBaseEditRecord;
+```
+
+## Translation Standards
+
+### 1. **File Structure**
+- **ALWAYS** use expanded structure for fields and actions
+- **ALWAYS** use short array syntax `[]`
+- **NEVER** remove existing keys from translation files
+
+```php
+<?php
+
+declare(strict_types=1);
+
+return [
+    'fields' => [
+        'name' => [
+            'label' => 'Name',
+            'placeholder' => 'Enter name',
+            'help' => 'Enter the full name',
+        ],
+    ],
+    'actions' => [
+        'create' => [
+            'label' => 'Create',
+            'success' => 'Created successfully',
+            'error' => 'Error during creation',
+        ],
+    ],
+];
+```
+
+### 2. **File Location**
+- **ALWAYS** place translations in `Modules/{ModuleName}/lang/{locale}/`
+- **NEVER** place translations in root `resources/lang/`
+
+## Service Provider Standards
+
+### 1. **Base Class Extension**
+- **ALWAYS** extend `XotBaseServiceProvider`
+- **NEVER** extend `Illuminate\Support\ServiceProvider` directly
+- **ALWAYS** call parent methods in `boot()` and `register()`
+
+```php
+<?php
+
+declare(strict_types=1);
+
+namespace Modules\ModuleName\Providers;
+
+use Modules\Xot\Providers\XotBaseServiceProvider;
+
+class ModuleNameServiceProvider extends XotBaseServiceProvider
+{
+    protected string $module_name = 'ModuleName';
+
+    public function boot(): void
+    {
+        parent::boot();
+        // Module-specific customizations only
+    }
+
+    public function register(): void
+    {
+        parent::register();
+        // Module-specific registrations only
+    }
+}
+```
+
+## Testing Standards
+
+### 1. **Test Structure**
+- **ALWAYS** place tests in `Modules/{ModuleName}/tests/`
+- **ALWAYS** use `ModuleTestTrait` for common functionality
+- **NEVER** use `RefreshDatabase` trait
+
+```php
+<?php
+
+declare(strict_types=1);
+
+namespace Tests\Feature\Modules\ModuleName;
+
+use Tests\TestCase;
+use Tests\Support\Traits\ModuleTestTrait;
+
+class ExampleTest extends TestCase
+{
+    use ModuleTestTrait;
+
+    public function test_example_functionality(): void
+    {
+        // Test implementation
+    }
+}
+```
+
+### 2. **Test Organization**
+```
+tests/
+├── Feature/
+├── Unit/
+└── Integration/
+```
+
+## Documentation Standards
+
+### 1. **Required Documentation**
+- **ALWAYS** create `Modules/{ModuleName}/docs/` directory
+- **ALWAYS** document module-specific functionality
+- **ALWAYS** create bidirectional links with root docs
+
+### 2. **Documentation Files**
+```
+docs/
+├── README.md
+├── testing.md
+├── api.md
+├── models.md
+└── filament.md
+```
+
+## Composer Configuration
+
+### 1. **Module Registration**
+```json
+{
+    "name": "laraxot/module-name",
+    "description": "Module description",
+    "type": "laravel-module",
+    "autoload": {
+        "psr-4": {
+            "Modules\\ModuleName\\": "app/"
+        }
+    }
+}
+```
+
+### 2. **Dependencies**
+- **ALWAYS** specify version constraints
+- **NEVER** use `*` for version constraints
+- **ALWAYS** use compatible versions with Laraxot framework
+
+## Quality Assurance
+
+### 1. **PHPStan Compliance**
+- **MINIMUM** PHPStan level 9 for all code
+- **ALWAYS** run analysis from `/laravel` directory
+- **NEVER** use `php artisan test:phpstan`
+
+```bash
+cd /var/www/html/project/laravel
+./vendor/bin/phpstan analyze Modules/ModuleName --level=9
+```
+
+### 2. **Code Quality Checks**
+- **ALWAYS** use strict types declaration
+- **ALWAYS** provide explicit return types
+- **ALWAYS** provide explicit parameter types
+- **NEVER** use `mixed` type unless absolutely necessary
+
+## Common Anti-Patterns
+
+### 1. **Namespace Violations**
+```php
+// ❌ WRONG
+namespace Modules\ModuleName\App\Models;
+namespace App\Modules\ModuleName\Models;
+```
+
+### 2. **Inheritance Violations**
+```php
+// ❌ WRONG
+class ExampleModel extends Model;
+class ExampleResource extends Resource;
+class ExampleServiceProvider extends ServiceProvider;
+```
+
+### 3. **Translation Violations**
+```php
+// ❌ WRONG
+TextInput::make('name')->label('Name');
+'name_label' => 'Name';
+```
+
+### 4. **Migration Violations**
+```php
+// ❌ WRONG
+class CreateExampleTable extends Migration;
+public function down(): void;
+```
+
+## Compliance Checklist
+
+Before considering a module complete, verify:
+
+- [ ] Proper namespace structure (no 'App' segment)
+- [ ] Models extend BaseModel of the same module
+- [ ] Migrations extend XotBaseMigration
+- [ ] Filament resources extend XotBaseResource
+- [ ] Service providers extend XotBaseServiceProvider
+- [ ] Translation files use expanded structure
+- [ ] Tests use ModuleTestTrait
+- [ ] Documentation exists and is bidirectional
+- [ ] PHPStan level 9 compliance
+- [ ] No hardcoded strings in components
+
+## Links to Related Documentation
+
+- [Code Quality Standards](./code-quality.md)
+- [Filament Best Practices](./filament-best-practices.md)
+- [Testing Guidelines](./testing.md)
+- [Migration Standards](./migration-standards.md)
+- [Translation Best Practices](./translations-best-practices.md)
+
+---
+
+*Laraxot Module Structure Standards - Building Consistent and Maintainable Modules*
+>>>>>>> 1c7b79f (.)
 

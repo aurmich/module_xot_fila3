@@ -43,4 +43,16 @@ Per correggere questi errori, seguiremo un approccio sistematico:
 2. **Modulo User** - Problemi con autenticazione, password e relazioni tra utenti.
 3. **Modulo Notify** - Errori nelle relazioni e nei metodi dei modelli.
 
+<<<<<<<< HEAD:docs/archive/phpstan/phpstan-errors-analysis.md
 Procederemo analizzando e correggendo gli errori modulo per modulo, partendo dai casi più semplici e ripetitivi per poi affrontare quelli più complessi. 
+========
+Procederemo analizzando e correggendo gli errori modulo per modulo, partendo dai casi più semplici e ripetitivi per poi affrontare quelli più complessi. 
+## Collegamenti tra versioni di PHPSTAN-ERRORS-ANALYSIS.md
+* [PHPSTAN-ERRORS-ANALYSIS.md](../../../Xot/docs/phpstan/PHPSTAN-ERRORS-ANALYSIS.md)
+* [PHPSTAN-ERRORS-ANALYSIS.md](../../../Xot/docs/PHPStan/PHPSTAN-ERRORS-ANALYSIS.md)
+
+
+## Collegamenti tra versioni di phpstan-errors-analysis.md
+* [phpstan-errors-analysis.md](../PHPStan/phpstan-errors-analysis.md)
+
+>>>>>>>> 1c7b79f (.):docs.backup.before-optimization/phpstan/phpstan-errors-analysis.md

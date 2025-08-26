@@ -144,4 +144,25 @@ function processData(array $data): string {
 }
 ```
 
+<<<<<<<< HEAD:docs/archive/phpstan/mixed-type-solutions.md
 Seguendo queste linee guida, sarà possibile risolvere la maggior parte degli errori legati al tipo `mixed` segnalati da PHPStan al livello 9. 
+========
+Seguendo queste linee guida, sarà possibile risolvere la maggior parte degli errori legati al tipo `mixed` segnalati da PHPStan al livello 9. 
+## Collegamenti tra versioni di MIXED-TYPE-SOLUTIONS.md
+* [MIXED-TYPE-SOLUTIONS.md](../../../Xot/docs/phpstan/MIXED-TYPE-SOLUTIONS.md)
+* [MIXED-TYPE-SOLUTIONS.md](../../../Xot/docs/PHPStan/MIXED-TYPE-SOLUTIONS.md)
+
+
+## Collegamenti tra versioni di mixed-type-solutions.md
+### Versione HEAD
+
+* [mixed-type-solutions.md](../phpstan/mixed-type-solutions.md)
+
+### Versione Incoming
+
+* [mixed-type-solutions.md](../PHPStan/mixed-type-solutions.md)
+
+---
+
+
+>>>>>>>> 1c7b79f (.):docs.backup.before-optimization/phpstan/mixed-type-solutions.md

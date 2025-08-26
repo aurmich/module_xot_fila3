@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Correzioni PHPStan Livello 7 - Modulo Xot
 =======
 # Correzioni PHPStan - 6 Gennaio 2025
@@ -252,11 +253,71 @@ Il problema è che il codice chiamava il metodo `getName()` sui componenti Filam
 b6f667c (.)
 
 ### 2. Validazione Dati
+=======
+# PHPStan Fixes for Laraxot
+
+## Overview
+
+This document provides solutions for common PHPStan errors encountered in Laraxot projects. PHPStan is a static analysis tool that helps identify potential issues in PHP code before runtime.
+
+## PHPStan Configuration
+
+### 1. **Execution Rules**
+- **ALWAYS** run from `/laravel` directory
+- **NEVER** use `php artisan test:phpstan`
+- **ALWAYS** use `./vendor/bin/phpstan analyze --level=9 --memory-limit=2G`
+
+### 2. **Configuration File**
+```neon
+# phpstan.neon.dist
+parameters:
+    level: 9
+    paths:
+        - app
+        - Modules
+    excludePaths:
+        - app/Console/Kernel.php
+    checkMissingIterableValueType: true
+    checkGenericClassInNonGenericObjectType: true
+    checkMissingCallableSignature: true
+    checkUnusedFunctionParameters: true
+```
+
+## Common Error Fixes
+
+### 1. **Undefined Property Access**
+
+#### Problem
+```
+Access to an undefined property $property of class ExampleModel
+```
+
+#### Solution
+Add `@property` annotations to models:
+
 ```php
 /**
- * @param array<string, mixed> $data
- * @throws InvalidArgumentException
+ * @property int $id
+ * @property string $name
+ * @property string|null $email
+ * @property Carbon|null $created_at
+ * @property Carbon|null $updated_at
+ * @property-read Collection<int, RelatedModel> $relatedModels
  */
+class ExampleModel extends BaseModel
+{
+    // Implementation
+}
+```
+
+#### For Relationships
+>>>>>>> 1c7b79f (.)
+```php
+/**
+ * @property-read \Illuminate\Database\Eloquent\Relations\BelongsTo<User, ExampleModel> $user
+ * @property-read \Illuminate\Database\Eloquent\Relations\HasMany<RelatedModel> $relatedModels
+ */
+<<<<<<< HEAD
 private function validateData(array $data): void
 {
     Assert::keyExists($data, 'required_field');
@@ -312,6 +373,106 @@ Questo approccio controlla esplicitamente se i metodi esistono prima di chiamarl
 
 L'errore riguardava l'utilizzo del costruttore di `ReflectionClass` che richiedeva un parametro di tipo `class-string<T of object>`, ma veniva passata una stringa generica. Abbiamo risolto questo problema aggiungendo un controllo che verifica se la classe esiste prima di istanziare la `ReflectionClass` e usando un'annotazione PHPDoc per indicare a PHPStan che la variabile è di tipo `class-string`:
 
+=======
+```
+
+### 2. **Missing Return Types**
+
+#### Problem
+```
+Method getFullName() does not have a return type specified
+```
+
+#### Solution
+Add explicit return types to all methods:
+
+```php
+public function getFullName(): string
+{
+    return $this->first_name . ' ' . $this->last_name;
+}
+
+public function getActiveUsers(): Collection
+{
+    return $this->users()->where('active', true)->get();
+}
+
+public function processData(array $data): void
+{
+    // Implementation
+}
+```
+
+### 3. **Method Not Found**
+
+#### Problem
+```
+Call to an undefined method methodName() of class ExampleModel
+```
+
+#### Solution
+Check namespace and imports:
+
+```php
+// ✅ CORRECT
+use Modules\User\Models\User;
+use Modules\ModuleName\Models\ExampleModel;
+
+// ❌ WRONG
+use App\Models\User;
+use App\Models\ExampleModel;
+```
+
+### 4. **Array Shape Issues**
+
+#### Problem
+```
+Parameter #1 $data of method process() expects array{id: int, name: string}, array given
+```
+
+#### Solution
+Use proper array shape annotations:
+
+```php
+/**
+ * @param array{id: int, name: string, email?: string} $data
+ */
+public function process(array $data): void
+{
+    // Implementation
+}
+```
+
+### 5. **Nullable Parameter Issues**
+
+#### Problem
+```
+Parameter #1 $value of method process() expects string, string|null given
+```
+
+#### Solution
+Handle nullable parameters properly:
+
+```php
+public function process(?string $value): string
+{
+    return $value ?? '';
+}
+
+public function process(?string $value): void
+{
+    if ($value === null) {
+        return;
+    }
+    
+    // Process non-null value
+}
+```
+
+## Generics and Collections
+
+### 1. **Collection Types**
+>>>>>>> 1c7b79f (.)
 ```php
 try {
     // Assicuriamoci che comp_ns sia una classe valida prima di creare la ReflectionClass
@@ -733,6 +894,7 @@ private function exportTablesToCSV(string $mdbFile): void
 
 // Dopo:
 /**
+<<<<<<< HEAD
  * Esporta tutte le tabelle dal file .mdb in formato CSV.
  * 
  * @return string[] Array di nomi di tabelle esportate
@@ -742,12 +904,29 @@ private function exportTablesToCSV(string $mdbFile): array
     $tables = [];
     // ... codice per popolare $tables ...
     return $tables;
+=======
+ * @return Collection<int, User>
+ */
+public function getActiveUsers(): Collection
+{
+    return User::where('active', true)->get();
+}
+
+/**
+ * @param array<int, string> $names
+ * @return array<int, User>
+ */
+public function findUsersByNames(array $names): array
+{
+    return User::whereIn('name', $names)->get()->all();
+>>>>>>> 1c7b79f (.)
 }
 ```
 <<<<<<< HEAD
 =======
 ### 1. Chart/app/Datas/AnswersChartData.php
 
+<<<<<<< HEAD
 **Problema**: Errori `argument.type` e `offsetAccess.nonOffsetAccessible`
 - Linee 208, 254: `count()` su mixed
 - Linee 450, 460, 492, 496: Accesso offset su mixed
@@ -809,10 +988,125 @@ private function importDataToMySQL(string $mdbFile, string $mysqlUser, string $m
 >>>>>>> 1fd4ceb6 (.)
     foreach ($tables as $table) {
         // ... codice per importare i dati ...
-    }
+=======
+### 2. **Relationship Types**
+```php
+/**
+ * @return \Illuminate\Database\Eloquent\Relations\BelongsTo<User, ExampleModel>
+ */
+public function user(): \Illuminate\Database\Eloquent\Relations\BelongsTo
+{
+    return $this->belongsTo(User::class);
+}
+
+/**
+ * @return \Illuminate\Database\Eloquent\Relations\HasMany<RelatedModel>
+ */
+public function relatedModels(): \Illuminate\Database\Eloquent\Relations\HasMany
+{
+    return $this->hasMany(RelatedModel::class);
 }
 ```
 
+## Model Property Annotations
+
+### 1. **Fillable Properties**
+```php
+/** @var list<string> */
+protected $fillable = ['name', 'email', 'status'];
+```
+
+### 2. **Hidden Properties**
+```php
+/** @var list<string> */
+protected $hidden = ['password', 'remember_token'];
+```
+
+### 3. **Dates Properties**
+```php
+/** @var list<string> */
+protected $dates = ['birth_date', 'last_login'];
+```
+
+### 4. **With Properties**
+```php
+/** @var list<string> */
+protected $with = ['user', 'permissions'];
+```
+
+## Factory and Testing
+
+### 1. **Factory Method Types**
+```php
+/**
+ * @return array<string, mixed>
+ */
+public function definition(): array
+{
+    return [
+        'name' => $this->faker->name(),
+        'email' => $this->faker->unique()->safeEmail(),
+        'status' => $this->faker->randomElement(['active', 'inactive']),
+    ];
+}
+```
+
+### 2. **Test Method Types**
+```php
+public function test_user_can_be_created(): void
+{
+    $user = User::factory()->create();
+    
+    $this->assertDatabaseHas('users', [
+        'id' => $user->id,
+    ]);
+}
+```
+
+## Safe Library Usage
+
+### 1. **File Operations**
+```php
+use function Safe\file_get_contents;
+use function Safe\file_put_contents;
+
+try {
+    $content = Safe\file_get_contents('file.txt');
+    Safe\file_put_contents('output.txt', $content);
+} catch (\Safe\Exceptions\FilesystemException $e) {
+    // Handle file error
+}
+```
+
+### 2. **JSON Operations**
+```php
+use function Safe\json_decode;
+use function Safe\json_encode;
+
+try {
+    $data = Safe\json_decode($jsonString, true);
+    $jsonString = Safe\json_encode($data);
+} catch (\Safe\Exceptions\JsonException $e) {
+    // Handle JSON error
+}
+```
+
+### 3. **Regular Expressions**
+```php
+use function Safe\preg_match;
+use function Safe\preg_replace;
+
+try {
+    if (Safe\preg_match('/pattern/', $string)) {
+        $result = Safe\preg_replace('/pattern/', 'replacement', $string);
+>>>>>>> 1c7b79f (.)
+    }
+} catch (\Safe\Exceptions\PregException $e) {
+    // Handle regex error
+}
+```
+
+<<<<<<< HEAD
 Queste modifiche garantiscono che:
 1. Il metodo exportTablesToCSV restituisca effettivamente l'array di tabelle che viene costruito al suo interno
 2. Il metodo importDataToMySQL verifichi che l'array di tabelle non sia vuoto prima di tentare di iterarlo
@@ -885,6 +1179,151 @@ Queste modifiche garantiscono che:
 ### 18. Correzione in Console/Commands/SearchStringInDatabaseCommand.php
 
 L'errore riguardava una discrepanza tra il tipo dichiarato nel PHPDoc e il tipo effettivo del parametro $results nel metodo formatResults. Il metodo si aspettava una Collection di oggetti generici, ma in realtà riceveva una Collection di oggetti stdClass:
+=======
+## Advanced Type Annotations
+
+### 1. **Union Types**
+```php
+public function process(string|int $value): string
+{
+    return (string) $value;
+}
+
+public function getStatus(): 'active'|'inactive'|'pending'
+{
+    return $this->status;
+}
+```
+
+### 2. **Intersection Types**
+```php
+/**
+ * @param User&HasPermissions $user
+ */
+public function canAccess(User&HasPermissions $user): bool
+{
+    return $user->hasPermission('access');
+}
+```
+
+### 3. **Template Types**
+```php
+/**
+ * @template T
+ * @param class-string<T> $class
+ * @return T
+ */
+public function createInstance(string $class)
+{
+    return new $class();
+}
+```
+
+## Error Resolution Workflow
+
+### 1. **Identify the Error**
+```bash
+./vendor/bin/phpstan analyze --level=9
+```
+
+### 2. **Understand the Context**
+- Read the error message carefully
+- Check the file and line number
+- Understand what PHPStan expects vs. what you have
+
+### 3. **Apply the Fix**
+- Add missing type annotations
+- Fix property access issues
+- Correct method signatures
+- Update PHPDoc blocks
+
+### 4. **Verify the Fix**
+```bash
+./vendor/bin/phpstan analyze --level=9
+```
+
+### 5. **Test Functionality**
+```bash
+php artisan test
+```
+
+## Baseline Management
+
+### 1. **Generate Baseline**
+```bash
+./vendor/bin/phpstan analyze --generate-baseline
+```
+
+### 2. **Use Baseline**
+```bash
+./vendor/bin/phpstan analyze --baseline=phpstan-baseline.neon
+```
+
+### 3. **Update Baseline**
+```bash
+./vendor/bin/phpstan analyze --generate-baseline
+```
+
+## Performance Optimization
+
+### 1. **Memory Limits**
+```bash
+./vendor/bin/phpstan analyze --memory-limit=2G
+```
+
+### 2. **Parallel Analysis**
+```bash
+./vendor/bin/phpstan analyze --parallel
+```
+
+### 3. **Cache Results**
+```bash
+./vendor/bin/phpstan analyze --generate-baseline
+./vendor/bin/phpstan analyze --baseline=phpstan-baseline.neon
+```
+
+## Common Patterns
+
+### 1. **Model Accessors**
+```php
+/**
+ * Get the user's full name.
+ */
+public function getFullNameAttribute(): string
+{
+    return $this->first_name . ' ' . $this->last_name;
+}
+```
+
+### 2. **Model Mutators**
+```php
+/**
+ * Set the user's email (always lowercase).
+ */
+public function setEmailAttribute(string $value): void
+{
+    $this->attributes['email'] = strtolower($value);
+}
+```
+
+### 3. **Scope Methods**
+```php
+/**
+ * Scope a query to only active users.
+ */
+public function scopeActive(Builder $query): Builder
+{
+    return $query->where('active', true);
+}
+```
+
+## Links to Related Documentation
+
+- [Code Quality Standards](./code-quality.md)
+- [Module Structure Standards](./module-structure.md)
+- [Testing Guidelines](./testing.md)
+- [Migration Standards](./migration-standards.md)
+>>>>>>> 1c7b79f (.)
 
 ```php
 // Prima:
@@ -895,6 +1334,7 @@ L'errore riguardava una discrepanza tra il tipo dichiarato nel PHPDoc e il tipo 
  */
 private function formatResults($results): array
 
+<<<<<<< HEAD
 // Dopo:
 /**
  * @param \Illuminate\Support\Collection<int, \stdClass> $results
@@ -963,3 +1403,6 @@ L'aggiunta dell'annotazione `@phpstan-var` fornisce a PHPStan un'informazione pi
 >>>>>>> abfbbdf (.)
 =======
 >>>>>>> 1fd4ceb6 (.)
+=======
+*PHPStan Fixes for Laraxot - Ensuring Code Quality Through Static Analysis*
+>>>>>>> 1c7b79f (.)

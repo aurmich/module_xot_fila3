@@ -292,4 +292,16 @@ Ogni modulo dovrebbe documentare le soluzioni ai problemi PHPStan specifici in `
 
 ---
 
+<<<<<<<< HEAD:docs.backup.before-optimization/phpstan_implementation_guide.md
 Seguendo questa guida pratica, potrai affrontare e risolvere in modo metodico i problemi rilevati da PHPStan nel tuo codebase Laraxot <nome progetto>, migliorando la qualità complessiva del codice e riducendo gli errori a runtime. 
+========
+Seguendo questa guida pratica, potrai affrontare e risolvere in modo metodico i problemi rilevati da PHPStan nel tuo codebase Laraxot <nome progetto>, migliorando la qualità complessiva del codice e riducendo gli errori a runtime. 
+## Collegamenti tra versioni di PHPSTAN-IMPLEMENTATION-GUIDE.md
+* [PHPSTAN-IMPLEMENTATION-GUIDE.md](../../../Xot/docs/phpstan/PHPSTAN-IMPLEMENTATION-GUIDE.md)
+* [PHPSTAN-IMPLEMENTATION-GUIDE.md](../../../Xot/docs/PHPSTAN-IMPLEMENTATION-GUIDE.md)
+
+
+## Collegamenti tra versioni di phpstan-implementation-guide.md
+* [phpstan-implementation-guide.md](../phpstan-implementation-guide.md)
+
+>>>>>>>> 1c7b79f (.):docs.backup.before-optimization/phpstan/phpstan-implementation-guide.md

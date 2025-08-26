@@ -87,4 +87,16 @@ Errore che si verifica quando una funzione restituisce un tipo specifico ma è d
 2. Raggruppare gli errori per tipo e modulo
 3. Risolvere prima gli errori più comuni e semplici
 4. Documentare ogni soluzione nella cartella `docs` del modulo corrispondente
+<<<<<<<< HEAD:docs/archive/phpstan/level10_linee_guida.md
 5. Verificare che le soluzioni non introducano nuovi errori 
+========
+5. Verificare che le soluzioni non introducano nuovi errori 
+## Collegamenti tra versioni di LEVEL10_LINEE_GUIDA.md
+* [LEVEL10_LINEE_GUIDA.md](../../../Xot/docs/phpstan/LEVEL10_LINEE_GUIDA.md)
+* [LEVEL10_LINEE_GUIDA.md](../../../Xot/docs/PHPStan/LEVEL10_LINEE_GUIDA.md)
+
+
+## Collegamenti tra versioni di level10_linee_guida.md
+* [level10_linee_guida.md](../PHPStan/level10_linee_guida.md)
+
+>>>>>>>> 1c7b79f (.):docs.backup.before-optimization/phpstan/level10-linee-guida.md

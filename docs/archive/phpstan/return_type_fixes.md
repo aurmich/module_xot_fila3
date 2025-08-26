@@ -32,3 +32,24 @@ While the docblock indicates the correct return type, the actual implementation 
 - Improved type safety at a high PHPStan level
 - Better code reliability and maintainability
 - Clear expectations for extending classes
+<<<<<<<< HEAD:docs/archive/phpstan/return_type_fixes.md
+========
+
+## Collegamenti tra versioni di RETURN_TYPE_FIXES.md
+* [RETURN_TYPE_FIXES.md](../../../Xot/docs/phpstan/RETURN_TYPE_FIXES.md)
+* [RETURN_TYPE_FIXES.md](../../../Xot/docs/PHPStan/RETURN_TYPE_FIXES.md)
+
+
+## Collegamenti tra versioni di return_type_fixes.md
+### Versione HEAD
+
+* [return_type_fixes.md](../phpstan/return_type_fixes.md)
+
+### Versione Incoming
+
+* [return_type_fixes.md](../PHPStan/return_type_fixes.md)
+
+---
+
+
+>>>>>>>> 1c7b79f (.):docs.backup.before-optimization/phpstan/return-type-fixes.md

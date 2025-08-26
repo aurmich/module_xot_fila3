@@ -50,3 +50,16 @@ Queste correzioni si allineano perfettamente con l'architettura basata esclusiva
 2. I componenti di Filament gestiscono automaticamente la risoluzione delle view
 3. La manutenzione del codice è più semplice grazie a un'architettura uniforme
 4. Tutte le interfacce utente rimangono coerenti attraverso l'applicazione
+<<<<<<<< HEAD:docs/archive/phpstan/path_resolution_fixes.md
+========
+
+## Collegamenti tra versioni di PATH_RESOLUTION_FIXES.md
+* [PATH_RESOLUTION_FIXES.md](../../../Xot/docs/phpstan/PATH_RESOLUTION_FIXES.md)
+* [PATH_RESOLUTION_FIXES.md](../../../Xot/docs/PHPStan/PATH_RESOLUTION_FIXES.md)
+
+
+## Collegamenti tra versioni di path_resolution_fixes.md
+* [path_resolution_fixes.md](../phpstan/path_resolution_fixes.md)
+* [path_resolution_fixes.md](../PHPStan/path_resolution_fixes.md)
+
+>>>>>>>> 1c7b79f (.):docs.backup.before-optimization/phpstan/path-resolution-fixes.md

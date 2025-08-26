@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Best Practices per Risorse Filament in Laraxot
 
 Questo documento riassume le migliori pratiche per la creazione e gestione delle risorse Filament all'interno dell'ecosistema Laraxot. Seguire queste linee guida garantirà compatibilità e coerenza in tutto il progetto.
@@ -72,11 +73,26 @@ Questo documento riassume le migliori pratiche per la creazione e gestione delle
 ### Metodo Obbligatorio: getTableColumns()
 
 **⚠️ IMPORTANTE**: Tutte le classi che estendono `XotBaseListRecords` DEVONO implementare il metodo `getTableColumns()`:
+=======
+# Filament Best Practices for Laraxot
+
+## Overview
+
+This document outlines the best practices for implementing Filament components within the Laraxot framework. These guidelines ensure consistency, maintainability, and proper integration with the Laraxot architecture.
+
+## Core Principles
+
+### 1. **Extend XotBase Classes**
+- **ALWAYS** extend XotBase classes instead of Filament base classes
+- **NEVER** extend `Filament\Resources\Resource` directly
+- **ALWAYS** extend `XotBaseResource` for resources
+>>>>>>> 1c7b79f (.)
 
 ```php
 <?php
 
 declare(strict_types=1);
+<<<<<<< HEAD
 
 namespace Modules\SaluteMo\Filament\Resources\ReportResource\Pages;
 
@@ -355,15 +371,140 @@ Prima di considerare completa una risorsa Filament, verificare:
 =======
 =======
 ### Risorsa Avanzata
+=======
 
-Consulta l'esempio completo all'inizio di questo documento per una implementazione avanzata.
+namespace Modules\ModuleName\Filament\Resources;
 
-## Riferimenti
+use Modules\Xot\Filament\Resources\XotBaseResource;
 
-- [Documentazione Filament](https://filamentphp.com/docs)
-- [Documentazione XotBaseResource](/var/www/html/exa/base_orisbroker_fila3/laravel/Modules/Xot/docs/resource.md)
-- [Best Practices Laraxot](/var/www/html/exa/base_orisbroker_fila3/laravel/Modules/Xot/docs/best-practices.md)
+class ExampleResource extends XotBaseResource
+{
+    // Implementation
+}
+```
 
+### 2. **Use getFormSchema() Method**
+- **ALWAYS** use `getFormSchema()` instead of `form()`
+- **ALWAYS** return associative arrays from `getFormSchema()`
+- **NEVER** use `->label()` in form components
+
+```php
+/**
+ * @return array<string, \Filament\Forms\Components\Component>
+ */
+public static function getFormSchema(): array
+{
+    return [
+        'name' => TextInput::make('name'),
+        'email' => TextInput::make('email'),
+        'status' => Select::make('status')
+            ->options([
+                'active' => 'Active',
+                'inactive' => 'Inactive',
+            ]),
+    ];
+}
+```
+
+### 3. **Translation Integration**
+- **ALWAYS** use translation files for all labels and messages
+- **NEVER** hardcode strings in components
+- **ALWAYS** use expanded translation structure
+
+```php
+// In translation file
+return [
+    'fields' => [
+        'name' => [
+            'label' => 'Name',
+            'placeholder' => 'Enter name',
+            'help' => 'Enter the full name',
+        ],
+    ],
+];
+
+// In component
+TextInput::make('name')  // Automatically uses translation
+```
+
+## Resource Implementation
+
+### Basic Resource Structure
+```php
+<?php
+
+declare(strict_types=1);
+
+namespace Modules\ModuleName\Filament\Resources;
+
+use Modules\Xot\Filament\Resources\XotBaseResource;
+use Filament\Forms;
+use Filament\Tables;
+
+class ExampleResource extends XotBaseResource
+{
+    protected static ?string $model = ExampleModel::class;
+    protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
+    protected static ?string $navigationGroup = 'Module Name';
+
+    /**
+     * @return array<string, \Filament\Forms\Components\Component>
+     */
+    public static function getFormSchema(): array
+    {
+        return [
+            'name' => Forms\Components\TextInput::make('name')
+                ->required()
+                ->maxLength(255),
+            'description' => Forms\Components\Textarea::make('description')
+                ->maxLength(65535)
+                ->columnSpanFull(),
+        ];
+    }
+
+    /**
+     * @param \Filament\Tables\Table $table
+     * @return \Filament\Tables\Table
+     */
+    public static function table(Table $table): Table
+    {
+        return $table
+            ->columns([
+                Tables\Columns\TextColumn::make('name')
+                    ->searchable(),
+                Tables\Columns\TextColumn::make('created_at')
+                    ->dateTime()
+                    ->sortable()
+                    ->toggleable(isToggledHiddenByDefault: true),
+            ])
+            ->filters([
+                //
+            ])
+            ->actions([
+                Tables\Actions\EditAction::make(),
+            ])
+            ->bulkActions([
+                Tables\Actions\BulkActionGroup::make([
+                    Tables\Actions\DeleteBulkAction::make(),
+                ]),
+            ]);
+    }
+}
+```
+
+### Page Implementation
+```php
+<?php
+>>>>>>> 1c7b79f (.)
+
+declare(strict_types=1);
+
+namespace Modules\ModuleName\Filament\Resources\ExampleResource\Pages;
+
+use Modules\Xot\Filament\Resources\XotBaseResource\Pages\XotBaseCreateRecord;
+use Modules\ModuleName\Filament\Resources\ExampleResource;
+
+<<<<<<< HEAD
 >>>>>>> 7ce328e (.)
 ## Regole per Widget Filament: Path View e Localizzazione
 
@@ -388,9 +529,312 @@ TextInput::make('location')->label(__('modulo::campo.label'))
 **Motivazione:** coerenza, manutenzione, override, policy di qualità.
 
 > Aggiornare sempre anche i file .mdc in .windsurf/rules e .cursor/rules
+=======
+class CreateExample extends XotBaseCreateRecord
+{
+    protected static string $resource = ExampleResource::class;
+}
+```
+
+## Form Components
+
+### Text Input
+```php
+Forms\Components\TextInput::make('name')
+    ->required()
+    ->maxLength(255)
+    ->unique(ignoreRecord: true)
+    ->columnSpanFull();
+```
+
+### Select with Options
+```php
+Forms\Components\Select::make('status')
+    ->options([
+        'draft' => 'Draft',
+        'published' => 'Published',
+        'archived' => 'Archived',
+    ])
+    ->required()
+    ->default('draft');
+```
+
+### Date/Time Picker
+```php
+Forms\Components\DateTimePicker::make('published_at')
+    ->label('Publish Date')
+    ->native(false);
+```
+
+### File Upload
+```php
+Forms\Components\FileUpload::make('attachment')
+    ->directory('uploads')
+    ->preserveFilenames()
+    ->maxSize(5120);
+```
+
+## Table Components
+
+### Basic Columns
+```php
+Tables\Columns\TextColumn::make('name')
+    ->searchable()
+    ->sortable()
+    ->toggleable();
+
+Tables\Columns\TextColumn::make('status')
+    ->badge()
+    ->color(fn (string $state): string => match ($state) {
+        'published' => 'success',
+        'draft' => 'warning',
+        'archived' => 'danger',
+    });
+
+Tables\Columns\TextColumn::make('created_at')
+    ->dateTime()
+    ->sortable()
+    ->toggleable(isToggledHiddenByDefault: true);
+```
+
+### Actions
+```php
+Tables\Actions\EditAction::make()
+    ->icon('heroicon-m-pencil-square');
+
+Tables\Actions\DeleteAction::make()
+    ->icon('heroicon-m-trash')
+    ->requiresConfirmation();
+```
+
+## Validation
+
+### Form Validation
+```php
+Forms\Components\TextInput::make('email')
+    ->email()
+    ->required()
+    ->unique(ignoreRecord: true)
+    ->rules(['email', 'max:255']);
+```
+
+### Custom Validation Rules
+```php
+Forms\Components\TextInput::make('phone')
+    ->tel()
+    ->rules([
+        'required',
+        'regex:/^\+?[1-9]\d{1,14}$/',
+    ])
+    ->validationMessages([
+        'regex' => 'Please enter a valid phone number.',
+    ]);
+```
+
+## Relationships
+
+### BelongsTo
+```php
+Forms\Components\Select::make('category_id')
+    ->relationship('category', 'name')
+    ->searchable()
+    ->preload()
+    ->required();
+```
+
+### HasMany
+```php
+Forms\Components\Repeater::make('items')
+    ->relationship('items')
+    ->schema([
+        Forms\Components\TextInput::make('name')
+            ->required(),
+        Forms\Components\TextInput::make('quantity')
+            ->numeric()
+            ->required(),
+    ]);
+```
+
+## Custom Actions
+
+### Action Implementation
+```php
+<?php
+
+declare(strict_types=1);
+
+namespace Modules\ModuleName\Filament\Actions;
+
+use Filament\Actions\Action;
+use Filament\Support\Colors\Color;
+
+class CustomAction extends Action
+{
+    protected function setUp(): void
+    {
+        parent::setUp();
+
+        $this->label(__('modulename::actions.custom.label'))
+            ->icon('heroicon-o-star')
+            ->color(Color::BLUE)
+            ->requiresConfirmation()
+            ->modalHeading(__('modulename::actions.custom.modal.heading'))
+            ->modalDescription(__('modulename::actions.custom.modal.description'))
+            ->action(fn () => $this->executeAction());
+    }
+
+    protected function executeAction(): void
+    {
+        // Action logic
+    }
+}
+```
+
+## Widgets
+
+### Stats Overview Widget
+```php
+<?php
+
+declare(strict_types=1);
+
+namespace Modules\ModuleName\Filament\Widgets;
+
+use Filament\Widgets\StatsOverviewWidget as BaseWidget;
+use Filament\Widgets\StatsOverviewWidget\Stat;
+
+class StatsOverviewWidget extends BaseWidget
+{
+    protected function getStats(): array
+    {
+        return [
+            Stat::make('Total Items', ExampleModel::count())
+                ->description('32k increase')
+                ->descriptionIcon('heroicon-m-arrow-trending-up')
+                ->chart([7, 2, 10, 3, 15, 4, 17])
+                ->color('success'),
+        ];
+    }
+}
+```
+
+## Best Practices Checklist
+
+### Before Implementation
+- [ ] Study existing Filament implementations in the project
+- [ ] Check for similar components to avoid duplication
+- [ ] Review translation files for existing keys
+- [ ] Verify XotBase class availability
+
+### During Implementation
+- [ ] Use strict types declaration
+- [ ] Extend appropriate XotBase classes
+- [ ] Implement proper form schemas
+- [ ] Use translation keys for all text
+- [ ] Follow naming conventions
+
+### After Implementation
+- [ ] Test all CRUD operations
+- [ ] Verify translations work correctly
+- [ ] Check responsive behavior
+- [ ] Validate form submissions
+- [ ] Test with different user roles
+
+## Common Issues and Solutions
+
+### Issue: Component Not Found
+**Problem**: Filament can't find custom components
+**Solution**: Ensure components are in the correct namespace and registered properly
+
+### Issue: Translations Not Working
+**Problem**: Labels showing as keys instead of translated text
+**Solution**: Check translation file structure and key names
+
+### Issue: Form Validation Errors
+**Problem**: Validation rules not working as expected
+**Solution**: Verify rule syntax and ensure proper form schema implementation
+
+## Performance Considerations
+
+### Lazy Loading
+```php
+protected static ?bool $isLazy = true;
+```
+
+### Query Optimization
+```php
+protected function getTableQuery(): Builder
+{
+    return ExampleModel::query()
+        ->with(['relationship1', 'relationship2'])
+        ->select(['id', 'name', 'created_at']);
+}
+```
+
+### Caching
+```php
+protected function getTableQuery(): Builder
+{
+    return ExampleModel::query()
+        ->remember(300); // Cache for 5 minutes
+}
+```
+
+## Testing
+
+### Basic Test Structure
+```php
+<?php
+
+declare(strict_types=1);
+
+namespace Tests\Feature\Modules\ModuleName\Filament;
+
+use Tests\TestCase;
+use Modules\ModuleName\Models\ExampleModel;
+use Modules\User\Models\User;
+
+class ExampleResourceTest extends TestCase
+{
+    public function test_can_view_example_list(): void
+    {
+        $user = User::factory()->create();
+        $example = ExampleModel::factory()->create();
+
+        $this->actingAs($user)
+            ->get(route('filament.resources.examples.index'))
+            ->assertOk()
+            ->assertSee($example->name);
+    }
+}
+```
+
+## Documentation
+
+### Required Documentation
+- [ ] Component purpose and usage
+- [ ] Configuration options
+- [ ] Customization examples
+- [ ] Testing guidelines
+- [ ] Performance considerations
+
+### Documentation Location
+- Module-specific docs: `Modules/ModuleName/docs/filament.md`
+- Root docs: `docs/filament-best-practices.md`
+- Component examples: `Modules/ModuleName/docs/components.md`
+
+## Links to Related Documentation
+
+- [Xot Base Classes](./xot-base-classes.md)
+- [Code Quality Standards](./code-quality.md)
+- [Translation Best Practices](./translations-best-practices.md)
+- [Testing Guidelines](./testing.md)
+- [Migration Standards](./migration-standards.md)
+>>>>>>> 1c7b79f (.)
 
 **Vedi anche:** [filament-best-practices.mdc](../../../.windsurf/rules/filament-best-practices.mdc)
 
+<<<<<<< HEAD
 ## Regole di Ereditarietà: Trait e Interfacce
 
 - Non replicare mai trait, interfacce o logica già presenti nella classe base che si estende (es. XotBaseWidget).
@@ -457,3 +901,6 @@ Appointment::where('doctor_id', $doctorId)
 
 >>>>>>> 995f7cae (.)
 >>>>>>> b258042 (.)
+=======
+*Filament Best Practices for Laraxot - Building Consistent and Maintainable Admin Interfaces*
+>>>>>>> 1c7b79f (.)

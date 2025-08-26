@@ -114,6 +114,9 @@ class XotBaseResource extends Resource
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 1c7b79f (.)
 ## Modifiche Recenti (Giugno 2025)
 
 ### Deprecazione Comandi MCP
@@ -132,6 +135,7 @@ Il modulo può essere configurato tramite il file `config/module_xot.php`:
 - Gestione delle rotte
 - Permessi
 - Configurazioni specifiche per modulo
+<<<<<<< HEAD
 =======
 >>>>>>> abfbbdf (.)
 
@@ -144,6 +148,9 @@ Il modulo può essere configurato tramite il file `config/module_xot.php`:
 =======
 
 >>>>>>> 1fd4ceb6 (.)
+=======
+
+>>>>>>> 1c7b79f (.)
 ## 🚀 Installazione SUPER VELOCE
 
 ```bash

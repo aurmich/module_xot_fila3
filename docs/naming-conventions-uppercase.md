@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 # Convenzioni di Nomenclatura in Laravel Modules
 
 Questo documento definisce le convenzioni ufficiali di nomenclatura da utilizzare in tutto il progetto Laravel Modules.
@@ -277,3 +278,347 @@ Questo documento descrive le convenzioni di denominazione da seguire all'interno
 =======
 >>>>>>> 995f7cae (.)
 >>>>>>> b258042 (.)
+=======
+# Naming Conventions for Laraxot Documentation
+
+## Overview
+
+This document defines the mandatory naming conventions for documentation files and folders in Laraxot projects. Following these conventions ensures consistency, maintainability, and proper organization across all modules.
+
+## Core Naming Rules
+
+### 1. **File Names**
+- **ALWAYS** use lowercase for all documentation files
+- **NEVER** use uppercase letters in filenames
+- **ALWAYS** use hyphens (`-`) instead of underscores (`_`)
+- **ONLY** exception: `README.md` can contain uppercase letters
+
+### 2. **Folder Names**
+- **ALWAYS** use lowercase for all documentation folders
+- **NEVER** use uppercase letters in folder names
+- **ALWAYS** use hyphens (`-`) instead of underscores (`_`)
+
+## Correct vs. Incorrect Examples
+
+### ✅ CORRECT Naming
+```
+docs/
+├── code-quality.md
+├── filament-best-practices.md
+├── testing-guidelines.md
+├── migration-standards.md
+├── translations-best-practices.md
+├── namespace-conventions.md
+└── troubleshooting/
+    ├── git-conflicts-resolution.md
+    ├── phpstan-errors.md
+    └── common-issues.md
+```
+
+### ❌ INCORRECT Naming
+```
+docs/
+├── CODE_QUALITY.md          # Uppercase letters
+├── FilamentBestPractices.md # PascalCase
+├── testing_guidelines.md    # Underscores
+├── Migration-Standards.md   # Mixed case
+├── TRANSLATIONS.md          # All uppercase
+└── Troubleshooting/         # Uppercase folder
+    ├── Git-Conflicts.md     # Mixed case
+    └── PHPSTAN_ERRORS.md    # Mixed case and underscores
+```
+
+## Module Documentation Structure
+
+### 1. **Standard Module Docs**
+```
+Modules/ModuleName/
+└── docs/
+    ├── README.md
+    ├── testing.md
+    ├── api.md
+    ├── models.md
+    ├── filament.md
+    ├── migrations.md
+    ├── translations.md
+    └── troubleshooting/
+        ├── common-issues.md
+        └── error-solutions.md
+```
+
+### 2. **Specialized Module Docs**
+```
+Modules/ModuleName/
+└── docs/
+    ├── README.md
+    ├── business-logic.md
+    ├── data-flow.md
+    ├── integration-guide.md
+    ├── performance-optimization.md
+    └── security-guidelines.md
+```
+
+## File Naming Patterns
+
+### 1. **General Guidelines**
+- Use descriptive, clear names
+- Keep names concise but informative
+- Use consistent terminology across modules
+- Avoid abbreviations unless universally understood
+
+### 2. **Common Patterns**
+```
+# Testing
+testing.md
+testing-guidelines.md
+testing-best-practices.md
+testing-strategy.md
+
+# Code Quality
+code-quality.md
+code-standards.md
+quality-guidelines.md
+best-practices.md
+
+# Filament
+filament.md
+filament-best-practices.md
+filament-guidelines.md
+filament-components.md
+
+# Migrations
+migrations.md
+migration-standards.md
+migration-guidelines.md
+database-migrations.md
+```
+
+### 3. **Troubleshooting Files**
+```
+troubleshooting/
+├── common-issues.md
+├── error-solutions.md
+├── debugging-guide.md
+├── performance-issues.md
+├── security-issues.md
+└── integration-issues.md
+```
+
+## Content Organization
+
+### 1. **File Headers**
+Every documentation file should start with:
+```markdown
+# Title of the Document
+
+## Overview
+
+Brief description of the document's purpose and scope.
+
+## Table of Contents
+
+- [Section 1](#section-1)
+- [Section 2](#section-2)
+- [Section 3](#section-3)
+```
+
+### 2. **Section Headers**
+Use consistent header levels:
+```markdown
+# Main Title (H1)
+## Section (H2)
+### Subsection (H3)
+#### Detail (H4)
+```
+
+### 3. **Code Examples**
+```markdown
+```php
+<?php
+
+declare(strict_types=1);
+
+namespace Modules\Example;
+
+class ExampleClass
+{
+    // Implementation
+}
+```
+```
+
+## Cross-References and Links
+
+### 1. **Internal Links**
+```markdown
+- [Testing Guidelines](./testing.md)
+- [Code Quality Standards](./code-quality.md)
+- [Migration Standards](./migration-standards.md)
+```
+
+### 2. **Cross-Module Links**
+```markdown
+- [User Module Testing](../../User/docs/testing.md)
+- [Chart Module API](../../Chart/docs/api.md)
+- [UI Module Components](../../UI/docs/components.md)
+```
+
+### 3. **Root Documentation Links**
+```markdown
+- [Project Testing Strategy](../../../docs/testing-strategy.md)
+- [Global Best Practices](../../../docs/best-practices.md)
+- [Architecture Overview](../../../docs/architecture.md)
+```
+
+## Automation and Maintenance
+
+### 1. **Automation Scripts**
+Use the provided automation script to standardize naming:
+```bash
+# Run from project root
+./bashscripts/docs/fix_docs_case.sh
+```
+
+### 2. **Regular Audits**
+- Monthly review of documentation structure
+- Check for naming convention violations
+- Update cross-references and links
+- Remove outdated or duplicate files
+
+### 3. **Validation Checklist**
+Before committing documentation changes:
+- [ ] All filenames are lowercase
+- [ ] All folder names are lowercase
+- [ ] Hyphens used instead of underscores
+- [ ] No uppercase letters in names
+- [ ] Cross-references are updated
+- [ ] Links are bidirectional where appropriate
+
+## Migration from Old Naming
+
+### 1. **Step-by-Step Process**
+1. **Identify** files with incorrect naming
+2. **Rename** files to follow conventions
+3. **Update** all internal references
+4. **Update** cross-module references
+5. **Update** root documentation references
+6. **Test** all links and references
+7. **Commit** changes with clear message
+
+### 2. **Example Migration**
+```bash
+# Before
+Modules/ModuleName/docs/CODE_QUALITY.md
+Modules/ModuleName/docs/FILAMENT_BEST_PRACTICES.md
+
+# After
+Modules/ModuleName/docs/code-quality.md
+Modules/ModuleName/docs/filament-best-practices.md
+```
+
+### 3. **Update References**
+```markdown
+# Before
+[Code Quality](../CODE_QUALITY.md)
+[Filament Best Practices](../FILAMENT_BEST_PRACTICES.md)
+
+# After
+[Code Quality](./code-quality.md)
+[Filament Best Practices](./filament-best-practices.md)
+```
+
+## Best Practices
+
+### 1. **Consistency**
+- Use the same naming pattern across all modules
+- Maintain consistent terminology
+- Follow established conventions
+
+### 2. **Clarity**
+- Choose descriptive names
+- Avoid ambiguous abbreviations
+- Use clear, understandable terms
+
+### 3. **Maintainability**
+- Easy to find and navigate
+- Simple to update and maintain
+- Clear organization structure
+
+### 4. **Searchability**
+- Names that are easy to search for
+- Consistent patterns for similar content
+- Logical grouping of related files
+
+## Common Mistakes to Avoid
+
+### 1. **Mixed Case**
+```markdown
+# ❌ WRONG
+CodeQuality.md
+FilamentBestPractices.md
+TestingGuidelines.md
+
+# ✅ CORRECT
+code-quality.md
+filament-best-practices.md
+testing-guidelines.md
+```
+
+### 2. **Underscores**
+```markdown
+# ❌ WRONG
+code_quality.md
+filament_best_practices.md
+testing_guidelines.md
+
+# ✅ CORRECT
+code-quality.md
+filament-best-practices.md
+testing-guidelines.md
+```
+
+### 3. **Uppercase Letters**
+```markdown
+# ❌ WRONG
+CODE_QUALITY.md
+FILAMENT_BEST_PRACTICES.md
+TESTING_GUIDELINES.md
+
+# ✅ CORRECT
+code-quality.md
+filament-best-practices.md
+testing-guidelines.md
+```
+
+## Tools and Validation
+
+### 1. **Automation Script**
+```bash
+# Fix naming conventions automatically
+./bashscripts/docs/fix_docs_case.sh
+```
+
+### 2. **Manual Validation**
+```bash
+# Check for uppercase files
+find . -name "*.md" -exec grep -l "[A-Z]" {} \;
+
+# Check for underscore files
+find . -name "*_*.md"
+```
+
+### 3. **Git Hooks**
+Consider implementing pre-commit hooks to prevent naming convention violations.
+
+## Links to Related Documentation
+
+- [Code Quality Standards](./code-quality.md)
+- [Module Structure Standards](./module-structure.md)
+- [Testing Guidelines](./testing.md)
+- [Migration Standards](./migration-standards.md)
+- [Documentation Best Practices](./documentation-best-practices.md)
+
+---
+
+*Naming Conventions for Laraxot Documentation - Ensuring Consistency and Maintainability*
+>>>>>>> 1c7b79f (.)

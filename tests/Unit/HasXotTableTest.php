@@ -254,6 +254,7 @@ class HasTableWithXot
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function getSelectedTableRecords(): array
     {
         return [];
@@ -272,6 +273,11 @@ class HasTableWithXot
     {
         return new Collection();
 >>>>>>> 1fd4ceb6 (.)
+=======
+    public function getSelectedTableRecords(bool $shouldFetchSelectedRecords = true): Collection
+    {
+        return new Collection();
+>>>>>>> 1c7b79f (.)
     }
 
     public function getAllTableRecordsCount(): int
