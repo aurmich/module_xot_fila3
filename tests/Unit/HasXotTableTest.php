@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Modules\Xot\Tests\Unit;
 
 use PHPUnit\Framework\TestCase;
@@ -251,33 +253,21 @@ class HasTableWithXot
         return null;
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-    public function getSelectedTableRecords(): array
+    public function getSelectedTableRecords(bool $shouldFetchSelectedRecords = true): Collection
     {
-        return [];
+        return new Collection();
 =======
     public function getSelectedTableRecords(bool $shouldFetchSelectedRecords = true): Collection
     {
         return new Collection();
->>>>>>> 5852845d (.)
 =======
     public function getSelectedTableRecords(bool $shouldFetchSelectedRecords = true): Collection
     {
         return new Collection();
->>>>>>> abfbbdf (.)
 =======
     public function getSelectedTableRecords(bool $shouldFetchSelectedRecords = true): Collection
     {
         return new Collection();
->>>>>>> 1fd4ceb6 (.)
-=======
-    public function getSelectedTableRecords(bool $shouldFetchSelectedRecords = true): Collection
-    {
-        return new Collection();
->>>>>>> 1c7b79f (.)
     }
 
     public function getAllTableRecordsCount(): int

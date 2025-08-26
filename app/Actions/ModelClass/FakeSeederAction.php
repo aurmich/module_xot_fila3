@@ -104,47 +104,23 @@ class FakeSeederAction
             ->execute($modelClass, $qty - self::MAX_RECORDS);
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-    /*
-=======
     /**
->>>>>>> 1c7b79f (.)
      * Get the table name for a model class.
      *
      * @param class-string<Model> $modelClass
      * @return string
      */
-<<<<<<< HEAD
-    /*
 =======
->>>>>>> b258042 (.)
 =======
->>>>>>> 5852845d (.)
 =======
->>>>>>> abfbbdf (.)
 =======
->>>>>>> 1fd4ceb6 (.)
-=======
->>>>>>> 1c7b79f (.)
     private function getTableName(string $modelClass): string
     {
         Assert::classExists($modelClass, 'La classe del modello deve esistere');
         
-<<<<<<< HEAD
-        // @var \Illuminate\Database\Eloquent\Model 
-=======
         /** @var \Illuminate\Database\Eloquent\Model */
->>>>>>> 5852845d (.)
         $model = app($modelClass);
         
         return $model->getTable();
     }
-<<<<<<< HEAD
-    */
-=======
->>>>>>> 5852845d (.)
 }

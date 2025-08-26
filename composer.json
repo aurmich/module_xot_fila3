@@ -19,7 +19,6 @@
         }
     ],
     "require": {
-<<<<<<< HEAD
         "php": "^8.2",
         "aaronfrancis/fast-paginate": "^2.0",
         "calebporzio/sushi": "^2.5",
@@ -59,12 +58,6 @@
         "symfony/dom-crawler": "*",
         "thecodingmachine/safe": "^3.0",
         "tightenco/parental": "*"
-=======
-        "php": "^8.1",
-        "laravel/framework": "*",
-        "spatie/laravel-permission": "*",
-        "spatie/laravel-activitylog": "*"
->>>>>>> 1c7b79f (.)
     },
     "require-dev": {
         "barryvdh/laravel-debugbar": "^3.14",
@@ -79,22 +72,6 @@
         "orchestra/testbench": "*",
         "pestphp/pest": "^3.8",
         "pestphp/pest-plugin-laravel": "^3.2",
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-        "pestphp/pest-plugin-type-coverage": "^3.6",
->>>>>>> 5852845d (.)
-=======
-        "pestphp/pest-plugin-type-coverage": "^3.6",
->>>>>>> abfbbdf (.)
-=======
-        "pestphp/pest-plugin-type-coverage": "^3.6",
->>>>>>> 1fd4ceb6 (.)
-=======
-        "pestphp/pest-plugin-type-coverage": "^3.6",
->>>>>>> 1c7b79f (.)
         "thecodingmachine/phpstan-safe-rule": "*"
     },
     "require-dev_comment": {

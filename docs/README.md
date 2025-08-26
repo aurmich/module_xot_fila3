@@ -1,149 +1,425 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 9109118 (.)
-# Xot Module - Framework Base Laraxot
+# 🏗️ **Xot Module** - Fondamento Architetturale Laraxot PTVX
 
-## Overview
-Modulo base del framework Laraxot con funzionalità core e best practices.
+## 📋 **Panoramica**
 
-## Quick Links
-- [🏆 PHPStan Level 9 Achievement](phpstan-level9-achievement.md) - **✅ COMPLETATO** - 832→0 errori PHPStan
-- [🎨 Theme Assets Workflow](theme-assets-workflow.md) - **⚠️ CRITICO** - Workflow CSS/JS per temi
-- [PHPStan Array Types Fixes](phpstan-array-types-fixes.md) - **✅ COMPLETATO** - Correzioni complete tipi array
-- [Filament Complete Guide](consolidated/filament-complete-guide.md)
-- [PHPStan Complete Guide](consolidated/phpstan-complete-guide.md)
-- [Migration Complete Guide](consolidated/migration-complete-guide.md)
-- [Testing Complete Guide](consolidated/testing-complete-guide.md)
-- [Translation Complete Guide](consolidated/translation-complete-guide.md)
+Il modulo **Xot** è il fondamento architetturale dell'ecosistema Laraxot PTVX, implementando i principi **DRY**, **KISS**, **SOLID** e **Robustezza** per tutti i moduli derivati. Fornisce classi base, pattern architetturali e convenzioni standardizzate.
 
-## Architecture
-- Base classes per tutti i moduli
-- Service providers centralizzati
-- Convenzioni e standard
+## 🎯 **Principi Fondamentali**
 
-## Installation
-```bash
-composer require laraxot/xot
+### **DRY (Don't Repeat Yourself)**
+- **Centralizzazione**: Classi base e trait condivisi per evitare duplicazioni
+- **Riusabilità**: Pattern architetturali standardizzati e riutilizzabili
+- **Manutenibilità**: Aggiornamenti centralizzati che si propagano automaticamente
+
+### **KISS (Keep It Simple, Stupid)**
+- **Struttura lineare**: Organizzazione intuitiva e facile da navigare
+- **Naming coerente**: Convenzioni uniformi in tutto il sistema
+- **Navigazione semplice**: Massimo 3 livelli di profondità nella documentazione
+
+### **SOLID**
+- **Single Responsibility**: Ogni classe ha uno scopo specifico e ben definito
+- **Open/Closed**: Estendibile senza modificare il codice esistente
+- **Liskov Substitution**: Sottoclassi perfettamente sostituibili
+- **Interface Segregation**: Interfacce specifiche per ogni responsabilità
+- **Dependency Inversion**: Dipendenze da astrazioni, non da implementazioni
+
+### **Robust**
+- **Gestione errori**: Sistema robusto di gestione delle eccezioni
+- **Validazione**: Controlli automatici e validazione dei dati
+- **Fallback**: Meccanismi di recupero per situazioni critiche
+
+### **Laraxot**
+- **Architettura modulare**: Sistema modulare scalabile e manutenibile
+- **Convenzioni standard**: Regole uniformi per tutti i moduli
+- **Integrazione Filament**: Supporto nativo per l'ecosistema Filament
+
+## 🏗️ **Componenti Core**
+
+### **Classi Base Fondamentali**
+
+#### **BaseModel**
+```php
+use Modules\Xot\Models\BaseModel;
+
+class MioModello extends BaseModel
+{
+    // Implementazione specifica del modulo
+    protected $fillable = ['nome', 'descrizione'];
+}
 ```
 
-## Configuration
-Configurazione automatica tramite service providers.
+**Caratteristiche:**
+- Gestione automatica dei campi `extra`
+- Trait condivisi per funzionalità comuni
+- Convenzioni standard per relazioni e validazioni
 
-## Documentation Archive
-I file di documentazione originali sono stati consolidati per seguire i principi DRY + KISS.
-Per accedere alla documentazione dettagliata originale, vedere il backup in:
-`docs-consolidation-backup-*/Xot-docs-original/`
+#### **XotBaseResource**
+```php
+use Modules\Xot\Filament\Resources\XotBaseResource;
 
-## Principles
-- **DRY**: Un solo punto di verità
-- **KISS**: Semplicità e chiarezza
-- **Type Safety**: Tipizzazione rigorosa
-- **Documentation**: Documentazione essenziale
+class MiaRisorsa extends XotBaseResource
+{
+    // Configurazione specifica della risorsa
+    public static function getFormSchema(): array
+    {
+        return [
+            // Schema del form
+        ];
+    }
+}
+```
 
-## Links
-- [Root Documentation](../../../docs/)
-- [SaluteOra Module](../SaluteOra/docs/)
-- [Original Documentation Backup](../../../docs-consolidation-backup-*/Xot-docs-original/)
-<<<<<<< HEAD
-=======
-# Modulo Xot - Documentazione Completa
+**Caratteristiche:**
+- Gestione automatica delle traduzioni
+- Pattern standardizzati per tabelle e form
+- Integrazione nativa con Filament
 
-## Panoramica
-Il modulo Xot è il core del sistema Laraxot, fornendo funzionalità base e convenzioni per tutti gli altri moduli.
+#### **XotBaseServiceProvider**
+```php
+use Modules\Xot\Providers\XotBaseServiceProvider;
 
-## Struttura della Documentazione
+class MioServiceProvider extends XotBaseServiceProvider
+{
+    protected string $module_name = 'MioModulo';
+    
+    public function boot(): void
+    {
+        parent::boot();
+        // Personalizzazioni specifiche del modulo
+    }
+}
+```
 
-### 📚 Core
-- [Architettura e Best Practices](architecture-best-practices.md)
-- [Struttura dei Moduli](module-structure.md)
-- [Convenzioni di Naming](naming-conventions-docs.md)
-- [Namespace e Autoload](namespace-conventions.md)
+**Caratteristiche:**
+- Bootstrap automatico di views, traduzioni e migrazioni
+- Registrazione automatica di componenti Filament
+- Gestione centralizzata degli asset
 
-### 🧪 Testing
-- [Strategia di Testing](testing.md)
-- [Best Practices per Testing](testing-best-practices.md)
-- [Analisi della Copertura](testing-coverage-analysis.md)
-- [Implementazione dei Test](testing-implementation-summary.md)
+### **Pattern Architetturali**
 
-### 🛠️ Sviluppo
-- [Linee Guida per lo Sviluppo](development/)
-- [Convenzioni di Codice](conventions/)
-- [Gestione Errori](errors/)
-- [Gestione Eccezioni](exceptions/)
+#### **Architettura Modulare**
+- **Struttura standardizzata**: Organizzazione uniforme per tutti i moduli
+- **Dipendenze gestite**: Sistema di dipendenze tra moduli
+- **Isolamento**: Ogni modulo è indipendente e testabile
 
-### 🎨 UI e Filament
-- [Best Practices Filament](filament-best-practices.md)
-- [Componenti Filament](filament-components.md)
-- [Estensioni Filament](filament-extension-pattern.md)
-- [Temi e UI](theme/)
+#### **Sistema Moduli**
+- **Auto-discovery**: Rilevamento automatico di componenti
+- **Lazy loading**: Caricamento on-demand per ottimizzare le performance
+- **Configurazione centralizzata**: Gestione unificata delle configurazioni
 
-### 🌐 Internazionalizzazione
-- [Sistema di Traduzione](translation-system.md)
-- [Regole per Traduzioni](translation-rules.md)
-- [Best Practices](translations.md)
+#### **Pattern Database**
+- **Migrazioni standardizzate**: Estensione di `XotBaseMigration`
+- **Modelli base**: Ereditarietà da `BaseModel`
+- **Relazioni**: Pattern standardizzati per le relazioni Eloquent
 
-### 🔧 Troubleshooting
-- [Risoluzione Conflitti Git](troubleshooting/)
-- [Correzioni PHPStan](phpstan/)
-- [Gestione Errori Comuni](errors/)
+## 🚀 **Quick Start**
 
-### 📦 Pacchetti e Dipendenze
-- [Gestione Pacchetti](packages.md)
-- [Qualità del Codice](code-quality.md)
-- [PHPStan Implementation](phpstan-implementation-guide.md)
+### **1. Creazione di un Nuovo Modulo**
 
-## Principi Fondamentali
+```bash
+# Struttura standard del modulo
+Modules/
+└── MioModulo/
+    ├── app/
+    │   ├── Models/
+    │   ├── Http/
+    │   └── Filament/
+    ├── config/
+    ├── database/
+    ├── docs/
+    ├── lang/
+    ├── resources/
+    └── routes/
+```
 
-### DRY (Don't Repeat Yourself)
-- Evitare duplicazione di codice e documentazione
-- Centralizzare le convenzioni comuni
-- Riutilizzare pattern e soluzioni
+### **2. Estendere Classi Base**
 
-### KISS (Keep It Simple, Stupid)
-- Documentazione chiara e concisa
-- Struttura semplice e navigabile
-- Evitare complessità non necessarie
+```php
+// Modello
+namespace Modules\MioModulo\app\Models;
 
-### SOLID
-- **S**ingle Responsibility: Ogni documento ha uno scopo specifico
-- **O**pen/Closed: Estendibile senza modifiche
-- **L**iskov Substitution: Compatibilità tra versioni
-- **I**nterface Segregation: Documentazione modulare
-- **D**ependency Inversion: Dipendenze ben definite
+use Modules\Xot\Models\BaseModel;
 
-### ROBUST
-- Gestione errori completa
-- Fallback e alternative
-- Validazione e verifica
+class MioModello extends BaseModel
+{
+    protected $fillable = ['nome', 'descrizione'];
+    
+    public function relazioni()
+    {
+        return $this->hasMany(AltroModello::class);
+    }
+}
 
-### LARAXOT
-- Convenzioni specifiche del progetto
-- Architettura modulare
-- Integrazione con Laravel
+// Risorsa Filament
+namespace Modules\MioModulo\app\Filament\Resources;
 
-## Quick Start
+use Modules\Xot\Filament\Resources\XotBaseResource;
 
-1. **Per Sviluppatori**: Inizia da [Getting Started](getting-started.md)
-2. **Per Testing**: Consulta [Testing Best Practices](testing-best-practices.md)
-3. **Per Filament**: Leggi [Filament Best Practices](filament-best-practices.md)
-4. **Per Troubleshooting**: Vai alla sezione [Troubleshooting](troubleshooting/)
+class MioModelloResource extends XotBaseResource
+{
+    public static function getFormSchema(): array
+    {
+        return [
+            // Schema del form
+        ];
+    }
+}
+```
 
-## Contribuire
+### **3. Service Provider**
 
-- Segui le [Linee Guida per la Documentazione](documentation-guidelines.md)
-- Mantieni la [Struttura delle Convenzioni](documentation-rules.md)
-- Aggiorna i [Collegamenti Bidirezionali](documentation-rules.md#collegamenti-bidirezionali)
+```php
+namespace Modules\MioModulo\Providers;
 
-## Aggiornamenti Recenti
+use Modules\Xot\Providers\XotBaseServiceProvider;
 
-- **2025-01-06**: Risoluzione conflitti Git e aggiornamento documentazione
-- **2025-01-05**: Implementazione test mancanti e analisi copertura
-- **2025-01-04**: Rifattorizzazione struttura docs e convenzioni naming
+class MioModuloServiceProvider extends XotBaseServiceProvider
+{
+    protected string $module_name = 'MioModulo';
+    
+    public function boot(): void
+    {
+        parent::boot();
+        
+        // Personalizzazioni specifiche
+        $this->registerCustomComponents();
+    }
+    
+    protected function registerCustomComponents(): void
+    {
+        // Registrazione componenti custom
+    }
+}
+```
+
+## 📚 **Documentazione Completa**
+
+### **Core Architecture**
+- **Base Classes**: Classi base e loro utilizzo
+- **Service Providers**: Pattern per i service provider
+- **Database Patterns**: Migrazioni e modelli
+- **Testing Standards**: Standard di testing e best practices
+
+### **Development Guidelines**
+- **Code Quality**: Standard di qualità del codice
+- **Best Practices**: Pattern e convenzioni
+- **Troubleshooting**: Risoluzione problemi comuni
+
+### **API Reference**
+- **Interfaces**: Interfacce disponibili
+- **Methods**: Metodi pubblici e loro utilizzo
+- **Examples**: Esempi pratici di implementazione
+
+## 🧪 **Testing Standards**
+
+### **Test Coverage Goals**
+- **100%** per le classi base Xot
+- **80%+** per tutti i moduli derivati
+- **Critical paths** devono avere copertura completa
+
+### **Base Test Classes**
+
+```php
+use Modules\Xot\Tests\XotBaseTestCase;
+
+class MioModuloTest extends XotBaseTestCase
+{
+    public function test_creazione_modello()
+    {
+        $modello = MioModello::create([
+            'nome' => 'Test',
+            'descrizione' => 'Descrizione test'
+        ]);
+        
+        $this->assertModelExists($modello);
+        $this->assertEquals('Test', $modello->nome);
+    }
+}
+```
+
+### **Testing Patterns**
+
+#### **Model Testing**
+```php
+public function test_relazioni_modello()
+{
+    $user = User::factory()->create();
+    $prodotti = Prodotto::factory()->count(3)->for($user)->create();
+    
+    $this->assertCount(3, $user->prodotti);
+    $this->assertEquals($user->id, $prodotti->first()->user_id);
+}
+```
+
+#### **API Testing**
+```php
+public function test_api_endpoint()
+{
+    $response = $this->getJson('/api/mio-modulo');
+    
+    $response->assertSuccessful()
+             ->assertJsonStructure(['data', 'meta']);
+}
+```
+
+## 🔧 **Best Practices**
+
+### **Sempre Estendere Classi Base**
+```php
+// ✅ CORRETTO
+class MioModello extends BaseModel
+
+// ❌ ERRATO
+class MioModello extends Model
+```
+
+### **Utilizzare i Trait Xot**
+```php
+use HasXotTable;
+use HasExtra;
+
+class MioModello extends BaseModel
+{
+    use HasXotTable, HasExtra;
+}
+```
+
+### **Seguire le Convenzioni Naming**
+```php
+// Nomi delle classi in PascalCase
+class MioModello extends BaseModel
+
+// Nomi dei metodi in camelCase
+public function getNomeCompleto(): string
+
+// Nomi delle proprietà in snake_case
+protected $fillable = ['nome', 'cognome'];
+```
+
+### **Gestire i Campi Extra**
+```php
+// Store dati aggiuntivi
+$modello->setExtra('campo_custom', 'valore');
+
+// Retrieve dati
+$valore = $modello->getExtra('campo_custom');
+```
+
+## 📊 **Metriche Qualità**
+
+### **PHPStan**
+- **Livello 10** obbligatorio per tutto il codice
+- **Zero errori** di analisi statica
+- **Type safety** completa
+
+### **PSR-12**
+- **Conformità completa** agli standard PSR
+- **Code style** uniforme in tutto il progetto
+- **Linting automatico** nel CI/CD
+
+### **Test Coverage**
+- **Minimo 90%** per tutti i moduli
+- **100%** per le classi base critiche
+- **Test di regressione** per ogni modifica
+
+### **Documentazione**
+- **100%** dei metodi pubblici documentati
+- **PHPDoc completo** per tutte le classi
+- **Esempi pratici** per ogni funzionalità
+
+## 🚨 **Troubleshooting**
+
+### **Problemi Comuni**
+
+#### **1. Classe Base Non Trovata**
+```bash
+# Verificare autoload
+composer dump-autoload
+
+# Controllare namespace
+use Modules\Xot\Models\BaseModel;
+```
+
+#### **2. Traduzioni Non Caricate**
+```bash
+# Pulire cache
+php artisan cache:clear
+php artisan config:clear
+php artisan view:clear
+
+# Verificare service provider
+php artisan module:list
+```
+
+#### **3. Errori PHPStan**
+```bash
+# Eseguire analisi
+./vendor/bin/phpstan analyse --level=10
+
+# Verificare configurazione
+cat phpstan.neon
+```
+
+### **Debug e Logging**
+```php
+// Abilitare debug
+config(['app.debug' => true]);
+
+// Logging dettagliato
+Log::debug('Debug info', ['context' => 'value']);
+```
+
+## 🔗 **Collegamenti e Riferimenti**
+
+### **1. Documentazione Modulo**
+- [**Indice Completo**](index.md) - Navigazione rapida per tutti i documenti
+- [**Architettura**](architecture.md) - Architettura dettagliata del modulo
+- [**Best Practices**](best-practices.md) - Linee guida complete per lo sviluppo
+- [**Troubleshooting**](troubleshooting.md) - Risoluzione problemi e debug
+- [**Esempi**](examples.md) - Casi d'uso pratici e implementazioni
+
+### **2. Documentazione Principale**
+- [**Root Documentation**](../../../docs/README.md) - Documentazione generale del progetto
+- [**Best Practices**](../../../docs/best-practices/) - Best practices globali
+- [**Troubleshooting**](../../../docs/troubleshooting/) - Risoluzione problemi
+
+### **3. Moduli Correlati**
+- [**UI Module**](../UI/docs/README.md) - Componenti UI condivisi
+- [**User Module**](../User/docs/README.md) - Gestione utenti e autenticazione
+- [**Tenant Module**](../Tenant/docs/README.md) - Multi-tenancy
+
+### **4. Risorse Esterne**
+- [**Laravel Documentation**](https://laravel.com/docs) - Documentazione ufficiale Laravel
+- [**Filament Documentation**](https://filamentphp.com/docs) - Documentazione Filament
+- [**PHPStan Documentation**](https://phpstan.org/) - Analisi statica del codice
+
+## 📈 **Roadmap e Sviluppi Futuri**
+
+### **Versioni Pianificate**
+- **v2.0**: Miglioramenti performance e caching
+- **v2.1**: Nuove classi base per API REST
+- **v2.2**: Supporto per GraphQL e real-time
+
+### **Contributi**
+- **Issue reporting**: GitHub Issues per bug e feature requests
+- **Pull requests**: Contributi alla codebase
+- **Documentazione**: Miglioramenti alla documentazione
 
 ---
 
-*Ultimo aggiornamento: Gennaio 2025*
->>>>>>> 1c7b79f (.)
-=======
->>>>>>> 9109118 (.)
+## 📝 **Changelog**
+
+### **v2.0.0** - Giugno 2025
+- ✅ Rifattorizzazione completa della documentazione
+- ✅ Consolidamento in file singoli per DRY
+- ✅ Aggiornamento principi SOLID e Robust
+- ✅ Integrazione completa con Laraxot
+
+### **v1.5.0** - Maggio 2025
+- ✅ Supporto Laravel 11
+- ✅ Aggiornamento PHPStan livello 10
+- ✅ Miglioramenti performance
+
+---
+
+*Ultimo aggiornamento: giugno 2025 - Versione 2.0.0*

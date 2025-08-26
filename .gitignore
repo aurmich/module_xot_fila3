@@ -65,9 +65,6 @@ Homestead.json
 docs/phpstan/
 docs/cache/
 cache/
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 .git-blame-ignore-revs
 .php-cs-fixer.cache
 *.exe
@@ -77,12 +74,3 @@ cache/
 *.old
 # PHPStan documentation
 docs/phpstan/
-<<<<<<< HEAD
-=======
->>>>>>> 5852845d (.)
-=======
->>>>>>> abfbbdf (.)
-=======
->>>>>>> 1fd4ceb6 (.)
-=======
->>>>>>> 1c7b79f (.)

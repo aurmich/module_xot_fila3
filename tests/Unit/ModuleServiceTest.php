@@ -6,37 +6,20 @@ use Modules\Xot\Services\ModuleService;
 use Nwidart\Modules\Module;
 use Nwidart\Modules\Facades\Module as ModuleFacade;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-describe('ModuleService', function () {
-    beforeEach(function () {
-        $this->service = new ModuleService('TestModule');
 =======
-=======
->>>>>>> 1fd4ceb6 (.)
-=======
->>>>>>> 1c7b79f (.)
-uses(Tests\TestCase::class);
-
-describe('ModuleService', function () {
-    beforeEach(function () {
-        $this->service = (new ModuleService())->setName('TestModule');
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 5852845d (.)
 =======
 uses(Tests\TestCase::class);
 
 describe('ModuleService', function () {
     beforeEach(function () {
         $this->service = (new ModuleService())->setName('TestModule');
->>>>>>> abfbbdf (.)
+uses(Tests\TestCase::class);
+
+describe('ModuleService', function () {
+    beforeEach(function () {
+        $this->service = (new ModuleService())->setName('TestModule');
 =======
->>>>>>> 1fd4ceb6 (.)
 =======
->>>>>>> 1c7b79f (.)
     });
 
     it('can be instantiated', function () {
@@ -52,28 +35,17 @@ describe('ModuleService', function () {
     });
 
     it('can be instantiated with different module names', function () {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-        $service1 = new ModuleService('Chart');
-        $service2 = new ModuleService('User');
+        $service1 = (new ModuleService())->setName('Chart');
+        $service2 = (new ModuleService())->setName('User');
 =======
         $service1 = (new ModuleService())->setName('Chart');
         $service2 = (new ModuleService())->setName('User');
->>>>>>> 5852845d (.)
 =======
         $service1 = (new ModuleService())->setName('Chart');
         $service2 = (new ModuleService())->setName('User');
->>>>>>> abfbbdf (.)
 =======
         $service1 = (new ModuleService())->setName('Chart');
         $service2 = (new ModuleService())->setName('User');
->>>>>>> 1fd4ceb6 (.)
-=======
-        $service1 = (new ModuleService())->setName('Chart');
-        $service2 = (new ModuleService())->setName('User');
->>>>>>> 1c7b79f (.)
         
         expect($service1)->toBeInstanceOf(ModuleService::class)
             ->and($service2)->toBeInstanceOf(ModuleService::class);
@@ -142,23 +114,13 @@ describe('ModuleService', function () {
     });
 
     it('handles empty module gracefully', function () {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-        $emptyService = new ModuleService('NonExistentModule');
+        $emptyService = (new ModuleService())->setName('NonExistentModule');
 =======
         $emptyService = (new ModuleService())->setName('NonExistentModule');
->>>>>>> 5852845d (.)
 =======
         $emptyService = (new ModuleService())->setName('NonExistentModule');
->>>>>>> abfbbdf (.)
 =======
         $emptyService = (new ModuleService())->setName('NonExistentModule');
->>>>>>> 1fd4ceb6 (.)
-=======
-        $emptyService = (new ModuleService())->setName('NonExistentModule');
->>>>>>> 1c7b79f (.)
         $result = $emptyService->getModels();
         
         expect($result)->toBeArray()
@@ -172,30 +134,13 @@ describe('ModuleService', function () {
         expect($reflection->hasProperty('name'))->toBeTrue();
     });
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-    it('has proper constructor', function () {
-=======
     it('uses setName method for configuration', function () {
         // ModuleService doesn't have a constructor with parameters
         // It uses setName() method for configuration (fluent interface)
->>>>>>> abfbbdf (.)
         $reflection = new ReflectionClass($this->service);
         
-<<<<<<< HEAD
-        expect($constructor)->not->toBeNull()
-            ->and($constructor->isPublic())->toBeTrue();
-            
-        $parameters = $constructor->getParameters();
-        expect(count($parameters))->toBeGreaterThanOrEqual(1)
-            ->and($parameters[0]->getName())->toBe('name');
 =======
 =======
->>>>>>> 1fd4ceb6 (.)
-=======
->>>>>>> 1c7b79f (.)
     it('uses setName method for configuration', function () {
         // ModuleService doesn't have a constructor with parameters
         // It uses setName() method for configuration (fluent interface)
@@ -203,17 +148,10 @@ describe('ModuleService', function () {
         
         expect($reflection->hasMethod('setName'))->toBeTrue()
             ->and($reflection->getMethod('setName')->isPublic())->toBeTrue();
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 5852845d (.)
-=======
         expect($reflection->hasMethod('setName'))->toBeTrue()
             ->and($reflection->getMethod('setName')->isPublic())->toBeTrue();
->>>>>>> abfbbdf (.)
 =======
->>>>>>> 1fd4ceb6 (.)
 =======
->>>>>>> 1c7b79f (.)
     });
 
     it('validates class structure', function () {

@@ -33,34 +33,22 @@ test('xot base model has correct snake attributes setting', function (): void {
 test('xot base model has correct per page setting', function (): void {
     $reflection = new ReflectionClass(XotBaseModel::class);
     $perPageProperty = $reflection->getProperty('perPage');
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-    $perPageProperty->setAccessible(true);
-    
-    expect($perPageProperty->getValue())->toBe(30);
+    // For protected instance property on abstract class, assert the default value
+    $default = $perPageProperty->getDefaultValue();
+    expect($default)->toBe(30);
 =======
     // For protected instance property on abstract class, assert the default value
     $default = $perPageProperty->getDefaultValue();
     expect($default)->toBe(30);
->>>>>>> 5852845d (.)
 =======
     // For protected instance property on abstract class, assert the default value
     $default = $perPageProperty->getDefaultValue();
     expect($default)->toBe(30);
->>>>>>> abfbbdf (.)
-=======
-    // For protected instance property on abstract class, assert the default value
-    $default = $perPageProperty->getDefaultValue();
-    expect($default)->toBe(30);
->>>>>>> 1fd4ceb6 (.)
 =======
     
     // For protected instance property on abstract class, assert the default value
     $default = $perPageProperty->getDefaultValue();
     expect($default)->toBe(30);
->>>>>>> 1c7b79f (.)
 });
 
 test('xot base model has correct namespace', function (): void {
@@ -94,19 +82,9 @@ test('xot base model has correct property types', function (): void {
     $snakeAttributesProperty = $reflection->getProperty('snakeAttributes');
     $perPageProperty = $reflection->getProperty('perPage');
     
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-    expect($snakeAttributesProperty->getType()->getName())->toBe('bool');
-    expect($perPageProperty->getType()->getName())->toBe('int');
 =======
 =======
->>>>>>> abfbbdf (.)
 =======
->>>>>>> 1fd4ceb6 (.)
-=======
->>>>>>> 1c7b79f (.)
     $snakeType = $snakeAttributesProperty->getType();
     $perPageType = $perPageProperty->getType();
     
@@ -122,16 +100,8 @@ test('xot base model has correct property types', function (): void {
     } else {
         expect($perPageProperty->getDefaultValue())->toBe(30);
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 5852845d (.)
 =======
->>>>>>> abfbbdf (.)
 =======
->>>>>>> 1fd4ceb6 (.)
-=======
->>>>>>> 1c7b79f (.)
 });
 
 test('xot base model has correct property visibility', function (): void {
