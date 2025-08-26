@@ -14,7 +14,6 @@ class MockXotModel extends XotBaseModel
     protected $table = 'mock_table';
     protected $fillable = ['name', 'email', 'status'];
     
-<<<<<<< HEAD
     protected function casts(): array
     {
         return [
@@ -22,65 +21,6 @@ class MockXotModel extends XotBaseModel
             'updated_at' => 'datetime',
             'status' => 'boolean',
         ];
-=======
-    expect($reflection->isSubclassOf(\Illuminate\Database\Eloquent\Model::class))->toBeTrue();
-});
-
-test('xot base model is abstract', function (): void {
-    $reflection = new ReflectionClass(XotBaseModel::class);
-    
-    expect($reflection->isAbstract())->toBeTrue();
-});
-
-test('xot base model uses updater trait', function (): void {
-    $reflection = new ReflectionClass(XotBaseModel::class);
-    $traits = $reflection->getTraitNames();
-    
-    expect($traits)->toContain(Updater::class);
-});
-
-test('xot base model has correct snake attributes setting', function (): void {
-    expect(XotBaseModel::$snakeAttributes)->toBeTrue();
-});
-
-test('xot base model has correct per page setting', function (): void {
-    $reflection = new ReflectionClass(XotBaseModel::class);
-    $perPageProperty = $reflection->getProperty('perPage');
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-    $perPageProperty->setAccessible(true);
-    
-    expect($perPageProperty->getValue())->toBe(30);
-=======
-    // For protected instance property on abstract class, assert the default value
-    $default = $perPageProperty->getDefaultValue();
-    expect($default)->toBe(30);
->>>>>>> 5852845d (.)
-=======
-    // For protected instance property on abstract class, assert the default value
-    $default = $perPageProperty->getDefaultValue();
-    expect($default)->toBe(30);
->>>>>>> abfbbdf (.)
-=======
-    // For protected instance property on abstract class, assert the default value
-    $default = $perPageProperty->getDefaultValue();
-    expect($default)->toBe(30);
->>>>>>> 1fd4ceb6 (.)
-});
-
-test('xot base model has correct namespace', function (): void {
-    expect(XotBaseModel::class)->toContain('Modules\Xot\Models');
-});
-
-test('xot base model has correct strict types declaration', function (): void {
-    $reflection = new ReflectionClass(XotBaseModel::class);
-    $filename = $reflection->getFileName();
-    
-    if ($filename) {
-        $content = file_get_contents($filename);
-        expect($content)->toContain('declare(strict_types=1);');
->>>>>>> 5207ce7 (.)
     }
 }
 
@@ -106,7 +46,6 @@ describe('XotBaseModel Inheritance', function () {
     });
 });
 
-<<<<<<< HEAD
 describe('XotBaseModel Casts', function () {
     it('casts timestamps correctly', function () {
         $casts = $this->model->casts();
@@ -130,46 +69,6 @@ describe('XotBaseModel Casts', function () {
         expect($casts)->toBeArray();
         expect($casts)->toHaveCount(3);
     });
-=======
-test('xot base model has correct property types', function (): void {
-    $reflection = new ReflectionClass(XotBaseModel::class);
-    
-    $snakeAttributesProperty = $reflection->getProperty('snakeAttributes');
-    $perPageProperty = $reflection->getProperty('perPage');
-    
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-    expect($snakeAttributesProperty->getType()->getName())->toBe('bool');
-    expect($perPageProperty->getType()->getName())->toBe('int');
-=======
-=======
->>>>>>> abfbbdf (.)
-=======
->>>>>>> 1fd4ceb6 (.)
-    $snakeType = $snakeAttributesProperty->getType();
-    $perPageType = $perPageProperty->getType();
-    
-    // Some properties may not have explicit type declarations; in that case just ensure defaults are as expected
-    if ($snakeType !== null) {
-        expect($snakeType->getName())->toBe('bool');
-    } else {
-        expect(XotBaseModel::$snakeAttributes)->toBeTrue();
-    }
-    
-    if ($perPageType !== null) {
-        expect($perPageType->getName())->toBe('int');
-    } else {
-        expect($perPageProperty->getDefaultValue())->toBe(30);
-    }
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 5852845d (.)
-=======
->>>>>>> abfbbdf (.)
-=======
->>>>>>> 1fd4ceb6 (.)
->>>>>>> 5207ce7 (.)
 });
 
 describe('XotBaseModel Timestamps', function () {

@@ -1,26 +1,9 @@
 <?php
 
-<<<<<<< HEAD
 declare(strict_types=1);
 
 namespace Modules\Xot\Filament\Widgets;
 
-=======
-namespace Modules\Xot\Filament\Widgets;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> b258042 (.)
-=======
->>>>>>> 5852845d (.)
-=======
->>>>>>> abfbbdf (.)
-=======
->>>>>>> 1fd4ceb6 (.)
->>>>>>> 5207ce7 (.)
 use Modules\Xot\Filament\Traits\TransTrait;
 use Filament\Widgets\TableWidget as FilamentTableWidget;
 
