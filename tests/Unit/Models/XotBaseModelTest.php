@@ -2,6 +2,7 @@
 
 declare(strict_types=1);
 
+<<<<<<< HEAD
 use Modules\Xot\Models\XotBaseModel;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Collection;
@@ -493,4 +494,35 @@ describe('XotBaseModel Integration', function () {
         expect($model2->name)->toBe('Test Name 2');
         expect($model1->name)->not->toBe($model2->name);
     });
+=======
+namespace Modules\Xot\Tests\Unit\Models;
+
+use Modules\Xot\Models\XotBaseModel;
+use Modules\Xot\Tests\TestCase;
+use Illuminate\Database\Eloquent\Model;
+
+uses(TestCase::class);
+
+beforeEach(function () {
+    $this->xotBaseModel = new class extends XotBaseModel {
+        protected $table = 'test_xot_table';
+    };
+});
+
+test('xot base model extends eloquent model', function () {
+    expect($this->xotBaseModel)->toBeInstanceOf(Model::class);
+});
+
+test('xot base model has correct table name', function () {
+    expect($this->xotBaseModel->getTable())->toBe('test_xot_table');
+});
+
+test('xot base model can be instantiated', function () {
+    expect($this->xotBaseModel)->toBeInstanceOf(XotBaseModel::class);
+});
+
+test('xot base model has proper inheritance chain', function () {
+    expect($this->xotBaseModel)->toBeInstanceOf(XotBaseModel::class);
+    expect($this->xotBaseModel)->toBeInstanceOf(Model::class);
+>>>>>>> 68b3eda (.)
 });

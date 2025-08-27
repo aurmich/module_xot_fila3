@@ -215,7 +215,7 @@ class HasTableWithXot
         return null;
     }
 
-    public function getTableFilterState(): array
+    public function getTableFilterState(string $name): ?array
     {
         return [];
     }
@@ -468,7 +468,7 @@ class HasTableWithoutOptionalMethods
         return null;
     }
 
-    public function getTableFilterState(): array
+    public function getTableFilterState(string $name): ?array
     {
         return [];
     }

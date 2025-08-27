@@ -1,10 +1,21 @@
+<<<<<<< HEAD
 # Modulo Xot - Fondamento Architetturale Laraxot
+=======
+# Modulo Xot - Documentazione
+>>>>>>> 68b3eda (.)
 
 ## Panoramica
 
 Il modulo Xot è il fondamento architetturale dell'ecosistema Laraxot PTVX. Fornisce classi base, trait, service provider e funzionalità core che vengono estesi e utilizzati da tutti gli altri moduli dell'applicazione. Implementa i principi DRY, KISS, SOLID e robustezza per garantire coerenza e manutenibilità.
 
+<<<<<<< HEAD
 ## Caratteristiche Principali
+=======
+### Core Features
+- [Development Rules](development-rules.md) - Regole di sviluppo per il modulo
+- [Code Quality](code_quality.md) - Standard di qualità del codice
+- [Best Practices](best-practices.md) - Pratiche consigliate
+>>>>>>> 68b3eda (.)
 
 - **Classi Base**: Modelli, controller e resource base per tutti i moduli
 - **Service Provider Base**: Service provider base con funzionalità comuni
@@ -64,6 +75,7 @@ abstract class XotBaseModel extends Model
 {
     use HasFactory, HasUuid, HasSlug, HasStatus;
 
+<<<<<<< HEAD
     protected $guarded = [];
 
     protected $casts = [
@@ -99,6 +111,9 @@ abstract class XotBaseModel extends Model
 ```
 
 ### XotBaseController
+=======
+### Gennaio 2025 - Testing Organization ⭐ **NUOVO**
+>>>>>>> 68b3eda (.)
 
 Controller base per tutti i moduli:
 
@@ -1042,6 +1057,7 @@ class MyModel extends XotBaseModel
 
 ### Standard di Codice
 
+<<<<<<< HEAD
 - PSR-12 coding standards
 - PHPStan livello 9+
 - Test coverage >90%
@@ -1063,3 +1079,15 @@ Per supporto tecnico o domande:
 ---
 
 *Ultimo aggiornamento: {{ date('Y-m-d') }}*
+=======
+- [Documentazione Root](../../../docs/README.md)
+- [Modulo UI](../UI/docs/README.md)
+- [Modulo Lang](../Lang/docs/README.md)
+- [Modulo Notify](../Notify/docs/README.md)
+- [Modulo Employee](../Employee/docs/README.md) - Sistema HR completo con gestione dipendenti e presenze ✅
+  - **Stato**: Foundation completata (modelli, factory, test)
+  - **PHPStan**: Livello 10 ✅
+  - **Test Coverage**: 100% modelli base ✅
+
+*Ultimo aggiornamento: gennaio 2025 - Aggiornato stato modulo Employee*
+>>>>>>> 68b3eda (.)

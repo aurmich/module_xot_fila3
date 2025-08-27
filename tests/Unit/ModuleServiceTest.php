@@ -83,6 +83,7 @@ describe('ModuleService', function () {
         $reflection = new ReflectionClass($this->service);
         $method = $reflection->getMethod('getModels');
         
+<<<<<<< HEAD
         expect($method->getReturnType()?->getName())->toBe('array');
     });
 
@@ -104,10 +105,55 @@ describe('ModuleService', function () {
         $result = $service->setName('TestModule');
         
         expect($result)->toBeInstanceOf(ModuleService::class);
+=======
+        $docComment = $method->getDocComment();
+        expect($docComment)->toContain('@return array<string, class-string>');
+    });
+
+    it('validates method signature', function () {
+        $reflection = new ReflectionClass($this->service);
+        $method = $reflection->getMethod('getModels');
+        
+        expect($method->isPublic())->toBeTrue()
+            ->and($method->getNumberOfParameters())->toBe(0);
+    });
+
+    it('handles empty module gracefully', function () {
+        $emptyService = (new ModuleService())->setName('NonExistentModule');
+        $result = $emptyService->getModels();
+        
+        expect($result)->toBeArray()
+            ->and($result)->toBeEmpty();
+    });
+
+    it('uses correct namespace patterns', function () {
+        // Test that the service uses correct namespace patterns
+        $reflection = new ReflectionClass($this->service);
+        
+        expect($reflection->hasProperty('name'))->toBeTrue();
+    });
+
+    it('uses setName method for configuration', function () {
+        // ModuleService doesn't have a constructor with parameters
+        // It uses setName() method for configuration (fluent interface)
+        $reflection = new ReflectionClass($this->service);
+        
+        expect($reflection->hasMethod('setName'))->toBeTrue()
+            ->and($reflection->getMethod('setName')->isPublic())->toBeTrue();
+    });
+
+    it('validates class structure', function () {
+        $reflection = new ReflectionClass($this->service);
+        
+        expect($reflection->isInstantiable())->toBeTrue()
+            ->and($reflection->isFinal())->toBeFalse()
+            ->and($reflection->isAbstract())->toBeFalse();
+>>>>>>> 68b3eda (.)
     });
 
     it('has proper method visibility', function () {
         $reflection = new ReflectionClass($this->service);
+<<<<<<< HEAD
         
         expect($reflection->getMethod('setName')->isPublic())->toBeTrue()
             ->and($reflection->getMethod('getName')->isPublic())->toBeTrue()
@@ -332,5 +378,42 @@ describe('ModuleService', function () {
         foreach ($parameters as $parameter) {
             expect($parameter)->toBeInstanceOf(ReflectionParameter::class);
         }
+=======
+        $methods = $reflection->getMethods();
+        
+        $publicMethods = array_filter($methods, fn($method) => $method->isPublic());
+        
+        expect(count($publicMethods))->toBeGreaterThan(0);
+    });
+
+    it('handles module facade interactions', function () {
+        // Test basic interaction with Module facade
+        expect(class_exists('Nwidart\Modules\Facades\Module'))->toBeTrue();
+    });
+
+    it('processes file extensions correctly', function () {
+        // Test that the service correctly processes .php files
+        $result = $this->service->getModels();
+        
+        expect($result)->toBeArray();
+    });
+
+    it('validates string utilities usage', function () {
+        // Test that Str helper is used correctly
+        expect(class_exists('Illuminate\Support\Str'))->toBeTrue();
+    });
+
+    it('handles reflection class instantiation', function () {
+        // Test that ReflectionClass is used correctly
+        expect(class_exists('ReflectionClass'))->toBeTrue();
+    });
+
+    it('has proper error handling', function () {
+        // Test that exceptions are caught and handled gracefully
+        $result = $this->service->getModels();
+        
+        // Should not throw exceptions
+        expect($result)->toBeArray();
+>>>>>>> 68b3eda (.)
     });
 });

@@ -8,7 +8,10 @@ use Filament\Forms\Components;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Arr;
 use Illuminate\Support\Str;
+<<<<<<< HEAD
 use Webmozart\Assert\Assert;
+=======
+>>>>>>> 68b3eda (.)
 use Modules\Xot\Contracts\StateContract;
 use Modules\Xot\Filament\Traits\TransTrait;
 use Spatie\ModelStates\State;
@@ -19,7 +22,11 @@ use Spatie\ModelStates\State;
  * Defines the state machine configuration and required methods
  * that must be implemented by each concrete state class.
  *
+<<<<<<< HEAD
  * @property string $name Il nome dello stato
+=======
+ * @property string $name  Il nome dello stato
+>>>>>>> 68b3eda (.)
  * @property string $value Il valore dello stato nel database
  */
 abstract class XotBaseState extends State implements StateContract
@@ -37,6 +44,10 @@ abstract class XotBaseState extends State implements StateContract
     public function label(): string
     {
         return static::transClass(static::class, 'states.'.static::getName().'.label');
+<<<<<<< HEAD
+=======
+        // return 'Annullato';
+>>>>>>> 68b3eda (.)
     }
 
     public function color(): string
@@ -47,21 +58,40 @@ abstract class XotBaseState extends State implements StateContract
     public function bgColor(): string
     {
         return static::transClass(static::class, 'states.'.static::getName().'.bg_color');
+<<<<<<< HEAD
+=======
+        // return 'info';
+>>>>>>> 68b3eda (.)
     }
 
     public function icon(): string
     {
         return static::transClass(static::class, 'states.'.static::getName().'.icon');
+<<<<<<< HEAD
+=======
+        // return 'heroicon-o-x-circle';
+>>>>>>> 68b3eda (.)
     }
 
     public function modalHeading(): string
     {
         return static::transClass(static::class, 'states.'.static::getName().'.modal_heading');
+<<<<<<< HEAD
+=======
+        // return 'Annulla Appuntamento';
+>>>>>>> 68b3eda (.)
     }
 
     public function modalDescription(): string
     {
+<<<<<<< HEAD
         return static::transClass(static::class, 'states.'.static::getName().'.modal_description');
+=======
+        $appointment = $this->getModel();
+
+        return static::transClass(static::class, 'states.'.static::getName().'.modal_description');
+        // return 'Sei sicuro di voler annullare questo appuntamento?';
+>>>>>>> 68b3eda (.)
     }
 
     /**
@@ -120,9 +150,21 @@ abstract class XotBaseState extends State implements StateContract
     {
         $message = Arr::get($data, 'message');
         $stateClass = static::class;
+<<<<<<< HEAD
         
         $record = $this->getModel();
         /** @phpstan-ignore-next-line */
+=======
+        /*
+
+        $appointmentId = $arguments['appointment'];
+        $appointment = Appointment::firstWhere('id',$appointmentId);
+
+        $appointment?->state->transitionTo($stateClass,$message);
+        */
+        $record = $this->getModel();
+        /* @phpstan-ignore-next-line */
+>>>>>>> 68b3eda (.)
         $record->state->transitionTo($stateClass, $message);
     }
 
@@ -145,8 +187,19 @@ abstract class XotBaseState extends State implements StateContract
     {
         $message = Arr::get($data, 'message');
         $stateClass = static::class;
+<<<<<<< HEAD
         
         /** @phpstan-ignore-next-line */
+=======
+        /*
+
+        $appointmentId = $arguments['appointment'];
+        $appointment = Appointment::firstWhere('id',$appointmentId);
+
+        $appointment?->state->transitionTo($stateClass,$message);
+        */
+        /* @phpstan-ignore-next-line */
+>>>>>>> 68b3eda (.)
         $record->state->transitionTo($stateClass, $message);
     }
 

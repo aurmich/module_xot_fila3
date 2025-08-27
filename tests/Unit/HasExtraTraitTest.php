@@ -72,15 +72,20 @@ describe('HasExtraTrait', function () {
             public $extra_attributes;
             
             public function __construct() {
+<<<<<<< HEAD
                 $this->extra_attributes = collect([
                     'test_key' => 'test_value',
                     'another_key' => 'another_value'
                 ]);
+=======
+                $this->extra_attributes = collect(['test_key' => 'test_value']);
+>>>>>>> 68b3eda (.)
             }
         };
         
         $this->testModel->extra = $mockExtra;
         
+<<<<<<< HEAD
         $result1 = $this->testModel->getExtra('test_key');
         $result2 = $this->testModel->getExtra('another_key');
         $result3 = $this->testModel->getExtra('non_existent');
@@ -91,22 +96,39 @@ describe('HasExtraTrait', function () {
     });
 
     it('handles extra attributes with different types', function () {
+=======
+        $result = $this->testModel->getExtra('test_key');
+        
+        expect($result)->toBe('test_value');
+    });
+
+    it('handles different data types correctly', function () {
+>>>>>>> 68b3eda (.)
         $mockExtra = new class {
             public $extra_attributes;
             
             public function __construct() {
                 $this->extra_attributes = collect([
+<<<<<<< HEAD
                     'string_value' => 'hello',
                     'int_value' => 42,
                     'bool_value' => true,
                     'array_value' => ['a', 'b', 'c'],
                     'null_value' => null
+=======
+                    'string_value' => 'test_string',
+                    'int_value' => 123,
+                    'bool_value' => true,
+                    'array_value' => ['nested', 'array'],
+                    'null_value' => null,
+>>>>>>> 68b3eda (.)
                 ]);
             }
         };
         
         $this->testModel->extra = $mockExtra;
         
+<<<<<<< HEAD
         expect($this->testModel->getExtra('string_value'))->toBe('hello')
             ->and($this->testModel->getExtra('int_value'))->toBe(42)
             ->and($this->testModel->getExtra('bool_value'))->toBe(true)
@@ -130,6 +152,62 @@ describe('HasExtraTrait', function () {
         // Check that method is public
         expect($method->isPublic())->toBeTrue();
         
+=======
+        expect($this->testModel->getExtra('string_value'))->toBe('test_string')
+            ->and($this->testModel->getExtra('int_value'))->toBe(123)
+            ->and($this->testModel->getExtra('bool_value'))->toBe(true)
+            ->and($this->testModel->getExtra('array_value'))->toBe(['nested', 'array'])
+            ->and($this->testModel->getExtra('null_value'))->toBeNull();
+    });
+
+    it('throws exception for invalid data types', function () {
+        $mockExtra = new class {
+            public $extra_attributes;
+            
+            public function __construct() {
+                $this->extra_attributes = collect([
+                    'invalid_value' => new stdClass(), // Object that's not allowed
+                ]);
+            }
+        };
+        
+        $this->testModel->extra = $mockExtra;
+        
+        expect(fn () => $this->testModel->getExtra('invalid_value'))
+            ->toThrow(Exception::class);
+    });
+
+    it('has setExtra method', function () {
+        expect(method_exists($this->testModel, 'setExtra'))->toBeTrue();
+    });
+
+    it('validates method signatures', function () {
+        $reflection = new ReflectionClass($this->testModel);
+        
+        // Check getExtra method signature
+        $getExtraMethod = $reflection->getMethod('getExtra');
+        expect($getExtraMethod->isPublic())->toBeTrue();
+        
+        $parameters = $getExtraMethod->getParameters();
+        expect(count($parameters))->toBe(1)
+            ->and($parameters[0]->getName())->toBe('name')
+            ->and($parameters[0]->getType()?->getName())->toBe('string');
+        
+        // Check setExtra method signature
+        $setExtraMethod = $reflection->getMethod('setExtra');
+        expect($setExtraMethod->isPublic())->toBeTrue();
+        
+        $setParameters = $setExtraMethod->getParameters();
+        expect(count($setParameters))->toBe(2)
+            ->and($setParameters[0]->getName())->toBe('name')
+            ->and($setParameters[0]->getType()?->getName())->toBe('string');
+    });
+
+    it('has proper return type annotations', function () {
+        $reflection = new ReflectionClass($this->testModel);
+        $method = $reflection->getMethod('getExtra');
+        
+>>>>>>> 68b3eda (.)
         // Check that method has return type hint
         $returnType = $method->getReturnType();
         expect($returnType)->not->toBeNull();

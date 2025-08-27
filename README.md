@@ -110,6 +110,7 @@ class XotBaseResource extends Resource
     }
 }
 ```
+<<<<<<< HEAD
 ## Modifiche Recenti (Giugno 2025)
 
 ### Deprecazione Comandi MCP
@@ -131,6 +132,11 @@ Il modulo può essere configurato tramite il file `config/module_xot.php`:
 
 ## 🚀 Installazione SUPER VELOCE
 
+=======
+
+## 🚀 Installazione SUPER VELOCE
+
+>>>>>>> 68b3eda (.)
 ```bash
 # 1. Installa il modulo base
 composer require laraxot/xot
