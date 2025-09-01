@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Modules\Xot\Contracts;
 
+<<<<<<< HEAD
 use Filament\Models\Contracts\FilamentUser;
 use Illuminate\Contracts\Auth\Access\Authorizable;
 use Illuminate\Contracts\Auth\Authenticatable;
@@ -18,6 +19,22 @@ use Modules\User\Contracts\HasTeamsContract;
 use Spatie\MediaLibrary\HasMedia;
 use Spatie\MediaLibrary\MediaCollections\FileAdder;
 use Spatie\Permission\Contracts\Role;
+=======
+use Laravel\Passport\Token;
+use Spatie\MediaLibrary\HasMedia;
+use Spatie\Permission\Contracts\Role;
+use Illuminate\Database\Eloquent\Model;
+use Filament\Models\Contracts\FilamentUser;
+use Modules\User\Contracts\HasTeamsContract;
+use Illuminate\Contracts\Auth\Authenticatable;
+use Illuminate\Contracts\Auth\MustVerifyEmail;
+use Illuminate\Contracts\Auth\CanResetPassword;
+use Illuminate\Contracts\Auth\Access\Authorizable;
+use Illuminate\Database\Eloquent\Relations\HasOne;
+use Spatie\MediaLibrary\MediaCollections\FileAdder;
+use Illuminate\Database\Eloquent\Relations\MorphMany;
+use Illuminate\Database\Eloquent\Relations\BelongsToMany;
+>>>>>>> b6f6b143 (.)
 
 // use Filament\Models\Contracts\HasTenants;
 
@@ -43,8 +60,13 @@ use Spatie\Permission\Contracts\Role;
  * @method bool canAccessSocialite()
 =======
  * @property ProfileContract|null                                                       $profile
+<<<<<<< HEAD
  * @property string                                                                     $id
  * @property string                                                                     $handle
+=======
+ * @property string $id
+ * @property string $handle
+>>>>>>> b6f6b143 (.)
  * @property string|null                                                                $first_name
  * @property string|null                                                                $last_name
  * @property string|null                                                                $full_name
@@ -56,19 +78,34 @@ use Spatie\Permission\Contracts\Role;
  * @property \Illuminate\Database\Eloquent\Collection<int, \Modules\User\Models\Role>   $roles
  * @property \Illuminate\Database\Eloquent\Collection<int, \Modules\User\Models\Tenant> $tenants
  *
+<<<<<<< HEAD
  * @method FileAdder addMediaFromDisk(string $key, ?string $disk = null)
  * @method bool      canAccessSocialite()
+<<<<<<< HEAD
 >>>>>>> e697a77b (.)
+=======
+=======
+ * @method  FileAdder addMediaFromDisk(string $key, ?string $disk = null)
+ * @method bool canAccessSocialite()
+>>>>>>> b6f6b143 (.)
+>>>>>>> f4296aed (.)
  *
  * @phpstan-require-extends Model
  *
  * @mixin \Eloquent
  */
 <<<<<<< HEAD
+<<<<<<< HEAD
 interface UserContract extends Authenticatable, Authorizable, CanResetPassword, FilamentUser, HasMedia, HasTeamsContract, ModelContract, MustVerifyEmail, PassportHasApiTokensContract
 =======
 interface UserContract extends Authenticatable, Authorizable, CanResetPassword, FilamentUser, HasTeamsContract, ModelContract, MustVerifyEmail, PassportHasApiTokensContract, HasMedia
 >>>>>>> e697a77b (.)
+=======
+interface UserContract extends Authenticatable, Authorizable, CanResetPassword, FilamentUser, HasTeamsContract, ModelContract, MustVerifyEmail, PassportHasApiTokensContract, HasMedia
+=======
+interface UserContract extends Authenticatable, Authorizable, CanResetPassword, FilamentUser, HasTeamsContract, ModelContract, MustVerifyEmail, PassportHasApiTokensContract,HasMedia
+>>>>>>> b6f6b143 (.)
+>>>>>>> f4296aed (.)
 {
     /*
     public function isSuperAdmin();
@@ -163,6 +200,7 @@ interface UserContract extends Authenticatable, Authorizable, CanResetPassword, 
 
     /**
      * Get all consents for the model (polymorphic).
+<<<<<<< HEAD
      */
     // public function consents(): MorphMany;
 
@@ -172,5 +210,14 @@ interface UserContract extends Authenticatable, Authorizable, CanResetPassword, 
      * Check if the user has a specific permission.
      */
     public function hasPermissionTo(string $permission): bool;
+<<<<<<< HEAD
 >>>>>>> e697a77b (.)
+=======
+=======
+     *
+     */
+    //public function consents(): MorphMany;
+    
+>>>>>>> b6f6b143 (.)
+>>>>>>> f4296aed (.)
 }
