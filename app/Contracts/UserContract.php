@@ -4,22 +4,6 @@ declare(strict_types=1);
 
 namespace Modules\Xot\Contracts;
 
-<<<<<<< HEAD
-use Filament\Models\Contracts\FilamentUser;
-use Illuminate\Contracts\Auth\Access\Authorizable;
-use Illuminate\Contracts\Auth\Authenticatable;
-use Illuminate\Contracts\Auth\CanResetPassword;
-use Illuminate\Contracts\Auth\MustVerifyEmail;
-use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\Relations\BelongsToMany;
-use Illuminate\Database\Eloquent\Relations\HasOne;
-use Illuminate\Database\Eloquent\Relations\MorphMany;
-use Laravel\Passport\Token;
-use Modules\User\Contracts\HasTeamsContract;
-use Spatie\MediaLibrary\HasMedia;
-use Spatie\MediaLibrary\MediaCollections\FileAdder;
-use Spatie\Permission\Contracts\Role;
-=======
 use Laravel\Passport\Token;
 use Spatie\MediaLibrary\HasMedia;
 use Spatie\Permission\Contracts\Role;
@@ -34,7 +18,6 @@ use Illuminate\Database\Eloquent\Relations\HasOne;
 use Spatie\MediaLibrary\MediaCollections\FileAdder;
 use Illuminate\Database\Eloquent\Relations\MorphMany;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
->>>>>>> b6f6b143 (.)
 
 // use Filament\Models\Contracts\HasTenants;
 
@@ -60,13 +43,8 @@ use Illuminate\Database\Eloquent\Relations\BelongsToMany;
  * @method bool canAccessSocialite()
 =======
  * @property ProfileContract|null                                                       $profile
-<<<<<<< HEAD
- * @property string                                                                     $id
- * @property string                                                                     $handle
-=======
  * @property string $id
  * @property string $handle
->>>>>>> b6f6b143 (.)
  * @property string|null                                                                $first_name
  * @property string|null                                                                $last_name
  * @property string|null                                                                $full_name
@@ -79,6 +57,7 @@ use Illuminate\Database\Eloquent\Relations\BelongsToMany;
  * @property \Illuminate\Database\Eloquent\Collection<int, \Modules\User\Models\Tenant> $tenants
  *
 <<<<<<< HEAD
+<<<<<<< HEAD
  * @method FileAdder addMediaFromDisk(string $key, ?string $disk = null)
  * @method bool      canAccessSocialite()
 <<<<<<< HEAD
@@ -89,11 +68,16 @@ use Illuminate\Database\Eloquent\Relations\BelongsToMany;
  * @method bool canAccessSocialite()
 >>>>>>> b6f6b143 (.)
 >>>>>>> f4296aed (.)
+=======
+ * @method  FileAdder addMediaFromDisk(string $key, ?string $disk = null)
+ * @method bool canAccessSocialite()
+>>>>>>> e8b26086 (.)
  *
  * @phpstan-require-extends Model
  *
  * @mixin \Eloquent
  */
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 interface UserContract extends Authenticatable, Authorizable, CanResetPassword, FilamentUser, HasMedia, HasTeamsContract, ModelContract, MustVerifyEmail, PassportHasApiTokensContract
@@ -106,6 +90,9 @@ interface UserContract extends Authenticatable, Authorizable, CanResetPassword, 
 interface UserContract extends Authenticatable, Authorizable, CanResetPassword, FilamentUser, HasTeamsContract, ModelContract, MustVerifyEmail, PassportHasApiTokensContract,HasMedia
 >>>>>>> b6f6b143 (.)
 >>>>>>> f4296aed (.)
+=======
+interface UserContract extends Authenticatable, Authorizable, CanResetPassword, FilamentUser, HasTeamsContract, ModelContract, MustVerifyEmail, PassportHasApiTokensContract,HasMedia
+>>>>>>> e8b26086 (.)
 {
     /*
     public function isSuperAdmin();
@@ -201,6 +188,7 @@ interface UserContract extends Authenticatable, Authorizable, CanResetPassword, 
     /**
      * Get all consents for the model (polymorphic).
 <<<<<<< HEAD
+<<<<<<< HEAD
      */
     // public function consents(): MorphMany;
 
@@ -214,10 +202,15 @@ interface UserContract extends Authenticatable, Authorizable, CanResetPassword, 
 >>>>>>> e697a77b (.)
 =======
 =======
+=======
+>>>>>>> e8b26086 (.)
      *
      */
     //public function consents(): MorphMany;
     
+<<<<<<< HEAD
 >>>>>>> b6f6b143 (.)
 >>>>>>> f4296aed (.)
+=======
+>>>>>>> e8b26086 (.)
 }

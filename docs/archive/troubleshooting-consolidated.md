@@ -436,14 +436,22 @@ public function test_b(): void
 ```
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 // Codice locale
 =======
 // Codice remoto
 >>>>>>> branch-name
 =======
+=======
+>>>>>>> e8b26086 (.)
 // Codice locale
+=======
 // Codice remoto
+<<<<<<< HEAD
 >>>>>>> e697a77b (.)
+=======
+>>>>>>> branch-name
+>>>>>>> e8b26086 (.)
 ```
 
 **Soluzione**

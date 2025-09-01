@@ -161,6 +161,7 @@ class RouteDynService
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         $opts = [
             'parameters' => [mb_strtolower((string) $v['name']) => implode('}/{', $params_name)],
 =======
@@ -177,6 +178,10 @@ class RouteDynService
             'parameters' => [mb_strtolower((string) $v['name']) => implode('}/{', $params_name)],
 >>>>>>> b6f6b143 (.)
 >>>>>>> f4296aed (.)
+=======
+        $opts = [
+            'parameters' => [mb_strtolower((string) $v['name']) => implode('}/{', $params_name)],
+>>>>>>> e8b26086 (.)
             'names' => self::prefixedResourceNames(self::getAs($v, $namespace)),
         ];
 
