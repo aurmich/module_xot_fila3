@@ -7,24 +7,6 @@ namespace Modules\Xot\Models;
 /**
  * @property \Modules\Xot\Contracts\ProfileContract|null $creator
  * @property \Modules\Xot\Contracts\ProfileContract|null $updater
-<<<<<<< HEAD
-<<<<<<< HEAD
- *
-=======
->>>>>>> 89d0c8f4 (.)
- * @method static \Modules\Xot\Database\Factories\PulseEntryFactory factory($count = null, $state = [])
- * @method static \Illuminate\Database\Eloquent\Builder|PulseEntry  newModelQuery()
- * @method static \Illuminate\Database\Eloquent\Builder|PulseEntry  newQuery()
- * @method static \Illuminate\Database\Eloquent\Builder|PulseEntry  query()
- * @property int         $id
- * @property int         $timestamp
- * @property string $type
- * @property string $key
- * @property string|null $key_hash
-<<<<<<< HEAD
- * @property int|null $value
- *
-=======
  * @method static \Modules\Xot\Database\Factories\PulseEntryFactory factory($count = null, $state = [])
  * @method static \Illuminate\Database\Eloquent\Builder|PulseEntry  newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|PulseEntry  newQuery()
@@ -35,23 +17,12 @@ namespace Modules\Xot\Models;
  * @property string $key
  * @property string|null $key_hash
  * @property int|null    $value
->>>>>>> e697a77b (.)
-=======
- * @property int|null    $value
->>>>>>> 89d0c8f4 (.)
  * @method static \Illuminate\Database\Eloquent\Builder|PulseEntry whereId($value)
  * @method static \Illuminate\Database\Eloquent\Builder|PulseEntry whereKey($value)
  * @method static \Illuminate\Database\Eloquent\Builder|PulseEntry whereKeyHash($value)
  * @method static \Illuminate\Database\Eloquent\Builder|PulseEntry whereTimestamp($value)
  * @method static \Illuminate\Database\Eloquent\Builder|PulseEntry whereType($value)
  * @method static \Illuminate\Database\Eloquent\Builder|PulseEntry whereValue($value)
-<<<<<<< HEAD
-<<<<<<< HEAD
- *
-=======
->>>>>>> e697a77b (.)
-=======
->>>>>>> 89d0c8f4 (.)
  * @mixin IdeHelperPulseEntry
  * @mixin \Eloquent
  */

@@ -186,15 +186,7 @@ abstract class XotBaseResource extends FilamentResource
     public static function getWizardSubmitAction(): Htmlable
     {
         $submit_view = 'pub_theme::filament.wizard.submit-button';
-<<<<<<< HEAD
-<<<<<<< HEAD
-        // @phpstan-ignore-next-line
-=======
         //@phpstan-ignore-next-line
->>>>>>> e697a77b (.)
-=======
-        //@phpstan-ignore-next-line
->>>>>>> 89d0c8f4 (.)
         if (! view()->exists($submit_view)) {
             throw new \Exception("View {$submit_view} does not exist");
         }

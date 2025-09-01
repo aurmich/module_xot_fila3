@@ -46,15 +46,7 @@ abstract class XotBaseRouteServiceProvider extends RouteServiceProvider
      */
     protected function mapWebRoutes(): void
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
-        if ($this->name === '') {
-=======
         if ('' === $this->name) {
->>>>>>> e697a77b (.)
-=======
-        if ('' === $this->name) {
->>>>>>> 89d0c8f4 (.)
             Notification::make()
                 ->title('Error')
                 ->danger()
@@ -74,15 +66,7 @@ abstract class XotBaseRouteServiceProvider extends RouteServiceProvider
      */
     protected function mapApiRoutes(): void
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
-        if ($this->name === '') {
-=======
         if ('' === $this->name) {
->>>>>>> e697a77b (.)
-=======
-        if ('' === $this->name) {
->>>>>>> 89d0c8f4 (.)
             throw new \Exception('name is empty on ['.static::class.']');
         }
         Route::prefix('api')

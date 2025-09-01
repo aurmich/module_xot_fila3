@@ -73,12 +73,4 @@ return [
             'lock_extended' => 'Durata del lock estesa',
         ],
     ],
-<<<<<<< HEAD
-<<<<<<< HEAD
-];
-=======
 ]; 
->>>>>>> e697a77b (.)
-=======
-]; 
->>>>>>> 89d0c8f4 (.)

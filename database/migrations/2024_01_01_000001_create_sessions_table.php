@@ -8,16 +8,7 @@ use Modules\Xot\Database\Migrations\XotBaseMigration;
 /*
  * Undocumented class.
  */
-<<<<<<< HEAD
-<<<<<<< HEAD
-return new class extends XotBaseMigration
-{
-=======
 return new class extends XotBaseMigration {
->>>>>>> e697a77b (.)
-=======
-return new class extends XotBaseMigration {
->>>>>>> 89d0c8f4 (.)
     /**
      * Run the migrations.
      */

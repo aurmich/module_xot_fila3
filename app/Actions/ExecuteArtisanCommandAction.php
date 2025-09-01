@@ -18,15 +18,7 @@ class ExecuteArtisanCommandAction
 
     /**
      * Lista dei comandi consentiti per motivi di sicurezza.
-<<<<<<< HEAD
-<<<<<<< HEAD
-     *
-=======
      * 
->>>>>>> e697a77b (.)
-=======
-     * 
->>>>>>> 89d0c8f4 (.)
      * @var array<int, string>
      */
     private array $allowedCommands = [
@@ -43,47 +35,21 @@ class ExecuteArtisanCommandAction
     /**
      * Esegue un comando Artisan e restituisce i risultati.
      *
-<<<<<<< HEAD
-<<<<<<< HEAD
-     * @param  string  $command  Il comando Artisan da eseguire (senza "php artisan")
-=======
-=======
->>>>>>> 89d0c8f4 (.)
      * @param string $command Il comando Artisan da eseguire (senza "php artisan")
      * 
      * @throws \RuntimeException Se il comando non è consentito o si verifica un errore
      * 
-<<<<<<< HEAD
->>>>>>> e697a77b (.)
-=======
->>>>>>> 89d0c8f4 (.)
      * @return array{
      *     command: string,
      *     output: array<int, string>,
      *     status: 'completed'|'failed',
      *     exitCode: int
      * } Array con informazioni sull'esecuzione del comando
-<<<<<<< HEAD
-<<<<<<< HEAD
-     *
-     * @throws \RuntimeException Se il comando non è consentito o si verifica un errore
-=======
->>>>>>> e697a77b (.)
-=======
->>>>>>> 89d0c8f4 (.)
      */
     public function execute(string $command): array
     {
         Assert::stringNotEmpty($command, 'Il comando non può essere vuoto');
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
         
->>>>>>> e697a77b (.)
-=======
-        
->>>>>>> 89d0c8f4 (.)
         if (! $this->isCommandAllowed($command)) {
             throw new \RuntimeException("Comando non consentito: {$command}");
         }
@@ -155,18 +121,8 @@ class ExecuteArtisanCommandAction
         } catch (\Throwable $e) {
             Event::dispatch('artisan-command.error', [$command, $e->getMessage()]);
             throw new \RuntimeException(
-<<<<<<< HEAD
-<<<<<<< HEAD
-                "Errore durante l'esecuzione del comando {$command}: {$e->getMessage()}",
-                (int) $e->getCode(),
-=======
                 "Errore durante l'esecuzione del comando {$command}: {$e->getMessage()}", 
                 (int) $e->getCode(), 
->>>>>>> e697a77b (.)
-=======
-                "Errore durante l'esecuzione del comando {$command}: {$e->getMessage()}", 
-                (int) $e->getCode(), 
->>>>>>> 89d0c8f4 (.)
                 $e
             );
         }
@@ -175,27 +131,12 @@ class ExecuteArtisanCommandAction
     /**
      * Verifica se un comando è presente nella lista dei comandi consentiti.
      *
-<<<<<<< HEAD
-<<<<<<< HEAD
-     * @param  string  $command  Il comando da verificare
-=======
      * @param string $command Il comando da verificare
->>>>>>> e697a77b (.)
-=======
-     * @param string $command Il comando da verificare
->>>>>>> 89d0c8f4 (.)
      * @return bool True se il comando è consentito, false altrimenti
      */
     private function isCommandAllowed(string $command): bool
     {
         Assert::stringNotEmpty($command, 'Il comando non può essere vuoto');
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> e697a77b (.)
-=======
->>>>>>> 89d0c8f4 (.)
         return in_array($command, $this->allowedCommands, true);
     }
 }

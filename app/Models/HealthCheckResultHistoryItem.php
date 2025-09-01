@@ -11,16 +11,6 @@ namespace Modules\Xot\Models;
 use Spatie\Health\Models\HealthCheckResultHistoryItem as BaseHealthCheckResultHistoryItem;
 
 /**
-<<<<<<< HEAD
-<<<<<<< HEAD
- * @property int $id
- * @property string $check_name
- * @property string $check_label
- * @property string $status
- * @property string|null $notification_message
- * @property string|null $short_summary
- * @property array $meta
-=======
  * @property int                             $id
  * @property string $check_name
  * @property string $check_label
@@ -28,27 +18,10 @@ use Spatie\Health\Models\HealthCheckResultHistoryItem as BaseHealthCheckResultHi
  * @property string|null                     $notification_message
  * @property string|null                     $short_summary
  * @property array                           $meta
->>>>>>> e697a77b (.)
-=======
- * @property int                             $id
- * @property string $check_name
- * @property string $check_label
- * @property string $status
- * @property string|null                     $notification_message
- * @property string|null                     $short_summary
- * @property array                           $meta
->>>>>>> 89d0c8f4 (.)
  * @property string $ended_at
  * @property string $batch
  * @property \Illuminate\Support\Carbon|null $created_at
  * @property \Illuminate\Support\Carbon|null $updated_at
-<<<<<<< HEAD
-<<<<<<< HEAD
- *
-=======
->>>>>>> e697a77b (.)
-=======
->>>>>>> 89d0c8f4 (.)
  * @method static \Illuminate\Database\Eloquent\Builder|HealthCheckResultHistoryItem newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|HealthCheckResultHistoryItem newQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|HealthCheckResultHistoryItem query()
@@ -63,25 +36,10 @@ use Spatie\Health\Models\HealthCheckResultHistoryItem as BaseHealthCheckResultHi
  * @method static \Illuminate\Database\Eloquent\Builder|HealthCheckResultHistoryItem whereShortSummary($value)
  * @method static \Illuminate\Database\Eloquent\Builder|HealthCheckResultHistoryItem whereStatus($value)
  * @method static \Illuminate\Database\Eloquent\Builder|HealthCheckResultHistoryItem whereUpdatedAt($value)
-<<<<<<< HEAD
-<<<<<<< HEAD
- *
-=======
->>>>>>> 89d0c8f4 (.)
  * @property string|null $updated_by
  * @property string|null $created_by
  * @method static \Illuminate\Database\Eloquent\Builder|HealthCheckResultHistoryItem whereCreatedBy($value)
  * @method static \Illuminate\Database\Eloquent\Builder|HealthCheckResultHistoryItem whereUpdatedBy($value)
-<<<<<<< HEAD
- *
-=======
- * @property string|null $updated_by
- * @property string|null $created_by
- * @method static \Illuminate\Database\Eloquent\Builder|HealthCheckResultHistoryItem whereCreatedBy($value)
- * @method static \Illuminate\Database\Eloquent\Builder|HealthCheckResultHistoryItem whereUpdatedBy($value)
->>>>>>> e697a77b (.)
-=======
->>>>>>> 89d0c8f4 (.)
  * @mixin IdeHelperHealthCheckResultHistoryItem
  * @mixin \Eloquent
  */

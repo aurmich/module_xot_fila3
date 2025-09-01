@@ -21,15 +21,7 @@ use Illuminate\Support\Collection;
  * - Calcolare giorni successivi
  * - Integrazione con Filament UI
  */
-<<<<<<< HEAD
-<<<<<<< HEAD
-enum DayOfWeek: int implements HasColor, HasDescription, HasIcon, HasLabel
-=======
 enum DayOfWeek: int implements HasLabel, HasColor, HasIcon, HasDescription
->>>>>>> e697a77b (.)
-=======
-enum DayOfWeek: int implements HasLabel, HasColor, HasIcon, HasDescription
->>>>>>> 89d0c8f4 (.)
 {
     case MONDAY = 1;
     case TUESDAY = 2;
@@ -47,13 +39,6 @@ enum DayOfWeek: int implements HasLabel, HasColor, HasIcon, HasDescription
     {
         $carbon = Carbon::now()->startOfWeek()->addDays($this->value - 1);
         $carbon->locale('it');
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> e697a77b (.)
-=======
->>>>>>> 89d0c8f4 (.)
         return (string) $carbon->isoFormat('dddd');
     }
 
@@ -63,15 +48,7 @@ enum DayOfWeek: int implements HasLabel, HasColor, HasIcon, HasDescription
      */
     public function getColor(): string
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
-        return match ($this) {
-=======
         return match($this) {
->>>>>>> e697a77b (.)
-=======
-        return match($this) {
->>>>>>> 89d0c8f4 (.)
             self::MONDAY => 'primary',
             self::TUESDAY => 'success',
             self::WEDNESDAY => 'warning',
@@ -88,15 +65,7 @@ enum DayOfWeek: int implements HasLabel, HasColor, HasIcon, HasDescription
      */
     public function getIcon(): string
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
-        return match ($this) {
-=======
         return match($this) {
->>>>>>> e697a77b (.)
-=======
-        return match($this) {
->>>>>>> 89d0c8f4 (.)
             self::MONDAY => 'heroicon-o-calendar',
             self::TUESDAY => 'heroicon-o-calendar',
             self::WEDNESDAY => 'heroicon-o-calendar',
@@ -106,30 +75,14 @@ enum DayOfWeek: int implements HasLabel, HasColor, HasIcon, HasDescription
             self::SUNDAY => 'heroicon-o-calendar',
         };
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
     
->>>>>>> e697a77b (.)
-=======
-    
->>>>>>> 89d0c8f4 (.)
     /**
      * Restituisce la descrizione dettagliata di questo giorno della settimana.
      * Implementazione dell'interfaccia HasDescription di Filament.
      */
     public function getDescription(): string
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
-        return match ($this) {
-=======
         return match($this) {
->>>>>>> e697a77b (.)
-=======
-        return match($this) {
->>>>>>> 89d0c8f4 (.)
             self::MONDAY => __('saluteora::common.days.description.monday'),
             self::TUESDAY => __('saluteora::common.days.description.tuesday'),
             self::WEDNESDAY => __('saluteora::common.days.description.wednesday'),
@@ -147,13 +100,6 @@ enum DayOfWeek: int implements HasLabel, HasColor, HasIcon, HasDescription
     {
         $carbon = Carbon::now()->startOfWeek()->addDays($this->value - 1);
         $carbon->locale('it');
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> e697a77b (.)
-=======
->>>>>>> 89d0c8f4 (.)
         return (string) $carbon->isoFormat('ddd');
     }
 
@@ -168,13 +114,6 @@ enum DayOfWeek: int implements HasLabel, HasColor, HasIcon, HasDescription
         foreach (self::cases() as $case) {
             $result[$case->value] = $case->getLabel();
         }
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> e697a77b (.)
-=======
->>>>>>> 89d0c8f4 (.)
         return $result;
     }
 
@@ -187,13 +126,6 @@ enum DayOfWeek: int implements HasLabel, HasColor, HasIcon, HasDescription
     {
         /** @var Collection<int, self> $filtered */
         $filtered = collect(self::cases())->filter(fn (self $day): bool => $day->value <= 5);
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> e697a77b (.)
-=======
->>>>>>> 89d0c8f4 (.)
         return $filtered;
     }
 
@@ -206,13 +138,6 @@ enum DayOfWeek: int implements HasLabel, HasColor, HasIcon, HasDescription
     {
         /** @var Collection<int, self> $filtered */
         $filtered = collect(self::cases())->filter(fn (self $day): bool => $day->value > 5);
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> e697a77b (.)
-=======
->>>>>>> 89d0c8f4 (.)
         return $filtered;
     }
 
@@ -229,15 +154,7 @@ enum DayOfWeek: int implements HasLabel, HasColor, HasIcon, HasDescription
      */
     public function next(): self
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
-        return match ($this) {
-=======
         return match($this) {
->>>>>>> e697a77b (.)
-=======
-        return match($this) {
->>>>>>> 89d0c8f4 (.)
             self::MONDAY => self::TUESDAY,
             self::TUESDAY => self::WEDNESDAY,
             self::WEDNESDAY => self::THURSDAY,

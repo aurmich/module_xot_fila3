@@ -26,24 +26,10 @@ class GetProductsArrayDummyAction
         // filtering some attributes
         $products = Arr::map($products['products'], function ($item) {
             // Verifichiamo che $item sia un array prima di usare Arr::only
-<<<<<<< HEAD
-<<<<<<< HEAD
-            if (! is_array($item)) {
-                return []; // Restituiamo un array vuoto se $item non è un array
-            }
-
-=======
             if (!is_array($item)) {
                 return []; // Restituiamo un array vuoto se $item non è un array
             }
             
->>>>>>> e697a77b (.)
-=======
-            if (!is_array($item)) {
-                return []; // Restituiamo un array vuoto se $item non è un array
-            }
-            
->>>>>>> 89d0c8f4 (.)
             return Arr::only(
                 $item,
                 [

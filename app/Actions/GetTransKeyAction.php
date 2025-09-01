@@ -21,15 +21,7 @@ class GetTransKeyAction
     {
         $class0 = $class;
         // If no class is provided, try to get it from the backtrace
-<<<<<<< HEAD
-<<<<<<< HEAD
-        if ($class === '') {
-=======
         if ('' === $class) {
->>>>>>> e697a77b (.)
-=======
-        if ('' === $class) {
->>>>>>> 89d0c8f4 (.)
             $backtrace = debug_backtrace();
             Assert::isArray($backtrace);
             $class = Arr::get($backtrace, '1.class');
@@ -39,40 +31,16 @@ class GetTransKeyAction
         $arr = explode('\\', $class);
 
         // Handle cases where the provided class is not in the "Modules" namespace
-<<<<<<< HEAD
-<<<<<<< HEAD
-        if ($arr[0] !== 'Modules') {
-=======
         if ('Modules' !== $arr[0]) {
->>>>>>> e697a77b (.)
-=======
-        if ('Modules' !== $arr[0]) {
->>>>>>> 89d0c8f4 (.)
             $backtrace = array_slice(debug_backtrace(), 2);
             $res = Arr::first(
                 $backtrace,
                 function (array $item): bool {
-<<<<<<< HEAD
-<<<<<<< HEAD
-                    return isset($item['object']) && explode('\\', get_class($item['object']))[0] === 'Modules';
-                }
-            );
-
-            if ($res === null || ! isset($res['object'])) {
-=======
                     return isset($item['object']) && 'Modules' === explode('\\', get_class($item['object']))[0];
                 }
             );
 
             if (null === $res || ! isset($res['object'])) {
->>>>>>> e697a77b (.)
-=======
-                    return isset($item['object']) && 'Modules' === explode('\\', get_class($item['object']))[0];
-                }
-            );
-
-            if (null === $res || ! isset($res['object'])) {
->>>>>>> 89d0c8f4 (.)
                 $page = Arr::get(debug_backtrace(), '0.args.0');
                 Assert::string($page);
                 $main_module = XotData::make()->main_module;

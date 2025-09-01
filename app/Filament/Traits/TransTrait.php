@@ -182,16 +182,7 @@ trait TransTrait
     protected function transChoice(string $key, int $number, array $replace = []): string
     {
         $result = trans_choice($key, $number, $replace);
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-        // @phpstan-ignore-next-line
-=======
         //@phpstan-ignore-next-line
->>>>>>> e697a77b (.)
-=======
-        //@phpstan-ignore-next-line
->>>>>>> 89d0c8f4 (.)
         return is_string($result) ? $result : $key;
     }
 }

@@ -26,34 +26,6 @@ use Webmozart\Assert\Assert;
  * Classe base astratta per tutti i widget Filament.
  * Fornisce funzionalità comuni e standardizzate per la gestione dei widget.
  *
-<<<<<<< HEAD
-<<<<<<< HEAD
- * @property bool $shouldRender Indica se il widget deve essere renderizzato
- * @property string $title Titolo del widget
- * @property string $icon Icona del widget
- * @property array<string, mixed>|null $data Dati del form
- * @property ComponentContainer $form
-=======
- * @property bool                      $shouldRender Indica se il widget deve essere renderizzato
- * @property string                    $title        Titolo del widget
- * @property string                    $icon         Icona del widget
- * @property array<string, mixed>|null $data         Dati del form
- * @property ComponentContainer        $form
->>>>>>> 89d0c8f4 (.)
- */
-abstract class XotBaseWidget extends FilamentWidget implements HasForms, HasActions
-{
-    use TransTrait;
-    use InteractsWithPageFilters;
-    // use InteractsWithPageTable;
-    use InteractsWithForms;
-    use InteractsWithActions;
-
-    public string $title = '';
-    public string $icon = '';
-<<<<<<< HEAD
-
-=======
  * @property bool                      $shouldRender Indica se il widget deve essere renderizzato
  * @property string                    $title        Titolo del widget
  * @property string                    $icon         Icona del widget
@@ -70,9 +42,6 @@ abstract class XotBaseWidget extends FilamentWidget implements HasForms, HasActi
 
     public string $title = '';
     public string $icon = '';
->>>>>>> e697a77b (.)
-=======
->>>>>>> 89d0c8f4 (.)
     protected int|string|array $columnSpan = 'full';
 
     /**
@@ -119,17 +88,8 @@ abstract class XotBaseWidget extends FilamentWidget implements HasForms, HasActi
     /**
      * Configura il form del widget.
      *
-<<<<<<< HEAD
-<<<<<<< HEAD
-     * @param  FilamentForm  $form  Il form da configurare
-=======
      * @param FilamentForm $form Il form da configurare
      *
->>>>>>> e697a77b (.)
-=======
-     * @param FilamentForm $form Il form da configurare
-     *
->>>>>>> 89d0c8f4 (.)
      * @return FilamentForm Il form configurato
      */
     public function form(FilamentForm $form): FilamentForm
@@ -150,15 +110,7 @@ abstract class XotBaseWidget extends FilamentWidget implements HasForms, HasActi
     public function getFormFill(): array
     {
         $model = $this->getFormModel();
-<<<<<<< HEAD
-<<<<<<< HEAD
-        if ($model == null) {
-=======
         if (null == $model) {
->>>>>>> e697a77b (.)
-=======
-        if (null == $model) {
->>>>>>> 89d0c8f4 (.)
             return [];
         }
         if (is_string($model)) {
@@ -175,15 +127,7 @@ abstract class XotBaseWidget extends FilamentWidget implements HasForms, HasActi
                     $defaults = $model->getDataDefaults();
                     $merge1 = array_merge($defaults, $res);
                     $merge1 = Arr::map($merge1, function ($value, $key) use ($defaults) {
-<<<<<<< HEAD
-<<<<<<< HEAD
-                        if ($value == null) {
-=======
                         if (null == $value) {
->>>>>>> e697a77b (.)
-=======
-                        if (null == $value) {
->>>>>>> 89d0c8f4 (.)
                             $value = Arr::get($defaults, $key, null);
                         }
 

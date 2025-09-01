@@ -32,15 +32,7 @@ class QueryExport implements FromQuery, ShouldQueue, WithChunkReading, WithHeadi
     public QueryBuilder|EloquentBuilder $query;
 
     /**
-<<<<<<< HEAD
-<<<<<<< HEAD
-     * @param  array<int, string>  $fields
-=======
      * @param array<int, string> $fields
->>>>>>> e697a77b (.)
-=======
-     * @param array<int, string> $fields
->>>>>>> 89d0c8f4 (.)
      */
     public function __construct(QueryBuilder|EloquentBuilder $query, ?string $transKey = null, array $fields = [])
     {
@@ -75,15 +67,7 @@ class QueryExport implements FromQuery, ShouldQueue, WithChunkReading, WithHeadi
          * @var \Illuminate\Contracts\Support\Arrayable<(int|string), mixed>|iterable<(int|string), mixed>|null
          */
         $first = $this->query->first();
-<<<<<<< HEAD
-<<<<<<< HEAD
-        if ($first === null) {
-=======
         if (null === $first) {
->>>>>>> e697a77b (.)
-=======
-        if (null === $first) {
->>>>>>> 89d0c8f4 (.)
             return collect([]);
         }
 
@@ -115,15 +99,7 @@ class QueryExport implements FromQuery, ShouldQueue, WithChunkReading, WithHeadi
     }
 
     /**
-<<<<<<< HEAD
-<<<<<<< HEAD
-     * @param  \Illuminate\Contracts\Support\Arrayable<(int|string), mixed>|iterable<(int|string), mixed>|null  $item
-=======
      * @param \Illuminate\Contracts\Support\Arrayable<(int|string), mixed>|iterable<(int|string), mixed>|null $item
->>>>>>> e697a77b (.)
-=======
-     * @param \Illuminate\Contracts\Support\Arrayable<(int|string), mixed>|iterable<(int|string), mixed>|null $item
->>>>>>> 89d0c8f4 (.)
      */
     public function map($item): array
     {

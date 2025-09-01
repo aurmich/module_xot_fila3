@@ -25,15 +25,7 @@ class UrlService
     public static function getInstance(): self
     {
         if (! self::$instance instanceof self) {
-<<<<<<< HEAD
-<<<<<<< HEAD
-            self::$instance = new self;
-=======
             self::$instance = new self();
->>>>>>> e697a77b (.)
-=======
-            self::$instance = new self();
->>>>>>> 89d0c8f4 (.)
         }
 
         return self::$instance;
@@ -49,14 +41,6 @@ class UrlService
 
     public function checkValidUrl(string $url): bool
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
-        return filter_var($url, FILTER_VALIDATE_URL) !== false;
-=======
         return false !== filter_var($url, FILTER_VALIDATE_URL);
->>>>>>> e697a77b (.)
-=======
-        return false !== filter_var($url, FILTER_VALIDATE_URL);
->>>>>>> 89d0c8f4 (.)
     }
 }

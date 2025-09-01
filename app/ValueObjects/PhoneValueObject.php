@@ -11,14 +11,6 @@ use function Safe\preg_match;
  */
 class PhoneValueObject
 {
-<<<<<<< HEAD
-<<<<<<< HEAD
-    private function __construct(private readonly string $phone) {}
-
-    public static function fromString(string $phone): self
-    {
-        if (preg_match('/^\+1\d{10}$/', $phone) === 0) {
-=======
     private function __construct(private readonly string $phone)
     {
     }
@@ -26,16 +18,6 @@ class PhoneValueObject
     public static function fromString(string $phone): self
     {
         if (0 === preg_match('/^\+1\d{10}$/', $phone)) {
->>>>>>> e697a77b (.)
-=======
-    private function __construct(private readonly string $phone)
-    {
-    }
-
-    public static function fromString(string $phone): self
-    {
-        if (0 === preg_match('/^\+1\d{10}$/', $phone)) {
->>>>>>> 89d0c8f4 (.)
             throw new \InvalidArgumentException('It is not valid phone value');
         }
 

@@ -17,13 +17,6 @@ use Modules\Xot\Contracts\ProfileContract;
 use Modules\Xot\Datas\XotData;
 use Modules\Xot\Services\ModuleService;
 use Nwidart\Modules\Facades\Module;
-<<<<<<< HEAD
-<<<<<<< HEAD
-use Webmozart\Assert\Assert;
-=======
->>>>>>> e697a77b (.)
-=======
->>>>>>> 89d0c8f4 (.)
 
 use function Safe\define;
 use function Safe\glob;
@@ -31,16 +24,8 @@ use function Safe\json_decode;
 use function Safe\preg_match;
 use function Safe\realpath;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 use Webmozart\Assert\Assert;
 
->>>>>>> e697a77b (.)
-=======
-use Webmozart\Assert\Assert;
-
->>>>>>> 89d0c8f4 (.)
 // ------------------------------------------------
 
 /* --- MAH
@@ -141,34 +126,14 @@ if (! function_exists('hex2rgba')) {
         }
 
         // Sanitize $color if "#" is provided
-<<<<<<< HEAD
-<<<<<<< HEAD
-        if ($color[0] === '#') {
-=======
         if ('#' === $color[0]) {
->>>>>>> e697a77b (.)
-=======
-        if ('#' === $color[0]) {
->>>>>>> 89d0c8f4 (.)
             $color = mb_substr($color, 1);
         }
 
         // Check if color has 6 or 3 characters and get values
-<<<<<<< HEAD
-<<<<<<< HEAD
-        if (mb_strlen($color) === 6) {
-            $hex = [$color[0].$color[1], $color[2].$color[3], $color[4].$color[5]];
-        } elseif (mb_strlen($color) === 3) {
-=======
         if (6 === mb_strlen($color)) {
             $hex = [$color[0].$color[1], $color[2].$color[3], $color[4].$color[5]];
         } elseif (3 === mb_strlen($color)) {
->>>>>>> e697a77b (.)
-=======
-        if (6 === mb_strlen($color)) {
-            $hex = [$color[0].$color[1], $color[2].$color[3], $color[4].$color[5]];
-        } elseif (3 === mb_strlen($color)) {
->>>>>>> 89d0c8f4 (.)
             $hex = [$color[0].$color[0], $color[1].$color[1], $color[2].$color[2]];
         } else {
             return $default;
@@ -178,15 +143,7 @@ if (! function_exists('hex2rgba')) {
         $rgb = array_map('hexdec', $hex);
 
         // Check if opacity is set(rgba or rgb)
-<<<<<<< HEAD
-<<<<<<< HEAD
-        if ($opacity !== -1.0) {
-=======
         if (-1.0 !== $opacity) {
->>>>>>> e697a77b (.)
-=======
-        if (-1.0 !== $opacity) {
->>>>>>> 89d0c8f4 (.)
             if ($opacity < 0 || $opacity > 1) {
                 $opacity = 1.0;
             }
@@ -323,29 +280,13 @@ if (! function_exists('inAdmin')) {
             return config()->get('in_admin');
         }
         */
-<<<<<<< HEAD
-<<<<<<< HEAD
-        if (Request::segment(2) === 'admin') {
-=======
         if ('admin' === Request::segment(2)) {
->>>>>>> e697a77b (.)
-=======
-        if ('admin' === Request::segment(2)) {
->>>>>>> 89d0c8f4 (.)
             return true;
         }
 
         $segments = Request::segments();
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-        return (is_countable($segments) ? count($segments) : 0) > 0 && $segments[0] === 'livewire' && session('in_admin') === true;
-=======
         return (is_countable($segments) ? count($segments) : 0) > 0 && 'livewire' === $segments[0] && true === session('in_admin');
->>>>>>> e697a77b (.)
-=======
-        return (is_countable($segments) ? count($segments) : 0) > 0 && 'livewire' === $segments[0] && true === session('in_admin');
->>>>>>> 89d0c8f4 (.)
     }
 }
 
@@ -444,15 +385,7 @@ if (! function_exists('params2ContainerItem')) {
      */
     function params2ContainerItem(?array $params = null): array
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
-        if ($params === null) {
-=======
         if (null === $params) {
->>>>>>> e697a77b (.)
-=======
-        if (null === $params) {
->>>>>>> 89d0c8f4 (.)
             // Call to static method current() on an unknown class Route.
             // $params = optional(\Route::current())->parameters();
             // Cannot call method parameters() on mixed.
@@ -470,15 +403,7 @@ if (! function_exists('params2ContainerItem')) {
             $pattern = '/(container|item)(\d+)/';
             preg_match($pattern, $k, $matches);
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-            if (! empty($matches) && isset($matches[1]) && isset($matches[2]) && is_string($matches[1]) && is_string($matches[2])) {
-=======
             if (!empty($matches) && isset($matches[1]) && isset($matches[2]) && is_string($matches[1]) && is_string($matches[2])) {
->>>>>>> e697a77b (.)
-=======
-            if (!empty($matches) && isset($matches[1]) && isset($matches[2]) && is_string($matches[1]) && is_string($matches[2])) {
->>>>>>> 89d0c8f4 (.)
                 $sk = $matches[1];
                 $sv = $matches[2];
                 // @phpstan-ignore offsetAccess.nonOffsetAccessible
@@ -490,33 +415,14 @@ if (! function_exists('params2ContainerItem')) {
     }
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-if (! function_exists('getModelFields')) {
-    function getModelFields(Model $model): array
-    {
-=======
 
 if (! function_exists('getModelFields')) {
     function getModelFields(Model $model): array {
->>>>>>> e697a77b (.)
-=======
-
-if (! function_exists('getModelFields')) {
-    function getModelFields(Model $model): array {
->>>>>>> 89d0c8f4 (.)
         return $model->getConnection()->getSchemaBuilder()->getColumnListing($model->getTable());
     }
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> e697a77b (.)
-=======
-
->>>>>>> 89d0c8f4 (.)
 if (! function_exists('getModelByName')) {
     function getModelByName(string $name): Model
     {
@@ -547,15 +453,7 @@ if (! function_exists('getModelByName')) {
             }
         );
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-        if ($path === null) {
-=======
         if (null === $path) {
->>>>>>> e697a77b (.)
-=======
-        if (null === $path) {
->>>>>>> 89d0c8f4 (.)
             throw new Exception('['.$name.'] not in morph_map ['.__LINE__.']['.__FILE__.']');
         }
         Assert::string($path);
@@ -657,22 +555,9 @@ if (! function_exists('getAllModulesModels')) {
     /**
      * Get all models from all enabled modules.
      *
-<<<<<<< HEAD
-<<<<<<< HEAD
-     *
-     * @return array<string, string>
-     *
-     * @throws ReflectionException
-=======
      * @throws ReflectionException
      *
      * @return array<string, string>
->>>>>>> e697a77b (.)
-=======
-     * @throws ReflectionException
-     *
-     * @return array<string, string>
->>>>>>> 89d0c8f4 (.)
      */
     function getAllModulesModels(): array
     {
@@ -777,15 +662,7 @@ if (! function_exists('dottedToBrackets')) {
     function dottedToBrackets(string $str, string $quotation_marks = ''): string
     {
         return collect(explode('.', $str))->map(
-<<<<<<< HEAD
-<<<<<<< HEAD
-            static fn (string $v, $k): string => $k === 0 ? $v : '['.$v.']'
-=======
             static fn (string $v, $k): string => 0 === $k ? $v : '['.$v.']'
->>>>>>> e697a77b (.)
-=======
-            static fn (string $v, $k): string => 0 === $k ? $v : '['.$v.']'
->>>>>>> 89d0c8f4 (.)
         )->implode('');
     }
 }
@@ -822,15 +699,7 @@ if (! function_exists('getRelationships')) {
         foreach ($methods as $method) {
             $reflection = new ReflectionMethod($model, $method);
             $args = $reflection->getParameters();
-<<<<<<< HEAD
-<<<<<<< HEAD
-            if ($args !== []) {
-=======
             if ([] !== $args) {
->>>>>>> e697a77b (.)
-=======
-            if ([] !== $args) {
->>>>>>> 89d0c8f4 (.)
                 continue;
             }
 
@@ -1253,27 +1122,11 @@ if (! function_exists('authId')) {
         try {
             $filamentAuth = Filament::auth();
             $id = null;
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-            if ($filamentAuth && method_exists($filamentAuth, 'id')) {
-                $id = $filamentAuth->id();
-            }
-
-=======
             
             if ($filamentAuth && method_exists($filamentAuth, 'id')) {
                 $id = $filamentAuth->id();
             }
             
->>>>>>> e697a77b (.)
-=======
-            
-            if ($filamentAuth && method_exists($filamentAuth, 'id')) {
-                $id = $filamentAuth->id();
-            }
-            
->>>>>>> 89d0c8f4 (.)
             if ($id === null && auth()->check()) {
                 $id = auth()->id();
             }
@@ -1288,30 +1141,6 @@ if (! function_exists('authId')) {
  * Esegue un controllo sicuro su un oggetto e chiama un metodo se l'oggetto esiste
  *
  * @template T
-<<<<<<< HEAD
-<<<<<<< HEAD
- *
- * @param  T|null  $object  L'oggetto da controllare
- * @param  string  $method  Il nome del metodo da chiamare
- * @param  mixed  ...$args  Gli argomenti da passare al metodo
-=======
- * @param T|null $object L'oggetto da controllare
- * @param string $method Il nome del metodo da chiamare
- * @param mixed ...$args Gli argomenti da passare al metodo
->>>>>>> 89d0c8f4 (.)
- * @return mixed|null
- */
-function safe_object_call($object, string $method, ...$args) {
-    if (!is_object($object)) {
-        return null;
-    }
-    
-    if (!method_exists($object, $method)) {
-        return null;
-    }
-<<<<<<< HEAD
-
-=======
  * @param T|null $object L'oggetto da controllare
  * @param string $method Il nome del metodo da chiamare
  * @param mixed ...$args Gli argomenti da passare al metodo
@@ -1326,9 +1155,5 @@ function safe_object_call($object, string $method, ...$args) {
         return null;
     }
     
->>>>>>> e697a77b (.)
-=======
-    
->>>>>>> 89d0c8f4 (.)
     return $object->$method(...$args);
 }

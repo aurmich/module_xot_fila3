@@ -25,18 +25,8 @@ class MorphToOneAction
     /**
      * Execute the action to create a MorphToOne relationship.
      *
-<<<<<<< HEAD
-<<<<<<< HEAD
-     * @param  Model  $model  The parent model
-     * @param  RelationDTO  $relationDTO  Data transfer object containing relationship information
-=======
      * @param Model       $model       The parent model
      * @param RelationDTO $relationDTO Data transfer object containing relationship information
->>>>>>> e697a77b (.)
-=======
-     * @param Model       $model       The parent model
-     * @param RelationDTO $relationDTO Data transfer object containing relationship information
->>>>>>> 89d0c8f4 (.)
      *
      * @throws \InvalidArgumentException When relation type is invalid
      */
@@ -56,17 +46,8 @@ class MorphToOneAction
     /**
      * Prepare the data array for creation.
      *
-<<<<<<< HEAD
-<<<<<<< HEAD
-     * @param  array<string, mixed>  $data  The input data array
-=======
      * @param array<string, mixed> $data The input data array
      *
->>>>>>> e697a77b (.)
-=======
-     * @param array<string, mixed> $data The input data array
-     *
->>>>>>> 89d0c8f4 (.)
      * @return array<string, mixed> The prepared data array
      */
     private function prepareData(array $data): array
@@ -77,14 +58,6 @@ class MorphToOneAction
         }
 
         // Return the prepared data
-<<<<<<< HEAD
-<<<<<<< HEAD
-        return array_filter($data, static fn ($value) => $value !== null);
-=======
         return array_filter($data, static fn ($value) => null !== $value);
->>>>>>> e697a77b (.)
-=======
-        return array_filter($data, static fn ($value) => null !== $value);
->>>>>>> 89d0c8f4 (.)
     }
 }

@@ -1,55 +1,5 @@
 <?php
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-return [
-    'actions' => [
-        'authenticate' => [
-            'label' => 'authenticate',
-        ],
-        'login' => [
-            'label' => 'login',
-        ],
-        'request' => [
-            'label' => 'request',
-        ],
-        'test' => [
-            'label' => 'test',
-        ],
-    ],
-    'fields' => [
-        'email' => [
-            'label' => 'email',
-            'description' => 'email',
-            'helper_text' => '',
-            'placeholder' => 'email',
-        ],
-        'password' => [
-            'label' => 'password',
-            'description' => 'password',
-            'helper_text' => '',
-            'placeholder' => 'password',
-        ],
-        'remember' => [
-            'label' => 'remember',
-            'description' => 'remember',
-            'helper_text' => '',
-            'placeholder' => 'remember',
-        ],
-        'cap' => [
-            'description' => 'cap',
-            'helper_text' => 'cap',
-            'placeholder' => 'cap',
-            'label' => 'cap',
-        ],
-        'city' => [
-            'description' => 'city',
-        ],
-    ],
-];
-=======
-=======
->>>>>>> 89d0c8f4 (.)
 return array (
   'actions' => 
   array (
@@ -106,7 +56,3 @@ return array (
     ),
   ),
 );
-<<<<<<< HEAD
->>>>>>> e697a77b (.)
-=======
->>>>>>> 89d0c8f4 (.)

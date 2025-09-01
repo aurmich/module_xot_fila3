@@ -8,19 +8,6 @@ namespace Modules\Xot\Models;
  * Modules\Xot\Models\Feed.
  *
  * @method static \Modules\Xot\Database\Factories\FeedFactory factory($count = null, $state = [])
-<<<<<<< HEAD
-<<<<<<< HEAD
- * @method static \Illuminate\Database\Eloquent\Builder|Feed newModelQuery()
- * @method static \Illuminate\Database\Eloquent\Builder|Feed newQuery()
- * @method static \Illuminate\Database\Eloquent\Builder|Feed query()
- * @method static \Illuminate\Database\Eloquent\Builder|Feed newModelQuery()
- * @method static \Illuminate\Database\Eloquent\Builder|Feed newQuery()
- * @method static \Illuminate\Database\Eloquent\Builder|Feed query()
- *
- * @property \Modules\Xot\Contracts\ProfileContract|null $creator
- * @property \Modules\Xot\Contracts\ProfileContract|null $updater
- *
-=======
  * @method static \Illuminate\Database\Eloquent\Builder|Feed  newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|Feed  newQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|Feed  query()
@@ -29,17 +16,6 @@ namespace Modules\Xot\Models;
  * @method static \Illuminate\Database\Eloquent\Builder|Feed  query()
  * @property \Modules\Xot\Contracts\ProfileContract|null $creator
  * @property \Modules\Xot\Contracts\ProfileContract|null $updater
->>>>>>> e697a77b (.)
-=======
- * @method static \Illuminate\Database\Eloquent\Builder|Feed  newModelQuery()
- * @method static \Illuminate\Database\Eloquent\Builder|Feed  newQuery()
- * @method static \Illuminate\Database\Eloquent\Builder|Feed  query()
- * @method static \Illuminate\Database\Eloquent\Builder|Feed  newModelQuery()
- * @method static \Illuminate\Database\Eloquent\Builder|Feed  newQuery()
- * @method static \Illuminate\Database\Eloquent\Builder|Feed  query()
- * @property \Modules\Xot\Contracts\ProfileContract|null $creator
- * @property \Modules\Xot\Contracts\ProfileContract|null $updater
->>>>>>> 89d0c8f4 (.)
  * @mixin IdeHelperFeed
  * @mixin \Eloquent
  */

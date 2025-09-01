@@ -9,21 +9,8 @@ use Illuminate\Support\ServiceProvider;
 abstract class XotBaseThemeServiceProvider extends ServiceProvider
 {
     public string $name = '';
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> 89d0c8f4 (.)
     public string $nameLower = '';
     protected string $module_dir = __DIR__;
-<<<<<<< HEAD
-
-=======
-    public string $nameLower = '';
-    protected string $module_dir = __DIR__;
->>>>>>> e697a77b (.)
-=======
->>>>>>> 89d0c8f4 (.)
     protected string $module_ns = __NAMESPACE__;
 
     public function boot(): void
@@ -51,12 +38,4 @@ abstract class XotBaseThemeServiceProvider extends ServiceProvider
                 $this->module_ns
             );
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
-}
-=======
 } 
->>>>>>> e697a77b (.)
-=======
-} 
->>>>>>> 89d0c8f4 (.)

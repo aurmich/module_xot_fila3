@@ -43,15 +43,7 @@ class ArtisanService
             case 'migrate':
                 DB::purge('mysql');
                 DB::reconnect('mysql');
-<<<<<<< HEAD
-<<<<<<< HEAD
-                if ($module_name !== '') {
-=======
                 if ('' !== $module_name) {
->>>>>>> e697a77b (.)
-=======
-                if ('' !== $module_name) {
->>>>>>> 89d0c8f4 (.)
                     echo '<h3>Module '.$module_name.'</h3>';
 
                     return self::exe('module:migrate '.$module_name.' --force');
@@ -144,30 +136,14 @@ class ArtisanService
             $log = '';
         }
         $content = '';
-<<<<<<< HEAD
-<<<<<<< HEAD
-        if ($log !== '' && File::exists(storage_path('logs/'.$log))) {
-=======
         if ('' !== $log && File::exists(storage_path('logs/'.$log))) {
->>>>>>> e697a77b (.)
-=======
-        if ('' !== $log && File::exists(storage_path('logs/'.$log))) {
->>>>>>> 89d0c8f4 (.)
             $content = File::get(storage_path('logs/'.$log));
         }
 
         $pattern = '/url":"([^"]*)"/';
         preg_match_all($pattern, $content, $matches);
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-        // $urls = is_array($matches[1]) ? array_unique($matches[1]) : [];
-=======
         //$urls = is_array($matches[1]) ? array_unique($matches[1]) : [];
->>>>>>> e697a77b (.)
-=======
-        //$urls = is_array($matches[1]) ? array_unique($matches[1]) : [];
->>>>>>> 89d0c8f4 (.)
         $urls = array_unique($matches[1]);
         $view_params = [
             'view' => $view,
@@ -222,15 +198,7 @@ class ArtisanService
         $files = File::files(storage_path('logs'));
 
         foreach ($files as $file) {
-<<<<<<< HEAD
-<<<<<<< HEAD
-            if ($file->getExtension() === 'log' && $file->getRealPath() !== false) {
-=======
             if ('log' === $file->getExtension() && false !== $file->getRealPath()) {
->>>>>>> e697a77b (.)
-=======
-            if ('log' === $file->getExtension() && false !== $file->getRealPath()) {
->>>>>>> 89d0c8f4 (.)
                 // Parameter #1 $paths of static method Illuminate\Filesystem\Filesystem::delete() expects array|string, Symfony\Component\Finder\SplFileInfo given.
                 echo '<br/>'.$file->getRealPath();
 
@@ -246,15 +214,7 @@ class ArtisanService
         $files = File::files(storage_path('framework/sessions'));
 
         foreach ($files as $file) {
-<<<<<<< HEAD
-<<<<<<< HEAD
-            if ($file->getExtension() === '' && $file->getRealPath() !== false) {
-=======
             if ('' === $file->getExtension() && false !== $file->getRealPath()) {
->>>>>>> e697a77b (.)
-=======
-            if ('' === $file->getExtension() && false !== $file->getRealPath()) {
->>>>>>> 89d0c8f4 (.)
                 // echo '<br/>'.$file->getRealPath();
 
                 File::delete($file->getRealPath());
@@ -270,15 +230,7 @@ class ArtisanService
     {
         $files = File::files(storage_path('debugbar'));
         foreach ($files as $file) {
-<<<<<<< HEAD
-<<<<<<< HEAD
-            if ($file->getExtension() === 'json' && $file->getRealPath() !== false) {
-=======
             if ('json' === $file->getExtension() && false !== $file->getRealPath()) {
->>>>>>> e697a77b (.)
-=======
-            if ('json' === $file->getExtension() && false !== $file->getRealPath()) {
->>>>>>> 89d0c8f4 (.)
                 // echo '<br/>'.$file->getRealPath();
 
                 File::delete($file->getRealPath());
@@ -291,15 +243,7 @@ class ArtisanService
     }
 
     /**
-<<<<<<< HEAD
-<<<<<<< HEAD
-     * @param  array<string, mixed>  $arguments
-=======
      * @param array<string, mixed> $arguments
->>>>>>> e697a77b (.)
-=======
-     * @param array<string, mixed> $arguments
->>>>>>> 89d0c8f4 (.)
      */
     public static function exe(string $command, array $arguments = []): string
     {

@@ -47,18 +47,6 @@ class ThemeService
      */
     public static function getThemePath(): string
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
-        return resource_path('themes/'.self::$currentTheme);
-    }
-}
-=======
         return resource_path('themes/' . self::$currentTheme);
     }
 } 
->>>>>>> e697a77b (.)
-=======
-        return resource_path('themes/' . self::$currentTheme);
-    }
-} 
->>>>>>> 89d0c8f4 (.)

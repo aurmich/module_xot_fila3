@@ -8,27 +8,6 @@ declare(strict_types=1);
 
 namespace Modules\Xot\Datas;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-use Illuminate\Database\Eloquent\Model;
-use Illuminate\Support\Facades\Storage;
-=======
->>>>>>> 89d0c8f4 (.)
-use Illuminate\Support\Str;
-use Spatie\LaravelData\Data;
-use Spipu\Html2Pdf\Html2Pdf;
-use Webmozart\Assert\Assert;
-use Spatie\LaravelPdf\Enums\Unit;
-use Spatie\LaravelPdf\Facades\Pdf;
-use Spatie\LaravelPdf\Enums\Format;
-use Modules\Xot\Enums\PdfEngineEnum;
-use Illuminate\Database\Eloquent\Model;
-use Illuminate\Support\Facades\Storage;
-use Spatie\LaravelPdf\Enums\Orientation;
-use Symfony\Component\HttpFoundation\BinaryFileResponse;
-<<<<<<< HEAD
-use Webmozart\Assert\Assert;
-=======
 use Illuminate\Support\Str;
 use Spatie\LaravelData\Data;
 use Spipu\Html2Pdf\Html2Pdf;
@@ -42,10 +21,6 @@ use Illuminate\Support\Facades\Storage;
 use Spatie\LaravelPdf\Enums\Orientation;
 use Symfony\Component\HttpFoundation\BinaryFileResponse;
 
->>>>>>> e697a77b (.)
-=======
-
->>>>>>> 89d0c8f4 (.)
 
 /**
  * Undocumented class.
@@ -90,14 +65,7 @@ class PdfData extends Data
 
     // public static function make(Model $model = null, string $html = null): self
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> e697a77b (.)
-=======
-
->>>>>>> 89d0c8f4 (.)
     public PdfEngineEnum $engine = PdfEngineEnum::SPIPU;
 
     public string $html = '';
@@ -138,27 +106,12 @@ class PdfData extends Data
                 // ->name(str_slug($project->nome).'-REPORT.pdf')
                 ->save($this->getPath());
                 ;
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
                 
->>>>>>> e697a77b (.)
-=======
-                
->>>>>>> 89d0c8f4 (.)
                 break;
                 */
         }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> e697a77b (.)
-=======
-
->>>>>>> 89d0c8f4 (.)
         $this->html = $html;
         // $this->engine->build($this);
 
@@ -191,45 +144,19 @@ class PdfData extends Data
         return $res;
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-    public function view(string $view, array $params = []): self
-    {
-        if (! view()->exists($view)) {
-=======
     public function view(string $view, array $params=[]): self
     {
         if(!view()->exists($view)){
->>>>>>> e697a77b (.)
-=======
-    public function view(string $view, array $params=[]): self
-    {
-        if(!view()->exists($view)){
->>>>>>> 89d0c8f4 (.)
             throw new \Exception('View '.$view.' not found');
         }
         $out = view($view, $params);
         $this->html = $out->render();
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> e697a77b (.)
-=======
->>>>>>> 89d0c8f4 (.)
         return $this->fromHtml($this->html);
     }
 
     public function setEngine(PdfEngineEnum $engine): self
     {
         $this->engine = $engine;
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> e697a77b (.)
-=======
->>>>>>> 89d0c8f4 (.)
         return $this;
     }
 }

@@ -23,18 +23,8 @@ class FakeSeederAction
     /**
      * Execute the fake data seeding process.
      *
-<<<<<<< HEAD
-<<<<<<< HEAD
-     * @param  class-string<Model>  $modelClass  The fully qualified model class name
-     * @param  int<1, max>  $qty  Number of records to generate
-=======
      * @param class-string<Model> $modelClass The fully qualified model class name
      * @param int<1, max>         $qty        Number of records to generate
->>>>>>> e697a77b (.)
-=======
-     * @param class-string<Model> $modelClass The fully qualified model class name
-     * @param int<1, max>         $qty        Number of records to generate
->>>>>>> 89d0c8f4 (.)
      *
      * @throws \InvalidArgumentException When model class is invalid
      */
@@ -73,15 +63,7 @@ class FakeSeederAction
     /**
      * Get the model factory.
      *
-<<<<<<< HEAD
-<<<<<<< HEAD
-     * @param  class-string<Model>  $modelClass
-=======
      * @param class-string<Model> $modelClass
->>>>>>> e697a77b (.)
-=======
-     * @param class-string<Model> $modelClass
->>>>>>> 89d0c8f4 (.)
      *
      * @throws \RuntimeException
      */
@@ -97,18 +79,8 @@ class FakeSeederAction
     /**
      * Send a notification about the seeding completion.
      *
-<<<<<<< HEAD
-<<<<<<< HEAD
-     * @param  class-string<Model>  $modelClass
-     * @param  int<1, max>  $count
-=======
      * @param class-string<Model> $modelClass
      * @param int<1, max>         $count
->>>>>>> e697a77b (.)
-=======
-     * @param class-string<Model> $modelClass
-     * @param int<1, max>         $count
->>>>>>> 89d0c8f4 (.)
      */
     private function sendNotification(string $modelClass, int $count): void
     {
@@ -119,18 +91,8 @@ class FakeSeederAction
     /**
      * Queue remaining records for processing.
      *
-<<<<<<< HEAD
-<<<<<<< HEAD
-     * @param  class-string<Model>  $modelClass
-     * @param  int<1, max>  $qty
-=======
      * @param class-string<Model> $modelClass
      * @param int<1, max>         $qty
->>>>>>> e697a77b (.)
-=======
-     * @param class-string<Model> $modelClass
-     * @param int<1, max>         $qty
->>>>>>> 89d0c8f4 (.)
      */
     private function queueRemainingRecords(string $modelClass, int $qty): void
     {
@@ -145,24 +107,10 @@ class FakeSeederAction
     private function getTableName(string $modelClass): string
     {
         Assert::classExists($modelClass, 'La classe del modello deve esistere');
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-        /** @var \Illuminate\Database\Eloquent\Model */
-        $model = app($modelClass);
-
-=======
         
         /** @var \Illuminate\Database\Eloquent\Model */
         $model = app($modelClass);
         
->>>>>>> e697a77b (.)
-=======
-        
-        /** @var \Illuminate\Database\Eloquent\Model */
-        $model = app($modelClass);
-        
->>>>>>> 89d0c8f4 (.)
         return $model->getTable();
     }
 }

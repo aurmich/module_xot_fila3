@@ -6,19 +6,9 @@ namespace Modules\Xot\Filament\Resources;
 
 use Filament\Forms\Components\KeyValue;
 use Filament\Forms\Components\TextInput;
-<<<<<<< HEAD
-<<<<<<< HEAD
-use Modules\Xot\Models\Session;
-=======
 use Modules\Xot\Filament\Resources\SessionResource\Pages;
 use Modules\Xot\Models\Session;
 use Modules\Xot\Filament\Resources\RelationManagers\XotBaseRelationManager;
->>>>>>> e697a77b (.)
-=======
-use Modules\Xot\Filament\Resources\SessionResource\Pages;
-use Modules\Xot\Models\Session;
-use Modules\Xot\Filament\Resources\RelationManagers\XotBaseRelationManager;
->>>>>>> 89d0c8f4 (.)
 
 class SessionResource extends XotBaseResource
 {
@@ -48,14 +38,6 @@ class SessionResource extends XotBaseResource
                 ->numeric(),
         ];
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
 
->>>>>>> e697a77b (.)
-=======
-
-
->>>>>>> 89d0c8f4 (.)
 }

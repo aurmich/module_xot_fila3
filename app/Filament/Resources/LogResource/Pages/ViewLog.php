@@ -4,23 +4,10 @@ declare(strict_types=1);
 
 namespace Modules\Xot\Filament\Resources\LogResource\Pages;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-use Filament\Infolists\Components\Grid;
-use Filament\Infolists\Components\Section;
-use Filament\Infolists\Components\TextEntry;
-=======
 use Filament\Actions;
 use Filament\Infolists\Components\Section;
 use Filament\Infolists\Components\TextEntry;
 use Filament\Infolists\Components\Grid;
->>>>>>> e697a77b (.)
-=======
-use Filament\Actions;
-use Filament\Infolists\Components\Section;
-use Filament\Infolists\Components\TextEntry;
-use Filament\Infolists\Components\Grid;
->>>>>>> 89d0c8f4 (.)
 use Modules\Xot\Filament\Resources\LogResource;
 
 use function Safe\json_encode;
@@ -32,13 +19,6 @@ class ViewLog extends \Modules\Xot\Filament\Resources\Pages\XotBaseViewRecord
     protected function getInfolistSchema(): array
     {
         $log = $this->getRecord()->getModel();
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> e697a77b (.)
-=======
->>>>>>> 89d0c8f4 (.)
         return [
             'log_info' => Section::make('Informazioni Log')
                 ->schema([

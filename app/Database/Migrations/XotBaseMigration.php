@@ -29,17 +29,8 @@ abstract class XotBaseMigration extends Migration
 
     public function __construct()
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
         
         
->>>>>>> e697a77b (.)
-=======
-        
-        
->>>>>>> 89d0c8f4 (.)
         $this->model_class = $this->model_class ?? $this->getModelClass();
         Assert::isInstanceOf($model = app($this->model_class), Model::class);
         $this->model = $model;
@@ -50,15 +41,7 @@ abstract class XotBaseMigration extends Migration
      */
     public function getModelClass(): string
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
-        if ($this->model_class !== null) {
-=======
         if (null !== $this->model_class) {
->>>>>>> e697a77b (.)
-=======
-        if (null !== $this->model_class) {
->>>>>>> 89d0c8f4 (.)
             return $this->model_class;
         }
 
@@ -79,15 +62,7 @@ abstract class XotBaseMigration extends Migration
         $mod_path = Module::getPath();
 
         // Controllo che $filename sia valido prima di passarlo a Str::of()
-<<<<<<< HEAD
-<<<<<<< HEAD
-        $mod_name = $filename !== false
-=======
         $mod_name = false !== $filename
->>>>>>> e697a77b (.)
-=======
-        $mod_name = false !== $filename
->>>>>>> 89d0c8f4 (.)
             ? Str::of($filename)
                 ->after($mod_path)
                 ->explode(\DIRECTORY_SEPARATOR)[1]
@@ -102,29 +77,13 @@ abstract class XotBaseMigration extends Migration
 
     public function getTable(): string
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
        
->>>>>>> e697a77b (.)
-=======
-       
->>>>>>> 89d0c8f4 (.)
         return $this->model->getTable();
     }
 
     public function getConn(): Builder
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
         
->>>>>>> e697a77b (.)
-=======
-        
->>>>>>> 89d0c8f4 (.)
         return Schema::connection($this->model->getConnectionName());
     }
 
@@ -150,22 +109,9 @@ abstract class XotBaseMigration extends Migration
     /**
      * Get the table indexes using Doctrine's schema manager.
      *
-<<<<<<< HEAD
-<<<<<<< HEAD
-     *
-     * @return array<\Doctrine\DBAL\Schema\Index>
-     *
-     * @throws \Doctrine\DBAL\Exception
-=======
      * @throws \Doctrine\DBAL\Exception
      *
      * @return array<\Doctrine\DBAL\Schema\Index>
->>>>>>> e697a77b (.)
-=======
-     * @throws \Doctrine\DBAL\Exception
-     *
-     * @return array<\Doctrine\DBAL\Schema\Index>
->>>>>>> 89d0c8f4 (.)
      */
     // public function getTableIndexes(): array
     // {
@@ -175,15 +121,7 @@ abstract class XotBaseMigration extends Migration
     /**
      * Add common fields to the table.
      *
-<<<<<<< HEAD
-<<<<<<< HEAD
-     * @param  Blueprint  $table  The table blueprint
-=======
      * @param Blueprint $table The table blueprint
->>>>>>> e697a77b (.)
-=======
-     * @param Blueprint $table The table blueprint
->>>>>>> 89d0c8f4 (.)
      */
     public function addCommonFields(Blueprint $table): void
     {
@@ -254,34 +192,12 @@ abstract class XotBaseMigration extends Migration
 
         // Check if result is an array or object and handle accordingly
         if (is_array($result)) {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
             return isset($result['count']) && (int) $result['count'] > 0;
-=======
-            return isset($result['count']) && is_numeric($result['count']) && (int) $result['count'] > 0;
->>>>>>> e697a77b (.)
-=======
-            return isset($result['count']) && is_numeric($result['count']) && (int) $result['count'] > 0;
-=======
-            return isset($result['count']) && (int) $result['count'] > 0;
->>>>>>> b6f6b143 (.)
->>>>>>> f4296aed (.)
-=======
-            return isset($result['count']) && (int) $result['count'] > 0;
->>>>>>> e8b26086 (.)
         }
 
         // If it's an object, cast to array to avoid undefined property issues
         if (is_object($result)) {
             $resArray = (array) $result;
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> e697a77b (.)
-=======
->>>>>>> 89d0c8f4 (.)
             return isset($resArray['count']) && (int) $resArray['count'] > 0;
         }
 
@@ -322,15 +238,7 @@ abstract class XotBaseMigration extends Migration
     {
         $this->getConn()->table($this->getTable(), function (Blueprint $table) use ($from, $to) {
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-            $table->renameColumn($from, $to);
-=======
                 $table->renameColumn($from, $to);
->>>>>>> e697a77b (.)
-=======
-                $table->renameColumn($from, $to);
->>>>>>> 89d0c8f4 (.)
 
         });
     }
@@ -354,19 +262,7 @@ abstract class XotBaseMigration extends Migration
         $xot = XotData::make();
         $userClass = $xot->getUserClass();
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-        $table->timestamps();
-        $table->foreignIdFor($userClass, 'user_id')->nullable();
-        $table->foreignIdFor($userClass, 'updated_by')->nullable();
-        $table->foreignIdFor($userClass, 'created_by')->nullable();
 
-        if ($hasSoftDeletes) {
-=======
-
-=======
-
->>>>>>> 89d0c8f4 (.)
             $table->timestamps();
             $table->foreignIdFor($userClass, 'user_id')->nullable();
             $table->foreignIdFor($userClass, 'updated_by')->nullable();
@@ -374,10 +270,6 @@ abstract class XotBaseMigration extends Migration
 
 
         if ($hasSoftDeletes ) {
-<<<<<<< HEAD
->>>>>>> e697a77b (.)
-=======
->>>>>>> 89d0c8f4 (.)
             $table->softDeletes();
         }
     }
@@ -416,22 +308,6 @@ abstract class XotBaseMigration extends Migration
         $methodName = 'updateUserKey'.Str::studly($this->model->getKeyType());
         $this->{$methodName}($table);
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-        if ($this->hasColumn('model_id') && $this->getColumnType('model_id') === 'bigint') {
-=======
-        if ($this->hasColumn('model_id') && 'bigint' === $this->getColumnType('model_id')) {
->>>>>>> 89d0c8f4 (.)
-
-                $table->string('model_id', 36)->index()->change();
-
-        }
-
-        if ($this->hasColumn('team_id') && 'bigint' === $this->getColumnType('team_id')) {
-
-<<<<<<< HEAD
-            $table->uuid('team_id')->nullable()->change();
-=======
         if ($this->hasColumn('model_id') && 'bigint' === $this->getColumnType('model_id')) {
 
                 $table->string('model_id', 36)->index()->change();
@@ -441,10 +317,6 @@ abstract class XotBaseMigration extends Migration
         if ($this->hasColumn('team_id') && 'bigint' === $this->getColumnType('team_id')) {
 
                 $table->uuid('team_id')->nullable()->change();
->>>>>>> e697a77b (.)
-=======
-                $table->uuid('team_id')->nullable()->change();
->>>>>>> 89d0c8f4 (.)
 
         }
     }
@@ -455,27 +327,11 @@ abstract class XotBaseMigration extends Migration
             $table->uuid('id')->primary()->first();
         }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-        if ($this->hasColumn('id') && $this->getColumnType('id') === 'bigint') {
-            $table->uuid('id')->change();
-        }
-
-        if ($this->hasColumn('user_id') && $this->getColumnType('user_id') === 'bigint') {
-=======
         if ($this->hasColumn('id') && 'bigint' === $this->getColumnType('id')) {
             $table->uuid('id')->change();
         }
 
         if ($this->hasColumn('user_id') && 'bigint' === $this->getColumnType('user_id')) {
->>>>>>> e697a77b (.)
-=======
-        if ($this->hasColumn('id') && 'bigint' === $this->getColumnType('id')) {
-            $table->uuid('id')->change();
-        }
-
-        if ($this->hasColumn('user_id') && 'bigint' === $this->getColumnType('user_id')) {
->>>>>>> 89d0c8f4 (.)
             $table->uuid('user_id')->change();
         }
     }
@@ -529,30 +385,10 @@ abstract class XotBaseMigration extends Migration
     {
         return DB::connection($this->getConnection())->getDriverName();
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> e697a77b (.)
-=======
->>>>>>> 89d0c8f4 (.)
     /**
      * Add a foreign ID column to the table based on a related model.
      *
      * @param  \Illuminate\Database\Schema\Blueprint  $table
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-     * @param  string  $class
-     * @param  string|null  $column
->>>>>>> 89d0c8f4 (.)
-     * @return \Illuminate\Database\Schema\ColumnDefinition
-     */
-    public function foreignIdFor($table, string $class, ?string $column = null) {
-        return $table->foreignIdFor($class, $column);
-<<<<<<< HEAD
-    }
-=======
      * @param  string  $class
      * @param  string|null  $column
      * @return \Illuminate\Database\Schema\ColumnDefinition
@@ -562,10 +398,4 @@ abstract class XotBaseMigration extends Migration
     } 
     
    
->>>>>>> e697a77b (.)
-=======
-    } 
-    
-   
->>>>>>> 89d0c8f4 (.)
 }// end XotBaseMigration

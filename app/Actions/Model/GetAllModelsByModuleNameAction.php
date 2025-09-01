@@ -28,72 +28,30 @@ class GetAllModelsByModuleNameAction
             return [];
         }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-        $mod_path = $mod->getPath().'/Models';
-=======
         $mod_path = $mod->getPath() . '/Models';
->>>>>>> e697a77b (.)
-=======
-        $mod_path = $mod->getPath() . '/Models';
->>>>>>> 89d0c8f4 (.)
         $mod_path = str_replace(['\\', '/'], [\DIRECTORY_SEPARATOR, \DIRECTORY_SEPARATOR], $mod_path);
 
         $files = File::files($mod_path);
         $data = [];
-<<<<<<< HEAD
-<<<<<<< HEAD
-        $ns = 'Modules\\'.$mod->getName().'\\Models';
-=======
         $ns = 'Modules\\' . $mod->getName() . '\\Models';
->>>>>>> e697a77b (.)
-=======
-        $ns = 'Modules\\' . $mod->getName() . '\\Models';
->>>>>>> 89d0c8f4 (.)
         // con la barra davanti non va il search ?
         foreach ($files as $file) {
             $filename = $file->getRelativePathname();
             $ext = '.php';
             // dddx(['ext' => $file->getExtension(), get_class_methods($file)]);
             if (Str::endsWith($filename, $ext)) {
-<<<<<<< HEAD
-<<<<<<< HEAD
-                $tmp = new \stdClass;
-=======
                 $tmp = new \stdClass();
->>>>>>> e697a77b (.)
-=======
-                $tmp = new \stdClass();
->>>>>>> 89d0c8f4 (.)
                 $name = mb_substr($filename, 0, -mb_strlen($ext));
                 // dddx(['name' => $name, 'name1' => $file->getFilenameWithoutExtension()]);
                 /**
                  * @var class-string
                  */
-<<<<<<< HEAD
-<<<<<<< HEAD
-                $class = $ns.'\\'.$name;
-                // if ($tmp !== null) {
-                $tmp->class = $class;
-                $name = Str::snake($name);
-                $tmp->name = $name;
-                // }
-=======
                 $class = $ns . '\\' . $name;
                 //if ($tmp !== null) {
                 $tmp->class = $class;
                 $name = Str::snake($name);
                 $tmp->name = $name;
                 //}
->>>>>>> e697a77b (.)
-=======
-                $class = $ns . '\\' . $name;
-                //if ($tmp !== null) {
-                $tmp->class = $class;
-                $name = Str::snake($name);
-                $tmp->name = $name;
-                //}
->>>>>>> 89d0c8f4 (.)
                 // 434    Parameter #1 $argument of class ReflectionClass constructor expects class-string<T of object>|T of object, string given.
                 try {
                     $reflection_class = new \ReflectionClass($tmp->class);

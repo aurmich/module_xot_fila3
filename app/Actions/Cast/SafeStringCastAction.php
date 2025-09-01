@@ -6,15 +6,7 @@ namespace Modules\Xot\Actions\Cast;
 
 /**
  * Action per convertire in modo sicuro un valore mixed in string.
-<<<<<<< HEAD
-<<<<<<< HEAD
- *
-=======
  * 
->>>>>>> e697a77b (.)
-=======
- * 
->>>>>>> 89d0c8f4 (.)
  * Questa action centralizza la logica di cast sicuro per evitare duplicazioni
  * di codice (principio DRY) e garantire comportamento consistente in tutto il codebase.
  */
@@ -24,17 +16,8 @@ class SafeStringCastAction
      * Converte in modo sicuro un valore mixed in string.
      * impostare delle eccezzioni ?
      *
-<<<<<<< HEAD
-<<<<<<< HEAD
-     * @param  mixed  $value  Il valore da convertire
-=======
      * @param mixed $value Il valore da convertire
      *
->>>>>>> e697a77b (.)
-=======
-     * @param mixed $value Il valore da convertire
-     *
->>>>>>> 89d0c8f4 (.)
      * @return string Il valore convertito in string
      */
     public function execute(mixed $value): string
@@ -47,34 +30,6 @@ class SafeStringCastAction
             return $value->value;
         }
             */
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-        
->>>>>>> 89d0c8f4 (.)
-        if (is_null($value)) {
-            return '';
-        }
-        
-        if (is_bool($value)) {
-            return $value ? '1' : '0';
-        }
-        
-        if (is_scalar($value)) {
-            return (string) $value;
-        }
-        
-        // Per array, oggetti e altri tipi non scalari, restituisci stringa vuota
-        return '';
-    }
-    
-    /**
-     * Metodo statico di convenienza per chiamate dirette.
-     *
-<<<<<<< HEAD
-     * @param  mixed  $value  Il valore da convertire
-=======
         
         if (is_null($value)) {
             return '';
@@ -97,11 +52,6 @@ class SafeStringCastAction
      *
      * @param mixed $value Il valore da convertire
      *
->>>>>>> e697a77b (.)
-=======
-     * @param mixed $value Il valore da convertire
-     *
->>>>>>> 89d0c8f4 (.)
      * @return string Il valore convertito in string
      */
     public static function cast(mixed $value): string

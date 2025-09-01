@@ -23,27 +23,11 @@ final class MorphOneAction
     /**
      * Execute the morphOne relationship action.
      *
-<<<<<<< HEAD
-<<<<<<< HEAD
-     * @param  Model  $model  The model instance
-     * @param  RelationDTO  $relationDTO  The relation data transfer object
-     *
-     * @throws \InvalidArgumentException When relation is not MorphOne
-     * @throws \RuntimeException When data array is invalid
-=======
      * @param Model       $model       The model instance
      * @param RelationDTO $relationDTO The relation data transfer object
      *
      * @throws \InvalidArgumentException When relation is not MorphOne
      * @throws \RuntimeException         When data array is invalid
->>>>>>> e697a77b (.)
-=======
-     * @param Model       $model       The model instance
-     * @param RelationDTO $relationDTO The relation data transfer object
-     *
-     * @throws \InvalidArgumentException When relation is not MorphOne
-     * @throws \RuntimeException         When data array is invalid
->>>>>>> 89d0c8f4 (.)
      */
     public function execute(Model $model, RelationDTO $relationDTO): void
     {
@@ -65,17 +49,8 @@ final class MorphOneAction
     /**
      * Validate and prepare the data array.
      *
-<<<<<<< HEAD
-<<<<<<< HEAD
-     * @param  array<string, mixed>  $data  The input data array
-=======
      * @param array<string, mixed> $data The input data array
      *
->>>>>>> e697a77b (.)
-=======
-     * @param array<string, mixed> $data The input data array
-     *
->>>>>>> 89d0c8f4 (.)
      * @return array<string, mixed> The validated and prepared data
      */
     private function validateAndPrepareData(array $data): array
@@ -87,15 +62,7 @@ final class MorphOneAction
 
         // Remove null values from the data array
         return array_filter($data, static function ($value): bool {
-<<<<<<< HEAD
-<<<<<<< HEAD
-            return $value !== null;
-=======
             return null !== $value;
->>>>>>> e697a77b (.)
-=======
-            return null !== $value;
->>>>>>> 89d0c8f4 (.)
         });
     }
 }

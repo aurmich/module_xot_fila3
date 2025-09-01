@@ -27,15 +27,7 @@ class LazyCollectionExport implements FromIterator, ShouldQueue, WithHeadings, W
     public array $fields = [];
 
     /**
-<<<<<<< HEAD
-<<<<<<< HEAD
-     * @param  array<int, string>  $fields
-=======
      * @param array<int, string> $fields
->>>>>>> e697a77b (.)
-=======
-     * @param array<int, string> $fields
->>>>>>> 89d0c8f4 (.)
      */
     public function __construct(public LazyCollection $collection, ?string $transKey = null, array $fields = [])
     {
@@ -49,15 +41,7 @@ class LazyCollectionExport implements FromIterator, ShouldQueue, WithHeadings, W
     /**
      * Undocumented function.
      *
-<<<<<<< HEAD
-<<<<<<< HEAD
-     * @param  Collection  $item
-=======
      * @param Collection $item
->>>>>>> e697a77b (.)
-=======
-     * @param Collection $item
->>>>>>> 89d0c8f4 (.)
      */
     public function map($item): array
     {

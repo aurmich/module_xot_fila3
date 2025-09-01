@@ -30,34 +30,14 @@ class ExportXlsAction extends Action
                 $transKey .= '.fields';
                 $query = $livewire->getFilteredTableQuery();
                 $rows = $query->get();
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-                $resource = $livewire->getResource();
-
-=======
                 
                 $resource = $livewire->getResource();
                 
->>>>>>> e697a77b (.)
-=======
-                
-                $resource = $livewire->getResource();
-                
->>>>>>> 89d0c8f4 (.)
                 /** @var array<int, string> $fields */
                 $fields = [];
                 if (method_exists($resource, 'getXlsFields')) {
                     $rawFields = $resource::getXlsFields($livewire->tableFilters);
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
                   
->>>>>>> e697a77b (.)
-=======
-                  
->>>>>>> 89d0c8f4 (.)
                     if (is_array($rawFields)) {
                         $fields = array_map(static function ($field): string {
                             if (is_object($field) && method_exists($field, '__toString')) {
@@ -66,13 +46,6 @@ class ExportXlsAction extends Action
                             if (is_scalar($field)) {
                                 return (string) $field;
                             }
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> e697a77b (.)
-=======
->>>>>>> 89d0c8f4 (.)
                             return '';
                         }, $rawFields);
                     }
@@ -80,21 +53,9 @@ class ExportXlsAction extends Action
                 }
 
                 return app(ExportXlsByCollection::class)->execute(
-<<<<<<< HEAD
-<<<<<<< HEAD
-                    $rows,
-                    $filename,
-                    $transKey,
-=======
                     $rows, 
                     $filename, 
                     $transKey, 
->>>>>>> e697a77b (.)
-=======
-                    $rows, 
-                    $filename, 
-                    $transKey, 
->>>>>>> 89d0c8f4 (.)
                     array_values($fields)
                 );
             });

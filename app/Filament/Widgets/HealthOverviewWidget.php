@@ -26,15 +26,7 @@ class HealthOverviewWidget extends BaseWidget
         $stats = [];
 
         $checkResults = app(ResultStore::class)->latestResults();
-<<<<<<< HEAD
-<<<<<<< HEAD
-        if ($checkResults === null) {
-=======
         if (null === $checkResults) {
->>>>>>> e697a77b (.)
-=======
-        if (null === $checkResults) {
->>>>>>> 89d0c8f4 (.)
             return $stats;
         }
         foreach ($checkResults->storedCheckResults as $result) {

@@ -13,53 +13,6 @@ use Spatie\ModelStatus\Status;
 /**
  * Modules\Xot\Contracts\ModelWithPosContract.
  *
-<<<<<<< HEAD
-<<<<<<< HEAD
- * @property int $id
- * @property int|null $user_id
- * @property string|null $post_type
- * @property Carbon|null $created_at
- * @property Carbon|null $updated_at
- * @property string|null $created_by
- * @property string|null $updated_by
- * @property string|null $title
- * @property PivotContract|null $pivot
-=======
- * @property int                      $id
- * @property int|null                 $user_id
- * @property string|null              $post_type
- * @property Carbon|null              $created_at
- * @property Carbon|null              $updated_at
- * @property string|null              $created_by
- * @property string|null              $updated_by
- * @property string|null              $title
- * @property PivotContract|null       $pivot
->>>>>>> 89d0c8f4 (.)
- * @property string $tennant_name
- * @property UserContract|null        $user
- * @property string $status
- * @property Collection|array<Status> $statuses
- * @property int|null                 $statuses_count
- * @property int|null                 $pos
- *
-<<<<<<< HEAD
- * @method mixed getKey()
- * @method string getRouteKey()
- * @method string getRouteKeyName()
- * @method string getTable()
- * @method mixed with($array)
- * @method array getFillable()
- * @method mixed fill($array)
- * @method mixed getConnection()
- * @method mixed update($params)
- * @method mixed delete()
- * @method mixed detach($params)
- * @method mixed attach($params)
- * @method mixed save($params)
- * @method array treeLabel()
- * @method array treeSons()
- * @method array toArray()
-=======
  * @property int                      $id
  * @property int|null                 $user_id
  * @property string|null              $post_type
@@ -76,8 +29,6 @@ use Spatie\ModelStatus\Status;
  * @property int|null                 $statuses_count
  * @property int|null                 $pos
  *
-=======
->>>>>>> 89d0c8f4 (.)
  * @method mixed     getKey()
  * @method string    getRouteKey()
  * @method string    getRouteKeyName()
@@ -94,10 +45,6 @@ use Spatie\ModelStatus\Status;
  * @method array     treeLabel()
  * @method array     treeSons()
  * @method array     toArray()
-<<<<<<< HEAD
->>>>>>> e697a77b (.)
-=======
->>>>>>> 89d0c8f4 (.)
  * @method BelongsTo user()
  *
  * @phpstan-require-extends Model

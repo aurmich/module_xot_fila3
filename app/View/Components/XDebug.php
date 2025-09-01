@@ -7,14 +7,7 @@ namespace Modules\Xot\View\Components;
 use Illuminate\Contracts\Support\Renderable;
 use Illuminate\View\Component;
 use Modules\Xot\Actions\GetViewAction;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 use Safe\filter;
->>>>>>> e697a77b (.)
-=======
-use Safe\filter;
->>>>>>> 89d0c8f4 (.)
 
 use function Safe\ob_end_clean;
 use function Safe\ob_start;
@@ -30,17 +23,8 @@ class XDebug extends Component
         // public Post $article,
         // public bool $showAuthor = false,
         public string $tpl = 'v1',
-<<<<<<< HEAD
-<<<<<<< HEAD
-    ) {}
-=======
     ) {
     }
->>>>>>> e697a77b (.)
-=======
-    ) {
-    }
->>>>>>> 89d0c8f4 (.)
 
     public function render(): Renderable
     {

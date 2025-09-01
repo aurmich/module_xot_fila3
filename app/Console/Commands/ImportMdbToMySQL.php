@@ -6,13 +6,6 @@ namespace Modules\Xot\Console\Commands;
 
 use Illuminate\Console\Command;
 use RuntimeException;
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> e697a77b (.)
-=======
->>>>>>> 89d0c8f4 (.)
 use function Safe\shell_exec;
 
 class ImportMdbToMySQL extends Command
@@ -37,28 +30,12 @@ class ImportMdbToMySQL extends Command
     public function handle(): int
     {
         $mdbFile = $this->ask('Inserisci il percorso del file .mdb');
-<<<<<<< HEAD
-<<<<<<< HEAD
-        if (! is_string($mdbFile)) {
-=======
         if (!is_string($mdbFile)) {
->>>>>>> e697a77b (.)
-=======
-        if (!is_string($mdbFile)) {
->>>>>>> 89d0c8f4 (.)
             throw new RuntimeException('Il percorso del file deve essere una stringa');
         }
 
         $mysqlDb = $this->ask('Inserisci il nome del database MySQL');
-<<<<<<< HEAD
-<<<<<<< HEAD
-        if (! is_string($mysqlDb)) {
-=======
         if (!is_string($mysqlDb)) {
->>>>>>> e697a77b (.)
-=======
-        if (!is_string($mysqlDb)) {
->>>>>>> 89d0c8f4 (.)
             throw new RuntimeException('Il nome del database deve essere una stringa');
         }
 
@@ -69,13 +46,6 @@ class ImportMdbToMySQL extends Command
         $tables = $this->exportTablesToSQL($mdbFile);
         if (empty($tables)) {
             $this->error('Nessuna tabella trovata nel file .mdb');
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> e697a77b (.)
-=======
->>>>>>> 89d0c8f4 (.)
             return Command::FAILURE;
         }
 
@@ -83,13 +53,6 @@ class ImportMdbToMySQL extends Command
         $this->importTablesIntoMySQL($tables, $mysqlDb);
 
         $this->info('Importazione completata con successo!');
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> e697a77b (.)
-=======
->>>>>>> 89d0c8f4 (.)
         return Command::SUCCESS;
     }
 
@@ -102,15 +65,7 @@ class ImportMdbToMySQL extends Command
     {
         $tables = [];
         $tableList = shell_exec("mdb-tables $mdbFile");
-<<<<<<< HEAD
-<<<<<<< HEAD
-        if (! $tableList) {
-=======
         if (!$tableList) {
->>>>>>> e697a77b (.)
-=======
-        if (!$tableList) {
->>>>>>> 89d0c8f4 (.)
             return [];
         }
 
@@ -132,15 +87,7 @@ class ImportMdbToMySQL extends Command
     /**
      * Importa le tabelle in MySQL.
      *
-<<<<<<< HEAD
-<<<<<<< HEAD
-     * @param  array<int, string>  $tables
-=======
      * @param array<int, string> $tables
->>>>>>> e697a77b (.)
-=======
-     * @param array<int, string> $tables
->>>>>>> 89d0c8f4 (.)
      */
     private function importTablesIntoMySQL(array $tables, string $mysqlDb): void
     {

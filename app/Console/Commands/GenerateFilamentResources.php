@@ -18,20 +18,6 @@ class GenerateFilamentResources extends Command
     public function handle(): int
     {
         $moduleName = $this->argument('module');
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-        
->>>>>>> 89d0c8f4 (.)
-        // Assicuriamoci che $moduleName sia una stringa
-        if (!is_string($moduleName)) {
-            $this->error("Il nome del modulo deve essere una stringa.");
-            return Command::FAILURE;
-        }
-<<<<<<< HEAD
-
-=======
         
         // Assicuriamoci che $moduleName sia una stringa
         if (!is_string($moduleName)) {
@@ -39,10 +25,6 @@ class GenerateFilamentResources extends Command
             return Command::FAILURE;
         }
         
->>>>>>> e697a77b (.)
-=======
-        
->>>>>>> 89d0c8f4 (.)
         $module = Module::find($moduleName);
 
         if (! $module) {

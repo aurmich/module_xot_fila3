@@ -4,20 +4,6 @@ declare(strict_types=1);
 
 namespace Modules\Xot\Tests\Feature;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-use Illuminate\Foundation\Testing\DatabaseTransactions;
-=======
->>>>>>> 89d0c8f4 (.)
-use Modules\Xot\Models\Module;
-use Tests\TestCase;
-use Illuminate\Foundation\Testing\RefreshDatabase;
-
-class ModuleBusinessLogicTest extends TestCase
-{
-<<<<<<< HEAD
-
-=======
 use Modules\Xot\Models\Module;
 use Tests\TestCase;
 use Illuminate\Foundation\Testing\RefreshDatabase;
@@ -25,10 +11,6 @@ use Illuminate\Foundation\Testing\RefreshDatabase;
 class ModuleBusinessLogicTest extends TestCase
 {
     use RefreshDatabase;
->>>>>>> e697a77b (.)
-=======
-    use RefreshDatabase;
->>>>>>> 89d0c8f4 (.)
 
     /** @test */
     public function it_can_create_module(): void
@@ -54,23 +36,10 @@ class ModuleBusinessLogicTest extends TestCase
             'enabled' => true,
         ]);
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-        expect('TestModule', $module->name);
-        expect('test-module', $module->slug);
-        expect('1.0.0', $module->version);
-        expect($module->enabled);
-=======
-=======
->>>>>>> 89d0c8f4 (.)
         $this->assertEquals('TestModule', $module->name);
         $this->assertEquals('test-module', $module->slug);
         $this->assertEquals('1.0.0', $module->version);
         $this->assertTrue($module->enabled);
-<<<<<<< HEAD
->>>>>>> e697a77b (.)
-=======
->>>>>>> 89d0c8f4 (.)
     }
 
     /** @test */
@@ -83,29 +52,13 @@ class ModuleBusinessLogicTest extends TestCase
         $module->update(['enabled' => true]);
 
         // Assert
-<<<<<<< HEAD
-<<<<<<< HEAD
-        expect($module->fresh()->enabled);
-=======
         $this->assertTrue($module->fresh()->enabled);
->>>>>>> e697a77b (.)
-=======
-        $this->assertTrue($module->fresh()->enabled);
->>>>>>> 89d0c8f4 (.)
 
         // Act - Disable module
         $module->update(['enabled' => false]);
 
         // Assert
-<<<<<<< HEAD
-<<<<<<< HEAD
-        expect($module->fresh()->enabled);
-=======
         $this->assertFalse($module->fresh()->enabled);
->>>>>>> e697a77b (.)
-=======
-        $this->assertFalse($module->fresh()->enabled);
->>>>>>> 89d0c8f4 (.)
     }
 
     /** @test */
@@ -118,15 +71,7 @@ class ModuleBusinessLogicTest extends TestCase
         $module->update(['version' => '2.0.0']);
 
         // Assert
-<<<<<<< HEAD
-<<<<<<< HEAD
-        expect('2.0.0', $module->fresh()->version);
-=======
         $this->assertEquals('2.0.0', $module->fresh()->version);
->>>>>>> e697a77b (.)
-=======
-        $this->assertEquals('2.0.0', $module->fresh()->version);
->>>>>>> 89d0c8f4 (.)
         $this->assertDatabaseHas('modules', [
             'id' => $module->id,
             'version' => '2.0.0',
@@ -148,15 +93,7 @@ class ModuleBusinessLogicTest extends TestCase
         $this->assertIsArray($dependencies);
         $this->assertContains('user', $dependencies);
         $this->assertContains('auth', $dependencies);
-<<<<<<< HEAD
-<<<<<<< HEAD
-        expect(2, $dependencies);
-=======
         $this->assertCount(2, $dependencies);
->>>>>>> e697a77b (.)
-=======
-        $this->assertCount(2, $dependencies);
->>>>>>> 89d0c8f4 (.)
     }
 
     /** @test */
@@ -195,21 +132,9 @@ class ModuleBusinessLogicTest extends TestCase
 
         // Assert
         $this->assertIsArray($moduleConfig);
-<<<<<<< HEAD
-<<<<<<< HEAD
-        expect('value1', $moduleConfig['setting1']);
-        expect('value2', $moduleConfig['setting2']);
-        expect('value', $moduleConfig['nested']['key']);
-=======
         $this->assertEquals('value1', $moduleConfig['setting1']);
         $this->assertEquals('value2', $moduleConfig['setting2']);
         $this->assertEquals('value', $moduleConfig['nested']['key']);
->>>>>>> e697a77b (.)
-=======
-        $this->assertEquals('value1', $moduleConfig['setting1']);
-        $this->assertEquals('value2', $moduleConfig['setting2']);
-        $this->assertEquals('value', $moduleConfig['nested']['key']);
->>>>>>> 89d0c8f4 (.)
     }
 
     /** @test */
@@ -220,23 +145,10 @@ class ModuleBusinessLogicTest extends TestCase
         $disabledModule = Module::factory()->create(['enabled' => false]);
 
         // Act & Assert
-<<<<<<< HEAD
-<<<<<<< HEAD
-        expect($enabledModule->isEnabled());
-        expect($disabledModule->isEnabled());
-        expect($enabledModule->isDisabled());
-        expect($disabledModule->isDisabled());
-=======
-=======
->>>>>>> 89d0c8f4 (.)
         $this->assertTrue($enabledModule->isEnabled());
         $this->assertFalse($disabledModule->isEnabled());
         $this->assertFalse($enabledModule->isDisabled());
         $this->assertTrue($disabledModule->isDisabled());
-<<<<<<< HEAD
->>>>>>> e697a77b (.)
-=======
->>>>>>> 89d0c8f4 (.)
     }
 
     /** @test */
@@ -257,21 +169,9 @@ class ModuleBusinessLogicTest extends TestCase
 
         // Assert
         $this->assertIsArray($moduleMetadata);
-<<<<<<< HEAD
-<<<<<<< HEAD
-        expect('Test Author', $moduleMetadata['author']);
-        expect('https://example.com', $moduleMetadata['website']);
-        expect('MIT', $moduleMetadata['license']);
-=======
         $this->assertEquals('Test Author', $moduleMetadata['author']);
         $this->assertEquals('https://example.com', $moduleMetadata['website']);
         $this->assertEquals('MIT', $moduleMetadata['license']);
->>>>>>> e697a77b (.)
-=======
-        $this->assertEquals('Test Author', $moduleMetadata['author']);
-        $this->assertEquals('https://example.com', $moduleMetadata['website']);
-        $this->assertEquals('MIT', $moduleMetadata['license']);
->>>>>>> 89d0c8f4 (.)
         $this->assertContains('test', $moduleMetadata['tags']);
         $this->assertContains('example', $moduleMetadata['tags']);
     }
@@ -287,15 +187,7 @@ class ModuleBusinessLogicTest extends TestCase
             $module = Module::factory()->create(['version' => $version]);
 
             // Assert
-<<<<<<< HEAD
-<<<<<<< HEAD
-            expect($version, $module->version);
-=======
             $this->assertEquals($version, $module->version);
->>>>>>> e697a77b (.)
-=======
-            $this->assertEquals($version, $module->version);
->>>>>>> 89d0c8f4 (.)
             $this->assertDatabaseHas('modules', [
                 'id' => $module->id,
                 'version' => $version,
@@ -316,15 +208,7 @@ class ModuleBusinessLogicTest extends TestCase
         $moduleInstalledAt = $module->installed_at;
 
         // Assert
-<<<<<<< HEAD
-<<<<<<< HEAD
-        expect($installationDate, $moduleInstalledAt);
-=======
         $this->assertEquals($installationDate, $moduleInstalledAt);
->>>>>>> e697a77b (.)
-=======
-        $this->assertEquals($installationDate, $moduleInstalledAt);
->>>>>>> 89d0c8f4 (.)
         $this->assertDatabaseHas('modules', [
             'id' => $module->id,
             'installed_at' => $installationDate,
@@ -355,25 +239,11 @@ class ModuleBusinessLogicTest extends TestCase
 
         // Assert
         $this->assertIsArray($moduleUpdateHistory);
-<<<<<<< HEAD
-<<<<<<< HEAD
-        expect(2, $moduleUpdateHistory);
-        expect('1.0.0', $moduleUpdateHistory[0]['version']);
-        expect('Initial release', $moduleUpdateHistory[0]['changes']);
-        expect('1.1.0', $moduleUpdateHistory[1]['version']);
-        expect('Bug fixes and improvements', $moduleUpdateHistory[1]['changes']);
-=======
-=======
->>>>>>> 89d0c8f4 (.)
         $this->assertCount(2, $moduleUpdateHistory);
         $this->assertEquals('1.0.0', $moduleUpdateHistory[0]['version']);
         $this->assertEquals('Initial release', $moduleUpdateHistory[0]['changes']);
         $this->assertEquals('1.1.0', $moduleUpdateHistory[1]['version']);
         $this->assertEquals('Bug fixes and improvements', $moduleUpdateHistory[1]['changes']);
-<<<<<<< HEAD
->>>>>>> e697a77b (.)
-=======
->>>>>>> 89d0c8f4 (.)
     }
 
     /** @test */
@@ -390,18 +260,8 @@ class ModuleBusinessLogicTest extends TestCase
         $phpVersion = $module->php_version;
 
         // Assert
-<<<<<<< HEAD
-<<<<<<< HEAD
-        expect('^10.0', $laravelVersion);
-        expect('^8.1', $phpVersion);
-=======
         $this->assertEquals('^10.0', $laravelVersion);
         $this->assertEquals('^8.1', $phpVersion);
->>>>>>> e697a77b (.)
-=======
-        $this->assertEquals('^10.0', $laravelVersion);
-        $this->assertEquals('^8.1', $phpVersion);
->>>>>>> 89d0c8f4 (.)
     }
 
     /** @test */
@@ -424,15 +284,7 @@ class ModuleBusinessLogicTest extends TestCase
         $this->assertContains('module.read', $modulePermissions);
         $this->assertContains('module.write', $modulePermissions);
         $this->assertContains('module.delete', $modulePermissions);
-<<<<<<< HEAD
-<<<<<<< HEAD
-        expect(3, $modulePermissions);
-=======
         $this->assertCount(3, $modulePermissions);
->>>>>>> e697a77b (.)
-=======
-        $this->assertCount(3, $modulePermissions);
->>>>>>> 89d0c8f4 (.)
     }
 
     /** @test */
@@ -453,18 +305,8 @@ class ModuleBusinessLogicTest extends TestCase
         $this->assertIsArray($moduleRoutes);
         $this->assertArrayHasKey('web', $moduleRoutes);
         $this->assertArrayHasKey('api', $moduleRoutes);
-<<<<<<< HEAD
-<<<<<<< HEAD
-        expect('module', $moduleRoutes['web']['prefix']);
-        expect('api/module', $moduleRoutes['api']['prefix']);
-=======
         $this->assertEquals('module', $moduleRoutes['web']['prefix']);
         $this->assertEquals('api/module', $moduleRoutes['api']['prefix']);
->>>>>>> e697a77b (.)
-=======
-        $this->assertEquals('module', $moduleRoutes['web']['prefix']);
-        $this->assertEquals('api/module', $moduleRoutes['api']['prefix']);
->>>>>>> 89d0c8f4 (.)
     }
 
     /** @test */
@@ -510,21 +352,9 @@ class ModuleBusinessLogicTest extends TestCase
 
         // Assert
         $this->assertIsArray($moduleSettings);
-<<<<<<< HEAD
-<<<<<<< HEAD
-        expect($moduleSettings['debug']);
-        expect($moduleSettings['cache']);
-        expect(30, $moduleSettings['timeout']);
-=======
         $this->assertFalse($moduleSettings['debug']);
         $this->assertTrue($moduleSettings['cache']);
         $this->assertEquals(30, $moduleSettings['timeout']);
->>>>>>> e697a77b (.)
-=======
-        $this->assertFalse($moduleSettings['debug']);
-        $this->assertTrue($moduleSettings['cache']);
-        $this->assertEquals(30, $moduleSettings['timeout']);
->>>>>>> 89d0c8f4 (.)
         $this->assertContains('feature1', $moduleSettings['features']);
         $this->assertContains('feature2', $moduleSettings['features']);
     }
@@ -569,18 +399,8 @@ class ModuleBusinessLogicTest extends TestCase
         ]);
 
         // Assert
-<<<<<<< HEAD
-<<<<<<< HEAD
-        expect($module->fresh()->enabled);
-        expect($module->fresh()->activation_date);
-=======
         $this->assertTrue($module->fresh()->enabled);
         $this->assertNotNull($module->fresh()->activation_date);
->>>>>>> e697a77b (.)
-=======
-        $this->assertTrue($module->fresh()->enabled);
-        $this->assertNotNull($module->fresh()->activation_date);
->>>>>>> 89d0c8f4 (.)
 
         // Act - Deactivate module
         $module->update([
@@ -589,18 +409,8 @@ class ModuleBusinessLogicTest extends TestCase
         ]);
 
         // Assert
-<<<<<<< HEAD
-<<<<<<< HEAD
-        expect($module->fresh()->enabled);
-        expect($module->fresh()->deactivation_date);
-=======
         $this->assertFalse($module->fresh()->enabled);
         $this->assertNotNull($module->fresh()->deactivation_date);
->>>>>>> e697a77b (.)
-=======
-        $this->assertFalse($module->fresh()->enabled);
-        $this->assertNotNull($module->fresh()->deactivation_date);
->>>>>>> 89d0c8f4 (.)
     }
 
     /** @test */
@@ -621,21 +431,9 @@ class ModuleBusinessLogicTest extends TestCase
 
         // Assert
         $this->assertIsArray($moduleUsageStats);
-<<<<<<< HEAD
-<<<<<<< HEAD
-        expect(1000, $moduleUsageStats['total_requests']);
-        expect(150, $moduleUsageStats['unique_users']);
-        expect($moduleUsageStats['last_used']);
-=======
         $this->assertEquals(1000, $moduleUsageStats['total_requests']);
         $this->assertEquals(150, $moduleUsageStats['unique_users']);
         $this->assertNotNull($moduleUsageStats['last_used']);
->>>>>>> e697a77b (.)
-=======
-        $this->assertEquals(1000, $moduleUsageStats['total_requests']);
-        $this->assertEquals(150, $moduleUsageStats['unique_users']);
-        $this->assertNotNull($moduleUsageStats['last_used']);
->>>>>>> 89d0c8f4 (.)
         $this->assertContains('feature1', $moduleUsageStats['popular_features']);
         $this->assertContains('feature2', $moduleUsageStats['popular_features']);
     }
@@ -660,16 +458,6 @@ class ModuleBusinessLogicTest extends TestCase
 
         // Assert
         $this->assertIsArray($moduleErrorLog);
-<<<<<<< HEAD
-<<<<<<< HEAD
-        expect(1, $moduleErrorLog);
-        expect('error', $moduleErrorLog[0]['level']);
-        expect('Test error message', $moduleErrorLog[0]['message']);
-        expect('test.php', $moduleErrorLog[0]['context']['file']);
-        expect(42, $moduleErrorLog[0]['context']['line']);
-    }
-}
-=======
         $this->assertCount(1, $moduleErrorLog);
         $this->assertEquals('error', $moduleErrorLog[0]['level']);
         $this->assertEquals('Test error message', $moduleErrorLog[0]['message']);
@@ -678,14 +466,3 @@ class ModuleBusinessLogicTest extends TestCase
     }
 }
 
->>>>>>> e697a77b (.)
-=======
-        $this->assertCount(1, $moduleErrorLog);
-        $this->assertEquals('error', $moduleErrorLog[0]['level']);
-        $this->assertEquals('Test error message', $moduleErrorLog[0]['message']);
-        $this->assertEquals('test.php', $moduleErrorLog[0]['context']['file']);
-        $this->assertEquals(42, $moduleErrorLog[0]['context']['line']);
-    }
-}
-
->>>>>>> 89d0c8f4 (.)

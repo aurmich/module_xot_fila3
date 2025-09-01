@@ -21,12 +21,4 @@ interface ErrorFormatterContract
      * @return array<string, mixed>
      */
     public function format(): array;
-<<<<<<< HEAD
-<<<<<<< HEAD
-}
-=======
 } 
->>>>>>> e697a77b (.)
-=======
-} 
->>>>>>> 89d0c8f4 (.)

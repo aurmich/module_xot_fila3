@@ -4,28 +4,12 @@ declare(strict_types=1);
 
 namespace Modules\Xot\Services;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 use function count;
 
->>>>>>> e697a77b (.)
-=======
-use function count;
-
->>>>>>> 89d0c8f4 (.)
 use Illuminate\Support\Facades\Request;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Str;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-use function count;
-
-=======
->>>>>>> e697a77b (.)
-=======
->>>>>>> 89d0c8f4 (.)
 /**
  * Class RouteService.
  * Modules\Xot\Services\RouteService.
@@ -37,15 +21,7 @@ class RouteService
     /**
      * Verifica se l'utente è in modalità amministrazione.
      *
-<<<<<<< HEAD
-<<<<<<< HEAD
-     * @param  array<string,string>  $params  Parametri aggiuntivi
-=======
      * @param array<string,string> $params Parametri aggiuntivi
->>>>>>> e697a77b (.)
-=======
-     * @param array<string,string> $params Parametri aggiuntivi
->>>>>>> 89d0c8f4 (.)
      * @return bool True se l'utente è in modalità amministrazione, false altrimenti
      */
     public static function inAdmin(array $params = []): bool
@@ -57,51 +33,21 @@ class RouteService
         }
 
         // Se il primo segmento dell'URL è 'admin', siamo in modalità amministrazione
-<<<<<<< HEAD
-<<<<<<< HEAD
-        if (Request::segment(1) === 'admin') {
-=======
         if ('admin' === Request::segment(1)) {
->>>>>>> e697a77b (.)
-=======
-        if ('admin' === Request::segment(1)) {
->>>>>>> 89d0c8f4 (.)
             return true;
         }
 
         // Verifichiamo un caso speciale per le richieste Livewire
         $segments = Request::segments();
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-        // Se abbiamo almeno un segmento, è 'livewire' e la sessione 'in_admin' è true
-        return (is_countable($segments) ? \count($segments) : 0) > 0 &&
-               $segments[0] === 'livewire' &&
-=======
         
         // Se abbiamo almeno un segmento, è 'livewire' e la sessione 'in_admin' è true
         return (is_countable($segments) ? \count($segments) : 0) > 0 && 
                'livewire' === $segments[0] && 
->>>>>>> e697a77b (.)
-=======
-        
-        // Se abbiamo almeno un segmento, è 'livewire' e la sessione 'in_admin' è true
-        return (is_countable($segments) ? \count($segments) : 0) > 0 && 
-               'livewire' === $segments[0] && 
->>>>>>> 89d0c8f4 (.)
                session('in_admin', false) === true;
     }
 
     /**
-<<<<<<< HEAD
-<<<<<<< HEAD
-     * @param  array<string,string>  $params
-=======
      * @param array<string,string> $params
->>>>>>> e697a77b (.)
-=======
-     * @param array<string,string> $params
->>>>>>> 89d0c8f4 (.)
      */
     public static function urlAct(array $params): string
     {
@@ -154,15 +100,7 @@ class RouteService
     // se n=0 => 'container0'
     // se n=1 => 'containers.container1'
     /**
-<<<<<<< HEAD
-<<<<<<< HEAD
-     * @param  array<string,string>  $params
-=======
      * @param array<string,string> $params
->>>>>>> e697a77b (.)
-=======
-     * @param array<string,string> $params
->>>>>>> 89d0c8f4 (.)
      */
     public static function getRoutenameN(array $params): string
     {
@@ -176,15 +114,7 @@ class RouteService
             $tmp[] = 'admin';
         }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-        for ($i = 0; $i <= $n; $i++) {
-=======
         for ($i = 0; $i <= $n; ++$i) {
->>>>>>> e697a77b (.)
-=======
-        for ($i = 0; $i <= $n; ++$i) {
->>>>>>> 89d0c8f4 (.)
             $tmp[] = 'container'.$i;
         }
 
@@ -272,15 +202,7 @@ class RouteService
     }
     */
     /**
-<<<<<<< HEAD
-<<<<<<< HEAD
-     * @param  array<string,string>  $params
-=======
      * @param array<string,string> $params
->>>>>>> e697a77b (.)
-=======
-     * @param array<string,string> $params
->>>>>>> 89d0c8f4 (.)
      */
     public static function urlLang(array $params = []): string
     {
@@ -356,15 +278,7 @@ class RouteService
     public static function getAct(): string
     {
         $route_action = Route::currentRouteAction();
-<<<<<<< HEAD
-<<<<<<< HEAD
-        if ($route_action === null) {
-=======
         if (null === $route_action) {
->>>>>>> e697a77b (.)
-=======
-        if (null === $route_action) {
->>>>>>> 89d0c8f4 (.)
             throw new \Exception('$route_action is null');
         }
 
@@ -390,15 +304,7 @@ class RouteService
     public static function getModuleName(): string
     {
         $route_action = Route::currentRouteAction();
-<<<<<<< HEAD
-<<<<<<< HEAD
-        if ($route_action === null) {
-=======
         if (null === $route_action) {
->>>>>>> e697a77b (.)
-=======
-        if (null === $route_action) {
->>>>>>> 89d0c8f4 (.)
             throw new \Exception('$route_action is null');
         }
 
@@ -413,15 +319,7 @@ class RouteService
     public static function getControllerName(): string
     {
         $route_action = Route::currentRouteAction();
-<<<<<<< HEAD
-<<<<<<< HEAD
-        if ($route_action === null) {
-=======
         if (null === $route_action) {
->>>>>>> e697a77b (.)
-=======
-        if (null === $route_action) {
->>>>>>> 89d0c8f4 (.)
             throw new \Exception('$route_action is null');
         }
 
