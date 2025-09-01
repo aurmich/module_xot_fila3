@@ -1,6 +1,7 @@
 <?php
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 return [
     'navigation' => [
         'name' => 'Ambiente',
@@ -147,6 +148,8 @@ return [
     'title' => 'env',
 ];
 =======
+=======
+>>>>>>> 89d0c8f4 (.)
 return array (
   'navigation' => 
   array (
@@ -321,4 +324,7 @@ return array (
   ),
   'title' => 'env',
 );
+<<<<<<< HEAD
 >>>>>>> e697a77b (.)
+=======
+>>>>>>> 89d0c8f4 (.)

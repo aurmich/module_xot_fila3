@@ -16,12 +16,18 @@ use function Safe\json_encode;
 class ApplicationError implements \JsonSerializable, Arrayable, Jsonable
 {
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function __construct(private readonly string $help = '', private readonly string $error = '') {}
 =======
     public function __construct(private readonly string $help = '', private readonly string $error = '')
     {
     }
 >>>>>>> e697a77b (.)
+=======
+    public function __construct(private readonly string $help = '', private readonly string $error = '')
+    {
+    }
+>>>>>>> 89d0c8f4 (.)
 
     public function toArray(): array
     {

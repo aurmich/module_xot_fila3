@@ -1,6 +1,7 @@
 <?php
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 return [
     'navigation' => [
         'name' => 'Stato Sistema',
@@ -158,6 +159,8 @@ return [
     'title' => 'health',
 ];
 =======
+=======
+>>>>>>> 89d0c8f4 (.)
 return array (
   'navigation' => 
   array (
@@ -343,4 +346,7 @@ return array (
   ),
   'title' => 'health',
 );
+<<<<<<< HEAD
 >>>>>>> e697a77b (.)
+=======
+>>>>>>> 89d0c8f4 (.)

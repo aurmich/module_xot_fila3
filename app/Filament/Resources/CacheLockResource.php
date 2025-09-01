@@ -9,7 +9,10 @@ use Modules\Xot\Filament\Resources\CacheLockResource\Pages;
 use Modules\Xot\Models\CacheLock;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 89d0c8f4 (.)
 
 
 
@@ -19,7 +22,10 @@ use Modules\Xot\Filament\Resources\RelationManagers\XotBaseRelationManager;
 
 
 
+<<<<<<< HEAD
 >>>>>>> e697a77b (.)
+=======
+>>>>>>> 89d0c8f4 (.)
 class CacheLockResource extends XotBaseResource
 {
     protected static ?string $model = CacheLock::class;

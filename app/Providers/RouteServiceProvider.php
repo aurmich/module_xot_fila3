@@ -5,12 +5,17 @@ declare(strict_types=1);
 namespace Modules\Xot\Providers;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 use Illuminate\Foundation\Support\Providers\RouteServiceProvider as ServiceProvider;
+=======
+use Filament\Facades\Filament;
+>>>>>>> 89d0c8f4 (.)
 use Illuminate\Routing\Router;
-use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\URL;
 use Illuminate\Support\Str;
+use Modules\Xot\Http\Middleware\SetDefaultLocaleForUrls;
 use Modules\Xot\Http\Middleware\SetDefaultTenantForUrlsMiddleware;
+<<<<<<< HEAD
 =======
 use Filament\Facades\Filament;
 use Illuminate\Routing\Router;
@@ -21,6 +26,10 @@ use Modules\Xot\Http\Middleware\SetDefaultTenantForUrlsMiddleware;
 use Illuminate\Foundation\Support\Providers\RouteServiceProvider as ServiceProvider;
 use Illuminate\Support\Facades\Route;
 >>>>>>> e697a77b (.)
+=======
+use Illuminate\Foundation\Support\Providers\RouteServiceProvider as ServiceProvider;
+use Illuminate\Support\Facades\Route;
+>>>>>>> 89d0c8f4 (.)
 
 // public function boot(\Illuminate\Routing\Router $router)
 
@@ -105,11 +114,16 @@ class RouteServiceProvider extends ServiceProvider
             $lang = $user->lang ?? $lang;
         }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+        
+>>>>>>> 89d0c8f4 (.)
         // ✅ Controllo sicuro della configurazione laravellocalization
-        $locales = config()->has('laravellocalization.supportedLocales')
-            ? config('laravellocalization.supportedLocales')
+        $locales = config()->has('laravellocalization.supportedLocales') 
+            ? config('laravellocalization.supportedLocales') 
             : null;
+<<<<<<< HEAD
 
 =======
         
@@ -119,6 +133,9 @@ class RouteServiceProvider extends ServiceProvider
             : null;
             
 >>>>>>> e697a77b (.)
+=======
+            
+>>>>>>> 89d0c8f4 (.)
         if (is_array($locales)) {
             $langs = array_keys($locales);
         }
@@ -139,6 +156,7 @@ class RouteServiceProvider extends ServiceProvider
     {
         // ✅ Controllo sicuro della configurazione laravellocalization
 <<<<<<< HEAD
+<<<<<<< HEAD
         $langs = config()->has('laravellocalization.supportedLocales')
             ? config('laravellocalization.supportedLocales')
             : ['it' => 'it', 'en' => 'en'];
@@ -149,6 +167,12 @@ class RouteServiceProvider extends ServiceProvider
             : ['it' => 'it', 'en' => 'en'];
             
 >>>>>>> e697a77b (.)
+=======
+        $langs = config()->has('laravellocalization.supportedLocales') 
+            ? config('laravellocalization.supportedLocales') 
+            : ['it' => 'it', 'en' => 'en'];
+            
+>>>>>>> 89d0c8f4 (.)
         if (! is_array($langs)) {
             $langs = ['it' => 'it', 'en' => 'en'];
         }

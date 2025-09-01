@@ -25,6 +25,7 @@ class HasOneAction
      * Execute the update operation for a HasOne relationship.
      *
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @param  Model  $model  The parent model instance
      * @param  RelationDTO  $relationDTO  Data transfer object containing relationship information
      *
@@ -37,6 +38,13 @@ class HasOneAction
      * @throws \InvalidArgumentException When relationship type is invalid
      * @throws \RuntimeException         When relationship data is invalid
 >>>>>>> e697a77b (.)
+=======
+     * @param Model       $model       The parent model instance
+     * @param RelationDTO $relationDTO Data transfer object containing relationship information
+     *
+     * @throws \InvalidArgumentException When relationship type is invalid
+     * @throws \RuntimeException         When relationship data is invalid
+>>>>>>> 89d0c8f4 (.)
      */
     public function execute(Model $model, RelationDTO $relationDTO): void
     {

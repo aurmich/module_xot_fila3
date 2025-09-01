@@ -39,9 +39,12 @@ abstract class XotBaseFormComponent extends Field
             return $label->toHtml();
         }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> e697a77b (.)
+=======
+>>>>>>> 89d0c8f4 (.)
         return (string) $label;
     }
 

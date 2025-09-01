@@ -12,20 +12,29 @@ use Filament\Resources\Resource;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Str;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 use function Safe\file;
 
 >>>>>>> e697a77b (.)
+=======
+
+use function Safe\file;
+
+>>>>>>> 89d0c8f4 (.)
 use Spatie\QueueableAction\QueueableAction;
 use Symfony\Component\Finder\SplFileInfo as File;
 use Webmozart\Assert\Assert;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 use function Safe\file;
 
 =======
 >>>>>>> e697a77b (.)
+=======
+>>>>>>> 89d0c8f4 (.)
 class GenerateFormByFileAction
 {
     use QueueableAction;
@@ -34,11 +43,16 @@ class GenerateFormByFileAction
      * Genera un form Filament basato su un file di risorsa.
      *
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @param  File  $file  Il file della risorsa Filament
 =======
      * @param File $file Il file della risorsa Filament
      * 
 >>>>>>> e697a77b (.)
+=======
+     * @param File $file Il file della risorsa Filament
+     * 
+>>>>>>> 89d0c8f4 (.)
      * @return int Numero di input aggiunti
      */
     public function execute(File $file): int
@@ -54,40 +68,45 @@ class GenerateFormByFileAction
         Assert::string($class_name = Str::replace('/', '\\', $class_name), '['.__LINE__.']['.class_basename($this).']');
         $class_name = Str::substr($class_name, 0, -4);
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+        
+>>>>>>> 89d0c8f4 (.)
         // Verifichiamo che la classe esista e sia una risorsa Filament
         Assert::classExists($class_name);
-
-        /** @var resource $resourceInstance */
+        
+        /** @var Resource $resourceInstance */
         $resourceInstance = app($class_name);
-
+        
         // Verifichiamo che il metodo getModel esista
-        if (! method_exists($resourceInstance, 'getModel')) {
+        if (!method_exists($resourceInstance, 'getModel')) {
             return 0;
         }
-
+        
         /** @var string $modelClass */
         $modelClass = $resourceInstance->getModel();
-
+        
         // Verifichiamo che la classe del modello esista
         Assert::classExists($modelClass);
-
+        
         /** @var Model $modelInstance */
         $modelInstance = app($modelClass);
-
+        
         // Verifichiamo che il metodo getFillable esista
-        if (! method_exists($modelInstance, 'getFillable')) {
+        if (!method_exists($modelInstance, 'getFillable')) {
             return 0;
         }
-
+        
         $fillable = $modelInstance->getFillable();
-
+        
         $reflection_class = new \ReflectionClass($class_name);
-
+        
         // Verifichiamo che il metodo form esista
-        if (! $reflection_class->hasMethod('form')) {
+        if (!$reflection_class->hasMethod('form')) {
             return 0;
         }
+<<<<<<< HEAD
 
 =======
         
@@ -126,6 +145,9 @@ class GenerateFormByFileAction
         }
         
 >>>>>>> e697a77b (.)
+=======
+        
+>>>>>>> 89d0c8f4 (.)
         $form_method = $reflection_class->getMethod('form');
         $start_line = $form_method->getStartLine() - 1;
         // it's actually - 1, otherwise you wont get the function() block
@@ -135,6 +157,7 @@ class GenerateFormByFileAction
         // $contents= $file->getContents();
         $source = file($file_name);
         $body = implode('', \array_slice($source, $start_line, $length));
+<<<<<<< HEAD
 <<<<<<< HEAD
 
         // Otteniamo i metodi della classe risorsa
@@ -146,6 +169,12 @@ class GenerateFormByFileAction
         $resourceMethods = get_class_methods($resourceInstance);
         
 >>>>>>> e697a77b (.)
+=======
+        
+        // Otteniamo i metodi della classe risorsa
+        $resourceMethods = get_class_methods($resourceInstance);
+        
+>>>>>>> 89d0c8f4 (.)
         dd([
             'class_name' => $class_name,
             'model_name' => $modelClass,
@@ -162,12 +191,18 @@ class GenerateFormByFileAction
      * Mostra informazioni di debug su un file.
      *
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @param  File  $file  Il file da analizzare
 =======
      * @param File $file Il file da analizzare
      * 
      * @return void
 >>>>>>> e697a77b (.)
+=======
+     * @param File $file Il file da analizzare
+     * 
+     * @return void
+>>>>>>> 89d0c8f4 (.)
      */
     public function ddFile(File $file): void
     {

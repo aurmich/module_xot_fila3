@@ -6,6 +6,7 @@ namespace Modules\Xot\Actions\String;
 
 use Illuminate\Support\Str;
 <<<<<<< HEAD
+<<<<<<< HEAD
 use Spatie\QueueableAction\QueueableAction;
 
 use function Safe\preg_replace;
@@ -17,6 +18,13 @@ use function Safe\preg_replace;
 use Spatie\QueueableAction\QueueableAction;
 
 >>>>>>> e697a77b (.)
+=======
+
+use function Safe\preg_replace;
+
+use Spatie\QueueableAction\QueueableAction;
+
+>>>>>>> 89d0c8f4 (.)
 class SanitizeAction
 {
     use QueueableAction;

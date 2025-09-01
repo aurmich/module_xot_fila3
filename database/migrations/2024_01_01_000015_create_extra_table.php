@@ -10,11 +10,15 @@ use Modules\Xot\Database\Migrations\XotBaseMigration;
  * Class CreateExtraTable.
  */
 <<<<<<< HEAD
+<<<<<<< HEAD
 return new class extends XotBaseMigration
 {
 =======
 return new class extends XotBaseMigration {
 >>>>>>> e697a77b (.)
+=======
+return new class extends XotBaseMigration {
+>>>>>>> 89d0c8f4 (.)
     /**
      * Run the migrations.
      */
@@ -42,10 +46,14 @@ return new class extends XotBaseMigration {
                 // }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
                 if ($this->hasColumn('model_id') && $this->getColumnType('model_id') === 'bigint') {
 =======
                 if ($this->hasColumn('model_id') && 'bigint' === $this->getColumnType('model_id')) {
 >>>>>>> e697a77b (.)
+=======
+                if ($this->hasColumn('model_id') && 'bigint' === $this->getColumnType('model_id')) {
+>>>>>>> 89d0c8f4 (.)
                     $table->string('model_id', 36)->index()->change();
                 }
             }

@@ -18,10 +18,15 @@ use Staudenmeir\LaravelAdjacencyList\Eloquent\Relations\Siblings;
  * Modules\Xot\Contracts\HasRecursiveRelationshipsContract.
  *
 <<<<<<< HEAD
+<<<<<<< HEAD
  * @property int $id
+=======
+ * @property int                $id
+>>>>>>> 89d0c8f4 (.)
  * @property string $name
- * @property int $depth
+ * @property int                $depth
  * @property Collection<static> $children
+<<<<<<< HEAD
  * @property int|null $children_count
  * @property Collection<static> $ancestors The model's recursive parents.
  * @property int|null $ancestors_count
@@ -42,6 +47,8 @@ use Staudenmeir\LaravelAdjacencyList\Eloquent\Relations\Siblings;
  * @property string $name
  * @property int                $depth
  * @property Collection<static> $children
+=======
+>>>>>>> 89d0c8f4 (.)
  * @property int|null           $children_count
  * @property Collection<static> $ancestors                  The model's recursive parents.
  * @property int|null           $ancestors_count
@@ -57,7 +64,10 @@ use Staudenmeir\LaravelAdjacencyList\Eloquent\Relations\Siblings;
  * @property int|null           $descendants_and_self_count
  * @property Collection<static> $parentAndSelf              The model's direct parent and itself.
  * @property int|null           $parent_and_self_count
+<<<<<<< HEAD
 >>>>>>> e697a77b (.)
+=======
+>>>>>>> 89d0c8f4 (.)
  *
  * @phpstan-require-extends Model
  *
@@ -266,11 +276,16 @@ interface HasRecursiveRelationshipsContract
      * Determine if an attribute is an integer.
      *
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @param  string  $attribute
 =======
      * @param string $attribute
      *
 >>>>>>> e697a77b (.)
+=======
+     * @param string $attribute
+     *
+>>>>>>> 89d0c8f4 (.)
      * @return bool
      */
     public function isIntegerAttribute($attribute);

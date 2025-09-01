@@ -18,10 +18,14 @@ class GetYearFilter
     {
         $opts = [];
 <<<<<<< HEAD
+<<<<<<< HEAD
         for ($curr = $from; $curr <= $to; $curr++) {
 =======
         for ($curr = $from; $curr <= $to; ++$curr) {
 >>>>>>> e697a77b (.)
+=======
+        for ($curr = $from; $curr <= $to; ++$curr) {
+>>>>>>> 89d0c8f4 (.)
             $currStr = (string) $curr;
             $opts[$currStr] = $currStr;
         }

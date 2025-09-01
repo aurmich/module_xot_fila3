@@ -8,6 +8,7 @@ use Filament\Forms\Form;
 use Filament\Resources\RelationManagers\RelationManager as FilamentRelationManager;
 use Filament\Tables;
 <<<<<<< HEAD
+<<<<<<< HEAD
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Arr;
 =======
@@ -16,6 +17,12 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Arr;
 use Illuminate\Support\Str;
 >>>>>>> e697a77b (.)
+=======
+use Filament\Tables\Table;
+use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Arr;
+use Illuminate\Support\Str;
+>>>>>>> 89d0c8f4 (.)
 use Modules\Xot\Filament\Resources\XotBaseResource;
 use Modules\Xot\Filament\Traits\HasXotTable;
 use Webmozart\Assert\Assert;
@@ -53,31 +60,35 @@ abstract class XotBaseRelationManager extends FilamentRelationManager
         return $this->getResource()::getFormSchema();
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
     // *
+=======
+//*
+>>>>>>> 89d0c8f4 (.)
     public function getTableColumns(): array
     {
-        $index = Arr::get($this->getResource()::getPages(), 'index');
-        if (! $index) {
-            // throw new \Exception('Index page not found');
+        $index=Arr::get($this->getResource()::getPages(),'index');
+        if(!$index){
+            //throw new \Exception('Index page not found');
             return [];
         }
         /** @phpstan-ignore method.nonObject */
-        $index_page = $index->getPage();
-
-        if (! method_exists($index_page, 'getTableColumns')) {
-            // throw new \Exception('method  getTableColumns on '.print_r($index_page,true).' not found');
+        $index_page=$index->getPage();
+        
+        if(!method_exists($index_page,'getTableColumns')){
+            //throw new \Exception('method  getTableColumns on '.print_r($index_page,true).' not found');
             return [];
         }
         /** @phpstan-ignore argument.type */
-        $res = app($index_page)->getTableColumns();
+        $res= app($index_page)->getTableColumns();
 
         return $res;
     }
-
-    // */
+//*/
     public function getTableActions(): array
     {
+<<<<<<< HEAD
 
 
         $actions = [];
@@ -127,22 +138,31 @@ abstract class XotBaseRelationManager extends FilamentRelationManager
 //*/
     public function getTableActions(): array
     {
+=======
+>>>>>>> 89d0c8f4 (.)
         return [
             Tables\Actions\EditAction::make(),
             //Tables\Actions\DeleteAction::make(),
             Tables\Actions\DetachAction::make(),
         ];
+<<<<<<< HEAD
 >>>>>>> e697a77b (.)
+=======
+>>>>>>> 89d0c8f4 (.)
     }
 
     public function getTableBulkActions(): array
     {
         return [
 <<<<<<< HEAD
+<<<<<<< HEAD
             // Tables\Actions\DeleteBulkAction::make(),
 =======
             //Tables\Actions\DeleteBulkAction::make(),
 >>>>>>> e697a77b (.)
+=======
+            //Tables\Actions\DeleteBulkAction::make(),
+>>>>>>> 89d0c8f4 (.)
             Tables\Actions\DetachBulkAction::make(),
         ];
     }
@@ -150,11 +170,14 @@ abstract class XotBaseRelationManager extends FilamentRelationManager
     public function getTableHeaderActions(): array
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
         /*
+=======
+>>>>>>> 89d0c8f4 (.)
         return [
-            Tables\Actions\AttachAction::make()
-               ->icon('heroicon-o-link'),
+            Tables\Actions\AttachAction::make(),
         ];
+<<<<<<< HEAD
         */
         $actions = [];
         $resource = $this->getResource();
@@ -180,6 +203,8 @@ abstract class XotBaseRelationManager extends FilamentRelationManager
             Tables\Actions\AttachAction::make(),
         ];
 >>>>>>> e697a77b (.)
+=======
+>>>>>>> 89d0c8f4 (.)
     }
 
     public function getTableFilters(): array
@@ -190,10 +215,14 @@ abstract class XotBaseRelationManager extends FilamentRelationManager
     public function getResource(): string
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
         $resource = static::$resource;
 =======
         $resource = static::$resourceClass;
 >>>>>>> e697a77b (.)
+=======
+        $resource = static::$resourceClass;
+>>>>>>> 89d0c8f4 (.)
         Assert::classExists($resource);
         Assert::isAOf($resource, XotBaseResource::class);
 

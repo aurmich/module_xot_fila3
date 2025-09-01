@@ -12,11 +12,16 @@ class FilterRelationsAction
 {
     /**
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @param  array<string, mixed>  $relations
 =======
      * @param array<string, mixed> $relations
      *
 >>>>>>> e697a77b (.)
+=======
+     * @param array<string, mixed> $relations
+     *
+>>>>>>> 89d0c8f4 (.)
      * @return array<string, Relation>
      */
     public function execute(Model $model, array $relations): array

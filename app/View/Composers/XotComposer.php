@@ -5,28 +5,34 @@ declare(strict_types=1);
 namespace Modules\Xot\View\Composers;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 use Illuminate\Support\Arr;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Str;
+=======
+>>>>>>> 89d0c8f4 (.)
 use Illuminate\View\View;
-use Modules\Xot\Actions\File\AssetPathAction;
-use Modules\Xot\Datas\MetatagData;
-use Modules\Xot\Datas\XotData;
-use Nwidart\Modules\Facades\Module;
-use Nwidart\Modules\Laravel\Module as LaravelModule;
+use Illuminate\Support\Arr;
+use Illuminate\Support\Str;
 use Webmozart\Assert\Assert;
+<<<<<<< HEAD
 =======
 use Illuminate\View\View;
 use Illuminate\Support\Arr;
 use Illuminate\Support\Str;
 use Webmozart\Assert\Assert;
+=======
+>>>>>>> 89d0c8f4 (.)
 use Modules\Xot\Datas\XotData;
 use Modules\Xot\Datas\MetatagData;
 use Nwidart\Modules\Facades\Module;
 use Illuminate\Support\Facades\Auth;
 use Modules\Xot\Actions\File\AssetPathAction;
 use Nwidart\Modules\Laravel\Module as LaravelModule;
+<<<<<<< HEAD
 >>>>>>> e697a77b (.)
+=======
+>>>>>>> 89d0c8f4 (.)
 
 /**
  * Class XotComposer.
@@ -37,10 +43,14 @@ class XotComposer
      * Undocumented function.
      *
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @param  array<mixed|void>  $arguments
 =======
      * @param array<mixed|void> $arguments
 >>>>>>> e697a77b (.)
+=======
+     * @param array<mixed|void> $arguments
+>>>>>>> 89d0c8f4 (.)
      */
     public function __call(string $name, array $arguments): mixed
     {
@@ -85,12 +95,17 @@ class XotComposer
         $view->with('_theme', $this);
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         if (class_exists('\Jenssegers\Agent\Agent')) {
             $agent = new \Jenssegers\Agent\Agent;
 =======
         if(class_exists('\Jenssegers\Agent\Agent')){
             $agent = new \Jenssegers\Agent\Agent();
 >>>>>>> e697a77b (.)
+=======
+        if(class_exists('\Jenssegers\Agent\Agent')){
+            $agent = new \Jenssegers\Agent\Agent();
+>>>>>>> 89d0c8f4 (.)
             $view->with('isMobile', $agent->isMobile());
             $view->with('isTablet', $agent->isTablet());
             $view->with('isDesktop', $agent->isDesktop());
@@ -111,10 +126,14 @@ class XotComposer
     public function path(string $str): string
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
         return app(AssetPathAction::class)->execute($str);
 =======
         return (app(AssetPathAction::class)->execute($str));
 >>>>>>> e697a77b (.)
+=======
+        return (app(AssetPathAction::class)->execute($str));
+>>>>>>> 89d0c8f4 (.)
     }
 
     public function metatag(string $str): string|bool|null

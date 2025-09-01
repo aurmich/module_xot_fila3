@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 <?php
 
 return [
@@ -9,6 +10,8 @@ return [
     ],
 ];
 =======
+=======
+>>>>>>> 89d0c8f4 (.)
 <?php return array (
   'fields' => 
   array (
@@ -17,5 +20,9 @@ return [
       'label' => 'anno',
     ),
   ),
+<<<<<<< HEAD
 );
 >>>>>>> e697a77b (.)
+=======
+);
+>>>>>>> 89d0c8f4 (.)

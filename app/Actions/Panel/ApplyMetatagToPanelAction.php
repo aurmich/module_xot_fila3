@@ -17,10 +17,14 @@ class ApplyMetatagToPanelAction
         try {
             $metatag = MetatagData::make();
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
             
 >>>>>>> e697a77b (.)
+=======
+            
+>>>>>>> 89d0c8f4 (.)
             return $panel
                 // @phpstan-ignore argument.type
                 ->colors($metatag->getColors())
@@ -32,11 +36,15 @@ class ApplyMetatagToPanelAction
         } catch (\Exception $e) {
             // Log l'errore ma non bloccare l'applicazione
 <<<<<<< HEAD
+<<<<<<< HEAD
             \Illuminate\Support\Facades\Log::error('Error applying metatag to panel: '.$e->getMessage());
 
 =======
             \Illuminate\Support\Facades\Log::error('Error applying metatag to panel: ' . $e->getMessage());
 >>>>>>> e697a77b (.)
+=======
+            \Illuminate\Support\Facades\Log::error('Error applying metatag to panel: ' . $e->getMessage());
+>>>>>>> 89d0c8f4 (.)
             return $panel;
         }
     }

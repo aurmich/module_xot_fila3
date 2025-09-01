@@ -17,10 +17,15 @@ use Modules\Xot\Filament\Resources\Pages\XotBaseListRecords;
 use Nwidart\Modules\Facades\Module;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 use Modules\Xot\Filament\Resources\RelationManagers\XotBaseRelationManager;
 
 >>>>>>> e697a77b (.)
+=======
+use Modules\Xot\Filament\Resources\RelationManagers\XotBaseRelationManager;
+
+>>>>>>> 89d0c8f4 (.)
 class ListModules extends XotBaseListRecords
 {
     public TableLayoutEnum $layoutView = TableLayoutEnum::LIST;
@@ -78,14 +83,20 @@ class ListModules extends XotBaseListRecords
     {
         return [
 <<<<<<< HEAD
+<<<<<<< HEAD
             ViewAction::make(),
             EditAction::make(),
 =======
+=======
+>>>>>>> 89d0c8f4 (.)
             ViewAction::make()
                 ,
             EditAction::make()
                 ,
+<<<<<<< HEAD
 >>>>>>> e697a77b (.)
+=======
+>>>>>>> 89d0c8f4 (.)
             DeleteAction::make()
 
                 ->requiresConfirmation(),

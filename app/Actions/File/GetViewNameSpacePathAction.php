@@ -8,9 +8,13 @@ use Illuminate\Support\Facades\View;
 use Modules\Xot\Datas\XotData;
 use Spatie\QueueableAction\QueueableAction;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 use Webmozart\Assert\Assert;
 >>>>>>> e697a77b (.)
+=======
+use Webmozart\Assert\Assert;
+>>>>>>> 89d0c8f4 (.)
 
 class GetViewNameSpacePathAction
 {
@@ -20,11 +24,16 @@ class GetViewNameSpacePathAction
      * Ottiene il percorso di un namespace di vista.
      *
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @param  string  $ns  Il namespace della vista
 =======
      * @param string $ns Il namespace della vista
      *
 >>>>>>> e697a77b (.)
+=======
+     * @param string $ns Il namespace della vista
+     *
+>>>>>>> 89d0c8f4 (.)
      * @return string|null Il percorso del namespace o null se non trovato
      */
     public function execute(string $ns): ?string
@@ -58,10 +67,14 @@ class GetViewNameSpacePathAction
         $theme_name = $xot->{$ns} ?? null;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         if (! is_string($theme_name)) {
 =======
         if (!is_string($theme_name)) {
 >>>>>>> e697a77b (.)
+=======
+        if (!is_string($theme_name)) {
+>>>>>>> 89d0c8f4 (.)
             return null; // Restituiamo null se il tema non è una stringa
         }
 

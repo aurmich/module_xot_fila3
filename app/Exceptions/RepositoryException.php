@@ -8,9 +8,15 @@ namespace Modules\Xot\Exceptions;
  * Class RepositoryException.
  */
 <<<<<<< HEAD
+<<<<<<< HEAD
 class RepositoryException extends \Exception {}
 =======
 class RepositoryException extends \Exception
 {
 }
 >>>>>>> e697a77b (.)
+=======
+class RepositoryException extends \Exception
+{
+}
+>>>>>>> 89d0c8f4 (.)

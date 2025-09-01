@@ -22,10 +22,14 @@ use Illuminate\Support\Carbon;
  * @method static \Illuminate\Database\Eloquent\Builder|ExtraContract withExtraAttributes()
  *
 <<<<<<< HEAD
+<<<<<<< HEAD
  * @property int $id
 =======
  * @property int         $id
 >>>>>>> e697a77b (.)
+=======
+ * @property int         $id
+>>>>>>> 89d0c8f4 (.)
  * @property string $model_type
  * @property string $model_id
  * @property Carbon|null $created_at
@@ -51,9 +55,15 @@ use Illuminate\Support\Carbon;
  * @mixin \Eloquent
  */
 <<<<<<< HEAD
+<<<<<<< HEAD
 interface ExtraContract {}
 =======
 interface ExtraContract
 {
 }
 >>>>>>> e697a77b (.)
+=======
+interface ExtraContract
+{
+}
+>>>>>>> 89d0c8f4 (.)

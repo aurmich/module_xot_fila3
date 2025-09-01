@@ -33,10 +33,14 @@ class Clock extends Widget
             // $this->start = $this->start - 1;
             $this->start = (string) now();
 <<<<<<< HEAD
+<<<<<<< HEAD
             if ($this->start === 'impossible') {
 =======
             if ('impossible' === $this->start) {
 >>>>>>> e697a77b (.)
+=======
+            if ('impossible' === $this->start) {
+>>>>>>> 89d0c8f4 (.)
                 $cond = false;
             }
         }

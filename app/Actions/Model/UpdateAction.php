@@ -20,10 +20,14 @@ class UpdateAction
 
     /**
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @param  array<string, mixed>  $data
 =======
      * @param array<string, mixed> $data
 >>>>>>> e697a77b (.)
+=======
+     * @param array<string, mixed> $data
+>>>>>>> 89d0c8f4 (.)
      */
     public function execute(Model $model, array $data, array $rules): Model
     {
@@ -33,10 +37,14 @@ class UpdateAction
         $keyName = $model->getKeyName();
         // $data['updated_by'] = authId();
 <<<<<<< HEAD
+<<<<<<< HEAD
         if ($model->getKey() === null) {
 =======
         if (null === $model->getKey()) {
 >>>>>>> e697a77b (.)
+=======
+        if (null === $model->getKey()) {
+>>>>>>> 89d0c8f4 (.)
             $key = $data[$keyName];
             /** @var array<string, mixed> $data */
             $data = collect($data)->except($keyName)->toArray();
@@ -52,9 +60,13 @@ class UpdateAction
         /**
          * @phpstan-ignore method.notFound (.)
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> e697a77b (.)
+=======
+
+>>>>>>> 89d0c8f4 (.)
          */
         $model = tap($model)->update($data);
 

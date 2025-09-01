@@ -16,9 +16,13 @@ use Illuminate\Support\Str;
 use Modules\Xot\Filament\Traits\HasXotTable;
 use Modules\Xot\Filament\Traits\NavigationLabelTrait;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 use Webmozart\Assert\Assert;
 >>>>>>> e697a77b (.)
+=======
+use Webmozart\Assert\Assert;
+>>>>>>> 89d0c8f4 (.)
 
 /**
  * Classe base per la gestione delle relazioni nelle risorse Filament.
@@ -125,10 +129,14 @@ abstract class XotBaseManageRelatedRecords extends FilamentManageRelatedRecords
      * ]);
      * }.
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
      
 >>>>>>> e697a77b (.)
+=======
+     
+>>>>>>> 89d0c8f4 (.)
     public function table(Table $table): Table
     {
         return $table
@@ -151,9 +159,12 @@ abstract class XotBaseManageRelatedRecords extends FilamentManageRelatedRecords
         /** @var array<\Filament\Forms\Components\Component> $schema */
         $schema = $this->getFormSchema();
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> e697a77b (.)
+=======
+>>>>>>> 89d0c8f4 (.)
         return $form->schema($schema);
     }
 

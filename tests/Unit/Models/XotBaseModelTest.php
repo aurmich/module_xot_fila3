@@ -10,20 +10,28 @@ uses(Tests\TestCase::class);
 test('xot base model extends eloquent model', function (): void {
     $reflection = new ReflectionClass(XotBaseModel::class);
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
     
 >>>>>>> e697a77b (.)
+=======
+    
+>>>>>>> 89d0c8f4 (.)
     expect($reflection->isSubclassOf(\Illuminate\Database\Eloquent\Model::class))->toBeTrue();
 });
 
 test('xot base model is abstract', function (): void {
     $reflection = new ReflectionClass(XotBaseModel::class);
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
     
 >>>>>>> e697a77b (.)
+=======
+    
+>>>>>>> 89d0c8f4 (.)
     expect($reflection->isAbstract())->toBeTrue();
 });
 
@@ -31,10 +39,14 @@ test('xot base model uses updater trait', function (): void {
     $reflection = new ReflectionClass(XotBaseModel::class);
     $traits = $reflection->getTraitNames();
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
     
 >>>>>>> e697a77b (.)
+=======
+    
+>>>>>>> 89d0c8f4 (.)
     expect($traits)->toContain(Updater::class);
 });
 
@@ -58,10 +70,14 @@ test('xot base model has correct strict types declaration', function (): void {
     $reflection = new ReflectionClass(XotBaseModel::class);
     $filename = $reflection->getFileName();
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
     
 >>>>>>> e697a77b (.)
+=======
+    
+>>>>>>> 89d0c8f4 (.)
     if ($filename) {
         $content = file_get_contents($filename);
         expect($content)->toContain('declare(strict_types=1);');
@@ -72,10 +88,14 @@ test('xot base model has correct use statements', function (): void {
     $reflection = new ReflectionClass(XotBaseModel::class);
     $filename = $reflection->getFileName();
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
     
 >>>>>>> e697a77b (.)
+=======
+    
+>>>>>>> 89d0c8f4 (.)
     if ($filename) {
         $content = file_get_contents($filename);
         expect($content)->toContain('use Illuminate\Database\Eloquent\Model;');
@@ -86,12 +106,17 @@ test('xot base model has correct use statements', function (): void {
 test('xot base model has correct property types', function (): void {
     $reflection = new ReflectionClass(XotBaseModel::class);
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+    
+>>>>>>> 89d0c8f4 (.)
     $snakeAttributesProperty = $reflection->getProperty('snakeAttributes');
     $perPageProperty = $reflection->getProperty('perPage');
-
+    
     $snakeType = $snakeAttributesProperty->getType();
     $perPageType = $perPageProperty->getType();
+<<<<<<< HEAD
 
 =======
     
@@ -102,6 +127,9 @@ test('xot base model has correct property types', function (): void {
     $perPageType = $perPageProperty->getType();
     
 >>>>>>> e697a77b (.)
+=======
+    
+>>>>>>> 89d0c8f4 (.)
     // Some properties may not have explicit type declarations; in that case just ensure defaults are as expected
     if ($snakeType !== null) {
         expect($snakeType->getName())->toBe('bool');
@@ -109,10 +137,14 @@ test('xot base model has correct property types', function (): void {
         expect(XotBaseModel::$snakeAttributes)->toBeTrue();
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
     
 >>>>>>> e697a77b (.)
+=======
+    
+>>>>>>> 89d0c8f4 (.)
     if ($perPageType !== null) {
         expect($perPageType->getName())->toBe('int');
     } else {
@@ -123,6 +155,7 @@ test('xot base model has correct property types', function (): void {
 test('xot base model has correct property visibility', function (): void {
     $reflection = new ReflectionClass(XotBaseModel::class);
 <<<<<<< HEAD
+<<<<<<< HEAD
 
     $snakeAttributesProperty = $reflection->getProperty('snakeAttributes');
     $perPageProperty = $reflection->getProperty('perPage');
@@ -133,6 +166,12 @@ test('xot base model has correct property visibility', function (): void {
     $perPageProperty = $reflection->getProperty('perPage');
     
 >>>>>>> e697a77b (.)
+=======
+    
+    $snakeAttributesProperty = $reflection->getProperty('snakeAttributes');
+    $perPageProperty = $reflection->getProperty('perPage');
+    
+>>>>>>> 89d0c8f4 (.)
     expect($snakeAttributesProperty->isPublic())->toBeTrue();
     expect($perPageProperty->isProtected())->toBeTrue();
 });

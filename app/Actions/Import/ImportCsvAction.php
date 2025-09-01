@@ -11,6 +11,7 @@ use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
 use Modules\Xot\Datas\ColumnData;
 <<<<<<< HEAD
+<<<<<<< HEAD
 use Spatie\QueueableAction\QueueableAction;
 use Webmozart\Assert\Assert;
 
@@ -24,6 +25,14 @@ use Spatie\QueueableAction\QueueableAction;
 use Webmozart\Assert\Assert;
 
 >>>>>>> e697a77b (.)
+=======
+
+use function Safe\ini_set;
+
+use Spatie\QueueableAction\QueueableAction;
+use Webmozart\Assert\Assert;
+
+>>>>>>> 89d0c8f4 (.)
 class ImportCsvAction
 {
     use QueueableAction;
@@ -32,16 +41,22 @@ class ImportCsvAction
      * Import a CSV file into a database table.
      *
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @param  string  $disk  the storage disk where the file is located
      * @param  string  $filename  the name of the file to import
      * @param  string  $db  the database connection name
      * @param  string  $tbl  the table name where data will be imported
 =======
+=======
+>>>>>>> 89d0c8f4 (.)
      * @param string $disk     the storage disk where the file is located
      * @param string $filename the name of the file to import
      * @param string $db       the database connection name
      * @param string $tbl      the table name where data will be imported
+<<<<<<< HEAD
 >>>>>>> e697a77b (.)
+=======
+>>>>>>> 89d0c8f4 (.)
      *
      * @throws \Exception
      */
@@ -87,11 +102,16 @@ class ImportCsvAction
      * Get table columns excluding certain fields.
      *
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @param  \Illuminate\Database\Schema\Builder  $conn
 =======
      * @param \Illuminate\Database\Schema\Builder $conn
      *
 >>>>>>> e697a77b (.)
+=======
+     * @param \Illuminate\Database\Schema\Builder $conn
+     *
+>>>>>>> 89d0c8f4 (.)
      * @return ColumnData[]
      */
     private function getTableColumns($conn, string $tbl): array
@@ -113,21 +133,30 @@ class ImportCsvAction
      * Prepare fields for the SQL query.
      *
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @param  ColumnData[]  $columns
 =======
      * @param ColumnData[] $columns
      *
 >>>>>>> e697a77b (.)
+=======
+     * @param ColumnData[] $columns
+     *
+>>>>>>> 89d0c8f4 (.)
      * @return string[]
      */
     private function prepareFields(array $columns): array
     {
         return array_map(function (ColumnData $column) {
 <<<<<<< HEAD
+<<<<<<< HEAD
             return $column->type === 'decimal' ? '@'.$column->name : $column->name;
 =======
             return 'decimal' === $column->type ? '@'.$column->name : $column->name;
 >>>>>>> e697a77b (.)
+=======
+            return 'decimal' === $column->type ? '@'.$column->name : $column->name;
+>>>>>>> 89d0c8f4 (.)
         }, $columns);
     }
 
@@ -135,10 +164,14 @@ class ImportCsvAction
      * Build the SQL query for importing data.
      *
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @param  ColumnData[]  $columns
 =======
      * @param ColumnData[] $columns
 >>>>>>> e697a77b (.)
+=======
+     * @param ColumnData[] $columns
+>>>>>>> 89d0c8f4 (.)
      */
     private function buildSql(string $path, string $db, string $tbl, string $fieldsUpList, array $columns): string
     {
@@ -151,10 +184,14 @@ class ImportCsvAction
         $sqlReplace = [];
         foreach ($columns as $column) {
 <<<<<<< HEAD
+<<<<<<< HEAD
             if ($column->type === 'decimal') {
 =======
             if ('decimal' === $column->type) {
 >>>>>>> e697a77b (.)
+=======
+            if ('decimal' === $column->type) {
+>>>>>>> 89d0c8f4 (.)
                 $sqlReplace[] = "{$column->name} = REPLACE(@{$column->name}, ',', '.')";
             }
         }
@@ -170,10 +207,15 @@ class ImportCsvAction
      * Transform columns into ColumnData objects.
      *
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @param  string[]  $columns
-     * @return ColumnData[]
+=======
+     * @param string[] $columns
      *
+>>>>>>> 89d0c8f4 (.)
+     * @return ColumnData[]
      * @deprecated This method is currently unused but kept for future expansion.
+<<<<<<< HEAD
      *
 =======
      * @param string[] $columns
@@ -181,6 +223,8 @@ class ImportCsvAction
      * @return ColumnData[]
      * @deprecated This method is currently unused but kept for future expansion.
 >>>>>>> e697a77b (.)
+=======
+>>>>>>> 89d0c8f4 (.)
      * @phpstan-ignore method.unused
      */
     private function transformColumnsToColumnData(array $columns): array

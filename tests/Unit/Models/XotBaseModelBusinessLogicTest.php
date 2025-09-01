@@ -11,12 +11,17 @@ describe('XotBaseModel Business Logic', function () {
 
     test('xot base model can be instantiated', function () {
 <<<<<<< HEAD
+<<<<<<< HEAD
         $model = new XotBaseModel;
 
 =======
         $model = new XotBaseModel();
         
 >>>>>>> e697a77b (.)
+=======
+        $model = new XotBaseModel();
+        
+>>>>>>> 89d0c8f4 (.)
         expect($model)->toBeInstanceOf(XotBaseModel::class);
         expect($model)->toBeInstanceOf(\Illuminate\Database\Eloquent\Model::class);
     });
@@ -25,7 +30,11 @@ describe('XotBaseModel Business Logic', function () {
         expect(class_exists(XotBaseModel::class))->toBeTrue();
     });
 <<<<<<< HEAD
+<<<<<<< HEAD
 });
 =======
 });
 >>>>>>> e697a77b (.)
+=======
+});
+>>>>>>> 89d0c8f4 (.)

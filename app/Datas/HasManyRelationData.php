@@ -11,6 +11,7 @@ class HasManyRelationData extends Data
 {
     /**
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @param  array<string, mixed>  $updateData
      * @param  array<int|string>|null  $from
      * @param  array<int|string>|null  $to
@@ -19,6 +20,11 @@ class HasManyRelationData extends Data
      * @param array<int|string>|null $from
      * @param array<int|string>|null $to
 >>>>>>> e697a77b (.)
+=======
+     * @param array<string, mixed>   $updateData
+     * @param array<int|string>|null $from
+     * @param array<int|string>|null $to
+>>>>>>> 89d0c8f4 (.)
      */
     public function __construct(
         public string $foreignKey,
@@ -29,9 +35,14 @@ class HasManyRelationData extends Data
         #[MapInputName('to')]
         public ?array $to = null,
 <<<<<<< HEAD
+<<<<<<< HEAD
     ) {}
 =======
     ) {
     }
 >>>>>>> e697a77b (.)
+=======
+    ) {
+    }
+>>>>>>> 89d0c8f4 (.)
 }

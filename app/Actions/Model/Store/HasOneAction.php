@@ -20,10 +20,14 @@ class HasOneAction
         Assert::isInstanceOf($rows = $relationDTO->rows, HasOne::class);
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         if (! Arr::isAssoc($relationDTO->data) && \count($relationDTO->data) === 1) {
 =======
         if (! Arr::isAssoc($relationDTO->data) && 1 === \count($relationDTO->data)) {
 >>>>>>> e697a77b (.)
+=======
+        if (! Arr::isAssoc($relationDTO->data) && 1 === \count($relationDTO->data)) {
+>>>>>>> 89d0c8f4 (.)
             $related_id = Arr::first($relationDTO->data);
             $related = $relationDTO->related->find($related_id);
             if (! $related instanceof Model) {

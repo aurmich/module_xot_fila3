@@ -16,10 +16,14 @@ class CoolModulesServiceProvider extends PackageServiceProvider
     /**
      * Traccia i panel che hanno già gli hook registrati.
 <<<<<<< HEAD
+<<<<<<< HEAD
      *
 =======
      * 
 >>>>>>> e697a77b (.)
+=======
+     * 
+>>>>>>> 89d0c8f4 (.)
      * @var array<string, bool>
      */
     private static array $processedPanels = [];
@@ -43,6 +47,7 @@ class CoolModulesServiceProvider extends PackageServiceProvider
         $this->app->afterResolving('filament', function () {
             $panels = Filament::getPanels();
 <<<<<<< HEAD
+<<<<<<< HEAD
 
             foreach ($panels as $panel) {
                 $id = Str::of($panel->getId());
@@ -55,10 +60,18 @@ class CoolModulesServiceProvider extends PackageServiceProvider
                 $panelId = $panel->getId();
                 
 >>>>>>> e697a77b (.)
+=======
+           
+            foreach ($panels as $panel) {
+                $id = Str::of($panel->getId());
+                $panelId = $panel->getId();
+                
+>>>>>>> 89d0c8f4 (.)
                 // Controlla se questo panel è già stato processato
                 if (isset(self::$processedPanels[$panelId])) {
                     continue;
                 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
                 if ($id->contains('::')) {
@@ -72,15 +85,26 @@ class CoolModulesServiceProvider extends PackageServiceProvider
                     $panel
                    
 >>>>>>> e697a77b (.)
+=======
+                
+                if ($id->contains('::')) {
+                    $title = $id->replace(['::', '-'], [' ', ' '])->title()->toString();
+                    $panel
+                   
+>>>>>>> 89d0c8f4 (.)
                         ->renderHook(
                             'panels::sidebar.nav.start',
                             fn () => new HtmlString("<h2 class='m-2 p-2 font-black text-xl'>$title</h2>"),
                         )
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
                             
 >>>>>>> e697a77b (.)
+=======
+                            
+>>>>>>> 89d0c8f4 (.)
                         ->renderHook(
                             'panels::sidebar.nav.end',
                             fn () => new HtmlString(
@@ -93,10 +117,14 @@ class CoolModulesServiceProvider extends PackageServiceProvider
                             ),
                         );
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
                     
 >>>>>>> e697a77b (.)
+=======
+                    
+>>>>>>> 89d0c8f4 (.)
                     // Marca questo panel come processato
                     self::$processedPanels[$panelId] = true;
                 }

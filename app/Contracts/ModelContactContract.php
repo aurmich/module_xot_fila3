@@ -12,6 +12,7 @@ use Illuminate\Support\Carbon;
  * Modules\Xot\Contracts\ModelContract.
  *
 <<<<<<< HEAD
+<<<<<<< HEAD
  * @property int $id
  * @property int|null $user_id
  * @property string|null $post_type
@@ -23,6 +24,8 @@ use Illuminate\Support\Carbon;
  * @property bool $is_reclamed
  * @property bool $table_enable
 =======
+=======
+>>>>>>> 89d0c8f4 (.)
  * @property int                $id
  * @property int|null           $user_id
  * @property string|null        $post_type
@@ -33,7 +36,10 @@ use Illuminate\Support\Carbon;
  * @property string|null        $title
  * @property bool               $is_reclamed
  * @property bool               $table_enable
+<<<<<<< HEAD
 >>>>>>> e697a77b (.)
+=======
+>>>>>>> 89d0c8f4 (.)
  * @property PivotContract|null $pivot
  * @property string $tennant_name
  * @property string $mail_subject
@@ -43,6 +49,7 @@ use Illuminate\Support\Carbon;
  * @property string $sms_body
  * @property string $sms_count
  *
+<<<<<<< HEAD
 <<<<<<< HEAD
  * @method mixed getKey()
  * @method string getRouteKey()
@@ -61,6 +68,8 @@ use Illuminate\Support\Carbon;
  * @method array treeSons()
  * @method array toArray()
 =======
+=======
+>>>>>>> 89d0c8f4 (.)
  * @method mixed     getKey()
  * @method string    getRouteKey()
  * @method string    getRouteKeyName()
@@ -77,7 +86,10 @@ use Illuminate\Support\Carbon;
  * @method array     treeLabel()
  * @method array     treeSons()
  * @method array     toArray()
+<<<<<<< HEAD
 >>>>>>> e697a77b (.)
+=======
+>>>>>>> 89d0c8f4 (.)
  * @method BelongsTo user()
  *
  * @phpstan-require-extends Model

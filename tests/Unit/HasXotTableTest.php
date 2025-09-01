@@ -3,11 +3,17 @@
 declare(strict_types=1);
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 use Filament\Tables\Contracts\HasTable;
 use Filament\Tables\Table;
 use Illuminate\Support\Collection;
+=======
+>>>>>>> 89d0c8f4 (.)
 use Mockery;
+use Filament\Tables\Table;
+use Filament\Tables\Contracts\HasTable;
 use Modules\Xot\Filament\Traits\HasXotTable;
+<<<<<<< HEAD
 =======
 use Mockery;
 use Filament\Tables\Table;
@@ -15,6 +21,9 @@ use Filament\Tables\Contracts\HasTable;
 use Modules\Xot\Filament\Traits\HasXotTable;
 use Illuminate\Support\Collection;
 >>>>>>> e697a77b (.)
+=======
+use Illuminate\Support\Collection;
+>>>>>>> 89d0c8f4 (.)
 
 uses(Tests\TestCase::class);
 
@@ -23,6 +32,7 @@ afterEach(function () {
 });
 
 it('tests table method with all methods implemented', function () {
+<<<<<<< HEAD
 <<<<<<< HEAD
     // Avoid DB/Schema access inside TableExistsByModelClassActions
     Mockery::mock('overload:Modules\\Xot\\Actions\\Model\\TableExistsByModelClassActions')
@@ -39,11 +49,21 @@ it('tests table method with all methods implemented', function () {
             ->shouldReceive('execute')
             ->andReturn(true);
 
+=======
+        // Avoid DB/Schema access inside TableExistsByModelClassActions
+        Mockery::mock('overload:Modules\\Xot\\Actions\\Model\\TableExistsByModelClassActions')
+            ->shouldReceive('execute')
+            ->andReturn(true);
+
+>>>>>>> 89d0c8f4 (.)
         // Create partial mock and defer missing to real methods so trait's table() runs
         $mock = Mockery::mock(HasTableWithXot::class)
             ->makePartial()
             ->shouldDeferMissing();
+<<<<<<< HEAD
 >>>>>>> e697a77b (.)
+=======
+>>>>>>> 89d0c8f4 (.)
 
     // Expect getTableHeaderActions to be called
     $mock->shouldReceive('getTableHeaderActions')
@@ -105,6 +125,7 @@ it('tests table method with all methods implemented', function () {
 
 it('tests table method with no optional methods implemented', function () {
 <<<<<<< HEAD
+<<<<<<< HEAD
     // Avoid DB/Schema access inside TableExistsByModelClassActions
     Mockery::mock('overload:Modules\\Xot\\Actions\\Model\\TableExistsByModelClassActions')
         ->shouldReceive('execute')
@@ -120,11 +141,21 @@ it('tests table method with no optional methods implemented', function () {
             ->shouldReceive('execute')
             ->andReturn(true);
 
+=======
+        // Avoid DB/Schema access inside TableExistsByModelClassActions
+        Mockery::mock('overload:Modules\\Xot\\Actions\\Model\\TableExistsByModelClassActions')
+            ->shouldReceive('execute')
+            ->andReturn(true);
+
+>>>>>>> 89d0c8f4 (.)
         // Create partial mock and defer missing to real methods so trait's table() runs
         $mock = Mockery::mock(HasTableWithoutOptionalMethods::class)
             ->makePartial()
             ->shouldDeferMissing();
+<<<<<<< HEAD
 >>>>>>> e697a77b (.)
+=======
+>>>>>>> 89d0c8f4 (.)
 
     // Other required method stubs
     $mock->shouldReceive('getModelClass')
@@ -183,9 +214,12 @@ class HasTableWithXot
         $mock->shouldReceive('getTableColumns')->andReturn([]);
         $mock->shouldReceive('getTableContentGrid')->andReturn([]);
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> e697a77b (.)
+=======
+>>>>>>> 89d0c8f4 (.)
         return $mock;
     }
 
@@ -272,10 +306,14 @@ class HasTableWithXot
     public function getSelectedTableRecords(bool $shouldFetchSelectedRecords = true): Collection
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
         return new Collection;
 =======
         return new Collection();
 >>>>>>> e697a77b (.)
+=======
+        return new Collection();
+>>>>>>> 89d0c8f4 (.)
     }
 
     public function getAllTableRecordsCount(): int
@@ -384,10 +422,19 @@ class HasTableWithXot
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function deselectAllTableRecords(): void {}
+=======
+    public function deselectAllTableRecords(): void
+    {
+    }
+>>>>>>> 89d0c8f4 (.)
 
-    public function mountTableAction(): void {}
+    public function mountTableAction(): void
+    {
+    }
 
+<<<<<<< HEAD
     public function mountTableBulkAction(): void {}
 =======
     public function deselectAllTableRecords(): void
@@ -402,6 +449,11 @@ class HasTableWithXot
     {
     }
 >>>>>>> e697a77b (.)
+=======
+    public function mountTableBulkAction(): void
+    {
+    }
+>>>>>>> 89d0c8f4 (.)
 
     public function mountedTableActionRecord(): mixed
     {
@@ -409,14 +461,27 @@ class HasTableWithXot
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function replaceMountedTableAction(): void {}
+=======
+    public function replaceMountedTableAction(): void
+    {
+    }
+>>>>>>> 89d0c8f4 (.)
 
-    public function replaceMountedTableBulkAction(): void {}
+    public function replaceMountedTableBulkAction(): void
+    {
+    }
 
-    public function resetTableSearch(): void {}
+    public function resetTableSearch(): void
+    {
+    }
 
-    public function resetTableColumnSearch(): void {}
+    public function resetTableColumnSearch(): void
+    {
+    }
 
+<<<<<<< HEAD
     public function toggleTableReordering(): void {}
 =======
     public function replaceMountedTableAction(): void
@@ -439,6 +504,11 @@ class HasTableWithXot
     {
     }
 >>>>>>> e697a77b (.)
+=======
+    public function toggleTableReordering(): void
+    {
+    }
+>>>>>>> 89d0c8f4 (.)
 
     public function parseTableFilterName(): string
     {
@@ -464,9 +534,12 @@ class HasTableWithoutOptionalMethods
         $mock->shouldReceive('getTableColumns')->andReturn([]);
         $mock->shouldReceive('getTableContentGrid')->andReturn([]);
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> e697a77b (.)
+=======
+>>>>>>> 89d0c8f4 (.)
         return $mock;
     }
 
@@ -661,10 +734,19 @@ class HasTableWithoutOptionalMethods
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function deselectAllTableRecords(): void {}
+=======
+    public function deselectAllTableRecords(): void
+    {
+    }
+>>>>>>> 89d0c8f4 (.)
 
-    public function mountTableAction(): void {}
+    public function mountTableAction(): void
+    {
+    }
 
+<<<<<<< HEAD
     public function mountTableBulkAction(): void {}
 =======
     public function deselectAllTableRecords(): void
@@ -679,6 +761,11 @@ class HasTableWithoutOptionalMethods
     {
     }
 >>>>>>> e697a77b (.)
+=======
+    public function mountTableBulkAction(): void
+    {
+    }
+>>>>>>> 89d0c8f4 (.)
 
     public function mountedTableActionRecord(): mixed
     {
@@ -686,14 +773,27 @@ class HasTableWithoutOptionalMethods
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function replaceMountedTableAction(): void {}
+=======
+    public function replaceMountedTableAction(): void
+    {
+    }
+>>>>>>> 89d0c8f4 (.)
 
-    public function replaceMountedTableBulkAction(): void {}
+    public function replaceMountedTableBulkAction(): void
+    {
+    }
 
-    public function resetTableSearch(): void {}
+    public function resetTableSearch(): void
+    {
+    }
 
-    public function resetTableColumnSearch(): void {}
+    public function resetTableColumnSearch(): void
+    {
+    }
 
+<<<<<<< HEAD
     public function toggleTableReordering(): void {}
 =======
     public function replaceMountedTableAction(): void
@@ -716,6 +816,11 @@ class HasTableWithoutOptionalMethods
     {
     }
 >>>>>>> e697a77b (.)
+=======
+    public function toggleTableReordering(): void
+    {
+    }
+>>>>>>> 89d0c8f4 (.)
 
     public function parseTableFilterName(): string
     {

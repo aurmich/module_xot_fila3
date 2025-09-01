@@ -12,10 +12,14 @@ use Illuminate\Database\Eloquent\Model;
  * @property string|null $title
  * @property string|null $subtitle
 <<<<<<< HEAD
+<<<<<<< HEAD
  * @property int|null $status
 =======
  * @property int|null    $status
 >>>>>>> e697a77b (.)
+=======
+ * @property int|null    $status
+>>>>>>> 89d0c8f4 (.)
  *
  * @method mixed update($params)
  *
@@ -24,9 +28,15 @@ use Illuminate\Database\Eloquent\Model;
  * @mixin \Eloquent
  */
 <<<<<<< HEAD
+<<<<<<< HEAD
 interface PivotContract {}
 =======
 interface PivotContract
 {
 }
 >>>>>>> e697a77b (.)
+=======
+interface PivotContract
+{
+}
+>>>>>>> 89d0c8f4 (.)

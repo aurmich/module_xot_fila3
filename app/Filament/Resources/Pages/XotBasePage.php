@@ -5,18 +5,25 @@ declare(strict_types=1);
 namespace Modules\Xot\Filament\Resources\Pages;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 use Filament\Forms\ComponentContainer;
 use Filament\Forms\Components\Component;
 use Filament\Forms\Concerns\InteractsWithForms;
 use Filament\Forms\Contracts\HasForms;
+=======
+use Closure;
+>>>>>>> 89d0c8f4 (.)
 use Filament\Forms\Form;
-use Filament\Pages\Concerns\InteractsWithFormActions;
-use Filament\Pages\Page as FilamentPage;
-use Illuminate\Contracts\View\View;
-use Illuminate\Support\Collection;
 use Illuminate\Support\Str;
-use Modules\Xot\Filament\Traits\NavigationLabelTrait;
+use Webmozart\Assert\Assert;
+use Illuminate\Support\Collection;
+use Illuminate\Contracts\View\View;
+use Filament\Forms\ComponentContainer;
+use Filament\Forms\Contracts\HasForms;
+use Filament\Forms\Components\Component;
+use Filament\Pages\Page as FilamentPage;
 use Modules\Xot\Filament\Traits\TransTrait;
+<<<<<<< HEAD
 
 =======
 use Closure;
@@ -34,6 +41,11 @@ use Filament\Forms\Concerns\InteractsWithForms;
 use Filament\Pages\Concerns\InteractsWithFormActions;
 use Modules\Xot\Filament\Traits\NavigationLabelTrait;
 >>>>>>> e697a77b (.)
+=======
+use Filament\Forms\Concerns\InteractsWithForms;
+use Filament\Pages\Concerns\InteractsWithFormActions;
+use Modules\Xot\Filament\Traits\NavigationLabelTrait;
+>>>>>>> 89d0c8f4 (.)
 /**
  * Base class for all custom pages in the application.
  *
@@ -44,13 +56,17 @@ use Modules\Xot\Filament\Traits\NavigationLabelTrait;
  * @property ?array $data
  * @property ComponentContainer $form
 <<<<<<< HEAD
+<<<<<<< HEAD
  */
+=======
+*/
+>>>>>>> 89d0c8f4 (.)
 abstract class XotBasePage extends FilamentPage implements HasForms
 {
-    use InteractsWithFormActions;
     use InteractsWithForms;
     use NavigationLabelTrait;
     use TransTrait;
+<<<<<<< HEAD
 =======
 */
 abstract class XotBasePage extends FilamentPage implements HasForms
@@ -60,6 +76,9 @@ abstract class XotBasePage extends FilamentPage implements HasForms
     use TransTrait;
     use InteractsWithFormActions;
 >>>>>>> e697a77b (.)
+=======
+    use InteractsWithFormActions;
+>>>>>>> 89d0c8f4 (.)
 
     /**
      * The model class associated with this page, if any.
@@ -74,9 +93,13 @@ abstract class XotBasePage extends FilamentPage implements HasForms
     public ?array $data = [];
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     
 >>>>>>> e697a77b (.)
+=======
+    
+>>>>>>> 89d0c8f4 (.)
     /**
      * Get the view that should be used for the page.
      */
@@ -166,10 +189,14 @@ abstract class XotBasePage extends FilamentPage implements HasForms
     /*
      * Hook chiamato all'inizializzazione del componente.
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
      
 >>>>>>> e697a77b (.)
+=======
+     
+>>>>>>> 89d0c8f4 (.)
     public function mount(int|string $record): void
     {
         parent::mount($record);

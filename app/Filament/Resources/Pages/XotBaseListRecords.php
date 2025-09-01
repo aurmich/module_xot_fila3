@@ -32,6 +32,7 @@ abstract class XotBaseListRecords extends FilamentListRecords
      *
      * @return array<string, Tables\Columns\Column>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
     abstract public function getTableColumns(): array;
     */
@@ -43,6 +44,13 @@ abstract class XotBaseListRecords extends FilamentListRecords
 
     
 >>>>>>> e697a77b (.)
+=======
+     
+    abstract public function getTableColumns(): array;
+    */
+
+    
+>>>>>>> 89d0c8f4 (.)
     /**
      * Get the default sort column and direction.
      *
@@ -63,10 +71,14 @@ abstract class XotBaseListRecords extends FilamentListRecords
         return [
             // \Filament\Actions\CreateAction::make(),
 <<<<<<< HEAD
+<<<<<<< HEAD
             // ExportXlsAction::make('export_xls'),
 =======
            // ExportXlsAction::make('export_xls'),
 >>>>>>> e697a77b (.)
+=======
+           // ExportXlsAction::make('export_xls'),
+>>>>>>> 89d0c8f4 (.)
         ];
     }
 
@@ -84,12 +96,17 @@ abstract class XotBaseListRecords extends FilamentListRecords
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     /**
+=======
+    /** 
+>>>>>>> 89d0c8f4 (.)
      * Paginate the table query.
-     */
+    */
     protected function paginateTableQueryTMP(Builder $query): Paginator
     {
         return $query->fastPaginate(
+<<<<<<< HEAD
             ($this->getTableRecordsPerPage() === 'all')
             ? $query->count()
 =======
@@ -102,11 +119,19 @@ abstract class XotBaseListRecords extends FilamentListRecords
             ('all' === $this->getTableRecordsPerPage()) 
             ? $query->count() 
 >>>>>>> e697a77b (.)
+=======
+            ('all' === $this->getTableRecordsPerPage()) 
+            ? $query->count() 
+>>>>>>> 89d0c8f4 (.)
             : $this->getTableRecordsPerPage()
         );
     }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> e697a77b (.)
+=======
+
+>>>>>>> 89d0c8f4 (.)

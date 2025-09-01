@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace Modules\Xot\Filament\Clusters;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 use Filament\Clusters\Cluster as FilamentCluster;
 use Illuminate\Contracts\Support\Htmlable;
 use Illuminate\Support\Facades\Lang;
@@ -13,6 +14,11 @@ use Illuminate\Support\Facades\Lang;
 use Illuminate\Contracts\Support\Htmlable;
 use Filament\Clusters\Cluster as FilamentCluster;
 >>>>>>> e697a77b (.)
+=======
+use Illuminate\Support\Facades\Lang;
+use Illuminate\Contracts\Support\Htmlable;
+use Filament\Clusters\Cluster as FilamentCluster;
+>>>>>>> 89d0c8f4 (.)
 use Modules\Xot\Filament\Traits\NavigationLabelTrait;
 
 class XotBaseCluster extends FilamentCluster
@@ -36,6 +42,7 @@ class XotBaseCluster extends FilamentCluster
             'res' => $res,
         ]);
 <<<<<<< HEAD
+<<<<<<< HEAD
 
         // return Lang::get('broker::cliente.navigation_group');
         return 'AAAAAAAAA';
@@ -48,6 +55,13 @@ class XotBaseCluster extends FilamentCluster
 
 
 >>>>>>> e697a77b (.)
+=======
+        //return Lang::get('broker::cliente.navigation_group');
+        return 'AAAAAAAAA';
+    }
+
+
+>>>>>>> 89d0c8f4 (.)
     /*
     protected static ?string $navigationIcon = 'heroicon-o-users';
 

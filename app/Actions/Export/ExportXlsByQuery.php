@@ -19,18 +19,24 @@ class ExportXlsByQuery
      * Esporta i risultati di una query in Excel.
      *
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @param  Builder  $query  Query da esportare
      * @param  string  $filename  Nome del file Excel
      * @param  array<int, string>  $fields  Campi da includere nell'export
      * @param  int|null  $limit  Limite di righe da esportare
 =======
+=======
+>>>>>>> 89d0c8f4 (.)
      * @param Builder $query Query da esportare
      * @param string $filename Nome del file Excel
      * @param array<int, string> $fields Campi da includere nell'export
      * @param int|null $limit Limite di righe da esportare
      * 
      * @return BinaryFileResponse
+<<<<<<< HEAD
 >>>>>>> e697a77b (.)
+=======
+>>>>>>> 89d0c8f4 (.)
      */
     public function execute(
         Builder $query,

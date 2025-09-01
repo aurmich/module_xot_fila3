@@ -11,10 +11,14 @@ use Webmozart\Assert\Assert;
 /**
  * Classe per misurare le performance di esecuzione di un blocco di codice.
 <<<<<<< HEAD
+<<<<<<< HEAD
  *
 =======
  * 
 >>>>>>> e697a77b (.)
+=======
+ * 
+>>>>>>> 89d0c8f4 (.)
  * @template T
  */
 class MeasureAction
@@ -23,6 +27,7 @@ class MeasureAction
      * Esegue una closure misurando il tempo di esecuzione e l'utilizzo di memoria.
      *
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @param  \Closure():T  $closure  La closure da eseguire e misurare
      * @param  string  $label  Etichetta opzionale per identificare la misurazione
 =======
@@ -30,16 +35,25 @@ class MeasureAction
      * @param string $label Etichetta opzionale per identificare la misurazione
      * 
 >>>>>>> e697a77b (.)
+=======
+     * @param \Closure():T $closure La closure da eseguire e misurare
+     * @param string $label Etichetta opzionale per identificare la misurazione
+     * 
+>>>>>>> 89d0c8f4 (.)
      * @return T Il risultato dell'esecuzione della closure
      */
     public function execute(\Closure $closure, string $label = ''): mixed
     {
         Assert::isCallable($closure, 'Il parametro $closure deve essere una funzione chiamabile');
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
         
 >>>>>>> e697a77b (.)
+=======
+        
+>>>>>>> 89d0c8f4 (.)
         $start = microtime(true);
         $memory_start = memory_get_usage();
 

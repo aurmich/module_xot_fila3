@@ -17,6 +17,7 @@ trait CreatesApplication
         $app = require __DIR__.'/../../../bootstrap/app.php';
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         // Laravel 11+ compatibility - ensure proper bootstrapping
         $app->make(Kernel::class)->bootstrap();
         
@@ -28,6 +29,9 @@ trait CreatesApplication
 =======
         $app->make(Kernel::class)->bootstrap();
 >>>>>>> e697a77b (.)
+=======
+        $app->make(Kernel::class)->bootstrap();
+>>>>>>> 89d0c8f4 (.)
 
         return $app;
     }

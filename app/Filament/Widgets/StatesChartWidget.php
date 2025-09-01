@@ -5,15 +5,20 @@ declare(strict_types=1);
 namespace Modules\Xot\Filament\Widgets;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+use Modules\Xot\Filament\Widgets\XotBaseChartWidget;
+
+
+>>>>>>> 89d0c8f4 (.)
 class StatesChartWidget extends XotBaseChartWidget
 {
     protected static ?string $heading = null;
-
     protected static ?int $sort = 4;
-
     protected static bool $isLazy = true;
 
     public string $stateClass;
+<<<<<<< HEAD
 
 =======
 use Modules\Xot\Filament\Widgets\XotBaseChartWidget;
@@ -27,6 +32,8 @@ class StatesChartWidget extends XotBaseChartWidget
 
     public string $stateClass;
 >>>>>>> e697a77b (.)
+=======
+>>>>>>> 89d0c8f4 (.)
     public string $model;
 
     public function getHeading(): ?string
@@ -55,6 +62,7 @@ class StatesChartWidget extends XotBaseChartWidget
                         'label' => $label,
                         'data' => $states->pluck('count')->toArray(),
 <<<<<<< HEAD
+<<<<<<< HEAD
                         'backgroundColor' => $states->keys()->map(fn ($state) => $colors[$state] ?? 'rgb(156, 163, 175)')->toArray(),
                         'borderColor' => $states->keys()->map(fn ($state) => $colors[$state] ?? 'rgb(156, 163, 175)')->toArray(),
                         'borderWidth' => 1,
@@ -69,6 +77,14 @@ class StatesChartWidget extends XotBaseChartWidget
                 ],
                 'labels' => $states->keys()->map(fn($state) => static::transClass($this->model, 'states.'.$state.'.label'))->toArray(),
 >>>>>>> e697a77b (.)
+=======
+                        'backgroundColor' => $states->keys()->map(fn($state) => $colors[$state] ?? 'rgb(156, 163, 175)')->toArray(),
+                        'borderColor' => $states->keys()->map(fn($state) => $colors[$state] ?? 'rgb(156, 163, 175)')->toArray(),
+                        'borderWidth' => 1,
+                    ],
+                ],
+                'labels' => $states->keys()->map(fn($state) => static::transClass($this->model, 'states.'.$state.'.label'))->toArray(),
+>>>>>>> 89d0c8f4 (.)
             ];
         } catch (\Exception $e) {
             // Fallback appropriato senza logging inutile
@@ -92,7 +108,11 @@ class StatesChartWidget extends XotBaseChartWidget
         return 'bar';
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 =======
 } 
 >>>>>>> e697a77b (.)
+=======
+} 
+>>>>>>> 89d0c8f4 (.)

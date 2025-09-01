@@ -12,9 +12,13 @@ use Filament\Actions\Action;
 use Filament\Notifications\Notification;
 use Filament\Pages\Page;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 use Illuminate\Support\Carbon;
 >>>>>>> e697a77b (.)
+=======
+use Illuminate\Support\Carbon;
+>>>>>>> 89d0c8f4 (.)
 use Illuminate\Support\Facades\Artisan;
 use Modules\Xot\Filament\Traits\NavigationLabelTrait;
 use Modules\Xot\Filament\Widgets;
@@ -51,10 +55,14 @@ class HealthPage extends Page
             Checks\FlareErrorOccurrenceCountCheck::new(),
             Checks\HorizonCheck::new(),
 <<<<<<< HEAD
+<<<<<<< HEAD
             // Checks\MeiliSearchCheck::new(),
 =======
             //Checks\MeiliSearchCheck::new(),
 >>>>>>> e697a77b (.)
+=======
+            //Checks\MeiliSearchCheck::new(),
+>>>>>>> 89d0c8f4 (.)
             Checks\QueueCheck::new(),
             Checks\RedisCheck::new(),
             Checks\ScheduleCheck::new(),
@@ -91,10 +99,14 @@ class HealthPage extends Page
         return [
             Action::make('refresh')
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
                 
 >>>>>>> e697a77b (.)
+=======
+                
+>>>>>>> 89d0c8f4 (.)
                 ->tooltip('refresh')
                 ->icon('heroicon-o-arrow-path')
                 ->button()

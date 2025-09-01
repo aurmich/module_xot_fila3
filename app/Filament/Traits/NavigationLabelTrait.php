@@ -56,10 +56,14 @@ trait NavigationLabelTrait
         $value = intval($res);
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         if ($value == 0) {
 =======
         if (0 == $value) {
 >>>>>>> e697a77b (.)
+=======
+        if (0 == $value) {
+>>>>>>> 89d0c8f4 (.)
             $key = static::getKeyTransFunc(__FUNCTION__);
             $value = rand(1, 100);
             app(SaveTransAction::class)->execute($key, $value);

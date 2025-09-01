@@ -5,11 +5,15 @@ declare(strict_types=1);
 namespace Modules\Xot\Tests\Feature;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 use Illuminate\Database\Eloquent\Model;
+=======
+use Modules\Xot\Models\XotBaseModel;
+>>>>>>> 89d0c8f4 (.)
 use Modules\Xot\Models\BaseModel;
 use Modules\Xot\Models\Module;
-use Modules\Xot\Models\XotBaseModel;
 use Tests\TestCase;
+<<<<<<< HEAD
 =======
 use Modules\Xot\Models\XotBaseModel;
 use Modules\Xot\Models\BaseModel;
@@ -18,6 +22,10 @@ use Tests\TestCase;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\DB;
 >>>>>>> e697a77b (.)
+=======
+use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Facades\DB;
+>>>>>>> 89d0c8f4 (.)
 
 class XotBaseModelBusinessLogicTest extends TestCase
 {
@@ -26,10 +34,14 @@ class XotBaseModelBusinessLogicTest extends TestCase
     {
         // Arrange & Act
 <<<<<<< HEAD
+<<<<<<< HEAD
         $baseModel = new BaseModel;
 =======
         $baseModel = new BaseModel();
 >>>>>>> e697a77b (.)
+=======
+        $baseModel = new BaseModel();
+>>>>>>> 89d0c8f4 (.)
 
         // Assert
         $this->assertInstanceOf(XotBaseModel::class, $baseModel);
@@ -41,10 +53,14 @@ class XotBaseModelBusinessLogicTest extends TestCase
     {
         // Arrange
 <<<<<<< HEAD
+<<<<<<< HEAD
         $baseModel = new BaseModel;
 =======
         $baseModel = new BaseModel();
 >>>>>>> e697a77b (.)
+=======
+        $baseModel = new BaseModel();
+>>>>>>> 89d0c8f4 (.)
 
         // Act & Assert
         $this->assertTrue(method_exists($baseModel, 'getTable'));
@@ -57,10 +73,14 @@ class XotBaseModelBusinessLogicTest extends TestCase
     {
         // Arrange & Act
 <<<<<<< HEAD
+<<<<<<< HEAD
         $baseModel = new BaseModel;
 =======
         $baseModel = new BaseModel();
 >>>>>>> e697a77b (.)
+=======
+        $baseModel = new BaseModel();
+>>>>>>> 89d0c8f4 (.)
 
         // Assert
         $this->assertInstanceOf(BaseModel::class, $baseModel);
@@ -72,10 +92,14 @@ class XotBaseModelBusinessLogicTest extends TestCase
     {
         // Arrange
 <<<<<<< HEAD
+<<<<<<< HEAD
         $baseModel = new BaseModel;
 =======
         $baseModel = new BaseModel();
 >>>>>>> e697a77b (.)
+=======
+        $baseModel = new BaseModel();
+>>>>>>> 89d0c8f4 (.)
 
         // Act
         $tableName = $baseModel->getTable();
@@ -90,10 +114,14 @@ class XotBaseModelBusinessLogicTest extends TestCase
     {
         // Arrange
 <<<<<<< HEAD
+<<<<<<< HEAD
         $baseModel = new BaseModel;
 =======
         $baseModel = new BaseModel();
 >>>>>>> e697a77b (.)
+=======
+        $baseModel = new BaseModel();
+>>>>>>> 89d0c8f4 (.)
 
         // Act
         $connection = $baseModel->getConnection();
@@ -108,10 +136,14 @@ class XotBaseModelBusinessLogicTest extends TestCase
     {
         // Arrange
 <<<<<<< HEAD
+<<<<<<< HEAD
         $baseModel = new BaseModel;
 =======
         $baseModel = new BaseModel();
 >>>>>>> e697a77b (.)
+=======
+        $baseModel = new BaseModel();
+>>>>>>> 89d0c8f4 (.)
 
         // Act
         $keyName = $baseModel->getKeyName();
@@ -126,10 +158,14 @@ class XotBaseModelBusinessLogicTest extends TestCase
     {
         // Arrange
 <<<<<<< HEAD
+<<<<<<< HEAD
         $module = new Module;
 =======
         $module = new Module();
 >>>>>>> e697a77b (.)
+=======
+        $module = new Module();
+>>>>>>> 89d0c8f4 (.)
 
         // Act & Assert
         $this->assertInstanceOf(XotBaseModel::class, $module);
@@ -141,10 +177,14 @@ class XotBaseModelBusinessLogicTest extends TestCase
     {
         // Arrange
 <<<<<<< HEAD
+<<<<<<< HEAD
         $baseModel = new BaseModel;
 =======
         $baseModel = new BaseModel();
 >>>>>>> e697a77b (.)
+=======
+        $baseModel = new BaseModel();
+>>>>>>> 89d0c8f4 (.)
 
         // Act
         $fillable = $baseModel->getFillable();
@@ -162,10 +202,14 @@ class XotBaseModelBusinessLogicTest extends TestCase
     {
         // Arrange
 <<<<<<< HEAD
+<<<<<<< HEAD
         $baseModel = new BaseModel;
 =======
         $baseModel = new BaseModel();
 >>>>>>> e697a77b (.)
+=======
+        $baseModel = new BaseModel();
+>>>>>>> 89d0c8f4 (.)
 
         // Act
         $usesSoftDeletes = method_exists($baseModel, 'trashed');
@@ -181,10 +225,14 @@ class XotBaseModelBusinessLogicTest extends TestCase
     {
         // Arrange
 <<<<<<< HEAD
+<<<<<<< HEAD
         $baseModel = new BaseModel;
 =======
         $baseModel = new BaseModel();
 >>>>>>> e697a77b (.)
+=======
+        $baseModel = new BaseModel();
+>>>>>>> 89d0c8f4 (.)
 
         // Act
         $usesTimestamps = $baseModel->usesTimestamps();
@@ -199,10 +247,14 @@ class XotBaseModelBusinessLogicTest extends TestCase
     {
         // Arrange
 <<<<<<< HEAD
+<<<<<<< HEAD
         $baseModel = new BaseModel;
 =======
         $baseModel = new BaseModel();
 >>>>>>> e697a77b (.)
+=======
+        $baseModel = new BaseModel();
+>>>>>>> 89d0c8f4 (.)
 
         // Act
         $hasTenantTrait = method_exists($baseModel, 'getTenantKey');
@@ -218,10 +270,14 @@ class XotBaseModelBusinessLogicTest extends TestCase
     {
         // Arrange
 <<<<<<< HEAD
+<<<<<<< HEAD
         $baseModel = new BaseModel;
 =======
         $baseModel = new BaseModel();
 >>>>>>> e697a77b (.)
+=======
+        $baseModel = new BaseModel();
+>>>>>>> 89d0c8f4 (.)
 
         // Act
         $hasAuditTrait = method_exists($baseModel, 'getAuditEvents');
@@ -237,10 +293,14 @@ class XotBaseModelBusinessLogicTest extends TestCase
     {
         // Arrange
 <<<<<<< HEAD
+<<<<<<< HEAD
         $baseModel = new BaseModel;
 =======
         $baseModel = new BaseModel();
 >>>>>>> e697a77b (.)
+=======
+        $baseModel = new BaseModel();
+>>>>>>> 89d0c8f4 (.)
 
         // Act
         $serialized = serialize($baseModel);
@@ -255,10 +315,14 @@ class XotBaseModelBusinessLogicTest extends TestCase
     {
         // Arrange
 <<<<<<< HEAD
+<<<<<<< HEAD
         $baseModel = new BaseModel;
 =======
         $baseModel = new BaseModel();
 >>>>>>> e697a77b (.)
+=======
+        $baseModel = new BaseModel();
+>>>>>>> 89d0c8f4 (.)
         $serialized = serialize($baseModel);
 
         // Act
@@ -273,10 +337,14 @@ class XotBaseModelBusinessLogicTest extends TestCase
     {
         // Arrange
 <<<<<<< HEAD
+<<<<<<< HEAD
         $baseModel = new BaseModel;
 =======
         $baseModel = new BaseModel();
 >>>>>>> e697a77b (.)
+=======
+        $baseModel = new BaseModel();
+>>>>>>> 89d0c8f4 (.)
 
         // Act
         $json = json_encode($baseModel);
@@ -292,10 +360,14 @@ class XotBaseModelBusinessLogicTest extends TestCase
     {
         // Arrange
 <<<<<<< HEAD
+<<<<<<< HEAD
         $baseModel = new BaseModel;
 =======
         $baseModel = new BaseModel();
 >>>>>>> e697a77b (.)
+=======
+        $baseModel = new BaseModel();
+>>>>>>> 89d0c8f4 (.)
 
         // Act
         $array = $baseModel->toArray();
@@ -310,10 +382,14 @@ class XotBaseModelBusinessLogicTest extends TestCase
     {
         // Arrange
 <<<<<<< HEAD
+<<<<<<< HEAD
         $baseModel = new BaseModel;
 =======
         $baseModel = new BaseModel();
 >>>>>>> e697a77b (.)
+=======
+        $baseModel = new BaseModel();
+>>>>>>> 89d0c8f4 (.)
 
         // Act
         $json = $baseModel->toJson();
@@ -328,10 +404,14 @@ class XotBaseModelBusinessLogicTest extends TestCase
     {
         // Arrange
 <<<<<<< HEAD
+<<<<<<< HEAD
         $baseModel = new BaseModel;
 =======
         $baseModel = new BaseModel();
 >>>>>>> e697a77b (.)
+=======
+        $baseModel = new BaseModel();
+>>>>>>> 89d0c8f4 (.)
 
         // Act
         $hasLoadMethod = method_exists($baseModel, 'load');
@@ -345,10 +425,14 @@ class XotBaseModelBusinessLogicTest extends TestCase
     {
         // Arrange
 <<<<<<< HEAD
+<<<<<<< HEAD
         $baseModel = new BaseModel;
 =======
         $baseModel = new BaseModel();
 >>>>>>> e697a77b (.)
+=======
+        $baseModel = new BaseModel();
+>>>>>>> 89d0c8f4 (.)
 
         // Act
         $hasGetAttributeMethod = method_exists($baseModel, 'getAttribute');
@@ -364,10 +448,14 @@ class XotBaseModelBusinessLogicTest extends TestCase
     {
         // Arrange
 <<<<<<< HEAD
+<<<<<<< HEAD
         $baseModel = new BaseModel;
 =======
         $baseModel = new BaseModel();
 >>>>>>> e697a77b (.)
+=======
+        $baseModel = new BaseModel();
+>>>>>>> 89d0c8f4 (.)
 
         // Act
         $fillable = $baseModel->getFillable();
@@ -383,10 +471,14 @@ class XotBaseModelBusinessLogicTest extends TestCase
     {
         // Arrange
 <<<<<<< HEAD
+<<<<<<< HEAD
         $baseModel = new BaseModel;
 =======
         $baseModel = new BaseModel();
 >>>>>>> e697a77b (.)
+=======
+        $baseModel = new BaseModel();
+>>>>>>> 89d0c8f4 (.)
 
         // Act
         $hasEvents = method_exists($baseModel, 'fireModelEvent');
@@ -400,10 +492,14 @@ class XotBaseModelBusinessLogicTest extends TestCase
     {
         // Arrange
 <<<<<<< HEAD
+<<<<<<< HEAD
         $baseModel = new BaseModel;
 =======
         $baseModel = new BaseModel();
 >>>>>>> e697a77b (.)
+=======
+        $baseModel = new BaseModel();
+>>>>>>> 89d0c8f4 (.)
 
         // Act
         $hasObservers = method_exists($baseModel, 'getObservableEvents');
@@ -417,10 +513,14 @@ class XotBaseModelBusinessLogicTest extends TestCase
     {
         // Arrange
 <<<<<<< HEAD
+<<<<<<< HEAD
         $baseModel = new BaseModel;
 =======
         $baseModel = new BaseModel();
 >>>>>>> e697a77b (.)
+=======
+        $baseModel = new BaseModel();
+>>>>>>> 89d0c8f4 (.)
 
         // Act
         $hasScopes = method_exists($baseModel, 'addGlobalScope');
@@ -434,10 +534,14 @@ class XotBaseModelBusinessLogicTest extends TestCase
     {
         // Arrange
 <<<<<<< HEAD
+<<<<<<< HEAD
         $baseModel = new BaseModel;
 =======
         $baseModel = new BaseModel();
 >>>>>>> e697a77b (.)
+=======
+        $baseModel = new BaseModel();
+>>>>>>> 89d0c8f4 (.)
 
         // Act
         $hasAccessors = method_exists($baseModel, 'getAttributeValue');
@@ -453,10 +557,14 @@ class XotBaseModelBusinessLogicTest extends TestCase
     {
         // Arrange
 <<<<<<< HEAD
+<<<<<<< HEAD
         $baseModel = new BaseModel;
 =======
         $baseModel = new BaseModel();
 >>>>>>> e697a77b (.)
+=======
+        $baseModel = new BaseModel();
+>>>>>>> 89d0c8f4 (.)
 
         // Act
         $casts = $baseModel->getCasts();
@@ -470,10 +578,14 @@ class XotBaseModelBusinessLogicTest extends TestCase
     {
         // Arrange
 <<<<<<< HEAD
+<<<<<<< HEAD
         $baseModel = new BaseModel;
 =======
         $baseModel = new BaseModel();
 >>>>>>> e697a77b (.)
+=======
+        $baseModel = new BaseModel();
+>>>>>>> 89d0c8f4 (.)
 
         // Act
         $dates = $baseModel->getDates();
@@ -487,10 +599,14 @@ class XotBaseModelBusinessLogicTest extends TestCase
     {
         // Arrange
 <<<<<<< HEAD
+<<<<<<< HEAD
         $baseModel = new BaseModel;
 =======
         $baseModel = new BaseModel();
 >>>>>>> e697a77b (.)
+=======
+        $baseModel = new BaseModel();
+>>>>>>> 89d0c8f4 (.)
 
         // Act
         $hidden = $baseModel->getHidden();
@@ -504,10 +620,14 @@ class XotBaseModelBusinessLogicTest extends TestCase
     {
         // Arrange
 <<<<<<< HEAD
+<<<<<<< HEAD
         $baseModel = new BaseModel;
 =======
         $baseModel = new BaseModel();
 >>>>>>> e697a77b (.)
+=======
+        $baseModel = new BaseModel();
+>>>>>>> 89d0c8f4 (.)
 
         // Act
         $visible = $baseModel->getVisible();
@@ -521,10 +641,14 @@ class XotBaseModelBusinessLogicTest extends TestCase
     {
         // Arrange
 <<<<<<< HEAD
+<<<<<<< HEAD
         $baseModel = new BaseModel;
 =======
         $baseModel = new BaseModel();
 >>>>>>> e697a77b (.)
+=======
+        $baseModel = new BaseModel();
+>>>>>>> 89d0c8f4 (.)
 
         // Act
         $appends = $baseModel->getAppends();
@@ -538,10 +662,14 @@ class XotBaseModelBusinessLogicTest extends TestCase
     {
         // Arrange
 <<<<<<< HEAD
+<<<<<<< HEAD
         $baseModel = new BaseModel;
 =======
         $baseModel = new BaseModel();
 >>>>>>> e697a77b (.)
+=======
+        $baseModel = new BaseModel();
+>>>>>>> 89d0c8f4 (.)
 
         // Act
         $with = $baseModel->getWith();
@@ -551,6 +679,10 @@ class XotBaseModelBusinessLogicTest extends TestCase
     }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> e697a77b (.)
+=======
+
+>>>>>>> 89d0c8f4 (.)

@@ -3,12 +3,17 @@
 declare(strict_types=1);
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 use Filament\Support\Colors\Color;
 use Modules\Xot\Datas\MetatagData;
 =======
 use Modules\Xot\Datas\MetatagData;
 use Filament\Support\Colors\Color;
 >>>>>>> e697a77b (.)
+=======
+use Modules\Xot\Datas\MetatagData;
+use Filament\Support\Colors\Color;
+>>>>>>> 89d0c8f4 (.)
 
 /**
  * Test che la classe MetatagData possa essere istanziata correttamente.
@@ -16,10 +21,14 @@ use Filament\Support\Colors\Color;
  */
 test('MetatagData può essere istanziata', function () {
 <<<<<<< HEAD
+<<<<<<< HEAD
     $metatagData = new MetatagData;
 =======
     $metatagData = new MetatagData();
 >>>>>>> e697a77b (.)
+=======
+    $metatagData = new MetatagData();
+>>>>>>> 89d0c8f4 (.)
     expect($metatagData)->toBeInstanceOf(MetatagData::class);
 });
 
@@ -30,10 +39,14 @@ test('MetatagData può essere istanziata', function () {
  */
 test('getFilamentColors restituisce i colori Filament corretti', function () {
 <<<<<<< HEAD
+<<<<<<< HEAD
     $metatagData = new MetatagData;
 =======
     $metatagData = new MetatagData();
 >>>>>>> e697a77b (.)
+=======
+    $metatagData = new MetatagData();
+>>>>>>> 89d0c8f4 (.)
     $colors = $metatagData->getFilamentColors();
 
     expect($colors)->toBeArray()
@@ -49,14 +62,19 @@ test('getFilamentColors restituisce i colori Filament corretti', function () {
  */
 test('getColors gestisce correttamente i colori personalizzati', function () {
 <<<<<<< HEAD
+<<<<<<< HEAD
     $metatagData = new MetatagData;
 =======
     $metatagData = new MetatagData();
 >>>>>>> e697a77b (.)
+=======
+    $metatagData = new MetatagData();
+>>>>>>> 89d0c8f4 (.)
     $metatagData->colors = [
         'custom_color' => [
             'key' => 'custom_color',
             'color' => 'custom',
+<<<<<<< HEAD
 <<<<<<< HEAD
             'hex' => '#FF5500',
         ],
@@ -72,6 +90,14 @@ test('getColors gestisce correttamente i colori personalizzati', function () {
             'color' => 'amber'
         ]
 >>>>>>> e697a77b (.)
+=======
+            'hex' => '#FF5500'
+        ],
+        'primary' => [
+            'key' => 'primary',
+            'color' => 'amber'
+        ]
+>>>>>>> 89d0c8f4 (.)
     ];
 
     $colors = $metatagData->getColors();
@@ -88,10 +114,14 @@ test('getColors gestisce correttamente i colori personalizzati', function () {
  */
 test('getLogoHeight restituisce il valore corretto', function () {
 <<<<<<< HEAD
+<<<<<<< HEAD
     $metatagData = new MetatagData;
 =======
     $metatagData = new MetatagData();
 >>>>>>> e697a77b (.)
+=======
+    $metatagData = new MetatagData();
+>>>>>>> 89d0c8f4 (.)
     $metatagData->logo_height = '3em';
 
     expect($metatagData->getLogoHeight())->toBe('3em');
@@ -104,10 +134,14 @@ test('getLogoHeight restituisce il valore corretto', function () {
  */
 test('Le proprietà hanno i valori di default corretti', function () {
 <<<<<<< HEAD
+<<<<<<< HEAD
     $metatagData = new MetatagData;
 =======
     $metatagData = new MetatagData();
 >>>>>>> e697a77b (.)
+=======
+    $metatagData = new MetatagData();
+>>>>>>> 89d0c8f4 (.)
 
     expect($metatagData->generator)->toBe('xot')
         ->and($metatagData->charset)->toBe('UTF-8')

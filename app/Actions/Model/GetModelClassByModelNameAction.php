@@ -23,10 +23,14 @@ class GetModelClassByModelNameAction
         Assert::isArray($morph_map = config('morph_map'));
         $modelClass = collect($morph_map)->get($modelName);
 <<<<<<< HEAD
+<<<<<<< HEAD
         if ($modelClass === null) {
 =======
         if (null === $modelClass) {
 >>>>>>> e697a77b (.)
+=======
+        if (null === $modelClass) {
+>>>>>>> 89d0c8f4 (.)
             return app(GetFirstModelClassByModelNameAction::class)->execute($modelName);
         }
         Assert::string($modelClass);

@@ -18,6 +18,7 @@ class AssetAction
      * Gestisce i percorsi degli asset, copiandoli nella directory pubblica se necessario.
      *
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @param  string  $path  Il percorso dell'asset
      * @return string Il percorso pubblico dell'asset
      *
@@ -27,6 +28,12 @@ class AssetAction
      * @return string Il percorso pubblico dell'asset
      * 
 >>>>>>> e697a77b (.)
+=======
+     * @param string $path Il percorso dell'asset
+     * 
+     * @return string Il percorso pubblico dell'asset
+     * 
+>>>>>>> 89d0c8f4 (.)
      * @throws \Exception Se il file sorgente non esiste o non può essere copiato
      */
     public function execute(string $path): string
@@ -62,6 +69,7 @@ class AssetAction
             $theme = $xot->{$ns};
             Assert::string($theme, 'Il tema deve essere una stringa');
 <<<<<<< HEAD
+<<<<<<< HEAD
 
             // Costruiamo i percorsi
             $themeResourcePath = 'Themes/'.$theme.'/resources/'.$ns_after;
@@ -74,6 +82,13 @@ class AssetAction
             $filename_from = app(FixPathAction::class)->execute(base_path($themeResourcePath));
             
 >>>>>>> e697a77b (.)
+=======
+            
+            // Costruiamo i percorsi
+            $themeResourcePath = 'Themes/'.$theme.'/resources/'.$ns_after;
+            $filename_from = app(FixPathAction::class)->execute(base_path($themeResourcePath));
+            
+>>>>>>> 89d0c8f4 (.)
             $themeAssetPath = 'themes/'.$theme.'/'.$ns_after;
             $asset = $themeAssetPath;
             $filename_to = app(FixPathAction::class)->execute(public_path($asset));
@@ -119,10 +134,14 @@ class AssetAction
 
         // dddx(app()->environment());// local
 <<<<<<< HEAD
+<<<<<<< HEAD
         if (! File::exists($filename_to) || app()->environment() !== 'production') {
 =======
         if (! File::exists($filename_to) || 'production' !== app()->environment()) {
 >>>>>>> e697a77b (.)
+=======
+        if (! File::exists($filename_to) || 'production' !== app()->environment()) {
+>>>>>>> 89d0c8f4 (.)
             if (! File::exists(\dirname($filename_to))) {
                 File::makeDirectory(\dirname($filename_to), 0755, true, true);
             }

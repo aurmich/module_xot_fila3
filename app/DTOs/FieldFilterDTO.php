@@ -17,9 +17,14 @@ class FieldFilterDTO extends Data
         public ?string $where_method,
         public ?string $rules,
 <<<<<<< HEAD
+<<<<<<< HEAD
     ) {}
 =======
     ) {
     }
 >>>>>>> e697a77b (.)
+=======
+    ) {
+    }
+>>>>>>> 89d0c8f4 (.)
 }

@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace Modules\Xot\Actions\ModelClass;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 use Spatie\QueueableAction\QueueableAction;
 use Webmozart\Assert\Assert;
 
@@ -17,6 +18,13 @@ use Spatie\QueueableAction\QueueableAction;
 use Webmozart\Assert\Assert;
 
 >>>>>>> e697a77b (.)
+=======
+use function Safe\file;
+
+use Spatie\QueueableAction\QueueableAction;
+use Webmozart\Assert\Assert;
+
+>>>>>>> 89d0c8f4 (.)
 class GetMethodBodyAction
 {
     use QueueableAction;

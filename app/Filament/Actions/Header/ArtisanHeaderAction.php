@@ -23,10 +23,14 @@ class ArtisanHeaderAction extends Action
         $this->translateLabel()
 
 <<<<<<< HEAD
+<<<<<<< HEAD
             //
 =======
             // 
 >>>>>>> e697a77b (.)
+=======
+            // 
+>>>>>>> 89d0c8f4 (.)
             // ->tooltip(__('xot::actions.export_xls'))
 
             // ->icon('heroicon-o-cloud-arrow-down')

@@ -15,22 +15,27 @@ return [
         'filesystem' => [
             'command' => 'npx',
 <<<<<<< HEAD
+<<<<<<< HEAD
             'args' => ['-y', '@modelcontextprotocol/server-filesystem'],
+=======
+            'args' => ['-y', '@modelcontextprotocol/server-filesystem']
+>>>>>>> 89d0c8f4 (.)
         ],
         'memory' => [
             'command' => 'npx',
-            'args' => ['-y', '@modelcontextprotocol/server-memory'],
+            'args' => ['-y', '@modelcontextprotocol/server-memory']
         ],
         'fetch' => [
             'command' => 'npx',
-            'args' => ['-y', '@modelcontextprotocol/server-fetch'],
+            'args' => ['-y', '@modelcontextprotocol/server-fetch']
         ],
         'mysql' => [
             'command' => 'npx',
-            'args' => ['-y', '@modelcontextprotocol/server-mysql'],
+            'args' => ['-y', '@modelcontextprotocol/server-mysql']
         ],
         'redis' => [
             'command' => 'npx',
+<<<<<<< HEAD
             'args' => ['-y', '@modelcontextprotocol/server-redis'],
         ],
 =======
@@ -53,6 +58,10 @@ return [
             'args' => ['-y', '@modelcontextprotocol/server-redis']
         ]
 >>>>>>> e697a77b (.)
+=======
+            'args' => ['-y', '@modelcontextprotocol/server-redis']
+        ]
+>>>>>>> 89d0c8f4 (.)
     ],
 
     /*
@@ -72,13 +81,18 @@ return [
                 'HasFactory',
                 'Notifiable',
 <<<<<<< HEAD
+<<<<<<< HEAD
                 'HasParent',
+=======
+                'HasParent'
+>>>>>>> 89d0c8f4 (.)
             ],
             'relationships' => [
                 'doctor',
-                'patient',
+                'patient'
             ],
             'table' => 'users',
+<<<<<<< HEAD
             'type_column' => 'type',
 =======
                 'HasParent'
@@ -90,20 +104,28 @@ return [
             'table' => 'users',
             'type_column' => 'type'
 >>>>>>> e697a77b (.)
+=======
+            'type_column' => 'type'
+>>>>>>> 89d0c8f4 (.)
         ],
         'Doctor' => [
             'extends' => 'User',
             'type' => 'child',
             'traits' => [
 <<<<<<< HEAD
+<<<<<<< HEAD
                 'HasParent',
 =======
                 'HasParent'
 >>>>>>> e697a77b (.)
+=======
+                'HasParent'
+>>>>>>> 89d0c8f4 (.)
             ],
             'context' => 'medical',
             'validations' => [
                 'medical_license',
+<<<<<<< HEAD
 <<<<<<< HEAD
                 'specialization',
             ],
@@ -111,20 +133,29 @@ return [
                 'specialization'
             ]
 >>>>>>> e697a77b (.)
+=======
+                'specialization'
+            ]
+>>>>>>> 89d0c8f4 (.)
         ],
         'Patient' => [
             'extends' => 'User',
             'type' => 'child',
             'traits' => [
 <<<<<<< HEAD
+<<<<<<< HEAD
                 'HasParent',
 =======
                 'HasParent'
 >>>>>>> e697a77b (.)
+=======
+                'HasParent'
+>>>>>>> 89d0c8f4 (.)
             ],
             'context' => 'medical',
             'validations' => [
                 'health_insurance',
+<<<<<<< HEAD
 <<<<<<< HEAD
                 'medical_history',
             ],
@@ -134,6 +165,11 @@ return [
             ]
         ]
 >>>>>>> e697a77b (.)
+=======
+                'medical_history'
+            ]
+        ]
+>>>>>>> 89d0c8f4 (.)
     ],
 
     /*
@@ -149,10 +185,15 @@ return [
         'strict' => true,
         'log_violations' => true,
 <<<<<<< HEAD
+<<<<<<< HEAD
         'throw_exceptions' => false,
     ],
 =======
         'throw_exceptions' => false
     ]
 >>>>>>> e697a77b (.)
+=======
+        'throw_exceptions' => false
+    ]
+>>>>>>> 89d0c8f4 (.)
 ];

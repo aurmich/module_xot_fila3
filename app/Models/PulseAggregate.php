@@ -8,6 +8,7 @@ namespace Modules\Xot\Models;
  * @property \Modules\Xot\Contracts\ProfileContract|null $creator
  * @property \Modules\Xot\Contracts\ProfileContract|null $updater
 <<<<<<< HEAD
+<<<<<<< HEAD
  *
  * @method static \Modules\Xot\Database\Factories\PulseAggregateFactory factory($count = null, $state = [])
  * @method static \Illuminate\Database\Eloquent\Builder|PulseAggregate newModelQuery()
@@ -19,24 +20,34 @@ namespace Modules\Xot\Models;
  * @property int $period
 =======
  * @method static \Modules\Xot\Database\Factories\PulseAggregateFactory factory($count = null, $state = [])
+=======
+ * @method static \Modules\Xot\Database\Factories\PulseAggregateFactory factory($count = null, $state = [])
+>>>>>>> 89d0c8f4 (.)
  * @method static \Illuminate\Database\Eloquent\Builder|PulseAggregate  newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|PulseAggregate  newQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|PulseAggregate  query()
  * @property int         $id
  * @property int         $bucket
  * @property int         $period
+<<<<<<< HEAD
 >>>>>>> e697a77b (.)
+=======
+>>>>>>> 89d0c8f4 (.)
  * @property string $type
  * @property string $key
  * @property string|null $key_hash
  * @property string $aggregate
  * @property string $value
 <<<<<<< HEAD
+<<<<<<< HEAD
  * @property int|null $count
  *
 =======
  * @property int|null    $count
 >>>>>>> e697a77b (.)
+=======
+ * @property int|null    $count
+>>>>>>> 89d0c8f4 (.)
  * @method static \Illuminate\Database\Eloquent\Builder|PulseAggregate whereAggregate($value)
  * @method static \Illuminate\Database\Eloquent\Builder|PulseAggregate whereBucket($value)
  * @method static \Illuminate\Database\Eloquent\Builder|PulseAggregate whereCount($value)
@@ -47,9 +58,12 @@ namespace Modules\Xot\Models;
  * @method static \Illuminate\Database\Eloquent\Builder|PulseAggregate whereType($value)
  * @method static \Illuminate\Database\Eloquent\Builder|PulseAggregate whereValue($value)
 <<<<<<< HEAD
+<<<<<<< HEAD
  *
 =======
 >>>>>>> e697a77b (.)
+=======
+>>>>>>> 89d0c8f4 (.)
  * @mixin IdeHelperPulseAggregate
  * @mixin \Eloquent
  */

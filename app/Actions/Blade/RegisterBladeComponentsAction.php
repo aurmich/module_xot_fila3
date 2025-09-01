@@ -19,10 +19,14 @@ class RegisterBladeComponentsAction
             ->execute($path, $namespace.'\View\Components', $prefix);
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         if ($comps->count() === 0) {
 =======
         if (0 === $comps->count()) {
 >>>>>>> e697a77b (.)
+=======
+        if (0 === $comps->count()) {
+>>>>>>> 89d0c8f4 (.)
             return;
         }
 

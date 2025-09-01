@@ -7,9 +7,13 @@ namespace Modules\Xot\Actions\View;
 use Illuminate\Support\Str;
 use Spatie\QueueableAction\QueueableAction;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 use Modules\Xot\Actions\View\GetViewNameSpacePathAction;
 >>>>>>> e697a77b (.)
+=======
+use Modules\Xot\Actions\View\GetViewNameSpacePathAction;
+>>>>>>> 89d0c8f4 (.)
 
 class GetViewPathAction
 {

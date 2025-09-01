@@ -25,21 +25,25 @@ use Illuminate\Database\Eloquent\Relations\BelongsToMany;
  * Modules\User\Contracts\UserContract.
  *
 <<<<<<< HEAD
+<<<<<<< HEAD
  * @property ProfileContract|null $profile
+=======
+ * @property ProfileContract|null                                                       $profile
+>>>>>>> 89d0c8f4 (.)
  * @property string $id
  * @property string $handle
- * @property string|null $first_name
- * @property string|null $last_name
- * @property string|null $full_name
- * @property \BackedEnum&\Filament\Support\Contracts\HasLabel $type
- * @property string|null $password
- * @property string|int|null $current_team_id
- * @property string|null $phone
- * @property string|null $email
- * @property \Illuminate\Database\Eloquent\Collection<int, \Modules\User\Models\Role> $roles
+ * @property string|null                                                                $first_name
+ * @property string|null                                                                $last_name
+ * @property string|null                                                                $full_name
+ * @property \BackedEnum&\Filament\Support\Contracts\HasLabel                           $type
+ * @property string|null                                                                $password
+ * @property string|int|null                                                            $current_team_id
+ * @property string|null                                                                $phone
+ * @property string|null                                                                $email
+ * @property \Illuminate\Database\Eloquent\Collection<int, \Modules\User\Models\Role>   $roles
  * @property \Illuminate\Database\Eloquent\Collection<int, \Modules\User\Models\Tenant> $tenants
  *
- * @method FileAdder addMediaFromDisk(string $key, ?string $disk = null)
+ * @method  FileAdder addMediaFromDisk(string $key, ?string $disk = null)
  * @method bool canAccessSocialite()
 =======
  * @property ProfileContract|null                                                       $profile
@@ -80,6 +84,7 @@ use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 interface UserContract extends Authenticatable, Authorizable, CanResetPassword, FilamentUser, HasMedia, HasTeamsContract, ModelContract, MustVerifyEmail, PassportHasApiTokensContract
 =======
 interface UserContract extends Authenticatable, Authorizable, CanResetPassword, FilamentUser, HasTeamsContract, ModelContract, MustVerifyEmail, PassportHasApiTokensContract, HasMedia
@@ -93,6 +98,9 @@ interface UserContract extends Authenticatable, Authorizable, CanResetPassword, 
 =======
 interface UserContract extends Authenticatable, Authorizable, CanResetPassword, FilamentUser, HasTeamsContract, ModelContract, MustVerifyEmail, PassportHasApiTokensContract,HasMedia
 >>>>>>> e8b26086 (.)
+=======
+interface UserContract extends Authenticatable, Authorizable, CanResetPassword, FilamentUser, HasTeamsContract, ModelContract, MustVerifyEmail, PassportHasApiTokensContract,HasMedia
+>>>>>>> 89d0c8f4 (.)
 {
     /*
     public function isSuperAdmin();
@@ -111,11 +119,16 @@ interface UserContract extends Authenticatable, Authorizable, CanResetPassword, 
      * Get a relationship.
      *
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @param  string  $key
 =======
      * @param string $key
      *
 >>>>>>> e697a77b (.)
+=======
+     * @param string $key
+     *
+>>>>>>> 89d0c8f4 (.)
      * @return mixed|null
      */
     public function getRelationValue($key);
@@ -124,6 +137,7 @@ interface UserContract extends Authenticatable, Authorizable, CanResetPassword, 
      * Create a new instance of the given model.
      *
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @param  array  $attributes
      * @param  bool  $exists
 =======
@@ -131,6 +145,11 @@ interface UserContract extends Authenticatable, Authorizable, CanResetPassword, 
      * @param bool  $exists
      *
 >>>>>>> e697a77b (.)
+=======
+     * @param array $attributes
+     * @param bool  $exists
+     *
+>>>>>>> 89d0c8f4 (.)
      * @return static
      */
     public function newInstance($attributes = [], $exists = false);
@@ -158,11 +177,16 @@ interface UserContract extends Authenticatable, Authorizable, CanResetPassword, 
      * Revoke the given role from the model.
      *
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @param  string|int|Role|\BackedEnum  $role
 =======
      * @param string|int|Role|\BackedEnum $role
      *
 >>>>>>> e697a77b (.)
+=======
+     * @param string|int|Role|\BackedEnum $role
+     *
+>>>>>>> 89d0c8f4 (.)
      * @return self
      */
     public function removeRole($role);
@@ -189,6 +213,7 @@ interface UserContract extends Authenticatable, Authorizable, CanResetPassword, 
      * Get all consents for the model (polymorphic).
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
      */
     // public function consents(): MorphMany;
 
@@ -213,4 +238,10 @@ interface UserContract extends Authenticatable, Authorizable, CanResetPassword, 
 >>>>>>> f4296aed (.)
 =======
 >>>>>>> e8b26086 (.)
+=======
+     *
+     */
+    //public function consents(): MorphMany;
+    
+>>>>>>> 89d0c8f4 (.)
 }

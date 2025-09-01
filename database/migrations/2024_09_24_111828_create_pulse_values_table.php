@@ -6,11 +6,15 @@ use Illuminate\Database\Schema\Blueprint;
 use Modules\Xot\Database\Migrations\XotBaseMigration;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 return new class extends XotBaseMigration
 {
 =======
 return new class extends XotBaseMigration {
 >>>>>>> e697a77b (.)
+=======
+return new class extends XotBaseMigration {
+>>>>>>> 89d0c8f4 (.)
     /**
      * Run the migrations.
      */

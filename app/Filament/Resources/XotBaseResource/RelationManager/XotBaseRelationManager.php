@@ -10,12 +10,18 @@ use Filament\Tables;
 use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Model;
 <<<<<<< HEAD
+<<<<<<< HEAD
 use Illuminate\Support\Str;
 =======
 use Illuminate\Support\Arr;
 use Illuminate\Support\Str;
 use Modules\Xot\Filament\Resources\XotBaseResource;
 >>>>>>> e697a77b (.)
+=======
+use Illuminate\Support\Arr;
+use Illuminate\Support\Str;
+use Modules\Xot\Filament\Resources\XotBaseResource;
+>>>>>>> 89d0c8f4 (.)
 use Modules\Xot\Filament\Traits\HasXotTable;
 use Webmozart\Assert\Assert;
 
@@ -78,10 +84,14 @@ abstract class XotBaseRelationManager extends RelationManager
     {
         return [];
 <<<<<<< HEAD
+<<<<<<< HEAD
         // return $this->getResource()::getTableColumns();
 =======
         //return $this->getResource()::getTableColumns();
 >>>>>>> e697a77b (.)
+=======
+        //return $this->getResource()::getTableColumns();
+>>>>>>> 89d0c8f4 (.)
     }
 
     // public function table(Table $table): Table
@@ -112,9 +122,13 @@ abstract class XotBaseRelationManager extends RelationManager
     // }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> e697a77b (.)
+=======
+
+>>>>>>> 89d0c8f4 (.)
     /**
      * Get the resource class.
      *
@@ -134,10 +148,14 @@ abstract class XotBaseRelationManager extends RelationManager
             // Fallback if parent method fails
         }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
         
 >>>>>>> e697a77b (.)
+=======
+        
+>>>>>>> 89d0c8f4 (.)
         // Fallback: derive the resource class name from the relation manager name
         $class = get_class($this);
         $resource_name = Str::of(class_basename($this))
@@ -150,6 +168,7 @@ abstract class XotBaseRelationManager extends RelationManager
             ->append('Resources\\')
             ->toString();
         $resourceClass = $ns.'\\'.$resource_name;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
         if (! class_exists($resourceClass)) {
@@ -165,6 +184,14 @@ abstract class XotBaseRelationManager extends RelationManager
         
         if (!is_subclass_of($resourceClass, \Modules\Xot\Filament\Resources\XotBaseResource::class)) {
 >>>>>>> e697a77b (.)
+=======
+        
+        if (!class_exists($resourceClass)) {
+            throw new \Exception("Cannot find resource class {$resourceClass}");
+        }
+        
+        if (!is_subclass_of($resourceClass, \Modules\Xot\Filament\Resources\XotBaseResource::class)) {
+>>>>>>> 89d0c8f4 (.)
             throw new \Exception("{$resourceClass} must extend XotBaseResource");
         }
 
