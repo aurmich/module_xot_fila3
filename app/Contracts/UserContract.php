@@ -24,28 +24,28 @@ use Spatie\Permission\Contracts\Role;
 /**
  * Modules\User\Contracts\UserContract.
  *
- * @property ProfileContract|null                                                       $profile
- * @property string                                                                     $id
- * @property string                                                                     $handle
- * @property string|null                                                                $first_name
- * @property string|null                                                                $last_name
- * @property string|null                                                                $full_name
- * @property \BackedEnum&\Filament\Support\Contracts\HasLabel                           $type
- * @property string|null                                                                $password
- * @property string|int|null                                                            $current_team_id
- * @property string|null                                                                $phone
- * @property string|null                                                                $email
- * @property \Illuminate\Database\Eloquent\Collection<int, \Modules\User\Models\Role>   $roles
+ * @property ProfileContract|null $profile
+ * @property string $id
+ * @property string $handle
+ * @property string|null $first_name
+ * @property string|null $last_name
+ * @property string|null $full_name
+ * @property \BackedEnum&\Filament\Support\Contracts\HasLabel $type
+ * @property string|null $password
+ * @property string|int|null $current_team_id
+ * @property string|null $phone
+ * @property string|null $email
+ * @property \Illuminate\Database\Eloquent\Collection<int, \Modules\User\Models\Role> $roles
  * @property \Illuminate\Database\Eloquent\Collection<int, \Modules\User\Models\Tenant> $tenants
  *
  * @method FileAdder addMediaFromDisk(string $key, ?string $disk = null)
- * @method bool      canAccessSocialite()
+ * @method bool canAccessSocialite()
  *
  * @phpstan-require-extends Model
  *
  * @mixin \Eloquent
  */
-interface UserContract extends Authenticatable, Authorizable, CanResetPassword, FilamentUser, HasTeamsContract, ModelContract, MustVerifyEmail, PassportHasApiTokensContract, HasMedia
+interface UserContract extends Authenticatable, Authorizable, CanResetPassword, FilamentUser, HasMedia, HasTeamsContract, ModelContract, MustVerifyEmail, PassportHasApiTokensContract
 {
     /*
     public function isSuperAdmin();
@@ -63,8 +63,7 @@ interface UserContract extends Authenticatable, Authorizable, CanResetPassword, 
     /**
      * Get a relationship.
      *
-     * @param string $key
-     *
+     * @param  string  $key
      * @return mixed|null
      */
     public function getRelationValue($key);
@@ -72,9 +71,8 @@ interface UserContract extends Authenticatable, Authorizable, CanResetPassword, 
     /**
      * Create a new instance of the given model.
      *
-     * @param array $attributes
-     * @param bool  $exists
-     *
+     * @param  array  $attributes
+     * @param  bool  $exists
      * @return static
      */
     public function newInstance($attributes = [], $exists = false);
@@ -101,8 +99,7 @@ interface UserContract extends Authenticatable, Authorizable, CanResetPassword, 
     /**
      * Revoke the given role from the model.
      *
-     * @param string|int|Role|\BackedEnum $role
-     *
+     * @param  string|int|Role|\BackedEnum  $role
      * @return self
      */
     public function removeRole($role);
@@ -130,8 +127,4 @@ interface UserContract extends Authenticatable, Authorizable, CanResetPassword, 
      */
     // public function consents(): MorphMany;
 
-    /**
-     * Check if the user has a specific permission.
-     */
-    public function hasPermissionTo(string $permission): bool;
 }
