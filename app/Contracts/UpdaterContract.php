@@ -11,11 +11,22 @@ use Illuminate\Database\Eloquent\Model;
  *
  * @property \Illuminate\Support\Carbon|null $created_at
  * @property \Illuminate\Support\Carbon|null $updated_at
+<<<<<<< HEAD
  * @property string|null $created_by
  * @property string|null $updated_by
+=======
+ * @property string|null                     $created_by
+ * @property string|null                     $updated_by
+>>>>>>> e697a77b (.)
  *
  * @phpstan-require-extends Model
  *
  * @mixin \Eloquent
  */
+<<<<<<< HEAD
 interface UpdaterContract {}
+=======
+interface UpdaterContract
+{
+}
+>>>>>>> e697a77b (.)

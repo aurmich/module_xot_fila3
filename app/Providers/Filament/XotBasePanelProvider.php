@@ -9,12 +9,21 @@ use Filament\Http\Middleware\DisableBladeIconComponents;
 use Filament\Http\Middleware\DispatchServingFilamentEvent;
 use Filament\Panel;
 use Filament\PanelProvider;
+<<<<<<< HEAD
+=======
+use Filament\Support\Colors\Color;
+>>>>>>> e697a77b (.)
 use Illuminate\Cookie\Middleware\AddQueuedCookiesToResponse;
 use Illuminate\Cookie\Middleware\EncryptCookies;
 use Illuminate\Foundation\Http\Middleware\VerifyCsrfToken;
 use Illuminate\Routing\Middleware\SubstituteBindings;
 use Illuminate\Session\Middleware\AuthenticateSession;
 use Illuminate\Session\Middleware\StartSession;
+<<<<<<< HEAD
+=======
+use Illuminate\Support\Arr;
+use Illuminate\Support\Facades\File;
+>>>>>>> e697a77b (.)
 use Illuminate\Support\Str;
 use Illuminate\View\Middleware\ShareErrorsFromSession;
 use Modules\Xot\Actions\Panel\ApplyMetatagToPanelAction;
@@ -118,6 +127,10 @@ abstract class XotBasePanelProvider extends PanelProvider
                 ]
             );
 
+<<<<<<< HEAD
+=======
+       
+>>>>>>> e697a77b (.)
         return $panel;
     }
 

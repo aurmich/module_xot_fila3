@@ -22,7 +22,11 @@ uses(TestCase::class)->in('Feature', 'Unit');
 |--------------------------------------------------------------------------
 |
 | Qui puoi definire aspettative globali per il modulo Xot.
+<<<<<<< HEAD
 | Quando definisci here expectation globali, saranno disponibili
+=======
+| Quando definisci here expectation globali, saranno disponibili 
+>>>>>>> e697a77b (.)
 | in tutti i test del modulo.
 |
 */
@@ -43,4 +47,8 @@ uses(TestCase::class)->in('Feature', 'Unit');
 
 // function something() {
 //     // ...
+<<<<<<< HEAD
 // }
+=======
+// } 
+>>>>>>> e697a77b (.)

@@ -33,7 +33,13 @@ class GenerateTableColumnsByFileAction
     /**
      * Genera colonne per tabelle e form Filament basate su un file di risorsa.
      *
+<<<<<<< HEAD
      * @param  File  $file  Il file della risorsa Filament
+=======
+     * @param File $file Il file della risorsa Filament
+     * 
+     * @return void
+>>>>>>> e697a77b (.)
      */
     public function execute(File $file): void
     {
@@ -51,11 +57,19 @@ class GenerateTableColumnsByFileAction
         // Verifichiamo che la classe esista
         Assert::classExists($class_name);
 
+<<<<<<< HEAD
         /** @var resource $resourceInstance */
         $resourceInstance = app($class_name);
 
         // Verifichiamo che il metodo getModel esista
         if (! method_exists($resourceInstance, 'getModel')) {
+=======
+        /** @var Resource $resourceInstance */
+        $resourceInstance = app($class_name);
+
+        // Verifichiamo che il metodo getModel esista
+        if (!method_exists($resourceInstance, 'getModel')) {
+>>>>>>> e697a77b (.)
             return;
         }
 
@@ -114,7 +128,13 @@ class GenerateTableColumnsByFileAction
     /**
      * Mostra informazioni di debug su un file.
      *
+<<<<<<< HEAD
      * @param  File  $file  Il file da analizzare
+=======
+     * @param File $file Il file da analizzare
+     * 
+     * @return void
+>>>>>>> e697a77b (.)
      */
     public function ddFile(File $file): void
     {

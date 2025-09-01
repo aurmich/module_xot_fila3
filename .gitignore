@@ -60,7 +60,10 @@ Homestead.json
 *.backup
 *.bak
 *.new
+<<<<<<< HEAD
 *.backup.*
+=======
+>>>>>>> e697a77b (.)
 
 # Documentation and cache
 docs/phpstan/

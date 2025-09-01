@@ -1,5 +1,6 @@
 <?php
 
+<<<<<<< HEAD
 return [
     'sections' => [
         'empty' => [
@@ -8,3 +9,15 @@ return [
         ],
     ],
 ];
+=======
+return array (
+  'sections' => 
+  array (
+    'empty' => 
+    array (
+      'label' => '',
+      'heading' => '',
+    ),
+  ),
+);
+>>>>>>> e697a77b (.)

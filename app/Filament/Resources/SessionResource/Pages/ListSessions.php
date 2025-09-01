@@ -9,6 +9,10 @@ use Filament\Tables\Columns\TextColumn;
 use Modules\Xot\Filament\Resources\Pages\XotBaseListRecords;
 use Modules\Xot\Filament\Resources\SessionResource;
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> e697a77b (.)
 /**
  * @see SessionResource
  */

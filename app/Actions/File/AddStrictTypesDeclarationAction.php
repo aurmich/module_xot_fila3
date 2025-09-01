@@ -19,7 +19,11 @@ class AddStrictTypesDeclarationAction
      */
     public function execute(string $filePath): void
     {
+<<<<<<< HEAD
         if (! File::exists($filePath)) {
+=======
+        if (!File::exists($filePath)) {
+>>>>>>> e697a77b (.)
             throw new \InvalidArgumentException("Il file {$filePath} non esiste");
         }
 

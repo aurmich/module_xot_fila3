@@ -61,7 +61,11 @@ it('casts non-numeric strings with default', function (): void {
 it('casts boolean values', function (): void {
     $trueResult = $this->action->execute(true);
     $falseResult = $this->action->execute(false);
+<<<<<<< HEAD
 
+=======
+    
+>>>>>>> e697a77b (.)
     expect($trueResult)->toBe(1.0)->toBeFloat()
         ->and($falseResult)->toBe(0.0)->toBeFloat();
 });
@@ -72,7 +76,11 @@ it('casts arrays', function (): void {
 });
 
 it('casts objects', function (): void {
+<<<<<<< HEAD
     $result = $this->action->execute(new \stdClass);
+=======
+    $result = $this->action->execute(new \stdClass());
+>>>>>>> e697a77b (.)
     expect($result)->toBe(0.0)->toBeFloat();
 });
 
@@ -80,7 +88,11 @@ it('casts with range validation', function (): void {
     $normal = $this->action->executeWithRange(50.0, 0.0, 100.0);
     $aboveMax = $this->action->executeWithRange(150.0, 0.0, 100.0);
     $belowMin = $this->action->executeWithRange(-10.0, 0.0, 100.0);
+<<<<<<< HEAD
 
+=======
+    
+>>>>>>> e697a77b (.)
     expect($normal)->toBe(50.0)
         ->and($aboveMax)->toBe(100.0)
         ->and($belowMin)->toBe(0.0);
@@ -109,7 +121,11 @@ it('has static castWithRange method', function (): void {
 it('handles infinite values', function (): void {
     $infResult = $this->action->execute('INF');
     $nanResult = $this->action->execute('NAN');
+<<<<<<< HEAD
 
+=======
+    
+>>>>>>> e697a77b (.)
     expect($infResult)->toBe(0.0)
         ->and($nanResult)->toBe(0.0);
 });
@@ -117,7 +133,11 @@ it('handles infinite values', function (): void {
 it('handles infinite values with default', function (): void {
     $infResult = $this->action->execute('INF', 5.0);
     $nanResult = $this->action->execute('NAN', 5.0);
+<<<<<<< HEAD
 
+=======
+    
+>>>>>>> e697a77b (.)
     expect($infResult)->toBe(5.0)
         ->and($nanResult)->toBe(5.0);
 });
@@ -125,7 +145,11 @@ it('handles infinite values with default', function (): void {
 it('casts scientific notation', function (): void {
     $result1 = $this->action->execute('1.23e2');
     $result2 = $this->action->execute('1.23E-2');
+<<<<<<< HEAD
 
+=======
+    
+>>>>>>> e697a77b (.)
     expect($result1)->toBe(123.0)
         ->and($result2)->toBe(0.0123);
 });
@@ -133,4 +157,8 @@ it('casts scientific notation', function (): void {
 it('handles decimal comma', function (): void {
     $result = $this->action->execute('123,45');
     expect($result)->toBe(123.45);
+<<<<<<< HEAD
 });
+=======
+});
+>>>>>>> e697a77b (.)

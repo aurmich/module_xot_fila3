@@ -11,6 +11,10 @@ namespace Modules\Xot\Filament\Pages;
 use Filament\Actions\Action;
 use Filament\Notifications\Notification;
 use Filament\Pages\Page;
+<<<<<<< HEAD
+=======
+use Illuminate\Support\Carbon;
+>>>>>>> e697a77b (.)
 use Illuminate\Support\Facades\Artisan;
 use Modules\Xot\Filament\Traits\NavigationLabelTrait;
 use Modules\Xot\Filament\Widgets;
@@ -46,7 +50,11 @@ class HealthPage extends Page
             Checks\DatabaseConnectionCountCheck::new(),
             Checks\FlareErrorOccurrenceCountCheck::new(),
             Checks\HorizonCheck::new(),
+<<<<<<< HEAD
             // Checks\MeiliSearchCheck::new(),
+=======
+            //Checks\MeiliSearchCheck::new(),
+>>>>>>> e697a77b (.)
             Checks\QueueCheck::new(),
             Checks\RedisCheck::new(),
             Checks\ScheduleCheck::new(),
@@ -82,7 +90,11 @@ class HealthPage extends Page
     {
         return [
             Action::make('refresh')
+<<<<<<< HEAD
 
+=======
+                
+>>>>>>> e697a77b (.)
                 ->tooltip('refresh')
                 ->icon('heroicon-o-arrow-path')
                 ->button()

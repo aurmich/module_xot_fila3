@@ -12,6 +12,7 @@ use Illuminate\Support\Facades\File;
  * Modules\Xot\Models\Feed.
  *
  * @method static \Modules\Xot\Database\Factories\FeedFactory factory($count = null, $state = [])
+<<<<<<< HEAD
  * @method static \Illuminate\Database\Eloquent\Builder|Feed newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|Feed newQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|Feed query()
@@ -31,6 +32,23 @@ use Illuminate\Support\Facades\File;
  * @property \Modules\Xot\Contracts\ProfileContract|null $creator
  * @property \Modules\Xot\Contracts\ProfileContract|null $updater
  *
+=======
+ * @method static \Illuminate\Database\Eloquent\Builder|Feed  newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|Feed  newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|Feed  query()
+ * @method static \Illuminate\Database\Eloquent\Builder|Feed  newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|Feed  newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|Feed  query()
+ * @property string|null $id
+ * @property string|null $name
+ * @property int|null    $size
+ * @property string|null $file_content
+ * @method static \Illuminate\Database\Eloquent\Builder|Log whereId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Log whereName($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Log whereSize($value)
+ * @property \Modules\Xot\Contracts\ProfileContract|null $creator
+ * @property \Modules\Xot\Contracts\ProfileContract|null $updater
+>>>>>>> e697a77b (.)
  * @mixin IdeHelperLog
  * @mixin \Eloquent
  */
@@ -49,7 +67,11 @@ class Log extends BaseModel
         $files = File::files(storage_path('logs'));
 
         foreach ($files as $file) {
+<<<<<<< HEAD
             if ($file->getExtension() === 'log') {
+=======
+            if ('log' === $file->getExtension()) {
+>>>>>>> e697a77b (.)
                 $rows[] = [
                     'id' => $file->getFilenameWithoutExtension(),
                     'name' => $file->getFilenameWithoutExtension(),

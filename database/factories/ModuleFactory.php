@@ -9,7 +9,11 @@ use Modules\Xot\Models\Module;
 
 /**
  * Module Factory
+<<<<<<< HEAD
  *
+=======
+ * 
+>>>>>>> e697a77b (.)
  * @extends Factory<Module>
  */
 class ModuleFactory extends Factory

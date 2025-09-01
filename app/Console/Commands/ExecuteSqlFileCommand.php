@@ -4,9 +4,15 @@ declare(strict_types=1);
 
 namespace Modules\Xot\Console\Commands;
 
+<<<<<<< HEAD
 use Illuminate\Console\Command;
 use Illuminate\Support\Facades\DB;
 use Webmozart\Assert\Assert;
+=======
+use Webmozart\Assert\Assert;
+use Illuminate\Console\Command;
+use Illuminate\Support\Facades\DB;
+>>>>>>> e697a77b (.)
 
 use function Safe\file_get_contents;
 

@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Modules\Xot\Models;
 
+<<<<<<< HEAD
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Schema;
@@ -14,6 +15,18 @@ use Webmozart\Assert\Assert;
 /**
  * Represents a table in the INFORMATION_SCHEMA.TABLES.
  *
+=======
+use Sushi\Sushi;
+use Webmozart\Assert\Assert;
+use InvalidArgumentException;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Schema;
+use Illuminate\Database\Eloquent\Model;
+
+/**
+ * Represents a table in the INFORMATION_SCHEMA.TABLES.
+ * 
+>>>>>>> e697a77b (.)
  * Provides metadata and statistics about database tables.
  *
  * @property string|null $TABLE_CATALOG
@@ -38,7 +51,10 @@ use Webmozart\Assert\Assert;
  * @property string|null $CREATE_OPTIONS
  * @property string|null $TABLE_COMMENT
  * @property int $id
+<<<<<<< HEAD
  *
+=======
+>>>>>>> e697a77b (.)
  * @method static \Illuminate\Database\Eloquent\Builder<static>|InformationSchemaTable newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder<static>|InformationSchemaTable newQuery()
  * @method static \Illuminate\Database\Eloquent\Builder<static>|InformationSchemaTable query()
@@ -64,7 +80,10 @@ use Webmozart\Assert\Assert;
  * @method static \Illuminate\Database\Eloquent\Builder<static>|InformationSchemaTable whereTABLETYPE($value)
  * @method static \Illuminate\Database\Eloquent\Builder<static>|InformationSchemaTable whereUPDATETIME($value)
  * @method static \Illuminate\Database\Eloquent\Builder<static>|InformationSchemaTable whereVERSION($value)
+<<<<<<< HEAD
  *
+=======
+>>>>>>> e697a77b (.)
  * @mixin \Eloquent
  */
 class InformationSchemaTable extends Model
@@ -142,6 +161,10 @@ class InformationSchemaTable extends Model
         'TABLE_COMMENT' => 'string',
     ];
 
+<<<<<<< HEAD
+=======
+    
+>>>>>>> e697a77b (.)
     /**
      * Get the attributes that should be cast.
      *
@@ -173,7 +196,11 @@ class InformationSchemaTable extends Model
      */
     public function getRows(): array
     {
+<<<<<<< HEAD
         $query = 'SELECT 
+=======
+        $query = "SELECT 
+>>>>>>> e697a77b (.)
             TABLE_CATALOG,
             TABLE_SCHEMA,
             TABLE_NAME,
@@ -196,13 +223,20 @@ class InformationSchemaTable extends Model
             CREATE_OPTIONS,
             TABLE_COMMENT
         FROM information_schema.TABLES
+<<<<<<< HEAD
         WHERE TABLE_SCHEMA = ?';
+=======
+        WHERE TABLE_SCHEMA = ?";
+>>>>>>> e697a77b (.)
 
         $results = collect(DB::select($query, [DB::connection()->getDatabaseName()]))
             ->map(function ($row, $index) {
                 $data = (array) $row;
                 $data['id'] = $index + 1; // Aggiungi un ID incrementale
+<<<<<<< HEAD
 
+=======
+>>>>>>> e697a77b (.)
                 return $data;
             })
             ->toArray();
@@ -214,8 +248,13 @@ class InformationSchemaTable extends Model
     /**
      * Get table statistics from Sushi or information_schema as fallback.
      *
+<<<<<<< HEAD
      * @param  string  $schema  The schema name
      * @param  string  $table  The table name
+=======
+     * @param string $schema The schema name
+     * @param string $table The table name
+>>>>>>> e697a77b (.)
      */
     public static function getTableStats(string $schema, string $table): ?self
     {
@@ -242,22 +281,37 @@ class InformationSchemaTable extends Model
                 'TABLE_COLLATION',
                 'CHECKSUM',
                 'CREATE_OPTIONS',
+<<<<<<< HEAD
                 'TABLE_COMMENT',
+=======
+                'TABLE_COMMENT'
+>>>>>>> e697a77b (.)
             ])
             ->where('TABLE_SCHEMA', '=', $schema)
             ->where('TABLE_NAME', '=', $table)
             ->first();
 
+<<<<<<< HEAD
         if (! $result) {
+=======
+        if (!$result) {
+>>>>>>> e697a77b (.)
             return null;
         }
 
         // Creiamo una nuova istanza e popoliamola manualmente
+<<<<<<< HEAD
         $instance = new self;
         foreach ((array) $result as $key => $value) {
             $instance->setAttribute($key, $value);
         }
 
+=======
+        $instance = new self();
+        foreach ((array) $result as $key => $value) {
+            $instance->setAttribute($key, $value);
+        }
+>>>>>>> e697a77b (.)
         return $instance;
     }
 
@@ -265,7 +319,11 @@ class InformationSchemaTable extends Model
      * Get the row count for a model class.
      * This method incorporates the logic from CountAction.
      *
+<<<<<<< HEAD
      * @param  class-string<Model>  $modelClass  The fully qualified model class name
+=======
+     * @param class-string<Model> $modelClass The fully qualified model class name
+>>>>>>> e697a77b (.)
      *
      * @throws InvalidArgumentException If model class is invalid or not found
      */
@@ -288,12 +346,20 @@ class InformationSchemaTable extends Model
         $table = $model->getTable();
 
         // Handle in-memory database
+<<<<<<< HEAD
         if ($database === ':memory:') {
+=======
+        if (':memory:' === $database) {
+>>>>>>> e697a77b (.)
             return (int) $model->count();
         }
 
         // Handle SQLite specifically
+<<<<<<< HEAD
         if ($driver === 'sqlite') {
+=======
+        if ('sqlite' === $driver) {
+>>>>>>> e697a77b (.)
             return (int) $model->count();
         }
 
@@ -303,8 +369,13 @@ class InformationSchemaTable extends Model
     /**
      * Get accurate row count for a table.
      *
+<<<<<<< HEAD
      * @param  string  $tableName  The name of the table
      * @param  string  $database  The database name
+=======
+     * @param string $tableName The name of the table
+     * @param string $database The database name
+>>>>>>> e697a77b (.)
      */
     public static function getAccurateRowCount(string $tableName, string $database): int
     {
@@ -318,15 +389,23 @@ class InformationSchemaTable extends Model
             return 0;
         }
         Assert::numeric($rows);
+<<<<<<< HEAD
 
+=======
+>>>>>>> e697a77b (.)
         return (int) $rows;
     }
 
     /**
      * Get table size in bytes.
      *
+<<<<<<< HEAD
      * @param  string  $tableName  The name of the table
      * @param  string  $database  The database name
+=======
+     * @param string $tableName The name of the table
+     * @param string $database The database name
+>>>>>>> e697a77b (.)
      */
     public static function getTableSize(string $tableName, string $database): int
     {
@@ -345,15 +424,24 @@ class InformationSchemaTable extends Model
         // Assicuriamo che i valori siano convertiti correttamente in intero
         $dataLengthInt = is_numeric($dataLength) ? (int) $dataLength : 0;
         $indexLengthInt = is_numeric($indexLength) ? (int) $indexLength : 0;
+<<<<<<< HEAD
 
+=======
+        
+>>>>>>> e697a77b (.)
         return $dataLengthInt + $indexLengthInt;
     }
 
     /**
      * Refresh the cache for a specific table.
      *
+<<<<<<< HEAD
      * @param  string  $tableName  The name of the table
      * @param  string  $database  The database name
+=======
+     * @param string $tableName The name of the table
+     * @param string $database The database name
+>>>>>>> e697a77b (.)
      */
     public static function refreshCache(string $tableName, string $database): void
     {

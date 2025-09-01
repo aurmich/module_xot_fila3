@@ -23,11 +23,19 @@ class GetModelByModelTypeAction
     {
         $model_class = app(GetModelClassByModelTypeAction::class)->execute($model_type);
         Assert::isInstanceOf($model = app($model_class), Model::class);
+<<<<<<< HEAD
         if ($model_id !== null) {
             $model = $model->find($model_id);
         }
 
         if ($model === null) {
+=======
+        if (null !== $model_id) {
+            $model = $model->find($model_id);
+        }
+
+        if (null === $model) {
+>>>>>>> e697a77b (.)
             throw new \Exception('['.__LINE__.']['.class_basename($this).']');
         }
 

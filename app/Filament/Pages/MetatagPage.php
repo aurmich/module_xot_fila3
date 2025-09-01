@@ -16,11 +16,18 @@ use Filament\Forms\Form;
 use Filament\Forms\Get;
 use Filament\Notifications\Notification;
 use Filament\Pages\Page;
+<<<<<<< HEAD
 use Filament\Support\Colors\Color;
+=======
+>>>>>>> e697a77b (.)
 use Modules\Tenant\Services\TenantService;
 use Modules\Xot\Datas\MetatagData;
 use Modules\Xot\Filament\Traits\NavigationLabelTrait;
 use Webmozart\Assert\Assert;
+<<<<<<< HEAD
+=======
+use Filament\Support\Colors\Color;
+>>>>>>> e697a77b (.)
 
 /**
  * @property ComponentContainer $form

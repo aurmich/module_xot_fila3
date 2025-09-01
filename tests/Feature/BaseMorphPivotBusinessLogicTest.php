@@ -2,6 +2,7 @@
 
 declare(strict_types=1);
 
+<<<<<<< HEAD
 use Illuminate\Database\Eloquent\Relations\Pivot;
 use Modules\Xot\Models\BaseMorphPivot;
 
@@ -17,54 +18,126 @@ describe('BaseMorphPivot Business Logic', function () {
     it('can manage morph type', function () {
         // Arrange
         $pivot = new BaseMorphPivot;
+=======
+namespace Modules\Xot\Tests\Feature;
+
+use Modules\Xot\Models\BaseMorphPivot;
+use Tests\TestCase;
+use Illuminate\Foundation\Testing\RefreshDatabase;
+use Illuminate\Database\Eloquent\Relations\Pivot;
+
+class BaseMorphPivotBusinessLogicTest extends TestCase
+{
+    use RefreshDatabase;
+
+    /** @test */
+    public function it_extends_pivot_class(): void
+    {
+        // Arrange & Act
+        $pivot = new BaseMorphPivot();
+
+        // Assert
+        $this->assertInstanceOf(Pivot::class, $pivot);
+    }
+
+    /** @test */
+    public function it_can_manage_morph_type(): void
+    {
+        // Arrange
+        $pivot = new BaseMorphPivot();
+>>>>>>> e697a77b (.)
         $pivot->morph_type = 'App\Models\User';
 
         // Act
         $morphType = $pivot->morph_type;
 
         // Assert
+<<<<<<< HEAD
         expect($morphType)->toBe('App\Models\User');
     });
 
     it('can manage morph id', function () {
         // Arrange
         $pivot = new BaseMorphPivot;
+=======
+        $this->assertEquals('App\Models\User', $morphType);
+    }
+
+    /** @test */
+    public function it_can_manage_morph_id(): void
+    {
+        // Arrange
+        $pivot = new BaseMorphPivot();
+>>>>>>> e697a77b (.)
         $pivot->morph_id = 123;
 
         // Act
         $morphId = $pivot->morph_id;
 
         // Assert
+<<<<<<< HEAD
         expect($morphId)->toBe(123);
     });
 
     it('can manage related type', function () {
         // Arrange
         $pivot = new BaseMorphPivot;
+=======
+        $this->assertEquals(123, $morphId);
+    }
+
+    /** @test */
+    public function it_can_manage_related_type(): void
+    {
+        // Arrange
+        $pivot = new BaseMorphPivot();
+>>>>>>> e697a77b (.)
         $pivot->related_type = 'App\Models\Post';
 
         // Act
         $relatedType = $pivot->related_type;
 
         // Assert
+<<<<<<< HEAD
         expect($relatedType)->toBe('App\Models\Post');
     });
 
     it('can manage related id', function () {
         // Arrange
         $pivot = new BaseMorphPivot;
+=======
+        $this->assertEquals('App\Models\Post', $relatedType);
+    }
+
+    /** @test */
+    public function it_can_manage_related_id(): void
+    {
+        // Arrange
+        $pivot = new BaseMorphPivot();
+>>>>>>> e697a77b (.)
         $pivot->related_id = 456;
 
         // Act
         $relatedId = $pivot->related_id;
 
         // Assert
+<<<<<<< HEAD
         expect($relatedId)->toBe(456);
     });
 
     it('can manage pivot attributes', function () {
         // Arrange
         $pivot = new BaseMorphPivot;
+=======
+        $this->assertEquals(456, $relatedId);
+    }
+
+    /** @test */
+    public function it_can_manage_pivot_attributes(): void
+    {
+        // Arrange
+        $pivot = new BaseMorphPivot();
+>>>>>>> e697a77b (.)
         $pivot->setAttribute('custom_field', 'custom_value');
         $pivot->setAttribute('numeric_field', 42);
 
@@ -81,7 +154,11 @@ describe('BaseMorphPivot Business Logic', function () {
     public function it_can_manage_timestamps(): void
     {
         // Arrange
+<<<<<<< HEAD
         $pivot = new BaseMorphPivot;
+=======
+        $pivot = new BaseMorphPivot();
+>>>>>>> e697a77b (.)
         $now = now();
         $pivot->created_at = $now;
         $pivot->updated_at = $now;
@@ -99,7 +176,11 @@ describe('BaseMorphPivot Business Logic', function () {
     public function it_can_manage_soft_deletes(): void
     {
         // Arrange
+<<<<<<< HEAD
         $pivot = new BaseMorphPivot;
+=======
+        $pivot = new BaseMorphPivot();
+>>>>>>> e697a77b (.)
         $deletedAt = now();
         $pivot->deleted_at = $deletedAt;
 
@@ -114,7 +195,11 @@ describe('BaseMorphPivot Business Logic', function () {
     public function it_can_manage_tenant_id(): void
     {
         // Arrange
+<<<<<<< HEAD
         $pivot = new BaseMorphPivot;
+=======
+        $pivot = new BaseMorphPivot();
+>>>>>>> e697a77b (.)
         $pivot->tenant_id = 789;
 
         // Act
@@ -128,7 +213,11 @@ describe('BaseMorphPivot Business Logic', function () {
     public function it_can_manage_user_id(): void
     {
         // Arrange
+<<<<<<< HEAD
         $pivot = new BaseMorphPivot;
+=======
+        $pivot = new BaseMorphPivot();
+>>>>>>> e697a77b (.)
         $pivot->user_id = 101;
 
         // Act
@@ -149,7 +238,11 @@ describe('BaseMorphPivot Business Logic', function () {
             'session_id' => 'session123',
         ];
 
+<<<<<<< HEAD
         $pivot = new BaseMorphPivot;
+=======
+        $pivot = new BaseMorphPivot();
+>>>>>>> e697a77b (.)
         $pivot->metadata = $metadata;
 
         // Act
@@ -175,7 +268,11 @@ describe('BaseMorphPivot Business Logic', function () {
             ],
         ];
 
+<<<<<<< HEAD
         $pivot = new BaseMorphPivot;
+=======
+        $pivot = new BaseMorphPivot();
+>>>>>>> e697a77b (.)
         $pivot->extra_data = $extraData;
 
         // Act
@@ -192,7 +289,11 @@ describe('BaseMorphPivot Business Logic', function () {
     public function it_can_manage_status(): void
     {
         // Arrange
+<<<<<<< HEAD
         $pivot = new BaseMorphPivot;
+=======
+        $pivot = new BaseMorphPivot();
+>>>>>>> e697a77b (.)
         $pivot->status = 'active';
 
         // Act
@@ -206,7 +307,11 @@ describe('BaseMorphPivot Business Logic', function () {
     public function it_can_manage_priority(): void
     {
         // Arrange
+<<<<<<< HEAD
         $pivot = new BaseMorphPivot;
+=======
+        $pivot = new BaseMorphPivot();
+>>>>>>> e697a77b (.)
         $pivot->priority = 5;
 
         // Act
@@ -220,7 +325,11 @@ describe('BaseMorphPivot Business Logic', function () {
     public function it_can_manage_sort_order(): void
     {
         // Arrange
+<<<<<<< HEAD
         $pivot = new BaseMorphPivot;
+=======
+        $pivot = new BaseMorphPivot();
+>>>>>>> e697a77b (.)
         $pivot->sort_order = 10;
 
         // Act
@@ -234,7 +343,11 @@ describe('BaseMorphPivot Business Logic', function () {
     public function it_can_manage_expires_at(): void
     {
         // Arrange
+<<<<<<< HEAD
         $pivot = new BaseMorphPivot;
+=======
+        $pivot = new BaseMorphPivot();
+>>>>>>> e697a77b (.)
         $expiresAt = now()->addDays(30);
         $pivot->expires_at = $expiresAt;
 
@@ -249,7 +362,11 @@ describe('BaseMorphPivot Business Logic', function () {
     public function it_can_manage_starts_at(): void
     {
         // Arrange
+<<<<<<< HEAD
         $pivot = new BaseMorphPivot;
+=======
+        $pivot = new BaseMorphPivot();
+>>>>>>> e697a77b (.)
         $startsAt = now()->addHours(2);
         $pivot->starts_at = $startsAt;
 
@@ -264,7 +381,11 @@ describe('BaseMorphPivot Business Logic', function () {
     public function it_can_manage_ends_at(): void
     {
         // Arrange
+<<<<<<< HEAD
         $pivot = new BaseMorphPivot;
+=======
+        $pivot = new BaseMorphPivot();
+>>>>>>> e697a77b (.)
         $endsAt = now()->addDays(7);
         $pivot->ends_at = $endsAt;
 
@@ -279,7 +400,11 @@ describe('BaseMorphPivot Business Logic', function () {
     public function it_can_manage_is_active(): void
     {
         // Arrange
+<<<<<<< HEAD
         $pivot = new BaseMorphPivot;
+=======
+        $pivot = new BaseMorphPivot();
+>>>>>>> e697a77b (.)
         $pivot->is_active = true;
 
         // Act
@@ -299,7 +424,11 @@ describe('BaseMorphPivot Business Logic', function () {
     public function it_can_manage_is_public(): void
     {
         // Arrange
+<<<<<<< HEAD
         $pivot = new BaseMorphPivot;
+=======
+        $pivot = new BaseMorphPivot();
+>>>>>>> e697a77b (.)
         $pivot->is_public = false;
 
         // Act
@@ -319,7 +448,11 @@ describe('BaseMorphPivot Business Logic', function () {
     public function it_can_manage_is_featured(): void
     {
         // Arrange
+<<<<<<< HEAD
         $pivot = new BaseMorphPivot;
+=======
+        $pivot = new BaseMorphPivot();
+>>>>>>> e697a77b (.)
         $pivot->is_featured = false;
 
         // Act
@@ -341,7 +474,11 @@ describe('BaseMorphPivot Business Logic', function () {
         // Arrange
         $tags = ['tag1', 'tag2', 'important'];
 
+<<<<<<< HEAD
         $pivot = new BaseMorphPivot;
+=======
+        $pivot = new BaseMorphPivot();
+>>>>>>> e697a77b (.)
         $pivot->tags = $tags;
 
         // Act
@@ -361,7 +498,11 @@ describe('BaseMorphPivot Business Logic', function () {
         // Arrange
         $categories = ['category1', 'category2'];
 
+<<<<<<< HEAD
         $pivot = new BaseMorphPivot;
+=======
+        $pivot = new BaseMorphPivot();
+>>>>>>> e697a77b (.)
         $pivot->categories = $categories;
 
         // Act
@@ -384,7 +525,11 @@ describe('BaseMorphPivot Business Logic', function () {
             'delete' => false,
         ];
 
+<<<<<<< HEAD
         $pivot = new BaseMorphPivot;
+=======
+        $pivot = new BaseMorphPivot();
+>>>>>>> e697a77b (.)
         $pivot->permissions = $permissions;
 
         // Act
@@ -407,7 +552,11 @@ describe('BaseMorphPivot Business Logic', function () {
             'timeout' => 30,
         ];
 
+<<<<<<< HEAD
         $pivot = new BaseMorphPivot;
+=======
+        $pivot = new BaseMorphPivot();
+>>>>>>> e697a77b (.)
         $pivot->settings = $settings;
 
         // Act
@@ -426,7 +575,11 @@ describe('BaseMorphPivot Business Logic', function () {
         // Arrange
         $notes = 'This is a test note for the pivot relationship';
 
+<<<<<<< HEAD
         $pivot = new BaseMorphPivot;
+=======
+        $pivot = new BaseMorphPivot();
+>>>>>>> e697a77b (.)
         $pivot->notes = $notes;
 
         // Act
@@ -442,7 +595,11 @@ describe('BaseMorphPivot Business Logic', function () {
         // Arrange
         $description = 'Test description for pivot relationship';
 
+<<<<<<< HEAD
         $pivot = new BaseMorphPivot;
+=======
+        $pivot = new BaseMorphPivot();
+>>>>>>> e697a77b (.)
         $pivot->description = $description;
 
         // Act
@@ -458,7 +615,11 @@ describe('BaseMorphPivot Business Logic', function () {
         // Arrange
         $url = 'https://example.com/pivot/123';
 
+<<<<<<< HEAD
         $pivot = new BaseMorphPivot;
+=======
+        $pivot = new BaseMorphPivot();
+>>>>>>> e697a77b (.)
         $pivot->url = $url;
 
         // Act
@@ -474,7 +635,11 @@ describe('BaseMorphPivot Business Logic', function () {
         // Arrange
         $imageUrl = 'https://example.com/images/pivot.jpg';
 
+<<<<<<< HEAD
         $pivot = new BaseMorphPivot;
+=======
+        $pivot = new BaseMorphPivot();
+>>>>>>> e697a77b (.)
         $pivot->image_url = $imageUrl;
 
         // Act
@@ -490,7 +655,11 @@ describe('BaseMorphPivot Business Logic', function () {
         // Arrange
         $externalId = 'ext_12345';
 
+<<<<<<< HEAD
         $pivot = new BaseMorphPivot;
+=======
+        $pivot = new BaseMorphPivot();
+>>>>>>> e697a77b (.)
         $pivot->external_id = $externalId;
 
         // Act
@@ -506,7 +675,11 @@ describe('BaseMorphPivot Business Logic', function () {
         // Arrange
         $source = 'api_import';
 
+<<<<<<< HEAD
         $pivot = new BaseMorphPivot;
+=======
+        $pivot = new BaseMorphPivot();
+>>>>>>> e697a77b (.)
         $pivot->source = $source;
 
         // Act
@@ -522,7 +695,11 @@ describe('BaseMorphPivot Business Logic', function () {
         // Arrange
         $version = '1.2.3';
 
+<<<<<<< HEAD
         $pivot = new BaseMorphPivot;
+=======
+        $pivot = new BaseMorphPivot();
+>>>>>>> e697a77b (.)
         $pivot->version = $version;
 
         // Act
@@ -538,7 +715,11 @@ describe('BaseMorphPivot Business Logic', function () {
         // Arrange
         $hash = 'abc123def456';
 
+<<<<<<< HEAD
         $pivot = new BaseMorphPivot;
+=======
+        $pivot = new BaseMorphPivot();
+>>>>>>> e697a77b (.)
         $pivot->hash = $hash;
 
         // Act
@@ -554,7 +735,11 @@ describe('BaseMorphPivot Business Logic', function () {
         // Arrange
         $checksum = 'sha256:abc123def456';
 
+<<<<<<< HEAD
         $pivot = new BaseMorphPivot;
+=======
+        $pivot = new BaseMorphPivot();
+>>>>>>> e697a77b (.)
         $pivot->checksum = $checksum;
 
         // Act
@@ -570,7 +755,11 @@ describe('BaseMorphPivot Business Logic', function () {
         // Arrange
         $size = 1024;
 
+<<<<<<< HEAD
         $pivot = new BaseMorphPivot;
+=======
+        $pivot = new BaseMorphPivot();
+>>>>>>> e697a77b (.)
         $pivot->size = $size;
 
         // Act
@@ -586,7 +775,11 @@ describe('BaseMorphPivot Business Logic', function () {
         // Arrange
         $mimeType = 'application/json';
 
+<<<<<<< HEAD
         $pivot = new BaseMorphPivot;
+=======
+        $pivot = new BaseMorphPivot();
+>>>>>>> e697a77b (.)
         $pivot->mime_type = $mimeType;
 
         // Act
@@ -602,7 +795,11 @@ describe('BaseMorphPivot Business Logic', function () {
         // Arrange
         $encoding = 'UTF-8';
 
+<<<<<<< HEAD
         $pivot = new BaseMorphPivot;
+=======
+        $pivot = new BaseMorphPivot();
+>>>>>>> e697a77b (.)
         $pivot->encoding = $encoding;
 
         // Act
@@ -618,7 +815,11 @@ describe('BaseMorphPivot Business Logic', function () {
         // Arrange
         $language = 'en';
 
+<<<<<<< HEAD
         $pivot = new BaseMorphPivot;
+=======
+        $pivot = new BaseMorphPivot();
+>>>>>>> e697a77b (.)
         $pivot->language = $language;
 
         // Act
@@ -634,7 +835,11 @@ describe('BaseMorphPivot Business Logic', function () {
         // Arrange
         $locale = 'en_US';
 
+<<<<<<< HEAD
         $pivot = new BaseMorphPivot;
+=======
+        $pivot = new BaseMorphPivot();
+>>>>>>> e697a77b (.)
         $pivot->locale = $locale;
 
         // Act
@@ -650,7 +855,11 @@ describe('BaseMorphPivot Business Logic', function () {
         // Arrange
         $timezone = 'Europe/Rome';
 
+<<<<<<< HEAD
         $pivot = new BaseMorphPivot;
+=======
+        $pivot = new BaseMorphPivot();
+>>>>>>> e697a77b (.)
         $pivot->timezone = $timezone;
 
         // Act
@@ -666,7 +875,11 @@ describe('BaseMorphPivot Business Logic', function () {
         // Arrange
         $currency = 'EUR';
 
+<<<<<<< HEAD
         $pivot = new BaseMorphPivot;
+=======
+        $pivot = new BaseMorphPivot();
+>>>>>>> e697a77b (.)
         $pivot->currency = $currency;
 
         // Act
@@ -682,7 +895,11 @@ describe('BaseMorphPivot Business Logic', function () {
         // Arrange
         $decimalPlaces = 2;
 
+<<<<<<< HEAD
         $pivot = new BaseMorphPivot;
+=======
+        $pivot = new BaseMorphPivot();
+>>>>>>> e697a77b (.)
         $pivot->decimal_places = $decimalPlaces;
 
         // Act
@@ -698,7 +915,11 @@ describe('BaseMorphPivot Business Logic', function () {
         // Arrange
         $roundingMode = 'half_up';
 
+<<<<<<< HEAD
         $pivot = new BaseMorphPivot;
+=======
+        $pivot = new BaseMorphPivot();
+>>>>>>> e697a77b (.)
         $pivot->rounding_mode = $roundingMode;
 
         // Act

@@ -33,7 +33,11 @@ class RelationAction
             // Ottieni il tipo di relazione dal nome della classe
             $relationClass = get_class($relation);
             $relationshipType = class_basename($relationClass);
+<<<<<<< HEAD
 
+=======
+            
+>>>>>>> e697a77b (.)
             $actionClass = __NAMESPACE__.'\\'.$relationshipType.'Action';
             Assert::object($action = app($actionClass));
 

@@ -17,7 +17,12 @@ class SvgExistsAction
     /**
      * Verifica se l'SVG esiste nei set di icone registrati.
      *
+<<<<<<< HEAD
      * @param  string  $svgName  Il nome dell'SVG da verificare (es: 'heroicon-o-user')
+=======
+     * @param string $svgName Il nome dell'SVG da verificare (es: 'heroicon-o-user')
+     *
+>>>>>>> e697a77b (.)
      * @return bool true se l'SVG esiste, false altrimenti
      */
     public function execute(string $svgName): bool

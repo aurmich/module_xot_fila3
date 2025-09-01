@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Modules\Xot\View\Composers;
 
+<<<<<<< HEAD
 use Illuminate\Support\Arr;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Str;
@@ -14,6 +15,18 @@ use Modules\Xot\Datas\XotData;
 use Nwidart\Modules\Facades\Module;
 use Nwidart\Modules\Laravel\Module as LaravelModule;
 use Webmozart\Assert\Assert;
+=======
+use Illuminate\View\View;
+use Illuminate\Support\Arr;
+use Illuminate\Support\Str;
+use Webmozart\Assert\Assert;
+use Modules\Xot\Datas\XotData;
+use Modules\Xot\Datas\MetatagData;
+use Nwidart\Modules\Facades\Module;
+use Illuminate\Support\Facades\Auth;
+use Modules\Xot\Actions\File\AssetPathAction;
+use Nwidart\Modules\Laravel\Module as LaravelModule;
+>>>>>>> e697a77b (.)
 
 /**
  * Class XotComposer.
@@ -23,7 +36,11 @@ class XotComposer
     /**
      * Undocumented function.
      *
+<<<<<<< HEAD
      * @param  array<mixed|void>  $arguments
+=======
+     * @param array<mixed|void> $arguments
+>>>>>>> e697a77b (.)
      */
     public function __call(string $name, array $arguments): mixed
     {
@@ -67,8 +84,13 @@ class XotComposer
         $view->with('lang', $lang);
         $view->with('_theme', $this);
 
+<<<<<<< HEAD
         if (class_exists('\Jenssegers\Agent\Agent')) {
             $agent = new \Jenssegers\Agent\Agent;
+=======
+        if(class_exists('\Jenssegers\Agent\Agent')){
+            $agent = new \Jenssegers\Agent\Agent();
+>>>>>>> e697a77b (.)
             $view->with('isMobile', $agent->isMobile());
             $view->with('isTablet', $agent->isTablet());
             $view->with('isDesktop', $agent->isDesktop());
@@ -88,7 +110,11 @@ class XotComposer
 
     public function path(string $str): string
     {
+<<<<<<< HEAD
         return app(AssetPathAction::class)->execute($str);
+=======
+        return (app(AssetPathAction::class)->execute($str));
+>>>>>>> e697a77b (.)
     }
 
     public function metatag(string $str): string|bool|null

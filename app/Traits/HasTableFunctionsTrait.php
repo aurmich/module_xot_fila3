@@ -37,7 +37,11 @@ trait HasTableFunctionsTrait
         return [
             'edit' => Action::make('edit')
                 ->label('Modifica')
+<<<<<<< HEAD
                 ->url(fn ($record): string => route('filament.resources.'.$this->getResourceSlug().'.edit', ['record' => $record])),
+=======
+                ->url(fn ($record): string => route('filament.resources.' . $this->getResourceSlug() . '.edit', ['record' => $record])),
+>>>>>>> e697a77b (.)
             'delete' => Action::make('delete')
                 ->label('Elimina')
                 ->action(fn ($record) => $record->delete())
@@ -62,6 +66,11 @@ trait HasTableFunctionsTrait
 
     /**
      * Get the resource slug.
+<<<<<<< HEAD
+=======
+     *
+     * @return string
+>>>>>>> e697a77b (.)
      */
     protected function getResourceSlug(): string
     {

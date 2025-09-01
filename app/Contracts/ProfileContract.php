@@ -21,8 +21,13 @@ use Spatie\Permission\Exceptions\PermissionDoesNotExist;
  * @property string $slug
  * @property string $user_id
  * @property Collection<int, Role> $roles
+<<<<<<< HEAD
  * @property int|null $roles_count
  * @property UserContract $user
+=======
+ * @property int|null              $roles_count
+ * @property UserContract          $user
+>>>>>>> e697a77b (.)
  *
  * @phpstan-require-extends Model
  *
@@ -66,7 +71,12 @@ interface ProfileContract extends HasMedia
     /**
      * Create a new Eloquent query builder for the model.
      *
+<<<<<<< HEAD
      * @param  Builder  $query
+=======
+     * @param Builder $query
+     *
+>>>>>>> e697a77b (.)
      * @return \Illuminate\Database\Eloquent\Builder|static
      */
     public function newEloquentBuilder($query);

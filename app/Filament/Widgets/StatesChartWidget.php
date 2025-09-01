@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Modules\Xot\Filament\Widgets;
 
+<<<<<<< HEAD
 class StatesChartWidget extends XotBaseChartWidget
 {
     protected static ?string $heading = null;
@@ -14,6 +15,18 @@ class StatesChartWidget extends XotBaseChartWidget
 
     public string $stateClass;
 
+=======
+use Modules\Xot\Filament\Widgets\XotBaseChartWidget;
+
+
+class StatesChartWidget extends XotBaseChartWidget
+{
+    protected static ?string $heading = null;
+    protected static ?int $sort = 4;
+    protected static bool $isLazy = true;
+
+    public string $stateClass;
+>>>>>>> e697a77b (.)
     public string $model;
 
     public function getHeading(): ?string
@@ -41,12 +54,21 @@ class StatesChartWidget extends XotBaseChartWidget
                     [
                         'label' => $label,
                         'data' => $states->pluck('count')->toArray(),
+<<<<<<< HEAD
                         'backgroundColor' => $states->keys()->map(fn ($state) => $colors[$state] ?? 'rgb(156, 163, 175)')->toArray(),
                         'borderColor' => $states->keys()->map(fn ($state) => $colors[$state] ?? 'rgb(156, 163, 175)')->toArray(),
                         'borderWidth' => 1,
                     ],
                 ],
                 'labels' => $states->keys()->map(fn ($state) => static::transClass($this->model, 'states.'.$state.'.label'))->toArray(),
+=======
+                        'backgroundColor' => $states->keys()->map(fn($state) => $colors[$state] ?? 'rgb(156, 163, 175)')->toArray(),
+                        'borderColor' => $states->keys()->map(fn($state) => $colors[$state] ?? 'rgb(156, 163, 175)')->toArray(),
+                        'borderWidth' => 1,
+                    ],
+                ],
+                'labels' => $states->keys()->map(fn($state) => static::transClass($this->model, 'states.'.$state.'.label'))->toArray(),
+>>>>>>> e697a77b (.)
             ];
         } catch (\Exception $e) {
             // Fallback appropriato senza logging inutile
@@ -69,4 +91,8 @@ class StatesChartWidget extends XotBaseChartWidget
     {
         return 'bar';
     }
+<<<<<<< HEAD
 }
+=======
+} 
+>>>>>>> e697a77b (.)

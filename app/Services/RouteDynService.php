@@ -159,8 +159,14 @@ class RouteDynService
         $params_name = self::getParamsName($v, $namespace);
         Assert::isArray($params_name);
 
+<<<<<<< HEAD
         $opts = [
             'parameters' => [mb_strtolower((string) $v['name']) => implode('}/{', $params_name)],
+=======
+        $name = isset($v['name']) && is_string($v['name']) ? $v['name'] : '';
+        $opts = [
+            'parameters' => [mb_strtolower($name) => implode('}/{', $params_name)],
+>>>>>>> e697a77b (.)
             'names' => self::prefixedResourceNames(self::getAs($v, $namespace)),
         ];
 

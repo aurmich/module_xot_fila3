@@ -38,7 +38,10 @@ abstract class XotBaseFormComponent extends Field
         if ($label instanceof \Illuminate\Contracts\Support\Htmlable) {
             return $label->toHtml();
         }
+<<<<<<< HEAD
 
+=======
+>>>>>>> e697a77b (.)
         return (string) $label;
     }
 

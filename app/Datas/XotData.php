@@ -389,7 +389,11 @@ class XotData extends Data implements Wireable
      */
     public function getProjectNamespace(): string
     {
+<<<<<<< HEAD
         return 'Modules\\'.$this->main_module;
+=======
+        return 'Modules\\' . $this->main_module;
+>>>>>>> e697a77b (.)
     }
 
     public function forceSSL(): bool

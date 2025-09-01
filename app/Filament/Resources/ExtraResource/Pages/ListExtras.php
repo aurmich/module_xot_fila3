@@ -11,6 +11,10 @@ use Filament\Tables\Columns\TextColumn;
 use Modules\Xot\Filament\Resources\ExtraResource;
 use Modules\Xot\Filament\Resources\Pages\XotBaseListRecords;
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> e697a77b (.)
 /**
  * @see ExtraResource
  */

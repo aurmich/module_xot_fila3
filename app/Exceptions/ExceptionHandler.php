@@ -8,16 +8,28 @@ declare(strict_types=1);
 
 namespace Modules\Xot\Exceptions;
 
+<<<<<<< HEAD
 use Illuminate\Foundation\Configuration\Exceptions;
 use Illuminate\Http\Request;
 use Modules\Xot\Actions\View\GetViewPathAction;
 use Symfony\Component\HttpKernel\Exception\HttpException;
 
 class ExceptionHandler
+=======
+use Illuminate\Http\Request;
+use Illuminate\Http\Response;
+use Illuminate\Support\Facades\View;
+use Modules\Xot\Actions\View\GetViewPathAction;
+use Illuminate\Foundation\Configuration\Exceptions;
+use Symfony\Component\HttpKernel\Exception\HttpException;
+
+class ExceptionHandler 
+>>>>>>> e697a77b (.)
 {
     /**
      * Configura la gestione delle eccezioni.
      *
+<<<<<<< HEAD
      * @param  Exceptions  $exceptions  Configuratore eccezioni Laravel
      */
     public static function handles(Exceptions $exceptions): void
@@ -25,11 +37,22 @@ class ExceptionHandler
 
         $exceptions->render(function (HttpException $e, Request $request) {
             $status_code = $e->getStatusCode();
+=======
+     * @param Exceptions $exceptions Configuratore eccezioni Laravel
+     * @return void
+     */
+    public static function handles(Exceptions $exceptions): void
+    {
+        
+        $exceptions->render(function (HttpException $e,Request $request) {
+            $status_code=$e->getStatusCode();
+>>>>>>> e697a77b (.)
             if ($request->wantsJson()) {
                 return response()->json([
                     'message' => $e->getMessage(),
                 ], $status_code);
             }
+<<<<<<< HEAD
 
             $view = 'pub_theme::errors.'.$status_code;
             if (! view()->exists($view)) {
@@ -37,6 +60,16 @@ class ExceptionHandler
             }
             $view_params = ['exception' => $e];
 
+=======
+            
+
+            $view='pub_theme::errors.'.$status_code;
+            if(!view()->exists($view)){
+                throw new \Exception('view not found: ['.$view.'] view path:'.app(GetViewPathAction::class)->execute($view));    
+                
+            }
+            $view_params=['exception'=>$e];
+>>>>>>> e697a77b (.)
             return response()->view($view, $view_params, $status_code);
         });
     }

@@ -7,22 +7,39 @@ namespace Modules\Xot\Helpers;
 use Illuminate\Support\Str;
 use Webmozart\Assert\Assert;
 
+<<<<<<< HEAD
 use function Safe\error_log;
 use function Safe\file_get_contents;
 use function Safe\file_put_contents;
 use function Safe\glob;
 use function Safe\preg_match;
 use function Safe\preg_replace;
+=======
+use function Safe\glob;
+use function Safe\error_log;
+use function Safe\preg_match;
+use function Safe\preg_replace;
+use function Safe\file_get_contents;
+use function Safe\file_put_contents;
+>>>>>>> e697a77b (.)
 
 class ResourceFormSchemaGenerator
 {
     /**
+<<<<<<< HEAD
      * @param  class-string  $resourceClass
+=======
+     * @param class-string $resourceClass
+>>>>>>> e697a77b (.)
      */
     public static function generateFormSchema(string $resourceClass): bool
     {
         try {
+<<<<<<< HEAD
             if (! class_exists($resourceClass)) {
+=======
+            if (!class_exists($resourceClass)) {
+>>>>>>> e697a77b (.)
                 throw new \RuntimeException("Class {$resourceClass} does not exist");
             }
 
@@ -63,7 +80,10 @@ class ResourceFormSchemaGenerator
             return true;
         } catch (\Exception $e) {
             error_log("Error generating form schema for {$resourceClass}: ".$e->getMessage());
+<<<<<<< HEAD
 
+=======
+>>>>>>> e697a77b (.)
             return false;
         }
     }
@@ -86,7 +106,11 @@ class ResourceFormSchemaGenerator
 
                 if (preg_match('/namespace\s+([\w\\\\\\\\]+);/', $content, $namespaceMatch) &&
                     preg_match('/class\s+(\w+)\s+extends\s+XotBaseResource/', $content, $classMatch) &&
+<<<<<<< HEAD
                     ! empty($namespaceMatch[1]) && ! empty($classMatch[1])) {
+=======
+                    !empty($namespaceMatch[1]) && !empty($classMatch[1])) {
+>>>>>>> e697a77b (.)
                     $fullClassName = $namespaceMatch[1].'\\'.$classMatch[1];
 
                     if (class_exists($fullClassName)) {

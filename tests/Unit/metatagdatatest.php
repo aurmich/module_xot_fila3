@@ -2,15 +2,24 @@
 
 declare(strict_types=1);
 
+<<<<<<< HEAD
 use Filament\Support\Colors\Color;
 use Modules\Xot\Datas\MetatagData;
+=======
+use Modules\Xot\Datas\MetatagData;
+use Filament\Support\Colors\Color;
+>>>>>>> e697a77b (.)
 
 /**
  * Test che la classe MetatagData possa essere istanziata correttamente.
  * Questo test verifica che la classe possa essere istanziata senza errori.
  */
 test('MetatagData può essere istanziata', function () {
+<<<<<<< HEAD
     $metatagData = new MetatagData;
+=======
+    $metatagData = new MetatagData();
+>>>>>>> e697a77b (.)
     expect($metatagData)->toBeInstanceOf(MetatagData::class);
 });
 
@@ -20,7 +29,11 @@ test('MetatagData può essere istanziata', function () {
  * con i colori Filament corretti.
  */
 test('getFilamentColors restituisce i colori Filament corretti', function () {
+<<<<<<< HEAD
     $metatagData = new MetatagData;
+=======
+    $metatagData = new MetatagData();
+>>>>>>> e697a77b (.)
     $colors = $metatagData->getFilamentColors();
 
     expect($colors)->toBeArray()
@@ -35,17 +48,30 @@ test('getFilamentColors restituisce i colori Filament corretti', function () {
  * personalizzati quando l'array colors contiene valori personalizzati.
  */
 test('getColors gestisce correttamente i colori personalizzati', function () {
+<<<<<<< HEAD
     $metatagData = new MetatagData;
+=======
+    $metatagData = new MetatagData();
+>>>>>>> e697a77b (.)
     $metatagData->colors = [
         'custom_color' => [
             'key' => 'custom_color',
             'color' => 'custom',
+<<<<<<< HEAD
             'hex' => '#FF5500',
         ],
         'primary' => [
             'key' => 'primary',
             'color' => 'amber',
         ],
+=======
+            'hex' => '#FF5500'
+        ],
+        'primary' => [
+            'key' => 'primary',
+            'color' => 'amber'
+        ]
+>>>>>>> e697a77b (.)
     ];
 
     $colors = $metatagData->getColors();
@@ -61,7 +87,11 @@ test('getColors gestisce correttamente i colori personalizzati', function () {
  * della proprietà logo_height.
  */
 test('getLogoHeight restituisce il valore corretto', function () {
+<<<<<<< HEAD
     $metatagData = new MetatagData;
+=======
+    $metatagData = new MetatagData();
+>>>>>>> e697a77b (.)
     $metatagData->logo_height = '3em';
 
     expect($metatagData->getLogoHeight())->toBe('3em');
@@ -73,7 +103,11 @@ test('getLogoHeight restituisce il valore corretto', function () {
  * corretti quando viene istanziata la classe.
  */
 test('Le proprietà hanno i valori di default corretti', function () {
+<<<<<<< HEAD
     $metatagData = new MetatagData;
+=======
+    $metatagData = new MetatagData();
+>>>>>>> e697a77b (.)
 
     expect($metatagData->generator)->toBe('xot')
         ->and($metatagData->charset)->toBe('UTF-8')

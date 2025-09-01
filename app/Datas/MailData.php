@@ -13,6 +13,7 @@ use Spatie\LaravelData\Data;
 class MailData extends Data
 {
     /**
+<<<<<<< HEAD
      * @param  string  $driver  Driver per l'invio delle email
      * @param  string  $host  Host SMTP
      * @param  int  $port  Porta SMTP
@@ -23,6 +24,18 @@ class MailData extends Data
      * @param  string  $from_name  Nome mittente
      * @param  string|null  $reply_to  Indirizzo per le risposte
      * @param  bool  $verify_peer  Verifica certificato peer SSL
+=======
+     * @param string $driver         Driver per l'invio delle email
+     * @param string $host           Host SMTP
+     * @param int         $port           Porta SMTP
+     * @param string $encryption     Tipo di encryption (tls, ssl)
+     * @param string $username       Username SMTP
+     * @param string $password       Password SMTP
+     * @param string $from_address   Indirizzo mittente
+     * @param string $from_name      Nome mittente
+     * @param string|null $reply_to       Indirizzo per le risposte
+     * @param bool        $verify_peer    Verifica certificato peer SSL
+>>>>>>> e697a77b (.)
      */
     public function __construct(
         public readonly string $driver = 'smtp',
@@ -35,6 +48,7 @@ class MailData extends Data
         public readonly string $from_name = 'Laraxot App',
         public readonly ?string $reply_to = null,
         public readonly bool $verify_peer = true,
+<<<<<<< HEAD
     ) {}
 
     /**
@@ -43,5 +57,18 @@ class MailData extends Data
     public static function make(): static
     {
         return new static;
+=======
+    ) {
+    }
+
+    /**
+     * Create a new instance of MailData with default values.
+     *
+     * @return static
+     */
+    public static function make(): static
+    {
+        return new static();
+>>>>>>> e697a77b (.)
     }
 }

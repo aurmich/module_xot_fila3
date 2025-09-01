@@ -20,7 +20,12 @@ class CommandOutputEvent implements ShouldBroadcast
         public string $processId,
         public string $output,
         public string $type = 'output',
+<<<<<<< HEAD
     ) {}
+=======
+    ) {
+    }
+>>>>>>> e697a77b (.)
 
     public function broadcastOn(): array
     {

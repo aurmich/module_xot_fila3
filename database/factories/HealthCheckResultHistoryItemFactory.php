@@ -9,7 +9,11 @@ use Modules\Xot\Models\HealthCheckResultHistoryItem;
 
 /**
  * HealthCheckResultHistoryItem Factory
+<<<<<<< HEAD
  *
+=======
+ * 
+>>>>>>> e697a77b (.)
  * @extends Factory<HealthCheckResultHistoryItem>
  */
 class HealthCheckResultHistoryItemFactory extends Factory
@@ -21,7 +25,11 @@ class HealthCheckResultHistoryItemFactory extends Factory
         return [
             'check_name' => $this->faker->randomElement([
                 'DatabaseCheck',
+<<<<<<< HEAD
                 'CacheCheck',
+=======
+                'CacheCheck', 
+>>>>>>> e697a77b (.)
                 'QueueCheck',
                 'StorageCheck',
                 'MemoryCheck',

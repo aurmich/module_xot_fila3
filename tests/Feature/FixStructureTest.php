@@ -2,6 +2,10 @@
 
 namespace Modules\Xot\Tests\Feature;
 
+<<<<<<< HEAD
+=======
+use Illuminate\Support\Facades\File;
+>>>>>>> e697a77b (.)
 use PHPUnit\Framework\Attributes\Test;
 use Tests\TestCase;
 
@@ -17,7 +21,11 @@ class FixStructureTest extends TestCase
         parent::setUp();
 
         // Creiamo una directory temporanea per i test
+<<<<<<< HEAD
         $this->testDir = sys_get_temp_dir().'/fix_structure_test_'.uniqid();
+=======
+        $this->testDir = sys_get_temp_dir() . '/fix_structure_test_' . uniqid();
+>>>>>>> e697a77b (.)
         mkdir($this->testDir, 0755, true);
 
         // Impostiamo la directory di lavoro
@@ -40,11 +48,19 @@ class FixStructureTest extends TestCase
         if (is_dir($dir)) {
             $objects = scandir($dir);
             foreach ($objects as $object) {
+<<<<<<< HEAD
                 if ($object != '.' && $object != '..') {
                     if (is_dir($dir.DIRECTORY_SEPARATOR.$object) && ! is_link($dir.'/'.$object)) {
                         $this->rrmdir($dir.DIRECTORY_SEPARATOR.$object);
                     } else {
                         unlink($dir.DIRECTORY_SEPARATOR.$object);
+=======
+                if ($object != "." && $object != "..") {
+                    if (is_dir($dir. DIRECTORY_SEPARATOR .$object) && !is_link($dir."/".$object)) {
+                        $this->rrmdir($dir. DIRECTORY_SEPARATOR .$object);
+                    } else {
+                        unlink($dir. DIRECTORY_SEPARATOR .$object);
+>>>>>>> e697a77b (.)
                     }
                 }
             }
@@ -53,15 +69,24 @@ class FixStructureTest extends TestCase
     }
 
     #[Test]
+<<<<<<< HEAD
     public function test_move_to_app_functionality(): void
     {
         // Creiamo una struttura di directory di test
         mkdir($this->testDir.'/Actions', 0755, true);
         file_put_contents($this->testDir.'/Actions/test.php', '<?php echo "test";');
+=======
+    public function testMoveToAppFunctionality(): void
+    {
+        // Creiamo una struttura di directory di test
+        mkdir($this->testDir . '/Actions', 0755, true);
+        file_put_contents($this->testDir . '/Actions/test.php', '<?php echo "test";');
+>>>>>>> e697a77b (.)
 
         // Copiamo lo script nella directory di test
         $script = base_path('../bashscripts/fix_structure.sh');
         $scriptContent = file_get_contents($script);
+<<<<<<< HEAD
         file_put_contents($this->testDir.'/fix_structure.sh', $scriptContent);
         chmod($this->testDir.'/fix_structure.sh', 0755);
 
@@ -80,10 +105,31 @@ class FixStructureTest extends TestCase
         // Creiamo una struttura di directory di test
         mkdir($this->testDir.'/Config', 0755, true);
         file_put_contents($this->testDir.'/Config/test.php', '<?php echo "test";');
+=======
+        file_put_contents($this->testDir . '/fix_structure.sh', $scriptContent);
+        chmod($this->testDir . '/fix_structure.sh', 0755);
+
+        // Eseguiamo lo script
+        exec('cd ' . $this->testDir . ' && ./fix_structure.sh');
+
+        // Verifichiamo che la cartella Actions sia stata spostata in app/
+        $this->assertDirectoryExists($this->testDir . '/app/Actions');
+        $this->assertFileExists($this->testDir . '/app/Actions/test.php');
+        $this->assertDirectoryDoesNotExist($this->testDir . '/Actions');
+    }
+
+    #[Test]
+    public function testRenameToLowerFunctionality(): void
+    {
+        // Creiamo una struttura di directory di test
+        mkdir($this->testDir . '/Config', 0755, true);
+        file_put_contents($this->testDir . '/Config/test.php', '<?php echo "test";');
+>>>>>>> e697a77b (.)
 
         // Copiamo lo script nella directory di test
         $script = base_path('../bashscripts/fix_structure.sh');
         $scriptContent = file_get_contents($script);
+<<<<<<< HEAD
         file_put_contents($this->testDir.'/fix_structure.sh', $scriptContent);
         chmod($this->testDir.'/fix_structure.sh', 0755);
 
@@ -105,10 +151,34 @@ class FixStructureTest extends TestCase
 
         mkdir($this->testDir.'/config', 0755, true);
         file_put_contents($this->testDir.'/config/secondary.php', '<?php echo "secondary";');
+=======
+        file_put_contents($this->testDir . '/fix_structure.sh', $scriptContent);
+        chmod($this->testDir . '/fix_structure.sh', 0755);
+
+        // Eseguiamo lo script
+        exec('cd ' . $this->testDir . ' && ./fix_structure.sh');
+
+        // Verifichiamo che la cartella Config sia stata rinominata in config
+        $this->assertDirectoryExists($this->testDir . '/config');
+        $this->assertFileExists($this->testDir . '/config/test.php');
+        $this->assertDirectoryDoesNotExist($this->testDir . '/Config');
+    }
+
+    #[Test]
+    public function testMoveConfigFunctionality(): void
+    {
+        // Creiamo una struttura di directory di test con entrambe le versioni
+        mkdir($this->testDir . '/Config', 0755, true);
+        file_put_contents($this->testDir . '/Config/main.php', '<?php echo "main";');
+
+        mkdir($this->testDir . '/config', 0755, true);
+        file_put_contents($this->testDir . '/config/secondary.php', '<?php echo "secondary";');
+>>>>>>> e697a77b (.)
 
         // Copiamo lo script nella directory di test
         $script = base_path('../bashscripts/fix_structure.sh');
         $scriptContent = file_get_contents($script);
+<<<<<<< HEAD
         file_put_contents($this->testDir.'/fix_structure.sh', $scriptContent);
         chmod($this->testDir.'/fix_structure.sh', 0755);
 
@@ -121,5 +191,19 @@ class FixStructureTest extends TestCase
         $this->assertFileExists($this->testDir.'/config/secondary.php');
         $this->assertDirectoryDoesNotExist($this->testDir.'/Config');
         $this->assertDirectoryExists($this->testDir.'/config_old');
+=======
+        file_put_contents($this->testDir . '/fix_structure.sh', $scriptContent);
+        chmod($this->testDir . '/fix_structure.sh', 0755);
+
+        // Eseguiamo lo script
+        exec('cd ' . $this->testDir . ' && ./fix_structure.sh');
+
+        // Verifichiamo che i contenuti siano stati uniti e che la cartella minuscola contenga tutto
+        $this->assertDirectoryExists($this->testDir . '/config');
+        $this->assertFileExists($this->testDir . '/config/main.php');
+        $this->assertFileExists($this->testDir . '/config/secondary.php');
+        $this->assertDirectoryDoesNotExist($this->testDir . '/Config');
+        $this->assertDirectoryExists($this->testDir . '/config_old');
+>>>>>>> e697a77b (.)
     }
 }

@@ -8,6 +8,7 @@ declare(strict_types=1);
 
 namespace Modules\Xot\Datas;
 
+<<<<<<< HEAD
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
@@ -20,6 +21,21 @@ use Spatie\LaravelPdf\Facades\Pdf;
 use Spipu\Html2Pdf\Html2Pdf;
 use Symfony\Component\HttpFoundation\BinaryFileResponse;
 use Webmozart\Assert\Assert;
+=======
+use Illuminate\Support\Str;
+use Spatie\LaravelData\Data;
+use Spipu\Html2Pdf\Html2Pdf;
+use Webmozart\Assert\Assert;
+use Spatie\LaravelPdf\Enums\Unit;
+use Spatie\LaravelPdf\Facades\Pdf;
+use Spatie\LaravelPdf\Enums\Format;
+use Modules\Xot\Enums\PdfEngineEnum;
+use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Facades\Storage;
+use Spatie\LaravelPdf\Enums\Orientation;
+use Symfony\Component\HttpFoundation\BinaryFileResponse;
+
+>>>>>>> e697a77b (.)
 
 /**
  * Undocumented class.
@@ -64,6 +80,10 @@ class PdfData extends Data
 
     // public static function make(Model $model = null, string $html = null): self
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> e697a77b (.)
     public PdfEngineEnum $engine = PdfEngineEnum::SPIPU;
 
     public string $html = '';
@@ -104,11 +124,19 @@ class PdfData extends Data
                 // ->name(str_slug($project->nome).'-REPORT.pdf')
                 ->save($this->getPath());
                 ;
+<<<<<<< HEAD
 
+=======
+                
+>>>>>>> e697a77b (.)
                 break;
                 */
         }
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> e697a77b (.)
         $this->html = $html;
         // $this->engine->build($this);
 
@@ -141,21 +169,33 @@ class PdfData extends Data
         return $res;
     }
 
+<<<<<<< HEAD
     public function view(string $view, array $params = []): self
     {
         if (! view()->exists($view)) {
+=======
+    public function view(string $view, array $params=[]): self
+    {
+        if(!view()->exists($view)){
+>>>>>>> e697a77b (.)
             throw new \Exception('View '.$view.' not found');
         }
         $out = view($view, $params);
         $this->html = $out->render();
+<<<<<<< HEAD
 
+=======
+>>>>>>> e697a77b (.)
         return $this->fromHtml($this->html);
     }
 
     public function setEngine(PdfEngineEnum $engine): self
     {
         $this->engine = $engine;
+<<<<<<< HEAD
 
+=======
+>>>>>>> e697a77b (.)
         return $this;
     }
 }

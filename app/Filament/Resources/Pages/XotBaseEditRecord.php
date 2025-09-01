@@ -4,9 +4,16 @@ declare(strict_types=1);
 
 namespace Modules\Xot\Filament\Resources\Pages;
 
+<<<<<<< HEAD
 use Filament\Forms\Form;
 use Filament\Resources\Pages\EditRecord as FilamentEditRecord;
 use Modules\Xot\Filament\Traits\TransTrait;
+=======
+
+use Filament\Forms\Form;
+use Modules\Xot\Filament\Traits\TransTrait;
+use Filament\Resources\Pages\EditRecord as FilamentEditRecord;
+>>>>>>> e697a77b (.)
 
 abstract class XotBaseEditRecord extends FilamentEditRecord
 {
@@ -15,17 +22,26 @@ abstract class XotBaseEditRecord extends FilamentEditRecord
     /**
      * Configure the form.
      *
+<<<<<<< HEAD
      * @param  Form  $form  The form instance to configure
+=======
+     * @param Form $form The form instance to configure
+>>>>>>> e697a77b (.)
      * @return Form The configured form
      */
     public function form(Form $form): Form
     {
         $schema = $this->getFormSchema();
+<<<<<<< HEAD
 
+=======
+        
+>>>>>>> e697a77b (.)
         if (empty($schema)) {
             $resource = $this->getResource();
             $schema = $resource::getFormSchema();
         }
+<<<<<<< HEAD
 
         // Ensure schema is properly typed for PHPStan level 10
         /** @var array<string|int, \Filament\Forms\Components\Component>|array<\Filament\Forms\Components\Component> $validSchema */
@@ -34,6 +50,16 @@ abstract class XotBaseEditRecord extends FilamentEditRecord
         return $form->schema($validSchema);
     }
 
+=======
+        
+        // Ensure schema is properly typed for PHPStan level 10
+        /** @var array<string|int, \Filament\Forms\Components\Component>|array<\Filament\Forms\Components\Component> $validSchema */
+        $validSchema = $schema;
+        
+        return $form->schema($validSchema);
+    }
+    
+>>>>>>> e697a77b (.)
     /**
      * Get the form schema.
      *
@@ -53,4 +79,8 @@ abstract class XotBaseEditRecord extends FilamentEditRecord
     {
         return static::transFunc(__FUNCTION__);
     }
+<<<<<<< HEAD
+=======
+
+>>>>>>> e697a77b (.)
 }

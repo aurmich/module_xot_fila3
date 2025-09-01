@@ -8,8 +8,13 @@ declare(strict_types=1);
 
 namespace Modules\Xot\Actions\Filament;
 
+<<<<<<< HEAD
 use Filament\Forms\Components\Component;
 use Filament\Forms\Components\Field;
+=======
+use Filament\Forms\Components\Field;
+use Filament\Forms\Components\Component;
+>>>>>>> e697a77b (.)
 use Illuminate\Support\Arr;
 use Modules\Lang\Actions\SaveTransAction;
 use Modules\Xot\Actions\GetTransKeyAction;
@@ -26,7 +31,11 @@ class AutoLabelAction
     /**
      * Get the component name based on its actual type.
      *
+<<<<<<< HEAD
      * @param  Field|Component  $component  Il componente di cui ottenere il nome
+=======
+     * @param Field|Component $component Il componente di cui ottenere il nome
+>>>>>>> e697a77b (.)
      * @return string Il nome del componente
      */
     private function getComponentName(Field|Component $component): string
@@ -34,7 +43,10 @@ class AutoLabelAction
         // Per i componenti Field di Filament
         if (method_exists($component, 'getName')) {
             $name = $component->getName();
+<<<<<<< HEAD
 
+=======
+>>>>>>> e697a77b (.)
             return is_string($name) ? $name : (string) $name;
         }
 
@@ -44,7 +56,10 @@ class AutoLabelAction
         // @phpstan-ignore function.alreadyNarrowedType
         if (method_exists($component, 'getStatePath')) {
             $statePath = $component->getStatePath();
+<<<<<<< HEAD
 
+=======
+>>>>>>> e697a77b (.)
             return $statePath;
         }
 
@@ -53,7 +68,10 @@ class AutoLabelAction
         if ($reflectionClass->hasProperty('name') && $reflectionClass->getProperty('name')->isPublic()) {
             $property = $reflectionClass->getProperty('name');
             Assert::string($value = $property->getValue($component));
+<<<<<<< HEAD
 
+=======
+>>>>>>> e697a77b (.)
             return $value;
         }
 
@@ -64,7 +82,12 @@ class AutoLabelAction
     /**
      * Applica automaticamente le etichette ai componenti Filament.
      *
+<<<<<<< HEAD
      * @param  Field|Component  $component  Il componente a cui applicare l'etichetta
+=======
+     * @param Field|Component $component Il componente a cui applicare l'etichetta
+     * 
+>>>>>>> e697a77b (.)
      * @return Field|Component Il componente con l'etichetta applicata
      */
     public function execute(Field|Component $component): Field|Component
@@ -100,7 +123,11 @@ class AutoLabelAction
         Assert::stringNotEmpty($componentName, 'Il nome del componente non può essere vuoto');
 
         // Costruiamo la chiave per l'etichetta
+<<<<<<< HEAD
         $label_key = $trans_key.'.fields.'.$componentName.'.label';
+=======
+        $label_key = $trans_key . '.fields.' . $componentName . '.label';
+>>>>>>> e697a77b (.)
         $label = trans($label_key);
 
         if (is_string($label)) {
@@ -109,7 +136,11 @@ class AutoLabelAction
                 $label_value = $componentName;
 
                 // Proviamo a ottenere una traduzione più breve
+<<<<<<< HEAD
                 $label_key1 = $trans_key.'.fields.'.$componentName;
+=======
+                $label_key1 = $trans_key . '.fields.' . $componentName;
+>>>>>>> e697a77b (.)
                 $label1 = trans($label_key1);
 
                 if ($label_key1 !== $label1 && is_string($label1)) {

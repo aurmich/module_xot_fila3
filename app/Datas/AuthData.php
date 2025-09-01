@@ -13,6 +13,7 @@ use Spatie\LaravelData\Data;
 class AuthData extends Data
 {
     /**
+<<<<<<< HEAD
      * @param  string  $guard  Guard predefinita
      * @param  array  $guards  Guards disponibili
      * @param  array  $providers  Provider di autenticazione
@@ -20,6 +21,15 @@ class AuthData extends Data
      * @param  int  $password_reset_timeout  Password reset timeout in minuti
      * @param  array  $throttle  Configurazione throttling
      * @param  array  $social  Provider social abilitati
+=======
+     * @param string $guard          Guard predefinita
+     * @param array  $guards         Guards disponibili
+     * @param array  $providers      Provider di autenticazione
+     * @param bool   $verify_email   Se richiedere verifica email
+     * @param int    $password_reset_timeout Password reset timeout in minuti
+     * @param array  $throttle       Configurazione throttling
+     * @param array  $social         Provider social abilitati
+>>>>>>> e697a77b (.)
      */
     public function __construct(
         public readonly string $guard = 'web',
@@ -38,6 +48,7 @@ class AuthData extends Data
             'twitter' => false,
             'github' => false,
         ],
+<<<<<<< HEAD
     ) {}
 
     /**
@@ -46,5 +57,18 @@ class AuthData extends Data
     public static function make(): static
     {
         return new static;
+=======
+    ) {
+    }
+
+    /**
+     * Create a new instance of AuthData with default values.
+     *
+     * @return static
+     */
+    public static function make(): static
+    {
+        return new static();
+>>>>>>> e697a77b (.)
     }
 }

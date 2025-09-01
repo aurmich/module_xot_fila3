@@ -16,11 +16,20 @@ final class GetFieldnamesByTablenameAction
     /**
      * Get column names from a table with specific database connection.
      *
+<<<<<<< HEAD
      * @param  string  $table  Table name to get columns from
      * @param  string|null  $connectionName  Database connection name (optional)
      * @return list
      *
      * @throws \InvalidArgumentException
+=======
+     * @param string $table          Table name to get columns from
+     * @param string|null $connectionName Database connection name (optional)
+     *
+     * @throws \InvalidArgumentException
+     *
+     * @return list
+>>>>>>> e697a77b (.)
      */
     public function execute(string $table, ?string $connectionName = null): array
     {
@@ -34,12 +43,20 @@ final class GetFieldnamesByTablenameAction
 
         // Validate database connection
         if (! $this->isValidConnection($connectionName)) {
+<<<<<<< HEAD
             throw new \InvalidArgumentException(sprintf('Invalid database connection: %s', $connectionName));
+=======
+            throw new \InvalidArgumentException(sprintf('Invalid database connection: %s',  $connectionName));
+>>>>>>> e697a77b (.)
         }
 
         // Check if table exists in the database
         if (! Schema::connection($connectionName)->hasTable($table)) {
+<<<<<<< HEAD
             throw new \InvalidArgumentException(sprintf('Table "%s" does not exist in connection "%s".', $table, $connectionName));
+=======
+            throw new \InvalidArgumentException(sprintf('Table "%s" does not exist in connection "%s".', $table,  $connectionName));
+>>>>>>> e697a77b (.)
         }
 
         // Get and return column listing

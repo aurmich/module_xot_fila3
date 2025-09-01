@@ -4,7 +4,10 @@ declare(strict_types=1);
 
 namespace Modules\Xot\States\Transitions;
 
+<<<<<<< HEAD
 use Filament\Notifications\Notification as FilamentNotification;
+=======
+>>>>>>> e697a77b (.)
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\Notification;
 use Illuminate\Support\Str;
@@ -12,10 +15,20 @@ use Modules\Notify\Datas\RecordNotificationData;
 use Modules\Notify\Notifications\RecordNotification;
 use Modules\Xot\Contracts\UserContract;
 use Spatie\ModelStates\Transition;
+<<<<<<< HEAD
 
 abstract class XotBaseTransition extends Transition
 {
     public function __construct(public Model $record, public ?string $message = '') {}
+=======
+use Filament\Notifications\Notification as FilamentNotification;
+
+abstract class XotBaseTransition extends Transition
+{
+    public function __construct(public Model $record, public ?string $message = '')
+    {
+    }
+>>>>>>> e697a77b (.)
 
     public function handle(): Model
     {
@@ -38,14 +51,24 @@ abstract class XotBaseTransition extends Transition
         $data = $this->getNotificationData();
         $recipients = $this->getNotificationRecipients();
         foreach ($recipients as $recipient) {
+<<<<<<< HEAD
 
             $this->sendRecipientNotification($recipient, $data);
 
+=======
+            
+            $this->sendRecipientNotification($recipient,$data);
+            
+>>>>>>> e697a77b (.)
         }
     }
 
     /**
+<<<<<<< HEAD
      * @return array<string, RecordNotificationData>
+=======
+     * @return  array<string, RecordNotificationData>
+>>>>>>> e697a77b (.)
      */
     public function getNotificationRecipients(): array
     {
@@ -76,8 +99,14 @@ abstract class XotBaseTransition extends Transition
         return $slug;
     }
 
+<<<<<<< HEAD
     public function sendRecipientNotification(RecordNotificationData $recipient, array $data): void
     {
+=======
+    public function sendRecipientNotification(RecordNotificationData $recipient,array $data): void
+    {
+       
+>>>>>>> e697a77b (.)
 
         $slug = $this->getNotificationSlug($recipient->record);
 
@@ -86,21 +115,36 @@ abstract class XotBaseTransition extends Transition
             $slug
         );
 
+<<<<<<< HEAD
         // $data = $this->getNotificationData();
         $notify = $notify->mergeData($data);
         $notify = $notify->addAttachments($this->getNotificationAttachments());
 
+=======
+        //$data = $this->getNotificationData();
+        $notify = $notify->mergeData($data);
+        $notify = $notify->addAttachments($this->getNotificationAttachments());
+        
+>>>>>>> e697a77b (.)
         try {
             Notification::route($recipient->getChannel(), $recipient->getRoute())
                 ->notify($notify);
         } catch (\TypeError|\Webmozart\Assert\InvalidArgumentException $e) {
+<<<<<<< HEAD
             $message = 'channel :['.$recipient->getChannel().'] error: ['.$e->getMessage().']';
+=======
+            $message = 'channel :['.$recipient->getChannel() .'] error: ['.$e->getMessage().']';
+>>>>>>> e697a77b (.)
             FilamentNotification::make()
                 ->title('Error')
                 ->danger()
                 ->body($message)
                 ->send();
+<<<<<<< HEAD
 
+=======
+            
+>>>>>>> e697a77b (.)
         }
     }
 

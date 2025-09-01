@@ -8,6 +8,18 @@ use Filament\Tables\Columns\TextColumn;
 use Modules\Xot\Filament\Resources\CacheLockResource;
 use Modules\Xot\Filament\Resources\Pages\XotBaseListRecords;
 
+<<<<<<< HEAD
+=======
+
+
+
+use Modules\Xot\Filament\Resources\RelationManagers\XotBaseRelationManager;
+
+
+
+
+
+>>>>>>> e697a77b (.)
 class ListCacheLocks extends XotBaseListRecords
 {
     protected static string $resource = CacheLockResource::class;

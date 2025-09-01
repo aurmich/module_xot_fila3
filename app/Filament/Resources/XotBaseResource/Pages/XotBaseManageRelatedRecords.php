@@ -15,6 +15,10 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Str;
 use Modules\Xot\Filament\Traits\HasXotTable;
 use Modules\Xot\Filament\Traits\NavigationLabelTrait;
+<<<<<<< HEAD
+=======
+use Webmozart\Assert\Assert;
+>>>>>>> e697a77b (.)
 
 /**
  * Classe base per la gestione delle relazioni nelle risorse Filament.
@@ -120,7 +124,11 @@ abstract class XotBaseManageRelatedRecords extends FilamentManageRelatedRecords
      * ->disableCreateAnother(),
      * ]);
      * }.
+<<<<<<< HEAD
 
+=======
+     
+>>>>>>> e697a77b (.)
     public function table(Table $table): Table
     {
         return $table
@@ -142,7 +150,10 @@ abstract class XotBaseManageRelatedRecords extends FilamentManageRelatedRecords
     {
         /** @var array<\Filament\Forms\Components\Component> $schema */
         $schema = $this->getFormSchema();
+<<<<<<< HEAD
 
+=======
+>>>>>>> e697a77b (.)
         return $form->schema($schema);
     }
 

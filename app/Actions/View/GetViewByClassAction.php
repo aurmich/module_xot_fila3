@@ -7,6 +7,10 @@ namespace Modules\Xot\Actions\View;
 use Illuminate\Support\Arr;
 use Illuminate\Support\Str;
 use Spatie\QueueableAction\QueueableAction;
+<<<<<<< HEAD
+=======
+use Modules\Xot\Actions\Module\GetModuleNameByModelClassAction;
+>>>>>>> e697a77b (.)
 
 /**
  * Classe per la conversione di nomi di classi in nomi di viste.
@@ -19,10 +23,17 @@ class GetViewByClassAction
      * Converte un nome di classe in un nome di vista.
      * Esempio: "Modules\UI\Filament\Widgets\GroupWidget" => "ui::filament.widgets.group"
      *
+<<<<<<< HEAD
      * @param  string  $class  Il nome della classe da convertire
      * @param  string  $suffix  Suffisso opzionale da aggiungere al nome della vista
      * @return string Il nome della vista
      *
+=======
+     * @param string $class Il nome della classe da convertire
+     * @param string $suffix Suffisso opzionale da aggiungere al nome della vista
+     *
+     * @return string Il nome della vista
+>>>>>>> e697a77b (.)
      * @throws \Exception Se la vista non esiste
      */
     public function execute(string $class, string $suffix = ''): string
@@ -63,7 +74,11 @@ class GetViewByClassAction
         $implode = implode('.', $mapped);
         $view = $module_low.'::'.$implode.$suffix;
 
+<<<<<<< HEAD
         if (! view()->exists($view)) {
+=======
+        if (!view()->exists($view)) {
+>>>>>>> e697a77b (.)
             throw new \Exception('View not found: '.$view);
         }
 

@@ -9,6 +9,18 @@ use Filament\Forms\Components\TextInput;
 use Modules\Xot\Filament\Resources\ExtraResource\Pages;
 use Modules\Xot\Models\Extra;
 
+<<<<<<< HEAD
+=======
+
+
+
+use Modules\Xot\Filament\Resources\RelationManagers\XotBaseRelationManager;
+
+
+
+
+
+>>>>>>> e697a77b (.)
 class ExtraResource extends XotBaseResource
 {
     protected static ?string $model = Extra::class;

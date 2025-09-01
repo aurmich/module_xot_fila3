@@ -22,7 +22,11 @@ class ExportXlsLazyAction extends Action
     protected function setUp(): void
     {
         parent::setUp();
+<<<<<<< HEAD
 
+=======
+        
+>>>>>>> e697a77b (.)
         $this->label(__('xot::actions.export_xls.label'))
             ->tooltip(__('xot::actions.export_xls.tooltip'))
             ->icon(__('xot::actions.export_xls.icon'))
@@ -50,7 +54,10 @@ class ExportXlsLazyAction extends Action
                             if (is_scalar($field)) {
                                 return (string) $field;
                             }
+<<<<<<< HEAD
 
+=======
+>>>>>>> e697a77b (.)
                             return '';
                         }, $rawFields);
                     }
@@ -58,6 +65,7 @@ class ExportXlsLazyAction extends Action
                 }
 
                 $lazy = $livewire->getFilteredTableQuery();
+<<<<<<< HEAD
 
                 if ($lazy->count() < 7) {
                     Assert::isInstanceOf($lazy, Builder::class);
@@ -69,6 +77,19 @@ class ExportXlsLazyAction extends Action
                         $lazy,
                         $filename,
                         $stringFields,
+=======
+                
+                if ($lazy->count() < 7) {
+                    Assert::isInstanceOf($lazy, Builder::class);
+                    
+                    /** @var array<int, string> $stringFields */
+                    $stringFields = array_values($fields);
+                    
+                    return app(ExportXlsByQuery::class)->execute(
+                        $lazy, 
+                        $filename, 
+                        $stringFields, 
+>>>>>>> e697a77b (.)
                         null
                     );
                 }
@@ -77,16 +98,27 @@ class ExportXlsLazyAction extends Action
 
                 if ($lazyCursor->count() > 3000) {
                     return app(ExportXlsStreamByLazyCollection::class)->execute(
+<<<<<<< HEAD
                         $lazyCursor,
                         $filename,
                         $transKey,
+=======
+                        $lazyCursor, 
+                        $filename, 
+                        $transKey, 
+>>>>>>> e697a77b (.)
                         array_values($fields)
                     );
                 }
 
                 return app(ExportXlsByLazyCollection::class)->execute(
+<<<<<<< HEAD
                     $lazyCursor,
                     $filename,
+=======
+                    $lazyCursor, 
+                    $filename, 
+>>>>>>> e697a77b (.)
                     array_values($fields)
                 );
             });

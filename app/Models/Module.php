@@ -8,6 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Arr;
 use Nwidart\Modules\Facades\Module as ModuleFacade;
 use Nwidart\Modules\Module as NModule;
+<<<<<<< HEAD
 use Sushi\Sushi;
 
 use function Safe\json_encode;
@@ -20,6 +21,20 @@ use function Safe\json_encode;
  * @property int|null $priority
  * @property string|null $path
  *
+=======
+
+use function Safe\json_encode;
+
+use Sushi\Sushi;
+
+/**
+ * @property int         $id
+ * @property string|null $name
+ * @property string|null $description
+ * @property bool|null   $status
+ * @property int|null    $priority
+ * @property string|null $path
+>>>>>>> e697a77b (.)
  * @method static \Illuminate\Database\Eloquent\Builder|Module newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|Module newQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|Module query()
@@ -29,6 +44,7 @@ use function Safe\json_encode;
  * @method static \Illuminate\Database\Eloquent\Builder|Module wherePath($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Module wherePriority($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Module whereStatus($value)
+<<<<<<< HEAD
  *
  * @property string|null $icon
  * @property array<string, string>|null $colors
@@ -36,6 +52,12 @@ use function Safe\json_encode;
  * @method static \Illuminate\Database\Eloquent\Builder|Module whereColors($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Module whereIcon($value)
  *
+=======
+ * @property string|null $icon
+ * @property array<string, string>|null $colors
+ * @method static \Illuminate\Database\Eloquent\Builder|Module whereColors($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Module whereIcon($value)
+>>>>>>> e697a77b (.)
  * @mixin IdeHelperModule
  * @mixin \Eloquent
  */

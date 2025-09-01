@@ -6,7 +6,10 @@ namespace Modules\Xot\Console\Commands;
 
 use Illuminate\Console\Command;
 use RuntimeException;
+<<<<<<< HEAD
 
+=======
+>>>>>>> e697a77b (.)
 use function Safe\shell_exec;
 
 class ImportMdbToMySQL extends Command
@@ -31,12 +34,20 @@ class ImportMdbToMySQL extends Command
     public function handle(): int
     {
         $mdbFile = $this->ask('Inserisci il percorso del file .mdb');
+<<<<<<< HEAD
         if (! is_string($mdbFile)) {
+=======
+        if (!is_string($mdbFile)) {
+>>>>>>> e697a77b (.)
             throw new RuntimeException('Il percorso del file deve essere una stringa');
         }
 
         $mysqlDb = $this->ask('Inserisci il nome del database MySQL');
+<<<<<<< HEAD
         if (! is_string($mysqlDb)) {
+=======
+        if (!is_string($mysqlDb)) {
+>>>>>>> e697a77b (.)
             throw new RuntimeException('Il nome del database deve essere una stringa');
         }
 
@@ -47,7 +58,10 @@ class ImportMdbToMySQL extends Command
         $tables = $this->exportTablesToSQL($mdbFile);
         if (empty($tables)) {
             $this->error('Nessuna tabella trovata nel file .mdb');
+<<<<<<< HEAD
 
+=======
+>>>>>>> e697a77b (.)
             return Command::FAILURE;
         }
 
@@ -55,7 +69,10 @@ class ImportMdbToMySQL extends Command
         $this->importTablesIntoMySQL($tables, $mysqlDb);
 
         $this->info('Importazione completata con successo!');
+<<<<<<< HEAD
 
+=======
+>>>>>>> e697a77b (.)
         return Command::SUCCESS;
     }
 
@@ -68,7 +85,11 @@ class ImportMdbToMySQL extends Command
     {
         $tables = [];
         $tableList = shell_exec("mdb-tables $mdbFile");
+<<<<<<< HEAD
         if (! $tableList) {
+=======
+        if (!$tableList) {
+>>>>>>> e697a77b (.)
             return [];
         }
 
@@ -90,7 +111,11 @@ class ImportMdbToMySQL extends Command
     /**
      * Importa le tabelle in MySQL.
      *
+<<<<<<< HEAD
      * @param  array<int, string>  $tables
+=======
+     * @param array<int, string> $tables
+>>>>>>> e697a77b (.)
      */
     private function importTablesIntoMySQL(array $tables, string $mysqlDb): void
     {

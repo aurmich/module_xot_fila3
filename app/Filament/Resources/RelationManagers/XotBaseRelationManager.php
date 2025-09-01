@@ -7,8 +7,15 @@ namespace Modules\Xot\Filament\Resources\RelationManagers;
 use Filament\Forms\Form;
 use Filament\Resources\RelationManagers\RelationManager as FilamentRelationManager;
 use Filament\Tables;
+<<<<<<< HEAD
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Arr;
+=======
+use Filament\Tables\Table;
+use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Arr;
+use Illuminate\Support\Str;
+>>>>>>> e697a77b (.)
 use Modules\Xot\Filament\Resources\XotBaseResource;
 use Modules\Xot\Filament\Traits\HasXotTable;
 use Webmozart\Assert\Assert;
@@ -45,6 +52,7 @@ abstract class XotBaseRelationManager extends FilamentRelationManager
     {
         return $this->getResource()::getFormSchema();
     }
+<<<<<<< HEAD
 
     // *
     public function getTableColumns(): array
@@ -95,18 +103,53 @@ abstract class XotBaseRelationManager extends FilamentRelationManager
 
        
         return $actions;
+=======
+//*
+    public function getTableColumns(): array
+    {
+        $index=Arr::get($this->getResource()::getPages(),'index');
+        if(!$index){
+            //throw new \Exception('Index page not found');
+            return [];
+        }
+        /** @phpstan-ignore method.nonObject */
+        $index_page=$index->getPage();
+        
+        if(!method_exists($index_page,'getTableColumns')){
+            //throw new \Exception('method  getTableColumns on '.print_r($index_page,true).' not found');
+            return [];
+        }
+        /** @phpstan-ignore argument.type */
+        $res= app($index_page)->getTableColumns();
+
+        return $res;
+    }
+//*/
+    public function getTableActions(): array
+    {
+        return [
+            Tables\Actions\EditAction::make(),
+            //Tables\Actions\DeleteAction::make(),
+            Tables\Actions\DetachAction::make(),
+        ];
+>>>>>>> e697a77b (.)
     }
 
     public function getTableBulkActions(): array
     {
         return [
+<<<<<<< HEAD
             // Tables\Actions\DeleteBulkAction::make(),
+=======
+            //Tables\Actions\DeleteBulkAction::make(),
+>>>>>>> e697a77b (.)
             Tables\Actions\DetachBulkAction::make(),
         ];
     }
 
     public function getTableHeaderActions(): array
     {
+<<<<<<< HEAD
         /*
         return [
             Tables\Actions\AttachAction::make()
@@ -132,6 +175,11 @@ abstract class XotBaseRelationManager extends FilamentRelationManager
 
        
         return $actions;
+=======
+        return [
+            Tables\Actions\AttachAction::make(),
+        ];
+>>>>>>> e697a77b (.)
     }
 
     public function getTableFilters(): array
@@ -141,7 +189,11 @@ abstract class XotBaseRelationManager extends FilamentRelationManager
 
     public function getResource(): string
     {
+<<<<<<< HEAD
         $resource = static::$resource;
+=======
+        $resource = static::$resourceClass;
+>>>>>>> e697a77b (.)
         Assert::classExists($resource);
         Assert::isAOf($resource, XotBaseResource::class);
 

@@ -9,6 +9,7 @@ namespace Modules\Xot\Models;
  *
  * @property string $key
  * @property string $value
+<<<<<<< HEAD
  * @property int $expiration
  *
  * @method static \Modules\Xot\Database\Factories\CacheFactory factory($count = null, $state = [])
@@ -32,6 +33,26 @@ namespace Modules\Xot\Models;
  * @property \Modules\Xot\Contracts\ProfileContract|null $creator
  * @property \Modules\Xot\Contracts\ProfileContract|null $updater
  *
+=======
+ * @property int    $expiration
+ * @method static \Modules\Xot\Database\Factories\CacheFactory factory($count = null, $state = [])
+ * @method static \Illuminate\Database\Eloquent\Builder|Cache  newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|Cache  newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|Cache  query()
+ * @method static \Illuminate\Database\Eloquent\Builder|Cache  whereExpiration($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Cache  whereKey($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Cache  whereValue($value)
+ * @property int $expiration
+ * @method static \Modules\Xot\Database\Factories\CacheFactory factory($count = null, $state = [])
+ * @method static \Illuminate\Database\Eloquent\Builder|Cache  newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|Cache  newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|Cache  query()
+ * @method static \Illuminate\Database\Eloquent\Builder|Cache  whereExpiration($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Cache  whereKey($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Cache  whereValue($value)
+ * @property \Modules\Xot\Contracts\ProfileContract|null $creator
+ * @property \Modules\Xot\Contracts\ProfileContract|null $updater
+>>>>>>> e697a77b (.)
  * @mixin IdeHelperCache
  * @mixin \Eloquent
  */

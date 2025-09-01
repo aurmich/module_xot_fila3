@@ -33,10 +33,17 @@ class EnvData extends Data implements Wireable
 
             foreach ($_ENV as $k => $v) {
                 $k = mb_strtolower($k);
+<<<<<<< HEAD
                 if ($v === 'false') {
                     $v = false;
                 }
                 if ($v === 'true') {
+=======
+                if ('false' === $v) {
+                    $v = false;
+                }
+                if ('true' === $v) {
+>>>>>>> e697a77b (.)
                     $v = true;
                 }
                 $data[$k] = $v;
@@ -54,7 +61,11 @@ class EnvData extends Data implements Wireable
         $env_content = File::get($env_path);
 
         foreach ($data as $k => $v) {
+<<<<<<< HEAD
             if ($v !== $this->$k && (is_bool($v) || is_int($v) || is_string($v))) {
+=======
+            if ($this->$k !== $v && (is_bool($v) || is_int($v) || is_string($v))) {
+>>>>>>> e697a77b (.)
                 $env_content = $this->updateVar($k, $v, $env_content);
             }
         }
@@ -67,12 +78,20 @@ class EnvData extends Data implements Wireable
         $key = str($key)->upper()->toString();
         $replace = $this->getLine($key, $value);
         $pos_start = mb_strpos($env_content, $key.'=');
+<<<<<<< HEAD
         if ($pos_start === false) {
+=======
+        if (false === $pos_start) {
+>>>>>>> e697a77b (.)
             // throw new \Exception('['.__LINE__.']['.class_basename($this).']');
             return $env_content."\n".$replace;
         }
         $pos_end = mb_strpos($env_content, "\n", $pos_start);
+<<<<<<< HEAD
         if ($pos_end === false) {
+=======
+        if (false === $pos_end) {
+>>>>>>> e697a77b (.)
             throw new \Exception('['.__LINE__.']['.class_basename($this).']');
         }
 

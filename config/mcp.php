@@ -14,6 +14,7 @@ return [
     'servers' => [
         'filesystem' => [
             'command' => 'npx',
+<<<<<<< HEAD
             'args' => ['-y', '@modelcontextprotocol/server-filesystem'],
         ],
         'memory' => [
@@ -32,6 +33,26 @@ return [
             'command' => 'npx',
             'args' => ['-y', '@modelcontextprotocol/server-redis'],
         ],
+=======
+            'args' => ['-y', '@modelcontextprotocol/server-filesystem']
+        ],
+        'memory' => [
+            'command' => 'npx',
+            'args' => ['-y', '@modelcontextprotocol/server-memory']
+        ],
+        'fetch' => [
+            'command' => 'npx',
+            'args' => ['-y', '@modelcontextprotocol/server-fetch']
+        ],
+        'mysql' => [
+            'command' => 'npx',
+            'args' => ['-y', '@modelcontextprotocol/server-mysql']
+        ],
+        'redis' => [
+            'command' => 'npx',
+            'args' => ['-y', '@modelcontextprotocol/server-redis']
+        ]
+>>>>>>> e697a77b (.)
     ],
 
     /*
@@ -50,6 +71,7 @@ return [
             'traits' => [
                 'HasFactory',
                 'Notifiable',
+<<<<<<< HEAD
                 'HasParent',
             ],
             'relationships' => [
@@ -58,31 +80,60 @@ return [
             ],
             'table' => 'users',
             'type_column' => 'type',
+=======
+                'HasParent'
+            ],
+            'relationships' => [
+                'doctor',
+                'patient'
+            ],
+            'table' => 'users',
+            'type_column' => 'type'
+>>>>>>> e697a77b (.)
         ],
         'Doctor' => [
             'extends' => 'User',
             'type' => 'child',
             'traits' => [
+<<<<<<< HEAD
                 'HasParent',
+=======
+                'HasParent'
+>>>>>>> e697a77b (.)
             ],
             'context' => 'medical',
             'validations' => [
                 'medical_license',
+<<<<<<< HEAD
                 'specialization',
             ],
+=======
+                'specialization'
+            ]
+>>>>>>> e697a77b (.)
         ],
         'Patient' => [
             'extends' => 'User',
             'type' => 'child',
             'traits' => [
+<<<<<<< HEAD
                 'HasParent',
+=======
+                'HasParent'
+>>>>>>> e697a77b (.)
             ],
             'context' => 'medical',
             'validations' => [
                 'health_insurance',
+<<<<<<< HEAD
                 'medical_history',
             ],
         ],
+=======
+                'medical_history'
+            ]
+        ]
+>>>>>>> e697a77b (.)
     ],
 
     /*
@@ -97,6 +148,11 @@ return [
     'validation' => [
         'strict' => true,
         'log_violations' => true,
+<<<<<<< HEAD
         'throw_exceptions' => false,
     ],
+=======
+        'throw_exceptions' => false
+    ]
+>>>>>>> e697a77b (.)
 ];

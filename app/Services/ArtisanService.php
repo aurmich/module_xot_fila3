@@ -43,7 +43,11 @@ class ArtisanService
             case 'migrate':
                 DB::purge('mysql');
                 DB::reconnect('mysql');
+<<<<<<< HEAD
                 if ($module_name !== '') {
+=======
+                if ('' !== $module_name) {
+>>>>>>> e697a77b (.)
                     echo '<h3>Module '.$module_name.'</h3>';
 
                     return self::exe('module:migrate '.$module_name.' --force');
@@ -136,14 +140,22 @@ class ArtisanService
             $log = '';
         }
         $content = '';
+<<<<<<< HEAD
         if ($log !== '' && File::exists(storage_path('logs/'.$log))) {
+=======
+        if ('' !== $log && File::exists(storage_path('logs/'.$log))) {
+>>>>>>> e697a77b (.)
             $content = File::get(storage_path('logs/'.$log));
         }
 
         $pattern = '/url":"([^"]*)"/';
         preg_match_all($pattern, $content, $matches);
 
+<<<<<<< HEAD
         // $urls = is_array($matches[1]) ? array_unique($matches[1]) : [];
+=======
+        //$urls = is_array($matches[1]) ? array_unique($matches[1]) : [];
+>>>>>>> e697a77b (.)
         $urls = array_unique($matches[1]);
         $view_params = [
             'view' => $view,
@@ -198,7 +210,11 @@ class ArtisanService
         $files = File::files(storage_path('logs'));
 
         foreach ($files as $file) {
+<<<<<<< HEAD
             if ($file->getExtension() === 'log' && $file->getRealPath() !== false) {
+=======
+            if ('log' === $file->getExtension() && false !== $file->getRealPath()) {
+>>>>>>> e697a77b (.)
                 // Parameter #1 $paths of static method Illuminate\Filesystem\Filesystem::delete() expects array|string, Symfony\Component\Finder\SplFileInfo given.
                 echo '<br/>'.$file->getRealPath();
 
@@ -214,7 +230,11 @@ class ArtisanService
         $files = File::files(storage_path('framework/sessions'));
 
         foreach ($files as $file) {
+<<<<<<< HEAD
             if ($file->getExtension() === '' && $file->getRealPath() !== false) {
+=======
+            if ('' === $file->getExtension() && false !== $file->getRealPath()) {
+>>>>>>> e697a77b (.)
                 // echo '<br/>'.$file->getRealPath();
 
                 File::delete($file->getRealPath());
@@ -230,7 +250,11 @@ class ArtisanService
     {
         $files = File::files(storage_path('debugbar'));
         foreach ($files as $file) {
+<<<<<<< HEAD
             if ($file->getExtension() === 'json' && $file->getRealPath() !== false) {
+=======
+            if ('json' === $file->getExtension() && false !== $file->getRealPath()) {
+>>>>>>> e697a77b (.)
                 // echo '<br/>'.$file->getRealPath();
 
                 File::delete($file->getRealPath());
@@ -243,7 +267,11 @@ class ArtisanService
     }
 
     /**
+<<<<<<< HEAD
      * @param  array<string, mixed>  $arguments
+=======
+     * @param array<string, mixed> $arguments
+>>>>>>> e697a77b (.)
      */
     public static function exe(string $command, array $arguments = []): string
     {

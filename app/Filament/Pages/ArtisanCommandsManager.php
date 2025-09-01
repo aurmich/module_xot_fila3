@@ -6,6 +6,10 @@ namespace Modules\Xot\Filament\Pages;
 
 use Filament\Actions\Action;
 use Filament\Notifications\Notification;
+<<<<<<< HEAD
+=======
+use Filament\Pages\Page;
+>>>>>>> e697a77b (.)
 use Filament\Support\Enums\IconPosition;
 use Livewire\Attributes\On;
 use Modules\Xot\Actions\ExecuteArtisanCommandAction;
@@ -25,9 +29,14 @@ class ArtisanCommandsManager extends XotBasePage
 
     /**
      * Livewire event listeners for this component.
+<<<<<<< HEAD
      *
      * @var array<string, string>
      *
+=======
+     * 
+     * @var array<string, string>
+>>>>>>> e697a77b (.)
      * @phpstan-var array<string, string>
      */
     protected $listeners = [

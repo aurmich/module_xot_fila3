@@ -6,6 +6,10 @@ namespace Modules\Xot\Actions\View;
 
 use Illuminate\Support\Str;
 use Spatie\QueueableAction\QueueableAction;
+<<<<<<< HEAD
+=======
+use Modules\Xot\Actions\View\GetViewNameSpacePathAction;
+>>>>>>> e697a77b (.)
 
 class GetViewPathAction
 {

@@ -1,5 +1,6 @@
 <?php
 
+<<<<<<< HEAD
 return [
     'fields' => [
         'pdf' => [
@@ -7,3 +8,14 @@ return [
         ],
     ],
 ];
+=======
+return array (
+  'fields' => 
+  array (
+    'pdf' => 
+    array (
+      'label' => 'pdf',
+    ),
+  ),
+);
+>>>>>>> e697a77b (.)

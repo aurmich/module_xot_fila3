@@ -30,14 +30,24 @@ class ExportXlsAction extends Action
                 $transKey .= '.fields';
                 $query = $livewire->getFilteredTableQuery();
                 $rows = $query->get();
+<<<<<<< HEAD
 
                 $resource = $livewire->getResource();
 
+=======
+                
+                $resource = $livewire->getResource();
+                
+>>>>>>> e697a77b (.)
                 /** @var array<int, string> $fields */
                 $fields = [];
                 if (method_exists($resource, 'getXlsFields')) {
                     $rawFields = $resource::getXlsFields($livewire->tableFilters);
+<<<<<<< HEAD
 
+=======
+                  
+>>>>>>> e697a77b (.)
                     if (is_array($rawFields)) {
                         $fields = array_map(static function ($field): string {
                             if (is_object($field) && method_exists($field, '__toString')) {
@@ -46,7 +56,10 @@ class ExportXlsAction extends Action
                             if (is_scalar($field)) {
                                 return (string) $field;
                             }
+<<<<<<< HEAD
 
+=======
+>>>>>>> e697a77b (.)
                             return '';
                         }, $rawFields);
                     }
@@ -54,9 +67,15 @@ class ExportXlsAction extends Action
                 }
 
                 return app(ExportXlsByCollection::class)->execute(
+<<<<<<< HEAD
                     $rows,
                     $filename,
                     $transKey,
+=======
+                    $rows, 
+                    $filename, 
+                    $transKey, 
+>>>>>>> e697a77b (.)
                     array_values($fields)
                 );
             });
