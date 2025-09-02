@@ -2,21 +2,10 @@
 
 declare(strict_types=1);
 
-<<<<<<< HEAD
-namespace Modules\Xot\Tests\Unit\XotBaseTransitionTest;
-
-namespace Modules\Xot\Tests\Unit\Widgets;
-
-use Illuminate\Database\Eloquent\Model;
-use Modules\Xot\Contracts\UserContract;
-use Modules\Xot\States\Transitions\XotBaseTransition;
-use Illuminate\Foundation\Testing\;
-=======
 use Modules\Xot\States\Transitions\XotBaseTransition;
 use Modules\Xot\Contracts\UserContract;
 use Illuminate\Database\Eloquent\Model;
 
->>>>>>> 34e775e (.)
 
 describe('XotBaseTransition', function () {
     beforeEach(function () {
