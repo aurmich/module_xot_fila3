@@ -55,11 +55,22 @@ Homestead.json
 *.exe
 *:Zone.Identifier
 .DS_Store
+<<<<<<< HEAD
 *.old
 *.old1
 *.backup
 *.bak
 *.new
+=======
+*.new
+
+# Backup files
+*.old
+*.old1
+*.backup
+*.backup.*
+*.bak
+>>>>>>> f2e87c3 (.)
 
 # Documentation and cache
 docs/phpstan/
