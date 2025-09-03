@@ -7,10 +7,15 @@ namespace Modules\Xot\Filament\Resources\RelationManagers;
 use Filament\Forms\Form;
 use Filament\Resources\RelationManagers\RelationManager as FilamentRelationManager;
 use Filament\Tables;
+<<<<<<< HEAD
 use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Arr;
 use Illuminate\Support\Str;
+=======
+use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Arr;
+>>>>>>> 7e6c48c8 (.)
 use Modules\Xot\Filament\Resources\XotBaseResource;
 use Modules\Xot\Filament\Traits\HasXotTable;
 use Webmozart\Assert\Assert;
@@ -110,6 +115,15 @@ abstract class XotBaseRelationManager extends FilamentRelationManager
      */
     public function getTableHeaderActions(): array
     {
+<<<<<<< HEAD
+=======
+        /*
+        return [
+            Tables\Actions\AttachAction::make()
+               ->icon('heroicon-o-link'),
+        ];
+        */
+>>>>>>> 7e6c48c8 (.)
         $actions = [];
         $resource = $this->getResource();
         
