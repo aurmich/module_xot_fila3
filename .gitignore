@@ -63,23 +63,9 @@ Homestead.json
 *.backup
 *.backup.*
 *.bak
-<<<<<<< HEAD
-<<<<<<< HEAD
-*.backup.*
-=======
->>>>>>> 7e6c48c8 (.)
-=======
-*.backup.*
->>>>>>> 841fcfb (.)
 
 # Documentation and cache
 docs/phpstan/
 docs/cache/
 cache/
 
-# Standard ignores (auto)
-*.old
-*.old1
-*.bak
-*.bakcup
-*.backup.*

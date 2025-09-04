@@ -221,6 +221,6 @@
 - [Image Processing](../../media/processing.md)
 - [Search Configuration](../../media/search.md) 
 ## Collegamenti tra versioni di media.md
-* [media.md](../../../Xot/docs/features/media.md)
-* [media.md](../../../Xot/docs/roadmap/bottlenecks/media.md)
+* [media.md](../../../Xot/project_docs/features/media.md)
+* [media.md](../../../Xot/project_docs/roadmap/bottlenecks/media.md)
 

@@ -116,9 +116,9 @@ https://github.com/php-ai/php-ml
 
 ---------------------------------------------------
 
-https://cloud.google.com/natural-language/docs/analyzing-sentiment
+https://cloud.google.com/natural-language/project_docs/analyzing-sentiment
 
-https://cloud.google.com/natural-language/docs/analyzing-entities  !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+https://cloud.google.com/natural-language/project_docs/analyzing-entities  !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 ----------------------------------------------------------
 

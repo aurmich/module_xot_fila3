@@ -109,7 +109,7 @@ https://medium.com/fabcoding/laravel-7-create-a-subscription-system-using-cashie
 Laravel: Implementing a Shopping Cart for Your Website
 https://meritocracy.is/blog/2021/06/08/laravel-implementing-a-shopping-cart-for-your-website/    !!!!!!!!!!!!!!!
 w3cubdoc
-https://docs.w3cub.com/laravel~8/docs/8.x/billing
+https://docs.w3cub.com/laravel~8/project_docs/8.x/billing
 Examples of using Laravel Cashier v.10
 https://reposhub.com/php/web-frameworks/tnylea-laravel-cashier-examples.html          !!!!!!!!!!!!!!!!!!!!!
 Laravel Jetstream Subscription Billing With Stripe Checkout and Customer Portal
@@ -155,7 +155,7 @@ forked from fhsinchy/laravel-livewire-shopping-cart
 --------------------------------------------------------------------------------
 https://thecodelearners.com/laravel-livewire-build-ecommerce-application-with-turbolinks/ !!!!
 Livewire no longer supports Turbolinks out of the box
-https://laravel-livewire.com/docs/2.x/upgrading#turbolinks
+https://laravel-livewire.com/project_docs/2.x/upgrading#turbolinks
 --------------------------------------------------------------
 https://liveshop.herokuapp.com/
 https://github.com/webong/livewire-eshop !!!!

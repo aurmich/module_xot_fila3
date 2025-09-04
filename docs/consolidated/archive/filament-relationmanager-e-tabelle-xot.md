@@ -166,4 +166,4 @@ class MioRelatedRelationManager extends XotBaseRelationManager
 
 ---
 *Vedi anche: [Regole Generali Filament nel Modulo Xot](./filament_best_practices.md)* (Assumendo che esista o verrà creato un file del genere)
-*Vedi anche: [Documentazione Ufficiale Filament](https://filamentphp.com/docs/3.x/relations/overview)* (Per concetti base di Filament)
+*Vedi anche: [Documentazione Ufficiale Filament](https://filamentphp.com/project_docs/3.x/relations/overview)* (Per concetti base di Filament)

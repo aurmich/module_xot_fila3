@@ -3,19 +3,19 @@
 ## Documentazione Collegata
 
 ### Laraxot
-- [Documentazione Laraxot](../docs/laraxot/)
-- [Migrazione Struttura](../docs/migrazione-struttura.md)
-- [Namespace Rules](../docs/namespace-rules.md)
+- [Documentazione Laraxot](../project_docs/laraxot/)
+- [Migrazione Struttura](../project_docs/migrazione-struttura.md)
+- [Namespace Rules](../project_docs/namespace-rules.md)
 
 ### Struttura e Convenzioni
-- [Namespace Convention](../docs/namespace-convention.md)
-- [Namespace Structure](../docs/namespace-structure.md)
-- [Standard Codice](../docs/standard-codice.md)
+- [Namespace Convention](../project_docs/namespace-convention.md)
+- [Namespace Structure](../project_docs/namespace-structure.md)
+- [Standard Codice](../project_docs/standard-codice.md)
 
 ### Implementazione
-- [Filament Risorse](../docs/filament-risorse.md)
-- [Personalizzazioni Avanzate](../docs/filament-personalizzazioni-avanzate.md)
-- [Traduzioni](../docs/traduzioni.md)
+- [Filament Risorse](../project_docs/filament-risorse.md)
+- [Personalizzazioni Avanzate](../project_docs/filament-personalizzazioni-avanzate.md)
+- [Traduzioni](../project_docs/traduzioni.md)
 
 ## Best Practices
 
@@ -68,9 +68,9 @@
 
 
 ## Collegamenti tra versioni di integration.md
-* [integration.md](../../../Gdpr/docs/integration.md)
-* [integration.md](../../../Xot/docs/integration.md)
-* [integration.md](../../../Job/docs/integration.md)
+* [integration.md](../../../Gdpr/project_docs/integration.md)
+* [integration.md](../../../Xot/project_docs/integration.md)
+* [integration.md](../../../Job/project_docs/integration.md)
 
 
 ### Versione Incoming

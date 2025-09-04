@@ -95,7 +95,7 @@ Alcune directory sono escluse da questa regola:
 Prima di eseguire PHPStan o fare commit, verifica la correttezza della struttura del tuo modulo:
 
 ```bash
-find Modules/NomeModulo -type f -name "*.php" | grep -v "/app/" | grep -v "/config/" | grep -v "/database/" | grep -v "/routes/" | grep -v "/resources/" | grep -v "/docs/"
+find Modules/NomeModulo -type f -name "*.php" | grep -v "/app/" | grep -v "/config/" | grep -v "/database/" | grep -v "/routes/" | grep -v "/resources/" | grep -v "/project_docs/"
 ```
 
 Se questo comando restituisce dei file, significa che sono posizionati in modo errato.

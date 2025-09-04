@@ -8,7 +8,7 @@ https://qiita.com/nunulk/items/4c491634ad843c7a138e
 
 https://learnku.com/articles/22571
 
-https://spatie.be/docs/laravel-blade-x/v2/advanced-usage/transforming-data-with-view-models
+https://spatie.be/project_docs/laravel-blade-x/v2/advanced-usage/transforming-data-with-view-models
 
 https://dev.to/lloople/adding-view-models-to-a-laravel-project-hod
 

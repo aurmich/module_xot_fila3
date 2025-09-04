@@ -65,24 +65,24 @@ Questo documento contiene l'analisi dettagliata dei problemi rilevati da PHPStan
 - Mantenere aggiornato questo documento
 - Verificare l'impatto delle correzioni sugli altri moduli 
 ## Collegamenti tra versioni di ANALISI_PHPSTAN.md
-* [ANALISI_PHPSTAN.md](../../../Gdpr/docs/phpstan/ANALISI_PHPSTAN.md)
-* [ANALISI_PHPSTAN.md](../../../Xot/docs/phpstan/ANALISI_PHPSTAN.md)
-* [ANALISI_PHPSTAN.md](../../../User/docs/phpstan/ANALISI_PHPSTAN.md)
-* [ANALISI_PHPSTAN.md](../../../UI/docs/phpstan/ANALISI_PHPSTAN.md)
-* [ANALISI_PHPSTAN.md](../../../Lang/docs/phpstan/ANALISI_PHPSTAN.md)
-* [ANALISI_PHPSTAN.md](../../../Job/docs/phpstan/ANALISI_PHPSTAN.md)
-* [ANALISI_PHPSTAN.md](../../../Media/docs/phpstan/ANALISI_PHPSTAN.md)
-* [ANALISI_PHPSTAN.md](../../../Tenant/docs/phpstan/ANALISI_PHPSTAN.md)
-* [ANALISI_PHPSTAN.md](../../../Activity/docs/phpstan/ANALISI_PHPSTAN.md)
+* [ANALISI_PHPSTAN.md](../../../Gdpr/project_docs/phpstan/ANALISI_PHPSTAN.md)
+* [ANALISI_PHPSTAN.md](../../../Xot/project_docs/phpstan/ANALISI_PHPSTAN.md)
+* [ANALISI_PHPSTAN.md](../../../User/project_docs/phpstan/ANALISI_PHPSTAN.md)
+* [ANALISI_PHPSTAN.md](../../../UI/project_docs/phpstan/ANALISI_PHPSTAN.md)
+* [ANALISI_PHPSTAN.md](../../../Lang/project_docs/phpstan/ANALISI_PHPSTAN.md)
+* [ANALISI_PHPSTAN.md](../../../Job/project_docs/phpstan/ANALISI_PHPSTAN.md)
+* [ANALISI_PHPSTAN.md](../../../Media/project_docs/phpstan/ANALISI_PHPSTAN.md)
+* [ANALISI_PHPSTAN.md](../../../Tenant/project_docs/phpstan/ANALISI_PHPSTAN.md)
+* [ANALISI_PHPSTAN.md](../../../Activity/project_docs/phpstan/ANALISI_PHPSTAN.md)
 
 
 ## Collegamenti tra versioni di analisi_phpstan.md
-* [analisi_phpstan.md](../../../Gdpr/docs/phpstan/analisi_phpstan.md)
-* [analisi_phpstan.md](../../../User/docs/phpstan/analisi_phpstan.md)
-* [analisi_phpstan.md](../../../UI/docs/phpstan/analisi_phpstan.md)
-* [analisi_phpstan.md](../../../Lang/docs/phpstan/analisi_phpstan.md)
-* [analisi_phpstan.md](../../../Job/docs/phpstan/analisi_phpstan.md)
-* [analisi_phpstan.md](../../../Media/docs/phpstan/analisi_phpstan.md)
-* [analisi_phpstan.md](../../../Tenant/docs/phpstan/analisi_phpstan.md)
-* [analisi_phpstan.md](../../../Activity/docs/phpstan/analisi_phpstan.md)
+* [analisi_phpstan.md](../../../Gdpr/project_docs/phpstan/analisi_phpstan.md)
+* [analisi_phpstan.md](../../../User/project_docs/phpstan/analisi_phpstan.md)
+* [analisi_phpstan.md](../../../UI/project_docs/phpstan/analisi_phpstan.md)
+* [analisi_phpstan.md](../../../Lang/project_docs/phpstan/analisi_phpstan.md)
+* [analisi_phpstan.md](../../../Job/project_docs/phpstan/analisi_phpstan.md)
+* [analisi_phpstan.md](../../../Media/project_docs/phpstan/analisi_phpstan.md)
+* [analisi_phpstan.md](../../../Tenant/project_docs/phpstan/analisi_phpstan.md)
+* [analisi_phpstan.md](../../../Activity/project_docs/phpstan/analisi_phpstan.md)
 

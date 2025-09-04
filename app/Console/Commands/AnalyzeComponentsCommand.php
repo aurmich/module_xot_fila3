@@ -1,10 +1,7 @@
 <?php
 
-<<<<<<< HEAD
-=======
 declare(strict_types=1);
 
->>>>>>> 841fcfb (.)
 namespace Modules\Xot\Console\Commands;
 
 use Illuminate\Console\Command;
@@ -28,20 +25,6 @@ class AnalyzeComponentsCommand extends Command
 
     /**
      * Execute the console command.
-<<<<<<< HEAD
-     *
-     * @return int
-     */
-    public function handle(GetComponentsAction $getComponentsAction)
-    {
-        $module = $this->option('module');
-        $type = $this->option('type');
-        $prefix = $this->option('prefix') ?? '';
-        $force = $this->option('force') ?? false;
-
-        $path = $module ? base_path("laravel/Modules/{$module}") : base_path('laravel/Modules');
-        $namespace = $module ? "Modules\\{$module}" : 'Modules';
-=======
      */
     public function handle(GetComponentsAction $getComponentsAction): int
     {
@@ -58,20 +41,12 @@ class AnalyzeComponentsCommand extends Command
         $moduleStr = is_string($module) ? $module : '';
         $path = $moduleStr !== '' ? base_path("laravel/Modules/{$moduleStr}") : base_path('laravel/Modules');
         $namespace = $moduleStr !== '' ? "Modules\\{$moduleStr}" : 'Modules';
->>>>>>> 841fcfb (.)
 
         $components = $getComponentsAction->execute($path, $namespace, $prefix, $force);
 
         $this->table(
             ['Componente', 'Tipo', 'Modulo', 'Path'],
             collect($components)->map(function ($component) {
-<<<<<<< HEAD
-                return [
-                    $component['comp_name'],
-                    $component['type'],
-                    $component['module'],
-                    $component['path'],
-=======
                 // Type-safe component access
                 if (! is_array($component)) {
                     return ['Invalid component', 'N/A', 'N/A', 'N/A'];
@@ -82,7 +57,6 @@ class AnalyzeComponentsCommand extends Command
                     $component['type'] ?? 'N/A',
                     $component['module'] ?? 'N/A',
                     $component['path'] ?? 'N/A',
->>>>>>> 841fcfb (.)
                 ];
             })
         );

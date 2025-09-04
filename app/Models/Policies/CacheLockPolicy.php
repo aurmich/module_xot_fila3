@@ -4,12 +4,8 @@ declare(strict_types=1);
 
 namespace Modules\Xot\Models\Policies;
 
-<<<<<<< HEAD
-
-=======
 use Modules\Xot\Contracts\UserContract;
 use Modules\Xot\Models\CacheLock;
->>>>>>> 841fcfb (.)
 
 class CacheLockPolicy extends XotBasePolicy
 {
@@ -68,8 +64,4 @@ class CacheLockPolicy extends XotBasePolicy
     {
         return $user->hasPermissionTo('cache_lock.forceDelete');
     }
-<<<<<<< HEAD
-
-=======
 }
->>>>>>> 841fcfb (.)

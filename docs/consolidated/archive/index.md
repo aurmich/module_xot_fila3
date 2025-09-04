@@ -32,7 +32,7 @@ Questo documento fornisce un indice della documentazione del modulo Xot, organiz
 - [Conflitti Merge Risolti](./CONFLITTI_MERGE_RISOLTI.md) - Documentazione conflitti risolti
 
 ## Link Esterni
-- [Laravel Framework](https://laravel.com/docs/12.x)
+- [Laravel Framework](https://laravel.com/project_docs/12.x)
 - [Filament Documentation](https://filamentphp.com/docs)
 - [Livewire Documentation](https://livewire.laravel.com/docs)
 - [PHPStan Documentation](https://phpstan.org/user-guide/getting-started)

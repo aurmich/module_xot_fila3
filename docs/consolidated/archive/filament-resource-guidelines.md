@@ -9,9 +9,9 @@
 
 ## Collegamenti Bidirezionali
 
-- [Documentazione Principale sui Problemi di Namespace](../../../../docs/references/namespace-issues.md)
-- [Documentazione del Modulo Patient](../Patient/docs/errors/undefined-type-pending.md)
-- [Riferimento alle Linee Guida nel Modulo Patient](../Patient/docs/references/filament-guidelines-link.md)
+- [Documentazione Principale sui Problemi di Namespace](../../../../project_docs/references/namespace-issues.md)
+- [Documentazione del Modulo Patient](../Patient/project_docs/errors/undefined-type-pending.md)
+- [Riferimento alle Linee Guida nel Modulo Patient](../Patient/project_docs/references/filament-guidelines-link.md)
 
 ## Note
 

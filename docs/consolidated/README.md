@@ -33,4 +33,4 @@ This consolidated structure organizes the previously scattered 1000+ documentati
 
 ## Original Structure
 
-The original documentation was located in `Modules/Xot/docs/` with numerous subdirectories and archived content. This consolidation preserves all content while improving organization.
+The original documentation was located in `Modules/Xot/project_docs/` with numerous subdirectories and archived content. This consolidation preserves all content while improving organization.

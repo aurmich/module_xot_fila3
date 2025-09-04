@@ -4,8 +4,8 @@
 
 ## Collegamenti
 
-- [Convenzioni Namespace per Filament](../laravel/Modules/Cms/docs/convenzioni-namespace-filament.md) - Include le regole per le traduzioni nei Blocks Filament
-- [Traduzioni nei Blocks](../laravel/Modules/Cms/docs/blocks/footer.md#label-translation) - Esempio di implementazione
+- [Convenzioni Namespace per Filament](../laravel/Modules/Cms/project_docs/convenzioni-namespace-filament.md) - Include le regole per le traduzioni nei Blocks Filament
+- [Traduzioni nei Blocks](../laravel/Modules/Cms/project_docs/blocks/footer.md#label-translation) - Esempio di implementazione
 
 ## Regola Fondamentale
 

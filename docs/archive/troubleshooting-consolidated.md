@@ -17,7 +17,7 @@ Questo documento sostituisce e consolida **35+ file di troubleshooting duplicati
 - Qualsiasi documentazione troubleshooting specifica di modulo
 
 ### ✅ Unica Fonte di Verità
-- **Questo file**: `/laravel/Modules/Xot/docs/troubleshooting-consolidated.md`
+- **Questo file**: `/laravel/Modules/Xot/project_docs/troubleshooting-consolidated.md`
 - **Implementazione**: Fix nei singoli moduli (solo fix, non docs)
 
 ## Problemi Comuni e Soluzioni

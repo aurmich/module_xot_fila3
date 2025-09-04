@@ -38,7 +38,7 @@ Per accedere alla documentazione dettagliata originale, vedere il backup in:
 - **Documentation**: Documentazione essenziale
 
 ## Links
-- [Root Documentation](../../../docs/)
+- [Root Documentation](../../../project_docs/)
 - [Original Documentation Backup](../../../docs-consolidation-backup-*/Xot-docs-original/)
 
 ## Roadmap

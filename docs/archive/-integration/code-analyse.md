@@ -46,7 +46,7 @@ $ php phpcpd.phar --version
 
 
 //---------------------
-https://scrutinizer-ci.com/docs/tools/php/php-scrutinizer/
+https://scrutinizer-ci.com/project_docs/tools/php/php-scrutinizer/
 
 //--------------------
 https://github.com/Qafoo/QualityAnalyzer
@@ -60,7 +60,7 @@ cmd:
 bin/analyze analyze /path/to/source
 //-------------------------------------------------------------
 
-https://psalm.dev/docs/running_psalm/installation/
+https://psalm.dev/project_docs/running_psalm/installation/
 
 //--------------------------------------------------------------------
 https://github.com/scrutinizer-ci/php-analyzer

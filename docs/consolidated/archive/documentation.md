@@ -20,7 +20,7 @@ https://www.peej.co.uk/phpdoctor/
 
 https://www.sitepoint.com/automatic-php-code-generation-memio/
 
-https://crestapps.com/laravel-code-generator/docs/1.1#demo
+https://crestapps.com/laravel-code-generator/project_docs/1.1#demo
 
 https://whoisryosuke.com/blog/2018/adding-auto-generated-docs-to-laravel-api-kushy/
 
@@ -31,7 +31,7 @@ http://www.phpspec.net/en/stable/manual/introduction.html
 --- API ----
 https://blog.quickadminpanel.com/laravel-api-documentation-with-openapiswagger/
 
-https://beyondco.de/docs/laravel-apidoc-generator/getting-started/documenting-your-api
+https://beyondco.de/project_docs/laravel-apidoc-generator/getting-started/documenting-your-api
 
 
 

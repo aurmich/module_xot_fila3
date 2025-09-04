@@ -157,4 +157,4 @@ Per maggiori dettagli sui vantaggi di questo approccio, consultare la documentaz
 
 ---
 
-*Collegamento bidirezionale: vedi anche `/docs/providers/service_provider_best_practices.md`* 
+*Collegamento bidirezionale: vedi anche `/project_docs/providers/service_provider_best_practices.md`* 

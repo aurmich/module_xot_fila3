@@ -31,35 +31,11 @@ class AddStrictTypesDeclarationCommand extends Command
         $moduleOption = $this->option('module');
         $dryRun = $this->option('dry-run');
 
-<<<<<<< HEAD
         if ($moduleOption) {
             $modulePath .= '/' . $moduleOption;
             if (!File::isDirectory($modulePath)) {
                 $this->error("Il modulo {$moduleOption} non esiste");
                 return 1;
-=======
-        // Type-safe handling of module option
-        if ($moduleOption !== null) {
-            if (is_string($moduleOption)) {
-                $moduleOptionStr = $moduleOption;
-            } elseif (is_bool($moduleOption)) {
-                // Skip boolean options
-                $moduleOptionStr = '';
-            } elseif (is_array($moduleOption)) {
-                // Take first array element if available
-                $moduleOptionStr = ! empty($moduleOption) ? (string) reset($moduleOption) : '';
-            } else {
-                $moduleOptionStr = (string) $moduleOption;
-            }
-
-            if ($moduleOptionStr !== '') {
-                $modulePath .= '/'.$moduleOptionStr;
-                if (! File::isDirectory($modulePath)) {
-                    $this->error("Il modulo {$moduleOptionStr} non esiste");
-
-                    return 1;
-                }
->>>>>>> 841fcfb (.)
             }
         }
 
@@ -67,26 +43,10 @@ class AddStrictTypesDeclarationCommand extends Command
         $count = 0;
 
         foreach ($files as $file) {
-<<<<<<< HEAD
             if ($this->shouldProcessFile($file)) {
                 if ($dryRun) {
                     $this->info("Verrebbe processato: {$file}");
                     $count++;
-=======
-            // Type assertion for file object
-            if (! $file instanceof \SplFileInfo) {
-                continue;
-            }
-
-            if ($this->shouldProcessFile($file)) {
-                if ($dryRun) {
-                    $filePath = $file->getRealPath();
-                    if ($filePath !== false) {
-                        $this->info("Verrebbe processato: {$filePath}");
-                        $count++;
-                    }
-
->>>>>>> 841fcfb (.)
                     continue;
                 }
 
@@ -95,21 +55,12 @@ class AddStrictTypesDeclarationCommand extends Command
                     if ($path === false) {
                         continue;
                     }
-<<<<<<< HEAD
                     
-=======
-
->>>>>>> 841fcfb (.)
                     $action->execute($path);
                     $this->info("Aggiunta dichiarazione strict_types a: {$path}");
                     $count++;
                 } catch (\Exception $e) {
-<<<<<<< HEAD
                     $this->error("Errore nel processare {$path}: " . $e->getMessage());
-=======
-                    $errorPath = $file->getRealPath() ?: 'unknown path';
-                    $this->error("Errore nel processare {$errorPath}: ".$e->getMessage());
->>>>>>> 841fcfb (.)
                 }
             }
         }
@@ -120,12 +71,6 @@ class AddStrictTypesDeclarationCommand extends Command
         return 0;
     }
 
-<<<<<<< HEAD
-=======
-    /**
-     * @return array<\Symfony\Component\Finder\SplFileInfo>
-     */
->>>>>>> 841fcfb (.)
     private function findPhpFiles(string $path): array
     {
         return File::allFiles($path);
@@ -134,11 +79,7 @@ class AddStrictTypesDeclarationCommand extends Command
     private function shouldProcessFile(\SplFileInfo $file): bool
     {
         // Verifica l'estensione
-<<<<<<< HEAD
         if (!str_ends_with($file->getFilename(), '.php')) {
-=======
-        if (! str_ends_with($file->getFilename(), '.php')) {
->>>>>>> 841fcfb (.)
             return false;
         }
 
@@ -149,10 +90,6 @@ class AddStrictTypesDeclarationCommand extends Command
 
         // Verifica se il file è in un percorso escluso
         foreach ($this->excludedPaths as $excludedPath) {
-<<<<<<< HEAD
-=======
-            \Webmozart\Assert\Assert::string($excludedPath, 'Excluded path must be string');
->>>>>>> 841fcfb (.)
             if (str_contains($path, "/{$excludedPath}/")) {
                 return false;
             }
@@ -160,11 +97,6 @@ class AddStrictTypesDeclarationCommand extends Command
 
         // Verifica se il file ha già la dichiarazione strict_types
         $content = File::get($path);
-<<<<<<< HEAD
         return !str_contains($content, 'declare(strict_types=1)');
-=======
-
-        return ! str_contains($content, 'declare(strict_types=1)');
->>>>>>> 841fcfb (.)
     }
 }

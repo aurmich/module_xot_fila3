@@ -18,7 +18,7 @@ Questo documento sostituisce e consolida **107+ file traduzioni duplicati** trov
 - Qualsiasi documentazione traduzioni specifica di modulo
 
 ### ✅ Unica Fonte di Verità
-- **Questo file**: `/laravel/Modules/Xot/docs/translations-consolidated.md`
+- **Questo file**: `/laravel/Modules/Xot/project_docs/translations-consolidated.md`
 - **File lang**: Solo nei singoli moduli (contenuto, non docs)
 
 ## Principi Fondamentali Universali
@@ -365,55 +365,55 @@ Tutti questi file sono DUPLICATI e vanno eliminati:
 
 ```bash
 # Activity
-rm Modules/Activity/docs/translations.md
+rm Modules/Activity/project_docs/translations.md
 
 # Chart
-rm Modules/Chart/docs/translations.md
+rm Modules/Chart/project_docs/translations.md
 
 # Cms
-rm Modules/Cms/docs/translations.md
+rm Modules/Cms/project_docs/translations.md
 
 # FormBuilder
-rm Modules/FormBuilder/docs/translations.md
+rm Modules/FormBuilder/project_docs/translations.md
 
 # Job
-rm Modules/Job/docs/translations.md
+rm Modules/Job/project_docs/translations.md
 
 # Media
-rm Modules/Media/docs/translations.md
+rm Modules/Media/project_docs/translations.md
 
 # Tenant
-rm Modules/Tenant/docs/translations.md
+rm Modules/Tenant/project_docs/translations.md
 
 # UI
-rm Modules/UI/docs/translations.md
-rm Modules/UI/docs/translation-rules.md
+rm Modules/UI/project_docs/translations.md
+rm Modules/UI/project_docs/translation-rules.md
 
 # SaluteOra
-rm Modules/SaluteOra/docs/translation-files-improvement.md
-rm Modules/SaluteOra/docs/translations.md
-rm Modules/SaluteOra/docs/translation_quality_standards.md
-rm Modules/SaluteOra/docs/translations-states-analysis.md
-rm Modules/SaluteOra/docs/translation-rules.md
-rm Modules/SaluteOra/docs/translation_standards.md
-rm Modules/SaluteOra/docs/translations-appointments.md
+rm Modules/SaluteOra/project_docs/translation-files-improvement.md
+rm Modules/SaluteOra/project_docs/translations.md
+rm Modules/SaluteOra/project_docs/translation_quality_standards.md
+rm Modules/SaluteOra/project_docs/translations-states-analysis.md
+rm Modules/SaluteOra/project_docs/translation-rules.md
+rm Modules/SaluteOra/project_docs/translation_standards.md
+rm Modules/SaluteOra/project_docs/translations-appointments.md
 
 # User
-rm Modules/User/docs/translations.md
-rm Modules/User/docs/translation_keys_rules.md
-rm Modules/User/docs/translation_best_practices.md
+rm Modules/User/project_docs/translations.md
+rm Modules/User/project_docs/translation_keys_rules.md
+rm Modules/User/project_docs/translation_best_practices.md
 
 # Lang
-rm Modules/Lang/docs/translation_keys_best_practices.md
-rm Modules/Lang/docs/translation-preservation-rules.md
-rm Modules/Lang/docs/translation_standards_links.md
-rm Modules/Lang/docs/translation_notify_conversion.md
+rm Modules/Lang/project_docs/translation_keys_best_practices.md
+rm Modules/Lang/project_docs/translation-preservation-rules.md
+rm Modules/Lang/project_docs/translation_standards_links.md
+rm Modules/Lang/project_docs/translation_notify_conversion.md
 
 # E tutti gli altri 57+ file duplicati...
 ```
 
 ### Mantenere Solo
-- **Questo file**: `/laravel/Modules/Xot/docs/translations-consolidated.md`
+- **Questo file**: `/laravel/Modules/Xot/project_docs/translations-consolidated.md`
 - **File lang**: Solo contenuto traduzioni nei singoli moduli
 
 ## Troubleshooting Universale

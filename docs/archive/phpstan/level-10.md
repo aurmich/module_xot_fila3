@@ -516,14 +516,14 @@
 > TODO: descrivere soluzioni architetturali e funzionali
 
 ## Collegamenti tra versioni di level_10.md
-* [level_10.md](laravel/Modules/Gdpr/docs/phpstan/level_10.md)
-* [level_10.md](laravel/Modules/Notify/docs/phpstan/level_10.md)
-* [level_10.md](laravel/Modules/Xot/docs/phpstan/level_10.md)
-* [level_10.md](laravel/Modules/User/docs/phpstan/level_10.md)
-* [level_10.md](laravel/Modules/UI/docs/phpstan/level_10.md)
-* [level_10.md](laravel/Modules/Lang/docs/phpstan/level_10.md)
-* [level_10.md](laravel/Modules/Job/docs/phpstan/level_10.md)
-* [level_10.md](laravel/Modules/Media/docs/phpstan/level_10.md)
-* [level_10.md](laravel/Modules/Tenant/docs/phpstan/level_10.md)
-* [level_10.md](laravel/Modules/Activity/docs/phpstan/level_10.md)
+* [level_10.md](laravel/Modules/Gdpr/project_docs/phpstan/level_10.md)
+* [level_10.md](laravel/Modules/Notify/project_docs/phpstan/level_10.md)
+* [level_10.md](laravel/Modules/Xot/project_docs/phpstan/level_10.md)
+* [level_10.md](laravel/Modules/User/project_docs/phpstan/level_10.md)
+* [level_10.md](laravel/Modules/UI/project_docs/phpstan/level_10.md)
+* [level_10.md](laravel/Modules/Lang/project_docs/phpstan/level_10.md)
+* [level_10.md](laravel/Modules/Job/project_docs/phpstan/level_10.md)
+* [level_10.md](laravel/Modules/Media/project_docs/phpstan/level_10.md)
+* [level_10.md](laravel/Modules/Tenant/project_docs/phpstan/level_10.md)
+* [level_10.md](laravel/Modules/Activity/project_docs/phpstan/level_10.md)
 

@@ -267,7 +267,7 @@ Per progetti con molti errori, creare una baseline per tracciare i miglioramenti
 
 ## Documentazione delle Soluzioni
 
-Ogni modulo dovrebbe documentare le soluzioni ai problemi PHPStan specifici in `Modules/NomeModulo/docs/PHPSTAN-SOLUTIONS.md`:
+Ogni modulo dovrebbe documentare le soluzioni ai problemi PHPStan specifici in `Modules/NomeModulo/project_docs/PHPSTAN-SOLUTIONS.md`:
 
 ```markdown
 
@@ -289,8 +289,8 @@ Ogni modulo dovrebbe documentare le soluzioni ai problemi PHPStan specifici in `
 - [Documentazione PHPStan](https://phpstan.org/user-guide/getting-started)
 - [Blog PHPStan sui Generics](https://phpstan.org/blog/generics-in-php-using-phpdocs)
 - [Solving Undefined Properties](https://phpstan.org/blog/solving-phpstan-access-to-undefined-property)
-- [Modules/Xot/docs/PHPSTAN-GENERIC-TYPES.md](../Xot/docs/PHPSTAN-GENERIC-TYPES.md) - Guida specifica per tipi generici
-- [Modules/Xot/docs/NAMESPACE-CONVENTIONS.md](../Xot/docs/NAMESPACE-CONVENTIONS.md) - Convenzioni per i namespace
+- [Modules/Xot/project_docs/PHPSTAN-GENERIC-TYPES.md](../Xot/project_docs/PHPSTAN-GENERIC-TYPES.md) - Guida specifica per tipi generici
+- [Modules/Xot/project_docs/NAMESPACE-CONVENTIONS.md](../Xot/project_docs/NAMESPACE-CONVENTIONS.md) - Convenzioni per i namespace
 
 ---
 

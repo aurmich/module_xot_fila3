@@ -171,4 +171,4 @@ Questo trait permette al widget di aggiornarsi automaticamente a intervalli rego
 - [NAMESPACE-RULES.md](../../NAMESPACE-RULES.md) - Regole per i namespace nei moduli
 - [FOLIO_VOLT_FILAMENT_INTEGRATION.md](../../FOLIO_VOLT_FILAMENT_INTEGRATION.md) - Integrazione Folio, Volt e Filament
 - [MODULE_STRUCTURE.md](../../MODULE_STRUCTURE.md) - Struttura standard dei moduli
-- [Documentazione Filament](https://filamentphp.com/docs/3.x/widgets/installation) 
+- [Documentazione Filament](https://filamentphp.com/project_docs/3.x/widgets/installation) 

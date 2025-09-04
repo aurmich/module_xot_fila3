@@ -100,8 +100,5 @@ return [
         'updated_at' => 'Aggiornato il',
         'deleted_at' => 'Eliminato il',
     ],
-<<<<<<< HEAD
-=======
 ];
->>>>>>> 841fcfb (.)
 
