@@ -4,7 +4,12 @@ declare(strict_types=1);
 
 namespace Modules\Xot\Models\Policies;
 
+<<<<<<< HEAD
 
+=======
+use Modules\Xot\Contracts\UserContract;
+use Modules\Xot\Models\Module;
+>>>>>>> 841fcfb (.)
 
 class ModulePolicy extends XotBasePolicy
 {
@@ -63,4 +68,8 @@ class ModulePolicy extends XotBasePolicy
     {
         return $user->hasPermissionTo('module.forceDelete');
     }
+<<<<<<< HEAD
 
+=======
+}
+>>>>>>> 841fcfb (.)

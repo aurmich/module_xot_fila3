@@ -57,6 +57,7 @@ class AnalyzeNamingCommand extends Command
      */
     public function handle(): int
     {
+<<<<<<< HEAD
         $module = $this->option('module');
         $type = $this->option('type');
 
@@ -64,6 +65,18 @@ class AnalyzeNamingCommand extends Command
         $this->newLine();
 
         if ($module) {
+=======
+        $moduleOption = $this->option('module');
+        $type = $this->option('type');
+
+        // Type-safe casting of module option
+        $module = is_string($moduleOption) ? $moduleOption : null;
+
+        $this->info('Analisi Convenzioni di Naming il progetto');
+        $this->newLine();
+
+        if ($module !== null) {
+>>>>>>> 841fcfb (.)
             $this->info("Analisi del modulo: {$module}");
         } else {
             $this->info("Analisi di tutti i moduli");
@@ -99,21 +112,44 @@ class AnalyzeNamingCommand extends Command
 
         // Ottieni tutte le tabelle
         $tables = DB::select('SHOW TABLES');
+<<<<<<< HEAD
         $tableColumn = 'Tables_in_' . config('database.connections.mysql.database');
+=======
+        $databaseName = config('database.connections.mysql.database');
+        $databaseNameStr = is_string($databaseName) ? $databaseName : 'unknown_database';
+        $tableColumn = 'Tables_in_' . $databaseNameStr;
+>>>>>>> 841fcfb (.)
         
         $moduleTables = [];
         
         // Filtra le tabelle per modulo se specificato
         if ($module) {
             foreach ($tables as $table) {
+<<<<<<< HEAD
                 $tableName = $table->$tableColumn;
+=======
+                if (!is_object($table) || !property_exists($table, $tableColumn)) {
+                    continue;
+                }
+                $tableNameValue = $table->$tableColumn;
+                $tableName = is_string($tableNameValue) ? $tableNameValue : (string) $tableNameValue;
+>>>>>>> 841fcfb (.)
                 if (Str::startsWith($tableName, strtolower($module) . '_')) {
                     $moduleTables[] = $tableName;
                 }
             }
         } else {
             foreach ($tables as $table) {
+<<<<<<< HEAD
                 $moduleTables[] = $table->$tableColumn;
+=======
+                if (!is_object($table) || !property_exists($table, $tableColumn)) {
+                    continue;
+                }
+                $tableNameValue = $table->$tableColumn;
+                $tableName = is_string($tableNameValue) ? $tableNameValue : (string) $tableNameValue;
+                $moduleTables[] = $tableName;
+>>>>>>> 841fcfb (.)
             }
         }
         

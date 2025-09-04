@@ -11,11 +11,14 @@ use Filament\Tables;
 use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Arr;
+<<<<<<< HEAD
 use Illuminate\Support\Str;
 =======
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Arr;
 >>>>>>> 7e6c48c8 (.)
+=======
+>>>>>>> 841fcfb (.)
 use Modules\Xot\Filament\Resources\XotBaseResource;
 use Modules\Xot\Filament\Traits\HasXotTable;
 use Webmozart\Assert\Assert;
@@ -116,6 +119,7 @@ abstract class XotBaseRelationManager extends FilamentRelationManager
     public function getTableHeaderActions(): array
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
         /*
         return [
@@ -124,6 +128,8 @@ abstract class XotBaseRelationManager extends FilamentRelationManager
         ];
         */
 >>>>>>> 7e6c48c8 (.)
+=======
+>>>>>>> 841fcfb (.)
         $actions = [];
         $resource = $this->getResource();
         

@@ -4,7 +4,12 @@ declare(strict_types=1);
 
 namespace Modules\Xot\Models\Policies;
 
+<<<<<<< HEAD
 
+=======
+use Modules\Xot\Contracts\UserContract;
+use Modules\Xot\Models\Feed;
+>>>>>>> 841fcfb (.)
 
 class FeedPolicy extends XotBasePolicy
 {
@@ -63,4 +68,8 @@ class FeedPolicy extends XotBasePolicy
     {
         return $user->hasPermissionTo('feed.forceDelete');
     }
+<<<<<<< HEAD
 
+=======
+}
+>>>>>>> 841fcfb (.)
