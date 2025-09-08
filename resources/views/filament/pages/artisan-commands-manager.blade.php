@@ -2,9 +2,9 @@
     <div class="space-y-6" wire:poll.visible="{{ $this->isRunning ? '100' : '1000' }}">
         @if($this->isRunning)
             <div class="text-sm text-gray-500 bg-gray-50 p-2 rounded-lg border border-gray-200">
-                {{ __('xot::artisan-commands-manager.hints.running') }}
+                {{ (string) __('xot::artisan-commands-manager.hints.running') }}
                 <br>
-                {{ __('xot::artisan-commands-manager.hints.disabled') }}
+                {{ (string) __('xot::artisan-commands-manager.hints.disabled') }}
             </div>
         @endif
         
@@ -25,23 +25,23 @@
                     <div>
                         @if($this->status === 'completed')
                             <x-filament::badge color="success">
-                                {{ __('xot::artisan-commands-manager.status.completed') }}
+                                {{ (string) __('xot::artisan-commands-manager.status.completed') }}
                             </x-filament::badge>
                         @elseif($this->status === 'failed')
                             <x-filament::badge color="danger">
-                                {{ __('xot::artisan-commands-manager.status.failed') }}
+                                {{ (string) __('xot::artisan-commands-manager.status.failed') }}
                             </x-filament::badge>
                         @elseif($this->isRunning)
                             <div class="flex items-center space-x-2">
                                 <x-filament::loading-indicator class="h-5 w-5" />
-                                <span class="text-sm">{{ __('xot::artisan-commands-manager.status.running') }}</span>
+                                <span class="text-sm">{{ (string) __('xot::artisan-commands-manager.status.running') }}</span>
                             </div>
                         @endif
                     </div>
                 </div>
                 @if(empty($this->output))
                     <div class="text-gray-400">
-                        {{ __('xot::artisan-commands-manager.status.waiting') }}
+                        {{ (string) __('xot::artisan-commands-manager.status.waiting') }}
                     </div>
                 @else
                     @foreach($this->output as $line)
@@ -57,7 +57,7 @@
 
         @if(!empty($this->output))
             <div class="text-xs text-gray-500 text-right">
-                {{ __('xot::artisan-commands-manager.hints.scroll') }}
+                {{ (string) __('xot::artisan-commands-manager.hints.scroll') }}
             </div>
         @endif
     </div>

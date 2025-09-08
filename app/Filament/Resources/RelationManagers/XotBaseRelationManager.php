@@ -87,9 +87,27 @@ abstract class XotBaseRelationManager extends FilamentRelationManager
 
     public function getTableHeaderActions(): array
     {
+<<<<<<< HEAD
         return [
             Tables\Actions\AttachAction::make(),
         ];
+=======
+        $actions = [];
+        $resource = $this->getResource();
+        
+        if (method_exists($resource, 'canAttach')) {
+            $actions['attach'] = Tables\Actions\AttachAction::make()
+                ->icon('heroicon-o-link')
+                ->visible(fn (?Model $record): bool => $resource::canAttach());
+        }
+
+        if (method_exists($resource, 'canCreate')) {
+            $actions['create'] = Tables\Actions\CreateAction::make()
+                ->visible(fn (?Model $record): bool => $resource::canCreate());
+        }
+
+        return $actions;
+>>>>>>> 3d1ca073 (.)
     }
 
     public function getTableFilters(): array

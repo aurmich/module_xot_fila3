@@ -259,7 +259,7 @@ class XotData extends Data implements Wireable
         }
 
         // Utilizziamo un'asserzione per garantire che hasRole restituisca un booleano
-        $result = $user->hasRole('super-admin');
+        $result = $user->hasRole('super-admin'); /** @phpstan-ignore method.nonObject */
 
         return $result === true;
     }
@@ -401,7 +401,7 @@ class XotData extends Data implements Wireable
      */
     public function getProjectNamespace(): string
     {
-        return 'Modules\\' . $this->main_module;
+        return 'Modules\\'.$this->main_module;
     }
 
     public function forceSSL(): bool

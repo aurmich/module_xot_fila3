@@ -55,7 +55,7 @@ trait NavigationLabelTrait
 
         $value = intval($res);
 
-        if (0 == $value) {
+        if ($value == 0) {
             $key = static::getKeyTransFunc(__FUNCTION__);
             $value = rand(1, 100);
             app(SaveTransAction::class)->execute($key, $value);
@@ -114,7 +114,7 @@ public static function transPath(string $key): string
 
     public static function trans(string $key): string
     {
-        $res = __(static::transPath($key));
+        $res = (string) __(static::transPath($key));
         if (\is_array($res)) {
             throw new \Exception('fix lang ['.$key.']');
         }

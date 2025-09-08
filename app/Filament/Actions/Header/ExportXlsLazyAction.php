@@ -22,15 +22,15 @@ class ExportXlsLazyAction extends Action
     protected function setUp(): void
     {
         parent::setUp();
-        
-        $this->label(__('xot::actions.export_xls.label'))
-            ->tooltip(__('xot::actions.export_xls.tooltip'))
-            ->icon(__('xot::actions.export_xls.icon'))
-            ->modalHeading(__('xot::actions.export_xls.modal.heading'))
-            ->modalDescription(__('xot::actions.export_xls.modal.description'))
-            ->modalSubmitActionLabel(__('xot::actions.export_xls.modal.confirm'))
-            ->modalCancelActionLabel(__('xot::actions.export_xls.modal.cancel'))
-            ->successNotificationTitle(__('xot::actions.export_xls.success'))
+
+        $this->label((string) __('xot::actions.export_xls.label'))
+            ->tooltip((string) __('xot::actions.export_xls.tooltip'))
+            ->icon((string) __('xot::actions.export_xls.icon'))
+            ->modalHeading((string) __('xot::actions.export_xls.modal.heading'))
+            ->modalDescription((string) __('xot::actions.export_xls.modal.description'))
+            ->modalSubmitActionLabel((string) __('xot::actions.export_xls.modal.confirm'))
+            ->modalCancelActionLabel((string) __('xot::actions.export_xls.modal.cancel'))
+            ->successNotificationTitle((string) __('xot::actions.export_xls.success'))
             ->requiresConfirmation()
             ->action(static function (ListRecords $livewire) {
                 $filename = class_basename($livewire).'-'.collect($livewire->tableFilters)->flatten()->implode('-').'.xlsx';
@@ -50,6 +50,7 @@ class ExportXlsLazyAction extends Action
                             if (is_scalar($field)) {
                                 return (string) $field;
                             }
+
                             return '';
                         }, $rawFields);
                     }
@@ -57,35 +58,35 @@ class ExportXlsLazyAction extends Action
                 }
 
                 $lazy = $livewire->getFilteredTableQuery();
-                
-                if ($lazy->count() < 7) {
+
+                if ($lazy->count()/** @phpstan-ignore method.nonObject */ < 7) {
                     Assert::isInstanceOf($lazy, Builder::class);
-                    
+
                     /** @var array<int, string> $stringFields */
                     $stringFields = array_values($fields);
-                    
+
                     return app(ExportXlsByQuery::class)->execute(
-                        $lazy, 
-                        $filename, 
-                        $stringFields, 
+                        $lazy,
+                        $filename,
+                        $stringFields,
                         null
                     );
                 }
 
                 $lazyCursor = $lazy->cursor();
 
-                if ($lazyCursor->count() > 3000) {
+                if ($lazyCursor->count()/** @phpstan-ignore method.nonObject */ > 3000) {
                     return app(ExportXlsStreamByLazyCollection::class)->execute(
-                        $lazyCursor, 
-                        $filename, 
-                        $transKey, 
+                        $lazyCursor,
+                        $filename,
+                        $transKey,
                         array_values($fields)
                     );
                 }
 
                 return app(ExportXlsByLazyCollection::class)->execute(
-                    $lazyCursor, 
-                    $filename, 
+                    $lazyCursor,
+                    $filename,
                     array_values($fields)
                 );
             });

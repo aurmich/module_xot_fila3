@@ -9,6 +9,7 @@ use Symfony\Component\Finder\Finder;
 class McpCheckCommand extends Command
 {
     protected $signature = 'mcp:check {--fix : Correggi automaticamente le violazioni}';
+
     protected $description = 'Controlla le regole MCP nel progetto';
 
     protected $rules = [
@@ -24,7 +25,7 @@ class McpCheckCommand extends Command
         ],
         'translations' => [
             'pattern' => '/->label\([\'"]\w+[\'"]\)/',
-            'correct' => "->label(__('module.key'))",
+            'correct' => "->label((string) __('module.key'))",
             'message' => 'Usare LangServiceProvider per le traduzioni',
         ],
     ];
@@ -37,6 +38,7 @@ class McpCheckCommand extends Command
 
         if (empty($violations)) {
             $this->info('Nessuna violazione trovata.');
+
             return 0;
         }
 
@@ -80,13 +82,13 @@ class McpCheckCommand extends Command
             'translations' => 'lang/**/*.php',
         ];
 
-        $finder = new Finder();
+        $finder = new Finder;
         $finder->files()
             ->in(base_path())
             ->name('*.php')
             ->path($paths[$type]);
 
-        return array_map(fn($file) => $file->getPathname(), iterator_to_array($finder));
+        return array_map(fn ($file) => $file->getPathname(), iterator_to_array($finder));
     }
 
     protected function displayViolations(array $violations): void

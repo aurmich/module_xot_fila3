@@ -62,12 +62,17 @@ Homestead.json
 *.old1
 *.backup
 <<<<<<< HEAD
+<<<<<<< HEAD
 *.backup.*
 *.bak
 =======
 *.bak
 *.new
 >>>>>>> ded3027d (.)
+=======
+*.backup.*
+*.bak
+>>>>>>> 3d1ca073 (.)
 
 # Documentation and cache
 docs/phpstan/
@@ -75,5 +80,8 @@ docs/cache/
 cache/
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 >>>>>>> ded3027d (.)
+=======
+>>>>>>> 3d1ca073 (.)

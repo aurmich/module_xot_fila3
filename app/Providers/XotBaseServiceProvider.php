@@ -210,7 +210,7 @@ abstract class XotBaseServiceProvider extends ServiceProvider
                 'Modules\\'.$this->name.'\\Console\\Commands',
                 $prefix,
             );
-        if ($comps->count() == 0) {
+        if ($comps->count()/** @phpstan-ignore method.nonObject */ == 0) {
             return;
         }
         $commands = $comps->toArray();

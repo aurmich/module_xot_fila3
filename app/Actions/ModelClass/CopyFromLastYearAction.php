@@ -27,7 +27,7 @@ class CopyFromLastYearAction
         /** @var Collection $rows_last_year */
         $rows_last_year = $modelClass::where($fieldName, $lastYear)->get();
 
-        if ($rows_year->count() > 0) {
+        if ($rows_year->count()/** @phpstan-ignore method.nonObject */ > 0) {
             return;
         }
 

@@ -11,17 +11,18 @@ namespace Modules\Xot\Models;
 use Spatie\Health\Models\HealthCheckResultHistoryItem as BaseHealthCheckResultHistoryItem;
 
 /**
- * @property int                             $id
+ * @property int $id
  * @property string $check_name
  * @property string $check_label
  * @property string $status
- * @property string|null                     $notification_message
- * @property string|null                     $short_summary
- * @property array                           $meta
+ * @property string|null $notification_message
+ * @property string|null $short_summary
+ * @property array $meta
  * @property string $ended_at
  * @property string $batch
  * @property \Illuminate\Support\Carbon|null $created_at
  * @property \Illuminate\Support\Carbon|null $updated_at
+ *
  * @method static \Illuminate\Database\Eloquent\Builder|HealthCheckResultHistoryItem newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|HealthCheckResultHistoryItem newQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|HealthCheckResultHistoryItem query()
@@ -36,10 +37,20 @@ use Spatie\Health\Models\HealthCheckResultHistoryItem as BaseHealthCheckResultHi
  * @method static \Illuminate\Database\Eloquent\Builder|HealthCheckResultHistoryItem whereShortSummary($value)
  * @method static \Illuminate\Database\Eloquent\Builder|HealthCheckResultHistoryItem whereStatus($value)
  * @method static \Illuminate\Database\Eloquent\Builder|HealthCheckResultHistoryItem whereUpdatedAt($value)
+ *
  * @property string|null $updated_by
  * @property string|null $created_by
+ *
  * @method static \Illuminate\Database\Eloquent\Builder|HealthCheckResultHistoryItem whereCreatedBy($value)
  * @method static \Illuminate\Database\Eloquent\Builder|HealthCheckResultHistoryItem whereUpdatedBy($value)
+ * @method static HealthCheckResultHistoryItem|null first()
+ * @method static \Illuminate\Database\Eloquent\Collection<int, HealthCheckResultHistoryItem> get()
+ * @method static HealthCheckResultHistoryItem create(array $attributes = [])
+ * @method static HealthCheckResultHistoryItem firstOrCreate(array $attributes = [], array $values = [])
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|HealthCheckResultHistoryItem where(string|\Closure $column, mixed $operator = null, mixed $value = null, string $boolean = 'and')
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|HealthCheckResultHistoryItem whereNotNull(string|\Illuminate\Contracts\Database\Query\Expression $columns)
+ * @method static int count(string $columns = '*')
+ *
  * @mixin IdeHelperHealthCheckResultHistoryItem
  * @mixin \Eloquent
  */
