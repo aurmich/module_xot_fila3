@@ -16,6 +16,8 @@ class GetSicureArrayByModelAction
      */
     public function execute(Model $model): array
     {
-        return [];
+
+            return $data;
+        }
     }
 }

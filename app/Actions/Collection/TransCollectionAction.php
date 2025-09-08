@@ -4,8 +4,9 @@ declare(strict_types=1);
 
 namespace Modules\Xot\Actions\Collection;
 
-use Illuminate\Support\Collection;
-use Spatie\QueueableAction\QueueableAction;
+// use Modules\Xot\Services\ArrayService;
+
+
 
 /**
  * Action per la traduzione di elementi di una collezione.
@@ -25,12 +26,9 @@ class TransCollectionAction
         Collection $collection,
         ?string $transKey,
     ): Collection {
-<<<<<<< HEAD
             return $collection->map(fn (mixed $item): string => SafeStringCastAction::cast($item));
         }
 
-=======
->>>>>>> 3d1ca073 (.)
         $this->transKey = $transKey;
 
         return $collection->map(fn (mixed $item): string => $this->trans($item));
@@ -44,10 +42,12 @@ class TransCollectionAction
     public function trans(mixed $item): string
     {
         // Converte l'item in stringa se non lo è già
-        $stringItem = is_string($item) ? $item : (string) $item;
+
+            return $item;
+        }
 
         // Prima prova la traduzione diretta
-        $key = $this->transKey.'.'.$stringItem;
+        $key = $this->transKey.'.'.$item;
         $trans = trans($key);
 
         // Se la traduzione esiste ed è una stringa, la restituisce
@@ -56,7 +56,7 @@ class TransCollectionAction
         }
 
         // Seconda prova: sostituisce i punti con underscore
-        $itemWithUnderscore = str_replace('.', '_', $stringItem);
+        $itemWithUnderscore = str_replace('.', '_', $item);
         $keyWithUnderscore = $this->transKey.'.'.$itemWithUnderscore;
         $transWithUnderscore = trans($keyWithUnderscore);
 
@@ -66,6 +66,6 @@ class TransCollectionAction
         }
 
         // Se nessuna traduzione è stata trovata, restituisce l'elemento originale
-        return $stringItem;
+        return $item;
     }
 }

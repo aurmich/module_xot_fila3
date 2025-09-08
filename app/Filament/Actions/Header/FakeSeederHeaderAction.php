@@ -24,8 +24,8 @@ class FakeSeederHeaderAction extends Action
     {
         parent::setUp();
         $this->translateLabel()
-
-            ->tooltip((string) __('xot::actions.fake_seeder'))
+            
+            ->tooltip(__('xot::actions.fake_seeder'))
             ->icon('fas-seedling')
             ->form([
                 TextInput::make('qty')

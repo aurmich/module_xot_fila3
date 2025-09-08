@@ -432,14 +432,7 @@ public function test_b(): void
 
 ### Errore: Conflitti Git
 
-**Sintomo**
-```
-<<<<<<< HEAD
-// Codice locale
-=======
-// Codice remoto
->>>>>>> branch-name
-```
+
 
 **Soluzione**
 1. **Analizzare i conflitti**:

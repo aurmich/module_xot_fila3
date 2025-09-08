@@ -4,11 +4,7 @@ declare(strict_types=1);
 
 namespace Modules\Xot\Models\Policies;
 
-<<<<<<< HEAD
 use Modules\Xot\Contracts\UserContract;
-=======
-use Modules\Xot\Contracts\ProfileContract;
->>>>>>> 3d1ca073 (.)
 use Modules\Xot\Models\PulseEntry;
 
 class PulseEntryPolicy extends XotBasePolicy
@@ -16,56 +12,56 @@ class PulseEntryPolicy extends XotBasePolicy
     /**
      * Determine whether the user can view any models.
      */
-    public function viewAny(ProfileContract $user): bool
+    public function viewAny(UserContract $user): bool
     {
-        return $user->hasPermissionTo('pulse_entry.viewAny'); /** @phpstan-ignore method.nonObject */
+        return $user->hasPermissionTo('pulse_entry.viewAny');
     }
 
     /**
      * Determine whether the user can view the model.
      */
-    public function view(ProfileContract $user, PulseEntry $pulse_entry): bool
+    public function view(UserContract $user, PulseEntry $pulse_entry): bool
     {
-        return $user->hasPermissionTo('pulse_entry.view'); /** @phpstan-ignore method.nonObject */
+        return $user->hasPermissionTo('pulse_entry.view');
     }
 
     /**
      * Determine whether the user can create models.
      */
-    public function create(ProfileContract $user): bool
+    public function create(UserContract $user): bool
     {
-        return $user->hasPermissionTo('pulse_entry.create'); /** @phpstan-ignore method.nonObject */
+        return $user->hasPermissionTo('pulse_entry.create');
     }
 
     /**
      * Determine whether the user can update the model.
      */
-    public function update(ProfileContract $user, PulseEntry $pulse_entry): bool
+    public function update(UserContract $user, PulseEntry $pulse_entry): bool
     {
-        return $user->hasPermissionTo('pulse_entry.update'); /** @phpstan-ignore method.nonObject */
+        return $user->hasPermissionTo('pulse_entry.update');
     }
 
     /**
      * Determine whether the user can delete the model.
      */
-    public function delete(ProfileContract $user, PulseEntry $pulse_entry): bool
+    public function delete(UserContract $user, PulseEntry $pulse_entry): bool
     {
-        return $user->hasPermissionTo('pulse_entry.delete'); /** @phpstan-ignore method.nonObject */
+        return $user->hasPermissionTo('pulse_entry.delete');
     }
 
     /**
      * Determine whether the user can restore the model.
      */
-    public function restore(ProfileContract $user, PulseEntry $pulse_entry): bool
+    public function restore(UserContract $user, PulseEntry $pulse_entry): bool
     {
-        return $user->hasPermissionTo('pulse_entry.restore'); /** @phpstan-ignore method.nonObject */
+        return $user->hasPermissionTo('pulse_entry.restore');
     }
 
     /**
      * Determine whether the user can permanently delete the model.
      */
-    public function forceDelete(ProfileContract $user, PulseEntry $pulse_entry): bool
+    public function forceDelete(UserContract $user, PulseEntry $pulse_entry): bool
     {
-        return $user->hasPermissionTo('pulse_entry.forceDelete'); /** @phpstan-ignore method.nonObject */
+        return $user->hasPermissionTo('pulse_entry.forceDelete');
     }
 }

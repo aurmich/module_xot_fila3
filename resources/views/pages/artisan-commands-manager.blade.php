@@ -5,9 +5,9 @@
                 <div class="flex items-center justify-between">
                     <h2 class="text-lg font-medium">
                         @if($isRunning)
-                            {{ (string) __('xot::artisan-commands-manager.running', ['command' => $currentCommand]) }}
+                            {{ __('xot::artisan-commands-manager.running', ['command' => $currentCommand]) }}
                         @else
-                            {{ (string) __('xot::artisan-commands-manager.select_command') }}
+                            {{ __('xot::artisan-commands-manager.select_command') }}
                         @endif
                     </h2>
                     
@@ -15,7 +15,7 @@
                         <div class="flex items-center space-x-2">
                             <div class="animate-spin rounded-full h-4 w-4 border-b-2 border-primary-500"></div>
                             <span class="text-sm text-gray-500 dark:text-gray-400">
-                                {{ (string) __('xot::artisan-commands-manager.executing') }}
+                                {{ __('xot::artisan-commands-manager.executing') }}
                             </span>
                         </div>
                     @endif

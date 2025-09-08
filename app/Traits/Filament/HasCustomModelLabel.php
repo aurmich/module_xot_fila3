@@ -15,7 +15,7 @@ trait HasCustomModelLabel
     {
         $label = static::$pluralModelLabel ?? Str::plural(static::getModelLabel());
 
-        return (string) __($label);
+        return __($label);
     }
 
     /**
@@ -24,10 +24,10 @@ trait HasCustomModelLabel
     public static function getModelLabel(): string
     {
         if (isset(static::$modelLabel)) {
-            return (string) __(static::$modelLabel);
+            return __(static::$modelLabel);
         }
 
-        return (string) __(Str::title(Str::snake(class_basename(static::getModel()), ' ')));
+        return __(Str::title(Str::snake(class_basename(static::getModel()), ' ')));
     }
 
     /**

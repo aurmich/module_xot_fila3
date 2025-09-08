@@ -5,7 +5,7 @@
                 <div class="input-group-prepend">
                     <span class="input-group-text"><i class="fa fa-search"></i></span>
                 </div>
-                <input type="search" class="form-control" placeholder="{{ (string) __('Search') }}" wire:model="search">
+                <input type="search" class="form-control" placeholder="{{ __('Search') }}" wire:model="search">
             </div>
         </div>
         @if ($header_view)
@@ -18,7 +18,7 @@
     <div class="card mb-3">
         @if ($models->isEmpty())
             <div class="card-body">
-                {{ (string) __('No results to display.') }}
+                {{ __('No results to display.') }}
             </div>
         @else
             <div class="card-body p-0">

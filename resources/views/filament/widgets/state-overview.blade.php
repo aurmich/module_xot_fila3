@@ -26,7 +26,7 @@
                 <div class="col-span-full text-center py-8">
                     <div class="text-gray-400 dark:text-gray-600">
                         <x-heroicon-o-calendar class="w-12 h-12 mx-auto mb-2" />
-                        <p class="text-sm">{{ (string) __('salutemo::widgets.appointment_overview.empty_state') }}</p>
+                        <p class="text-sm">{{ __('salutemo::widgets.appointment_overview.empty_state') }}</p>
                     </div>
                 </div>
             @endforelse
