@@ -4,8 +4,13 @@ declare(strict_types=1);
 
 namespace Modules\Xot\Models\Policies;
 
+<<<<<<< HEAD
 use Modules\Xot\Contracts\UserContract;
 use Modules\Xot\Models\PulseValue;
+=======
+use Modules\Xot\Models\PulseValue;
+use Modules\Xot\Contracts\UserContract;
+>>>>>>> d9f8ef0b (.)
 
 class PulseValuePolicy extends XotBasePolicy
 {
@@ -64,4 +69,8 @@ class PulseValuePolicy extends XotBasePolicy
     {
         return $user->hasPermissionTo('pulse_value.forceDelete');
     }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> d9f8ef0b (.)

@@ -4,8 +4,13 @@ declare(strict_types=1);
 
 namespace Modules\Xot\Models\Policies;
 
+<<<<<<< HEAD
 use Modules\Xot\Contracts\UserContract;
 use Modules\Xot\Models\HealthCheckResultHistoryItem;
+=======
+use Modules\Xot\Models\HealthCheckResultHistoryItem;
+use Modules\Xot\Contracts\UserContract;
+>>>>>>> d9f8ef0b (.)
 
 class HealthCheckResultHistoryItemPolicy extends XotBasePolicy
 {
@@ -64,4 +69,8 @@ class HealthCheckResultHistoryItemPolicy extends XotBasePolicy
     {
         return $user->hasPermissionTo('health_check_result_history_item.forceDelete');
     }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> d9f8ef0b (.)
