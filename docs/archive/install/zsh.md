@@ -17,12 +17,17 @@ PROMPT='%F{green}%n@%m%f %F{magenta}arm64 %F{yellow}%~ %F{cyan}${vcs_info_msg_0_
 
 ## Collegamenti tra versioni di zsh.md
 <<<<<<< HEAD
+<<<<<<< HEAD
 * [zsh.md](../../../Xot/docs/install/zsh.md)
 * [zsh.md](../../../Xot/docs/ubuntu/zsh.md)
 =======
 * [zsh.md](../../../Xot/project_docs/install/zsh.md)
 * [zsh.md](../../../Xot/project_docs/ubuntu/zsh.md)
 >>>>>>> c4ec0fb6 (.)
+=======
+* [zsh.md](../../../Xot/docs/install/zsh.md)
+* [zsh.md](../../../Xot/docs/ubuntu/zsh.md)
+>>>>>>> edc8a701 (.)
 
 
 ### Versione Incoming

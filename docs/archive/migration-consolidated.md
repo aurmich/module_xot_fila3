@@ -18,10 +18,14 @@ Questo documento sostituisce e consolida **30+ file di migrazione duplicati** tr
 
 ### ✅ Unica Fonte di Verità
 <<<<<<< HEAD
+<<<<<<< HEAD
 - **Questo file**: `/laravel/Modules/Xot/docs/migration-consolidated.md`
 =======
 - **Questo file**: `/laravel/Modules/Xot/project_docs/migration-consolidated.md`
 >>>>>>> c4ec0fb6 (.)
+=======
+- **Questo file**: `/laravel/Modules/Xot/docs/migration-consolidated.md`
+>>>>>>> edc8a701 (.)
 - **Implementazione**: File di migrazione nei singoli moduli (solo migrazioni, non docs)
 
 ## Principi Fondamentali

@@ -2,6 +2,7 @@
 
 > **Collegamenti correlati**
 <<<<<<< HEAD
+<<<<<<< HEAD
 > - [README.md documentazione generale](../../../../docs/README.md)
 > - [Struttura dei Prompt](./prompts.md)
 > - [Regole per i Prompt](./PROMPT_RULES.md)
@@ -12,6 +13,12 @@
 > - [Regole per i Prompt](./PROMPT_RULES.md)
 > - [README.md toolkit bashscripts](../../../../bashscripts/project_docs/README.md)
 >>>>>>> c4ec0fb6 (.)
+=======
+> - [README.md documentazione generale](../../../../docs/README.md)
+> - [Struttura dei Prompt](./prompts.md)
+> - [Regole per i Prompt](./PROMPT_RULES.md)
+> - [README.md toolkit bashscripts](../../../../bashscripts/docs/README.md)
+>>>>>>> edc8a701 (.)
 
 ## Regola Fondamentale
 
@@ -25,30 +32,42 @@ Questa regola è fondamentale per garantire la portabilità della documentazione
 
 ```markdown
 <<<<<<< HEAD
+<<<<<<< HEAD
 [Modulo Xot](./laravel/Modules/Xot/docs/README.md)
 =======
 [Modulo Xot](./laravel/Modules/Xot/project_docs/README.md)
 >>>>>>> c4ec0fb6 (.)
+=======
+[Modulo Xot](./laravel/Modules/Xot/docs/README.md)
+>>>>>>> edc8a701 (.)
 ```
 
 ### Da un file in un modulo verso un altro modulo
 
 ```markdown
 <<<<<<< HEAD
+<<<<<<< HEAD
 [Altro Modulo](../../../AltroModulo/docs/README.md)
 =======
 [Altro Modulo](../../../AltroModulo/project_docs/README.md)
 >>>>>>> c4ec0fb6 (.)
+=======
+[Altro Modulo](../../../AltroModulo/docs/README.md)
+>>>>>>> edc8a701 (.)
 ```
 
 ### Da un file in un modulo verso la root
 
 ```markdown
 <<<<<<< HEAD
+<<<<<<< HEAD
 [Documentazione Root](../../../../docs/README.md)
 =======
 [Documentazione Root](../../../../project_docs/README.md)
 >>>>>>> c4ec0fb6 (.)
+=======
+[Documentazione Root](../../../../docs/README.md)
+>>>>>>> edc8a701 (.)
 ```
 
 ## Errori Comuni da Evitare
@@ -56,14 +75,19 @@ Questa regola è fondamentale per garantire la portabilità della documentazione
 1. **MAI utilizzare percorsi assoluti** come:
    ```markdown
 <<<<<<< HEAD
+<<<<<<< HEAD
    [ERRATO](/var/www/html/saluteora/laravel/Modules/Xot/docs/README.md)
 =======
    [ERRATO](/var/www/html/saluteora/laravel/Modules/Xot/project_docs/README.md)
 >>>>>>> c4ec0fb6 (.)
+=======
+   [ERRATO](/var/www/html/saluteora/laravel/Modules/Xot/docs/README.md)
+>>>>>>> edc8a701 (.)
    ```
 
 2. **MAI utilizzare percorsi che iniziano con /**:
    ```markdown
+<<<<<<< HEAD
 <<<<<<< HEAD
    [ERRATO](/docs/README.md)
    [ERRATO](/laravel/Modules/Xot/docs/README.md)
@@ -71,10 +95,15 @@ Questa regola è fondamentale per garantire la portabilità della documentazione
    [ERRATO](/project_docs/README.md)
    [ERRATO](/laravel/Modules/Xot/project_docs/README.md)
 >>>>>>> c4ec0fb6 (.)
+=======
+   [ERRATO](/docs/README.md)
+   [ERRATO](/laravel/Modules/Xot/docs/README.md)
+>>>>>>> edc8a701 (.)
    ```
 
 3. **MAI utilizzare percorsi che non tengono conto della posizione relativa del file sorgente**:
    ```markdown
+<<<<<<< HEAD
 <<<<<<< HEAD
    [ERRATO](Modules/Xot/docs/README.md) <!-- Da un file nella root -->
    [ERRATO](../Xot/docs/README.md) <!-- Da un file in un modulo, senza contare correttamente i livelli -->
@@ -82,6 +111,10 @@ Questa regola è fondamentale per garantire la portabilità della documentazione
    [ERRATO](Modules/Xot/project_docs/README.md) <!-- Da un file nella root -->
    [ERRATO](../Xot/project_docs/README.md) <!-- Da un file in un modulo, senza contare correttamente i livelli -->
 >>>>>>> c4ec0fb6 (.)
+=======
+   [ERRATO](Modules/Xot/docs/README.md) <!-- Da un file nella root -->
+   [ERRATO](../Xot/docs/README.md) <!-- Da un file in un modulo, senza contare correttamente i livelli -->
+>>>>>>> edc8a701 (.)
    ```
 
 ## Come Calcolare Correttamente i Percorsi Relativi
@@ -97,16 +130,22 @@ Questa regola è fondamentale per garantire la portabilità della documentazione
 | Posizione File Sorgente | Posizione File Destinazione | Percorso Relativo Corretto |
 |-------------------------|------------------------------|----------------------------|
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> edc8a701 (.)
 | `/docs/README.md` | `/laravel/Modules/Xot/docs/README.md` | `./laravel/Modules/Xot/docs/README.md` |
 | `/laravel/Modules/Xot/docs/README.md` | `/docs/README.md` | `../../../../docs/README.md` |
 | `/laravel/Modules/Xot/docs/README.md` | `/laravel/Modules/User/docs/README.md` | `../../../User/docs/README.md` |
 | `/laravel/Modules/Xot/docs/structure.md` | `/laravel/Modules/Xot/docs/README.md` | `./README.md` |
+<<<<<<< HEAD
 =======
 | `/project_docs/README.md` | `/laravel/Modules/Xot/project_docs/README.md` | `./laravel/Modules/Xot/project_docs/README.md` |
 | `/laravel/Modules/Xot/project_docs/README.md` | `/project_docs/README.md` | `../../../../project_docs/README.md` |
 | `/laravel/Modules/Xot/project_docs/README.md` | `/laravel/Modules/User/project_docs/README.md` | `../../../User/project_docs/README.md` |
 | `/laravel/Modules/Xot/project_docs/structure.md` | `/laravel/Modules/Xot/project_docs/README.md` | `./README.md` |
 >>>>>>> c4ec0fb6 (.)
+=======
+>>>>>>> edc8a701 (.)
 
 ## Verifica dei Link
 

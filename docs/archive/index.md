@@ -33,10 +33,14 @@ Questo documento fornisce un indice della documentazione del modulo Xot, organiz
 
 ## Link Esterni
 <<<<<<< HEAD
+<<<<<<< HEAD
 - [Laravel Framework](https://laravel.com/docs/12.x)
 =======
 - [Laravel Framework](https://laravel.com/project_docs/12.x)
 >>>>>>> c4ec0fb6 (.)
+=======
+- [Laravel Framework](https://laravel.com/docs/12.x)
+>>>>>>> edc8a701 (.)
 - [Filament Documentation](https://filamentphp.com/docs)
 - [Livewire Documentation](https://livewire.laravel.com/docs)
 - [PHPStan Documentation](https://phpstan.org/user-guide/getting-started)

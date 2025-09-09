@@ -30,10 +30,14 @@ This document consolidates recurring fixes and rules applied across modules. Kee
 
 ## 6. Documentation Policy
 <<<<<<< HEAD
+<<<<<<< HEAD
 - No root `docs/`. Use `docs_project/` (global) and `Modules/<Module>/docs/` (module).
 =======
 - No root `docs/`. Use `docs_project/` (global) and `Modules/<Module>/project_docs/` (module).
 >>>>>>> c4ec0fb6 (.)
+=======
+- No root `docs/`. Use `docs_project/` (global) and `Modules/<Module>/docs/` (module).
+>>>>>>> edc8a701 (.)
 - All docs filenames lowercase except `README.md`.
 
 ## 7. PHPStan
@@ -70,7 +74,11 @@ This document consolidates recurring fixes and rules applied across modules. Kee
 
 ---
 <<<<<<< HEAD
+<<<<<<< HEAD
 - Backlinks: see `Modules/SaluteMo/docs/translation-rules-consolidated.md`, `Modules/Xot/docs/translation-structure-expanded.md`, `.windsurf/rules/full_calendar*.mdc`.
 =======
 - Backlinks: see `Modules/SaluteMo/project_docs/translation-rules-consolidated.md`, `Modules/Xot/project_docs/translation-structure-expanded.md`, `.windsurf/rules/full_calendar*.mdc`.
 >>>>>>> c4ec0fb6 (.)
+=======
+- Backlinks: see `Modules/SaluteMo/docs/translation-rules-consolidated.md`, `Modules/Xot/docs/translation-structure-expanded.md`, `.windsurf/rules/full_calendar*.mdc`.
+>>>>>>> edc8a701 (.)

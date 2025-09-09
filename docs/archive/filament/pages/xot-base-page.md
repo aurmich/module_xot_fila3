@@ -102,6 +102,7 @@ Verifica se l'utente ha l'accesso alla pagina.
 ## Link Correlati
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 - [Documentazione Filament](../../../docs/filament/index.md)
 - [Best Practices](../../../docs/best-practices.md)
 - [Guida Traduzioni](../../../docs/translations.md) 
@@ -110,3 +111,8 @@ Verifica se l'utente ha l'accesso alla pagina.
 - [Best Practices](../../../project_docs/best-practices.md)
 - [Guida Traduzioni](../../../project_docs/translations.md) 
 >>>>>>> c4ec0fb6 (.)
+=======
+- [Documentazione Filament](../../../docs/filament/index.md)
+- [Best Practices](../../../docs/best-practices.md)
+- [Guida Traduzioni](../../../docs/translations.md) 
+>>>>>>> edc8a701 (.)

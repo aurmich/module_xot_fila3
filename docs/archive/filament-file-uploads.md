@@ -42,10 +42,14 @@ FileUpload::make('certifications')
 ## Mappatura dei Campi del Database
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 È fondamentale che i campi utilizzati nei componenti `FileUpload` corrispondano ai campi disponibili nel database. Per una documentazione dettagliata sulla mappatura dei campi, consulta la [Mappatura dei Campi Database nel Modulo Patient](/laravel/Modules/Patient/docs/DATABASE_FIELD_MAPPING.md).
 =======
 È fondamentale che i campi utilizzati nei componenti `FileUpload` corrispondano ai campi disponibili nel database. Per una documentazione dettagliata sulla mappatura dei campi, consulta la [Mappatura dei Campi Database nel Modulo Patient](/laravel/Modules/Patient/project_docs/DATABASE_FIELD_MAPPING.md).
 >>>>>>> c4ec0fb6 (.)
+=======
+È fondamentale che i campi utilizzati nei componenti `FileUpload` corrispondano ai campi disponibili nel database. Per una documentazione dettagliata sulla mappatura dei campi, consulta la [Mappatura dei Campi Database nel Modulo Patient](/laravel/Modules/Patient/docs/DATABASE_FIELD_MAPPING.md).
+>>>>>>> edc8a701 (.)
 
 ### Campi per File Singoli
 
@@ -132,11 +136,15 @@ Forms\Components\FileUpload::make('certifications')
 ## Documentazione Correlata
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> edc8a701 (.)
 - [Mappatura dei Campi Database nel Modulo Patient](/laravel/Modules/Patient/docs/DATABASE_FIELD_MAPPING.md)
 - [Migrazioni del Database](/docs/database-migrations.md)
 - [Gestione degli Utenti](/docs/user-management.md)
 - [Pattern di Ereditarietà dei Modelli](/docs/model-inheritance-patterns.md)
 - [Documentazione Ufficiale di Filament](https://filamentphp.com/docs/3.x/forms/fields/file-upload)
+<<<<<<< HEAD
 =======
 - [Mappatura dei Campi Database nel Modulo Patient](/laravel/Modules/Patient/project_docs/DATABASE_FIELD_MAPPING.md)
 - [Migrazioni del Database](/project_docs/database-migrations.md)
@@ -144,3 +152,5 @@ Forms\Components\FileUpload::make('certifications')
 - [Pattern di Ereditarietà dei Modelli](/project_docs/model-inheritance-patterns.md)
 - [Documentazione Ufficiale di Filament](https://filamentphp.com/project_docs/3.x/forms/fields/file-upload)
 >>>>>>> c4ec0fb6 (.)
+=======
+>>>>>>> edc8a701 (.)

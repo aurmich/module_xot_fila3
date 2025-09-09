@@ -88,6 +88,7 @@ public function panel(Panel $panel): Panel
 ### Collegamenti
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 - [Documentazione Root](../../../docs/filament_panel_provider_rules.md)
 - [Architettura Filament](../../../docs/FILAMENT_BEST_PRACTICES.md)
 - [Configurazione Moduli](../../../docs/MODULE_ARCHITECTURE.md)
@@ -96,5 +97,10 @@ public function panel(Panel $panel): Panel
 - [Architettura Filament](../../../project_docs/FILAMENT_BEST_PRACTICES.md)
 - [Configurazione Moduli](../../../project_docs/MODULE_ARCHITECTURE.md)
 >>>>>>> c4ec0fb6 (.)
+=======
+- [Documentazione Root](../../../docs/filament_panel_provider_rules.md)
+- [Architettura Filament](../../../docs/FILAMENT_BEST_PRACTICES.md)
+- [Configurazione Moduli](../../../docs/MODULE_ARCHITECTURE.md)
+>>>>>>> edc8a701 (.)
 
 *Ultimo aggiornamento: 2025-01-06* 

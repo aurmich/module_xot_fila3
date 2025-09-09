@@ -20,11 +20,16 @@
 
 ## Collegamenti
 <<<<<<< HEAD
+<<<<<<< HEAD
 - [docs root](../../../../docs/actions.md)
 - [docs Lang](../../Lang/docs/filament-label.md)
 =======
 - [docs root](../../../../project_docs/actions.md)
 - [docs Lang](../../Lang/project_docs/filament-label.md)
 >>>>>>> c4ec0fb6 (.)
+=======
+- [docs root](../../../../docs/actions.md)
+- [docs Lang](../../Lang/docs/filament-label.md)
+>>>>>>> edc8a701 (.)
 
 Ultimo aggiornamento: maggio 2025.

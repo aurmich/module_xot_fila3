@@ -99,6 +99,7 @@ class NotifyServiceProvider extends XotBaseServiceProvider
 
 ### Collegamenti nella Root
 <<<<<<< HEAD
+<<<<<<< HEAD
 - [Architettura dei Provider](../../../docs/architecture/providers.md)
 - [Struttura dei Moduli](../../../docs/architecture/modules.md)
 
@@ -113,6 +114,14 @@ class NotifyServiceProvider extends XotBaseServiceProvider
 - [Notify ServiceProvider](../../Notify/project_docs/service-provider.md)
 - [User ServiceProvider](../../User/project_docs/service-provider.md)
 >>>>>>> c4ec0fb6 (.)
+=======
+- [Architettura dei Provider](../../../docs/architecture/providers.md)
+- [Struttura dei Moduli](../../../docs/architecture/modules.md)
+
+### Collegamenti ai Moduli
+- [Notify ServiceProvider](../../Notify/docs/service-provider.md)
+- [User ServiceProvider](../../User/docs/service-provider.md)
+>>>>>>> edc8a701 (.)
 
 ## Note Importanti
 
@@ -123,10 +132,14 @@ class NotifyServiceProvider extends XotBaseServiceProvider
 5. Mantenere la coerenza tra i moduli 
 ## Collegamenti tra versioni di XotBaseServiceProvider.md
 <<<<<<< HEAD
+<<<<<<< HEAD
 * [XotBaseServiceProvider.md](../../../../docs/moduli/xot/XotBaseServiceProvider.md)
 =======
 * [XotBaseServiceProvider.md](../../../../project_docs/moduli/xot/XotBaseServiceProvider.md)
 >>>>>>> c4ec0fb6 (.)
+=======
+* [XotBaseServiceProvider.md](../../../../docs/moduli/xot/XotBaseServiceProvider.md)
+>>>>>>> edc8a701 (.)
 
 ## Correzione, motivazione e miglioramenti (2025-05-13)
 

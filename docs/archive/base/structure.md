@@ -70,6 +70,9 @@ quindi le relazioni verranno create utilizzando il MorphMap, ovvero la stringa '
 - altri files
 ## Collegamenti tra versioni di structure.md
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> edc8a701 (.)
 * [structure.md](bashscripts/docs/structure.md)
 * [structure.md](../../../Gdpr/docs/structure.md)
 * [structure.md](../../../Notify/docs/structure.md)
@@ -86,6 +89,7 @@ quindi le relazioni verranno create utilizzando il MorphMap, ovvero la stringa '
 * [structure.md](../../../Cms/docs/structure.md)
 * [structure.md](../../../Cms/docs/themes/structure.md)
 * [structure.md](../../../Cms/docs/components/structure.md)
+<<<<<<< HEAD
 =======
 * [structure.md](bashscripts/project_docs/structure.md)
 * [structure.md](../../../Gdpr/project_docs/structure.md)
@@ -104,6 +108,8 @@ quindi le relazioni verranno create utilizzando il MorphMap, ovvero la stringa '
 * [structure.md](../../../Cms/project_docs/themes/structure.md)
 * [structure.md](../../../Cms/project_docs/components/structure.md)
 >>>>>>> c4ec0fb6 (.)
+=======
+>>>>>>> edc8a701 (.)
 
 
 ### Versione Incoming

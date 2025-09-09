@@ -231,6 +231,7 @@ class RouteDynService
     {
         if (isset($v['method'])) {
 <<<<<<< HEAD
+<<<<<<< HEAD
             return Arr::wrap($v['method']);
 =======
             $wrapped = Arr::wrap($v['method']);
@@ -243,6 +244,9 @@ class RouteDynService
 
             return $result;
 >>>>>>> c4ec0fb6 (.)
+=======
+            return Arr::wrap($v['method']);
+>>>>>>> edc8a701 (.)
         }
 
         return ['get', 'post'];
@@ -331,6 +335,7 @@ class RouteDynService
         $curr = $curr === null ? $sub_namespace : $curr;
         Assert::isArray($subs = $v['subs']);
 <<<<<<< HEAD
+<<<<<<< HEAD
         self::dynamic_route($subs, $sub_namespace, null, $curr);
 =======
 
@@ -350,6 +355,9 @@ class RouteDynService
 
         self::dynamic_route($typedSubs, $sub_namespace, null, $curr);
 >>>>>>> c4ec0fb6 (.)
+=======
+        self::dynamic_route($subs, $sub_namespace, null, $curr);
+>>>>>>> edc8a701 (.)
     }
 
     /**
@@ -364,6 +372,7 @@ class RouteDynService
         $controller = self::getController($v, $namespace);
         foreach ($v['acts'] as $v1) {
             Assert::isArray($v1);
+<<<<<<< HEAD
 <<<<<<< HEAD
             $v1['controller'] = $controller;
 
@@ -384,6 +393,13 @@ class RouteDynService
             $uri = self::getUri($typedV1, $namespace);
             $callback = self::getCallback($typedV1, $namespace, $curr);
 >>>>>>> c4ec0fb6 (.)
+=======
+            $v1['controller'] = $controller;
+
+            $method = self::getMethod($v1, $namespace);
+            $uri = self::getUri($v1, $namespace);
+            $callback = self::getCallback($v1, $namespace, $curr);
+>>>>>>> edc8a701 (.)
             Route::match($method, $uri, $callback);
         }
     }

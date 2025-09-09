@@ -58,6 +58,9 @@ aurmich/dev
 
 ## Collegamenti tra versioni di level_2.md
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> edc8a701 (.)
 * [level_2.md](laravel/Modules/Chart/docs/phpstan/level_2.md)
 * [level_2.md](laravel/Modules/Reporting/docs/phpstan/level_2.md)
 * [level_2.md](laravel/Modules/Gdpr/docs/phpstan/level_2.md)
@@ -73,6 +76,7 @@ aurmich/dev
 * [level_2.md](laravel/Modules/Activity/docs/phpstan/level_2.md)
 * [level_2.md](laravel/Modules/Patient/docs/phpstan/level_2.md)
 * [level_2.md](laravel/Modules/Cms/docs/phpstan/level_2.md)
+<<<<<<< HEAD
 =======
 * [level_2.md](laravel/Modules/Chart/project_docs/phpstan/level_2.md)
 * [level_2.md](laravel/Modules/Reporting/project_docs/phpstan/level_2.md)
@@ -90,4 +94,6 @@ aurmich/dev
 * [level_2.md](laravel/Modules/Patient/project_docs/phpstan/level_2.md)
 * [level_2.md](laravel/Modules/Cms/project_docs/phpstan/level_2.md)
 >>>>>>> c4ec0fb6 (.)
+=======
+>>>>>>> edc8a701 (.)
 

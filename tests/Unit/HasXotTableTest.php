@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> c4ec0fb6 (.)
 use Mockery;
@@ -11,19 +12,28 @@ use Filament\Tables\Table;
 use Filament\Tables\Contracts\HasTable;
 use Modules\Xot\Filament\Traits\HasXotTable;
 use Illuminate\Support\Collection;
+=======
+namespace Modules\Xot\Tests\Unit;
+>>>>>>> edc8a701 (.)
 
-uses(Tests\TestCase::class);
+use Filament\Tables\Table;
+use Modules\Xot\Tests\Unit\Support\HasTableWithXotTestClass;
+use Modules\Xot\Tests\Unit\Support\HasTableWithoutOptionalMethodsTestClass;
+use Modules\Xot\Tests\Unit\Support\DummyTestModel;
+
+uses(\Tests\TestCase::class);
 
 afterEach(function () {
-    Mockery::close();
+    \Mockery::close();
 });
 
 it('tests table method with all methods implemented', function () {
-        // Avoid DB/Schema access inside TableExistsByModelClassActions
-        Mockery::mock('overload:Modules\\Xot\\Actions\\Model\\TableExistsByModelClassActions')
-            ->shouldReceive('execute')
-            ->andReturn(true);
+    // Avoid DB/Schema access inside TableExistsByModelClassActions
+    \Mockery::mock('overload:Modules\\Xot\\Actions\\Model\\TableExistsByModelClassActions')
+        ->shouldReceive('execute')
+        ->andReturn(true);
 
+<<<<<<< HEAD
         // Create partial mock and defer missing to real methods so trait's table() runs
         $mock = Mockery::mock(HasTableWithXot::class)
             ->makePartial()
@@ -49,13 +59,18 @@ it('tests table method with all methods implemented', function () {
         ->shouldReceive('execute')
         ->andReturn(true);
 
+=======
+>>>>>>> edc8a701 (.)
     // Create partial mock and defer missing to real methods so trait's table() runs
     $mock = \Mockery::mock(HasTableWithXotTestClass::class)
         ->makePartial()
         ->shouldDeferMissing();
+<<<<<<< HEAD
 >>>>>>> 0d3387f (.)
 =======
 >>>>>>> c4ec0fb6 (.)
+=======
+>>>>>>> edc8a701 (.)
 
     // Expect getTableHeaderActions to be called
     $mock->shouldReceive('getTableHeaderActions')
@@ -76,6 +91,7 @@ it('tests table method with all methods implemented', function () {
     $mock->shouldReceive('getModelClass')
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         ->andReturn(DummyModel::class);
 =======
         ->andReturn(DummyTestModel::class);
@@ -83,6 +99,9 @@ it('tests table method with all methods implemented', function () {
 =======
         ->andReturn(DummyModel::class);
 >>>>>>> c4ec0fb6 (.)
+=======
+        ->andReturn(DummyTestModel::class);
+>>>>>>> edc8a701 (.)
     $mock->shouldReceive('getTableRecordTitleAttribute')
         ->andReturn('name');
     $mock->shouldReceive('getTableHeading')
@@ -101,6 +120,7 @@ it('tests table method with all methods implemented', function () {
     // Create a mock for Table
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     $tableMock = Mockery::mock(Table::class);
 =======
     $tableMock = \Mockery::mock(Table::class);
@@ -108,6 +128,9 @@ it('tests table method with all methods implemented', function () {
 =======
     $tableMock = Mockery::mock(Table::class);
 >>>>>>> c4ec0fb6 (.)
+=======
+    $tableMock = \Mockery::mock(Table::class);
+>>>>>>> edc8a701 (.)
     $tableMock->shouldReceive('recordTitleAttribute')->andReturnSelf();
     $tableMock->shouldReceive('heading')->andReturnSelf();
     $tableMock->shouldReceive('columns')->andReturnSelf();
@@ -134,20 +157,28 @@ it('tests table method with all methods implemented', function () {
 it('tests table method with no optional methods implemented', function () {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> c4ec0fb6 (.)
         // Avoid DB/Schema access inside TableExistsByModelClassActions
         Mockery::mock('overload:Modules\\Xot\\Actions\\Model\\TableExistsByModelClassActions')
             ->shouldReceive('execute')
             ->andReturn(true);
+=======
+    // Avoid DB/Schema access inside TableExistsByModelClassActions
+    \Mockery::mock('overload:Modules\\Xot\\Actions\\Model\\TableExistsByModelClassActions')
+        ->shouldReceive('execute')
+        ->andReturn(true);
+>>>>>>> edc8a701 (.)
 
-        // Create partial mock and defer missing to real methods so trait's table() runs
-        $mock = Mockery::mock(HasTableWithoutOptionalMethods::class)
-            ->makePartial()
-            ->shouldDeferMissing();
+    // Create partial mock and defer missing to real methods so trait's table() runs
+    $mock = \Mockery::mock(HasTableWithoutOptionalMethodsTestClass::class)
+        ->makePartial()
+        ->shouldDeferMissing();
 
     // Other required method stubs
     $mock->shouldReceive('getModelClass')
+<<<<<<< HEAD
         ->andReturn(DummyModel::class);
 <<<<<<< HEAD
 =======
@@ -167,6 +198,9 @@ it('tests table method with no optional methods implemented', function () {
 >>>>>>> 0d3387f (.)
 =======
 >>>>>>> c4ec0fb6 (.)
+=======
+        ->andReturn(DummyTestModel::class);
+>>>>>>> edc8a701 (.)
     $mock->shouldReceive('getTableRecordTitleAttribute')
         ->andReturn('name');
     $mock->shouldReceive('getTableHeading')
@@ -185,6 +219,7 @@ it('tests table method with no optional methods implemented', function () {
     // Create a mock for Table
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     $tableMock = Mockery::mock(Table::class);
 =======
     $tableMock = \Mockery::mock(Table::class);
@@ -192,6 +227,9 @@ it('tests table method with no optional methods implemented', function () {
 =======
     $tableMock = Mockery::mock(Table::class);
 >>>>>>> c4ec0fb6 (.)
+=======
+    $tableMock = \Mockery::mock(Table::class);
+>>>>>>> edc8a701 (.)
     $tableMock->shouldReceive('recordTitleAttribute')->andReturnSelf();
     $tableMock->shouldReceive('heading')->andReturnSelf();
     $tableMock->shouldReceive('columns')->andReturnSelf();
@@ -215,6 +253,7 @@ it('tests table method with no optional methods implemented', function () {
     // Assert the result is a Table instance
     expect($result)->toBe($tableMock);
 });
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -738,3 +777,5 @@ class DummyModel extends \Illuminate\Database\Eloquent\Model
 >>>>>>> 0d3387f (.)
 =======
 >>>>>>> c4ec0fb6 (.)
+=======
+>>>>>>> edc8a701 (.)

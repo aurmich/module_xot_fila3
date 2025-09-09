@@ -102,12 +102,16 @@ Ogni blocco deve seguire questa struttura:
 
 ## Collegamenti tra versioni di blocks.md
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> edc8a701 (.)
 * [blocks.md](../../../Xot/docs/blocks.md)
 * [blocks.md](../../../User/docs/blocks.md)
 * [blocks.md](../../../UI/docs/blocks.md)
 * [blocks.md](../../../Cms/docs/blocks.md)
 * [blocks.md](../../../../Themes/One/docs/blocks.md)
 * [blocks.md](../../../../Themes/One/docs/components/blocks.md)
+<<<<<<< HEAD
 =======
 * [blocks.md](../../../Xot/project_docs/blocks.md)
 * [blocks.md](../../../User/project_docs/blocks.md)
@@ -116,4 +120,6 @@ Ogni blocco deve seguire questa struttura:
 * [blocks.md](../../../../Themes/One/project_docs/blocks.md)
 * [blocks.md](../../../../Themes/One/project_docs/components/blocks.md)
 >>>>>>> c4ec0fb6 (.)
+=======
+>>>>>>> edc8a701 (.)
 

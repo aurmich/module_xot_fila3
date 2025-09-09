@@ -3,6 +3,7 @@
 declare(strict_types=1);
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 namespace Modules\Xot\Tests\Feature\Filament;
 
 use Modules\Xot\Filament\Resources\XotBaseResource;
@@ -20,8 +21,25 @@ beforeEach(function () {
 =======
 namespace Modules\Xot\Tests\Feature\Filament\XotBaseResourceTest;
 
+=======
+>>>>>>> edc8a701 (.)
 namespace Modules\Xot\Tests\Feature\Filament;
 
+use Filament\Resources\Resource;
+use Illuminate\Foundation\Testing\RefreshDatabase;
+use Modules\Xot\Filament\Resources\XotBaseResource;
+use Modules\Xot\Tests\TestCase;
+
+uses(TestCase::class, RefreshDatabase::class);
+
+beforeEach(function () {
+    $this->resource = new class extends XotBaseResource
+    {
+        protected static ?string $model = null;
+
+        protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
+
+        protected static ?string $navigationGroup = 'Test Group';
 
 >>>>>>> c4ec0fb6 (.)
         protected static ?int $navigationSort = 1;

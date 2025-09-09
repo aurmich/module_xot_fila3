@@ -158,8 +158,12 @@ class MyResource extends XotBaseResource
 ## Collegamenti tra versioni di standard-codice.md
 * [standard-codice.md](docs/standard-codice.md)
 <<<<<<< HEAD
+<<<<<<< HEAD
 * [standard-codice.md](../../../Xot/docs/development/standard-codice.md)
 =======
 * [standard-codice.md](../../../Xot/project_docs/development/standard-codice.md)
 >>>>>>> c4ec0fb6 (.)
+=======
+* [standard-codice.md](../../../Xot/docs/development/standard-codice.md)
+>>>>>>> edc8a701 (.)
 

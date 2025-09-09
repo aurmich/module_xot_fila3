@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace Modules\Xot\Actions\Mail;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 use Webmozart\Assert\Assert;
 use Illuminate\Mail\Mailable;
 use Modules\Notify\Datas\SmtpData;
@@ -23,6 +24,16 @@ use Modules\Xot\Actions\Export\PdfByModelAction;
 use Spatie\QueueableAction\QueueableAction;
 use Webmozart\Assert\Assert;
 >>>>>>> c4ec0fb6 (.)
+=======
+use Webmozart\Assert\Assert;
+use Illuminate\Mail\Mailable;
+use Modules\Notify\Datas\SmtpData;
+use Modules\Notify\Datas\EmailData;
+use Illuminate\Support\Facades\Mail;
+use Illuminate\Database\Eloquent\Model;
+use Spatie\QueueableAction\QueueableAction;
+use Modules\Xot\Actions\Export\PdfByModelAction;
+>>>>>>> edc8a701 (.)
 
 class SendMailByRecordAction
 {
@@ -31,6 +42,7 @@ class SendMailByRecordAction
     /**
      * Invia una mail utilizzando un record come dati.
      *
+<<<<<<< HEAD
 <<<<<<< HEAD
      * @param Model  $record    Il record da utilizzare come dati per la mail
      * @param string $mailClass La classe Mailable da utilizzare
@@ -46,12 +58,21 @@ class SendMailByRecordAction
     {
 
 >>>>>>> c4ec0fb6 (.)
+=======
+     * @param Model  $record    Il record da utilizzare come dati per la mail
+     * @param string $mailClass La classe Mailable da utilizzare
+     */
+    public function execute(Model $record, string $mailClass): void
+    {
+        
+>>>>>>> edc8a701 (.)
         Assert::classExists($mailClass);
         // Expected an implementation of "Illuminate\Mail\Mailable". Got: "Modules\Performance\Mail\SchedaMail"
         // Assert::implementsInterface($mailClass, Mailable::class);
 
         // Utilizziamo il container per istanziare la classe Mailable
         // in modo che possa ricevere le dipendenze necessarie
+<<<<<<< HEAD
 <<<<<<< HEAD
         // @var Mailable $mail 
         // $mail = app($mailClass, ['record' => $record]);
@@ -67,10 +88,19 @@ class SendMailByRecordAction
         // $res=Mail::to('marco.sottana@gmail.com')->send($mail);
 
 >>>>>>> c4ec0fb6 (.)
+=======
+        // @var Mailable $mail 
+        // $mail = app($mailClass, ['record' => $record]);
+        //Mail::send($mail);
+        //dddx(Mail::to($record)->send(new $mailClass($record)));
+        //$res=Mail::to('marco.sottana@gmail.com')->send($mail);
+        
+>>>>>>> edc8a701 (.)
         // Verifica che il model abbia le proprietà/metodi necessari
         if (($record->email ?? null) === null || empty($record->email)) {
             throw new \InvalidArgumentException('Model must have email property');
         }
+<<<<<<< HEAD
 <<<<<<< HEAD
         
         if (!method_exists($record, 'option')) {
@@ -85,28 +115,42 @@ class SendMailByRecordAction
 =======
 
         if (! method_exists($record, 'option')) {
+=======
+        
+        if (!method_exists($record, 'option')) {
+>>>>>>> edc8a701 (.)
             throw new \InvalidArgumentException('Model must implement option method');
         }
-
-        if (! method_exists($record, 'myLogs')) {
+        
+        if (!method_exists($record, 'myLogs')) {
             throw new \InvalidArgumentException('Model must implement myLogs method');
         }
+<<<<<<< HEAD
 
         $data = [
 >>>>>>> c4ec0fb6 (.)
+=======
+        
+         $data = [
+>>>>>>> edc8a701 (.)
             'to' => $record->email,
             'subject' => $record->option('mail_oggetto'),
             'body_html' => $record->option('mail_testo'),
             'attachments' => [
 <<<<<<< HEAD
+<<<<<<< HEAD
                 app(PdfByModelAction::class)->execute(model: $record, out: 'path')
 =======
                 app(PdfByModelAction::class)->execute(model: $record, out: 'path'),
 >>>>>>> c4ec0fb6 (.)
+=======
+                app(PdfByModelAction::class)->execute(model: $record, out: 'path')
+>>>>>>> edc8a701 (.)
             ],
         ];
         $emailData = EmailData::from($data);
         SmtpData::make()->send($emailData);
+<<<<<<< HEAD
 <<<<<<< HEAD
         
         $record->myLogs()->create([
@@ -123,6 +167,10 @@ class SendMailByRecordAction
         /** @var \Illuminate\Database\Eloquent\Relations\Relation $logsRelation */
         $logsRelation->create([
 >>>>>>> c4ec0fb6 (.)
+=======
+        
+        $record->myLogs()->create([
+>>>>>>> edc8a701 (.)
             'act' => 'sendMail',
             'handle' => authId(),
         ]);

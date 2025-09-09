@@ -69,10 +69,15 @@ return [
 ## Collegamenti tra versioni di configuration.md
 * [configuration.md](docs/configuration.md)
 <<<<<<< HEAD
+<<<<<<< HEAD
 * [configuration.md](../../../Xot/docs/configuration.md)
 * [configuration.md](../../../Cms/docs/configuration.md)
 =======
 * [configuration.md](../../../Xot/project_docs/configuration.md)
 * [configuration.md](../../../Cms/project_docs/configuration.md)
 >>>>>>> c4ec0fb6 (.)
+=======
+* [configuration.md](../../../Xot/docs/configuration.md)
+* [configuration.md](../../../Cms/docs/configuration.md)
+>>>>>>> edc8a701 (.)
 

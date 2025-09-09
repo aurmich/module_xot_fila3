@@ -29,6 +29,7 @@ class CustomRelationAction
             Assert::isArray($data);
             if (\in_array($keyName, array_keys($data), false)) {
 <<<<<<< HEAD
+<<<<<<< HEAD
                 $res = app(UpdateAction::class)->execute($related, $data, []);
 =======
                 // Assicura che $data sia type-safe per UpdateAction
@@ -40,6 +41,9 @@ class CustomRelationAction
 
                 $res = app(UpdateAction::class)->execute($related, $typedData, []);
 >>>>>>> c4ec0fb6 (.)
+=======
+                $res = app(UpdateAction::class)->execute($related, $data, []);
+>>>>>>> edc8a701 (.)
                 $ids[] = $res->getKey();
                 $models[] = $res;
             } else {

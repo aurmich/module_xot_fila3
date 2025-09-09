@@ -88,6 +88,7 @@ Contratto per modelli che hanno profili.
 
 ## Collegamenti
 <<<<<<< HEAD
+<<<<<<< HEAD
 - [Policy PHPStan Errors](../User/docs/policy-phpstan-errors.md)
 - [Root PHPStan Errors](../../docs/troubleshooting/phpstan-errors.md)
 - [Spatie Permission Documentation](https://spatie.be/docs/laravel-permission)
@@ -96,5 +97,10 @@ Contratto per modelli che hanno profili.
 - [Root PHPStan Errors](../../project_docs/troubleshooting/phpstan-errors.md)
 - [Spatie Permission Documentation](https://spatie.be/project_docs/laravel-permission)
 >>>>>>> c4ec0fb6 (.)
+=======
+- [Policy PHPStan Errors](../User/docs/policy-phpstan-errors.md)
+- [Root PHPStan Errors](../../docs/troubleshooting/phpstan-errors.md)
+- [Spatie Permission Documentation](https://spatie.be/docs/laravel-permission)
+>>>>>>> edc8a701 (.)
 
 *Ultimo aggiornamento: 2025-01-06*

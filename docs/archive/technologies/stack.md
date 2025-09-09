@@ -23,20 +23,28 @@ Questo documento definisce lo stack tecnologico standard utilizzato in tutti i m
 - Stato locale
 - Azioni e eventi
 <<<<<<< HEAD
+<<<<<<< HEAD
 - [Documentazione Volt](https://livewire.laravel.com/docs/volt)
 =======
 - [Documentazione Volt](https://livewire.laravel.com/project_docs/volt)
 >>>>>>> c4ec0fb6 (.)
+=======
+- [Documentazione Volt](https://livewire.laravel.com/docs/volt)
+>>>>>>> edc8a701 (.)
 
 ### Laravel Folio
 - Routing basato su file
 - Pagine dinamiche
 - Middleware per pagine
 <<<<<<< HEAD
+<<<<<<< HEAD
 - [Documentazione Folio](https://laravel.com/docs/folio)
 =======
 - [Documentazione Folio](https://laravel.com/project_docs/folio)
 >>>>>>> c4ec0fb6 (.)
+=======
+- [Documentazione Folio](https://laravel.com/docs/folio)
+>>>>>>> edc8a701 (.)
 
 ## Database e Cache
 
@@ -46,10 +54,14 @@ Questo documento definisce lo stack tecnologico standard utilizzato in tutti i m
 - Indici e ottimizzazioni
 - [MySQL Docs](https://dev.mysql.com/doc/)
 <<<<<<< HEAD
+<<<<<<< HEAD
 - [PostgreSQL Docs](https://www.postgresql.org/docs/)
 =======
 - [PostgreSQL Docs](https://www.postgresql.org/project_docs/)
 >>>>>>> c4ec0fb6 (.)
+=======
+- [PostgreSQL Docs](https://www.postgresql.org/docs/)
+>>>>>>> edc8a701 (.)
 
 ### Redis
 - Cache distribuita
@@ -118,10 +130,14 @@ Questo documento definisce lo stack tecnologico standard utilizzato in tutti i m
 - Query monitoring
 - Cache inspection
 <<<<<<< HEAD
+<<<<<<< HEAD
 - [Telescope Docs](https://laravel.com/docs/telescope)
 =======
 - [Telescope Docs](https://laravel.com/project_docs/telescope)
 >>>>>>> c4ec0fb6 (.)
+=======
+- [Telescope Docs](https://laravel.com/docs/telescope)
+>>>>>>> edc8a701 (.)
 
 ## Versioni Minime Richieste
 

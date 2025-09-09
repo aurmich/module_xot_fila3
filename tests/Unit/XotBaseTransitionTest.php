@@ -2,9 +2,8 @@
 
 declare(strict_types=1);
 
-use Modules\Xot\States\Transitions\XotBaseTransition;
-use Modules\Xot\Contracts\UserContract;
 use Illuminate\Database\Eloquent\Model;
+<<<<<<< HEAD
 <<<<<<< HEAD
 use Illuminate\Foundation\Testing\RefreshDatabase;
 
@@ -12,15 +11,28 @@ uses(RefreshDatabase::class);
 =======
 
 >>>>>>> c4ec0fb6 (.)
+=======
+use Illuminate\Foundation\Testing\RefreshDatabase;
+use Modules\Xot\Contracts\UserContract;
+use Modules\Xot\States\Transitions\XotBaseTransition;
+
+uses(RefreshDatabase::class);
+>>>>>>> edc8a701 (.)
 
 describe('XotBaseTransition', function () {
     beforeEach(function () {
         // Create a concrete test transition class
 <<<<<<< HEAD
+<<<<<<< HEAD
         $this->transition = new class extends XotBaseTransition {
             public static string $name = 'test_transition';
             
 =======
+=======
+        $this->transition = new class extends XotBaseTransition
+        {
+            public static string $name = 'test_transition';
+>>>>>>> edc8a701 (.)
 
 >>>>>>> c4ec0fb6 (.)
             public function getNotificationRecipients(): array
@@ -43,11 +55,19 @@ describe('XotBaseTransition', function () {
 
         // Create a test record
 <<<<<<< HEAD
+<<<<<<< HEAD
         $this->record = new class extends Model implements UserContract {
             protected $table = 'test_users';
             protected $fillable = ['name', 'email'];
             
 =======
+=======
+        $this->record = new class extends Model implements UserContract
+        {
+            protected $table = 'test_users';
+
+            protected $fillable = ['name', 'email'];
+>>>>>>> edc8a701 (.)
 
 >>>>>>> c4ec0fb6 (.)
             // Implement UserContract methods as needed
@@ -172,6 +192,7 @@ describe('XotBaseTransition', function () {
     it('processes recipients correctly in sendNotifications', function () {
         // Mock recipients with mixed types
 <<<<<<< HEAD
+<<<<<<< HEAD
         $transition = new class extends XotBaseTransition {
             public static string $name = 'test_mixed_transition';
             
@@ -190,6 +211,45 @@ describe('XotBaseTransition', function () {
 =======
 
 >>>>>>> c4ec0fb6 (.)
+=======
+        $transition = new class extends XotBaseTransition
+        {
+            public static string $name = 'test_mixed_transition';
+
+            public function getNotificationRecipients(): array
+            {
+                return [
+                    'valid_user' => new class extends Model implements UserContract
+                    {
+                        protected $table = 'test_users';
+
+                        public function getAuthIdentifierName(): string
+                        {
+                            return 'id';
+                        }
+
+                        public function getAuthIdentifier(): mixed
+                        {
+                            return 1;
+                        }
+
+                        public function getAuthPassword(): string
+                        {
+                            return '';
+                        }
+
+                        public function getRememberToken(): ?string
+                        {
+                            return null;
+                        }
+
+                        public function setRememberToken($value): void {}
+
+                        public function getRememberTokenName(): string
+                        {
+                            return 'remember_token';
+                        }
+>>>>>>> edc8a701 (.)
                     },
                     'null_user' => null,
                 ];

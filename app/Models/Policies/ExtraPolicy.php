@@ -73,5 +73,8 @@ class ExtraPolicy extends XotBasePolicy
 }
 =======
 }
+<<<<<<< HEAD
 
 >>>>>>> c4ec0fb6 (.)
+=======
+>>>>>>> edc8a701 (.)

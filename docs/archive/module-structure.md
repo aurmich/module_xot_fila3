@@ -14,12 +14,17 @@ Per tutti i dati geografici statici (regioni, province, comuni, cap) di dimensio
 
 Per dettagli implementativi e best practice vedi:
 <<<<<<< HEAD
+<<<<<<< HEAD
 - [Geo/docs/geo-json-model.md](../../Geo/docs/geo-json-model.md)
 - [SaluteOra/docs/geo-integration.md](../../SaluteOra/docs/geo-integration.md)
 =======
 - [Geo/project_docs/geo-json-model.md](../../Geo/project_docs/geo-json-model.md)
 - [SaluteOra/project_docs/geo-integration.md](../../SaluteOra/project_docs/geo-integration.md)
 >>>>>>> c4ec0fb6 (.)
+=======
+- [Geo/docs/geo-json-model.md](../../Geo/docs/geo-json-model.md)
+- [SaluteOra/docs/geo-integration.md](../../SaluteOra/docs/geo-integration.md)
+>>>>>>> edc8a701 (.)
 - [Questa stessa doc (Xot/module-structure.md)](module-structure.md)
 
 ---

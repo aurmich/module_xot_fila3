@@ -82,15 +82,20 @@ it('uses correct namespace for view models', function () {
 
 - [PSR-4 Autoloading Standard](https://www.php-fig.org/psr/psr-4/)
 <<<<<<< HEAD
+<<<<<<< HEAD
 - [Laravel Module Development](https://laravel.com/docs/10.x/packages)
 =======
 - [Laravel Module Development](https://laravel.com/project_docs/10.x/packages)
 >>>>>>> c4ec0fb6 (.)
+=======
+- [Laravel Module Development](https://laravel.com/docs/10.x/packages)
+>>>>>>> edc8a701 (.)
 - [Best Practices](../best-practices/README.md)
 - [Architettura Modulare](../architecture.md) 
 
 ## Collegamenti tra versioni di namespaces.md
 * [namespaces.md](docs/conventions/namespaces.md)
+<<<<<<< HEAD
 <<<<<<< HEAD
 * [namespaces.md](../../../Xot/docs/conventions/namespaces.md)
 * [namespaces.md](../../../Cms/docs/conventions/namespaces.md)
@@ -98,4 +103,8 @@ it('uses correct namespace for view models', function () {
 * [namespaces.md](../../../Xot/project_docs/conventions/namespaces.md)
 * [namespaces.md](../../../Cms/project_docs/conventions/namespaces.md)
 >>>>>>> c4ec0fb6 (.)
+=======
+* [namespaces.md](../../../Xot/docs/conventions/namespaces.md)
+* [namespaces.md](../../../Cms/docs/conventions/namespaces.md)
+>>>>>>> edc8a701 (.)
 

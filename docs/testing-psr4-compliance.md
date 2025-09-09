@@ -96,7 +96,10 @@ composer dump-autoload
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> edc8a701 (.)
 ### File: `tests/Unit/HasXotTableTest.php` (2025-01-06)
 
 - **Problema**: Classi `HasTableWithXot`, `HasTableWithoutOptionalMethods`, `DummyModel` senza namespace appropriato
@@ -107,9 +110,12 @@ composer dump-autoload
   - Rimossi implements non necessari per semplificare i mock
   - Organizzazione corretta degli import
 
+<<<<<<< HEAD
 >>>>>>> 0d3387f (.)
 =======
 >>>>>>> c4ec0fb6 (.)
+=======
+>>>>>>> edc8a701 (.)
 ### File: `tests/Unit/HasExtraTraitTest.php`
 
 - **Problema**: Classe `TestExtra` senza namespace appropriato
@@ -122,10 +128,14 @@ composer dump-autoload
 ## Collegamenti
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 - [Testing Guide - Modulo SaluteMo](../../SaluteMo/docs/testing.md)
 =======
 - [Testing Guide - Modulo SaluteMo](../../SaluteMo/project_docs/testing.md)
 >>>>>>> c4ec0fb6 (.)
+=======
+- [Testing Guide - Modulo SaluteMo](../../SaluteMo/docs/testing.md)
+>>>>>>> edc8a701 (.)
 - [PHPStan Configuration](./phpstan-configuration-fixes.md)
 - [Best Practices](./best-practices-consolidated.md)
 

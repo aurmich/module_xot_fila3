@@ -2,6 +2,7 @@
 
 ## Documentazione Generica
 <<<<<<< HEAD
+<<<<<<< HEAD
 - [README](../docs/README.md) - Documentazione principale del progetto
 - [Roadmap](../docs/roadmap.md) - Piano di sviluppo
 - [Filosofia](../docs/filosofia.md) - Principi e filosofia del progetto
@@ -10,6 +11,11 @@
 - [Roadmap](../project_docs/roadmap.md) - Piano di sviluppo
 - [Filosofia](../project_docs/filosofia.md) - Principi e filosofia del progetto
 >>>>>>> c4ec0fb6 (.)
+=======
+- [README](../docs/README.md) - Documentazione principale del progetto
+- [Roadmap](../docs/roadmap.md) - Piano di sviluppo
+- [Filosofia](../docs/filosofia.md) - Principi e filosofia del progetto
+>>>>>>> edc8a701 (.)
 
 ## Documentazione Tecnica
 - [Regole di Progetto](./rules/PROMPT_RULES.md)
@@ -21,6 +27,9 @@
 
 ## Collegamenti ai Moduli
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> edc8a701 (.)
 - [Cms](../Cms/docs/README.md) - Frontend
 - [UI](../UI/docs/README.md) - Componenti
 - [User](../User/docs/README.md) - Utenti e Permessi
@@ -34,6 +43,7 @@
 - [Gdpr](../Gdpr/docs/README.md) - GDPR
 - [Job](../Job/docs/README.md) - Jobs
 - [Chart](../Chart/docs/README.md) - Grafici 
+<<<<<<< HEAD
 
 ## Collegamenti tra versioni di LINKS.md
 * [LINKS.md](../../../Xot/docs/LINKS.md)
@@ -70,20 +80,23 @@
 - [Gdpr](../Gdpr/project_docs/README.md) - GDPR
 - [Job](../Job/project_docs/README.md) - Jobs
 - [Chart](../Chart/project_docs/README.md) - Grafici 
+=======
+>>>>>>> edc8a701 (.)
 
 ## Collegamenti tra versioni di LINKS.md
-* [LINKS.md](../../../Xot/project_docs/LINKS.md)
-* [LINKS.md](../../../User/project_docs/LINKS.md)
-* [LINKS.md](../../../UI/project_docs/LINKS.md)
-* [LINKS.md](../../../Cms/project_docs/LINKS.md)
-* [LINKS.md](../../../../Themes/One/project_docs/LINKS.md)
+* [LINKS.md](../../../Xot/docs/LINKS.md)
+* [LINKS.md](../../../User/docs/LINKS.md)
+* [LINKS.md](../../../UI/docs/LINKS.md)
+* [LINKS.md](../../../Cms/docs/LINKS.md)
+* [LINKS.md](../../../../Themes/One/docs/LINKS.md)
 
 
 ## Collegamenti tra versioni di links.md
-* [links.md](../../Gdpr/project_docs/links.md)
-* [links.md](../../Notify/project_docs/links.md)
+* [links.md](../../Gdpr/docs/links.md)
+* [links.md](../../Notify/docs/links.md)
 * [links.md](ci/links.md)
 * [links.md](open_sources/links.md)
+<<<<<<< HEAD
 * [links.md](../../User/project_docs/links.md)
 * [links.md](../../User/project_docs/links.md)
 * [links.md](../../UI/project_docs/links.md)
@@ -93,4 +106,14 @@
 * [links.md](../../Cms/project_docs/links.md)
 * [links.md](../../../Themes/One/project_docs/links.md)
 >>>>>>> c4ec0fb6 (.)
+=======
+* [links.md](../../User/docs/links.md)
+* [links.md](../../User/docs/links.md)
+* [links.md](../../UI/docs/links.md)
+* [links.md](../../Lang/docs/links.md)
+* [links.md](../../Job/docs/links.md)
+* [links.md](../../Tenant/docs/it/links/links.md)
+* [links.md](../../Cms/docs/links.md)
+* [links.md](../../../Themes/One/docs/links.md)
+>>>>>>> edc8a701 (.)
 

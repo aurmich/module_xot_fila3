@@ -62,10 +62,14 @@ Dopo aver aggiunto o spostato test:
 2. Aggiornare la documentazione root `docs/testing.md` con eventuali nuove regole globali.
 3. Collegare la view con breadcrumb:
 <<<<<<< HEAD
+<<<<<<< HEAD
    - `docs/testing.md` → `Modules/Xot/docs/testing/test-placement-guidelines.md`
 =======
    - `docs/testing.md` → `Modules/Xot/project_docs/testing/test-placement-guidelines.md`
 >>>>>>> c4ec0fb6 (.)
+=======
+   - `docs/testing.md` → `Modules/Xot/docs/testing/test-placement-guidelines.md`
+>>>>>>> edc8a701 (.)
    - Questo file → `docs/testing.md`
 
 ## 5. Checklist PR

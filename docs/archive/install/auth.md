@@ -116,6 +116,7 @@ return [
 
 ## Collegamenti tra versioni di auth.md
 <<<<<<< HEAD
+<<<<<<< HEAD
 * [auth.md](../../../Xot/docs/install/auth.md)
 * [auth.md](../../../User/docs/lang/en/auth.md)
 * [auth.md](../../../Tenant/docs/it/config/auth.md)
@@ -124,6 +125,11 @@ return [
 * [auth.md](../../../User/project_docs/lang/en/auth.md)
 * [auth.md](../../../Tenant/project_docs/it/config/auth.md)
 >>>>>>> c4ec0fb6 (.)
+=======
+* [auth.md](../../../Xot/docs/install/auth.md)
+* [auth.md](../../../User/docs/lang/en/auth.md)
+* [auth.md](../../../Tenant/docs/it/config/auth.md)
+>>>>>>> edc8a701 (.)
 
 
 ### Versione Incoming

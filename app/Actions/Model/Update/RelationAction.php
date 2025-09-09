@@ -15,6 +15,7 @@ class RelationAction
 
     /**
 <<<<<<< HEAD
+<<<<<<< HEAD
      * Undocumented function.
      */
     public function execute(Model $model, array $data): void
@@ -36,6 +37,13 @@ class RelationAction
 
         $relations = app(FilterRelationsAction::class)->execute($model, $typedData);
 >>>>>>> c4ec0fb6 (.)
+=======
+     * Undocumented function.
+     */
+    public function execute(Model $model, array $data): void
+    {
+        $relations = app(FilterRelationsAction::class)->execute($model, $data);
+>>>>>>> edc8a701 (.)
         /*
         if ('Operation' === class_basename($model)) {
             dddx([
@@ -51,10 +59,14 @@ class RelationAction
             $relationClass = get_class($relation);
             $relationshipType = class_basename($relationClass);
 <<<<<<< HEAD
+<<<<<<< HEAD
             
 =======
 
 >>>>>>> c4ec0fb6 (.)
+=======
+            
+>>>>>>> edc8a701 (.)
             $actionClass = __NAMESPACE__.'\\'.$relationshipType.'Action';
             Assert::object($action = app($actionClass));
 

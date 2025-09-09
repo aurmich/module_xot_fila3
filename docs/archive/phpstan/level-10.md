@@ -517,6 +517,9 @@
 
 ## Collegamenti tra versioni di level_10.md
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> edc8a701 (.)
 * [level_10.md](laravel/Modules/Gdpr/docs/phpstan/level_10.md)
 * [level_10.md](laravel/Modules/Notify/docs/phpstan/level_10.md)
 * [level_10.md](laravel/Modules/Xot/docs/phpstan/level_10.md)
@@ -527,6 +530,7 @@
 * [level_10.md](laravel/Modules/Media/docs/phpstan/level_10.md)
 * [level_10.md](laravel/Modules/Tenant/docs/phpstan/level_10.md)
 * [level_10.md](laravel/Modules/Activity/docs/phpstan/level_10.md)
+<<<<<<< HEAD
 =======
 * [level_10.md](laravel/Modules/Gdpr/project_docs/phpstan/level_10.md)
 * [level_10.md](laravel/Modules/Notify/project_docs/phpstan/level_10.md)
@@ -539,4 +543,6 @@
 * [level_10.md](laravel/Modules/Tenant/project_docs/phpstan/level_10.md)
 * [level_10.md](laravel/Modules/Activity/project_docs/phpstan/level_10.md)
 >>>>>>> c4ec0fb6 (.)
+=======
+>>>>>>> edc8a701 (.)
 

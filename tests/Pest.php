@@ -3,12 +3,16 @@
 declare(strict_types=1);
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 use Modules\Xot\Tests\TestCase;
 =======
 namespace Modules\Xot\Tests\Pest;
 
 
 >>>>>>> c4ec0fb6 (.)
+=======
+use Modules\Xot\Tests\TestCase;
+>>>>>>> edc8a701 (.)
 
 /*
 |--------------------------------------------------------------------------
@@ -21,10 +25,14 @@ namespace Modules\Xot\Tests\Pest;
 */
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 pest()->extend(TestCase::class)
 =======
 
 >>>>>>> c4ec0fb6 (.)
+=======
+pest()->extend(TestCase::class)
+>>>>>>> edc8a701 (.)
     ->in('Feature', 'Unit');
 
 /*
@@ -34,10 +42,14 @@ pest()->extend(TestCase::class)
 |
 | Qui puoi definire aspettative globali per il modulo Xot.
 <<<<<<< HEAD
+<<<<<<< HEAD
 | Quando definisci here expectation globali, saranno disponibili 
 =======
 
 >>>>>>> c4ec0fb6 (.)
+=======
+| Quando definisci here expectation globali, saranno disponibili
+>>>>>>> edc8a701 (.)
 | in tutti i test del modulo.
 |
 */
@@ -59,7 +71,11 @@ pest()->extend(TestCase::class)
 // function something() {
 //     // ...
 <<<<<<< HEAD
+<<<<<<< HEAD
 // } 
 =======
 
 >>>>>>> c4ec0fb6 (.)
+=======
+// }
+>>>>>>> edc8a701 (.)

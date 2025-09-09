@@ -38,12 +38,17 @@ return [
 
 ## Collegamenti tra versioni di metatag.md
 <<<<<<< HEAD
+<<<<<<< HEAD
 * [metatag.md](../../../Xot/docs/install/metatag.md)
 * [metatag.md](../../../Tenant/docs/it/config/metatag.md)
 =======
 * [metatag.md](../../../Xot/project_docs/install/metatag.md)
 * [metatag.md](../../../Tenant/project_docs/it/config/metatag.md)
 >>>>>>> c4ec0fb6 (.)
+=======
+* [metatag.md](../../../Xot/docs/install/metatag.md)
+* [metatag.md](../../../Tenant/docs/it/config/metatag.md)
+>>>>>>> edc8a701 (.)
 
 
 ### Versione Incoming

@@ -60,6 +60,7 @@ trait HasXotTable
         $actions = [];
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         $actions['create'] = Tables\Actions\CreateAction::make();
 =======
         $resource = $this->getResource();
@@ -71,6 +72,9 @@ trait HasXotTable
                 ->visible(fn (?Model $record): bool => $resource::canCreate());
         }
 >>>>>>> c4ec0fb6 (.)
+=======
+        $actions['create'] = Tables\Actions\CreateAction::make();
+>>>>>>> edc8a701 (.)
 
         if ($this->shouldShowAssociateAction()) {
             $actions['associate'] = Tables\Actions\AssociateAction::make()

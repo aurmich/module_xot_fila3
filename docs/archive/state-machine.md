@@ -10,9 +10,13 @@
 
 ## Collegamenti
 <<<<<<< HEAD
+<<<<<<< HEAD
 - [../../saluteora/docs/state-machine.md](../../saluteora/docs/state-machine.md)
 =======
 - [../../saluteora/project_docs/state-machine.md](../../saluteora/project_docs/state-machine.md)
 >>>>>>> c4ec0fb6 (.)
+=======
+- [../../saluteora/docs/state-machine.md](../../saluteora/docs/state-machine.md)
+>>>>>>> edc8a701 (.)
 - [../../.windsurf/rules/filament-state-transitions.mdc](../../.windsurf/rules/filament-state-transitions.mdc)
 - [../../.cursor/rules/filament-state-transitions.mdc](../../.cursor/rules/filament-state-transitions.mdc)

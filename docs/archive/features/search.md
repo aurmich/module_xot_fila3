@@ -22,12 +22,17 @@ ${cat /mnt/f/var/www/quaeris/laravel/Modules/Xot/_docs/Content_Selection_and_Hig
 ## Collegamenti tra versioni di search.md
 * [search.md](docs/rules/search.md)
 <<<<<<< HEAD
+<<<<<<< HEAD
 * [search.md](../../../Xot/docs/features/search.md)
 * [search.md](../../../Xot/docs/rules/search.md)
 =======
 * [search.md](../../../Xot/project_docs/features/search.md)
 * [search.md](../../../Xot/project_docs/rules/search.md)
 >>>>>>> c4ec0fb6 (.)
+=======
+* [search.md](../../../Xot/docs/features/search.md)
+* [search.md](../../../Xot/docs/rules/search.md)
+>>>>>>> edc8a701 (.)
 
 
 ### Versione Incoming

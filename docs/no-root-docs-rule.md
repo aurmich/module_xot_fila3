@@ -19,16 +19,22 @@
 
 ## DOVE SPOSTARE LA DOCUMENTAZIONE:
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> edc8a701 (.)
 - **Traduzioni** → `Modules/Xot/docs/` (modulo che gestisce le traduzioni)
 - **Frontend** → `Modules/Cms/docs/` (modulo frontend)  
 - **Audit generali** → `Modules/Xot/docs/` (modulo base)
 - **Modulo specifico** → `Modules/{NomeModulo}/docs/`
+<<<<<<< HEAD
 =======
 - **Traduzioni** → `Modules/Xot/project_docs/` (modulo che gestisce le traduzioni)
 - **Frontend** → `Modules/Cms/project_docs/` (modulo frontend)  
 - **Audit generali** → `Modules/Xot/project_docs/` (modulo base)
 - **Modulo specifico** → `Modules/{NomeModulo}/project_docs/`
 >>>>>>> c4ec0fb6 (.)
+=======
+>>>>>>> edc8a701 (.)
 
 ## PRIORITÀ: MASSIMA
 Questa regola ha priorità assoluta su qualsiasi altra considerazione.

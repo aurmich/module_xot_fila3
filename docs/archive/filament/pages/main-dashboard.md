@@ -59,6 +59,7 @@ use Modules\Xot\Filament\Pages\MainDashboard;
 ## Link Correlati
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 - [Documentazione Filament](../../../docs/filament/index.md)
 - [Sistema di Autorizzazioni](../../../docs/auth/index.md)
 - [Gestione Ruoli](../../../docs/auth/roles.md) 
@@ -67,3 +68,8 @@ use Modules\Xot\Filament\Pages\MainDashboard;
 - [Sistema di Autorizzazioni](../../../project_docs/auth/index.md)
 - [Gestione Ruoli](../../../project_docs/auth/roles.md) 
 >>>>>>> c4ec0fb6 (.)
+=======
+- [Documentazione Filament](../../../docs/filament/index.md)
+- [Sistema di Autorizzazioni](../../../docs/auth/index.md)
+- [Gestione Ruoli](../../../docs/auth/roles.md) 
+>>>>>>> edc8a701 (.)

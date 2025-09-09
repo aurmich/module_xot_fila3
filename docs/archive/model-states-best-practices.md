@@ -10,9 +10,14 @@
   - [ ] La documentazione delle transizioni specifica i parametri richiesti
 - **Collegamenti**:
 <<<<<<< HEAD
+<<<<<<< HEAD
   - [Errori comuni nelle transizioni custom (SaluteOra)](../../SaluteOra/docs/model-states-errors.md)
   - [README.md centrale](../../../docs/README.md) 
 =======
   - [Errori comuni nelle transizioni custom (SaluteOra)](../../SaluteOra/project_docs/model-states-errors.md)
   - [README.md centrale](../../../project_docs/README.md) 
 >>>>>>> c4ec0fb6 (.)
+=======
+  - [Errori comuni nelle transizioni custom (SaluteOra)](../../SaluteOra/docs/model-states-errors.md)
+  - [README.md centrale](../../../docs/README.md) 
+>>>>>>> edc8a701 (.)

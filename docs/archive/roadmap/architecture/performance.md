@@ -48,6 +48,9 @@
 - [Performance Guidelines](../../performance/optimization.md) 
 ## Collegamenti tra versioni di performance.md
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> edc8a701 (.)
 * [performance.md](laravel/vendor/spatie/laravel-data/docs/advanced-usage/performance.md)
 * [performance.md](../../../Xot/docs/features/performance.md)
 * [performance.md](../../../Xot/docs/packages/performance.md)
@@ -56,6 +59,7 @@
 * [performance.md](../../../Lang/docs/packages/performance.md)
 * [performance.md](../../../Job/docs/packages/performance.md)
 * [performance.md](../../../Cms/docs/frontoffice/performance.md)
+<<<<<<< HEAD
 =======
 * [performance.md](laravel/vendor/spatie/laravel-data/project_docs/advanced-usage/performance.md)
 * [performance.md](../../../Xot/project_docs/features/performance.md)
@@ -66,4 +70,6 @@
 * [performance.md](../../../Job/project_docs/packages/performance.md)
 * [performance.md](../../../Cms/project_docs/frontoffice/performance.md)
 >>>>>>> c4ec0fb6 (.)
+=======
+>>>>>>> edc8a701 (.)
 

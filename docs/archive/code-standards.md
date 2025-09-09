@@ -229,7 +229,11 @@ public function getTableActions(): array
 ## Collegamenti alla Documentazione Specifica
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 - [Standard di Codice nel Progetto](../../../../docs/standard-codice.md) 
 =======
 - [Standard di Codice nel Progetto](../../../../project_docs/standard-codice.md) 
 >>>>>>> c4ec0fb6 (.)
+=======
+- [Standard di Codice nel Progetto](../../../../docs/standard-codice.md) 
+>>>>>>> edc8a701 (.)

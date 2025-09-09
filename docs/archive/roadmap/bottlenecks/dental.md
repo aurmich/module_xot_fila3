@@ -213,8 +213,12 @@
 * [dental.md](docs/moduli/dental.md)
 * [dental.md](docs/roadmap/moduli/dental.md)
 <<<<<<< HEAD
+<<<<<<< HEAD
 * [dental.md](../../../Xot/docs/roadmap/bottlenecks/dental.md)
 =======
 * [dental.md](../../../Xot/project_docs/roadmap/bottlenecks/dental.md)
 >>>>>>> c4ec0fb6 (.)
+=======
+* [dental.md](../../../Xot/docs/roadmap/bottlenecks/dental.md)
+>>>>>>> edc8a701 (.)
 

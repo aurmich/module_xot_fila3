@@ -138,9 +138,13 @@ php artisan config:cache
 - [TenantService.php](/laravel/Modules/Tenant/app/Services/TenantService.php)
 - [xra.php](/laravel/config/localhost/xra.php)
 <<<<<<< HEAD
+<<<<<<< HEAD
 - [Documentazione Root](/docs/env-config-loading-issue.md)
 =======
 - [Documentazione Root](/project_docs/env-config-loading-issue.md)
 >>>>>>> c4ec0fb6 (.)
+=======
+- [Documentazione Root](/docs/env-config-loading-issue.md)
+>>>>>>> edc8a701 (.)
 
 *Ultimo aggiornamento: 2025-01-06* 

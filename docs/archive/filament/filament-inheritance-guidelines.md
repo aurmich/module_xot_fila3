@@ -93,6 +93,7 @@ public function getNavigationLabel(): string // Non static!
 ## Collegamenti
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 - [Documentazione di Filament](https://filamentphp.com/docs/3.x/panels/pages)
 - [Principi di Ereditarietà](/var/www/html/base_saluteora/laravel/Modules/Xot/docs/class_inheritance_principles.md)
 - [XotBasePage](/var/www/html/base_saluteora/laravel/Modules/Xot/docs/filament/pages/xotbasepage.md)
@@ -101,3 +102,8 @@ public function getNavigationLabel(): string // Non static!
 - [Principi di Ereditarietà](/var/www/html/base_saluteora/laravel/Modules/Xot/project_docs/class_inheritance_principles.md)
 - [XotBasePage](/var/www/html/base_saluteora/laravel/Modules/Xot/project_docs/filament/pages/xotbasepage.md)
 >>>>>>> c4ec0fb6 (.)
+=======
+- [Documentazione di Filament](https://filamentphp.com/docs/3.x/panels/pages)
+- [Principi di Ereditarietà](/var/www/html/base_saluteora/laravel/Modules/Xot/docs/class_inheritance_principles.md)
+- [XotBasePage](/var/www/html/base_saluteora/laravel/Modules/Xot/docs/filament/pages/xotbasepage.md)
+>>>>>>> edc8a701 (.)

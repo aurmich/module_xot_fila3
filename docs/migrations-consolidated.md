@@ -19,10 +19,14 @@ Questo documento sostituisce e consolida **26+ file migrazioni duplicati** trova
 
 ### ✅ Unica Fonte di Verità
 <<<<<<< HEAD
+<<<<<<< HEAD
 - **Questo file**: `/laravel/Modules/Xot/docs/migrations-consolidated.md`
 =======
 - **Questo file**: `/laravel/Modules/Xot/project_docs/migrations-consolidated.md`
 >>>>>>> c4ec0fb6 (.)
+=======
+- **Questo file**: `/laravel/Modules/Xot/docs/migrations-consolidated.md`
+>>>>>>> edc8a701 (.)
 - **File migrazione**: Solo nei singoli moduli (codice, non docs)
 
 ## Principi Fondamentali Universali
@@ -421,6 +425,7 @@ Tutti questi file sono DUPLICATI e vanno eliminati:
 ```bash
 # Activity
 <<<<<<< HEAD
+<<<<<<< HEAD
 rm Modules/Activity/docs/database/migrations.md
 
 # Cms
@@ -450,43 +455,54 @@ rm Modules/Notify/docs/migrations_changelog.md
 rm Modules/SaluteMo/docs/database/migrations.md
 =======
 rm Modules/Activity/project_docs/database/migrations.md
+=======
+rm Modules/Activity/docs/database/migrations.md
+>>>>>>> edc8a701 (.)
 
 # Cms
-rm Modules/Cms/project_docs/migration.md
+rm Modules/Cms/docs/migration.md
 
 # Gdpr
-rm Modules/Gdpr/project_docs/migrations.md
+rm Modules/Gdpr/docs/migrations.md
 
 # Geo
-rm Modules/Geo/project_docs/migration-guide.md
-rm Modules/Geo/project_docs/migration-naming-pattern.md
-rm Modules/Geo/project_docs/migration_guide.md
-rm Modules/Geo/project_docs/migration_naming_pattern.md
+rm Modules/Geo/docs/migration-guide.md
+rm Modules/Geo/docs/migration-naming-pattern.md
+rm Modules/Geo/docs/migration_guide.md
+rm Modules/Geo/docs/migration_naming_pattern.md
 
 # Lang
-rm Modules/Lang/project_docs/migration_best_practices.md
-rm Modules/Lang/project_docs/migration_corrections_summary.md
-rm Modules/Lang/project_docs/migration_patterns.md
+rm Modules/Lang/docs/migration_best_practices.md
+rm Modules/Lang/docs/migration_corrections_summary.md
+rm Modules/Lang/docs/migration_patterns.md
 
 # Notify
-rm Modules/Notify/project_docs/migration_changes.md
-rm Modules/Notify/project_docs/migration_rules.md
-rm Modules/Notify/project_docs/migrations.md
-rm Modules/Notify/project_docs/migrations_changelog.md
+rm Modules/Notify/docs/migration_changes.md
+rm Modules/Notify/docs/migration_rules.md
+rm Modules/Notify/docs/migrations.md
+rm Modules/Notify/docs/migrations_changelog.md
 
 # SaluteMo
+<<<<<<< HEAD
 rm Modules/SaluteMo/project_docs/database/migrations.md
 >>>>>>> c4ec0fb6 (.)
+=======
+rm Modules/SaluteMo/docs/database/migrations.md
+>>>>>>> edc8a701 (.)
 
 # E tutti gli altri file duplicati...
 ```
 
 ### Mantenere Solo
 <<<<<<< HEAD
+<<<<<<< HEAD
 - **Questo file**: `/laravel/Modules/Xot/docs/migrations-consolidated.md`
 =======
 - **Questo file**: `/laravel/Modules/Xot/project_docs/migrations-consolidated.md`
 >>>>>>> c4ec0fb6 (.)
+=======
+- **Questo file**: `/laravel/Modules/Xot/docs/migrations-consolidated.md`
+>>>>>>> edc8a701 (.)
 - **File migrazione**: Solo codice nei singoli moduli
 
 ## Troubleshooting Universale

@@ -42,16 +42,22 @@ use Illuminate\Database\Eloquent\Relations\MorphMany;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> b6f6b143 (.)
 =======
+=======
+>>>>>>> edc8a701 (.)
 use Spatie\Permission\Exceptions\GuardDoesNotMatch;
 use Spatie\Permission\Exceptions\PermissionDoesNotExist;
 use Spatie\Permission\Exceptions\RoleAlreadyExists;
 use Spatie\Permission\Exceptions\RoleDoesNotExist;
 
+<<<<<<< HEAD
 >>>>>>> 0d3387f (.)
 =======
 >>>>>>> c4ec0fb6 (.)
+=======
+>>>>>>> edc8a701 (.)
 
 // use Filament\Models\Contracts\HasTenants;
 
@@ -219,6 +225,7 @@ interface UserContract extends Authenticatable, Authorizable, CanResetPassword, 
      *
      */
     //public function consents(): MorphMany;
+<<<<<<< HEAD
     
 <<<<<<< HEAD
 >>>>>>> b6f6b143 (.)
@@ -226,6 +233,8 @@ interface UserContract extends Authenticatable, Authorizable, CanResetPassword, 
      *
      */
     //public function consents(): MorphMany;
+=======
+>>>>>>> edc8a701 (.)
 
     /**
      * Determine if the role may perform the given permission.
@@ -235,7 +244,10 @@ interface UserContract extends Authenticatable, Authorizable, CanResetPassword, 
      * @throws PermissionDoesNotExist|GuardDoesNotMatch
      */
     public function hasPermissionTo($permission, ?string $guardName = null): bool;
+<<<<<<< HEAD
 >>>>>>> 0d3387f (.)
 =======
 >>>>>>> c4ec0fb6 (.)
+=======
+>>>>>>> edc8a701 (.)
 }

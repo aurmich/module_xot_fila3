@@ -95,10 +95,15 @@ public function mount(): void
 
 ## Related Documentation
 <<<<<<< HEAD
+<<<<<<< HEAD
 - [Laravel CSRF Protection](https://laravel.com/docs/csrf)
 - [Livewire Forms](https://laravel-livewire.com/docs/2.x/input)
 =======
 - [Laravel CSRF Protection](https://laravel.com/project_docs/csrf)
 - [Livewire Forms](https://laravel-livewire.com/project_docs/2.x/input)
 >>>>>>> c4ec0fb6 (.)
+=======
+- [Laravel CSRF Protection](https://laravel.com/docs/csrf)
+- [Livewire Forms](https://laravel-livewire.com/docs/2.x/input)
+>>>>>>> edc8a701 (.)
 - [Xot Widget Development](xot-widgets.md)

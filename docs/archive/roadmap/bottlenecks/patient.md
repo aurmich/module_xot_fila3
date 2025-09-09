@@ -229,8 +229,12 @@
 * [patient.md](docs/moduli/patient.md)
 * [patient.md](docs/roadmap/moduli/patient.md)
 <<<<<<< HEAD
+<<<<<<< HEAD
 * [patient.md](../../../Xot/docs/roadmap/bottlenecks/patient.md)
 =======
 * [patient.md](../../../Xot/project_docs/roadmap/bottlenecks/patient.md)
 >>>>>>> c4ec0fb6 (.)
+=======
+* [patient.md](../../../Xot/docs/roadmap/bottlenecks/patient.md)
+>>>>>>> edc8a701 (.)
 

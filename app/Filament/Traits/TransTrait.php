@@ -19,6 +19,7 @@ trait TransTrait
      */
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> c4ec0fb6 (.)
     public static function trans(string $key, bool $exceptionIfNotExist = false): string
@@ -36,6 +37,13 @@ trait TransTrait
 >>>>>>> 0d3387f (.)
 =======
 >>>>>>> c4ec0fb6 (.)
+=======
+    public static function trans(string $key, bool $exceptionIfNotExist = false, array $params = []): string
+    {
+        $tmp = static::getKeyTrans($key);
+        /** @var array|\Illuminate\Contracts\Translation\Translator|string $res */
+        $res = trans($tmp, $params);
+>>>>>>> edc8a701 (.)
 
         if (is_string($res)) {
             if ($exceptionIfNotExist && $res === $tmp) {
