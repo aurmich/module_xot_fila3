@@ -2,7 +2,13 @@
 
 declare(strict_types=1);
 
+<<<<<<< HEAD
 use Modules\Xot\Tests\TestCase;
+=======
+namespace Modules\Xot\Tests\Pest;
+
+
+>>>>>>> c4ec0fb6 (.)
 
 /*
 |--------------------------------------------------------------------------
@@ -14,7 +20,11 @@ use Modules\Xot\Tests\TestCase;
 |
 */
 
+<<<<<<< HEAD
 pest()->extend(TestCase::class)
+=======
+
+>>>>>>> c4ec0fb6 (.)
     ->in('Feature', 'Unit');
 
 /*
@@ -23,7 +33,11 @@ pest()->extend(TestCase::class)
 |--------------------------------------------------------------------------
 |
 | Qui puoi definire aspettative globali per il modulo Xot.
+<<<<<<< HEAD
 | Quando definisci here expectation globali, saranno disponibili 
+=======
+
+>>>>>>> c4ec0fb6 (.)
 | in tutti i test del modulo.
 |
 */
@@ -44,4 +58,8 @@ pest()->extend(TestCase::class)
 
 // function something() {
 //     // ...
+<<<<<<< HEAD
 // } 
+=======
+
+>>>>>>> c4ec0fb6 (.)

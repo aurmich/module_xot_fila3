@@ -23,7 +23,11 @@ Il nome specifico del progetto (es: "il progetto") NON DEVE MAI apparire nella d
 
 ### Dove Usare il Nome del Progetto
 ✅ CORRETTO:
+<<<<<<< HEAD
 - `/docs/` (cartella root del progetto)
+=======
+- `/project_docs/` (cartella root del progetto)
+>>>>>>> c4ec0fb6 (.)
 - `README.md` principale
 - File di configurazione specifici del progetto
 - Documentazione di deployment

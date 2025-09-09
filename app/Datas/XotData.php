@@ -310,7 +310,10 @@ class XotData extends Data implements Wireable
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> c4ec0fb6 (.)
     public function getPubThemePublicPath(string $key = ''): string
     {
         $path = base_path('themes/'.$this->pub_theme.'/'.$key);
@@ -323,7 +326,10 @@ class XotData extends Data implements Wireable
         return $path;
     }
 
+<<<<<<< HEAD
 >>>>>>> 0d3387f (.)
+=======
+>>>>>>> c4ec0fb6 (.)
     /**
      * @return class-string<Model&UserContract>
      */

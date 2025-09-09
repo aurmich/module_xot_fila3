@@ -57,6 +57,7 @@ aurmich/dev
 aurmich/dev
 
 ## Collegamenti tra versioni di level_9.md
+<<<<<<< HEAD
 * [level_9.md](laravel/Modules/Chart/docs/phpstan/level_9.md)
 * [level_9.md](laravel/Modules/Reporting/docs/phpstan/level_9.md)
 * [level_9.md](laravel/Modules/Gdpr/docs/phpstan/level_9.md)
@@ -72,4 +73,21 @@ aurmich/dev
 * [level_9.md](laravel/Modules/Activity/docs/phpstan/level_9.md)
 * [level_9.md](laravel/Modules/Patient/docs/phpstan/level_9.md)
 * [level_9.md](laravel/Modules/Cms/docs/phpstan/level_9.md)
+=======
+* [level_9.md](laravel/Modules/Chart/project_docs/phpstan/level_9.md)
+* [level_9.md](laravel/Modules/Reporting/project_docs/phpstan/level_9.md)
+* [level_9.md](laravel/Modules/Gdpr/project_docs/phpstan/level_9.md)
+* [level_9.md](laravel/Modules/Notify/project_docs/phpstan/level_9.md)
+* [level_9.md](laravel/Modules/Xot/project_docs/phpstan/level_9.md)
+* [level_9.md](laravel/Modules/Dental/project_docs/phpstan/level_9.md)
+* [level_9.md](laravel/Modules/User/project_docs/phpstan/level_9.md)
+* [level_9.md](laravel/Modules/UI/project_docs/phpstan/level_9.md)
+* [level_9.md](laravel/Modules/Lang/project_docs/phpstan/level_9.md)
+* [level_9.md](laravel/Modules/Job/project_docs/phpstan/level_9.md)
+* [level_9.md](laravel/Modules/Media/project_docs/phpstan/level_9.md)
+* [level_9.md](laravel/Modules/Tenant/project_docs/phpstan/level_9.md)
+* [level_9.md](laravel/Modules/Activity/project_docs/phpstan/level_9.md)
+* [level_9.md](laravel/Modules/Patient/project_docs/phpstan/level_9.md)
+* [level_9.md](laravel/Modules/Cms/project_docs/phpstan/level_9.md)
+>>>>>>> c4ec0fb6 (.)
 

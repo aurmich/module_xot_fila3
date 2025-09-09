@@ -154,10 +154,17 @@ performance::admin
 
 ## Collegamenti
 
+<<<<<<< HEAD
 - [PDND Redirect Loop Fix](../../Pdnd/docs/redirect_loop_fix.md)
 - [XotBasePanelProvider](xotbasepanelprovider.md)
 - [User Role Management](../../User/docs/console_commands/README.md)
 - [Filament Best Practices](../../../docs/FILAMENT-BEST-PRACTICES.md)
+=======
+- [PDND Redirect Loop Fix](../../Pdnd/project_docs/redirect_loop_fix.md)
+- [XotBasePanelProvider](xotbasepanelprovider.md)
+- [User Role Management](../../User/project_docs/console_commands/README.md)
+- [Filament Best Practices](../../../project_docs/FILAMENT-BEST-PRACTICES.md)
+>>>>>>> c4ec0fb6 (.)
 
 ## Aggiornamenti
 

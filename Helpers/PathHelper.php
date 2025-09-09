@@ -8,7 +8,11 @@ use Illuminate\Support\Facades\File;
 use Illuminate\Support\Str;
 
 /**
+<<<<<<< HEAD
  * Helper per la gestione dei percorsi nel progetto SaluteOra.
+=======
+ * Helper per la gestione dei percorsi nel progetto TechPlanner.
+>>>>>>> c4ec0fb6 (.)
  */
 class PathHelper
 {
@@ -17,21 +21,33 @@ class PathHelper
      *
      * @var string
      */
+<<<<<<< HEAD
     public static string $projectBasePath = '/var/www/html/saluteora';
+=======
+    public static string $projectBasePath = '/var/www/html/_bases/base_techplanner_fila3_mono';
+>>>>>>> c4ec0fb6 (.)
 
     /**
      * Percorso base di Laravel.
      *
      * @var string
      */
+<<<<<<< HEAD
     public static string $laravelBasePath = '/var/www/html/saluteora/laravel';
+=======
+    public static string $laravelBasePath = '/var/www/html/_bases/base_techplanner_fila3_mono/laravel';
+>>>>>>> c4ec0fb6 (.)
 
     /**
      * Percorso base dei moduli.
      *
      * @var string
      */
+<<<<<<< HEAD
     public static string $modulesBasePath = '/var/www/html/saluteora/laravel/Modules';
+=======
+    public static string $modulesBasePath = '/var/www/html/_bases/base_techplanner_fila3_mono/laravel/Modules';
+>>>>>>> c4ec0fb6 (.)
 
     /**
      * Ottiene il percorso completo di un modulo.
@@ -130,12 +146,21 @@ class PathHelper
     public static function isValidPath(string $path): bool
     {
         // Verifica che il percorso contenga /laravel/Modules/ e non solo /Modules/
+<<<<<<< HEAD
         if (Str::contains($path, '/saluteora/Modules/')) {
             return false;
         }
 
         // Verifica che il percorso contenga /laravel/ dopo /saluteora/
         if (Str::contains($path, '/saluteora/') && !Str::contains($path, '/saluteora/laravel/')) {
+=======
+        if (Str::contains($path, '/base_techplanner_fila3_mono/Modules/')) {
+            return false;
+        }
+
+        // Verifica che il percorso contenga /laravel/ dopo /base_techplanner_fila3_mono/
+        if (Str::contains($path, '/base_techplanner_fila3_mono/') && !Str::contains($path, '/base_techplanner_fila3_mono/laravel/')) {
+>>>>>>> c4ec0fb6 (.)
             return false;
         }
 
@@ -150,6 +175,7 @@ class PathHelper
      */
     public static function correctPath(string $path): string
     {
+<<<<<<< HEAD
         // Corregge /var/www/html/saluteora/Modules/ in /var/www/html/saluteora/laravel/Modules/
         if (Str::contains($path, '/saluteora/Modules/')) {
             return str_replace('/saluteora/Modules/', '/saluteora/laravel/Modules/', $path);
@@ -158,6 +184,16 @@ class PathHelper
         // Corregge /var/www/html/Modules/ in /var/www/html/saluteora/laravel/Modules/
         if (Str::contains($path, '/var/www/html/Modules/')) {
             return str_replace('/var/www/html/Modules/', '/var/www/html/saluteora/laravel/Modules/', $path);
+=======
+        // Corregge /var/www/html/base_techplanner_fila3_mono/Modules/ in /var/www/html/base_techplanner_fila3_mono/laravel/Modules/
+        if (Str::contains($path, '/base_techplanner_fila3_mono/Modules/')) {
+            return str_replace('/base_techplanner_fila3_mono/Modules/', '/base_techplanner_fila3_mono/laravel/Modules/', $path);
+        }
+
+        // Corregge /var/www/html/Modules/ in /var/www/html/base_techplanner_fila3_mono/laravel/Modules/
+        if (Str::contains($path, '/var/www/html/Modules/')) {
+            return str_replace('/var/www/html/Modules/', '/var/www/html/base_techplanner_fila3_mono/laravel/Modules/', $path);
+>>>>>>> c4ec0fb6 (.)
         }
 
         return $path;

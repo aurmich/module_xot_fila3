@@ -4,8 +4,13 @@ declare(strict_types=1);
 
 namespace Modules\Xot\Models\Policies;
 
+<<<<<<< HEAD
 use Modules\Xot\Models\Extra;
 use Modules\Xot\Contracts\UserContract;
+=======
+use Modules\Xot\Contracts\UserContract;
+use Modules\Xot\Models\Extra;
+>>>>>>> c4ec0fb6 (.)
 
 class ExtraPolicy extends XotBasePolicy
 {
@@ -64,4 +69,9 @@ class ExtraPolicy extends XotBasePolicy
     {
         return $user->hasPermissionTo('extra.forceDelete');
     }
+<<<<<<< HEAD
 }
+=======
+}
+
+>>>>>>> c4ec0fb6 (.)

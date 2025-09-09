@@ -1,5 +1,9 @@
 Download the latest cacert.pem file from
+<<<<<<< HEAD
 https://curl.se/docs/caextract.html
+=======
+https://curl.se/project_docs/caextract.html
+>>>>>>> c4ec0fb6 (.)
 
 Update your php.ini file:  
 Locate your php.ini file and find the line ;curl.cainfo =.  

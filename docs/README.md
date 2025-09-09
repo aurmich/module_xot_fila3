@@ -17,6 +17,15 @@ Modulo base del framework Laraxot con funzionalità core e best practices.
 - Base classes per tutti i moduli
 - Service providers centralizzati
 - Convenzioni e standard
+<<<<<<< HEAD
+=======
+- Actions per operazioni PDF e business logic
+
+### Actions
+- [GetPdfContentByRecordAction](actions/get-pdf-content-by-record-action.md) - Generazione contenuto PDF da record Eloquent
+- [ContentPdfAction](archive/actions/content-pdf-action.md) - Generazione PDF da HTML/viste
+- [StreamDownloadPdfAction](archive/actions/pdf-stream-download-action.md) - Download PDF diretto
+>>>>>>> c4ec0fb6 (.)
 
 ## Installation
 ```bash
@@ -38,6 +47,10 @@ Per accedere alla documentazione dettagliata originale, vedere il backup in:
 - **Documentation**: Documentazione essenziale
 
 ## Links
+<<<<<<< HEAD
+=======
+- [Root Documentation](../../../project_docs/)
+>>>>>>> c4ec0fb6 (.)
 - [Root Documentation](../../../docs/)
 - [SaluteOra Module](../SaluteOra/docs/)
 - [Original Documentation Backup](../../../docs-consolidation-backup-*/Xot-docs-original/)

@@ -2,6 +2,7 @@
 
 declare(strict_types=1);
 
+<<<<<<< HEAD
 use Modules\Xot\Actions\Mail\SendMailByRecordAction;
 use Illuminate\Database\Eloquent\Model;
 
@@ -12,6 +13,11 @@ it('throws if record has no email', function (): void {
         public function myLogs() { return new class {
             public function create(array $data): void {}
         };}
+=======
+namespace Modules\Xot\Tests\Unit\SendMailByRecordActionTest;
+
+
+>>>>>>> c4ec0fb6 (.)
     };
 
     expect(fn () => app(SendMailByRecordAction::class)->execute($record, \Illuminate\Mail\Mailable::class))

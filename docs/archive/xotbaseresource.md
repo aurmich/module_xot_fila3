@@ -76,6 +76,7 @@ class NotificationResource extends XotBaseResource
 ## Collegamenti Bidirezionali
 
 ### Collegamenti nella Root
+<<<<<<< HEAD
 - [Architettura Filament](../../../docs/architecture/filament.md)
 - [Gestione Risorse](../../../docs/architecture/resources.md)
 - [Regole XotBaseResource](../../../docs/regole/xotbaseresource-rules.md)
@@ -83,6 +84,15 @@ class NotificationResource extends XotBaseResource
 ### Collegamenti ai Moduli
 - [Notify Resource](../../Notify/docs/filament-resources.md)
 - [User Resource](../../User/docs/filament-resources.md)
+=======
+- [Architettura Filament](../../../project_docs/architecture/filament.md)
+- [Gestione Risorse](../../../project_docs/architecture/resources.md)
+- [Regole XotBaseResource](../../../project_docs/regole/xotbaseresource-rules.md)
+
+### Collegamenti ai Moduli
+- [Notify Resource](../../Notify/project_docs/filament-resources.md)
+- [User Resource](../../User/project_docs/filament-resources.md)
+>>>>>>> c4ec0fb6 (.)
 
 ## Note Importanti
 

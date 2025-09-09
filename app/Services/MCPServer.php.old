@@ -1,0 +1,87 @@
+<?php
+
+namespace Modules\Xot\Services;
+
+use Illuminate\Support\Facades\Process;
+use Illuminate\Support\Facades\Log;
+use Symfony\Component\Process\Process as SymfonyProcess;
+
+abstract class MCPServer
+{
+    protected string $name;
+    protected array $config;
+    protected ?SymfonyProcess $process = null;
+
+    public function __construct(array $config)
+    {
+        $this->config = $config;
+    }
+
+    public function getName(): string
+    {
+        return $this->name;
+    }
+
+    public function start(): bool
+    {
+        try {
+            $command = $this->config['command'];
+            $args = $this->config['args'];
+
+            $commandLine = array_merge([$command], $args);
+            $this->process = new SymfonyProcess($commandLine);
+            $this->process->start();
+
+            Log::info("Server MCP {$this->name} avviato", [
+                'pid' => $this->process->getPid(),
+                'command' => $command,
+                'args' => $args
+            ]);
+
+            return true;
+        } catch (\Exception $e) {
+            Log::error("Errore nell'avvio del server MCP {$this->name}", [
+                'error' => $e->getMessage()
+            ]);
+            return false;
+        }
+    }
+
+    public function stop(): bool
+    {
+        if (!$this->process) {
+            return true;
+        }
+
+        try {
+            if ($this->process->isRunning()) {
+                $this->process->stop(0);
+                Log::info("Server MCP {$this->name} terminato", ['pid' => $this->process->getPid()]);
+            }
+            return true;
+        } catch (\Exception $e) {
+            Log::error("Errore nell'arresto del server MCP {$this->name}", [
+                'error' => $e->getMessage()
+            ]);
+            return false;
+        }
+    }
+
+    public function isRunning(): bool
+    {
+        return $this->process && $this->process->isRunning();
+    }
+
+    public function getStatus(): array
+    {
+        return [
+            'name' => $this->name,
+            'running' => $this->isRunning(),
+            'pid' => $this->isRunning() && $this->process ? $this->process->getPid() : null,
+            'config' => $this->config
+        ];
+    }
+
+    abstract public function validate(): bool;
+    abstract public function getContext(): array;
+}

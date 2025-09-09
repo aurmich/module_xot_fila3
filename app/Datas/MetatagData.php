@@ -436,7 +436,10 @@ class MetatagData extends Data implements Wireable
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> c4ec0fb6 (.)
     public function getFaviconBySize(string $size, string $format): string
     {
         $xot=XotData::make();
@@ -447,7 +450,10 @@ class MetatagData extends Data implements Wireable
         return $res;
     }
 
+<<<<<<< HEAD
 >>>>>>> 0d3387f (.)
+=======
+>>>>>>> c4ec0fb6 (.)
     /**
      * @deprecated Use getThemeColors() instead as it better reflects the semantic purpose
      */
@@ -641,7 +647,10 @@ class MetatagData extends Data implements Wireable
 
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> c4ec0fb6 (.)
 
     public function getDescription(int $limit=160): string
     {
@@ -719,5 +728,8 @@ class MetatagData extends Data implements Wireable
         return $xot->pub_theme;
     }
     
+<<<<<<< HEAD
 >>>>>>> 0d3387f (.)
+=======
+>>>>>>> c4ec0fb6 (.)
 }

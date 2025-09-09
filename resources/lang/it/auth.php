@@ -72,4 +72,9 @@ return [
         'profile' => 'Profilo Utente',
         'settings' => 'Impostazioni Utente',
     ],
+<<<<<<< HEAD
 ]; 
+=======
+];
+
+>>>>>>> c4ec0fb6 (.)

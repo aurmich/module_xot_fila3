@@ -2,6 +2,7 @@
 
 declare(strict_types=1);
 
+<<<<<<< HEAD
 namespace Modules\Xot\Tests\Feature\Filament;
 
 use Modules\Xot\Filament\Resources\XotBaseResource;
@@ -16,6 +17,13 @@ beforeEach(function () {
         protected static ?string $model = null;
         protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
         protected static ?string $navigationGroup = 'Test Group';
+=======
+namespace Modules\Xot\Tests\Feature\Filament\XotBaseResourceTest;
+
+namespace Modules\Xot\Tests\Feature\Filament;
+
+
+>>>>>>> c4ec0fb6 (.)
         protected static ?int $navigationSort = 1;
     };
 });
