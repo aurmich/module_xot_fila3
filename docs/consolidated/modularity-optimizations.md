@@ -10,8 +10,8 @@ Durante l'audit del modulo `Xot` (modulo base del framework), sono state identif
 ```php
 // ❌ ERRORE CRITICO - Path hardcoded
 public static string $projectBasePath = '/var/www/html/saluteora';
-public static string $laravelBasePath = '/var/www/html/saluteora/laravel';
-public static string $modulesBasePath = '/var/www/html/saluteora/laravel/Modules';
+public static string $laravelBasePath = '/var/www/html/_bases/base_techplanner_fila3_mono/laravel';
+public static string $modulesBasePath = '/var/www/html/_bases/base_techplanner_fila3_mono/laravel/Modules';
 ```
 
 **File contaminati:**
@@ -251,8 +251,8 @@ enum DayOfWeek: int
 ```env
 # Configurazione Path Xot
 PROJECT_BASE_PATH=/var/www/html/saluteora
-LARAVEL_BASE_PATH=/var/www/html/saluteora/laravel
-MODULES_BASE_PATH=/var/www/html/saluteora/laravel/Modules
+LARAVEL_BASE_PATH=/var/www/html/_bases/base_techplanner_fila3_mono/laravel
+MODULES_BASE_PATH=/var/www/html/_bases/base_techplanner_fila3_mono/laravel/Modules
 
 # Configurazione Modelli Xot
 XOT_USER_MODEL=Modules\SaluteOra\Models\User

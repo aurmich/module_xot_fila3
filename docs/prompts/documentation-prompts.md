@@ -69,7 +69,7 @@ Questo documento descrive le regole e le best practices per i prompt di document
 ```markdown
 
 # Collegamenti Non Corretti
-[Documento Correlato](/var/www/html/saluteora/laravel/Modules/Xot/project_docs/documento.md)
+[Documento Correlato](/var/www/html/_bases/base_techplanner_fila3_mono/laravel/Modules/Xot/project_docs/documento.md)
 [Documento in Sottodirectory](https://github.com/saluteora/progetto/blob/main/project_docs/documento.md)
 [Documento in Modulo Altro](C:\progetti\saluteora\laravel\Modules\Xot\docs\documento.md)
 ```

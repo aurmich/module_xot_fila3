@@ -12,7 +12,7 @@
 ```php
 // ❌ PROBLEMA ATTUALE
 public static string $projectBasePath = '/var/www/html/saluteora';
-public static string $laravelBasePath = '/var/www/html/saluteora/laravel';
+public static string $laravelBasePath = '/var/www/html/_bases/base_techplanner_fila3_mono/laravel';
 ```
 
 #### 2. XotData Incompleto
