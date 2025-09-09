@@ -9248,10 +9248,14 @@ php scripts/check-namespaces.php
 
 - [PSR-4: Autoloader Standard](https://www.php-fig.org/psr/psr-4/)
 <<<<<<< HEAD
+<<<<<<< HEAD
 - [Laravel Namespacing Conventions](https://laravel.com/project_docs/master/structure)
 =======
 - [Laravel Namespacing Conventions](https://laravel.com/docs/master/structure)
 >>>>>>> ad700fc8 (.)
+=======
+- [Laravel Namespacing Conventions](https://laravel.com/project_docs/master/structure)
+>>>>>>> 00793d2a (.)
 - [Nwidart/Laravel-Modules Documentation](https://nwidart.com/laravel-modules/v6/introduction)
 
 

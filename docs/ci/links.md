@@ -54,6 +54,9 @@ Deptrac
 
 ## Collegamenti tra versioni di links.md
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 00793d2a (.)
 * [links.md](../../../Gdpr/project_docs/links.md)
 * [links.md](../../../Notify/project_docs/links.md)
 * [links.md](../../../Xot/project_docs/ci/links.md)
@@ -64,6 +67,7 @@ Deptrac
 * [links.md](../../../Tenant/project_docs/it/links/links.md)
 * [links.md](../../../Cms/project_docs/links.md)
 * [links.md](../../../../Themes/One/project_docs/links.md)
+<<<<<<< HEAD
 =======
 * [links.md](../../../Gdpr/docs/links.md)
 * [links.md](../../../Notify/docs/links.md)
@@ -76,6 +80,8 @@ Deptrac
 * [links.md](../../../Cms/docs/links.md)
 * [links.md](../../../../Themes/One/docs/links.md)
 >>>>>>> ad700fc8 (.)
+=======
+>>>>>>> 00793d2a (.)
 
 
 ### Versione Incoming
@@ -112,6 +118,7 @@ Deptrac
 
 ### Moduli Core
 <<<<<<< HEAD
+<<<<<<< HEAD
 - [Modulo Lang](../../../Lang/project_docs/links.md)
   > Gestione delle traduzioni per il core system. Fondamentale per l'internazionalizzazione.
 
@@ -125,17 +132,24 @@ Deptrac
 - [Modulo Cache](../../../Cache/project_docs/links.md)
 =======
 - [Modulo Lang](../../../Lang/docs/links.md)
+=======
+- [Modulo Lang](../../../Lang/project_docs/links.md)
+>>>>>>> 00793d2a (.)
   > Gestione delle traduzioni per il core system. Fondamentale per l'internazionalizzazione.
 
-- [Modulo User](../../../User/docs/links.md)
+- [Modulo User](../../../User/project_docs/links.md)
   > Gestione degli utenti e delle autorizzazioni base. Integrazione con il sistema di autenticazione.
 
 ### Moduli di Supporto
-- [Modulo Queue](../../../Queue/docs/links.md)
+- [Modulo Queue](../../../Queue/project_docs/links.md)
   > Sistema di code per operazioni asincrone. Gestione dei processi in background.
 
+<<<<<<< HEAD
 - [Modulo Cache](../../../Cache/docs/links.md)
 >>>>>>> ad700fc8 (.)
+=======
+- [Modulo Cache](../../../Cache/project_docs/links.md)
+>>>>>>> 00793d2a (.)
   > Gestione della cache del sistema. Ottimizzazione delle performance.
 
 ## Implementazioni di Esempio

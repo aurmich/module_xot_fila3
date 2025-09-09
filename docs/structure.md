@@ -1024,12 +1024,17 @@ tests_old
 ## Collegamenti alla documentazione generale
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 - [Analisi strutturale complessiva](/project_docs/phpstan/modules_structure_analysis.md)
 - [Report PHPStan](/project_docs/phpstan/)
 =======
 - [Analisi strutturale complessiva](/docs/phpstan/modules_structure_analysis.md)
 - [Report PHPStan](/docs/phpstan/)
 >>>>>>> ad700fc8 (.)
+=======
+- [Analisi strutturale complessiva](/project_docs/phpstan/modules_structure_analysis.md)
+- [Report PHPStan](/project_docs/phpstan/)
+>>>>>>> 00793d2a (.)
 
 
 ### Versione Incoming
@@ -1038,6 +1043,9 @@ tests_old
 
 ## Collegamenti tra versioni di structure.md
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 00793d2a (.)
 * [structure.md](bashscripts/project_docs/structure.md)
 * [structure.md](../../../Gdpr/project_docs/structure.md)
 * [structure.md](../../../Notify/project_docs/structure.md)
@@ -1054,6 +1062,7 @@ tests_old
 * [structure.md](../../../Cms/project_docs/structure.md)
 * [structure.md](../../../Cms/project_docs/themes/structure.md)
 * [structure.md](../../../Cms/project_docs/components/structure.md)
+<<<<<<< HEAD
 =======
 * [structure.md](bashscripts/docs/structure.md)
 * [structure.md](../../../Gdpr/docs/structure.md)
@@ -1072,6 +1081,8 @@ tests_old
 * [structure.md](../../../Cms/docs/themes/structure.md)
 * [structure.md](../../../Cms/docs/components/structure.md)
 >>>>>>> ad700fc8 (.)
+=======
+>>>>>>> 00793d2a (.)
 
 
 ---

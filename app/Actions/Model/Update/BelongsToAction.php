@@ -32,6 +32,7 @@ class BelongsToAction
         */
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         if (! Arr::isAssoc($relationDTO->data) && \count($relationDTO->data) === 1) {
             $related_id = Arr::first($relationDTO->data);
             if ($related_id === null) {
@@ -40,12 +41,19 @@ class BelongsToAction
 
 =======
         if (! Arr::isAssoc($relationDTO->data) && 1 === \count($relationDTO->data)) {
+=======
+        if (! Arr::isAssoc($relationDTO->data) && \count($relationDTO->data) === 1) {
+>>>>>>> 00793d2a (.)
             $related_id = Arr::first($relationDTO->data);
-            if (null === $related_id) {
+            if ($related_id === null) {
                 return;
             }
+<<<<<<< HEAD
             
 >>>>>>> ad700fc8 (.)
+=======
+
+>>>>>>> 00793d2a (.)
             $related = $relationDTO->related->find($related_id);
             // Verifica che $related non sia una Collection, ma un singolo modello
             if ($related instanceof \Illuminate\Database\Eloquent\Collection) {
@@ -65,10 +73,14 @@ class BelongsToAction
             $sub = $rows->firstOrCreate();
             // $sub = $rows->first() ?? $rows->getModel();
 <<<<<<< HEAD
+<<<<<<< HEAD
             if ($sub === null) {
 =======
             if (null === $sub) {
 >>>>>>> ad700fc8 (.)
+=======
+            if ($sub === null) {
+>>>>>>> 00793d2a (.)
                 throw new \Exception('['.__LINE__.']['.class_basename($this).']');
             }
 
@@ -81,6 +93,9 @@ class BelongsToAction
         if ($rows->exists()) {
             // $rows->update($data); // non passa per il mutator
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 00793d2a (.)
             $relationName = Str::camel($relationDTO->name);
             $relatedModel = $model->{$relationName};
 
@@ -90,9 +105,12 @@ class BelongsToAction
             }
 
             $relatedModel->update($data);
+<<<<<<< HEAD
 =======
             $model->{Str::camel($relationDTO->name)}->update($data);
 >>>>>>> ad700fc8 (.)
+=======
+>>>>>>> 00793d2a (.)
 
             return;
         }

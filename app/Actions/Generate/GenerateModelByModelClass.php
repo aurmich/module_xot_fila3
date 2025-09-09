@@ -16,14 +16,19 @@ class GenerateModelByModelClass
     use QueueableAction;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     /** @var array<string, mixed> */
 =======
 >>>>>>> ad700fc8 (.)
+=======
+    /** @var array<string, mixed> */
+>>>>>>> 00793d2a (.)
     public array $replaces = [];
 
     /**
      * Execute the function with the given model class.
      *
+<<<<<<< HEAD
 <<<<<<< HEAD
      * @param  string  $model_class  the class name of the model
 =======
@@ -31,6 +36,9 @@ class GenerateModelByModelClass
      *
      * @return string
 >>>>>>> ad700fc8 (.)
+=======
+     * @param  string  $model_class  the class name of the model
+>>>>>>> 00793d2a (.)
      */
     public function execute(string $model_class): string
     {
@@ -48,16 +56,22 @@ class GenerateModelByModelClass
             if (method_exists($this, 'replace'.$k)) {
                 $content = $this->{'replace'.$k}($v, $content);
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 00793d2a (.)
                 Assert::string($content, 'Content must be string after replace method');
             }
             // $content=$this->replace($content,$k,$v);
         }
         Assert::string($content, 'Content must be string before str_replace');
+<<<<<<< HEAD
 =======
             }
             // $content=$this->replace($content,$k,$v);
         }
 >>>>>>> ad700fc8 (.)
+=======
+>>>>>>> 00793d2a (.)
         $content = str_replace(' extends Model', ' extends BaseModel', $content);
         $content = str_replace('use HasFactory;', '', $content);
         Assert::string($content, '['.__LINE__.']['.class_basename($this).']');
@@ -75,10 +89,14 @@ class GenerateModelByModelClass
         Assert::integer($fillable_start = mb_strpos($content, 'protected $fillable'), '['.__LINE__.']['.class_basename($this).']');
         $fillable_end = mb_strpos($content, '];', $fillable_start);
 <<<<<<< HEAD
+<<<<<<< HEAD
         if ($table_start === false) {
 =======
         if (false === $table_start) {
 >>>>>>> ad700fc8 (.)
+=======
+        if ($table_start === false) {
+>>>>>>> 00793d2a (.)
             $before = mb_substr($content, 0, $fillable_end + 2);
             $after = mb_substr($content, $fillable_end + 2);
             $content = $before.PHP_EOL.'    protected $table = "'.$value.'";'.PHP_EOL.$after;
@@ -91,12 +109,16 @@ class GenerateModelByModelClass
      * Create a factory for the given model class.
      *
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @param  string  $model_class  The class name of the model to create the factory for
 =======
      * @param string $model_class The class name of the model to create the factory for
      *
      * @return void
 >>>>>>> ad700fc8 (.)
+=======
+     * @param  string  $model_class  The class name of the model to create the factory for
+>>>>>>> 00793d2a (.)
      */
     public function generate(string $model_class): void
     {
@@ -122,11 +144,17 @@ class GenerateModelByModelClass
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     /**
      * @param  array<string, mixed>  $replaces
      */
 =======
 >>>>>>> ad700fc8 (.)
+=======
+    /**
+     * @param  array<string, mixed>  $replaces
+     */
+>>>>>>> 00793d2a (.)
     public function setCustomReplaces(array $replaces): self
     {
         $this->replaces = array_merge($this->replaces, $replaces);

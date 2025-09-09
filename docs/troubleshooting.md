@@ -457,6 +457,7 @@ SQLSTATE[23000]: Integrity constraint violation
 ```
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 **Verificare Migrazioni**
 ```bash
@@ -815,6 +816,8 @@ class MioModelloTest extends XotBaseTestCase
     }
 }
 ```
+=======
+>>>>>>> 00793d2a (.)
 
 **Verificare Migrazioni**
 ```bash

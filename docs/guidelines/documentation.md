@@ -4,12 +4,17 @@
 
 1. **Struttura Modulare**
 <<<<<<< HEAD
+<<<<<<< HEAD
    - Ogni modulo ha la sua documentazione in `/Modules/{ModuleName}/project_docs/`
    - Le regole generali sono in `/Modules/Xot/project_docs/`
 =======
    - Ogni modulo ha la sua documentazione in `/Modules/{ModuleName}/docs/`
    - Le regole generali sono in `/Modules/Xot/docs/`
 >>>>>>> ad700fc8 (.)
+=======
+   - Ogni modulo ha la sua documentazione in `/Modules/{ModuleName}/project_docs/`
+   - Le regole generali sono in `/Modules/Xot/project_docs/`
+>>>>>>> 00793d2a (.)
    - La root `/docs` contiene solo indici e collegamenti
 
 2. **Collegamenti Bidirezionali**
@@ -20,10 +25,14 @@
 3. **Organizzazione dei Contenuti**
    ```
 <<<<<<< HEAD
+<<<<<<< HEAD
    Modules/Xot/project_docs/
 =======
    Modules/Xot/docs/
 >>>>>>> ad700fc8 (.)
+=======
+   Modules/Xot/project_docs/
+>>>>>>> 00793d2a (.)
    ├── guidelines/           # Linee guida generali
    ├── conventions/          # Convenzioni di codice
    ├── architecture/         # Architettura del framework
@@ -90,10 +99,14 @@ public function example(): void
 ### 1. Struttura Base
 ```
 <<<<<<< HEAD
+<<<<<<< HEAD
 Modules/{ModuleName}/project_docs/
 =======
 Modules/{ModuleName}/docs/
 >>>>>>> ad700fc8 (.)
+=======
+Modules/{ModuleName}/project_docs/
+>>>>>>> 00793d2a (.)
 ├── README.md              # Panoramica del modulo
 ├── installation.md        # Istruzioni di installazione
 ├── configuration.md       # Configurazione
@@ -180,6 +193,7 @@ php artisan api:generate
 ## Collegamenti tra versioni di documentation.md
 * [documentation.md](docs/rules/documentation.md)
 <<<<<<< HEAD
+<<<<<<< HEAD
 * [documentation.md](../../../Xot/project_docs/documentation.md)
 * [documentation.md](../../../Xot/project_docs/guidelines/documentation.md)
 * [documentation.md](../../../Cms/project_docs/roadmap/features/documentation.md)
@@ -188,4 +202,9 @@ php artisan api:generate
 * [documentation.md](../../../Xot/docs/guidelines/documentation.md)
 * [documentation.md](../../../Cms/docs/roadmap/features/documentation.md)
 >>>>>>> ad700fc8 (.)
+=======
+* [documentation.md](../../../Xot/project_docs/documentation.md)
+* [documentation.md](../../../Xot/project_docs/guidelines/documentation.md)
+* [documentation.md](../../../Cms/project_docs/roadmap/features/documentation.md)
+>>>>>>> 00793d2a (.)
 

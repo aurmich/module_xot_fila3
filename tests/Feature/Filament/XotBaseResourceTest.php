@@ -3,11 +3,16 @@
 declare(strict_types=1);
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 namespace Modules\Xot\Tests\Feature\Filament\XotBaseResourceTest;
 
 namespace Modules\Xot\Tests\Feature\Filament;
 
 =======
+=======
+namespace Modules\Xot\Tests\Feature\Filament\XotBaseResourceTest;
+
+>>>>>>> 00793d2a (.)
 namespace Modules\Xot\Tests\Feature\Filament;
 
 use Filament\Resources\Resource;

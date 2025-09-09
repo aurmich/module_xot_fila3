@@ -215,6 +215,9 @@ class RouteDynService
     {
         if (isset($v['method'])) {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 00793d2a (.)
             $wrapped = Arr::wrap($v['method']);
             // Ensure all elements are strings
             /** @var array<int, string> $result */
@@ -224,9 +227,12 @@ class RouteDynService
             }
 
             return $result;
+<<<<<<< HEAD
 =======
             return Arr::wrap($v['method']);
 >>>>>>> ad700fc8 (.)
+=======
+>>>>>>> 00793d2a (.)
         }
 
         return ['get', 'post'];
@@ -315,6 +321,9 @@ class RouteDynService
         $curr = $curr === null ? $sub_namespace : $curr;
         Assert::isArray($subs = $v['subs']);
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 00793d2a (.)
 
         // Ensure subs is properly typed for dynamic_route
         /** @var array<int, array<string, mixed>> $typedSubs */
@@ -331,9 +340,12 @@ class RouteDynService
         }
 
         self::dynamic_route($typedSubs, $sub_namespace, null, $curr);
+<<<<<<< HEAD
 =======
         self::dynamic_route($subs, $sub_namespace, null, $curr);
 >>>>>>> ad700fc8 (.)
+=======
+>>>>>>> 00793d2a (.)
     }
 
     /**
@@ -348,6 +360,7 @@ class RouteDynService
         $controller = self::getController($v, $namespace);
         foreach ($v['acts'] as $v1) {
             Assert::isArray($v1);
+<<<<<<< HEAD
 <<<<<<< HEAD
 
             // Ensure $v1 is properly typed
@@ -368,6 +381,20 @@ class RouteDynService
             $uri = self::getUri($v1, $namespace);
             $callback = self::getCallback($v1, $namespace, $curr);
 >>>>>>> ad700fc8 (.)
+=======
+
+            // Ensure $v1 is properly typed
+            /** @var array<string, mixed> $typedV1 */
+            $typedV1 = [];
+            foreach ($v1 as $key => $value) {
+                $typedV1[(string) $key] = $value;
+            }
+            $typedV1['controller'] = $controller;
+
+            $method = self::getMethod($typedV1, $namespace);
+            $uri = self::getUri($typedV1, $namespace);
+            $callback = self::getCallback($typedV1, $namespace, $curr);
+>>>>>>> 00793d2a (.)
             Route::match($method, $uri, $callback);
         }
     }

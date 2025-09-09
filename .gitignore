@@ -56,6 +56,9 @@ Homestead.json
 *:Zone.Identifier
 .DS_Store
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 00793d2a (.)
 *.new
 
 # Backup files
@@ -64,11 +67,14 @@ Homestead.json
 *.backup
 *.backup.*
 *.bak
+<<<<<<< HEAD
 =======
 *.old
 *.old1
 *.backup
 >>>>>>> ad700fc8 (.)
+=======
+>>>>>>> 00793d2a (.)
 *.bak
 *.new
 
@@ -77,6 +83,10 @@ docs/phpstan/
 docs/cache/
 cache/
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> ad700fc8 (.)
+=======
+
+>>>>>>> 00793d2a (.)

@@ -3,12 +3,17 @@
 declare(strict_types=1);
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 namespace Modules\Xot\Tests\Unit\Models\BaseModelTest;
 
 namespace Modules\Xot\Tests\Unit\Models;
 
 
 =======
+=======
+namespace Modules\Xot\Tests\Unit\Models\BaseModelTest;
+
+>>>>>>> 00793d2a (.)
 namespace Modules\Xot\Tests\Unit\Models;
 
 use Illuminate\Database\Eloquent\Model;

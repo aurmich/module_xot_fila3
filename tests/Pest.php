@@ -3,12 +3,18 @@
 declare(strict_types=1);
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 namespace Modules\Xot\Tests\Pest;
 
 
 =======
 use Modules\Xot\Tests\TestCase;
 >>>>>>> ad700fc8 (.)
+=======
+namespace Modules\Xot\Tests\Pest;
+
+
+>>>>>>> 00793d2a (.)
 
 /*
 |--------------------------------------------------------------------------
@@ -21,10 +27,14 @@ use Modules\Xot\Tests\TestCase;
 */
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 pest()->extend(TestCase::class)
 >>>>>>> ad700fc8 (.)
+=======
+
+>>>>>>> 00793d2a (.)
     ->in('Feature', 'Unit');
 
 /*

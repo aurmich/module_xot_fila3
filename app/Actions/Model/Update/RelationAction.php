@@ -15,6 +15,7 @@ class RelationAction
 
     /**
 <<<<<<< HEAD
+<<<<<<< HEAD
      * Execute relation updates with type-safe data.
      *
      * @param  array<mixed, mixed>  $data
@@ -36,6 +37,22 @@ class RelationAction
     {
         $relations = app(FilterRelationsAction::class)->execute($model, $data);
 >>>>>>> ad700fc8 (.)
+=======
+     * Execute relation updates with type-safe data.
+     *
+     * @param  array<mixed, mixed>  $data
+     */
+    public function execute(Model $model, array $data): void
+    {
+        // Assicura che $data sia type-safe per FilterRelationsAction
+        /** @var array<string, mixed> $typedData */
+        $typedData = [];
+        foreach ($data as $key => $value) {
+            $typedData[(string) $key] = $value;
+        }
+
+        $relations = app(FilterRelationsAction::class)->execute($model, $typedData);
+>>>>>>> 00793d2a (.)
         /*
         if ('Operation' === class_basename($model)) {
             dddx([
@@ -51,10 +68,14 @@ class RelationAction
             $relationClass = get_class($relation);
             $relationshipType = class_basename($relationClass);
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
             
 >>>>>>> ad700fc8 (.)
+=======
+
+>>>>>>> 00793d2a (.)
             $actionClass = __NAMESPACE__.'\\'.$relationshipType.'Action';
             Assert::object($action = app($actionClass));
 

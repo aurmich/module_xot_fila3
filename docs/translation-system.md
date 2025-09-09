@@ -222,6 +222,7 @@ php artisan view:clear
 ## Riferimenti
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 - [Documentazione Laravel Translations](https://laravel.com/project_docs/localization)
 - [Filament Form Components](https://filamentphp.com/project_docs/forms)
 - [Best Practices Filament](../project_docs/filament-best-practices.md)
@@ -230,3 +231,8 @@ php artisan view:clear
 - [Filament Form Components](https://filamentphp.com/docs/forms)
 - [Best Practices Filament](../docs/filament-best-practices.md)
 >>>>>>> ad700fc8 (.)
+=======
+- [Documentazione Laravel Translations](https://laravel.com/project_docs/localization)
+- [Filament Form Components](https://filamentphp.com/project_docs/forms)
+- [Best Practices Filament](../project_docs/filament-best-practices.md)
+>>>>>>> 00793d2a (.)

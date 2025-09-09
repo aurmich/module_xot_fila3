@@ -9,10 +9,14 @@ use Illuminate\Support\Str;
 
 /**
 <<<<<<< HEAD
+<<<<<<< HEAD
  * Helper per la gestione dei percorsi nel progetto TechPlanner.
 =======
  * Helper per la gestione dei percorsi nel progetto SaluteOra.
 >>>>>>> ad700fc8 (.)
+=======
+ * Helper per la gestione dei percorsi nel progetto TechPlanner.
+>>>>>>> 00793d2a (.)
  */
 class PathHelper
 {
@@ -39,18 +43,22 @@ class PathHelper
     public static string $modulesBasePath = '/var/www/html/_bases/base_techplanner_fila3_mono/laravel/Modules';
 =======
      */
-    public static string $projectBasePath = '/var/www/html/saluteora';
+    public static string $projectBasePath = '/var/www/html/_bases/base_techplanner_fila3_mono';
 
     /**
      * Percorso base di Laravel.
      */
-    public static string $laravelBasePath = '/var/www/html/saluteora/laravel';
+    public static string $laravelBasePath = '/var/www/html/_bases/base_techplanner_fila3_mono/laravel';
 
     /**
      * Percorso base dei moduli.
      */
+<<<<<<< HEAD
     public static string $modulesBasePath = '/var/www/html/saluteora/laravel/Modules';
 >>>>>>> ad700fc8 (.)
+=======
+    public static string $modulesBasePath = '/var/www/html/_bases/base_techplanner_fila3_mono/laravel/Modules';
+>>>>>>> 00793d2a (.)
 
     /**
      * Ottiene il percorso completo di un modulo.
@@ -218,6 +226,7 @@ class PathHelper
     {
         // Verifica che il percorso contenga /laravel/Modules/ e non solo /Modules/
 <<<<<<< HEAD
+<<<<<<< HEAD
         if (Str::contains($path, '/base_techplanner_fila3_mono/Modules/')) {
             return false;
         }
@@ -226,6 +235,9 @@ class PathHelper
         if (Str::contains($path, '/base_techplanner_fila3_mono/') && !Str::contains($path, '/base_techplanner_fila3_mono/laravel/')) {
 =======
         if (Str::contains($path, '/saluteora/Modules/')) {
+=======
+        if (Str::contains($path, '/base_techplanner_fila3_mono/Modules/')) {
+>>>>>>> 00793d2a (.)
             return false;
         }
 
@@ -251,6 +263,7 @@ class PathHelper
     public static function correctPath(string $path): string
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
         // Corregge /var/www/html/base_techplanner_fila3_mono/Modules/ in /var/www/html/base_techplanner_fila3_mono/laravel/Modules/
         if (Str::contains($path, '/base_techplanner_fila3_mono/Modules/')) {
             return str_replace('/base_techplanner_fila3_mono/Modules/', '/base_techplanner_fila3_mono/laravel/Modules/', $path);
@@ -263,12 +276,21 @@ class PathHelper
         // Corregge /var/www/html/saluteora/Modules/ in /var/www/html/saluteora/laravel/Modules/
         if (Str::contains($path, '/saluteora/Modules/')) {
             return str_replace('/saluteora/Modules/', '/saluteora/laravel/Modules/', $path);
+=======
+        // Corregge /var/www/html/base_techplanner_fila3_mono/Modules/ in /var/www/html/base_techplanner_fila3_mono/laravel/Modules/
+        if (Str::contains($path, '/base_techplanner_fila3_mono/Modules/')) {
+            return str_replace('/base_techplanner_fila3_mono/Modules/', '/base_techplanner_fila3_mono/laravel/Modules/', $path);
+>>>>>>> 00793d2a (.)
         }
 
-        // Corregge /var/www/html/Modules/ in /var/www/html/saluteora/laravel/Modules/
+        // Corregge /var/www/html/Modules/ in /var/www/html/base_techplanner_fila3_mono/laravel/Modules/
         if (Str::contains($path, '/var/www/html/Modules/')) {
+<<<<<<< HEAD
             return str_replace('/var/www/html/Modules/', '/var/www/html/saluteora/laravel/Modules/', $path);
 >>>>>>> ad700fc8 (.)
+=======
+            return str_replace('/var/www/html/Modules/', '/var/www/html/base_techplanner_fila3_mono/laravel/Modules/', $path);
+>>>>>>> 00793d2a (.)
         }
 
         return $path;

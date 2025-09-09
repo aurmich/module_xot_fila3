@@ -12,7 +12,6 @@ use Illuminate\Foundation\Testing\RefreshDatabase;
 use Modules\Xot\Contracts\UserContract;
 use Modules\Xot\States\Transitions\XotBaseTransition;
 
-uses(RefreshDatabase::class);
 
 >>>>>>> ad700fc8 (.)
 describe('XotBaseTransition', function () {

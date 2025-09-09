@@ -40,6 +40,7 @@ This document outlines the best practices for maintaining high code quality with
 - Use dependency injection to avoid direct instantiation of dependencies, promoting testability and flexibility.
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 ## Code Quality Tools
 
@@ -56,6 +57,8 @@ This document outlines the best practices for maintaining high code quality with
 - Eseguire gli script di automazione regolarmente per mantenere la coerenza del codice
 
 >>>>>>> ad700fc8 (.)
+=======
+>>>>>>> 00793d2a (.)
 ## Common Issues and Fixes
 - **Type Errors**: Ensure all methods and functions have explicit return types and parameter types to avoid type-related bugs.
 - **Static Analysis Failures**: Address PHPStan errors by refining code or updating the baseline for existing code.
@@ -71,11 +74,15 @@ This document outlines the best practices for maintaining high code quality with
 
 ## Links to Related Documentation
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 00793d2a (.)
 - [Xot Base Classes](../Xot/project_docs/XOT_BASE_CLASSES.md)
 - [Filament Extension Pattern](../../Notify/project_docs/FILAMENT_EXTENSION_PATTERN.md)
 - [Filament Extension Pattern Analysis](../../Notify/project_docs/FILAMENT_EXTENSION_PATTERN_ANALYSIS.md)
 - [Patient Module - Namespace Conventions](../../Patient/project_docs/NAMESPACE_CONVENTIONS.md)
 - [Patient Module - Validation Errors](../../Patient/project_docs/VALIDATION_ERRORS.md)
+<<<<<<< HEAD
 =======
 - [Xot Base Classes](../Xot/docs/XOT_BASE_CLASSES.md)
 - [Filament Extension Pattern](../../Notify/docs/FILAMENT_EXTENSION_PATTERN.md)
@@ -83,6 +90,8 @@ This document outlines the best practices for maintaining high code quality with
 - [Patient Module - Namespace Conventions](../../Patient/docs/NAMESPACE_CONVENTIONS.md)
 - [Patient Module - Validation Errors](../../Patient/docs/VALIDATION_ERRORS.md)
 >>>>>>> ad700fc8 (.)
+=======
+>>>>>>> 00793d2a (.)
 - [PHP Strict Types](./PHP-STRICT-TYPES.md)
 - [PHPStan Implementation Guide](./PHPSTAN-IMPLEMENTATION-GUIDE.md)
 - [Naming Conventions](./NAMING-CONVENTIONS.md)

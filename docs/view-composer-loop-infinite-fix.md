@@ -219,12 +219,17 @@ grep -r "auth()->user()" Modules/*/View/Composers/
 
 - [XotComposer](/var/www/html/base_saluteora/laravel/Modules/Xot/app/View/Composers/XotComposer.php)
 <<<<<<< HEAD
+<<<<<<< HEAD
 - [View Composer Laravel Docs](https://laravel.com/project_docs/views#view-composers)
 - [Container Resolution Laravel](https://laravel.com/project_docs/container)
 =======
 - [View Composer Laravel Docs](https://laravel.com/docs/views#view-composers)
 - [Container Resolution Laravel](https://laravel.com/docs/container)
 >>>>>>> ad700fc8 (.)
+=======
+- [View Composer Laravel Docs](https://laravel.com/project_docs/views#view-composers)
+- [Container Resolution Laravel](https://laravel.com/project_docs/container)
+>>>>>>> 00793d2a (.)
 
 ---
 
