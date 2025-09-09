@@ -31,29 +31,12 @@ class BelongsToAction
         }
         */
 
-<<<<<<< HEAD
-<<<<<<< HEAD
         if (! Arr::isAssoc($relationDTO->data) && 1 === \count($relationDTO->data)) {
             $related_id = Arr::first($relationDTO->data);
             if (null === $related_id) {
                 return;
             }
             
-=======
-        if (! Arr::isAssoc($relationDTO->data) && \count($relationDTO->data) === 1) {
-=======
-        if (! Arr::isAssoc($relationDTO->data) && 1 === \count($relationDTO->data)) {
->>>>>>> edc8a701 (.)
-            $related_id = Arr::first($relationDTO->data);
-            if (null === $related_id) {
-                return;
-            }
-<<<<<<< HEAD
-
->>>>>>> c4ec0fb6 (.)
-=======
-            
->>>>>>> edc8a701 (.)
             $related = $relationDTO->related->find($related_id);
             // Verifica che $related non sia una Collection, ma un singolo modello
             if ($related instanceof \Illuminate\Database\Eloquent\Collection) {
@@ -72,15 +55,7 @@ class BelongsToAction
         if (Arr::isAssoc($relationDTO->data)) {
             $sub = $rows->firstOrCreate();
             // $sub = $rows->first() ?? $rows->getModel();
-<<<<<<< HEAD
-<<<<<<< HEAD
             if (null === $sub) {
-=======
-            if ($sub === null) {
->>>>>>> c4ec0fb6 (.)
-=======
-            if (null === $sub) {
->>>>>>> edc8a701 (.)
                 throw new \Exception('['.__LINE__.']['.class_basename($this).']');
             }
 
@@ -92,23 +67,7 @@ class BelongsToAction
 
         if ($rows->exists()) {
             // $rows->update($data); // non passa per il mutator
-<<<<<<< HEAD
-<<<<<<< HEAD
             $model->{Str::camel($relationDTO->name)}->update($data);
-=======
-            $relationName = Str::camel($relationDTO->name);
-            $relatedModel = $model->{$relationName};
-
-            // Type assertion: la relazione deve restituire un modello che supporta update()
-            if (! $relatedModel instanceof Model) {
-                throw new \InvalidArgumentException('Related model must be an instance of Model to support update()');
-            }
-
-            $relatedModel->update($data);
->>>>>>> c4ec0fb6 (.)
-=======
-            $model->{Str::camel($relationDTO->name)}->update($data);
->>>>>>> edc8a701 (.)
 
             return;
         }

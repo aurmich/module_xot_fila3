@@ -231,21 +231,6 @@ return [
 - [Traits Documentation](traits/README.md) - Documentazione traits completa
 - [Service Providers](providers/README.md) - Pattern service providers
 
-<<<<<<< HEAD
-## Architecture
-- Base classes per tutti i moduli
-- Service providers centralizzati
-- Convenzioni e standard
-<<<<<<< HEAD
-=======
-- Actions per operazioni PDF e business logic
-
-### Actions
-- [GetPdfContentByRecordAction](actions/get-pdf-content-by-record-action.md) - Generazione contenuto PDF da record Eloquent
-- [ContentPdfAction](archive/actions/content-pdf-action.md) - Generazione PDF da HTML/viste
-- [StreamDownloadPdfAction](archive/actions/pdf-stream-download-action.md) - Download PDF diretto
->>>>>>> c4ec0fb6 (.)
-=======
 ### 🎯 **Guide Complete**
 - [Filament Complete Guide](consolidated/filament-complete-guide.md) - Guida completa Filament
 - [PHPStan Complete Guide](consolidated/phpstan-complete-guide.md) - Guida completa PHPStan
@@ -257,7 +242,6 @@ return [
 - [Module Development](development/module-creation.md) - Creazione nuovi moduli
 - [Best Practices](best-practices/README.md) - Linee guida sviluppo
 - [Conventions](conventions/README.md) - Convenzioni e standard
->>>>>>> edc8a701 (.)
 
 ## 🔧 **Best Practices Fondamentali**
 
@@ -376,21 +360,7 @@ I file di documentazione originali sono stati consolidati per seguire i principi
 Per accedere alla documentazione dettagliata originale, vedere il backup in:
 `docs-consolidation-backup-*/Xot-docs-original/`
 
-<<<<<<< HEAD
-## Principles
-- **DRY**: Un solo punto di verità
-- **KISS**: Semplicità e chiarezza
-- **Type Safety**: Tipizzazione rigorosa
-- **Documentation**: Documentazione essenziale
-
-## Links
-<<<<<<< HEAD
-=======
-- [Root Documentation](../../../project_docs/)
->>>>>>> c4ec0fb6 (.)
-=======
 ## Quick Links Legacy
->>>>>>> edc8a701 (.)
 - [Root Documentation](../../../docs/)
 - [SaluteOra Module](../SaluteOra/docs/)
 - [Original Documentation Backup](../../../docs-consolidation-backup-*/Xot-docs-original/)

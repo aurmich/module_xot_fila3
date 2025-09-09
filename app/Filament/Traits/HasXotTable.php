@@ -8,14 +8,7 @@ use Filament\Tables;
 use Filament\Actions;
 use Filament\Tables\Table;
 use Webmozart\Assert\Assert;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 use Filament\Tables\Actions\Action;
->>>>>>> 0d3387f (.)
-=======
-use Filament\Tables\Actions\Action;
->>>>>>> c4ec0fb6 (.)
 use Modules\UI\Enums\TableLayoutEnum;
 use Filament\Tables\Actions\BulkAction;
 use Filament\Tables\Columns\TextColumn;
@@ -59,22 +52,7 @@ trait HasXotTable
     {
         $actions = [];
 
-<<<<<<< HEAD
-<<<<<<< HEAD
         $actions['create'] = Tables\Actions\CreateAction::make();
-=======
-        $resource = $this->getResource();
-        
-        if (method_exists($resource, 'canCreate')) {
-            $actions['create'] = Tables\Actions\CreateAction::make()
-                ->iconButton()
-                ->tooltip(__('user::actions.create'))
-                ->visible(fn (?Model $record): bool => $resource::canCreate());
-        }
->>>>>>> c4ec0fb6 (.)
-=======
-        $actions['create'] = Tables\Actions\CreateAction::make();
->>>>>>> edc8a701 (.)
 
         if ($this->shouldShowAssociateAction()) {
             $actions['associate'] = Tables\Actions\AssociateAction::make()
@@ -103,27 +81,13 @@ trait HasXotTable
 
     protected function shouldShowAttachAction(): bool
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
         //@phpstan-ignore-next-line
->>>>>>> 0d3387f (.)
-=======
-        //@phpstan-ignore-next-line
->>>>>>> c4ec0fb6 (.)
         return method_exists($this, 'getRelationship');
     }
 
     protected function shouldShowDetachAction(): bool
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
         //@phpstan-ignore-next-line
->>>>>>> 0d3387f (.)
-=======
-        //@phpstan-ignore-next-line
->>>>>>> c4ec0fb6 (.)
         return method_exists($this, 'getRelationship');
     }
 
@@ -200,14 +164,7 @@ trait HasXotTable
     {
         $key = static::getKeyTrans('table.heading');
         /** @var string|array<int|string,mixed>|null $trans */
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
         //@phpstan-ignore-next-line
->>>>>>> 0d3387f (.)
-=======
-        //@phpstan-ignore-next-line
->>>>>>> c4ec0fb6 (.)
         $trans = trans($key);
 
         return (is_string($trans) && $trans !== $key) ? $trans : null;
@@ -360,22 +317,11 @@ trait HasXotTable
 
         // Check if class has the getRelationship method
         if ($this->shouldShowDetachAction()) {
-<<<<<<< HEAD
-<<<<<<< HEAD
-            if (method_exists($this, 'getRelationship')) {
-                if (method_exists($this->getRelationship(), 'getTable')) {
-=======
-=======
->>>>>>> c4ec0fb6 (.)
             //@phpstan-ignore-next-line
             if (method_exists($this, 'getRelationship')) {
                 //@phpstan-ignore-next-line
                 if (method_exists($this->getRelationship(), 'getTable')) {
                     //@phpstan-ignore-next-line
-<<<<<<< HEAD
->>>>>>> 0d3387f (.)
-=======
->>>>>>> c4ec0fb6 (.)
                     $pivotClass = $this->getRelationship()->getPivotClass();
                     if (method_exists($pivotClass, 'getKeyName')) {
                         $actions['detach'] = Tables\Actions\DetachAction::make()
@@ -385,15 +331,7 @@ trait HasXotTable
                 }
             }
         }
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
         //@phpstan-ignore-next-line
->>>>>>> 0d3387f (.)
-=======
-        //@phpstan-ignore-next-line
->>>>>>> c4ec0fb6 (.)
         return $actions;
     }
 
@@ -422,14 +360,7 @@ trait HasXotTable
      */
     public function getModelClass(): string
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
         //@phpstan-ignore-next-line
->>>>>>> 0d3387f (.)
-=======
-        //@phpstan-ignore-next-line
->>>>>>> c4ec0fb6 (.)
         if (method_exists($this, 'getRelationship')) {
             $relationship = $this->getRelationship();
             if ($relationship instanceof Relation) {
@@ -440,19 +371,6 @@ trait HasXotTable
 
         if (method_exists($this, 'getModel')) {
             $model = $this->getModel();
-<<<<<<< HEAD
-<<<<<<< HEAD
-            if (is_string($model)) {
-                Assert::classExists($model);
-
-                /* @var class-string<Model> */
-                return $model;
-            }
-            if ($model instanceof Model) {
-                /* @var class-string<Model> */
-=======
-=======
->>>>>>> c4ec0fb6 (.)
             //@phpstan-ignore-next-line
             if (is_string($model)) {
                 Assert::classExists($model);
@@ -465,10 +383,6 @@ trait HasXotTable
             if ($model instanceof Model) {
                 /* @var class-string<Model> */
                 //@phpstan-ignore-next-line
-<<<<<<< HEAD
->>>>>>> 0d3387f (.)
-=======
->>>>>>> c4ec0fb6 (.)
                 return get_class($model);
             }
         }

@@ -14,16 +14,6 @@ class StoreAction
 {
     use QueueableAction;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-    /**
-     * @param  array<string, mixed>  $data
-     * @param  array<string, mixed>  $rules
-     */
->>>>>>> c4ec0fb6 (.)
-=======
->>>>>>> edc8a701 (.)
     public function execute(Model $model, array $data, array $rules): Model
     {
         if (! isset($data['lang']) && \in_array('lang', $model->getFillable(), false)) {
@@ -52,15 +42,7 @@ class StoreAction
             // Ottieni il tipo di relazione dal nome della classe
             $relationClass = get_class($relation);
             $relationshipType = class_basename($relationClass);
-<<<<<<< HEAD
-<<<<<<< HEAD
             
-=======
-
->>>>>>> c4ec0fb6 (.)
-=======
-            
->>>>>>> edc8a701 (.)
             $action_class = __NAMESPACE__.'\\Store\\'.$relationshipType.'Action';
             $action = app($action_class);
             Assert::object($action);

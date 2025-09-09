@@ -108,13 +108,5 @@ Dopo l'installazione iniziale, procedere con:
 ## Collegamenti tra versioni di installazione-iniziale.md
 * [installazione-iniziale.md](docs/installazione-iniziale.md)
 * [installazione-iniziale.md](docs/tecnico/installazione-iniziale.md)
-<<<<<<< HEAD
-<<<<<<< HEAD
 * [installazione-iniziale.md](../../../Xot/docs/implementation/installazione-iniziale.md)
-=======
-* [installazione-iniziale.md](../../../Xot/project_docs/implementation/installazione-iniziale.md)
->>>>>>> c4ec0fb6 (.)
-=======
-* [installazione-iniziale.md](../../../Xot/docs/implementation/installazione-iniziale.md)
->>>>>>> edc8a701 (.)
 

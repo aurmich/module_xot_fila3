@@ -36,27 +36,11 @@ protected $fillable = [
 
 ### Documentazione Esistente Studiata
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 1. **Filament Table Columns** (`Modules/Xot/docs/filament_table_columns.md`):
    - Conferma uso di `getTableColumns()` invece di `getListTableColumns()`
    - Standard per definire colonne in Filament
 
 2. **Sistema Icone** (`Modules/UI/docs/icons.md`):
-=======
-1. **Filament Table Columns** (`Modules/Xot/project_docs/filament_table_columns.md`):
-   - Conferma uso di `getTableColumns()` invece di `getListTableColumns()`
-   - Standard per definire colonne in Filament
-
-2. **Sistema Icone** (`Modules/UI/project_docs/icons.md`):
->>>>>>> c4ec0fb6 (.)
-=======
-1. **Filament Table Columns** (`Modules/Xot/docs/filament_table_columns.md`):
-   - Conferma uso di `getTableColumns()` invece di `getListTableColumns()`
-   - Standard per definire colonne in Filament
-
-2. **Sistema Icone** (`Modules/UI/docs/icons.md`):
->>>>>>> edc8a701 (.)
    - Heroicons per icone di sistema
    - Font Awesome per icone aggiuntive
    - Custom SVG per icone specifiche
@@ -245,21 +229,9 @@ Questa implementazione stabilisce un precedente per:
 ## Collegamenti e Riferimenti
 
 - [Filament Table Columns Documentation](filament_table_columns.md)
-<<<<<<< HEAD
-<<<<<<< HEAD
 - [UI Icons System](../../UI/docs/icons.md)
 - [TechPlanner Client Model](../../TechPlanner/app/Models/Client.php)
 - [Filament Official Documentation](https://filamentphp.com/docs/3.x/tables/columns)
-=======
-- [UI Icons System](../../UI/project_docs/icons.md)
-- [TechPlanner Client Model](../../TechPlanner/app/Models/Client.php)
-- [Filament Official Documentation](https://filamentphp.com/project_docs/3.x/tables/columns)
->>>>>>> c4ec0fb6 (.)
-=======
-- [UI Icons System](../../UI/docs/icons.md)
-- [TechPlanner Client Model](../../TechPlanner/app/Models/Client.php)
-- [Filament Official Documentation](https://filamentphp.com/docs/3.x/tables/columns)
->>>>>>> edc8a701 (.)
 
 ---
 

@@ -4,13 +4,8 @@ declare(strict_types=1);
 
 namespace Modules\Xot\Models\Policies;
 
-<<<<<<< HEAD
-use Modules\Xot\Models\InformationSchemaTable;
-use Modules\Xot\Contracts\UserContract;
-=======
 use Modules\Xot\Contracts\UserContract;
 use Modules\Xot\Models\InformationSchemaTable;
->>>>>>> c4ec0fb6 (.)
 
 class InformationSchemaTablePolicy extends XotBasePolicy
 {
@@ -69,8 +64,4 @@ class InformationSchemaTablePolicy extends XotBasePolicy
     {
         return $user->hasPermissionTo('information_schema_table.forceDelete');
     }
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> c4ec0fb6 (.)

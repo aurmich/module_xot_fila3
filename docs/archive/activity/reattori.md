@@ -7,15 +7,7 @@ section: content
 
 ## Reattori
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 https://spatie.be/docs/laravel-event-sourcing/v7/using-reactors/writing-your-first-reactor
-=======
-https://spatie.be/project_docs/laravel-event-sourcing/v7/using-reactors/writing-your-first-reactor
->>>>>>> c4ec0fb6 (.)
-=======
-https://spatie.be/docs/laravel-event-sourcing/v7/using-reactors/writing-your-first-reactor
->>>>>>> edc8a701 (.)
 
 
 Li utilizzi quando vuoi eseguire delle azioni solo quando si verifica l'evento originale. Non vuoi fare questo lavoro quando riproduci gli eventi.  

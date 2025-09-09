@@ -13,15 +13,7 @@
 - Manutenzione impossibile
 
 **Dopo il refactor:**
-<<<<<<< HEAD
-<<<<<<< HEAD
 - ✅ **1 file centralizzato**: `/laravel/Modules/Xot/docs/phpstan-consolidated.md`
-=======
-- ✅ **1 file centralizzato**: `/laravel/Modules/Xot/project_docs/phpstan-consolidated.md`
->>>>>>> c4ec0fb6 (.)
-=======
-- ✅ **1 file centralizzato**: `/laravel/Modules/Xot/docs/phpstan-consolidated.md`
->>>>>>> edc8a701 (.)
 - ✅ **99% riduzione duplicazioni**
 - ✅ **Single Source of Truth** implementato
 
@@ -45,15 +37,7 @@
 - Standard inconsistenti
 
 **Dopo il refactor:**
-<<<<<<< HEAD
-<<<<<<< HEAD
 - ✅ **1 file centralizzato**: `/laravel/Modules/Xot/docs/translations-consolidated.md`
-=======
-- ✅ **1 file centralizzato**: `/laravel/Modules/Xot/project_docs/translations-consolidated.md`
->>>>>>> c4ec0fb6 (.)
-=======
-- ✅ **1 file centralizzato**: `/laravel/Modules/Xot/docs/translations-consolidated.md`
->>>>>>> edc8a701 (.)
 - ✅ **99% riduzione duplicazioni**
 - ✅ **Regole universali** per tutti i moduli
 
@@ -74,15 +58,7 @@
 - Best practices frammentate
 
 **Dopo il refactor:**
-<<<<<<< HEAD
-<<<<<<< HEAD
 - ✅ **1 file centralizzato**: `/laravel/Modules/Xot/docs/migrations-consolidated.md`
-=======
-- ✅ **1 file centralizzato**: `/laravel/Modules/Xot/project_docs/migrations-consolidated.md`
->>>>>>> c4ec0fb6 (.)
-=======
-- ✅ **1 file centralizzato**: `/laravel/Modules/Xot/docs/migrations-consolidated.md`
->>>>>>> edc8a701 (.)
 - ✅ **96% riduzione duplicazioni**
 - ✅ **Procedure universali** standardizzate
 
@@ -145,15 +121,7 @@
 
 ### Documentazione Tecnica Centralizzata
 ```
-<<<<<<< HEAD
-<<<<<<< HEAD
 /laravel/Modules/Xot/docs/
-=======
-/laravel/Modules/Xot/project_docs/
->>>>>>> c4ec0fb6 (.)
-=======
-/laravel/Modules/Xot/docs/
->>>>>>> edc8a701 (.)
 ├── phpstan-consolidated.md          # TUTTE le regole PHPStan
 ├── translations-consolidated.md     # TUTTE le regole traduzioni
 ├── migrations-consolidated.md       # TUTTE le regole migrazioni
@@ -170,15 +138,7 @@
 
 ### Documentazione Moduli (Solo Specifiche)
 ```
-<<<<<<< HEAD
-<<<<<<< HEAD
 /laravel/Modules/{Module}/docs/
-=======
-/laravel/Modules/{Module}/project_docs/
->>>>>>> c4ec0fb6 (.)
-=======
-/laravel/Modules/{Module}/docs/
->>>>>>> edc8a701 (.)
 ├── README.md                        # Overview modulo
 ├── api.md                          # API specifiche modulo
 └── features/                       # Funzionalità specifiche

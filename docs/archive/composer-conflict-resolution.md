@@ -10,12 +10,4 @@
 - Conservazione della versione di `filament/filament`: `"^3.3"`
 
 ## Collegamento alla doc root
-<<<<<<< HEAD
-<<<<<<< HEAD
 Vedi `/docs/xot_conflict_links.md` per la mappatura dei file documentati localmente e i riferimenti incrociati.
-=======
-Vedi `/project_docs/xot_conflict_links.md` per la mappatura dei file documentati localmente e i riferimenti incrociati.
->>>>>>> c4ec0fb6 (.)
-=======
-Vedi `/docs/xot_conflict_links.md` per la mappatura dei file documentati localmente e i riferimenti incrociati.
->>>>>>> edc8a701 (.)

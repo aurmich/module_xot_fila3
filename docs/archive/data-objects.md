@@ -77,14 +77,6 @@
 
 ## Collegamenti
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 - [Data Objects Patient](../Patient/docs/data-objects.md)
-=======
-- [Data Objects Patient](../Patient/project_docs/data-objects.md)
->>>>>>> c4ec0fb6 (.)
-=======
-- [Data Objects Patient](../Patient/docs/data-objects.md)
->>>>>>> edc8a701 (.)
 - [Best Practices](./best-practices.md)
 - [Convenzioni di Codice](./coding-standards.md) 

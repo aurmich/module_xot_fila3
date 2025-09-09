@@ -4,10 +4,6 @@ declare(strict_types=1);
 
 namespace Modules\Xot\Actions\Model;
 
-<<<<<<< HEAD
-use Doctrine\DBAL\Schema\Index;
-=======
->>>>>>> c4ec0fb6 (.)
 use Illuminate\Database\Eloquent\Model;
 use Spatie\QueueableAction\QueueableAction;
 
@@ -20,23 +16,6 @@ class GetSicureArrayByModelAction
      */
     public function execute(Model $model): array
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
-        try{
-            return $model->attributesToArray(); //"" is not a valid backing value for enum Modules\SaluteOra\Enums\OccurrenceFrequencyEnum
-        }catch(\ValueError $e){
-            $data=[];
-            foreach($model->getAttributes() as $key=>$value){
-                try{
-                    $data[$key]=$this->$key;
-                    /** @phpstan-ignore-next-line */
-                }catch(\ValueError $e){
-                    
-                }
-            }
-           
-=======
-=======
         try {
             return $model->attributesToArray(); // "" is not a valid backing value for enum Modules\SaluteOra\Enums\OccurrenceFrequencyEnum
         } catch (\ValueError $e) {
@@ -49,9 +28,7 @@ class GetSicureArrayByModelAction
 
                 }
             }
->>>>>>> edc8a701 (.)
 
->>>>>>> c4ec0fb6 (.)
             return $data;
         }
     }

@@ -8,10 +8,6 @@ Il modulo Performance gestisce le valutazioni delle performance e la distribuzio
 
 Il modulo Performance mantiene documentazione dettagliata nelle seguenti aree:
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> edc8a701 (.)
 - [Struttura e Funzionamento Generale](/var/www/html/_bases/base_ptvx_fila3_mono/laravel/Modules/Performance/docs/readme.md)
 - [Struttura e Funzionamento Generale](/var/www/html/_bases/base_ptvx_fila3_mono/laravel/Modules/Performance/docs/README.md)
 - [Modelli](/var/www/html/_bases/base_ptvx_fila3_mono/laravel/Modules/Performance/docs/models.md)
@@ -21,20 +17,6 @@ Il modulo Performance mantiene documentazione dettagliata nelle seguenti aree:
 - [Raw SQL vs Eloquent](/var/www/html/_bases/base_ptvx_fila3_mono/laravel/Modules/Performance/docs/raw-vs-eloquent.md)
 - [Redistribuzione Resti per Valutatore](/var/www/html/_bases/base_ptvx_fila3_mono/laravel/Modules/Performance/docs/redistribuire-resti-per-valutatore.md)
 - [Convenzioni del Modulo](/var/www/html/_bases/base_ptvx_fila3_mono/laravel/Modules/Performance/docs/convenzioni-modulo.md)
-<<<<<<< HEAD
-=======
-- [Struttura e Funzionamento Generale](/var/www/html/_bases/base_ptvx_fila3_mono/laravel/Modules/Performance/project_docs/readme.md)
-- [Struttura e Funzionamento Generale](/var/www/html/_bases/base_ptvx_fila3_mono/laravel/Modules/Performance/project_docs/README.md)
-- [Modelli](/var/www/html/_bases/base_ptvx_fila3_mono/laravel/Modules/Performance/project_docs/models.md)
-- [Flusso di Calcolo Performance Organizzativa](/var/www/html/_bases/base_ptvx_fila3_mono/laravel/Modules/Performance/project_docs/organizzativa-flow.md)
-- [Modelli Performance Organizzativa](/var/www/html/_bases/base_ptvx_fila3_mono/laravel/Modules/Performance/project_docs/organizzativa-models.md)
-- [Raccomandazioni PHPStan](/var/www/html/_bases/base_ptvx_fila3_mono/laravel/Modules/Performance/project_docs/organizzativa-phpstan-recommendations.md)
-- [Raw SQL vs Eloquent](/var/www/html/_bases/base_ptvx_fila3_mono/laravel/Modules/Performance/project_docs/raw-vs-eloquent.md)
-- [Redistribuzione Resti per Valutatore](/var/www/html/_bases/base_ptvx_fila3_mono/laravel/Modules/Performance/project_docs/redistribuire-resti-per-valutatore.md)
-- [Convenzioni del Modulo](/var/www/html/_bases/base_ptvx_fila3_mono/laravel/Modules/Performance/project_docs/convenzioni-modulo.md)
->>>>>>> c4ec0fb6 (.)
-=======
->>>>>>> edc8a701 (.)
 
 ## Risorse Filament
 
@@ -52,20 +34,7 @@ Il modulo implementa diverse risorse Filament per la gestione delle performance:
 
 ## Collegamenti alle Linee Guida Generali
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> edc8a701 (.)
 - [Convenzioni di Namespace](/var/www/html/_bases/base_ptvx_fila3_mono/laravel/Modules/Xot/docs/NAMESPACE-CONVENTIONS.md)
 - [Convenzioni di Naming](/var/www/html/_bases/base_ptvx_fila3_mono/laravel/Modules/Xot/docs/naming-conventions.md)
 - [Guide PHPStan Livello 9](/var/www/html/_bases/base_ptvx_fila3_mono/laravel/Modules/Xot/docs/PHPSTAN-LEVEL9-GUIDE.md)
 - [QueueableActions](/var/www/html/_bases/base_ptvx_fila3_mono/laravel/Modules/Xot/docs/queueable-actions.md)
-<<<<<<< HEAD
-=======
-- [Convenzioni di Namespace](/var/www/html/_bases/base_ptvx_fila3_mono/laravel/Modules/Xot/project_docs/NAMESPACE-CONVENTIONS.md)
-- [Convenzioni di Naming](/var/www/html/_bases/base_ptvx_fila3_mono/laravel/Modules/Xot/project_docs/naming-conventions.md)
-- [Guide PHPStan Livello 9](/var/www/html/_bases/base_ptvx_fila3_mono/laravel/Modules/Xot/project_docs/PHPSTAN-LEVEL9-GUIDE.md)
-- [QueueableActions](/var/www/html/_bases/base_ptvx_fila3_mono/laravel/Modules/Xot/project_docs/queueable-actions.md)
->>>>>>> c4ec0fb6 (.)
-=======
->>>>>>> edc8a701 (.)

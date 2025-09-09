@@ -41,18 +41,8 @@ class MyWidget extends XotBaseWidget
 4. Mantenere aggiornate le dipendenze Livewire
 
 ## Collegamenti Correlati
-<<<<<<< HEAD
-<<<<<<< HEAD
 - [Documentazione Livewire](https://livewire.laravel.com/docs/security)
 - [Documentazione Laravel CSRF](https://laravel.com/docs/csrf)
-=======
-- [Documentazione Livewire](https://livewire.laravel.com/project_docs/security)
-- [Documentazione Laravel CSRF](https://laravel.com/project_docs/csrf)
->>>>>>> c4ec0fb6 (.)
-=======
-- [Documentazione Livewire](https://livewire.laravel.com/docs/security)
-- [Documentazione Laravel CSRF](https://laravel.com/docs/csrf)
->>>>>>> edc8a701 (.)
 - [XotBaseWidget Implementation](../xot_base_classes.md)
 
 ## Esempio di Correzione

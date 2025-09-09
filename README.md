@@ -18,15 +18,7 @@
 [![Traits](https://img.shields.io/badge/traits-15+-blue.svg)](app/Models/Traits/)
 
 <div align="center">
-<<<<<<< HEAD
-<<<<<<< HEAD
   <img src="https://raw.githubusercontent.com/laraxot/xot/main/docs/assets/xot-banner.png" alt="Xot Banner" width="800">
-=======
-  <img src="https://raw.githubusercontent.com/laraxot/xot/main/project_docs/assets/xot-banner.png" alt="Xot Banner" width="800">
->>>>>>> c4ec0fb6 (.)
-=======
-  <img src="https://raw.githubusercontent.com/laraxot/xot/main/docs/assets/xot-banner.png" alt="Xot Banner" width="800">
->>>>>>> edc8a701 (.)
   <br>
   <em>🎯 Il modulo base che POTENZIA tutti gli altri moduli Laraxot!</em>
 </div>

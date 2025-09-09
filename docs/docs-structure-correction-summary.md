@@ -12,41 +12,17 @@ Durante l'audit del sistema SaluteOra, è stata identificata una **violazione cr
 **Stato**: ✅ CORRETTA - Cartella eliminata, documentazione spostata nei moduli
 
 **File migrati**:
-<<<<<<< HEAD
-<<<<<<< HEAD
 - `modularity-hardcoded-names.md` → `laravel/Modules/Notify/docs/`
-=======
-- `modularity-hardcoded-names.md` → `laravel/Modules/Notify/project_docs/`
->>>>>>> c4ec0fb6 (.)
-=======
-- `modularity-hardcoded-names.md` → `laravel/Modules/Notify/docs/`
->>>>>>> edc8a701 (.)
 - `modularity-audit-summary.md` → Contenuto integrato nei moduli specifici
 - Altri documenti analizzati e spostati nei moduli appropriati
 
 ### 2. ❌ Cartella `/laravel/docs` nella Root Laravel
-<<<<<<< HEAD
-<<<<<<< HEAD
 **Problema**: Cartella `laravel/docs/` contenente 30+ file di documentazione
-=======
-**Problema**: Cartella `laravel/project_docs/` contenente 30+ file di documentazione
->>>>>>> c4ec0fb6 (.)
-=======
-**Problema**: Cartella `laravel/docs/` contenente 30+ file di documentazione
->>>>>>> edc8a701 (.)
 **Impatto**: Violazione architettura modulare, documentazione non co-locata
 **Stato**: ✅ CORRETTA - Cartella eliminata, documentazione spostata nei moduli
 
 **File migrati**:
-<<<<<<< HEAD
-<<<<<<< HEAD
 - `eloquent-unit-tests.md` → `laravel/Modules/SaluteMo/docs/testing/`
-=======
-- `eloquent-unit-tests.md` → `laravel/Modules/SaluteMo/project_docs/testing/`
->>>>>>> c4ec0fb6 (.)
-=======
-- `eloquent-unit-tests.md` → `laravel/Modules/SaluteMo/docs/testing/`
->>>>>>> edc8a701 (.)
 - Altri documenti analizzati e spostati nei moduli appropriati
 
 ## Regola Critica Implementata
@@ -54,8 +30,6 @@ Durante l'audit del sistema SaluteOra, è stata identificata una **violazione cr
 ### **Struttura Cartelle Docs - Mai Cartelle Docs nella Root**
 
 **REGOLA ASSOLUTAMENTE VIETATA**:
-<<<<<<< HEAD
-<<<<<<< HEAD
 - ❌ `/var/www/html/_bases/base_{nome_progetto}/docs/` (root progetto)
 - ❌ `/var/www/html/_bases/base_{nome_progetto}/laravel/docs/` (root Laravel)
 
@@ -63,24 +37,6 @@ Durante l'audit del sistema SaluteOra, è stata identificata una **violazione cr
 - ✅ `laravel/Modules/{ModuleName}/docs/` - Documentazione del modulo
 - ✅ `laravel/Modules/{ModuleName}/docs/{categoria}/` - Sottocategorie
 - ✅ `laravel/Modules/{ModuleName}/docs/README.md` - Documentazione principale
-=======
-- ❌ `/var/www/html/_bases/base_{nome_progetto}/project_docs/` (root progetto)
-- ❌ `/var/www/html/_bases/base_{nome_progetto}/laravel/project_docs/` (root Laravel)
-
-**STRUTTURA CORRETTA OBBLIGATORIA**:
-- ✅ `laravel/Modules/{ModuleName}/project_docs/` - Documentazione del modulo
-- ✅ `laravel/Modules/{ModuleName}/project_docs/{categoria}/` - Sottocategorie
-- ✅ `laravel/Modules/{ModuleName}/project_docs/README.md` - Documentazione principale
->>>>>>> c4ec0fb6 (.)
-=======
-- ❌ `/var/www/html/_bases/base_{nome_progetto}/docs/` (root progetto)
-- ❌ `/var/www/html/_bases/base_{nome_progetto}/laravel/docs/` (root Laravel)
-
-**STRUTTURA CORRETTA OBBLIGATORIA**:
-- ✅ `laravel/Modules/{ModuleName}/docs/` - Documentazione del modulo
-- ✅ `laravel/Modules/{ModuleName}/docs/{categoria}/` - Sottocategorie
-- ✅ `laravel/Modules/{ModuleName}/docs/README.md` - Documentazione principale
->>>>>>> edc8a701 (.)
 
 ## Motivazioni Critiche
 
@@ -128,10 +84,6 @@ Durante l'audit del sistema SaluteOra, è stata identificata una **violazione cr
 ```
 laravel/
 ├── Modules/
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> edc8a701 (.)
 │   ├── Notify/docs/           # ✅ Documentazione modulo Notify
 │   ├── User/docs/             # ✅ Documentazione modulo User
 │   ├── UI/docs/               # ✅ Documentazione modulo UI
@@ -146,7 +98,6 @@ laravel/
 │   ├── Job/docs/              # ✅ Documentazione modulo Job
 │   ├── SaluteMo/docs/         # ✅ Documentazione modulo SaluteMo
 │   └── SaluteOra/docs/        # ✅ Documentazione modulo SaluteOra
-<<<<<<< HEAD
 ├── Themes/
 │   ├── One/docs/              # ✅ Documentazione tema One
 │   └── Two/docs/              # ✅ Documentazione tema Two
@@ -155,37 +106,6 @@ laravel/
 # ❌ NON ESISTONO PIÙ:
 # ./docs/                      # Root progetto
 # ./laravel/docs/              # Root Laravel
-=======
-│   ├── Notify/project_docs/           # ✅ Documentazione modulo Notify
-│   ├── User/project_docs/             # ✅ Documentazione modulo User
-│   ├── UI/project_docs/               # ✅ Documentazione modulo UI
-│   ├── Xot/project_docs/              # ✅ Documentazione modulo Xot
-│   ├── Geo/project_docs/              # ✅ Documentazione modulo Geo
-│   ├── Media/project_docs/            # ✅ Documentazione modulo Media
-│   ├── Cms/project_docs/              # ✅ Documentazione modulo Cms
-│   ├── Tenant/project_docs/           # ✅ Documentazione modulo Tenant
-│   ├── Gdpr/project_docs/             # ✅ Documentazione modulo Gdpr
-│   ├── Lang/project_docs/             # ✅ Documentazione modulo Lang
-│   ├── Activity/project_docs/         # ✅ Documentazione modulo Activity
-│   ├── Job/project_docs/              # ✅ Documentazione modulo Job
-│   ├── SaluteMo/project_docs/         # ✅ Documentazione modulo SaluteMo
-│   └── SaluteOra/project_docs/        # ✅ Documentazione modulo SaluteOra
-=======
->>>>>>> edc8a701 (.)
-├── Themes/
-│   ├── One/docs/              # ✅ Documentazione tema One
-│   └── Two/docs/              # ✅ Documentazione tema Two
-└── archive/docs/               # ✅ Archivio (vuoto, appropriato)
-
-# ❌ NON ESISTONO PIÙ:
-<<<<<<< HEAD
-# ./project_docs/                      # Root progetto
-# ./laravel/project_docs/              # Root Laravel
->>>>>>> c4ec0fb6 (.)
-=======
-# ./docs/                      # Root progetto
-# ./laravel/docs/              # Root Laravel
->>>>>>> edc8a701 (.)
 ```
 
 ## Regole e Memorie Implementate
@@ -272,25 +192,11 @@ find laravel/Themes -name "docs" -type d
 - [Memoria Cursor](../../../.cursor/memories/docs-structure-violation.mdc)
 
 ### **Documentazione Moduli**:
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> edc8a701 (.)
 - [Modulo Notify](../Notify/docs/)
 - [Modulo User](../User/docs/)
 - [Modulo UI](../UI/docs/)
 - [Modulo SaluteMo](../SaluteMo/docs/)
 - [Modulo SaluteOra](../SaluteOra/docs/)
-<<<<<<< HEAD
-=======
-- [Modulo Notify](../Notify/project_docs/)
-- [Modulo User](../User/project_docs/)
-- [Modulo UI](../UI/project_docs/)
-- [Modulo SaluteMo](../SaluteMo/project_docs/)
-- [Modulo SaluteOra](../SaluteOra/project_docs/)
->>>>>>> c4ec0fb6 (.)
-=======
->>>>>>> edc8a701 (.)
 
 ### **Documentazione Correlata**:
 - [Regole Modularità](modularity-hardcoded-names.md)

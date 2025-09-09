@@ -1,15 +1,7 @@
 # Regole Generali di Sviluppo del Progetto
 
 ## Collegamenti
-<<<<<<< HEAD
-<<<<<<< HEAD
 - [Documentazione generale progetto](/docs/README.md)
-=======
-- [Documentazione generale progetto](/project_docs/README.md)
->>>>>>> c4ec0fb6 (.)
-=======
-- [Documentazione generale progetto](/docs/README.md)
->>>>>>> edc8a701 (.)
 - [Regole Filament](filament-best-practices.md)
 - [Convenzioni Namespace](namespace-conventions.md)
 - [Standard di Codice](code-standards.md)
@@ -257,15 +249,7 @@ protected function casts(): array
 
 ### Regola Fondamentale
 - **docs/ (root)**: Solo informazioni generali del progetto + collegamenti ai moduli
-<<<<<<< HEAD
-<<<<<<< HEAD
 - **Modules/{Module}/docs/**: Documentazione specifica di ogni modulo
-=======
-- **Modules/{Module}/project_docs/**: Documentazione specifica di ogni modulo
->>>>>>> c4ec0fb6 (.)
-=======
-- **Modules/{Module}/docs/**: Documentazione specifica di ogni modulo
->>>>>>> edc8a701 (.)
 - **Collegamenti bidirezionali**: Root ↔ Moduli per navigazione fluida
 
 ### Naming Convention Docs
@@ -281,15 +265,7 @@ docs/                           # Generale + collegamenti
 ├── modules.md                  # Link ai moduli
 └── development/                # Guide sviluppo generali
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 Modules/{Module}/docs/          # Specifica modulo
-=======
-Modules/{Module}/project_docs/          # Specifica modulo
->>>>>>> c4ec0fb6 (.)
-=======
-Modules/{Module}/docs/          # Specifica modulo
->>>>>>> edc8a701 (.)
 ├── index.md                    # Indice del modulo
 ├── feature-name.md            # Documentazione feature specifica
 ├── api/                       # Documentazione API
@@ -361,15 +337,7 @@ Progettare sempre pensando che il codice dovrà superare:
 ### File da Aggiornare Sempre
 - `.cursor/rules/`
 - `.windsurf/rules/`
-<<<<<<< HEAD
-<<<<<<< HEAD
 - `Modules/Xot/docs/`
-=======
-- `Modules/Xot/project_docs/`
->>>>>>> c4ec0fb6 (.)
-=======
-- `Modules/Xot/docs/`
->>>>>>> edc8a701 (.)
 - Memoria personale
 - Collegamenti bidirezionali
 

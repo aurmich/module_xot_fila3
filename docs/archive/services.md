@@ -234,18 +234,8 @@ return [
 
    - Testare i casi limite 
 ## Collegamenti tra versioni di services.md
-<<<<<<< HEAD
-<<<<<<< HEAD
 * [services.md](../../../Xot/docs/services.md)
 * [services.md](../../../Tenant/docs/it/config/services.md)
-=======
-* [services.md](../../../Xot/project_docs/services.md)
-* [services.md](../../../Tenant/project_docs/it/config/services.md)
->>>>>>> c4ec0fb6 (.)
-=======
-* [services.md](../../../Xot/docs/services.md)
-* [services.md](../../../Tenant/docs/it/config/services.md)
->>>>>>> edc8a701 (.)
 
 
 ### Versione Incoming

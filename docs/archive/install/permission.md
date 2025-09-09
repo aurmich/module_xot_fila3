@@ -169,18 +169,8 @@ return [
 
 
 ## Collegamenti tra versioni di permission.md
-<<<<<<< HEAD
-<<<<<<< HEAD
 * [permission.md](../../../Xot/docs/install/permission.md)
 * [permission.md](../../../Tenant/docs/it/config/permission.md)
-=======
-* [permission.md](../../../Xot/project_docs/install/permission.md)
-* [permission.md](../../../Tenant/project_docs/it/config/permission.md)
->>>>>>> c4ec0fb6 (.)
-=======
-* [permission.md](../../../Xot/docs/install/permission.md)
-* [permission.md](../../../Tenant/docs/it/config/permission.md)
->>>>>>> edc8a701 (.)
 
 
 ### Versione Incoming

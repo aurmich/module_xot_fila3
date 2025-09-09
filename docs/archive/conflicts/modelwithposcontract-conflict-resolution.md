@@ -42,12 +42,4 @@ La correzione è stata verificata assicurandosi che:
 ## Collegamenti
 
 - [Documentazione sulla Risoluzione dei Conflitti](../RISOLUZIONE_CONFLITTI_MERGE.md)
-<<<<<<< HEAD
-<<<<<<< HEAD
 - [Best Practices per la Gestione dei Conflitti Git](../../../../docs/risoluzione_conflitti_git.md) 
-=======
-- [Best Practices per la Gestione dei Conflitti Git](../../../../project_docs/risoluzione_conflitti_git.md) 
->>>>>>> c4ec0fb6 (.)
-=======
-- [Best Practices per la Gestione dei Conflitti Git](../../../../docs/risoluzione_conflitti_git.md) 
->>>>>>> edc8a701 (.)

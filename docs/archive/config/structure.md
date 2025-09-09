@@ -149,10 +149,6 @@ return array_merge(require __DIR__.'/../vendor/module/config/module.php', [
 - [Performance](../performance/README.md) 
 
 ## Collegamenti tra versioni di structure.md
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> edc8a701 (.)
 * [structure.md](bashscripts/docs/structure.md)
 * [structure.md](../../../Gdpr/docs/structure.md)
 * [structure.md](../../../Notify/docs/structure.md)
@@ -169,25 +165,4 @@ return array_merge(require __DIR__.'/../vendor/module/config/module.php', [
 * [structure.md](../../../Cms/docs/structure.md)
 * [structure.md](../../../Cms/docs/themes/structure.md)
 * [structure.md](../../../Cms/docs/components/structure.md)
-<<<<<<< HEAD
-=======
-* [structure.md](bashscripts/project_docs/structure.md)
-* [structure.md](../../../Gdpr/project_docs/structure.md)
-* [structure.md](../../../Notify/project_docs/structure.md)
-* [structure.md](../../../Xot/project_docs/structure.md)
-* [structure.md](../../../Xot/project_docs/base/structure.md)
-* [structure.md](../../../Xot/project_docs/config/structure.md)
-* [structure.md](../../../User/project_docs/structure.md)
-* [structure.md](../../../UI/project_docs/structure.md)
-* [structure.md](../../../Lang/project_docs/structure.md)
-* [structure.md](../../../Job/project_docs/structure.md)
-* [structure.md](../../../Media/project_docs/structure.md)
-* [structure.md](../../../Tenant/project_docs/structure.md)
-* [structure.md](../../../Activity/project_docs/structure.md)
-* [structure.md](../../../Cms/project_docs/structure.md)
-* [structure.md](../../../Cms/project_docs/themes/structure.md)
-* [structure.md](../../../Cms/project_docs/components/structure.md)
->>>>>>> c4ec0fb6 (.)
-=======
->>>>>>> edc8a701 (.)
 

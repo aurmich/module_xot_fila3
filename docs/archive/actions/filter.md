@@ -16,31 +16,13 @@ Il file `GetYearFilter.php` presentava marker di conflitto (``) e duplicazioni d
 - Verificata la compatibilità del codice con PHPStan livello 9.
 
 ## Collegamenti
-<<<<<<< HEAD
-<<<<<<< HEAD
 - [Doc root Xot](/docs/index.md)
-=======
-- [Doc root Xot](/project_docs/index.md)
->>>>>>> c4ec0fb6 (.)
-=======
-- [Doc root Xot](/docs/index.md)
->>>>>>> edc8a701 (.)
 
 ---
 
 *Ultimo aggiornamento: 2025-04-16*
 
 ## Collegamenti tra versioni di filter.md
-<<<<<<< HEAD
-<<<<<<< HEAD
 * [filter.md](../../../Xot/docs/actions/filter.md)
 * [filter.md](../../../Xot/docs/links/filter.md)
-=======
-* [filter.md](../../../Xot/project_docs/actions/filter.md)
-* [filter.md](../../../Xot/project_docs/links/filter.md)
->>>>>>> c4ec0fb6 (.)
-=======
-* [filter.md](../../../Xot/docs/actions/filter.md)
-* [filter.md](../../../Xot/docs/links/filter.md)
->>>>>>> edc8a701 (.)
 

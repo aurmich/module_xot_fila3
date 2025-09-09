@@ -32,26 +32,10 @@ TextInput::make('first_name') // la label viene risolta automaticamente
 ```
 
 ## Collegamenti
-<<<<<<< HEAD
-<<<<<<< HEAD
 - [Doc specifica Patient](../../Patient/docs/langserviceprovider-labels.md)
-=======
-- [Doc specifica Patient](../../Patient/project_docs/langserviceprovider-labels.md)
->>>>>>> c4ec0fb6 (.)
-=======
-- [Doc specifica Patient](../../Patient/docs/langserviceprovider-labels.md)
->>>>>>> edc8a701 (.)
 
 **Questa regola è obbligatoria per tutti i moduli.**
 
 ## Collegamenti tra versioni di langserviceprovider-labels.md
-<<<<<<< HEAD
-<<<<<<< HEAD
 * [langserviceprovider-labels.md](../../Patient/docs/langserviceprovider-labels.md)
-=======
-* [langserviceprovider-labels.md](../../Patient/project_docs/langserviceprovider-labels.md)
->>>>>>> c4ec0fb6 (.)
-=======
-* [langserviceprovider-labels.md](../../Patient/docs/langserviceprovider-labels.md)
->>>>>>> edc8a701 (.)
 

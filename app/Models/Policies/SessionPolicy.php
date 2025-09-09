@@ -4,13 +4,8 @@ declare(strict_types=1);
 
 namespace Modules\Xot\Models\Policies;
 
-<<<<<<< HEAD
-use Modules\Xot\Models\Session;
-use Modules\Xot\Contracts\UserContract;
-=======
 use Modules\Xot\Contracts\UserContract;
 use Modules\Xot\Models\Session;
->>>>>>> c4ec0fb6 (.)
 
 class SessionPolicy extends XotBasePolicy
 {
@@ -69,8 +64,4 @@ class SessionPolicy extends XotBasePolicy
     {
         return $user->hasPermissionTo('session.forceDelete');
     }
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> c4ec0fb6 (.)

@@ -126,8 +126,6 @@ php artisan lang:check
 ## Documentazione Aggiornata
 
 ### Modulo Geo
-<<<<<<< HEAD
-<<<<<<< HEAD
 - [Conflict Resolution](laravel/Modules/Geo/docs/conflict-resolution.md)
 
 ### Modulo User
@@ -135,22 +133,6 @@ php artisan lang:check
 
 ### Modulo Xot
 - [Git Conflicts Resolution](laravel/Modules/Xot/docs/git-conflicts-resolution-2025-01-06.md)
-=======
-- [Conflict Resolution](laravel/Modules/Geo/project_docs/conflict-resolution.md)
-=======
-- [Conflict Resolution](laravel/Modules/Geo/docs/conflict-resolution.md)
->>>>>>> edc8a701 (.)
-
-### Modulo User
-- [Theme Translation Conflicts](laravel/Modules/User/docs/theme-translation-conflicts-resolution.md)
-
-### Modulo Xot
-<<<<<<< HEAD
-- [Git Conflicts Resolution](laravel/Modules/Xot/project_docs/git-conflicts-resolution-2025-01-06.md)
->>>>>>> c4ec0fb6 (.)
-=======
-- [Git Conflicts Resolution](laravel/Modules/Xot/docs/git-conflicts-resolution-2025-01-06.md)
->>>>>>> edc8a701 (.)
 
 ## Best Practices Applicate
 
@@ -205,8 +187,6 @@ php artisan lang:check
 ## Collegamenti Correlati
 
 ### Documentazione Moduli
-<<<<<<< HEAD
-<<<<<<< HEAD
 - [Geo Conflict Resolution](laravel/Modules/Geo/docs/conflict-resolution.md)
 - [User Theme Conflicts](laravel/Modules/User/docs/theme-translation-conflicts-resolution.md)
 
@@ -214,24 +194,6 @@ php artisan lang:check
 - [Translation Standards](../../docs/translation-standards.md)
 - [PHPStan Guidelines](../../docs/phpstan_usage.md)
 - [Git Best Practices](../../docs/git-best-practices.md)
-=======
-- [Geo Conflict Resolution](laravel/Modules/Geo/project_docs/conflict-resolution.md)
-- [User Theme Conflicts](laravel/Modules/User/project_docs/theme-translation-conflicts-resolution.md)
-
-### Documentazione Generale
-- [Translation Standards](../../project_docs/translation-standards.md)
-- [PHPStan Guidelines](../../project_docs/phpstan_usage.md)
-- [Git Best Practices](../../project_docs/git-best-practices.md)
->>>>>>> c4ec0fb6 (.)
-=======
-- [Geo Conflict Resolution](laravel/Modules/Geo/docs/conflict-resolution.md)
-- [User Theme Conflicts](laravel/Modules/User/docs/theme-translation-conflicts-resolution.md)
-
-### Documentazione Generale
-- [Translation Standards](../../docs/translation-standards.md)
-- [PHPStan Guidelines](../../docs/phpstan_usage.md)
-- [Git Best Practices](../../docs/git-best-practices.md)
->>>>>>> edc8a701 (.)
 
 ---
 

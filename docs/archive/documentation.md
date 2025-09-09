@@ -40,8 +40,6 @@ Modules/[Nome]/
    - Verificare la correttezza
 
 ## Collegamenti
-<<<<<<< HEAD
-<<<<<<< HEAD
 - [Indice della Documentazione](../docs/INDEX.md)
 - [Regole del Progetto](../docs/RULES.md)
 - [Struttura dei Moduli](../docs/STRUCTURE.md) 
@@ -50,24 +48,4 @@ Modules/[Nome]/
 * [documentation.md](../../../Xot/docs/documentation.md)
 * [documentation.md](../../../Xot/docs/guidelines/documentation.md)
 * [documentation.md](../../../Cms/docs/roadmap/features/documentation.md)
-=======
-- [Indice della Documentazione](../project_docs/INDEX.md)
-- [Regole del Progetto](../project_docs/RULES.md)
-- [Struttura dei Moduli](../project_docs/STRUCTURE.md) 
-## Collegamenti tra versioni di documentation.md
-* [documentation.md](docs/rules/documentation.md)
-* [documentation.md](../../../Xot/project_docs/documentation.md)
-* [documentation.md](../../../Xot/project_docs/guidelines/documentation.md)
-* [documentation.md](../../../Cms/project_docs/roadmap/features/documentation.md)
->>>>>>> c4ec0fb6 (.)
-=======
-- [Indice della Documentazione](../docs/INDEX.md)
-- [Regole del Progetto](../docs/RULES.md)
-- [Struttura dei Moduli](../docs/STRUCTURE.md) 
-## Collegamenti tra versioni di documentation.md
-* [documentation.md](docs/rules/documentation.md)
-* [documentation.md](../../../Xot/docs/documentation.md)
-* [documentation.md](../../../Xot/docs/guidelines/documentation.md)
-* [documentation.md](../../../Cms/docs/roadmap/features/documentation.md)
->>>>>>> edc8a701 (.)
 

@@ -25,29 +25,13 @@ base_predict_fila3_mono/
 
 ### 1. Livelli di Documentazione
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 - **Documentazione Globale** (`/docs/`)
-=======
-- **Documentazione Globale** (`/project_docs/`)
->>>>>>> c4ec0fb6 (.)
-=======
-- **Documentazione Globale** (`/docs/`)
->>>>>>> edc8a701 (.)
   - Contiene le linee guida generali
   - Descrive l'architettura del sistema
   - Definisce i pattern comuni
   - Stabilisce le convenzioni di base
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 - **Documentazione dei Moduli** (`Modules/[ModuleName]/docs/`)
-=======
-- **Documentazione dei Moduli** (`Modules/[ModuleName]/project_docs/`)
->>>>>>> c4ec0fb6 (.)
-=======
-- **Documentazione dei Moduli** (`Modules/[ModuleName]/docs/`)
->>>>>>> edc8a701 (.)
   - Specifica per ogni modulo
   - Contiene regole e pattern specifici
   - Documenta casi d'uso particolari
@@ -75,27 +59,11 @@ Quando si identifica una nuova regola o pattern importante:
 
 2. **Aggiornamento Documentazione**
    - Se regola specifica del modulo:
-<<<<<<< HEAD
-<<<<<<< HEAD
      1. Aggiornare `Modules/[ModuleName]/docs/`
      2. Se rilevante, aggiungere riferimento in `/docs/`
 
    - Se regola globale:
      1. Aggiornare `/docs/`
-=======
-     1. Aggiornare `Modules/[ModuleName]/project_docs/`
-     2. Se rilevante, aggiungere riferimento in `/project_docs/`
-
-   - Se regola globale:
-     1. Aggiornare `/project_docs/`
->>>>>>> c4ec0fb6 (.)
-=======
-     1. Aggiornare `Modules/[ModuleName]/docs/`
-     2. Se rilevante, aggiungere riferimento in `/docs/`
-
-   - Se regola globale:
-     1. Aggiornare `/docs/`
->>>>>>> edc8a701 (.)
      2. Aggiornare la documentazione dei moduli interessati
 
 3. **Aggiornamento Regole AI**

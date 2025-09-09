@@ -120,41 +120,17 @@
 
 ### Struttura delle Traduzioni
 1. **Modulo Lang**
-<<<<<<< HEAD
-<<<<<<< HEAD
    - `/laravel/Modules/Lang/docs/`: Documentazione tradotta
-=======
-   - `/laravel/Modules/Lang/project_docs/`: Documentazione tradotta
->>>>>>> c4ec0fb6 (.)
-=======
-   - `/laravel/Modules/Lang/docs/`: Documentazione tradotta
->>>>>>> edc8a701 (.)
    - `/laravel/Modules/Lang/resources/lang/`: File di traduzione
    - Struttura per lingua: `it/`, `en/`, etc.
 
 2. **Moduli con Traduzioni**
    - Ogni modulo ha la sua cartella `docs/`
-<<<<<<< HEAD
-<<<<<<< HEAD
    - Collegamenti bidirezionali con `Lang/docs/`
    - File di traduzione nel modulo `Lang`
 
 3. **Collegamenti Bidirezionali**
    - Ogni file `.md` deve avere un corrispondente in `Lang/docs/`
-=======
-   - Collegamenti bidirezionali con `Lang/project_docs/`
-   - File di traduzione nel modulo `Lang`
-
-3. **Collegamenti Bidirezionali**
-   - Ogni file `.md` deve avere un corrispondente in `Lang/project_docs/`
->>>>>>> c4ec0fb6 (.)
-=======
-   - Collegamenti bidirezionali con `Lang/docs/`
-   - File di traduzione nel modulo `Lang`
-
-3. **Collegamenti Bidirezionali**
-   - Ogni file `.md` deve avere un corrispondente in `Lang/docs/`
->>>>>>> edc8a701 (.)
    - I collegamenti devono essere mantenuti aggiornati
    - Le traduzioni devono essere sincronizzate
 
@@ -166,27 +142,11 @@
 
 5. **Struttura dei File**
    ```
-<<<<<<< HEAD
-<<<<<<< HEAD
    Module/docs/
    ├── it/
    │   └── file.md -> ../../Lang/docs/it/file.md
    └── en/
        └── file.md -> ../../Lang/docs/en/file.md
-=======
-   Module/project_docs/
-=======
-   Module/docs/
->>>>>>> edc8a701 (.)
-   ├── it/
-   │   └── file.md -> ../../Lang/docs/it/file.md
-   └── en/
-<<<<<<< HEAD
-       └── file.md -> ../../Lang/project_docs/en/file.md
->>>>>>> c4ec0fb6 (.)
-=======
-       └── file.md -> ../../Lang/docs/en/file.md
->>>>>>> edc8a701 (.)
    ```
 
 6. **Validazione**
@@ -210,16 +170,6 @@
 
 ## Collegamenti tra versioni di search.md
 * [search.md](docs/rules/search.md)
-<<<<<<< HEAD
-<<<<<<< HEAD
 * [search.md](../../../Xot/docs/features/search.md)
 * [search.md](../../../Xot/docs/rules/search.md)
-=======
-* [search.md](../../../Xot/project_docs/features/search.md)
-* [search.md](../../../Xot/project_docs/rules/search.md)
->>>>>>> c4ec0fb6 (.)
-=======
-* [search.md](../../../Xot/docs/features/search.md)
-* [search.md](../../../Xot/docs/rules/search.md)
->>>>>>> edc8a701 (.)
 

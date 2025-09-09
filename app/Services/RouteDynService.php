@@ -159,24 +159,8 @@ class RouteDynService
         $params_name = self::getParamsName($v, $namespace);
         Assert::isArray($params_name);
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-        $name = isset($v['name']) && is_string($v['name']) ? $v['name'] : '';
-        $opts = [
-            'parameters' => [mb_strtolower($name) => implode('}/{', $params_name)],
-=======
         $opts = [
             'parameters' => [mb_strtolower((string) $v['name']) => implode('}/{', $params_name)],
->>>>>>> b6f6b143 (.)
-=======
-        $opts = [
-            'parameters' => [mb_strtolower((string) $v['name']) => implode('}/{', $params_name)],
->>>>>>> 0d3387f (.)
-=======
-        $opts = [
-            'parameters' => [mb_strtolower((string) $v['name']) => implode('}/{', $params_name)],
->>>>>>> c4ec0fb6 (.)
             'names' => self::prefixedResourceNames(self::getAs($v, $namespace)),
         ];
 
@@ -230,23 +214,7 @@ class RouteDynService
     public static function getMethod(array $v, ?string $namespace): array
     {
         if (isset($v['method'])) {
-<<<<<<< HEAD
-<<<<<<< HEAD
             return Arr::wrap($v['method']);
-=======
-            $wrapped = Arr::wrap($v['method']);
-            // Ensure all elements are strings
-            /** @var array<int, string> $result */
-            $result = [];
-            foreach ($wrapped as $item) {
-                $result[] = (string) $item;
-            }
-
-            return $result;
->>>>>>> c4ec0fb6 (.)
-=======
-            return Arr::wrap($v['method']);
->>>>>>> edc8a701 (.)
         }
 
         return ['get', 'post'];
@@ -334,30 +302,7 @@ class RouteDynService
         $sub_namespace = self::getNamespace($v, $namespace);
         $curr = $curr === null ? $sub_namespace : $curr;
         Assert::isArray($subs = $v['subs']);
-<<<<<<< HEAD
-<<<<<<< HEAD
         self::dynamic_route($subs, $sub_namespace, null, $curr);
-=======
-
-        // Ensure subs is properly typed for dynamic_route
-        /** @var array<int, array<string, mixed>> $typedSubs */
-        $typedSubs = [];
-        foreach ($subs as $index => $sub) {
-            if (is_array($sub)) {
-                /** @var array<string, mixed> $typedSub */
-                $typedSub = [];
-                foreach ($sub as $key => $value) {
-                    $typedSub[(string) $key] = $value;
-                }
-                $typedSubs[(int) $index] = $typedSub;
-            }
-        }
-
-        self::dynamic_route($typedSubs, $sub_namespace, null, $curr);
->>>>>>> c4ec0fb6 (.)
-=======
-        self::dynamic_route($subs, $sub_namespace, null, $curr);
->>>>>>> edc8a701 (.)
     }
 
     /**
@@ -372,34 +317,11 @@ class RouteDynService
         $controller = self::getController($v, $namespace);
         foreach ($v['acts'] as $v1) {
             Assert::isArray($v1);
-<<<<<<< HEAD
-<<<<<<< HEAD
             $v1['controller'] = $controller;
 
             $method = self::getMethod($v1, $namespace);
             $uri = self::getUri($v1, $namespace);
             $callback = self::getCallback($v1, $namespace, $curr);
-=======
-
-            // Ensure $v1 is properly typed
-            /** @var array<string, mixed> $typedV1 */
-            $typedV1 = [];
-            foreach ($v1 as $key => $value) {
-                $typedV1[(string) $key] = $value;
-            }
-            $typedV1['controller'] = $controller;
-
-            $method = self::getMethod($typedV1, $namespace);
-            $uri = self::getUri($typedV1, $namespace);
-            $callback = self::getCallback($typedV1, $namespace, $curr);
->>>>>>> c4ec0fb6 (.)
-=======
-            $v1['controller'] = $controller;
-
-            $method = self::getMethod($v1, $namespace);
-            $uri = self::getUri($v1, $namespace);
-            $callback = self::getCallback($v1, $namespace, $curr);
->>>>>>> edc8a701 (.)
             Route::match($method, $uri, $callback);
         }
     }

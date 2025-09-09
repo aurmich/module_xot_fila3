@@ -76,14 +76,6 @@
 
 ## Collegamenti
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 - [Modelli Patient](../Patient/docs/models.md)
-=======
-- [Modelli Patient](../Patient/project_docs/models.md)
->>>>>>> c4ec0fb6 (.)
-=======
-- [Modelli Patient](../Patient/docs/models.md)
->>>>>>> edc8a701 (.)
 - [Best Practices Modelli](./models.md)
 - [Convenzioni di Codice](./coding-standards.md) 

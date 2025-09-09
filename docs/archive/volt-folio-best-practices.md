@@ -3,21 +3,9 @@
 ## Collegamenti correlati
 - [README modulo Xot](./README.md)
 - [Struttura dei moduli](./MODULE_STRUCTURE.md)
-<<<<<<< HEAD
-<<<<<<< HEAD
 - [Convenzioni di Path](../User/docs/PATH_CONVENTIONS.md)
 - [Implementazione Auth con Volt e Folio](../User/docs/VOLT_FOLIO_AUTH_IMPLEMENTATION.md)
 - [Analisi Logout Blade](../User/docs/LOGOUT_BLADE_ANALYSIS.md)
-=======
-- [Convenzioni di Path](../User/project_docs/PATH_CONVENTIONS.md)
-- [Implementazione Auth con Volt e Folio](../User/project_docs/VOLT_FOLIO_AUTH_IMPLEMENTATION.md)
-- [Analisi Logout Blade](../User/project_docs/LOGOUT_BLADE_ANALYSIS.md)
->>>>>>> c4ec0fb6 (.)
-=======
-- [Convenzioni di Path](../User/docs/PATH_CONVENTIONS.md)
-- [Implementazione Auth con Volt e Folio](../User/docs/VOLT_FOLIO_AUTH_IMPLEMENTATION.md)
-- [Analisi Logout Blade](../User/docs/LOGOUT_BLADE_ANALYSIS.md)
->>>>>>> edc8a701 (.)
 
 ## Introduzione
 
@@ -273,17 +261,7 @@ Seguendo queste best practices per l'utilizzo di Volt e Folio, garantirai che il
 
 ## Riferimenti
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 - [Documentazione Volt](https://livewire.laravel.com/docs/volt)
 - [Documentazione Folio](https://laravel.com/docs/10.x/folio)
-=======
-- [Documentazione Volt](https://livewire.laravel.com/project_docs/volt)
-- [Documentazione Folio](https://laravel.com/project_docs/10.x/folio)
->>>>>>> c4ec0fb6 (.)
-=======
-- [Documentazione Volt](https://livewire.laravel.com/docs/volt)
-- [Documentazione Folio](https://laravel.com/docs/10.x/folio)
->>>>>>> edc8a701 (.)
 - [Documentazione Livewire](https://livewire.laravel.com/docs)
 - [Documentazione Filament](https://filamentphp.com/docs)
