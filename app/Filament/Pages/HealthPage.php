@@ -24,9 +24,7 @@ class HealthPage extends Page
 {
     use NavigationLabelTrait;
 
-    /**
-     * @var array<string, string>
-     */
+    /** @var array<string, string>  */
     protected $listeners = ['refresh-component' => '$refresh'];
 
     protected static ?string $navigationIcon = 'heroicon-o-heart';

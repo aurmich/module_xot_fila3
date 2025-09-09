@@ -4,13 +4,8 @@ declare(strict_types=1);
 
 namespace Modules\Xot\Models\Policies;
 
-<<<<<<< HEAD
 use Modules\Xot\Contracts\UserContract;
 use Modules\Xot\Models\Cache;
-=======
-use Modules\Xot\Models\Cache;
-use Modules\Xot\Contracts\UserContract;
->>>>>>> d9f8ef0b (.)
 
 class CachePolicy extends XotBasePolicy
 {
@@ -69,9 +64,4 @@ class CachePolicy extends XotBasePolicy
     {
         return $user->hasPermissionTo('cache.forceDelete');
     }
-<<<<<<< HEAD
 }
-
-=======
-}
->>>>>>> d9f8ef0b (.)

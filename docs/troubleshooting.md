@@ -5,19 +5,13 @@
 Questo documento contiene le soluzioni ai problemi più comuni che possono verificarsi durante lo sviluppo con il modulo Xot, seguendo i principi **DRY**, **KISS**, **SOLID**, **Robust** e **Laraxot**.
 
 ## 🚨 **Problemi Critici**
-<<<<<<< HEAD
 #### Composer
 ```bash
-=======
->>>>>>> d9f8ef0b (.)
 
 ### **1. Classe Base Non Trovata**
 
-<<<<<<< HEAD
 ### **1. Classe Base Non Trovata**
 
-=======
->>>>>>> d9f8ef0b (.)
 #### **Sintomi**
 ```
 Fatal error: Class 'Modules\Xot\Models\BaseModel' not found
@@ -28,7 +22,6 @@ Class 'Modules\Xot\Filament\Resources\XotBaseResource' not found
 - Autoload non aggiornato
 - Namespace errato
 - Modulo Xot non installato correttamente
-<<<<<<< HEAD
 #### NPM
 ```bash
 
@@ -39,13 +32,11 @@ npm cache clean --force
 
 **Soluzione 1: Aggiornare Autoload**
 ```bash
-=======
 
 #### **Soluzioni**
 
 **Soluzione 1: Aggiornare Autoload**
 ```bash
->>>>>>> d9f8ef0b (.)
 # Dalla root del progetto Laravel
 composer dump-autoload
 composer install
@@ -60,7 +51,6 @@ use Modules\Xot\Filament\Resources\XotBaseResource;
 // ❌ ERRATO
 use App\Models\BaseModel;
 use Filament\Resources\XotBaseResource;
-<<<<<<< HEAD
 #### Migrazioni
 ```bash
 
@@ -69,8 +59,6 @@ php artisan migrate:fresh
 
 # Eseguire i seed
 php artisan db:seed
-=======
->>>>>>> d9f8ef0b (.)
 ```
 
 **Soluzione 3: Verificare Installazione Modulo**
@@ -78,12 +66,9 @@ php artisan db:seed
 # Verificare che il modulo sia presente
 ls -la laravel/Modules/Xot/
 
-<<<<<<< HEAD
 # Verificare la connessione
 php artisan db:monitor
 
-=======
->>>>>>> d9f8ef0b (.)
 # Verificare composer.json
 cat laravel/Modules/Xot/composer.json
 ```
@@ -108,11 +93,8 @@ php artisan route:clear
 **Soluzione 2: Verificare Service Provider**
 ```bash
 # Verificare che il service provider sia registrato
-<<<<<<< HEAD
 
 # Verificare lo stato dei moduli
-=======
->>>>>>> d9f8ef0b (.)
 php artisan module:list
 
 # Verificare configurazione
@@ -125,7 +107,6 @@ php artisan config:show app.providers
 ls -la laravel/Modules/Xot/lang/it/
 ls -la laravel/Modules/Xot/lang/en/
 ls -la laravel/Modules/Xot/lang/de/
-<<<<<<< HEAD
 
 # Pubblicare gli assets
 php artisan module:publish ModuleName
@@ -135,8 +116,6 @@ php artisan module:publish-config ModuleName
 
 # Pubblicare le migrazioni
 php artisan module:publish-migration ModuleName
-=======
->>>>>>> d9f8ef0b (.)
 ```
 
 ### **3. Errori PHPStan Livello 10**
@@ -146,7 +125,6 @@ php artisan module:publish-migration ModuleName
 ERROR: Access to an undefined property
 ERROR: Method not found
 ERROR: Return type mismatch
-<<<<<<< HEAD
 ```
 
 #### **Soluzioni**
@@ -160,8 +138,6 @@ npm run build
 
 # Compilare gli assets del tema
 npm run theme:build
-=======
->>>>>>> d9f8ef0b (.)
 ```
 
 #### **Soluzioni**
@@ -200,12 +176,9 @@ public function getUser()
 # Dalla root del progetto Laravel
 ./vendor/bin/phpstan analyse --level=10
 
-<<<<<<< HEAD
 # Compilare gli assets
 npm run dev
 
-=======
->>>>>>> d9f8ef0b (.)
 # Per un modulo specifico
 ./vendor/bin/phpstan analyse Modules/Xot --level=10
 ```
@@ -213,16 +186,13 @@ npm run dev
 ## 🔧 **Problemi Specifici**
 
 ### **1. Problemi di Ereditarietà**
-<<<<<<< HEAD
 ### 1. Log dell'Applicazione
 ```bash
 
 # Visualizzare i log
 tail -f storage/logs/laravel.log
 
-=======
 
->>>>>>> d9f8ef0b (.)
 #### **Sintomi**
 ```
 Fatal error: Cannot override final method
@@ -237,7 +207,6 @@ Fatal error: Cannot inherit from final class
 class MioModello extends BaseModel
 class MiaRisorsa extends XotBaseResource
 class MioServiceProvider extends XotBaseServiceProvider
-<<<<<<< HEAD
 
 // ❌ ERRATO - Mai estendere direttamente le classi Laravel
 class MioModello extends \Illuminate\Database\Eloquent\Model
@@ -576,7 +545,6 @@ composer require laravel/telescope --dev
 # Pubblicare configurazione
 php artisan telescope:install
 
-=======
 
 // ❌ ERRATO - Mai estendere direttamente le classi Laravel
 class MioModello extends \Illuminate\Database\Eloquent\Model
@@ -933,7 +901,6 @@ composer require laravel/telescope --dev
 # Pubblicare configurazione
 php artisan telescope:install
 
->>>>>>> d9f8ef0b (.)
 # Accedere a Telescope
 http://localhost/telescope
 ```

@@ -4,7 +4,6 @@
 
 Il modulo Xot è il fondamento architetturale dell'ecosistema Laraxot PTVX. Fornisce classi base, trait, service provider e funzionalità core che vengono estesi e utilizzati da tutti gli altri moduli dell'applicazione. Implementa i principi DRY, KISS, SOLID e robustezza per garantire coerenza e manutenibilità.
 
-<<<<<<< HEAD
 ## Architecture
 - Base classes per tutti i moduli
 - Service providers centralizzati
@@ -15,9 +14,7 @@ Il modulo Xot è il fondamento architetturale dell'ecosistema Laraxot PTVX. Forn
 - [GetPdfContentByRecordAction](actions/get-pdf-content-by-record-action.md) - Generazione contenuto PDF da record Eloquent
 - [ContentPdfAction](archive/actions/content-pdf-action.md) - Generazione PDF da HTML/viste
 - [StreamDownloadPdfAction](archive/actions/pdf-stream-download-action.md) - Download PDF diretto
-=======
 ## Caratteristiche Principali
->>>>>>> d9f8ef0b (.)
 
 - **Classi Base**: Modelli, controller e resource base per tutti i moduli
 - **Service Provider Base**: Service provider base con funzionalità comuni
@@ -72,13 +69,11 @@ Modules/Xot/
 
 Modello base per tutti i moduli:
 
-<<<<<<< HEAD
 ## Links
 - [Root Documentation](../../../project_docs/)
 - [Root Documentation](../../../docs/)
 - [SaluteOra Module](../SaluteOra/docs/)
 - [Original Documentation Backup](../../../docs-consolidation-backup-*/Xot-docs-original/)
-=======
 ```php
 abstract class XotBaseModel extends Model
 {
@@ -1083,4 +1078,3 @@ Per supporto tecnico o domande:
 ---
 
 *Ultimo aggiornamento: {{ date('Y-m-d') }}*
->>>>>>> d9f8ef0b (.)
