@@ -4,16 +4,17 @@ declare(strict_types=1);
 
 namespace Modules\Xot\Filament\Resources\Pages;
 
-use Filament\Resources\Pages\ListRecords as FilamentListRecords;
 use Filament\Tables;
 use Filament\Tables\Table;
-use Illuminate\Contracts\Pagination\Paginator;
-use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Support\Str;
-use Modules\UI\Enums\TableLayoutEnum;
-use Modules\Xot\Filament\Actions\Header\ExportXlsAction;
-use Modules\Xot\Filament\Traits\HasXotTable;
 use Webmozart\Assert\Assert;
+use Modules\UI\Enums\TableLayoutEnum;
+use Illuminate\Database\Eloquent\Builder;
+use Modules\Xot\Filament\Traits\HasXotTable;
+use Illuminate\Contracts\Pagination\Paginator;
+use Modules\Xot\Actions\ModelClass\UpdateCountAction;
+use Modules\Xot\Filament\Actions\Header\ExportXlsAction;
+use Filament\Resources\Pages\ListRecords as FilamentListRecords;
 
 /**
  * Base class for list records pages.
@@ -74,14 +75,19 @@ abstract class XotBaseListRecords extends FilamentListRecords
 
     /** 
      * Paginate the table query.
+     * @see https://v2.filamentphp.com/tricks/fast-table-pagination
     */
-    protected function paginateTableQueryTMP(Builder $query): Paginator
+    protected function paginateTableQuery(Builder $query): Paginator
     {
-        return $query->fastPaginate(
+        $paginator = $query->fastPaginate(
             ('all' === $this->getTableRecordsPerPage()) 
             ? $query->count() 
             : $this->getTableRecordsPerPage()
         );
+        $total=$paginator->total();
+        $modelClass=$this->getModel();
+        app(UpdateCountAction::class)->execute($modelClass,$total);
+        return $paginator;
     }
 }
 
