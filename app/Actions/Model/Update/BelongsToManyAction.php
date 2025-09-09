@@ -46,6 +46,7 @@ class BelongsToManyAction
             if (\array_key_exists($keyName, $data)) {
                 // Aggiorna o crea il modello correlato
                 Assert::isArray($data, 'Data passed to UpdateAction must be an associative array.');
+<<<<<<< HEAD
 
                 // Assicura che $data sia type-safe per UpdateAction
                 /** @var array<string, mixed> $typedData */
@@ -56,6 +57,10 @@ class BelongsToManyAction
 
                 /** @var Model $res */
                 $res = app(UpdateAction::class)->execute($related, $typedData, []);
+=======
+                /** @var Model $res */
+                $res = app(UpdateAction::class)->execute($related, $data, []);
+>>>>>>> ad700fc8 (.)
                 Assert::isInstanceOf($res, Model::class, 'UpdateAction must return an instance of Model.');
 
                 $ids[] = $res->getKey();

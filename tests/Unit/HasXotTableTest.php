@@ -2,6 +2,7 @@
 
 declare(strict_types=1);
 
+<<<<<<< HEAD
 use Mockery;
 use Filament\Tables\Table;
 use Filament\Tables\Contracts\HasTable;
@@ -24,6 +25,31 @@ it('tests table method with all methods implemented', function () {
         $mock = Mockery::mock(HasTableWithXot::class)
             ->makePartial()
             ->shouldDeferMissing();
+=======
+namespace Modules\Xot\Tests\Unit;
+
+use Filament\Tables\Table;
+use Modules\Xot\Tests\Unit\Support\HasTableWithXotTestClass;
+use Modules\Xot\Tests\Unit\Support\HasTableWithoutOptionalMethodsTestClass;
+use Modules\Xot\Tests\Unit\Support\DummyTestModel;
+
+uses(\Tests\TestCase::class);
+
+afterEach(function () {
+    \Mockery::close();
+});
+
+it('tests table method with all methods implemented', function () {
+    // Avoid DB/Schema access inside TableExistsByModelClassActions
+    \Mockery::mock('overload:Modules\\Xot\\Actions\\Model\\TableExistsByModelClassActions')
+        ->shouldReceive('execute')
+        ->andReturn(true);
+
+    // Create partial mock and defer missing to real methods so trait's table() runs
+    $mock = \Mockery::mock(HasTableWithXotTestClass::class)
+        ->makePartial()
+        ->shouldDeferMissing();
+>>>>>>> ad700fc8 (.)
 
     // Expect getTableHeaderActions to be called
     $mock->shouldReceive('getTableHeaderActions')
@@ -42,7 +68,11 @@ it('tests table method with all methods implemented', function () {
 
     // Other required method stubs
     $mock->shouldReceive('getModelClass')
+<<<<<<< HEAD
         ->andReturn(DummyModel::class);
+=======
+        ->andReturn(DummyTestModel::class);
+>>>>>>> ad700fc8 (.)
     $mock->shouldReceive('getTableRecordTitleAttribute')
         ->andReturn('name');
     $mock->shouldReceive('getTableHeading')
@@ -59,7 +89,11 @@ it('tests table method with all methods implemented', function () {
         ->andReturn([]);
 
     // Create a mock for Table
+<<<<<<< HEAD
     $tableMock = Mockery::mock(Table::class);
+=======
+    $tableMock = \Mockery::mock(Table::class);
+>>>>>>> ad700fc8 (.)
     $tableMock->shouldReceive('recordTitleAttribute')->andReturnSelf();
     $tableMock->shouldReceive('heading')->andReturnSelf();
     $tableMock->shouldReceive('columns')->andReturnSelf();
@@ -84,6 +118,7 @@ it('tests table method with all methods implemented', function () {
 });
 
 it('tests table method with no optional methods implemented', function () {
+<<<<<<< HEAD
         // Avoid DB/Schema access inside TableExistsByModelClassActions
         Mockery::mock('overload:Modules\\Xot\\Actions\\Model\\TableExistsByModelClassActions')
             ->shouldReceive('execute')
@@ -97,6 +132,21 @@ it('tests table method with no optional methods implemented', function () {
     // Other required method stubs
     $mock->shouldReceive('getModelClass')
         ->andReturn(DummyModel::class);
+=======
+    // Avoid DB/Schema access inside TableExistsByModelClassActions
+    \Mockery::mock('overload:Modules\\Xot\\Actions\\Model\\TableExistsByModelClassActions')
+        ->shouldReceive('execute')
+        ->andReturn(true);
+
+    // Create partial mock and defer missing to real methods so trait's table() runs
+    $mock = \Mockery::mock(HasTableWithoutOptionalMethodsTestClass::class)
+        ->makePartial()
+        ->shouldDeferMissing();
+
+    // Other required method stubs
+    $mock->shouldReceive('getModelClass')
+        ->andReturn(DummyTestModel::class);
+>>>>>>> ad700fc8 (.)
     $mock->shouldReceive('getTableRecordTitleAttribute')
         ->andReturn('name');
     $mock->shouldReceive('getTableHeading')
@@ -113,7 +163,11 @@ it('tests table method with no optional methods implemented', function () {
         ->andReturn([]);
 
     // Create a mock for Table
+<<<<<<< HEAD
     $tableMock = Mockery::mock(Table::class);
+=======
+    $tableMock = \Mockery::mock(Table::class);
+>>>>>>> ad700fc8 (.)
     $tableMock->shouldReceive('recordTitleAttribute')->andReturnSelf();
     $tableMock->shouldReceive('heading')->andReturnSelf();
     $tableMock->shouldReceive('columns')->andReturnSelf();
@@ -137,6 +191,7 @@ it('tests table method with no optional methods implemented', function () {
     // Assert the result is a Table instance
     expect($result)->toBe($tableMock);
 });
+<<<<<<< HEAD
 
 /**
  * Dummy class that uses HasTable and HasXotTable traits for testing.
@@ -651,3 +706,5 @@ class DummyModel extends \Illuminate\Database\Eloquent\Model
 {
     // Empty dummy model just to satisfy instanceof checks
 }
+=======
+>>>>>>> ad700fc8 (.)

@@ -274,10 +274,19 @@ Per migrare le rotte esistenti:
 - [Struttura dei Moduli](./MODULE_STRUCTURE.md)
 - [Documentazione Generale](./documentation.md)
 - [Regole del Progetto](./rules.md)
+<<<<<<< HEAD
 - [Collegamenti al Modulo Cms](../../Cms/project_docs/frontoffice/routing.md)
 - [Collegamenti al Modulo Lang](../../Lang/project_docs/packages/localization.md)
 - [Collegamenti alla Root](../../../project_docs/routing.md)
 ## Collegamenti tra versioni di routing.md
 * [routing.md](../../../../project_docs/routing.md)
 * [routing.md](../../Cms/project_docs/frontoffice/routing.md)
+=======
+- [Collegamenti al Modulo Cms](../../Cms/docs/frontoffice/routing.md)
+- [Collegamenti al Modulo Lang](../../Lang/docs/packages/localization.md)
+- [Collegamenti alla Root](../../../docs/routing.md)
+## Collegamenti tra versioni di routing.md
+* [routing.md](../../../../docs/routing.md)
+* [routing.md](../../Cms/docs/frontoffice/routing.md)
+>>>>>>> ad700fc8 (.)
 

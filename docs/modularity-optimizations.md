@@ -288,7 +288,11 @@ Dopo l'ottimizzazione completa, i comandi devono restituire **0 occorrenze**.
 
 ## Documentazione Correlata
 
+<<<<<<< HEAD
 - [Root Docs: Modularity Hardcoded Names](../../../project_docs/modularity-hardcoded-names.md)
+=======
+- [Root Docs: Modularity Hardcoded Names](../../../docs/modularity-hardcoded-names.md)
+>>>>>>> ad700fc8 (.)
 - [Regole Cursor: Modularity Rules](../../../.cursor/rules/modularity-hardcoded-names.mdc)
 - [Xot Architecture Overview](./architecture-overview.md)
 - [Xot Best Practices](./best-practices/README.md)

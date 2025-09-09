@@ -8,7 +8,12 @@ Questo documento contiene le soluzioni ai problemi più comuni che possono verif
 #### Composer
 ```bash
 
+<<<<<<< HEAD
 ### **1. Classe Base Non Trovata**
+=======
+# Pulire la cache di Composer
+composer clear-cache
+>>>>>>> ad700fc8 (.)
 
 ### **1. Classe Base Non Trovata**
 
@@ -32,11 +37,14 @@ npm cache clean --force
 
 **Soluzione 1: Aggiornare Autoload**
 ```bash
+<<<<<<< HEAD
 
 #### **Soluzioni**
 
 **Soluzione 1: Aggiornare Autoload**
 ```bash
+=======
+>>>>>>> ad700fc8 (.)
 # Dalla root del progetto Laravel
 composer dump-autoload
 composer install
@@ -84,6 +92,11 @@ cat laravel/Modules/Xot/composer.json
 
 **Soluzione 1: Pulire Cache**
 ```bash
+<<<<<<< HEAD
+=======
+
+# Pulire la cache dell'applicazione
+>>>>>>> ad700fc8 (.)
 php artisan cache:clear
 php artisan config:clear
 php artisan view:clear
@@ -140,9 +153,79 @@ npm run build
 npm run theme:build
 ```
 
+<<<<<<< HEAD
 #### **Soluzioni**
 
 **Soluzione 1: Aggiungere Annotazioni PHPDoc**
+=======
+### 2. Errori di Visualizzazione
+```bash
+
+# Pulire la cache delle viste
+php artisan view:clear
+
+# Verificare i permessi
+chmod -R 775 storage bootstrap/cache
+```
+
+### 3. Errori di copia asset
+Se si ottiene un errore **Permission denied** durante la copia degli asset, eseguire:
+```bash
+mkdir -p public_html/assets/<module>/<path>
+chmod -R 755 public_html/assets
+```
+Assicurarsi che l'utente del web server (es. www-data) abbia i permessi di scrittura su `public_html/assets`.
+
+## Filament
+
+### 1. Errori del Pannello
+```bash
+
+# Pubblicare gli assets
+php artisan filament:assets
+
+# Pubblicare le configurazioni
+php artisan filament:config
+```
+
+### 2. Errori dei Widget
+```bash
+
+# Pubblicare i widget
+php artisan filament:widgets
+
+# Verificare i widget
+php artisan filament:check
+```
+
+## Volt e Livewire
+
+### 1. Errori dei Componenti
+
+#### Pubblicazione Assets e Configurazioni
+```bash
+
+# Pubblicare gli assets
+php artisan livewire:publish --assets
+
+# Pubblicare le configurazioni
+php artisan livewire:publish --config
+```
+
+#### Errore: Multiple Root Elements Detected
+
+Se riscontri questo errore:
+```
+Livewire\Features\SupportMultipleRootElementDetection\MultipleRootElementsDetectedException
+Livewire only supports one HTML element per component. Multiple root elements detected.
+```
+
+Soluzione:
+1. Ogni componente Volt deve avere un singolo elemento HTML radice
+2. Racchiudi tutti gli elementi del componente in un unico `<div>` o altro elemento contenitore
+
+**Esempio corretto:**
+>>>>>>> ad700fc8 (.)
 ```php
 /**
  * @property int $id
@@ -192,7 +275,10 @@ npm run dev
 # Visualizzare i log
 tail -f storage/logs/laravel.log
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> ad700fc8 (.)
 #### **Sintomi**
 ```
 Fatal error: Cannot override final method
@@ -370,6 +456,7 @@ SQLSTATE[42S02]: Base table or view not found
 SQLSTATE[23000]: Integrity constraint violation
 ```
 
+<<<<<<< HEAD
 
 **Verificare Migrazioni**
 ```bash
@@ -708,6 +795,8 @@ SQLSTATE[42S02]: Base table or view not found
 SQLSTATE[23000]: Integrity constraint violation
 ```
 
+=======
+>>>>>>> ad700fc8 (.)
 #### **Soluzioni**
 
 **Utilizzare RefreshDatabase**

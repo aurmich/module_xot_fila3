@@ -227,11 +227,21 @@ abstract class XotBaseWidget extends FilamentWidget implements HasForms, HasActi
 
     public function getWizardSubmitAction(): Action
     {
+<<<<<<< HEAD
         $submit_view = 'pub_theme::filament.wizard.submit-button';
 
         // if(!view()->exists($submit_view)){
         //    throw new \Exception("View {$submit_view} does not exist");
         // }
+=======
+        /** @var view-string $submit_view */
+        $submit_view = 'pub_theme::filament.wizard.submit-button';
+
+        if (! view()->exists($submit_view)) {
+            throw new \Exception("View {$submit_view} does not exist");
+        }
+
+>>>>>>> ad700fc8 (.)
         return Action::make('submit')
             ->label(__('filament-panels::resources/pages/edit-record.form.actions.save.label'))
             ->submit('save')

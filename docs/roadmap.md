@@ -41,7 +41,11 @@
 - [x] Collegamenti bidirezionali
 - [ ] Completamento esempi
 - [ ] Testi in italiano
+<<<<<<< HEAD
   - [Dettagli e Passi](./roadmap/project_docs/status.md)
+=======
+  - [Dettagli e Passi](./roadmap/docs/status.md)
+>>>>>>> ad700fc8 (.)
 
 ### 6. Testing (65%)
 - [x] Setup base
@@ -236,9 +240,15 @@
 ## Collegamenti Bidirezionali
 
 ### Collegamenti ad Altri Moduli
+<<<<<<< HEAD
 - [Roadmap Modulo User](../User/project_docs/roadmap.md)
 - [Roadmap Modulo Lang](../Lang/project_docs/roadmap.md)
 - [Roadmap Modulo UI](../UI/project_docs/roadmap.md)
+=======
+- [Roadmap Modulo User](../User/docs/roadmap.md)
+- [Roadmap Modulo Lang](../Lang/docs/roadmap.md)
+- [Roadmap Modulo UI](../UI/docs/roadmap.md)
+>>>>>>> ad700fc8 (.)
 
 ### Collegamenti Interni
 - [Architettura](./structure.md)
@@ -413,7 +423,11 @@
 ## Riferimenti
 
 ### Documentazione
+<<<<<<< HEAD
 - [Laravel Framework](https://laravel.com/project_docs/12.x)
+=======
+- [Laravel Framework](https://laravel.com/docs/12.x)
+>>>>>>> ad700fc8 (.)
 - [Filament Documentation](https://filamentphp.com/docs)
 - [Livewire Documentation](https://livewire.laravel.com/docs)
 
@@ -428,6 +442,7 @@
 ### Versione Incoming
 
 ## Collegamenti tra versioni di roadmap.md
+<<<<<<< HEAD
 * [roadmap.md](bashscripts/project_docs/roadmap.md)
 * [roadmap.md](docs/roadmap.md)
 * [roadmap.md](../../../Gdpr/project_docs/roadmap.md)
@@ -444,6 +459,24 @@
 * [roadmap.md](../../../Patient/project_docs/roadmap.md)
 * [roadmap.md](../../../Cms/project_docs/roadmap.md)
 * [roadmap.md](../../../../Themes/One/project_docs/roadmap.md)
+=======
+* [roadmap.md](bashscripts/docs/roadmap.md)
+* [roadmap.md](docs/roadmap.md)
+* [roadmap.md](../../../Gdpr/docs/roadmap.md)
+* [roadmap.md](../../../Notify/docs/roadmap.md)
+* [roadmap.md](../../../Xot/docs/roadmap.md)
+* [roadmap.md](../../../Dental/docs/roadmap.md)
+* [roadmap.md](../../../User/docs/roadmap.md)
+* [roadmap.md](../../../UI/docs/roadmap.md)
+* [roadmap.md](../../../Lang/docs/roadmap.md)
+* [roadmap.md](../../../Job/docs/roadmap.md)
+* [roadmap.md](../../../Media/docs/roadmap.md)
+* [roadmap.md](../../../Tenant/docs/roadmap.md)
+* [roadmap.md](../../../Activity/docs/roadmap.md)
+* [roadmap.md](../../../Patient/docs/roadmap.md)
+* [roadmap.md](../../../Cms/docs/roadmap.md)
+* [roadmap.md](../../../../Themes/One/docs/roadmap.md)
+>>>>>>> ad700fc8 (.)
 
 
 ---

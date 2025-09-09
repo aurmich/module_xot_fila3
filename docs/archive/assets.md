@@ -249,7 +249,13 @@ document.addEventListener('alpine:init', () => {
      class="h-8 w-auto">
 ``` 
 ## Collegamenti tra versioni di assets.md
+<<<<<<< HEAD
 * [assets.md](../../../Xot/project_docs/assets.md)
 * [assets.md](../../../Cms/project_docs/themes/assets.md)
 * [assets.md](../../../../Themes/One/project_docs/assets.md)
+=======
+* [assets.md](../../../Xot/docs/assets.md)
+* [assets.md](../../../Cms/docs/themes/assets.md)
+* [assets.md](../../../../Themes/One/docs/assets.md)
+>>>>>>> ad700fc8 (.)
 

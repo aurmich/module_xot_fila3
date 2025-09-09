@@ -17,7 +17,11 @@ Questo documento sostituisce e consolida **40+ file di best practices duplicati*
 - Qualsiasi documentazione best practices specifica di modulo
 
 ### ✅ Unica Fonte di Verità
+<<<<<<< HEAD
 - **Questo file**: `/laravel/Modules/Xot/project_docs/best-practices-consolidated.md`
+=======
+- **Questo file**: `/laravel/Modules/Xot/docs/best-practices-consolidated.md`
+>>>>>>> ad700fc8 (.)
 - **Implementazione**: Codice nei singoli moduli (solo implementazione, non docs)
 
 ## Principi Fondamentali

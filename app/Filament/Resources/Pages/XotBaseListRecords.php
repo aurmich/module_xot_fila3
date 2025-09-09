@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Modules\Xot\Filament\Resources\Pages;
 
+<<<<<<< HEAD
 use Filament\Tables;
 use Filament\Tables\Table;
 use Illuminate\Support\Str;
@@ -15,6 +16,19 @@ use Illuminate\Contracts\Pagination\Paginator;
 use Modules\Xot\Actions\ModelClass\UpdateCountAction;
 use Modules\Xot\Filament\Actions\Header\ExportXlsAction;
 use Filament\Resources\Pages\ListRecords as FilamentListRecords;
+=======
+use Filament\Resources\Pages\ListRecords as FilamentListRecords;
+use Filament\Resources\Pages\PageRegistration;
+use Filament\Tables;
+use Filament\Tables\Table;
+use Illuminate\Contracts\Pagination\Paginator;
+use Illuminate\Database\Eloquent\Builder;
+use Illuminate\Support\Str;
+use Modules\UI\Enums\TableLayoutEnum;
+use Modules\Xot\Filament\Actions\Header\ExportXlsAction;
+use Modules\Xot\Filament\Traits\HasXotTable;
+use Webmozart\Assert\Assert;
+>>>>>>> ad700fc8 (.)
 
 /**
  * Base class for list records pages.
@@ -28,6 +42,14 @@ abstract class XotBaseListRecords extends FilamentListRecords
 {
     use HasXotTable;
 
+<<<<<<< HEAD
+=======
+    public static function route(string $path): PageRegistration
+    {
+        return parent::route($path);
+    }
+
+>>>>>>> ad700fc8 (.)
     /*
      * Get the table columns.
      *
@@ -75,19 +97,29 @@ abstract class XotBaseListRecords extends FilamentListRecords
 
     /** 
      * Paginate the table query.
+<<<<<<< HEAD
      * @see https://v2.filamentphp.com/tricks/fast-table-pagination
     */
     protected function paginateTableQuery(Builder $query): Paginator
     {
         $paginator = $query->fastPaginate(
+=======
+    */
+    protected function paginateTableQueryTMP(Builder $query): Paginator
+    {
+        return $query->fastPaginate(
+>>>>>>> ad700fc8 (.)
             ('all' === $this->getTableRecordsPerPage()) 
             ? $query->count() 
             : $this->getTableRecordsPerPage()
         );
+<<<<<<< HEAD
         $total=$paginator->total();
         $modelClass=$this->getModel();
         app(UpdateCountAction::class)->execute($modelClass,$total);
         return $paginator;
+=======
+>>>>>>> ad700fc8 (.)
     }
 }
 

@@ -101,6 +101,12 @@ Verifica se l'utente ha l'accesso alla pagina.
 
 ## Link Correlati
 
+<<<<<<< HEAD
 - [Documentazione Filament](../../../project_docs/filament/index.md)
 - [Best Practices](../../../project_docs/best-practices.md)
 - [Guida Traduzioni](../../../project_docs/translations.md) 
+=======
+- [Documentazione Filament](../../../docs/filament/index.md)
+- [Best Practices](../../../docs/best-practices.md)
+- [Guida Traduzioni](../../../docs/translations.md) 
+>>>>>>> ad700fc8 (.)

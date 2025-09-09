@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Modules\Xot\Filament\Resources\XotBaseResource\Pages;
 
+<<<<<<< HEAD
 use Filament\Tables;
 use Filament\Forms\Form;
 use Filament\Tables\Table;
@@ -19,6 +20,20 @@ use Modules\Xot\Filament\Traits\HasXotTable;
 use Filament\Forms\Concerns\InteractsWithForms;
 use Modules\Xot\Filament\Traits\NavigationLabelTrait;
 use Filament\Resources\Pages\ManageRelatedRecords as FilamentManageRelatedRecords;
+=======
+use Filament\Forms\Concerns\InteractsWithForms;
+use Filament\Forms\Form;
+use Filament\Resources\Pages\ManageRelatedRecords as FilamentManageRelatedRecords;
+use Filament\Tables\Actions\Action;
+use Filament\Tables\Actions\CreateAction;
+use Filament\Tables\Columns\TextColumn;
+use Filament\Tables\Table;
+use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Str;
+use Modules\Xot\Filament\Traits\HasXotTable;
+use Modules\Xot\Filament\Traits\NavigationLabelTrait;
+use Webmozart\Assert\Assert;
+>>>>>>> ad700fc8 (.)
 
 /**
  * Classe base per la gestione delle relazioni nelle risorse Filament.
@@ -81,6 +96,7 @@ abstract class XotBaseManageRelatedRecords extends FilamentManageRelatedRecords
      */
     public function getTableHeaderActions(): array
     {
+<<<<<<< HEAD
         $actions = [];
         $resource = static::class;
         // if (method_exists($resource, 'canCreate')) {
@@ -112,6 +128,13 @@ abstract class XotBaseManageRelatedRecords extends FilamentManageRelatedRecords
             ->preloadRecordSelect();
         }
         return $actions;
+=======
+        return [
+            'create' => CreateAction::make()
+                ->label('Crea Nuovo')
+                ->disableCreateAnother(),
+        ];
+>>>>>>> ad700fc8 (.)
     }
 
     /**
@@ -127,6 +150,7 @@ abstract class XotBaseManageRelatedRecords extends FilamentManageRelatedRecords
                 ->label('Modifica')
                 ->icon('heroicon-o-pencil')
                 ->url(fn (Model $record): string => static::getResource()::getUrl('edit', ['record' => $record])),
+<<<<<<< HEAD
                 
             'detach' => Tables\Actions\DetachAction::make(),
             
@@ -135,6 +159,13 @@ abstract class XotBaseManageRelatedRecords extends FilamentManageRelatedRecords
             //     ->label('Visualizza')
             //     ->icon('heroicon-o-eye')
             //     ->url(fn (Model $record): string => static::getResource()::getUrl('view', ['record' => $record])),
+=======
+
+            'view' => Action::make('view')
+                ->label('Visualizza')
+                ->icon('heroicon-o-eye')
+                ->url(fn (Model $record): string => static::getResource()::getUrl('view', ['record' => $record])),
+>>>>>>> ad700fc8 (.)
         ];
     }
 

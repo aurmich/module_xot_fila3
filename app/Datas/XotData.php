@@ -312,14 +312,20 @@ class XotData extends Data implements Wireable
     public function getPubThemePublicPath(string $key = ''): string
     {
         $path = base_path('themes/'.$this->pub_theme.'/'.$key);
+<<<<<<< HEAD
 
+=======
+>>>>>>> ad700fc8 (.)
         return $path;
     }
 
     public function getPubThemePublicAsset(string $key = ''): string
     {
         $path = asset('themes/'.$this->pub_theme.'/'.$key);
+<<<<<<< HEAD
 
+=======
+>>>>>>> ad700fc8 (.)
         return $path;
     }
 
@@ -403,7 +409,11 @@ class XotData extends Data implements Wireable
      */
     public function getProjectNamespace(): string
     {
+<<<<<<< HEAD
         return 'Modules\\'.$this->main_module;
+=======
+        return 'Modules\\' . $this->main_module;
+>>>>>>> ad700fc8 (.)
     }
 
     public function forceSSL(): bool

@@ -101,4 +101,7 @@ return [
         'deleted_at' => 'Eliminato il',
     ],
 ];
+<<<<<<< HEAD
 
+=======
+>>>>>>> ad700fc8 (.)

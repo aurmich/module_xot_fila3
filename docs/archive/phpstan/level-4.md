@@ -57,6 +57,7 @@ aurmich/dev
 aurmich/dev
 
 ## Collegamenti tra versioni di level_4.md
+<<<<<<< HEAD
 * [level_4.md](laravel/Modules/Chart/project_docs/phpstan/level_4.md)
 * [level_4.md](laravel/Modules/Reporting/project_docs/phpstan/level_4.md)
 * [level_4.md](laravel/Modules/Gdpr/project_docs/phpstan/level_4.md)
@@ -72,4 +73,21 @@ aurmich/dev
 * [level_4.md](laravel/Modules/Activity/project_docs/phpstan/level_4.md)
 * [level_4.md](laravel/Modules/Patient/project_docs/phpstan/level_4.md)
 * [level_4.md](laravel/Modules/Cms/project_docs/phpstan/level_4.md)
+=======
+* [level_4.md](laravel/Modules/Chart/docs/phpstan/level_4.md)
+* [level_4.md](laravel/Modules/Reporting/docs/phpstan/level_4.md)
+* [level_4.md](laravel/Modules/Gdpr/docs/phpstan/level_4.md)
+* [level_4.md](laravel/Modules/Notify/docs/phpstan/level_4.md)
+* [level_4.md](laravel/Modules/Xot/docs/phpstan/level_4.md)
+* [level_4.md](laravel/Modules/Dental/docs/phpstan/level_4.md)
+* [level_4.md](laravel/Modules/User/docs/phpstan/level_4.md)
+* [level_4.md](laravel/Modules/UI/docs/phpstan/level_4.md)
+* [level_4.md](laravel/Modules/Lang/docs/phpstan/level_4.md)
+* [level_4.md](laravel/Modules/Job/docs/phpstan/level_4.md)
+* [level_4.md](laravel/Modules/Media/docs/phpstan/level_4.md)
+* [level_4.md](laravel/Modules/Tenant/docs/phpstan/level_4.md)
+* [level_4.md](laravel/Modules/Activity/docs/phpstan/level_4.md)
+* [level_4.md](laravel/Modules/Patient/docs/phpstan/level_4.md)
+* [level_4.md](laravel/Modules/Cms/docs/phpstan/level_4.md)
+>>>>>>> ad700fc8 (.)
 

@@ -112,4 +112,8 @@ class ContentPdfAction
             filename: $filename
         );
     }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> ad700fc8 (.)

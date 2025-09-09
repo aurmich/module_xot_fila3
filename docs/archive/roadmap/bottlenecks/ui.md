@@ -169,6 +169,11 @@
 - [Accessibility Standards](../../accessibility/standards.md)
 - [Testing Protocols](../../testing/protocols.md) 
 ## Collegamenti tra versioni di ui.md
+<<<<<<< HEAD
 * [ui.md](../../../Xot/project_docs/roadmap/bottlenecks/ui.md)
 * [ui.md](../../../UI/project_docs/ui.md)
+=======
+* [ui.md](../../../Xot/docs/roadmap/bottlenecks/ui.md)
+* [ui.md](../../../UI/docs/ui.md)
+>>>>>>> ad700fc8 (.)
 

@@ -159,12 +159,21 @@ Il file attuale contiene principalmente etichette generali per l'interfaccia amm
 ## Collegamenti Bidirezionali
 
 ### Documentazione Root
+<<<<<<< HEAD
 - [Struttura Traduzioni Espansa](/project_docs/translation-structure-expanded.md)
 - [Principi DRY/KISS](/project_docs/dry-kiss-principles.md)
 
 ### Documentazione Moduli Correlati
 - [Geo Module Translations](/Modules/Geo/project_docs/translation-structure-expanded.md)
 - [User Module Translations](/Modules/User/project_docs/translation-guidelines.md)
+=======
+- [Struttura Traduzioni Espansa](/docs/translation-structure-expanded.md)
+- [Principi DRY/KISS](/docs/dry-kiss-principles.md)
+
+### Documentazione Moduli Correlati
+- [Geo Module Translations](/Modules/Geo/docs/translation-structure-expanded.md)
+- [User Module Translations](/Modules/User/docs/translation-guidelines.md)
+>>>>>>> ad700fc8 (.)
 
 ### File di Implementazione
 - `lang/es/labels.php` - Etichette generali spagnole

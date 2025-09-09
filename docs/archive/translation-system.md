@@ -17,7 +17,11 @@ Questo documento sostituisce e consolida **50+ file di traduzione duplicati** tr
 - Qualsiasi documentazione traduzioni specifica di modulo
 
 ### ✅ Unica Fonte di Verità
+<<<<<<< HEAD
 - **Questo file**: `/laravel/Modules/Xot/project_docs/translation-system.md`
+=======
+- **Questo file**: `/laravel/Modules/Xot/docs/translation-system.md`
+>>>>>>> ad700fc8 (.)
 - **Implementazione**: File di traduzione nei singoli moduli (solo traduzioni, non docs)
 
 ## Principi Fondamentali

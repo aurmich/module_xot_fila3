@@ -63,6 +63,7 @@
 
 
 ## Collegamenti tra versioni di packages.md
+<<<<<<< HEAD
 * [packages.md](../../../Gdpr/project_docs/packages.md)
 * [packages.md](../../../Notify/project_docs/packages.md)
 * [packages.md](../../../Xot/project_docs/packages.md)
@@ -72,6 +73,17 @@
 * [packages.md](../../../Job/project_docs/packages.md)
 * [packages.md](../../../Media/project_docs/packages.md)
 * [packages.md](../../../Tenant/project_docs/packages.md)
+=======
+* [packages.md](../../../Gdpr/docs/packages.md)
+* [packages.md](../../../Notify/docs/packages.md)
+* [packages.md](../../../Xot/docs/packages.md)
+* [packages.md](../../../User/docs/packages.md)
+* [packages.md](../../../UI/docs/packages.md)
+* [packages.md](../../../Lang/docs/packages.md)
+* [packages.md](../../../Job/docs/packages.md)
+* [packages.md](../../../Media/docs/packages.md)
+* [packages.md](../../../Tenant/docs/packages.md)
+>>>>>>> ad700fc8 (.)
 
 
 ### Versione Incoming

@@ -209,4 +209,8 @@ php artisan test --filter=ExampleTest
 
 ---
 
+<<<<<<< HEAD
 
+=======
+*Ultimo aggiornamento: giugno 2025 - Versione 2.0.0*
+>>>>>>> ad700fc8 (.)

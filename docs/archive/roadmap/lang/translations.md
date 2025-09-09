@@ -47,6 +47,7 @@
 - [Gestione Traduzioni](../../translations.md)
 - [Best Practices](../../BEST-PRACTICES.md) 
 ## Collegamenti tra versioni di translations.md
+<<<<<<< HEAD
 * [translations.md](../../../Chart/project_docs/translations.md)
 * [translations.md](../../../Reporting/project_docs/translations.md)
 * [translations.md](../../../Gdpr/project_docs/translations.md)
@@ -64,4 +65,23 @@
 * [translations.md](../../../Activity/project_docs/translations.md)
 * [translations.md](../../../Patient/project_docs/translations.md)
 * [translations.md](../../../Cms/project_docs/translations.md)
+=======
+* [translations.md](../../../Chart/docs/translations.md)
+* [translations.md](../../../Reporting/docs/translations.md)
+* [translations.md](../../../Gdpr/docs/translations.md)
+* [translations.md](../../../Notify/docs/translations.md)
+* [translations.md](../../../Xot/docs/roadmap/lang/translations.md)
+* [translations.md](../../../Xot/docs/translations.md)
+* [translations.md](../../../Dental/docs/translations.md)
+* [translations.md](../../../User/docs/translations.md)
+* [translations.md](../../../UI/docs/translations.md)
+* [translations.md](../../../Lang/docs/packages/translations.md)
+* [translations.md](../../../Lang/docs/translations.md)
+* [translations.md](../../../Job/docs/translations.md)
+* [translations.md](../../../Media/docs/translations.md)
+* [translations.md](../../../Tenant/docs/translations.md)
+* [translations.md](../../../Activity/docs/translations.md)
+* [translations.md](../../../Patient/docs/translations.md)
+* [translations.md](../../../Cms/docs/translations.md)
+>>>>>>> ad700fc8 (.)
 

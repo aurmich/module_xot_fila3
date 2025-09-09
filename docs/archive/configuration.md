@@ -68,6 +68,11 @@ return [
 - [Documentazione Principale](../README.md) 
 ## Collegamenti tra versioni di configuration.md
 * [configuration.md](docs/configuration.md)
+<<<<<<< HEAD
 * [configuration.md](../../../Xot/project_docs/configuration.md)
 * [configuration.md](../../../Cms/project_docs/configuration.md)
+=======
+* [configuration.md](../../../Xot/docs/configuration.md)
+* [configuration.md](../../../Cms/docs/configuration.md)
+>>>>>>> ad700fc8 (.)
 

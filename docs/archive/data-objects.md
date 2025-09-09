@@ -77,6 +77,10 @@
 
 ## Collegamenti
 
+<<<<<<< HEAD
 - [Data Objects Patient](../Patient/project_docs/data-objects.md)
+=======
+- [Data Objects Patient](../Patient/docs/data-objects.md)
+>>>>>>> ad700fc8 (.)
 - [Best Practices](./best-practices.md)
 - [Convenzioni di Codice](./coding-standards.md) 

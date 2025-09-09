@@ -9,9 +9,13 @@ declare(strict_types=1);
 namespace Modules\Xot\Actions\Model;
 
 use Nwidart\Modules\Facades\Module;
+<<<<<<< HEAD
 use Nwidart\Modules\Module as ModuleInstance;
 use Spatie\QueueableAction\QueueableAction;
 use Webmozart\Assert\Assert;
+=======
+use Spatie\QueueableAction\QueueableAction;
+>>>>>>> ad700fc8 (.)
 
 class GetAllModelsAction
 {
@@ -19,6 +23,7 @@ class GetAllModelsAction
 
     /**
      * Execute the action.
+<<<<<<< HEAD
      *
      * @return array<string, string> Array associativo con snake_case come chiave e FQCN come valore
      */
@@ -41,6 +46,16 @@ class GetAllModelsAction
                 Assert::string($value, 'Value must be string');
                 $res[$key] = $value;
             }
+=======
+     */
+    public function execute(): array
+    {
+        $res = [];
+        $modules = Module::all();
+        foreach ($modules as $module) {
+            $tmp = app(GetAllModelsByModuleNameAction::class)->execute($module->getName());
+            $res = array_merge($res, $tmp);
+>>>>>>> ad700fc8 (.)
         }
 
         return $res;

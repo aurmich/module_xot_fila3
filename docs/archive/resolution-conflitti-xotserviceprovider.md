@@ -31,4 +31,8 @@ Il file presentava molteplici conflitti git non risolti tra branch `HEAD`, `orig
 
 ---
 
+<<<<<<< HEAD
 *Collegamento bidirezionale creato: vedi anche `/project_docs/risoluzione_conflitti.md` nella root.*
+=======
+*Collegamento bidirezionale creato: vedi anche `/docs/risoluzione_conflitti.md` nella root.*
+>>>>>>> ad700fc8 (.)

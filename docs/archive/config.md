@@ -284,6 +284,11 @@ return [
 7. **Performance**: Ottimizza la configurazione
 8. **Versioning**: Gestisci correttamente le versioni 
 ## Collegamenti tra versioni di config.md
+<<<<<<< HEAD
 * [config.md](../../../Xot/project_docs/config.md)
 * [config.md](../../../../Themes/One/project_docs/config.md)
+=======
+* [config.md](../../../Xot/docs/config.md)
+* [config.md](../../../../Themes/One/docs/config.md)
+>>>>>>> ad700fc8 (.)
 

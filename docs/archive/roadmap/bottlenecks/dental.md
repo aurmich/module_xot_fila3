@@ -212,5 +212,9 @@
 ## Collegamenti tra versioni di dental.md
 * [dental.md](docs/moduli/dental.md)
 * [dental.md](docs/roadmap/moduli/dental.md)
+<<<<<<< HEAD
 * [dental.md](../../../Xot/project_docs/roadmap/bottlenecks/dental.md)
+=======
+* [dental.md](../../../Xot/docs/roadmap/bottlenecks/dental.md)
+>>>>>>> ad700fc8 (.)
 

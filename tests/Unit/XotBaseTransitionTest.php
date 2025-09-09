@@ -3,9 +3,18 @@
 declare(strict_types=1);
 
 use Illuminate\Database\Eloquent\Model;
+<<<<<<< HEAD
 use Modules\Xot\Contracts\UserContract;
 use Modules\Xot\States\Transitions\XotBaseTransition;
 
+=======
+use Illuminate\Foundation\Testing\RefreshDatabase;
+use Modules\Xot\Contracts\UserContract;
+use Modules\Xot\States\Transitions\XotBaseTransition;
+
+uses(RefreshDatabase::class);
+
+>>>>>>> ad700fc8 (.)
 describe('XotBaseTransition', function () {
     beforeEach(function () {
         // Create a concrete test transition class
@@ -13,8 +22,11 @@ describe('XotBaseTransition', function () {
         {
             public static string $name = 'test_transition';
 
+<<<<<<< HEAD
             public ?Model $record = null;
 
+=======
+>>>>>>> ad700fc8 (.)
             public function getNotificationRecipients(): array
             {
                 return [
@@ -25,6 +37,7 @@ describe('XotBaseTransition', function () {
 
             public function sendRecipientNotification(?UserContract $recipient): void
             {
+<<<<<<< HEAD
                 // Mock implementation for testing
             }
         };
@@ -34,6 +47,20 @@ describe('XotBaseTransition', function () {
         {
             public ?int $id = 1;
 
+=======
+                // Mock implementation
+            }
+        };
+
+        // Create a test record
+        $this->record = new class extends Model implements UserContract
+        {
+            protected $table = 'test_users';
+
+            protected $fillable = ['name', 'email'];
+
+            // Implement UserContract methods as needed
+>>>>>>> ad700fc8 (.)
             public function getAuthIdentifierName(): string
             {
                 return 'id';
@@ -125,17 +152,58 @@ describe('XotBaseTransition', function () {
     });
 
     it('processes recipients correctly in sendNotifications', function () {
+<<<<<<< HEAD
         // Create a transition with mixed recipient types
         $transition = new class extends XotBaseTransition
         {
             public static string $name = 'mixed_recipients_transition';
 
             public ?Model $record = null;
+=======
+        // Mock recipients with mixed types
+        $transition = new class extends XotBaseTransition
+        {
+            public static string $name = 'test_mixed_transition';
+>>>>>>> ad700fc8 (.)
 
             public function getNotificationRecipients(): array
             {
                 return [
+<<<<<<< HEAD
                     'valid_user' => $this->record,
+=======
+                    'valid_user' => new class extends Model implements UserContract
+                    {
+                        protected $table = 'test_users';
+
+                        public function getAuthIdentifierName(): string
+                        {
+                            return 'id';
+                        }
+
+                        public function getAuthIdentifier(): mixed
+                        {
+                            return 1;
+                        }
+
+                        public function getAuthPassword(): string
+                        {
+                            return '';
+                        }
+
+                        public function getRememberToken(): ?string
+                        {
+                            return null;
+                        }
+
+                        public function setRememberToken($value): void {}
+
+                        public function getRememberTokenName(): string
+                        {
+                            return 'remember_token';
+                        }
+                    },
+>>>>>>> ad700fc8 (.)
                     'null_user' => null,
                 ];
             }
@@ -146,8 +214,11 @@ describe('XotBaseTransition', function () {
             }
         };
 
+<<<<<<< HEAD
         $transition->record = $this->record;
 
+=======
+>>>>>>> ad700fc8 (.)
         // This should process without errors
         expect(fn () => $transition->sendNotifications())->not->toThrow(Exception::class);
     });
@@ -183,11 +254,22 @@ describe('XotBaseTransition', function () {
         }
     });
 
+<<<<<<< HEAD
+=======
+    it('has proper documentation', function () {
+        $reflection = new ReflectionClass(XotBaseTransition::class);
+        $method = $reflection->getMethod('sendNotifications');
+
+        expect($method->isPublic())->toBeTrue();
+    });
+
+>>>>>>> ad700fc8 (.)
     it('validates inheritance requirements', function () {
         // Test that concrete implementations must provide required methods
         expect(method_exists($this->transition, 'getNotificationRecipients'))->toBeTrue()
             ->and(method_exists($this->transition, 'sendRecipientNotification'))->toBeTrue();
     });
+<<<<<<< HEAD
 
     it('follows Laraxot testing conventions', function () {
         // Test follows Laraxot conventions:
@@ -197,4 +279,6 @@ describe('XotBaseTransition', function () {
         // - Clear test descriptions
         expect($this->transition)->toBeInstanceOf(XotBaseTransition::class);
     });
+=======
+>>>>>>> ad700fc8 (.)
 });

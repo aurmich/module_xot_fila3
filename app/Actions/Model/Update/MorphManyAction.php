@@ -19,6 +19,7 @@ class MorphManyAction
      */
     public function execute(Model $model, RelationDTO $relationDTO): void
     {
+<<<<<<< HEAD
         if ($relationDTO->data === []) {
             // dddx(['model'=>$model,'relationDTO'=>$relationDTO]);
             // save Model - type assertion per dynamic relationship
@@ -37,6 +38,12 @@ class MorphManyAction
             } else {
                 throw new \InvalidArgumentException(sprintf('Relation "%s" must be HasMany or MorphMany to support saveMany()', $relationName));
             }
+=======
+        if ([] === $relationDTO->data) {
+            // dddx(['model'=>$model,'relationDTO'=>$relationDTO]);
+            // save Model
+            $model->{$relationDTO->name}()->saveMany($relationDTO->data);
+>>>>>>> ad700fc8 (.)
 
             return;
         }
@@ -53,6 +60,7 @@ class MorphManyAction
                 $row = $related->firstOrCreate([$keyName => $related_id]);
                 $res = app(\Modules\Xot\Actions\Model\UpdateAction::class)->execute($row, $data, []);
                 */
+<<<<<<< HEAD
 
                 // Assicura che $data sia type-safe per UpdateAction
                 /** @var array<string, mixed> $typedData */
@@ -62,6 +70,9 @@ class MorphManyAction
                 }
 
                 $res = app(UpdateAction::class)->execute($related, $typedData, []);
+=======
+                $res = app(UpdateAction::class)->execute($related, $data, []);
+>>>>>>> ad700fc8 (.)
                 $ids[] = $res->getKey();
                 $models[] = $res;
             } else {
@@ -69,6 +80,7 @@ class MorphManyAction
             }
         }
 
+<<<<<<< HEAD
         // Type assertion per dynamic relationship method
         $relationName = $relationDTO->name;
         $morphRelation = $model->{$relationName}();
@@ -85,6 +97,9 @@ class MorphManyAction
         } else {
             throw new \InvalidArgumentException(sprintf('Relation "%s" must be HasMany or MorphMany to support saveMany()', $relationName));
         }
+=======
+        $model->{$relationDTO->name}()->saveMany($models);
+>>>>>>> ad700fc8 (.)
 
         // dddx(['model' => $model, 'relationDTO' => $relationDTO]);
     }

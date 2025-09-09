@@ -2,9 +2,13 @@
 
 declare(strict_types=1);
 
+<<<<<<< HEAD
 namespace Modules\Xot\Tests\Pest;
 
 
+=======
+use Modules\Xot\Tests\TestCase;
+>>>>>>> ad700fc8 (.)
 
 /*
 |--------------------------------------------------------------------------
@@ -16,7 +20,11 @@ namespace Modules\Xot\Tests\Pest;
 |
 */
 
+<<<<<<< HEAD
 
+=======
+pest()->extend(TestCase::class)
+>>>>>>> ad700fc8 (.)
     ->in('Feature', 'Unit');
 
 /*
@@ -25,7 +33,11 @@ namespace Modules\Xot\Tests\Pest;
 |--------------------------------------------------------------------------
 |
 | Qui puoi definire aspettative globali per il modulo Xot.
+<<<<<<< HEAD
 
+=======
+| Quando definisci here expectation globali, saranno disponibili
+>>>>>>> ad700fc8 (.)
 | in tutti i test del modulo.
 |
 */
@@ -46,4 +58,8 @@ namespace Modules\Xot\Tests\Pest;
 
 // function something() {
 //     // ...
+<<<<<<< HEAD
 
+=======
+// }
+>>>>>>> ad700fc8 (.)

@@ -39,7 +39,11 @@ In caso di errore durante l'applicazione dei metatag:
 
 ## Collegamenti
 - [MetatagData](../datas/MetatagData.md)
+<<<<<<< HEAD
 - [Filament Panel Documentation](https://filamentphp.com/project_docs/panels)
+=======
+- [Filament Panel Documentation](https://filamentphp.com/docs/panels)
+>>>>>>> ad700fc8 (.)
 
 ## Note
 - Questa azione utilizza il trait `QueueableAction` di Spatie

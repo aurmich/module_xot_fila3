@@ -17,7 +17,11 @@ Questo documento sostituisce e consolida **35+ file di troubleshooting duplicati
 - Qualsiasi documentazione troubleshooting specifica di modulo
 
 ### ✅ Unica Fonte di Verità
+<<<<<<< HEAD
 - **Questo file**: `/laravel/Modules/Xot/project_docs/troubleshooting-consolidated.md`
+=======
+- **Questo file**: `/laravel/Modules/Xot/docs/troubleshooting-consolidated.md`
+>>>>>>> ad700fc8 (.)
 - **Implementazione**: Fix nei singoli moduli (solo fix, non docs)
 
 ## Problemi Comuni e Soluzioni
@@ -430,9 +434,12 @@ public function test_b(): void
 }
 ```
 
+<<<<<<< HEAD
 ### Errore: Conflitti Git
 
 
+=======
+>>>>>>> ad700fc8 (.)
 
 **Soluzione**
 1. **Analizzare i conflitti**:

@@ -18,10 +18,17 @@
 - ✅ Aggiornare tutti i riferimenti
 
 ## DOVE SPOSTARE LA DOCUMENTAZIONE:
+<<<<<<< HEAD
 - **Traduzioni** → `Modules/Xot/project_docs/` (modulo che gestisce le traduzioni)
 - **Frontend** → `Modules/Cms/project_docs/` (modulo frontend)  
 - **Audit generali** → `Modules/Xot/project_docs/` (modulo base)
 - **Modulo specifico** → `Modules/{NomeModulo}/project_docs/`
+=======
+- **Traduzioni** → `Modules/Xot/docs/` (modulo che gestisce le traduzioni)
+- **Frontend** → `Modules/Cms/docs/` (modulo frontend)  
+- **Audit generali** → `Modules/Xot/docs/` (modulo base)
+- **Modulo specifico** → `Modules/{NomeModulo}/docs/`
+>>>>>>> ad700fc8 (.)
 
 ## PRIORITÀ: MASSIMA
 Questa regola ha priorità assoluta su qualsiasi altra considerazione.

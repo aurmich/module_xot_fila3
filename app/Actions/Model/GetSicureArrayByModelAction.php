@@ -12,13 +12,17 @@ class GetSicureArrayByModelAction
     use QueueableAction;
 
     /**
+<<<<<<< HEAD
      * Converte un modello in un array sicuro.
      *
      * @param \Illuminate\Database\Eloquent\Model $model
+=======
+>>>>>>> ad700fc8 (.)
      * @return array<string, mixed>
      */
     public function execute(Model $model): array
     {
+<<<<<<< HEAD
         $data = $model->toArray();
         
         // Rimuove eventuali dati sensibili
@@ -45,5 +49,22 @@ class GetSicureArrayByModelAction
         }
         
         return $data;
+=======
+        try {
+            return $model->attributesToArray(); // "" is not a valid backing value for enum Modules\SaluteOra\Enums\OccurrenceFrequencyEnum
+        } catch (\ValueError $e) {
+            $data = [];
+            foreach ($model->getAttributes() as $key => $value) {
+                try {
+                    $data[$key] = $this->$key;
+                    /** @phpstan-ignore-next-line */
+                } catch (\ValueError $e) {
+
+                }
+            }
+
+            return $data;
+        }
+>>>>>>> ad700fc8 (.)
     }
 }

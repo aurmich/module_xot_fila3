@@ -14,6 +14,7 @@ class RelationAction
     use QueueableAction;
 
     /**
+<<<<<<< HEAD
      * Execute relation updates with type-safe data.
      *
      * @param  array<mixed, mixed>  $data
@@ -28,6 +29,13 @@ class RelationAction
         }
 
         $relations = app(FilterRelationsAction::class)->execute($model, $typedData);
+=======
+     * Undocumented function.
+     */
+    public function execute(Model $model, array $data): void
+    {
+        $relations = app(FilterRelationsAction::class)->execute($model, $data);
+>>>>>>> ad700fc8 (.)
         /*
         if ('Operation' === class_basename($model)) {
             dddx([
@@ -42,7 +50,11 @@ class RelationAction
             // Ottieni il tipo di relazione dal nome della classe
             $relationClass = get_class($relation);
             $relationshipType = class_basename($relationClass);
+<<<<<<< HEAD
 
+=======
+            
+>>>>>>> ad700fc8 (.)
             $actionClass = __NAMESPACE__.'\\'.$relationshipType.'Action';
             Assert::object($action = app($actionClass));
 

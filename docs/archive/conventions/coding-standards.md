@@ -215,10 +215,19 @@ public function store(Request $request): Response
 
 - [PHP-FIG PSRs](https://www.php-fig.org/psr/)
 - [PHPStan Documentation](https://phpstan.org/user-guide/getting-started)
+<<<<<<< HEAD
 - [Laravel Best Practices](https://laravel.com/project_docs/master/best-practices)
 - [Security Best Practices](../security/README.md) 
 
 ## Collegamenti tra versioni di coding-standards.md
 * [coding-standards.md](../../../Xot/project_docs/standards/coding-standards.md)
 * [coding-standards.md](../../../Xot/project_docs/conventions/coding-standards.md)
+=======
+- [Laravel Best Practices](https://laravel.com/docs/master/best-practices)
+- [Security Best Practices](../security/README.md) 
+
+## Collegamenti tra versioni di coding-standards.md
+* [coding-standards.md](../../../Xot/docs/standards/coding-standards.md)
+* [coding-standards.md](../../../Xot/docs/conventions/coding-standards.md)
+>>>>>>> ad700fc8 (.)
 
