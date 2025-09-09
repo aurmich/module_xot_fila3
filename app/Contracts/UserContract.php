@@ -19,6 +19,7 @@ use Spatie\MediaLibrary\MediaCollections\FileAdder;
 use Illuminate\Database\Eloquent\Relations\MorphMany;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 
+
 // use Filament\Models\Contracts\HasTenants;
 
 /**
@@ -130,5 +131,12 @@ interface UserContract extends Authenticatable, Authorizable, CanResetPassword, 
      *
      */
     //public function consents(): MorphMany;
+
+     /**
+     * Determine if the user may perform the given permission.
+     *
+     * @param  string|int|\Spatie\Permission\Contracts\Permission|\BackedEnum  $permission
+     */
+    public function hasPermissionTo($permission, ?string $guardName='web'): bool;
     
 }

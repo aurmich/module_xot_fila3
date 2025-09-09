@@ -4,9 +4,8 @@ declare(strict_types=1);
 
 namespace Modules\Xot\Actions\Collection;
 
-// use Modules\Xot\Services\ArrayService;
-
-
+use Illuminate\Support\Collection;
+use Spatie\QueueableAction\QueueableAction;
 
 /**
  * Action per la traduzione di elementi di una collezione.
@@ -20,15 +19,14 @@ class TransCollectionAction
     /**
      * Esegue la traduzione di una collezione.
      *
-     * @return Collection<int|string, string>
+     * @param \Illuminate\Support\Collection<int|string, mixed> $collection
+     * @param string|null $transKey
+     * @return \Illuminate\Support\Collection<int|string, string>
      */
     public function execute(
         Collection $collection,
         ?string $transKey,
     ): Collection {
-            return $collection->map(fn (mixed $item): string => SafeStringCastAction::cast($item));
-        }
-
         $this->transKey = $transKey;
 
         return $collection->map(fn (mixed $item): string => $this->trans($item));
@@ -37,12 +35,18 @@ class TransCollectionAction
     /**
      * Traduce un singolo elemento.
      *
+     * @param mixed $item
      * @return string L'elemento tradotto o l'elemento originale se la traduzione non esiste
      */
     public function trans(mixed $item): string
     {
         // Converte l'item in stringa se non lo è già
+        if (!is_string($item)) {
+            return (string) $item;
+        }
 
+        // Se non c'è transKey, restituisce l'elemento originale
+        if (empty($this->transKey)) {
             return $item;
         }
 

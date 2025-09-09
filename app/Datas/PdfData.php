@@ -159,4 +159,10 @@ class PdfData extends Data
         $this->engine = $engine;
         return $this;
     }
+
+    public function setFilename(string $filename): self
+    {
+        $this->filename = $filename;
+        return $this;
+    }
 }

@@ -212,5 +212,10 @@ php artisan test --filter=ExampleTest
 *Ultimo aggiornamento: giugno 2025 - Versione 2.0.0*
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 >>>>>>> d9f8ef0b (.)
+=======
+
+
+>>>>>>> c454d25a (.)
