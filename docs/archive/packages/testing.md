@@ -97,17 +97,10 @@ test('it can integrate with laravel', function () {
 
 
 ## Collegamenti tra versioni di testing.md
-<<<<<<< HEAD
-* [testing.md](../../../Xot/project_docs/packages/testing.md)
-* [testing.md](../../../Xot/project_docs/development/testing.md)
-* [testing.md](../../../Cms/project_docs/frontoffice/testing.md)
-* [testing.md](../../../../Themes/One/project_docs/testing.md)
-=======
 * [testing.md](../../../Xot/docs/packages/testing.md)
 * [testing.md](../../../Xot/docs/development/testing.md)
 * [testing.md](../../../Cms/docs/frontoffice/testing.md)
 * [testing.md](../../../../Themes/One/docs/testing.md)
->>>>>>> ad700fc8 (.)
 
 
 ### Versione Incoming

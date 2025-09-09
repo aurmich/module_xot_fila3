@@ -26,8 +26,4 @@ UPDATE permissions SET guard_name = 'web' WHERE guard_name = '' OR guard_name IS
 ```
 
 ## Collegamento documentazione specifica
-<<<<<<< HEAD
-Vedi anche: ../../User/project_docs/roles-permissions.md
-=======
 Vedi anche: ../../User/docs/roles-permissions.md
->>>>>>> ad700fc8 (.)

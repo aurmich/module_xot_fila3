@@ -16,18 +16,10 @@ In tutto il progetto, **usare SEMPRE** i campi `first_name` e `last_name` per ra
 - Le traduzioni devono mappare correttamente questi campi nelle varie lingue.
 
 ## Collegamenti
-<<<<<<< HEAD
-- [Errore e regola nel modulo Patient](../../Patient/project_docs/naming-user-fields.md)
-=======
 - [Errore e regola nel modulo Patient](../../Patient/docs/naming-user-fields.md)
->>>>>>> ad700fc8 (.)
 
 **Questa regola è trasversale e vincolante per tutti i moduli del progetto.**
 
 ## Collegamenti tra versioni di naming-user-fields.md
-<<<<<<< HEAD
-* [naming-user-fields.md](../../Patient/project_docs/naming-user-fields.md)
-=======
 * [naming-user-fields.md](../../Patient/docs/naming-user-fields.md)
->>>>>>> ad700fc8 (.)
 

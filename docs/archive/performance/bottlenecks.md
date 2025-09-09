@@ -203,18 +203,6 @@ public function exportData()
 
 
 ## Collegamenti tra versioni di bottlenecks.md
-<<<<<<< HEAD
-* [bottlenecks.md](../../../Gdpr/project_docs/performance/bottlenecks.md)
-* [bottlenecks.md](../../../Xot/project_docs/bottlenecks.md)
-* [bottlenecks.md](../../../Xot/project_docs/performance/bottlenecks.md)
-* [bottlenecks.md](../../../Xot/project_docs/roadmap/bottlenecks.md)
-* [bottlenecks.md](../../../User/project_docs/roadmap/bottlenecks.md)
-* [bottlenecks.md](../../../UI/project_docs/roadmap/bottlenecks.md)
-* [bottlenecks.md](../../../Lang/project_docs/performance/bottlenecks.md)
-* [bottlenecks.md](../../../Job/project_docs/performance/bottlenecks.md)
-* [bottlenecks.md](../../../Media/project_docs/performance/bottlenecks.md)
-* [bottlenecks.md](../../../Patient/project_docs/roadmap/bottlenecks.md)
-=======
 * [bottlenecks.md](../../../Gdpr/docs/performance/bottlenecks.md)
 * [bottlenecks.md](../../../Xot/docs/bottlenecks.md)
 * [bottlenecks.md](../../../Xot/docs/performance/bottlenecks.md)
@@ -225,7 +213,6 @@ public function exportData()
 * [bottlenecks.md](../../../Job/docs/performance/bottlenecks.md)
 * [bottlenecks.md](../../../Media/docs/performance/bottlenecks.md)
 * [bottlenecks.md](../../../Patient/docs/roadmap/bottlenecks.md)
->>>>>>> ad700fc8 (.)
 
 
 ### Versione Incoming

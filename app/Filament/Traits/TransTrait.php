@@ -17,19 +17,11 @@ trait TransTrait
      *
      * @throws \Exception Se exceptionIfNotExist è true e la traduzione non esiste
      */
-<<<<<<< HEAD
-    public static function trans(string $key, bool $exceptionIfNotExist = false): string
-    {
-        $tmp = static::getKeyTrans($key);
-        /** @var array|\Illuminate\Contracts\Translation\Translator|string $res */
-        $res = trans($tmp);
-=======
     public static function trans(string $key, bool $exceptionIfNotExist = false, array $params = []): string
     {
         $tmp = static::getKeyTrans($key);
         /** @var array|\Illuminate\Contracts\Translation\Translator|string $res */
         $res = trans($tmp, $params);
->>>>>>> ad700fc8 (.)
 
         if (is_string($res)) {
             if ($exceptionIfNotExist && $res === $tmp) {

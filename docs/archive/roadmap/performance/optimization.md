@@ -48,13 +48,7 @@
 - [Best Practices Performance](../../BEST-PRACTICES.md#performance)
 - [Performance Guidelines](../../performance/optimization.md) 
 ## Collegamenti tra versioni di optimization.md
-<<<<<<< HEAD
-* [optimization.md](../../../Xot/project_docs/roadmap/performance/optimization.md)
-* [optimization.md](../../../Job/project_docs/optimization.md)
-* [optimization.md](../../../Cms/project_docs/roadmap/performance/optimization.md)
-=======
 * [optimization.md](../../../Xot/docs/roadmap/performance/optimization.md)
 * [optimization.md](../../../Job/docs/optimization.md)
 * [optimization.md](../../../Cms/docs/roadmap/performance/optimization.md)
->>>>>>> ad700fc8 (.)
 

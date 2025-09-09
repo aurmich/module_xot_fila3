@@ -23,12 +23,6 @@ use function Safe\mkdir;
  */
 class DatabaseSchemaExportCommand extends Command
 {
-<<<<<<< HEAD
-    /** @var string  */
-    protected $signature = 'db:schema:export {table?} {--module=}';
-
-    /** @var string  */
-=======
     /**
      * @var string
      */
@@ -37,7 +31,6 @@ class DatabaseSchemaExportCommand extends Command
     /**
      * @var string
      */
->>>>>>> 00793d2a (.)
     protected $description = 'Esporta lo schema del database in file JSON';
 
     /**

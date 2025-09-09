@@ -438,13 +438,8 @@ class Product extends BaseModel
 ## Collegamenti
 
 - [SafeFloatCastAction](../safe-float-cast-action.md)
-<<<<<<< HEAD
-- [DRY Principle](../../project_docs/dry-principle.md)
-- [KISS Principle](../../project_docs/kiss-principle.md)
-=======
 - [DRY Principle](../../docs/dry-principle.md)
 - [KISS Principle](../../docs/kiss-principle.md)
->>>>>>> ad700fc8 (.)
 - [Xot Actions Documentation](../actions/README.md)
 
 ---

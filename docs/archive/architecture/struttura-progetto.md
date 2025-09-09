@@ -127,16 +127,6 @@ rm -rf database/migrations
 
 ## Collegamenti Bidirezionali
 
-<<<<<<< HEAD
-- [Documentazione Generale](../../../../project_docs/README.md) - Indice della documentazione
-- [Convenzioni di Naming](../namespace-conventions.md) - Convenzioni per i namespace
-- [Architettura Folio+Volt](../folio_volt_architecture.md) - Architettura frontend
-- [Struttura dei Percorsi - Tema One](../../../Themes/One/project_docs/project-paths.md) - Guida dettagliata sui percorsi corretti nel progetto
-## Collegamenti tra versioni di struttura-progetto.md
-* [struttura-progetto.md](docs/tecnico/struttura/struttura-progetto.md)
-* [struttura-progetto.md](docs/tecnico/struttura-progetto.md)
-* [struttura-progetto.md](../../../Xot/project_docs/architecture/struttura-progetto.md)
-=======
 - [Documentazione Generale](../../../../docs/README.md) - Indice della documentazione
 - [Convenzioni di Naming](../namespace-conventions.md) - Convenzioni per i namespace
 - [Architettura Folio+Volt](../folio_volt_architecture.md) - Architettura frontend
@@ -145,5 +135,4 @@ rm -rf database/migrations
 * [struttura-progetto.md](docs/tecnico/struttura/struttura-progetto.md)
 * [struttura-progetto.md](docs/tecnico/struttura-progetto.md)
 * [struttura-progetto.md](../../../Xot/docs/architecture/struttura-progetto.md)
->>>>>>> ad700fc8 (.)
 

@@ -134,15 +134,6 @@ se il branch di un modulo vuole essere pubblicato, eseguire nel modulo
 
 
 ## Collegamenti tra versioni di installation.md
-<<<<<<< HEAD
-* [installation.md](../../../Xot/project_docs/filament/installation.md)
-* [installation.md](../../../Xot/project_docs/installation.md)
-* [installation.md](../../../Xot/project_docs/base/installation.md)
-* [installation.md](../../../User/project_docs/installation.md)
-* [installation.md](../../../Lang/project_docs/installation.md)
-* [installation.md](../../../Cms/project_docs/installation.md)
-* [installation.md](../../../../Themes/One/project_docs/installation.md)
-=======
 * [installation.md](../../../Xot/docs/filament/installation.md)
 * [installation.md](../../../Xot/docs/installation.md)
 * [installation.md](../../../Xot/docs/base/installation.md)
@@ -150,7 +141,6 @@ se il branch di un modulo vuole essere pubblicato, eseguire nel modulo
 * [installation.md](../../../Lang/docs/installation.md)
 * [installation.md](../../../Cms/docs/installation.md)
 * [installation.md](../../../../Themes/One/docs/installation.md)
->>>>>>> ad700fc8 (.)
 
 
 ### Versione Incoming

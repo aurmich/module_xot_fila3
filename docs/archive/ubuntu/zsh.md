@@ -22,11 +22,6 @@ usefull links:
 
 
 ## Collegamenti tra versioni di zsh.md
-<<<<<<< HEAD
-* [zsh.md](../../../Xot/project_docs/install/zsh.md)
-* [zsh.md](../../../Xot/project_docs/ubuntu/zsh.md)
-=======
 * [zsh.md](../../../Xot/docs/install/zsh.md)
 * [zsh.md](../../../Xot/docs/ubuntu/zsh.md)
->>>>>>> ad700fc8 (.)
 

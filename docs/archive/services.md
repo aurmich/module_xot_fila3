@@ -234,13 +234,8 @@ return [
 
    - Testare i casi limite 
 ## Collegamenti tra versioni di services.md
-<<<<<<< HEAD
-* [services.md](../../../Xot/project_docs/services.md)
-* [services.md](../../../Tenant/project_docs/it/config/services.md)
-=======
 * [services.md](../../../Xot/docs/services.md)
 * [services.md](../../../Tenant/docs/it/config/services.md)
->>>>>>> ad700fc8 (.)
 
 
 ### Versione Incoming

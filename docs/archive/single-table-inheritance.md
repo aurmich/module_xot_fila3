@@ -76,10 +76,6 @@
 
 ## Collegamenti
 
-<<<<<<< HEAD
-- [Modelli Patient](../Patient/project_docs/models.md)
-=======
 - [Modelli Patient](../Patient/docs/models.md)
->>>>>>> ad700fc8 (.)
 - [Best Practices Modelli](./models.md)
 - [Convenzioni di Codice](./coding-standards.md) 

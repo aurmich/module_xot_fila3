@@ -52,24 +52,7 @@ trait HasXotTable
     {
         $actions = [];
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 00793d2a (.)
-        $resource = $this->getResource();
-        
-        if (method_exists($resource, 'canCreate')) {
-            $actions['create'] = Tables\Actions\CreateAction::make()
-                ->iconButton()
-                ->tooltip(__('user::actions.create'))
-                ->visible(fn (?Model $record): bool => $resource::canCreate());
-        }
-<<<<<<< HEAD
-=======
         $actions['create'] = Tables\Actions\CreateAction::make();
->>>>>>> ad700fc8 (.)
-=======
->>>>>>> 00793d2a (.)
 
         if ($this->shouldShowAssociateAction()) {
             $actions['associate'] = Tables\Actions\AssociateAction::make()

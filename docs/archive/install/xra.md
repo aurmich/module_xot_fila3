@@ -22,15 +22,9 @@ return [
 
 
 ## Collegamenti tra versioni di xra.md
-<<<<<<< HEAD
-* [xra.md](../../../Xot/project_docs/install/xra.md)
-* [xra.md](../../../Tenant/project_docs/it/xra.md)
-* [xra.md](../../../Tenant/project_docs/it/config/xra.md)
-=======
 * [xra.md](../../../Xot/docs/install/xra.md)
 * [xra.md](../../../Tenant/docs/it/xra.md)
 * [xra.md](../../../Tenant/docs/it/config/xra.md)
->>>>>>> ad700fc8 (.)
 
 
 ### Versione Incoming

@@ -2,17 +2,6 @@
 
 declare(strict_types=1);
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-namespace Modules\Xot\Tests\Feature\Filament\XotBaseResourceTest;
-
-namespace Modules\Xot\Tests\Feature\Filament;
-
-=======
-=======
-namespace Modules\Xot\Tests\Feature\Filament\XotBaseResourceTest;
-
->>>>>>> 00793d2a (.)
 namespace Modules\Xot\Tests\Feature\Filament;
 
 use Filament\Resources\Resource;
@@ -30,7 +19,6 @@ beforeEach(function () {
         protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
 
         protected static ?string $navigationGroup = 'Test Group';
->>>>>>> ad700fc8 (.)
 
         protected static ?int $navigationSort = 1;
     };

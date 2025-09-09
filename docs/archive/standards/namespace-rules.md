@@ -82,16 +82,9 @@ Se si verificano errori "Class not found" o problemi di autoloading:
 
 ## Collegamenti Correlati
 
-<<<<<<< HEAD
-- [Convenzioni](../../../project_docs/conventions.md)
-- [Naming Conventions](../../../project_docs/naming-conventions.md)
-- [Documentazione Xot](../CODE-STANDARDS.md)
-- [Collegamenti Documentazione](../../../../project_docs/collegamenti-documentazione.md)
-=======
 - [Convenzioni](../../../docs/conventions.md)
 - [Naming Conventions](../../../docs/naming-conventions.md)
 - [Documentazione Xot](../CODE-STANDARDS.md)
 - [Collegamenti Documentazione](../../../../docs/collegamenti-documentazione.md)
->>>>>>> ad700fc8 (.)
 
 Ultima modifica: 31/03/2025 

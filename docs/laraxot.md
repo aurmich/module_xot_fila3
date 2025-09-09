@@ -2295,15 +2295,7 @@ F:\var\www\fixcity\Modules\Fixcity\     # ❌ ERRATO: manca laravel\
 1. Tutti i riferimenti ai moduli devono partire da `laravel/Modules/`
 2. I temi si trovano in `laravel/Themes/`
 3. Gli assets pubblici vanno in `public_html/`
-<<<<<<< HEAD
-<<<<<<< HEAD
-4. La documentazione va in `/project_docs/`
-=======
 4. La documentazione va in `/docs/`
->>>>>>> ad700fc8 (.)
-=======
-4. La documentazione va in `/project_docs/`
->>>>>>> 00793d2a (.)
 
 # Gestione Temi e Assets
 

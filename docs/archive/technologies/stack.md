@@ -22,21 +22,13 @@ Questo documento definisce lo stack tecnologico standard utilizzato in tutti i m
 - Componenti reattivi
 - Stato locale
 - Azioni e eventi
-<<<<<<< HEAD
-- [Documentazione Volt](https://livewire.laravel.com/project_docs/volt)
-=======
 - [Documentazione Volt](https://livewire.laravel.com/docs/volt)
->>>>>>> ad700fc8 (.)
 
 ### Laravel Folio
 - Routing basato su file
 - Pagine dinamiche
 - Middleware per pagine
-<<<<<<< HEAD
-- [Documentazione Folio](https://laravel.com/project_docs/folio)
-=======
 - [Documentazione Folio](https://laravel.com/docs/folio)
->>>>>>> ad700fc8 (.)
 
 ## Database e Cache
 
@@ -45,11 +37,7 @@ Questo documento definisce lo stack tecnologico standard utilizzato in tutti i m
 - Supporto transazioni
 - Indici e ottimizzazioni
 - [MySQL Docs](https://dev.mysql.com/doc/)
-<<<<<<< HEAD
-- [PostgreSQL Docs](https://www.postgresql.org/project_docs/)
-=======
 - [PostgreSQL Docs](https://www.postgresql.org/docs/)
->>>>>>> ad700fc8 (.)
 
 ### Redis
 - Cache distribuita
@@ -117,11 +105,7 @@ Questo documento definisce lo stack tecnologico standard utilizzato in tutti i m
 - Debug e profiling
 - Query monitoring
 - Cache inspection
-<<<<<<< HEAD
-- [Telescope Docs](https://laravel.com/project_docs/telescope)
-=======
 - [Telescope Docs](https://laravel.com/docs/telescope)
->>>>>>> ad700fc8 (.)
 
 ## Versioni Minime Richieste
 

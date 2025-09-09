@@ -10,10 +10,6 @@ use InvalidArgumentException;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Eloquent\Model;
-<<<<<<< HEAD
-use Modules\Tenant\Models\Traits\SushiToJson;
-=======
->>>>>>> ad700fc8 (.)
 
 /**
  * Represents a table in the INFORMATION_SCHEMA.TABLES.
@@ -71,11 +67,6 @@ use Modules\Tenant\Models\Traits\SushiToJson;
  */
 class InformationSchemaTable extends Model
 {
-<<<<<<< HEAD
-    use SushiToJson;
-
-    
-=======
     use Sushi;
 
     /**
@@ -92,7 +83,6 @@ class InformationSchemaTable extends Model
      * Indicates if the model should be timestamped.
      */
     public $timestamps = false;
->>>>>>> ad700fc8 (.)
 
     /**
      * The attributes that are mass assignable.
@@ -102,14 +92,6 @@ class InformationSchemaTable extends Model
     protected $fillable = [
         'table_schema',
         'table_name',
-<<<<<<< HEAD
-        'table_rows',
-        
-        'updated_at',
-        'updated_by',
-        'created_at',
-        'created_by',
-=======
         'engine',
         'version',
         'row_format',
@@ -126,7 +108,6 @@ class InformationSchemaTable extends Model
         'checksum',
         'create_options',
         'table_comment',
->>>>>>> ad700fc8 (.)
     ];
 
     /**
@@ -136,19 +117,6 @@ class InformationSchemaTable extends Model
      */
     protected $schema = [
         'id' => 'integer',
-<<<<<<< HEAD
-        'table_schema' => 'string',
-        'table_name' => 'string',
-        'table_rows' => 'integer',
-        'updated_at' => 'datetime',
-        'updated_by' => 'string',
-        'created_at' => 'datetime',
-        'created_by' => 'string',
-    ];
-
-    
-   
-=======
         'TABLE_CATALOG' => 'string',
         'TABLE_SCHEMA' => 'string',
         'TABLE_NAME' => 'string',
@@ -196,7 +164,6 @@ class InformationSchemaTable extends Model
         ]);
     }
 
->>>>>>> ad700fc8 (.)
     /**
      * Get the rows array for the Sushi model.
      * This method is required by Sushi to provide the data.
@@ -205,33 +172,6 @@ class InformationSchemaTable extends Model
      */
     public function getRows(): array
     {
-<<<<<<< HEAD
-        return $this->getSushiRows();
-    }
-
-    public static function updateModelCount(string $modelClass,int $total): void
-    {
-         if (! class_exists($modelClass)) {
-            throw new InvalidArgumentException("Model class [$modelClass] does not exist");
-        }
-
-        /** @var Model $model */
-        $model = app($modelClass);
-
-        if (! $model instanceof Model) {
-            throw new InvalidArgumentException("Class [$modelClass] must be an instance of ".Model::class);
-        }
-
-        $connection = $model->getConnection();
-        $database = $connection->getDatabaseName();
-        $driver = $connection->getDriverName();
-        $table = $model->getTable();
-
-        $row= InformationSchemaTable::updateOrCreate(['table_schema'=>$database,'table_name'=>$table],['table_rows'=>$total]);
-
-    }
-   
-=======
         $query = "SELECT 
             TABLE_CATALOG,
             TABLE_SCHEMA,
@@ -317,7 +257,6 @@ class InformationSchemaTable extends Model
         }
         return $instance;
     }
->>>>>>> ad700fc8 (.)
 
     /**
      * Get the row count for a model class.
@@ -345,18 +284,6 @@ class InformationSchemaTable extends Model
         $driver = $connection->getDriverName();
         $table = $model->getTable();
 
-<<<<<<< HEAD
-        
-        $row= InformationSchemaTable::firstOrCreate(['table_schema'=>$database,'table_name'=>$table]);
-        if($row->table_rows===null){
-            $table_rows=$model->count();
-            $row= tap($row)->update(['table_rows'=>$table_rows]);
-        }
-        
-        return $row->table_rows;
-        /*
-=======
->>>>>>> ad700fc8 (.)
         // Handle in-memory database
         if (':memory:' === $database) {
             return (int) $model->count();
@@ -367,15 +294,6 @@ class InformationSchemaTable extends Model
             return (int) $model->count();
         }
 
-<<<<<<< HEAD
-        return $model->count();
-        
-        return static::getAccurateRowCount($table, $database);
-        */
-    }
-
-   
-=======
         return static::getAccurateRowCount($table, $database);
     }
 
@@ -438,5 +356,4 @@ class InformationSchemaTable extends Model
         DB::connection('mysql')
             ->statement("ANALYZE TABLE `{$database}`.`{$tableName}`");
     }
->>>>>>> ad700fc8 (.)
 }

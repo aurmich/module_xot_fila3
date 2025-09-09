@@ -4,46 +4,18 @@ declare(strict_types=1);
 
 namespace Modules\Xot\Filament\Resources\XotBaseResource\Pages;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-use Filament\Tables;
+use Filament\Forms\Concerns\InteractsWithForms;
 use Filament\Forms\Form;
-use Filament\Tables\Table;
-use Illuminate\Support\Str;
-use Webmozart\Assert\Assert;
-use Illuminate\Support\Facades\DB;
-use Filament\Tables\Actions\Action;
-use Filament\Tables\Columns\TextColumn;
-use Illuminate\Database\Eloquent\Model;
-use Filament\Tables\Actions\CreateAction;
-use Illuminate\Database\Eloquent\Builder;
-use Modules\Xot\Filament\Traits\HasXotTable;
-use Filament\Forms\Concerns\InteractsWithForms;
-use Modules\Xot\Filament\Traits\NavigationLabelTrait;
 use Filament\Resources\Pages\ManageRelatedRecords as FilamentManageRelatedRecords;
-=======
-use Filament\Forms\Concerns\InteractsWithForms;
-=======
-use Filament\Tables;
->>>>>>> 00793d2a (.)
-use Filament\Forms\Form;
-use Filament\Tables\Table;
-use Illuminate\Support\Str;
-use Webmozart\Assert\Assert;
-<<<<<<< HEAD
->>>>>>> ad700fc8 (.)
-=======
-use Illuminate\Support\Facades\DB;
 use Filament\Tables\Actions\Action;
-use Filament\Tables\Columns\TextColumn;
-use Illuminate\Database\Eloquent\Model;
 use Filament\Tables\Actions\CreateAction;
-use Illuminate\Database\Eloquent\Builder;
+use Filament\Tables\Columns\TextColumn;
+use Filament\Tables\Table;
+use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Str;
 use Modules\Xot\Filament\Traits\HasXotTable;
-use Filament\Forms\Concerns\InteractsWithForms;
 use Modules\Xot\Filament\Traits\NavigationLabelTrait;
-use Filament\Resources\Pages\ManageRelatedRecords as FilamentManageRelatedRecords;
->>>>>>> 00793d2a (.)
+use Webmozart\Assert\Assert;
 
 /**
  * Classe base per la gestione delle relazioni nelle risorse Filament.
@@ -106,51 +78,11 @@ abstract class XotBaseManageRelatedRecords extends FilamentManageRelatedRecords
      */
     public function getTableHeaderActions(): array
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 00793d2a (.)
-        $actions = [];
-        $resource = static::class;
-        // if (method_exists($resource, 'canCreate')) {
-        //     $actions['create'] = Tables\Actions\CreateAction::make()
-        //         ->iconButton()
-        //         ->tooltip(__('user::actions.create'))
-        //         ->visible(fn (?Model $record): bool => $resource::canCreate());
-        // }
-
-        // if (method_exists($resource, 'canAssociate')) {
-        //     $actions['associate'] = Tables\Actions\AssociateAction::make()
-        //         ->label('')
-        //         ->icon('heroicon-o-paper-clip')
-        //         ->tooltip(__('user::actions.associate_user'))
-        //         ->visible(fn (?Model $record): bool => $resource::canAssociate());
-
-        // }
-
-        if (method_exists($resource, 'canAttach')) {
-            $actions['attach'] = Tables\Actions\AttachAction::make()
-                ->label('')
-                ->icon('heroicon-o-link')
-                ->tooltip(__('user::actions.attach_user'))
-                ->visible(fn (?Model $record): bool => $resource::canAttach())
-                // ->recordSelectOptionsQuery(fn (Builder $query) => 
-                //     $query->addSelect(DB::raw("CONCAT(nome, ' ', cognome, ' (ID: ', matricola, ')') as display_name"))
-                // )
-            // ->recordTitleAttribute('display_name')
-            ->preloadRecordSelect();
-        }
-        return $actions;
-<<<<<<< HEAD
-=======
         return [
             'create' => CreateAction::make()
                 ->label('Crea Nuovo')
                 ->disableCreateAnother(),
         ];
->>>>>>> ad700fc8 (.)
-=======
->>>>>>> 00793d2a (.)
     }
 
     /**
@@ -166,33 +98,11 @@ abstract class XotBaseManageRelatedRecords extends FilamentManageRelatedRecords
                 ->label('Modifica')
                 ->icon('heroicon-o-pencil')
                 ->url(fn (Model $record): string => static::getResource()::getUrl('edit', ['record' => $record])),
-<<<<<<< HEAD
-<<<<<<< HEAD
-                
-            'detach' => Tables\Actions\DetachAction::make(),
-            
-
-            // 'view' => Action::make('view')
-            //     ->label('Visualizza')
-            //     ->icon('heroicon-o-eye')
-            //     ->url(fn (Model $record): string => static::getResource()::getUrl('view', ['record' => $record])),
-=======
 
             'view' => Action::make('view')
                 ->label('Visualizza')
                 ->icon('heroicon-o-eye')
                 ->url(fn (Model $record): string => static::getResource()::getUrl('view', ['record' => $record])),
->>>>>>> ad700fc8 (.)
-=======
-                
-            'detach' => Tables\Actions\DetachAction::make(),
-            
-
-            // 'view' => Action::make('view')
-            //     ->label('Visualizza')
-            //     ->icon('heroicon-o-eye')
-            //     ->url(fn (Model $record): string => static::getResource()::getUrl('view', ['record' => $record])),
->>>>>>> 00793d2a (.)
         ];
     }
 

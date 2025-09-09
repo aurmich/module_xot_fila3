@@ -112,12 +112,4 @@ class ContentPdfAction
             filename: $filename
         );
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> ad700fc8 (.)
-=======
-}
->>>>>>> 00793d2a (.)

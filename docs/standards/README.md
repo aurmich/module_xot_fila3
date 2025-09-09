@@ -13,18 +13,8 @@ Questa cartella contiene gli standard di codice e le convenzioni utilizzate nel 
 Questi standard si applicano a tutti i moduli del progetto e devono essere seguiti per mantenere la coerenza del codice. 
 
 ## Collegamenti tra versioni di README.md
-<<<<<<< HEAD
-<<<<<<< HEAD
-* [README.md](bashscripts/project_docs/README.md)
-* [README.md](bashscripts/project_docs/it/README.md)
-=======
 * [README.md](bashscripts/docs/README.md)
 * [README.md](bashscripts/docs/it/README.md)
->>>>>>> ad700fc8 (.)
-=======
-* [README.md](bashscripts/project_docs/README.md)
-* [README.md](bashscripts/project_docs/it/README.md)
->>>>>>> 00793d2a (.)
 * [README.md](docs/laravel-app/phpstan/README.md)
 * [README.md](docs/laravel-app/README.md)
 * [README.md](docs/moduli/struttura/README.md)
@@ -55,56 +45,6 @@ Questi standard si applicano a tutti i moduli del progetto e devono essere segui
 * [README.md](docs/implementazione/reporting/README.md)
 * [README.md](docs/implementazione/isee/README.md)
 * [README.md](docs/it/README.md)
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 00793d2a (.)
-* [README.md](laravel/vendor/mockery/mockery/project_docs/README.md)
-* [README.md](../../../Chart/project_docs/README.md)
-* [README.md](../../../Reporting/project_docs/README.md)
-* [README.md](../../../Gdpr/project_docs/phpstan/README.md)
-* [README.md](../../../Gdpr/project_docs/README.md)
-* [README.md](../../../Notify/project_docs/phpstan/README.md)
-* [README.md](../../../Notify/project_docs/README.md)
-* [README.md](../../../Xot/project_docs/filament/README.md)
-* [README.md](../../../Xot/project_docs/phpstan/README.md)
-* [README.md](../../../Xot/project_docs/exceptions/README.md)
-* [README.md](../../../Xot/project_docs/README.md)
-* [README.md](../../../Xot/project_docs/standards/README.md)
-* [README.md](../../../Xot/project_docs/conventions/README.md)
-* [README.md](../../../Xot/project_docs/development/README.md)
-* [README.md](../../../Dental/project_docs/README.md)
-* [README.md](../../../User/project_docs/phpstan/README.md)
-* [README.md](../../../User/project_docs/README.md)
-* [README.md](../../../User/project_docs/README.md)
-* [README.md](../../../UI/project_docs/phpstan/README.md)
-* [README.md](../../../UI/project_docs/README.md)
-* [README.md](../../../UI/project_docs/standards/README.md)
-* [README.md](../../../UI/project_docs/themes/README.md)
-* [README.md](../../../UI/project_docs/components/README.md)
-* [README.md](../../../Lang/project_docs/phpstan/README.md)
-* [README.md](../../../Lang/project_docs/README.md)
-* [README.md](../../../Job/project_docs/phpstan/README.md)
-* [README.md](../../../Job/project_docs/README.md)
-* [README.md](../../../Media/project_docs/phpstan/README.md)
-* [README.md](../../../Media/project_docs/README.md)
-* [README.md](../../../Tenant/project_docs/phpstan/README.md)
-* [README.md](../../../Tenant/project_docs/README.md)
-* [README.md](../../../Activity/project_docs/phpstan/README.md)
-* [README.md](../../../Activity/project_docs/README.md)
-* [README.md](../../../Patient/project_docs/README.md)
-* [README.md](../../../Patient/project_docs/standards/README.md)
-* [README.md](../../../Patient/project_docs/value-objects/README.md)
-* [README.md](../../../Cms/project_docs/blocks/README.md)
-* [README.md](../../../Cms/project_docs/README.md)
-* [README.md](../../../Cms/project_docs/standards/README.md)
-* [README.md](../../../Cms/project_docs/content/README.md)
-* [README.md](../../../Cms/project_docs/frontoffice/README.md)
-* [README.md](../../../Cms/project_docs/components/README.md)
-* [README.md](../../../../Themes/Two/project_docs/README.md)
-* [README.md](../../../../Themes/One/project_docs/README.md)
-<<<<<<< HEAD
-=======
 * [README.md](laravel/vendor/mockery/mockery/docs/README.md)
 * [README.md](../../../Chart/docs/README.md)
 * [README.md](../../../Reporting/docs/README.md)
@@ -149,9 +89,6 @@ Questi standard si applicano a tutti i moduli del progetto e devono essere segui
 * [README.md](../../../Cms/docs/components/README.md)
 * [README.md](../../../../Themes/Two/docs/README.md)
 * [README.md](../../../../Themes/One/docs/README.md)
->>>>>>> ad700fc8 (.)
-=======
->>>>>>> 00793d2a (.)
 
 # Standard Xot: Ereditarietà dei Modelli
 
@@ -163,25 +100,11 @@ Questi standard si applicano a tutti i moduli del progetto e devono essere segui
 > Esempio di errore tipico: `Unknown column 'certifications' in 'field list'`.
 
 ## Collegamenti
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 00793d2a (.)
-- [Modello Doctor (Patient)](../../../Patient/project_docs/Models/Doctor.md)
-- [Gestione campi e migrazioni con STI (README Patient)](../../../Patient/project_docs/README.md)
-- [DoctorResource: Step Informazioni Personali (Patient)](../../../Patient/project_docs/filament/resources/doctor-resource.md)
-- [Struttura progetto e STI (Patient)](../../../Patient/project_docs/architecture/struttura-progetto.md)
-- [Migrazioni e database (Patient)](../../../Patient/project_docs/database/migrations.md)
-<<<<<<< HEAD
-=======
 - [Modello Doctor (Patient)](../../../Patient/docs/Models/Doctor.md)
 - [Gestione campi e migrazioni con STI (README Patient)](../../../Patient/docs/README.md)
 - [DoctorResource: Step Informazioni Personali (Patient)](../../../Patient/docs/filament/resources/doctor-resource.md)
 - [Struttura progetto e STI (Patient)](../../../Patient/docs/architecture/struttura-progetto.md)
 - [Migrazioni e database (Patient)](../../../Patient/docs/database/migrations.md)
->>>>>>> ad700fc8 (.)
-=======
->>>>>>> 00793d2a (.)
 
 ## Regola generale
 
@@ -203,14 +126,6 @@ class Doctor extends User
 ```
 
 ## Moduli che applicano questa regola
-<<<<<<< HEAD
-<<<<<<< HEAD
-- [Patient: Modello Doctor](../../../Patient/project_docs/Models/Doctor.md)
-=======
 - [Patient: Modello Doctor](../../../Patient/docs/Models/Doctor.md)
->>>>>>> ad700fc8 (.)
-=======
-- [Patient: Modello Doctor](../../../Patient/project_docs/Models/Doctor.md)
->>>>>>> 00793d2a (.)
 // Aggiungere qui altri moduli se necessario
 

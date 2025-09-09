@@ -8,12 +8,8 @@ Questo documento contiene le soluzioni ai problemi più comuni che possono verif
 #### Composer
 ```bash
 
-<<<<<<< HEAD
-### **1. Classe Base Non Trovata**
-=======
 # Pulire la cache di Composer
 composer clear-cache
->>>>>>> ad700fc8 (.)
 
 ### **1. Classe Base Non Trovata**
 
@@ -37,14 +33,6 @@ npm cache clean --force
 
 **Soluzione 1: Aggiornare Autoload**
 ```bash
-<<<<<<< HEAD
-
-#### **Soluzioni**
-
-**Soluzione 1: Aggiornare Autoload**
-```bash
-=======
->>>>>>> ad700fc8 (.)
 # Dalla root del progetto Laravel
 composer dump-autoload
 composer install
@@ -92,11 +80,8 @@ cat laravel/Modules/Xot/composer.json
 
 **Soluzione 1: Pulire Cache**
 ```bash
-<<<<<<< HEAD
-=======
 
 # Pulire la cache dell'applicazione
->>>>>>> ad700fc8 (.)
 php artisan cache:clear
 php artisan config:clear
 php artisan view:clear
@@ -153,11 +138,6 @@ npm run build
 npm run theme:build
 ```
 
-<<<<<<< HEAD
-#### **Soluzioni**
-
-**Soluzione 1: Aggiungere Annotazioni PHPDoc**
-=======
 ### 2. Errori di Visualizzazione
 ```bash
 
@@ -225,7 +205,6 @@ Soluzione:
 2. Racchiudi tutti gli elementi del componente in un unico `<div>` o altro elemento contenitore
 
 **Esempio corretto:**
->>>>>>> ad700fc8 (.)
 ```php
 /**
  * @property int $id
@@ -275,10 +254,6 @@ npm run dev
 # Visualizzare i log
 tail -f storage/logs/laravel.log
 
-<<<<<<< HEAD
-
-=======
->>>>>>> ad700fc8 (.)
 #### **Sintomi**
 ```
 Fatal error: Cannot override final method
@@ -456,348 +431,6 @@ SQLSTATE[42S02]: Base table or view not found
 SQLSTATE[23000]: Integrity constraint violation
 ```
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-**Verificare Migrazioni**
-```bash
-# Eseguire migrazioni per i test
-php artisan migrate --env=testing
-
-# Verificare stato migrazioni
-php artisan migrate:status --env=testing
-```
-
-## 🔒 **Problemi di Sicurezza**
-
-### **1. Problemi di Autorizzazione**
-
-#### **Sintomi**
-- Utenti possono accedere a risorse non autorizzate
-- Errori "Unauthorized" o "Forbidden"
-
-#### **Soluzioni**
-
-**Verificare Policy**
-```php
-<?php
-
-declare(strict_types=1);
-
-namespace Modules\MioModulo\app\Policies;
-
-use Illuminate\Auth\Access\HandlesAuthorization;
-use Modules\User\app\Models\User;
-use Modules\MioModulo\app\Models\MioModello;
-
-class MioModelloPolicy
-{
-    use HandlesAuthorization;
-    
-    public function viewAny(User $user): bool
-    {
-        return $user->can('viewAny', MioModello::class);
-    }
-    
-    public function view(User $user, MioModello $modello): bool
-    {
-        return $user->can('view', $modello);
-    }
-}
-```
-
-**Verificare Registrazione Policy**
-```php
-// Nel service provider del modulo
-protected function registerPolicies(): void
-{
-    Gate::policy(MioModello::class, MioModelloPolicy::class);
-}
-```
-
-### **2. Problemi di Validazione**
-
-#### **Sintomi**
-- Dati non validati correttamente
-- Errori di validazione non gestiti
-
-#### **Soluzioni**
-
-**Verificare Regole Validazione**
-```php
-public static function rules(): array
-{
-    return [
-        'nome' => ['required', 'string', 'max:255'],
-        'descrizione' => ['nullable', 'string', 'max:1000'],
-        'is_active' => ['required', 'boolean'],
-    ];
-}
-```
-
-**Verificare Gestione Errori**
-```php
-try {
-    $modello = MioModello::create($data);
-} catch (\Illuminate\Database\QueryException $e) {
-    Log::error('Errore creazione modello', [
-        'data' => $data,
-        'error' => $e->getMessage()
-    ]);
-    
-    throw new ModelCreationException('Impossibile creare il modello', 0, $e);
-}
-```
-
-## 📈 **Problemi di Performance**
-
-### **1. N+1 Query Problem**
-
-#### **Sintomi**
-- Performance lente
-- Troppe query al database
-
-#### **Soluzioni**
-
-**Utilizzare Eager Loading**
-```php
-// ✅ CORRETTO
-$modelli = MioModello::with(['user', 'altriModelli'])->get();
-
-// ❌ ERRATO
-$modelli = MioModello::all();
-foreach ($modelli as $modello) {
-    echo $modello->user->name; // Query aggiuntiva per ogni modello
-}
-```
-
-**Utilizzare Query Builder**
-```php
-$modelli = MioModello::query()
-    ->with(['user', 'altriModelli'])
-    ->where('is_active', true)
-    ->orderBy('created_at', 'desc')
-    ->get();
-```
-
-### **2. Problemi di Caching**
-
-#### **Sintomi**
-- Performance inconsistenti
-- Dati non aggiornati
-
-#### **Soluzioni**
-
-**Verificare Configurazione Cache**
-```bash
-# Verificare driver cache
-php artisan config:show cache.default
-
-# Pulire cache
-php artisan cache:clear
-```
-
-**Utilizzare Cache Tags**
-```php
-// Cache con tag per invalidazione selettiva
-cache()->tags(['modelli', 'user_' . $userId])->remember(
-    "modello_{$id}",
-    now()->addMinutes(30),
-    fn() => MioModello::find($id)
-);
-
-// Invalidare cache specifica
-cache()->tags(['modelli'])->flush();
-```
-
-## 🔍 **Debug e Diagnostica**
-
-### **1. Abilitare Debug**
-
-```php
-// Nel file .env
-APP_DEBUG=true
-APP_ENV=local
-
-// Nel codice
-Log::debug('Debug info', ['context' => 'value']);
-dd($variable); // Solo in sviluppo
-```
-
-### **2. Utilizzare Telescope (se disponibile)**
-
-```bash
-# Installare Laravel Telescope
-composer require laravel/telescope --dev
-
-# Pubblicare configurazione
-php artisan telescope:install
-
-
-// ❌ ERRATO - Mai estendere direttamente le classi Laravel
-class MioModello extends \Illuminate\Database\Eloquent\Model
-class MiaRisorsa extends \Filament\Resources\Resource
-```
-
-**Verificare Metodi Final**
-```php
-// I metodi final non possono essere sovrascritti
-// Utilizzare i metodi di hook invece
-protected function afterCreate(): void
-{
-    // Logica dopo la creazione
-}
-```
-
-### **2. Problemi di Service Provider**
-
-#### **Sintomi**
-- Views non caricate
-- Traduzioni non funzionanti
-- Migrazioni non eseguite
-
-#### **Soluzioni**
-
-**Verificare Struttura Service Provider**
-```php
-<?php
-
-declare(strict_types=1);
-
-namespace Modules\MioModulo\Providers;
-
-use Modules\Xot\Providers\XotBaseServiceProvider;
-
-class MioModuloServiceProvider extends XotBaseServiceProvider
-{
-    protected string $module_name = 'MioModulo';
-    
-    public function boot(): void
-    {
-        parent::boot(); // IMPORTANTE: chiamare sempre parent::boot()
-        
-        // Solo personalizzazioni specifiche
-    }
-}
-```
-
-**Verificare Registrazione**
-```bash
-# Verificare che il service provider sia registrato
-php artisan config:show app.providers | grep MioModulo
-
-# Verificare autoload
-composer dump-autoload
-```
-
-### **3. Problemi di Migrazioni**
-
-#### **Sintomi**
-```
-SQLSTATE[42S01]: Base table or view already exists
-SQLSTATE[42S02]: Base table or view not found
-```
-
-#### **Soluzioni**
-
-**Verificare Estensione Corretta**
-```php
-// ✅ CORRETTO
-return new class extends XotBaseMigration
-{
-    protected string $table_name = 'mio_modello';
-    
-    public function up(): void
-    {
-        if ($this->hasTable($this->table_name)) {
-            return; // Importante: verificare esistenza
-        }
-        
-        Schema::create($this->table_name, function (Blueprint $table) {
-            // Schema
-        });
-    }
-};
-```
-
-**Verificare Controlli Esistenza**
-```php
-public function up(): void
-{
-    // Verificare esistenza tabella
-    if ($this->hasTable($this->table_name)) {
-        return;
-    }
-    
-    // Verificare esistenza colonne
-    if ($this->hasColumn($this->table_name, 'nuova_colonna')) {
-        return;
-    }
-}
-```
-
-## 🧪 **Problemi di Testing**
-
-### **1. Test Non Eseguibili**
-
-#### **Sintomi**
-```
-Class 'Modules\Xot\Tests\XotBaseTestCase' not found
-Fatal error: Cannot instantiate abstract class
-```
-
-#### **Soluzioni**
-
-**Verificare Estensione Test Case**
-```php
-<?php
-
-declare(strict_types=1);
-
-namespace Modules\MioModulo\Tests;
-
-use Modules\Xot\Tests\XotBaseTestCase;
-use Modules\MioModulo\app\Models\MioModello;
-
-class MioModelloTest extends XotBaseTestCase
-{
-    protected function setUp(): void
-    {
-        parent::setUp();
-    }
-    
-    /** @test */
-    public function it_can_create_model(): void
-    {
-        $modello = MioModello::create([
-            'nome' => 'Test',
-            'descrizione' => 'Test Description'
-        ]);
-        
-        $this->assertModelExists($modello);
-    }
-}
-```
-
-**Verificare Autoload Test**
-```bash
-# Verificare che i test siano nell'autoload
-composer dump-autoload
-
-# Eseguire test specifico
-php artisan test --filter=MioModelloTest
-```
-
-### **2. Problemi di Database nei Test**
-
-#### **Sintomi**
-```
-SQLSTATE[42S02]: Base table or view not found
-SQLSTATE[23000]: Integrity constraint violation
-```
-
-=======
->>>>>>> ad700fc8 (.)
 #### **Soluzioni**
 
 **Utilizzare RefreshDatabase**
@@ -816,8 +449,6 @@ class MioModelloTest extends XotBaseTestCase
     }
 }
 ```
-=======
->>>>>>> 00793d2a (.)
 
 **Verificare Migrazioni**
 ```bash

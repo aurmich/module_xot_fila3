@@ -267,13 +267,8 @@ return new class extends XotBaseMigration {
 ```
 
 **Collegamenti:**
-<<<<<<< HEAD
-- [Regola Performance](../../Performance/project_docs/database_migrations.md)
-- [Regole globali root](../../../project_docs/database_migrations.md)
-=======
 - [Regola Performance](../../Performance/docs/database_migrations.md)
 - [Regole globali root](../../../docs/database_migrations.md)
->>>>>>> ad700fc8 (.)
 
     /**
      * Ottiene la sezione associata al socio.

@@ -48,16 +48,6 @@
 - [Best Practices](../../BEST-PRACTICES.md) 
 ## Collegamenti tra versioni di filament.md
 * [filament.md](docs/tecnico/filament/filament.md)
-<<<<<<< HEAD
-* [filament.md](../../../Chart/project_docs/filament.md)
-* [filament.md](../../../Gdpr/project_docs/filament.md)
-* [filament.md](../../../Xot/project_docs/technical/filament.md)
-* [filament.md](../../../Xot/project_docs/roadmap/integration/filament.md)
-* [filament.md](../../../Lang/project_docs/filament.md)
-* [filament.md](../../../Job/project_docs/filament.md)
-* [filament.md](../../../Activity/project_docs/filament.md)
-* [filament.md](../../../Cms/project_docs/filament.md)
-=======
 * [filament.md](../../../Chart/docs/filament.md)
 * [filament.md](../../../Gdpr/docs/filament.md)
 * [filament.md](../../../Xot/docs/technical/filament.md)
@@ -66,5 +56,4 @@
 * [filament.md](../../../Job/docs/filament.md)
 * [filament.md](../../../Activity/docs/filament.md)
 * [filament.md](../../../Cms/docs/filament.md)
->>>>>>> ad700fc8 (.)
 

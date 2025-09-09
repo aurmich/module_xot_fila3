@@ -1,19 +1,11 @@
 # Miglioramenti al Prompt docs.txt
 
 > **Collegamenti correlati**
-<<<<<<< HEAD
-> - [README.md documentazione generale](../../../../project_docs/README.md)
-> - [Struttura dei Prompt](./prompts.md)
-> - [Regole per i Prompt](./PROMPT_RULES.md)
-> - [README.md toolkit bashscripts](../../../../bashscripts/project_docs/README.md)
-> - [Documentazione miglioramenti prompt docs.txt](../../../../bashscripts/project_docs/prompt_docs_improvements.md)
-=======
 > - [README.md documentazione generale](../../../../docs/README.md)
 > - [Struttura dei Prompt](./prompts.md)
 > - [Regole per i Prompt](./PROMPT_RULES.md)
 > - [README.md toolkit bashscripts](../../../../bashscripts/docs/README.md)
 > - [Documentazione miglioramenti prompt docs.txt](../../../../bashscripts/docs/prompt_docs_improvements.md)
->>>>>>> ad700fc8 (.)
 
 ## Introduzione
 
