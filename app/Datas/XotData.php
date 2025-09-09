@@ -309,6 +309,21 @@ class XotData extends Data implements Wireable
         }
     }
 
+<<<<<<< HEAD
+=======
+    public function getPubThemePublicPath(string $key = ''): string
+    {
+        $path = base_path('themes/'.$this->pub_theme.'/'.$key);
+        return $path;
+    }
+
+    public function getPubThemePublicAsset(string $key = ''): string
+    {
+        $path = asset('themes/'.$this->pub_theme.'/'.$key);
+        return $path;
+    }
+
+>>>>>>> 0d3387f (.)
     /**
      * @return class-string<Model&UserContract>
      */

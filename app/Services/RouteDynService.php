@@ -160,6 +160,7 @@ class RouteDynService
         Assert::isArray($params_name);
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         $name = isset($v['name']) && is_string($v['name']) ? $v['name'] : '';
         $opts = [
             'parameters' => [mb_strtolower($name) => implode('}/{', $params_name)],
@@ -167,6 +168,10 @@ class RouteDynService
         $opts = [
             'parameters' => [mb_strtolower((string) $v['name']) => implode('}/{', $params_name)],
 >>>>>>> b6f6b143 (.)
+=======
+        $opts = [
+            'parameters' => [mb_strtolower((string) $v['name']) => implode('}/{', $params_name)],
+>>>>>>> 0d3387f (.)
             'names' => self::prefixedResourceNames(self::getAs($v, $namespace)),
         ];
 

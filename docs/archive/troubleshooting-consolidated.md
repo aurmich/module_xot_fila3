@@ -430,6 +430,7 @@ public function test_b(): void
 }
 ```
 
+<<<<<<< HEAD
 ### Errore: Conflitti Git
 
 **Sintomo**
@@ -437,6 +438,8 @@ public function test_b(): void
 // Codice locale
 // Codice remoto
 ```
+=======
+>>>>>>> 0d3387f (.)
 
 **Soluzione**
 1. **Analizzare i conflitti**:
