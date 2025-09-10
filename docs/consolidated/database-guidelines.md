@@ -100,6 +100,10 @@ Per ogni database, mantenere un file `schema.json` aggiornato che descrive la st
 Generare e mantenere aggiornata una documentazione dettagliata in formato Markdown per ogni tabella del database:
 
 ```markdown
+<<<<<<< HEAD
+=======
+
+>>>>>>> d1a0a6c3 (.)
 ## Tabella: nome_tabella
 
 **Descrizione:** Questa tabella contiene dati relativi a...
@@ -426,6 +430,10 @@ public function up(): void
 ### 1. Generazione Documentazione
 
 ```bash
+<<<<<<< HEAD
+=======
+
+>>>>>>> d1a0a6c3 (.)
 # Genera documentazione dello schema da un file JSON
 php artisan xot:generate-db-documentation /path/to/schema.json /path/to/output
 
@@ -436,6 +444,10 @@ php artisan schema:generate-diagram --tables=tabella1,tabella2 --path=/path/to/o
 ### 2. Analisi del Database
 
 ```bash
+<<<<<<< HEAD
+=======
+
+>>>>>>> d1a0a6c3 (.)
 # Esporta lo schema del database in JSON
 php artisan db:export-schema --connection=nome_connessione --output=/path/to/output.json
 

@@ -41,7 +41,11 @@ mantenere sempre lo stesso pattern di namespace rispetto a filament, ma usando i
 namespace Filament\Resources\Pages;
 
 // namespace corretto nel modulo
+<<<<<<< HEAD
 namespace Modules\<nome modulo>\Filament\Resources\Pages;
+=======
+namespace Modules\SaluteOra\Filament\Resources\Pages;
+>>>>>>> d1a0a6c3 (.)
 ```
 
 ## metodi delle classi base
@@ -75,5 +79,10 @@ protected function getInfolistSchema(): array
 
 ## linkback
 
+<<<<<<< HEAD
 - [errore override metodo final](/var/www/html/base_ptvx_fila3_mono/laravel/docs/errors/filament_final_method_override.md)
 - [linee guida filament](/var/www/html/base_ptvx_fila3_mono/laravel/Modules/<nome modulo>/docs/filament-resources.md)
+=======
+- [errore override metodo final](/var/www/html/base_saluteora/laravel/project_docs/errors/filament_final_method_override.md)
+- [linee guida filament](/var/www/html/base_saluteora/laravel/Modules/SaluteOra/project_docs/filament-resources.md)
+>>>>>>> d1a0a6c3 (.)

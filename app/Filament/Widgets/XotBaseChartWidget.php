@@ -74,7 +74,11 @@ abstract class XotBaseChartWidget extends FilamentChartWidget
                     'intersect' => false,
                     'callbacks' => [
                         'label' => 'function(context) {
+<<<<<<< HEAD
                             return "' . __('example::widgets.patient_registration_trend.total_registrations') . '".replace(":count", context.parsed.y);
+=======
+                            return "' . __('salutemo::widgets.patient_registration_trend.total_registrations') . '".replace(":count", context.parsed.y);
+>>>>>>> d1a0a6c3 (.)
                         }',
                     ],
                 ],
@@ -84,7 +88,11 @@ abstract class XotBaseChartWidget extends FilamentChartWidget
                     'display' => true,
                     'title' => [
                         'display' => true,
+<<<<<<< HEAD
                         'text' => __('example::widgets.patient_registration_trend.period.label'),
+=======
+                        'text' => __('salutemo::widgets.patient_registration_trend.period.label'),
+>>>>>>> d1a0a6c3 (.)
                     ],
                     'grid' => [
                         'display' => false,
@@ -94,7 +102,11 @@ abstract class XotBaseChartWidget extends FilamentChartWidget
                     'display' => true,
                     'title' => [
                         'display' => true,
+<<<<<<< HEAD
                         'text' => __('example::widgets.patient_registration_trend.total_registrations'),
+=======
+                        'text' => __('salutemo::widgets.patient_registration_trend.total_registrations'),
+>>>>>>> d1a0a6c3 (.)
                     ],
                     'beginAtZero' => true,
                     'ticks' => [

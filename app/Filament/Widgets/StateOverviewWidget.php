@@ -9,6 +9,10 @@ use Webmozart\Assert\Assert;
 
 use Illuminate\Support\Facades\Cache;
 use Modules\Xot\Contracts\StateContract;
+<<<<<<< HEAD
+=======
+use Modules\SaluteOra\Models\Appointment;
+>>>>>>> d1a0a6c3 (.)
 use Modules\Xot\Filament\Widgets\XotBaseWidget;
 
 /**

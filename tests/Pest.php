@@ -14,7 +14,12 @@ use Modules\Xot\Tests\TestCase;
 |
 */
 
+<<<<<<< HEAD
 uses(TestCase::class)->in('Feature', 'Unit');
+=======
+pest()->extend(TestCase::class)
+    ->in('Feature', 'Unit');
+>>>>>>> d1a0a6c3 (.)
 
 /*
 |--------------------------------------------------------------------------
@@ -22,7 +27,11 @@ uses(TestCase::class)->in('Feature', 'Unit');
 |--------------------------------------------------------------------------
 |
 | Qui puoi definire aspettative globali per il modulo Xot.
+<<<<<<< HEAD
 | Quando definisci here expectation globali, saranno disponibili 
+=======
+| Quando definisci here expectation globali, saranno disponibili
+>>>>>>> d1a0a6c3 (.)
 | in tutti i test del modulo.
 |
 */
@@ -43,4 +52,8 @@ uses(TestCase::class)->in('Feature', 'Unit');
 
 // function something() {
 //     // ...
+<<<<<<< HEAD
 // } 
+=======
+// }
+>>>>>>> d1a0a6c3 (.)

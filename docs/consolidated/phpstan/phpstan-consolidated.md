@@ -42,7 +42,11 @@ parameters:
 ### Esecuzione Corretta
 ```bash
 # ✅ CORRETTO - Eseguire da directory Laravel
+<<<<<<< HEAD
 cd /var/www/html/_bases/base_techplanner_fila3_mono/laravel
+=======
+cd /var/www/html/_bases/base_saluteora/laravel
+>>>>>>> d1a0a6c3 (.)
 ./vendor/bin/phpstan analyze --level=9 --memory-limit=2G
 
 # ❌ ERRATO - Mai usare artisan per phpstan

@@ -26,7 +26,11 @@
                 <div class="col-span-full text-center py-8">
                     <div class="text-gray-400 dark:text-gray-600">
                         <x-heroicon-o-calendar class="w-12 h-12 mx-auto mb-2" />
+<<<<<<< HEAD
                         <p class="text-sm">{{ __('example::widgets.appointment_overview.empty_state') }}</p>
+=======
+                        <p class="text-sm">{{ __('salutemo::widgets.appointment_overview.empty_state') }}</p>
+>>>>>>> d1a0a6c3 (.)
                     </div>
                 </div>
             @endforelse

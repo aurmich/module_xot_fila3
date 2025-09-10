@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 # Dependencies and packages
 package-lock.json
@@ -18,3 +19,14 @@ docs/phpstan/
 # Other
 /vendor
 -e
+=======
+/*.lock
+package-lock.json
+/vendor
+
+# Backup files
+*.bak
+-e 
+# PHPStan documentation
+docs/phpstan/
+>>>>>>> d1a0a6c3 (.)

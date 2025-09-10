@@ -7,6 +7,10 @@ namespace Modules\Xot\Filament\Widgets;
 use Modules\Xot\Filament\Widgets\XotBaseChartWidget;
 use Flowframe\Trend\Trend;
 use Flowframe\Trend\TrendValue;
+<<<<<<< HEAD
+=======
+use Modules\SaluteOra\Models\Appointment;
+>>>>>>> d1a0a6c3 (.)
 
 class ModelTrendChartWidget extends XotBaseChartWidget
 {
@@ -36,7 +40,11 @@ class ModelTrendChartWidget extends XotBaseChartWidget
             return [
                 'datasets' => [
                     [
+<<<<<<< HEAD
                         'label' => __('example::widgets.appointment_creation_chart.label'),
+=======
+                        'label' => __('salutemo::widgets.appointment_creation_chart.label'),
+>>>>>>> d1a0a6c3 (.)
                         'data' => $data->map(fn (mixed $value) => $value instanceof TrendValue ? $value->aggregate : 0),
                         'backgroundColor' => 'rgba(139, 92, 246, 0.5)',
                         'borderColor' => 'rgb(139, 92, 246)',
@@ -51,7 +59,11 @@ class ModelTrendChartWidget extends XotBaseChartWidget
             return [
                 'datasets' => [
                     [
+<<<<<<< HEAD
                         'label' => __('example::widgets.appointment_creation_chart.label'),
+=======
+                        'label' => __('salutemo::widgets.appointment_creation_chart.label'),
+>>>>>>> d1a0a6c3 (.)
                         'data' => [],
                         'backgroundColor' => 'rgba(139, 92, 246, 0.5)',
                         'borderColor' => 'rgb(139, 92, 246)',

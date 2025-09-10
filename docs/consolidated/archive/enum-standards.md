@@ -1,6 +1,12 @@
+<<<<<<< HEAD
 # Enum Standards in 
 
 This document defines the standards and best practices for working with Enums in the  project.
+=======
+# Enum Standards in SaluteOra
+
+This document defines the standards and best practices for working with Enums in the SaluteOra project.
+>>>>>>> d1a0a6c3 (.)
 
 ## Naming Conventions
 
@@ -71,7 +77,11 @@ This document defines the standards and best practices for working with Enums in
 
 declare(strict_types=1);
 
+<<<<<<< HEAD
 namespace Modules\<nome modulo>\Enums;
+=======
+namespace Modules\SaluteOra\Enums;
+>>>>>>> d1a0a6c3 (.)
 
 use Filament\Support\Contracts\HasLabel;
 
@@ -90,15 +100,24 @@ enum AppointmentTypeEnum: string implements HasLabel
     public function getLabel(): ?string
     {
         return match ($this) {
+<<<<<<< HEAD
             self::CONSULTATION => __('<nome progetto>::app.consultation'),
             self::CLEANING => __('<nome progetto>::app.cleaning'),
+=======
+            self::CONSULTATION => __('saluteora::app.consultation'),
+            self::CLEANING => __('saluteora::app.cleaning'),
+>>>>>>> d1a0a6c3 (.)
             // ... other cases
         };
     }
 }
 
 // Alias for backward compatibility
+<<<<<<< HEAD
 class_alias(AppointmentTypeEnum::class, 'Modules\\<nome modulo>\\Enums\\AppointmentType');
+=======
+class_alias(AppointmentTypeEnum::class, 'Modules\\SaluteOra\\Enums\\AppointmentType');
+>>>>>>> d1a0a6c3 (.)
 ```
 
 ## Updating Existing Enums

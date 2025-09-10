@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 # Dependencies and packages
 vendor/
@@ -27,6 +28,13 @@ docs/phpstan/
 # Other
 .idea
 build
+=======
+.idea
+.phpunit.cache
+.phpunit.result.cache
+build
+composer.lock
+>>>>>>> d1a0a6c3 (.)
 coverage
 docs
 phpunit.xml
@@ -34,6 +42,24 @@ phpstan.neon
 testbench.yaml
 vendor
 node_modules
+<<<<<<< HEAD
 vendor
 node_modules
 -e
+=======
+.git-blame-ignore-revsnode_modules
+vendor
+.git-blame-ignore-revs
+build/
+vendor/
+build/
+node_modules
+docs/cache/
+cache/
+
+# Backup files
+*.bak
+-e 
+# PHPStan documentation
+docs/phpstan/
+>>>>>>> d1a0a6c3 (.)

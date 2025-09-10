@@ -15,10 +15,17 @@ Nonostante le classi possano risiedere fisicamente nella sottodirectory `app/` d
 ## Esempi Corretti
 
 ```php
+<<<<<<< HEAD
 // File in: /var/www/html/_bases/base_techplanner_fila3_mono/laravel/Modules/Patient/app/Models/Patient.php
 namespace Modules\Patient\Models;
 
 // File in: /var/www/html/_bases/base_techplanner_fila3_mono/laravel/Modules/Dental/app/Services/AppointmentService.php
+=======
+// File in: /var/www/html/saluteora/laravel/Modules/Patient/app/Models/Patient.php
+namespace Modules\Patient\Models;
+
+// File in: /var/www/html/saluteora/laravel/Modules/Dental/app/Services/AppointmentService.php
+>>>>>>> d1a0a6c3 (.)
 namespace Modules\Dental\Services;
 ```
 

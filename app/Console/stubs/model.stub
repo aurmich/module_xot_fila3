@@ -55,7 +55,11 @@ class DummyClass extends BaseModel {
     /**
      * The attributes that should be mutated to dates.
 
+<<<<<<< HEAD
      /**  da fare
+=======
+     *  da fare
+>>>>>>> d1a0a6c3 (.)
      * @var array<string>
      */
     protected $dates = [

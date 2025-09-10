@@ -26,7 +26,11 @@ class InformationSchemaTableFactory extends Factory
         
         return [
             'table_catalog' => 'def',
+<<<<<<< HEAD
             'table_schema' => $this->faker->randomElement(['techplanner', 'public', 'main']),
+=======
+            'table_schema' => $this->faker->randomElement(['saluteora', 'public', 'main']),
+>>>>>>> d1a0a6c3 (.)
             'table_name' => $tableName,
             'table_type' => $this->faker->randomElement(['BASE TABLE', 'VIEW']),
             'engine' => $this->faker->randomElement(['InnoDB', 'MyISAM']),
