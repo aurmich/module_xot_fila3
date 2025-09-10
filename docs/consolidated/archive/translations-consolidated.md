@@ -389,17 +389,7 @@ rm Modules/Tenant/project_docs/translations.md
 rm Modules/UI/project_docs/translations.md
 rm Modules/UI/project_docs/translation-rules.md
 
-<<<<<<< HEAD
-# SaluteOra
-rm Modules/SaluteOra/project_docs/translation-files-improvement.md
-rm Modules/SaluteOra/project_docs/translations.md
-rm Modules/SaluteOra/project_docs/translation_quality_standards.md
-rm Modules/SaluteOra/project_docs/translations-states-analysis.md
-rm Modules/SaluteOra/project_docs/translation-rules.md
-rm Modules/SaluteOra/project_docs/translation_standards.md
-rm Modules/SaluteOra/project_docs/translations-appointments.md
-=======
-# 
+# Modulo Generico
 rm Modules/<nome modulo>/docs/translation-files-improvement.md
 rm Modules/<nome modulo>/docs/translations.md
 rm Modules/<nome modulo>/docs/translation_quality_standards.md
@@ -407,7 +397,6 @@ rm Modules/<nome modulo>/docs/translations-states-analysis.md
 rm Modules/<nome modulo>/docs/translation-rules.md
 rm Modules/<nome modulo>/docs/translation_standards.md
 rm Modules/<nome modulo>/docs/translations-appointments.md
->>>>>>> de6e254 (.)
 
 # User
 rm Modules/User/project_docs/translations.md

@@ -273,11 +273,7 @@ Vedere:
 - `Modules//database/factories/PatientFactory.php`
 
 ### Documentazione Implementazione
-<<<<<<< HEAD
-Vedere: `Modules/SaluteOra/project_docs/factories/phpstan-factory-compliance.md`
-=======
 Vedere: `Modules/<nome modulo>/docs/factories/phpstan-factory-compliance.md`
->>>>>>> de6e254 (.)
 
 ## 📊 Metriche di Successo
 

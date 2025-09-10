@@ -19,11 +19,7 @@ ignoreErrors:
 **Moduli Interessati**: , Geo, User, e tutti i moduli con relazioni Eloquent
 
 **Documentazione Specifica**: 
-<<<<<<< HEAD
-- [SaluteOra - PHPStan Relationship Covariance Fix](../SaluteOra/project_docs/phpstan-relationship-covariance-fix.md)
-=======
-- [ - PHPStan Relationship Covariance Fix](../<nome modulo>/docs/phpstan-relationship-covariance-fix.md)
->>>>>>> de6e254 (.)
+- [Modulo Generico - PHPStan Relationship Covariance Fix](../<nome modulo>/docs/phpstan-relationship-covariance-fix.md)
 
 ### 2. Cast da Mixed
 

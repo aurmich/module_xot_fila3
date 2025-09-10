@@ -2,11 +2,7 @@
 
 ## Regola fondamentale
 
-<<<<<<< HEAD
-**Tutti i percorsi assoluti nel progetto SaluteOra DEVONO includere il segmento `laravel/` dopo `base_techplanner_fila3_mono/`.**
-=======
-**Tutti i percorsi assoluti nel progetto  DEVONO includere il segmento `laravel/` dopo `base_saluteora/`.**
->>>>>>> de6e254 (.)
+**Tutti i percorsi assoluti nel progetto PTVX DEVONO includere il segmento `laravel/` dopo `base_ptvx_fila3_mono/`.**
 
 Questa regola è **ASSOLUTA** e non ammette eccezioni.
 

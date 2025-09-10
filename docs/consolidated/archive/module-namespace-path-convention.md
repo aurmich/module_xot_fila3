@@ -13,15 +13,9 @@ i file dei moduli devono sempre seguire questa struttura:
 ```
 
 per esempio:
-<<<<<<< HEAD
-- `/var/www/html/base_techplanner_fila3_mono/laravel/Modules/SaluteOra/app/Filament/Resources/...`
-- `/var/www/html/base_techplanner_fila3_mono/laravel/Modules/SaluteOra/app/Models/...`
-- `/var/www/html/base_techplanner_fila3_mono/laravel/Modules/SaluteOra/app/Http/Controllers/...`
-=======
-- `/var/www/html/base_saluteora/laravel/Modules/<nome modulo>/app/Filament/Resources/...`
-- `/var/www/html/base_saluteora/laravel/Modules/<nome modulo>/app/Models/...`
-- `/var/www/html/base_saluteora/laravel/Modules/<nome modulo>/app/Http/Controllers/...`
->>>>>>> de6e254 (.)
+- `/var/www/html/base_ptvx_fila3_mono/laravel/Modules/<nome modulo>/app/Filament/Resources/...`
+- `/var/www/html/base_ptvx_fila3_mono/laravel/Modules/<nome modulo>/app/Models/...`
+- `/var/www/html/base_ptvx_fila3_mono/laravel/Modules/<nome modulo>/app/Http/Controllers/...`
 
 ### namespace corretto
 
@@ -55,13 +49,8 @@ questo è **errato** perché omette la directory `app/` nel percorso fisico.
 
 | namespace | percorso fisico |
 |-----------|----------------|
-<<<<<<< HEAD
-| `Modules\SaluteOra\Filament\Resources\DoctorResource` | `/var/www/html/base_techplanner_fila3_mono/laravel/Modules/SaluteOra/app/Filament/Resources/DoctorResource.php` |
-| `Modules\User\Models\User` | `/var/www/html/base_techplanner_fila3_mono/laravel/Modules/User/app/Models/User.php` |
-=======
-| `Modules\<nome modulo>\Filament\Resources\DoctorResource` | `/var/www/html/base_saluteora/laravel/Modules/<nome modulo>/app/Filament/Resources/DoctorResource.php` |
-| `Modules\User\Models\User` | `/var/www/html/base_saluteora/laravel/Modules/User/app/Models/User.php` |
->>>>>>> de6e254 (.)
+| `Modules\<nome modulo>\Filament\Resources\DoctorResource` | `/var/www/html/base_ptvx_fila3_mono/laravel/Modules/<nome modulo>/app/Filament/Resources/DoctorResource.php` |
+| `Modules\User\Models\User` | `/var/www/html/base_ptvx_fila3_mono/laravel/Modules/User/app/Models/User.php` |
 
 ## come evitare l'errore
 

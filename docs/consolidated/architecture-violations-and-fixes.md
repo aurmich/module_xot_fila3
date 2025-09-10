@@ -302,7 +302,6 @@ $userClass::factory()->create();
 
 ### **Fase 1: Identificazione Violazioni**
 ```bash
-
 # Cerca import diretti tra moduli
 grep -r "use Modules\.*Models\User" --include="*.php" ./
 
@@ -336,17 +335,12 @@ grep -r "function.*\\\Modules\\\.*\\\Models\\\User" --include="*.php" ./
 - [IsTenant Trait](../../User/app/Models/Traits/IsTenant.php)
 
 ### **Documentazione Moduli**
-<<<<<<< HEAD
-- [Cms Architecture](../../Cms/project_docs/architecture-xotdata-pattern.md)
-- [User Module Traits](../../User/project_docs/traits_complete_guide.md)
-- [Testing Strategy](../../SaluteOra/project_docs/testing/real-data-testing-strategy.md)
-=======
 - [Cms Architecture](../../Cms/docs/architecture-xotdata-pattern.md)
 - [User Module Traits](../../User/docs/traits_complete_guide.md)
 - [Testing Strategy](../../<nome modulo>/docs/testing/real-data-testing-strategy.md)
->>>>>>> de6e254 (.)
 
 ---
 
 **Ultimo Aggiornamento**: Gennaio 2025  
 **Stato**: ✅ Pattern Documentato e Implementato  
+**Responsabile**: Team Architettura Laraxot 

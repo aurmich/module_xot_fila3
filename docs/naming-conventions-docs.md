@@ -23,7 +23,7 @@ Il nome specifico del progetto (es: "il progetto") NON DEVE MAI apparire nella d
 
 ### Dove Usare il Nome del Progetto
 ✅ CORRETTO:
-- `/docs/` (cartella root del progetto)
+- `/project_docs/` (cartella root del progetto)
 - `README.md` principale
 - File di configurazione specifici del progetto
 - Documentazione di deployment
@@ -38,14 +38,12 @@ Il nome specifico del progetto (es: "il progetto") NON DEVE MAI apparire nella d
 
 #### ✅ CORRETTO (in un modulo)
 ```markdown
-
 # Modulo di Gestione Pazienti
 Questo modulo fornisce funzionalità per la gestione dei pazienti in una clinica odontoiatrica.
 ```
 
 #### ❌ ERRATO (in un modulo)
 ```markdown
-
 # Modulo Pazienti il progetto
 Questo modulo gestisce i pazienti nella piattaforma il progetto.
 ```
@@ -73,3 +71,4 @@ Prima di committare modifiche alla documentazione di un modulo, verificare:
 ## Collegamenti
 - [Struttura Moduli](module-structure.md)
 - [Convenzioni Generali](conventions.md)
+- [Best Practices Documentazione](documentation-guidelines.md) 
