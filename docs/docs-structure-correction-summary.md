@@ -2,7 +2,7 @@
 
 ## Contesto e Problema Identificato
 
-Durante l'audit del sistema SaluteOra, è stata identificata una **violazione critica dell'architettura modulare**: l'esistenza di cartelle `docs/` in posizioni inappropriate che violano i principi di modularità e creano confusione nella struttura del progetto.
+Durante l'audit del sistema , è stata identificata una **violazione critica dell'architettura modulare**: l'esistenza di cartelle `docs/` in posizioni inappropriate che violano i principi di modularità e creano confusione nella struttura del progetto.
 
 ## Violazioni Identificate e Corrette
 
@@ -97,7 +97,7 @@ laravel/
 │   ├── Activity/docs/         # ✅ Documentazione modulo Activity
 │   ├── Job/docs/              # ✅ Documentazione modulo Job
 │   ├── SaluteMo/docs/         # ✅ Documentazione modulo SaluteMo
-│   └── SaluteOra/docs/        # ✅ Documentazione modulo SaluteOra
+│   └── <nome modulo>/docs/        # ✅ Documentazione modulo 
 ├── Themes/
 │   ├── One/docs/              # ✅ Documentazione tema One
 │   └── Two/docs/              # ✅ Documentazione tema Two
@@ -196,7 +196,7 @@ find laravel/Themes -name "docs" -type d
 - [Modulo User](../User/docs/)
 - [Modulo UI](../UI/docs/)
 - [Modulo SaluteMo](../SaluteMo/docs/)
-- [Modulo SaluteOra](../SaluteOra/docs/)
+- [Modulo ](../<nome modulo>/docs/)
 
 ### **Documentazione Correlata**:
 - [Regole Modularità](modularity-hardcoded-names.md)

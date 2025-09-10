@@ -9,6 +9,7 @@ use Modules\Xot\Models\Extra;
 
 class ExtraPolicy extends XotBasePolicy
 {
+<<<<<<< HEAD
     /**
      * Determine whether the user can view any models.
      */
@@ -65,3 +66,8 @@ class ExtraPolicy extends XotBasePolicy
         return $user->hasPermissionTo('extra.forceDelete');
     }
 }
+=======
+   
+}
+
+>>>>>>> de6e254 (.)

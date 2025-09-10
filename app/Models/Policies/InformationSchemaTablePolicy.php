@@ -9,6 +9,7 @@ use Modules\Xot\Models\InformationSchemaTable;
 
 class InformationSchemaTablePolicy extends XotBasePolicy
 {
+<<<<<<< HEAD
     /**
      * Determine whether the user can view any models.
      */
@@ -64,4 +65,6 @@ class InformationSchemaTablePolicy extends XotBasePolicy
     {
         return $user->hasPermissionTo('information_schema_table.forceDelete');
     }
+=======
+>>>>>>> de6e254 (.)
 }

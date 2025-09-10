@@ -1,6 +1,6 @@
-# Enum Standards in SaluteOra
+# Enum Standards in 
 
-This document defines the standards and best practices for working with Enums in the SaluteOra project.
+This document defines the standards and best practices for working with Enums in the  project.
 
 ## Naming Conventions
 
@@ -71,7 +71,7 @@ This document defines the standards and best practices for working with Enums in
 
 declare(strict_types=1);
 
-namespace Modules\SaluteOra\Enums;
+namespace Modules\<nome modulo>\Enums;
 
 use Filament\Support\Contracts\HasLabel;
 
@@ -98,7 +98,7 @@ enum AppointmentTypeEnum: string implements HasLabel
 }
 
 // Alias for backward compatibility
-class_alias(AppointmentTypeEnum::class, 'Modules\\SaluteOra\\Enums\\AppointmentType');
+class_alias(AppointmentTypeEnum::class, 'Modules\\<nome modulo>\\Enums\\AppointmentType');
 ```
 
 ## Updating Existing Enums

@@ -2,7 +2,7 @@
 
 ## Descrizione
 
-La classe `XotBasePage` rappresenta un componente fondamentale nell'architettura di SaluteOra, fungendo da intermediario tra le pagine Filament e le implementazioni specifiche dell'applicazione. Questa classe astratta segue il pattern architetturale di non estendere mai direttamente le classi di Filament, ma utilizzare sempre classi wrapper con prefisso `XotBase`.
+La classe `XotBasePage` rappresenta un componente fondamentale nell'architettura di , fungendo da intermediario tra le pagine Filament e le implementazioni specifiche dell'applicazione. Questa classe astratta segue il pattern architetturale di non estendere mai direttamente le classi di Filament, ma utilizzare sempre classi wrapper con prefisso `XotBase`.
 
 ## Percorso del File
 
@@ -67,7 +67,7 @@ public function form(Form $form): Form
 ### Estensione Corretta
 
 ```php
-namespace Modules\SaluteOra\Filament\Pages;
+namespace Modules\<nome modulo>\Filament\Pages;
 
 use Modules\Xot\Filament\Resources\Pages\XotBasePage;
 
@@ -88,7 +88,7 @@ class MyCustomPage extends XotBasePage
 
 ```php
 // ❌ ERRORE: Non estendere mai direttamente Page
-namespace Modules\SaluteOra\Filament\Pages;
+namespace Modules\<nome modulo>\Filament\Pages;
 
 use Filament\Pages\Page;
 

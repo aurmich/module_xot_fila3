@@ -55,7 +55,7 @@ bashscripts/
 
 #### 8. **translations/** - Gestione Traduzioni
 - `fix_all_english_translations.sh` - Fix traduzioni inglesi
-- `fix_saluteora_translations.sh` - Fix traduzioni SaluteOra
+- `fix_saluteora_translations.sh` - Fix traduzioni 
 - `verify_translations_syntax.sh` - Verifica sintassi traduzioni
 
 #### 9. **utilities/** - Utilità Generali

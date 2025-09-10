@@ -36,7 +36,7 @@ class UserWidget extends Widget
 
 declare(strict_types=1);
 
-namespace Modules\SaluteOra\Filament\Resources;
+namespace Modules\<nome modulo>\Filament\Resources;
 
 use Modules\Xot\Filament\Resources\XotBaseResource;
 use Filament\Forms\Components\TextInput;
@@ -76,7 +76,7 @@ class PatientResource extends XotBaseResource
 
 declare(strict_types=1);
 
-namespace Modules\SaluteOra\Filament\Pages;
+namespace Modules\<nome modulo>\Filament\Pages;
 
 use Modules\Xot\Filament\Pages\XotBasePage;
 
@@ -91,7 +91,7 @@ class DashboardPage extends XotBasePage
     protected function getHeaderWidgets(): array
     {
         return [
-            \Modules\SaluteOra\Filament\Widgets\StatsWidget::class,
+            \Modules\<nome modulo>\Filament\Widgets\StatsWidget::class,
         ];
     }
 }
@@ -103,7 +103,7 @@ class DashboardPage extends XotBasePage
 
 declare(strict_types=1);
 
-namespace Modules\SaluteOra\Filament\Widgets;
+namespace Modules\<nome modulo>\Filament\Widgets;
 
 use Modules\Xot\Filament\Widgets\XotBaseWidget;
 
@@ -231,10 +231,10 @@ TextInput::make('name')->label('Nome')
 ### 2. Namespace
 ```php
 // ✅ CORRETTO - Namespace senza 'App'
-namespace Modules\SaluteOra\Filament\Resources;
+namespace Modules\<nome modulo>\Filament\Resources;
 
 // ❌ ERRATO - Namespace con 'App'
-namespace Modules\SaluteOra\App\Filament\Resources;
+namespace Modules\<nome modulo>\App\Filament\Resources;
 ```
 
 ### 3. Ereditarietà
@@ -249,13 +249,13 @@ class PatientResource extends Resource
 ### 4. Service Providers
 ```php
 // ✅ CORRETTO - Estendere XotBaseServiceProvider
-class SaluteOraServiceProvider extends XotBaseServiceProvider
+class ServiceProvider extends XotBaseServiceProvider
 {
-    protected string $module_name = 'SaluteOra';
+    protected string $module_name = '';
 }
 
 // ❌ ERRATO - Estendere direttamente
-class SaluteOraServiceProvider extends ServiceProvider
+class ServiceProvider extends ServiceProvider
 ```
 
 ## 🚨 Errori Comuni
@@ -283,10 +283,10 @@ TextInput::make('name')  // Traduzione automatica
 ### 3. Namespace Errato
 ```php
 // ❌ ERRATO
-namespace Modules\SaluteOra\App\Filament\Resources;
+namespace Modules\<nome modulo>\App\Filament\Resources;
 
 // ✅ CORRETTO
-namespace Modules\SaluteOra\Filament\Resources;
+namespace Modules\<nome modulo>\Filament\Resources;
 ```
 
 ## 📋 Checklist Pre-Commit

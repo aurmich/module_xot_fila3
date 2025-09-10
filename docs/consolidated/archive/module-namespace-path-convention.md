@@ -13,9 +13,15 @@ i file dei moduli devono sempre seguire questa struttura:
 ```
 
 per esempio:
+<<<<<<< HEAD
 - `/var/www/html/base_techplanner_fila3_mono/laravel/Modules/SaluteOra/app/Filament/Resources/...`
 - `/var/www/html/base_techplanner_fila3_mono/laravel/Modules/SaluteOra/app/Models/...`
 - `/var/www/html/base_techplanner_fila3_mono/laravel/Modules/SaluteOra/app/Http/Controllers/...`
+=======
+- `/var/www/html/base_saluteora/laravel/Modules/<nome modulo>/app/Filament/Resources/...`
+- `/var/www/html/base_saluteora/laravel/Modules/<nome modulo>/app/Models/...`
+- `/var/www/html/base_saluteora/laravel/Modules/<nome modulo>/app/Http/Controllers/...`
+>>>>>>> de6e254 (.)
 
 ### namespace corretto
 
@@ -26,9 +32,9 @@ namespace Modules\{NomeModulo}\{Tipo}\...;
 ```
 
 per esempio:
-- `namespace Modules\SaluteOra\Filament\Resources;`
-- `namespace Modules\SaluteOra\Models;`
-- `namespace Modules\SaluteOra\Http\Controllers;`
+- `namespace Modules\<nome modulo>\Filament\Resources;`
+- `namespace Modules\<nome modulo>\Models;`
+- `namespace Modules\<nome modulo>\Http\Controllers;`
 
 ## errore comune
 
@@ -49,8 +55,13 @@ questo è **errato** perché omette la directory `app/` nel percorso fisico.
 
 | namespace | percorso fisico |
 |-----------|----------------|
+<<<<<<< HEAD
 | `Modules\SaluteOra\Filament\Resources\DoctorResource` | `/var/www/html/base_techplanner_fila3_mono/laravel/Modules/SaluteOra/app/Filament/Resources/DoctorResource.php` |
 | `Modules\User\Models\User` | `/var/www/html/base_techplanner_fila3_mono/laravel/Modules/User/app/Models/User.php` |
+=======
+| `Modules\<nome modulo>\Filament\Resources\DoctorResource` | `/var/www/html/base_saluteora/laravel/Modules/<nome modulo>/app/Filament/Resources/DoctorResource.php` |
+| `Modules\User\Models\User` | `/var/www/html/base_saluteora/laravel/Modules/User/app/Models/User.php` |
+>>>>>>> de6e254 (.)
 
 ## come evitare l'errore
 

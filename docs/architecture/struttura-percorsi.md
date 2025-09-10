@@ -1,8 +1,12 @@
-# Struttura dei percorsi nel progetto SaluteOra
+# Struttura dei percorsi nel progetto 
 
 ## Regola fondamentale
 
+<<<<<<< HEAD
 **Tutti i percorsi assoluti nel progetto SaluteOra DEVONO includere il segmento `laravel/` dopo `base_techplanner_fila3_mono/`.**
+=======
+**Tutti i percorsi assoluti nel progetto  DEVONO includere il segmento `laravel/` dopo `base_saluteora/`.**
+>>>>>>> de6e254 (.)
 
 Questa regola è **ASSOLUTA** e non ammette eccezioni.
 

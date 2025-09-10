@@ -9,6 +9,7 @@ use Modules\Xot\Models\HealthCheckResultHistoryItem;
 
 class HealthCheckResultHistoryItemPolicy extends XotBasePolicy
 {
+<<<<<<< HEAD
     /**
      * Determine whether the user can view any models.
      */
@@ -65,3 +66,8 @@ class HealthCheckResultHistoryItemPolicy extends XotBasePolicy
         return $user->hasPermissionTo('health_check_result_history_item.forceDelete');
     }
 }
+=======
+    
+
+}
+>>>>>>> de6e254 (.)

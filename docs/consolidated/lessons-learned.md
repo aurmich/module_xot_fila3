@@ -45,8 +45,8 @@ This document consolidates recurring fixes and rules applied across modules. Kee
 - Homepage blade: `Themes/One/resources/views/pages/index.blade.php` (`pub_theme::pages.index`).
 - Content from `config/local/saluteora/database/content/pages/home.json`. Root `/` redirects to `/{locale}`.
 
-## 10. Icons & Assets (SaluteOra)
-- SVG in `laravel/Modules/SaluteOra/resources/svg/`, kebab-case; reference as `saluteora-{name}`.
+## 10. Icons & Assets ()
+- SVG in `laravel/Modules//resources/svg/`, kebab-case; reference as `saluteora-{name}`.
 
 ## 11. Translation Hygiene
 - Never remove keys/content; only add.

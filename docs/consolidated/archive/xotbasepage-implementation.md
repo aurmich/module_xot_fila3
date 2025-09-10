@@ -69,7 +69,7 @@ class SettingsPage extends XotBasePage
 ## esempio completo
 
 ```php
-namespace Modules\SaluteOra\Filament\Pages;
+namespace Modules\<nome modulo>\Filament\Pages;
 
 use Modules\Xot\Filament\Pages\XotBasePage;
 use Filament\Forms\Components\TextInput;
@@ -172,8 +172,13 @@ class DashboardSettingsPolicy
 - wizard personalizzati
 
 ## collegamento ad altre documentazioni
+<<<<<<< HEAD
 - [pattern di estensione filament](/var/www/html/base_techplanner_fila3_mono/laravel/Modules/Xot/project_docs/filament_extension_pattern.md)
 - [best practices filament](/var/www/html/base_techplanner_fila3_mono/laravel/Modules/SaluteOra/project_docs/filament-best-practices.md)
+=======
+- [pattern di estensione filament](/var/www/html/base_saluteora/laravel/Modules/Xot/docs/filament_extension_pattern.md)
+- [best practices filament](/var/www/html/base_saluteora/laravel/Modules/<nome modulo>/docs/filament-best-practices.md)
+>>>>>>> de6e254 (.)
 
 ## ATTENZIONE: errori critici da evitare
 - NON dichiarare mai abstract getFormSchema() in XotBasePage: la classe base Filament lo implementa già. Fornire sempre una implementazione di default (array vuoto).

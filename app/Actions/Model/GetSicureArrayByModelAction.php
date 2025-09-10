@@ -16,6 +16,7 @@ class GetSicureArrayByModelAction
      */
     public function execute(Model $model): array
     {
+<<<<<<< HEAD
         try {
             return $model->attributesToArray(); // "" is not a valid backing value for enum Modules\SaluteOra\Enums\OccurrenceFrequencyEnum
         } catch (\ValueError $e) {
@@ -30,6 +31,16 @@ class GetSicureArrayByModelAction
             }
 
             return $data;
+=======
+        $data = $model->toArray();
+        
+        // Rimuove campi sensibili
+        $sensitiveFields = ['password', 'remember_token', 'api_token'];
+        foreach ($sensitiveFields as $field) {
+            unset($data[$field]);
+>>>>>>> de6e254 (.)
         }
+        
+        return $data;
     }
 }

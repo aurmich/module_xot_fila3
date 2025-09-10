@@ -9,6 +9,7 @@ use Modules\Xot\Models\PulseValue;
 
 class PulseValuePolicy extends XotBasePolicy
 {
+<<<<<<< HEAD
     /**
      * Determine whether the user can view any models.
      */
@@ -64,4 +65,7 @@ class PulseValuePolicy extends XotBasePolicy
     {
         return $user->hasPermissionTo('pulse_value.forceDelete');
     }
+=======
+    
+>>>>>>> de6e254 (.)
 }

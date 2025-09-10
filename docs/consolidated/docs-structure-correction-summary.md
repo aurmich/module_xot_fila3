@@ -2,7 +2,7 @@
 
 ## Contesto e Problema Identificato
 
-Durante l'audit del sistema SaluteOra, è stata identificata una **violazione critica dell'architettura modulare**: l'esistenza di cartelle `docs/` in posizioni inappropriate che violano i principi di modularità e creano confusione nella struttura del progetto.
+Durante l'audit del sistema , è stata identificata una **violazione critica dell'architettura modulare**: l'esistenza di cartelle `docs/` in posizioni inappropriate che violano i principi di modularità e creano confusione nella struttura del progetto.
 
 ## Violazioni Identificate e Corrette
 
@@ -84,6 +84,7 @@ Durante l'audit del sistema SaluteOra, è stata identificata una **violazione cr
 ```
 laravel/
 ├── Modules/
+<<<<<<< HEAD
 │   ├── Notify/project_docs/           # ✅ Documentazione modulo Notify
 │   ├── User/project_docs/             # ✅ Documentazione modulo User
 │   ├── UI/project_docs/               # ✅ Documentazione modulo UI
@@ -98,6 +99,22 @@ laravel/
 │   ├── Job/project_docs/              # ✅ Documentazione modulo Job
 │   ├── SaluteMo/project_docs/         # ✅ Documentazione modulo SaluteMo
 │   └── SaluteOra/project_docs/        # ✅ Documentazione modulo SaluteOra
+=======
+│   ├── Notify/docs/           # ✅ Documentazione modulo Notify
+│   ├── User/docs/             # ✅ Documentazione modulo User
+│   ├── UI/docs/               # ✅ Documentazione modulo UI
+│   ├── Xot/docs/              # ✅ Documentazione modulo Xot
+│   ├── Geo/docs/              # ✅ Documentazione modulo Geo
+│   ├── Media/docs/            # ✅ Documentazione modulo Media
+│   ├── Cms/docs/              # ✅ Documentazione modulo Cms
+│   ├── Tenant/docs/           # ✅ Documentazione modulo Tenant
+│   ├── Gdpr/docs/             # ✅ Documentazione modulo Gdpr
+│   ├── Lang/docs/             # ✅ Documentazione modulo Lang
+│   ├── Activity/docs/         # ✅ Documentazione modulo Activity
+│   ├── Job/docs/              # ✅ Documentazione modulo Job
+│   ├── SaluteMo/docs/         # ✅ Documentazione modulo SaluteMo
+│   └── <nome modulo>/docs/        # ✅ Documentazione modulo 
+>>>>>>> de6e254 (.)
 ├── Themes/
 │   ├── One/project_docs/              # ✅ Documentazione tema One
 │   └── Two/project_docs/              # ✅ Documentazione tema Two
@@ -192,11 +209,19 @@ find laravel/Themes -name "docs" -type d
 - [Memoria Cursor](../../../.cursor/memories/docs-structure-violation.mdc)
 
 ### **Documentazione Moduli**:
+<<<<<<< HEAD
 - [Modulo Notify](../Notify/project_docs/)
 - [Modulo User](../User/project_docs/)
 - [Modulo UI](../UI/project_docs/)
 - [Modulo SaluteMo](../SaluteMo/project_docs/)
 - [Modulo SaluteOra](../SaluteOra/project_docs/)
+=======
+- [Modulo Notify](../Notify/docs/)
+- [Modulo User](../User/docs/)
+- [Modulo UI](../UI/docs/)
+- [Modulo SaluteMo](../SaluteMo/docs/)
+- [Modulo ](../<nome modulo>/docs/)
+>>>>>>> de6e254 (.)
 
 ### **Documentazione Correlata**:
 - [Regole Modularità](modularity-hardcoded-names.md)

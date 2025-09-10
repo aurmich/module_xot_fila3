@@ -9,6 +9,7 @@ use Modules\Xot\Models\Cache;
 
 class CachePolicy extends XotBasePolicy
 {
+<<<<<<< HEAD
     /**
      * Determine whether the user can view any models.
      */
@@ -64,4 +65,7 @@ class CachePolicy extends XotBasePolicy
     {
         return $user->hasPermissionTo('cache.forceDelete');
     }
+=======
+    
+>>>>>>> de6e254 (.)
 }

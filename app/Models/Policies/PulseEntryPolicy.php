@@ -9,6 +9,7 @@ use Modules\Xot\Models\PulseEntry;
 
 class PulseEntryPolicy extends XotBasePolicy
 {
+<<<<<<< HEAD
     /**
      * Determine whether the user can view any models.
      */
@@ -65,3 +66,8 @@ class PulseEntryPolicy extends XotBasePolicy
         return $user->hasPermissionTo('pulse_entry.forceDelete');
     }
 }
+=======
+    
+
+}
+>>>>>>> de6e254 (.)

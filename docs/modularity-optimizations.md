@@ -20,7 +20,7 @@ public static string $modulesBasePath = '/var/www/html/_bases/base_techplanner_f
 ### 2. Dipendenze su Moduli Specifici nei Test
 ```php
 // ❌ ERRORE CRITICO - Dipendenze hardcoded nei test
-->andReturn(\Modules\SaluteOra\Models\User::class);
+->andReturn(\Modules\<nome modulo>\Models\User::class);
 ```
 
 **File contaminati:**
@@ -48,7 +48,7 @@ self::TUESDAY => __('saluteora::common.days.description.tuesday'),
 ### 5. Dipendenze su Moduli Specifici nei Widget
 ```php
 // ❌ ERRORE CRITICO - Import hardcoded
-use Modules\SaluteOra\Models\Appointment;
+use Modules\<nome modulo>\Models\Appointment;
 ```
 
 **File contaminati:**
@@ -255,8 +255,8 @@ LARAVEL_BASE_PATH=/var/www/html/_bases/base_techplanner_fila3_mono/laravel
 MODULES_BASE_PATH=/var/www/html/_bases/base_techplanner_fila3_mono/laravel/Modules
 
 # Configurazione Modelli Xot
-XOT_USER_MODEL=Modules\SaluteOra\Models\User
-XOT_APPOINTMENT_MODEL=Modules\SaluteOra\Models\Appointment
+XOT_USER_MODEL=Modules\<nome modulo>\Models\User
+XOT_APPOINTMENT_MODEL=Modules\<nome modulo>\Models\Appointment
 
 # Configurazione Traduzioni Xot
 XOT_TRANSLATION_NAMESPACE=saluteora
@@ -277,7 +277,7 @@ Ogni progetto può personalizzare path, modelli e traduzioni tramite variabili d
 grep -r "/var/www/html/saluteora" laravel/Modules/Xot/ --include="*.php"
 
 # Verifica dipendenze hardcoded
-grep -r "Modules\\SaluteOra" laravel/Modules/Xot/ --include="*.php"
+grep -r "Modules\\" laravel/Modules/Xot/ --include="*.php"
 
 # Verifica traduzioni hardcoded
 grep -r "saluteora::" laravel/Modules/Xot/ --include="*.php"
