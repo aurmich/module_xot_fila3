@@ -36,7 +36,7 @@ class ModelTrendChartWidget extends XotBaseChartWidget
             return [
                 'datasets' => [
                     [
-                        'label' => __('salutemo::widgets.appointment_creation_chart.label'),
+                        'label' => __('example::widgets.appointment_creation_chart.label'),
                         'data' => $data->map(fn (mixed $value) => $value instanceof TrendValue ? $value->aggregate : 0),
                         'backgroundColor' => 'rgba(139, 92, 246, 0.5)',
                         'borderColor' => 'rgb(139, 92, 246)',
@@ -51,7 +51,7 @@ class ModelTrendChartWidget extends XotBaseChartWidget
             return [
                 'datasets' => [
                     [
-                        'label' => __('salutemo::widgets.appointment_creation_chart.label'),
+                        'label' => __('example::widgets.appointment_creation_chart.label'),
                         'data' => [],
                         'backgroundColor' => 'rgba(139, 92, 246, 0.5)',
                         'borderColor' => 'rgb(139, 92, 246)',

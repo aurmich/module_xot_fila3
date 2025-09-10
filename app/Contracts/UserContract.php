@@ -19,15 +19,7 @@ use Spatie\MediaLibrary\MediaCollections\FileAdder;
 use Illuminate\Database\Eloquent\Relations\MorphMany;
 use Spatie\Permission\Exceptions\PermissionDoesNotExist;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
-<<<<<<< HEAD
-use Spatie\Permission\Exceptions\GuardDoesNotMatch;
-use Spatie\Permission\Exceptions\PermissionDoesNotExist;
-use Spatie\Permission\Exceptions\RoleAlreadyExists;
-use Spatie\Permission\Exceptions\RoleDoesNotExist;
-
-=======
 use Spatie\Permission\Contracts\Permission;
->>>>>>> de6e254 (.)
 
 // use Filament\Models\Contracts\HasTenants;
 
@@ -140,17 +132,6 @@ interface UserContract extends Authenticatable, Authorizable, CanResetPassword, 
      *
      */
     //public function consents(): MorphMany;
-<<<<<<< HEAD
-
-    /**
-     * Determine if the role may perform the given permission.
-     *
-     * @param  string|int|\Spatie\Permission\Contracts\Permission|\BackedEnum  $permission
-     *
-     * @throws PermissionDoesNotExist|GuardDoesNotMatch
-     */
-    public function hasPermissionTo($permission, ?string $guardName = null): bool;
-=======
     
     /**
      * Determine if the model may perform the given permission.
@@ -161,5 +142,4 @@ interface UserContract extends Authenticatable, Authorizable, CanResetPassword, 
      * @throws PermissionDoesNotExist
      */
     public function hasPermissionTo($permission, $guardName = null): bool;
->>>>>>> de6e254 (.)
 }

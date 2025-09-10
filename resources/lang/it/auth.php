@@ -73,7 +73,3 @@ return [
         'settings' => 'Impostazioni Utente',
     ],
 ];
-<<<<<<< HEAD
-=======
-
->>>>>>> de6e254 (.)
