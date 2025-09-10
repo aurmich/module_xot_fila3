@@ -9,8 +9,6 @@ uno degli errori più comuni è la confusione tra il namespace nel codice php e 
 i file dei moduli devono sempre seguire questa struttura:
 
 ```
-<<<<<<< HEAD
-<<<<<<< HEAD
 /var/www/html/base_techplanner_fila3_mono/laravel/Modules/{NomeModulo}/app/{Tipo}/...
 ```
 
@@ -18,7 +16,6 @@ per esempio:
 - `/var/www/html/base_ptvx_fila3_mono/laravel/Modules/<nome modulo>/app/Filament/Resources/...`
 - `/var/www/html/base_ptvx_fila3_mono/laravel/Modules/<nome modulo>/app/Models/...`
 - `/var/www/html/base_ptvx_fila3_mono/laravel/Modules/<nome modulo>/app/Http/Controllers/...`
-=======
 /var/www/html/base_saluteora/laravel/Modules/{NomeModulo}/app/{Tipo}/...
 ```
 
@@ -26,8 +23,6 @@ per esempio:
 - `/var/www/html/base_saluteora/laravel/Modules/SaluteOra/app/Filament/Resources/...`
 - `/var/www/html/base_saluteora/laravel/Modules/SaluteOra/app/Models/...`
 - `/var/www/html/base_saluteora/laravel/Modules/SaluteOra/app/Http/Controllers/...`
->>>>>>> d1a0a6c3 (.)
-=======
 /var/www/html/base_techplanner_fila3_mono/laravel/Modules/{NomeModulo}/app/{Tipo}/...
 ```
 
@@ -35,7 +30,6 @@ per esempio:
 - `/var/www/html/base_techplanner_fila3_mono/laravel/Modules/SaluteOra/app/Filament/Resources/...`
 - `/var/www/html/base_techplanner_fila3_mono/laravel/Modules/SaluteOra/app/Models/...`
 - `/var/www/html/base_techplanner_fila3_mono/laravel/Modules/SaluteOra/app/Http/Controllers/...`
->>>>>>> 05bf7bce (.)
 
 ### namespace corretto
 
@@ -46,30 +40,21 @@ namespace Modules\{NomeModulo}\{Tipo}\...;
 ```
 
 per esempio:
-<<<<<<< HEAD
 - `namespace Modules\<nome modulo>\Filament\Resources;`
 - `namespace Modules\<nome modulo>\Models;`
 - `namespace Modules\<nome modulo>\Http\Controllers;`
-=======
 - `namespace Modules\SaluteOra\Filament\Resources;`
 - `namespace Modules\SaluteOra\Models;`
 - `namespace Modules\SaluteOra\Http\Controllers;`
->>>>>>> d1a0a6c3 (.)
 
 ## errore comune
 
 spesso si confonde il percorso fisico con il namespace, cercando file in:
 
 ```
-<<<<<<< HEAD
-<<<<<<< HEAD
 /var/www/html/base_techplanner_fila3_mono/laravel/Modules/{NomeModulo}/{Tipo}/...
-=======
 /var/www/html/base_saluteora/laravel/Modules/{NomeModulo}/{Tipo}/...
->>>>>>> d1a0a6c3 (.)
-=======
 /var/www/html/base_techplanner_fila3_mono/laravel/Modules/{NomeModulo}/{Tipo}/...
->>>>>>> 05bf7bce (.)
 ```
 
 questo è **errato** perché omette la directory `app/` nel percorso fisico.
@@ -83,18 +68,12 @@ questo è **errato** perché omette la directory `app/` nel percorso fisico.
 
 | namespace | percorso fisico |
 |-----------|----------------|
-<<<<<<< HEAD
-<<<<<<< HEAD
 | `Modules\<nome modulo>\Filament\Resources\DoctorResource` | `/var/www/html/base_ptvx_fila3_mono/laravel/Modules/<nome modulo>/app/Filament/Resources/DoctorResource.php` |
 | `Modules\User\Models\User` | `/var/www/html/base_ptvx_fila3_mono/laravel/Modules/User/app/Models/User.php` |
-=======
 | `Modules\SaluteOra\Filament\Resources\DoctorResource` | `/var/www/html/base_saluteora/laravel/Modules/SaluteOra/app/Filament/Resources/DoctorResource.php` |
 | `Modules\User\Models\User` | `/var/www/html/base_saluteora/laravel/Modules/User/app/Models/User.php` |
->>>>>>> d1a0a6c3 (.)
-=======
 | `Modules\SaluteOra\Filament\Resources\DoctorResource` | `/var/www/html/base_techplanner_fila3_mono/laravel/Modules/SaluteOra/app/Filament/Resources/DoctorResource.php` |
 | `Modules\User\Models\User` | `/var/www/html/base_techplanner_fila3_mono/laravel/Modules/User/app/Models/User.php` |
->>>>>>> 05bf7bce (.)
 
 ## come evitare l'errore
 
@@ -104,15 +83,9 @@ questo è **errato** perché omette la directory `app/` nel percorso fisico.
 
 ## linkback
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 - [convenzioni di codice](/var/www/html/base_techplanner_fila3_mono/laravel/project_docs/conventions.md)
 - [struttura progetto](/var/www/html/base_techplanner_fila3_mono/laravel/project_docs/project-structure.md)
-=======
 - [convenzioni di codice](/var/www/html/base_saluteora/laravel/project_docs/conventions.md)
 - [struttura progetto](/var/www/html/base_saluteora/laravel/project_docs/project-structure.md)
->>>>>>> d1a0a6c3 (.)
-=======
 - [convenzioni di codice](/var/www/html/base_techplanner_fila3_mono/laravel/project_docs/conventions.md)
 - [struttura progetto](/var/www/html/base_techplanner_fila3_mono/laravel/project_docs/project-structure.md)
->>>>>>> 05bf7bce (.)

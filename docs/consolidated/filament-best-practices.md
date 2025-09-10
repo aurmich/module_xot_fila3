@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Best Practices per Risorse Filament in Laraxot
 
 Questo documento riassume le migliori pratiche per la creazione e gestione delle risorse Filament all'interno dell'ecosistema Laraxot. Seguire queste linee guida garantirà compatibilità e coerenza in tutto il progetto.
@@ -167,7 +166,6 @@ public function getTableColumns(): array
         'created_at' => Tables\Columns\TextColumn::make('created_at')
             ->dateTime('d/m/Y H:i')
             ->sortable(),
-=======
 # Filament Best Practices (Moduli Riutilizzabili)
 
 ## Descrizione
@@ -219,12 +217,10 @@ public static function getFormSchema(): array
         TextInput::make('cognome')->required(),
         DatePicker::make('data_nascita'),
         // altri componenti...
->>>>>>> d1a0a6c3 (.)
     ];
 }
 ```
 
-<<<<<<< HEAD
 ## Regole per XotBaseEditRecord
 
 ### Implementazione Corretta
@@ -294,7 +290,6 @@ class CreateAppointment extends XotBaseCreateRecord
 ## Esempi di Implementazione Corretta
 
 ### ReportResource.php - IMPLEMENTAZIONE CORRETTA
-=======
 #### ❌ DON'T - Non utilizzare il metodo form()
 
 ```php
@@ -343,12 +338,10 @@ TextInput::make('nome')
 ```
 
 ## Struttura Completa di una Risorsa
->>>>>>> d1a0a6c3 (.)
 
 ```php
 <?php
 
-<<<<<<< HEAD
 declare(strict_types=1);
 
 namespace Modules\SaluteMo\Filament\Resources;
@@ -399,7 +392,6 @@ class ReportResource extends XotBaseResource
             'create' => Pages\CreateReport::route('/create'),
             'edit' => Pages\EditReport::route('/{record}/edit'),
         ];
-=======
 namespace Modules\Brain\Filament\Resources;
 
 use Filament\Forms\Components\TextInput;
@@ -485,12 +477,10 @@ class SocioResource extends XotBaseResource
     {
         return parent::getEloquentQuery()
             ->with(['sezione', 'statoSocio']);
->>>>>>> d1a0a6c3 (.)
     }
 }
 ```
 
-<<<<<<< HEAD
 ## Checklist di Conformità
 
 Prima di considerare completa una risorsa Filament, verificare:
@@ -546,7 +536,6 @@ Prima di considerare completa una risorsa Filament, verificare:
 - `EditAppointment.php` - Estende `XotBaseEditRecord`
 
 *Ultimo aggiornamento: gennaio 2025 - Correzioni per campi reali e rimozione label hardcoded*
-=======
 ## Struttura delle Traduzioni
 
 ### File di Traduzione Completo
@@ -1016,4 +1005,3 @@ Appointment::where('doctor_id', $doctorId)
 - DRY, KISS, serenità del codice
 - Refactoring sicuro, massima estendibilità
 
->>>>>>> d1a0a6c3 (.)

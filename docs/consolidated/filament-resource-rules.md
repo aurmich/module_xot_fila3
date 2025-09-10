@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Regole per le Risorse Filament in 
 
 ## Panoramica
@@ -8,7 +7,6 @@ Questo documento definisce le regole fondamentali per l'implementazione delle ri
 ## Estensione di XotBaseResource
 
 Tutte le risorse Filament in  **DEVONO** estendere `Modules\Xot\Filament\Resources\XotBaseResource` invece di `Filament\Resources\Resource`. Questa classe base personalizzata fornisce funzionalità specifiche per il progetto e garantisce coerenza in tutta l'applicazione.
-=======
 # Regole per le Risorse Filament in SaluteOra
 
 ## Panoramica
@@ -18,7 +16,6 @@ Questo documento definisce le regole fondamentali per l'implementazione delle ri
 ## Estensione di XotBaseResource
 
 Tutte le risorse Filament in SaluteOra **DEVONO** estendere `Modules\Xot\Filament\Resources\XotBaseResource` invece di `Filament\Resources\Resource`. Questa classe base personalizzata fornisce funzionalità specifiche per il progetto e garantisce coerenza in tutta l'applicazione.
->>>>>>> d1a0a6c3 (.)
 
 ```php
 // ✅ CORRETTO

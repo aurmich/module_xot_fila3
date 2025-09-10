@@ -64,18 +64,12 @@
 ## Errori Comuni
 
 1. **Errore**: Directory errata
-<<<<<<< HEAD
-<<<<<<< HEAD
    - ❌ `/var/www/html/_bases/base_techplanner_fila3_mono/Modules/Module/Datas/`
    - ✅ `/var/www/html/_bases/base_techplanner_fila3_mono/laravel/Modules/Module/Datas/`
-=======
    - ❌ `/var/www/html/saluteora/Modules/Module/Datas/`
    - ✅ `/var/www/html/saluteora/laravel/Modules/Module/Datas/`
->>>>>>> d1a0a6c3 (.)
-=======
    - ❌ `/var/www/html/_bases/base_techplanner_fila3_mono/Modules/Module/Datas/`
    - ✅ `/var/www/html/_bases/base_techplanner_fila3_mono/laravel/Modules/Module/Datas/`
->>>>>>> 05bf7bce (.)
 
 2. **Errore**: Namespace errato
    - ❌ `namespace Modules\Module\App\Datas;`

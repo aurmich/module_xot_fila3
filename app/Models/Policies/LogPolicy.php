@@ -9,9 +9,6 @@ use Modules\Xot\Models\Log;
 
 class LogPolicy extends XotBasePolicy
 {
-<<<<<<< HEAD
-    
-=======
     /**
      * Determine whether the user can view any models.
      */
@@ -67,5 +64,4 @@ class LogPolicy extends XotBasePolicy
     {
         return $user->hasPermissionTo('log.forceDelete');
     }
->>>>>>> d1a0a6c3 (.)
 }

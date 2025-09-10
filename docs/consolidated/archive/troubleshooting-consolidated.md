@@ -206,15 +206,9 @@ Codice non conforme agli standard di tipizzazione.
 **Soluzione**
 ```bash
 # Eseguire da directory Laravel
-<<<<<<< HEAD
-<<<<<<< HEAD
 cd /var/www/html/_bases/base_techplanner_fila3_mono/laravel
-=======
 cd /var/www/html/_bases/base_saluteora/laravel
->>>>>>> d1a0a6c3 (.)
-=======
 cd /var/www/html/_bases/base_techplanner_fila3_mono/laravel
->>>>>>> 05bf7bce (.)
 ./vendor/bin/phpstan analyze --level=9 --memory-limit=2G
 ```
 

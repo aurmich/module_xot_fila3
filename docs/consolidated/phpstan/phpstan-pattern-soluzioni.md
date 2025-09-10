@@ -278,7 +278,6 @@ Questi pattern rappresentano le soluzioni standard da adottare in tutto il modul
 
 1. Applicare sistematicamente questi pattern a tutto il codice del modulo Xot
 2. Estendere questi pattern ad altri moduli del progetto
-<<<<<<< HEAD
 3. Aggiornare regolarmente questo documento con nuovi pattern identificati 
 ## Collegamenti tra versioni di PHPSTAN_PATTERN_SOLUZIONI.md
 * [PHPSTAN_PATTERN_SOLUZIONI.md](../../../Xot/project_docs/phpstan/PHPSTAN_PATTERN_SOLUZIONI.md)
@@ -297,6 +296,4 @@ Questi pattern rappresentano le soluzioni standard da adottare in tutto il modul
 ---
 
 
-=======
 3. Aggiornare regolarmente questo documento con nuovi pattern identificati 
->>>>>>> d1a0a6c3 (.)

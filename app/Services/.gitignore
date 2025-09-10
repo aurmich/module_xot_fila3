@@ -1,25 +1,3 @@
-<<<<<<< HEAD
-
-# Dependencies and packages
-package-lock.json
-
-# Build and compiled files
-/*.lock
-
-# Backup files
-*.backup
-*.backup.*
-*.bak
-*.old
-*.old1
-
-# Documentation and cache
-docs/phpstan/
-
-# Other
-/vendor
--e
-=======
 /*.lock
 package-lock.json
 /vendor
@@ -29,4 +7,3 @@ package-lock.json
 -e 
 # PHPStan documentation
 docs/phpstan/
->>>>>>> d1a0a6c3 (.)

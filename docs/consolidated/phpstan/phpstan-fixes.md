@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Correzioni PHPStan Livello 7 - Modulo Xot
 
 Questo documento traccia gli errori PHPStan di livello 7 identificati nel modulo Xot e le relative soluzioni implementate.
@@ -827,7 +826,6 @@ L'aggiunta dell'annotazione `@phpstan-var` fornisce a PHPStan un'informazione pi
 * [phpstan_fixes.md](../../../UI/project_docs/phpstan_fixes.md)
 * [phpstan_fixes.md](../../../Media/project_docs/phpstan_fixes.md)
 
-=======
 # Correzioni PHPStan - 6 Gennaio 2025
 
 ## Errori Risolti
@@ -927,4 +925,3 @@ L'aggiunta dell'annotazione `@phpstan-var` fornisce a PHPStan un'informazione pi
 - [PHPStan Level 10 Guidelines](./phpstan-level10-guidelines.md)
 
 *Ultimo aggiornamento: 6 Gennaio 2025*
->>>>>>> d1a0a6c3 (.)

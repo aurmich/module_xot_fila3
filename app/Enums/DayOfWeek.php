@@ -83,16 +83,6 @@ enum DayOfWeek: int implements HasLabel, HasColor, HasIcon, HasDescription
     public function getDescription(): string
     {
         return match($this) {
-<<<<<<< HEAD
-<<<<<<< HEAD
-            self::MONDAY => __('techplanner::common.days.description.monday'),
-            self::TUESDAY => __('techplanner::common.days.description.tuesday'),
-            self::WEDNESDAY => __('techplanner::common.days.description.wednesday'),
-            self::THURSDAY => __('techplanner::common.days.description.thursday'),
-            self::FRIDAY => __('techplanner::common.days.description.friday'),
-            self::SATURDAY => __('techplanner::common.days.description.saturday'),
-            self::SUNDAY => __('techplanner::common.days.description.sunday'),
-=======
             self::MONDAY => __('saluteora::common.days.description.monday'),
             self::TUESDAY => __('saluteora::common.days.description.tuesday'),
             self::WEDNESDAY => __('saluteora::common.days.description.wednesday'),
@@ -100,16 +90,6 @@ enum DayOfWeek: int implements HasLabel, HasColor, HasIcon, HasDescription
             self::FRIDAY => __('saluteora::common.days.description.friday'),
             self::SATURDAY => __('saluteora::common.days.description.saturday'),
             self::SUNDAY => __('saluteora::common.days.description.sunday'),
->>>>>>> d1a0a6c3 (.)
-=======
-            self::MONDAY => __('TechPlanner::common.days.description.monday'),
-            self::TUESDAY => __('TechPlanner::common.days.description.tuesday'),
-            self::WEDNESDAY => __('TechPlanner::common.days.description.wednesday'),
-            self::THURSDAY => __('TechPlanner::common.days.description.thursday'),
-            self::FRIDAY => __('TechPlanner::common.days.description.friday'),
-            self::SATURDAY => __('TechPlanner::common.days.description.saturday'),
-            self::SUNDAY => __('TechPlanner::common.days.description.sunday'),
->>>>>>> 05bf7bce (.)
         };
     }
 

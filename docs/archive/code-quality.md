@@ -179,15 +179,9 @@ $content = \file_get_contents($path); // Può restituire false
 
 ### 1. PHPStan Pre-Commit
 ```bash
-<<<<<<< HEAD
-<<<<<<< HEAD
 cd /var/www/html/_bases/base_techplanner_fila3_mono/laravel
-=======
 cd /var/www/html/_bases/base_saluteora/laravel
->>>>>>> d1a0a6c3 (.)
-=======
 cd /var/www/html/_bases/base_techplanner_fila3_mono/laravel
->>>>>>> 05bf7bce (.)
 ./vendor/bin/phpstan analyze Modules/ModuleName --level=9
 ```
 
@@ -285,11 +279,8 @@ unset($translations['existing_key']); // MAI!
 
 **Data**: 2025-08-01  
 **Versione**: 2.0  
-<<<<<<< HEAD
 **Compatibilità**: Laraxot , PHP 8.2+, Laravel 11+
-=======
 **Compatibilità**: Laraxot SaluteOra, PHP 8.2+, Laravel 11+
->>>>>>> d1a0a6c3 (.)
 
 ---
 

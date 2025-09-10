@@ -9,10 +9,6 @@ use Modules\Xot\Models\Module;
 
 class ModulePolicy extends XotBasePolicy
 {
-<<<<<<< HEAD
-    
-
-=======
     /**
      * Determine whether the user can view any models.
      */
@@ -68,5 +64,4 @@ class ModulePolicy extends XotBasePolicy
     {
         return $user->hasPermissionTo('module.forceDelete');
     }
->>>>>>> d1a0a6c3 (.)
 }

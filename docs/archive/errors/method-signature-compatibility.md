@@ -16,11 +16,8 @@ Cannot make non static method Filament\Pages\BasePage::getView() static in class
 ```
 
 ```
-<<<<<<< HEAD
 Access level to Modules\<nome modulo>\Filament\Resources\AppointmentWorkflowResource\Pages\WorkflowAppointment::getFormActionsAlignment() must be public (as in class Filament\Pages\BasePage)
-=======
 Access level to Modules\SaluteOra\Filament\Resources\AppointmentWorkflowResource\Pages\WorkflowAppointment::getFormActionsAlignment() must be public (as in class Filament\Pages\BasePage)
->>>>>>> d1a0a6c3 (.)
 ```
 
 esempio di errore:
@@ -127,15 +124,9 @@ $returnType = $parentMethod->getReturnType();
 
 ## collegamento ad altre risorse
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 - [regole di ereditarietà in php](/var/www/html/base_techplanner_fila3_mono/laravel/docs/standards/php-inheritance-rules.md)
 - [estensione pattern filament](/var/www/html/base_techplanner_fila3_mono/laravel/Modules/Xot/docs/filament_extension_pattern.md)
-=======
 - [regole di ereditarietà in php](/var/www/html/base_saluteora/laravel/docs/standards/php-inheritance-rules.md)
 - [estensione pattern filament](/var/www/html/base_saluteora/laravel/Modules/Xot/docs/filament_extension_pattern.md)
->>>>>>> d1a0a6c3 (.)
-=======
 - [regole di ereditarietà in php](/var/www/html/base_techplanner_fila3_mono/laravel/docs/standards/php-inheritance-rules.md)
 - [estensione pattern filament](/var/www/html/base_techplanner_fila3_mono/laravel/Modules/Xot/docs/filament_extension_pattern.md)
->>>>>>> 05bf7bce (.)

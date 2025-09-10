@@ -9,10 +9,6 @@ use Modules\Xot\Models\Session;
 
 class SessionPolicy extends XotBasePolicy
 {
-<<<<<<< HEAD
-    
-
-=======
     /**
      * Determine whether the user can view any models.
      */
@@ -68,5 +64,4 @@ class SessionPolicy extends XotBasePolicy
     {
         return $user->hasPermissionTo('session.forceDelete');
     }
->>>>>>> d1a0a6c3 (.)
 }

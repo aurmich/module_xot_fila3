@@ -9,10 +9,6 @@ use Modules\Xot\Models\PulseAggregate;
 
 class PulseAggregatePolicy extends XotBasePolicy
 {
-<<<<<<< HEAD
-    
-
-=======
     /**
      * Determine whether the user can view any models.
      */
@@ -68,5 +64,4 @@ class PulseAggregatePolicy extends XotBasePolicy
     {
         return $user->hasPermissionTo('pulse_aggregate.forceDelete');
     }
->>>>>>> d1a0a6c3 (.)
 }

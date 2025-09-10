@@ -82,15 +82,9 @@ namespace Modules\ModuleName\App\Console\Commands;
 
 ## Collegamenti
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 - [Convenzioni di Namespace](/var/www/html/base_techplanner_fila3_mono/laravel/Modules/Xot/project_docs/namespace_conventions.md)
 - [Struttura Moduli](/var/www/html/base_techplanner_fila3_mono/laravel/Modules/Xot/project_docs/module_structure.md)
-=======
 - [Convenzioni di Namespace](/var/www/html/base_saluteora/laravel/Modules/Xot/project_docs/namespace_conventions.md)
 - [Struttura Moduli](/var/www/html/base_saluteora/laravel/Modules/Xot/project_docs/module_structure.md)
->>>>>>> d1a0a6c3 (.)
-=======
 - [Convenzioni di Namespace](/var/www/html/base_techplanner_fila3_mono/laravel/Modules/Xot/project_docs/namespace_conventions.md)
 - [Struttura Moduli](/var/www/html/base_techplanner_fila3_mono/laravel/Modules/Xot/project_docs/module_structure.md)
->>>>>>> 05bf7bce (.)

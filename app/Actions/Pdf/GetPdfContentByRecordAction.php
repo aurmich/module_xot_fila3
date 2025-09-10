@@ -6,10 +6,6 @@ namespace Modules\Xot\Actions\Pdf;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Str;
-<<<<<<< HEAD
-use Modules\Progressioni\Models\StabiDirigente;
-=======
->>>>>>> d1a0a6c3 (.)
 use Spatie\QueueableAction\QueueableAction;
 use Spipu\Html2Pdf\Html2Pdf;
 use Webmozart\Assert\Assert;
@@ -122,20 +118,10 @@ class GetPdfContentByRecordAction
         ];
 
         // Add specific relationship data if available
-        if (method_exists($record, 'valutatore') && $record->relationLoaded('valutatore')) {
-<<<<<<< HEAD
-            // Use method call instead of property access for PHPStan compatibility
-            $valutatore = $record->valutatore();
-            if ($valutatore instanceof \Illuminate\Database\Eloquent\Relations\BelongsTo) {
-                $valutatoreModel = $valutatore->first();
-                if ($valutatoreModel instanceof StabiDirigente && null !== $valutatoreModel->nome_diri) {
-                    $params['firma'] = (string) $valutatoreModel->nome_diri;
-                }
-=======
+        if (method_exists($record, 'valutatore') && $record->relationLoaded('valutatore') && isset($record->valutatore)) {
             $valutatore = $record->valutatore;
-            if (null !== $valutatore) {
-                $params['firma'] = $valutatore->nome_diri ?? null;
->>>>>>> d1a0a6c3 (.)
+            if (is_object($valutatore) && isset($valutatore->nome_diri)) {
+                $params['firma'] = $valutatore->nome_diri;
             }
         }
 
@@ -152,28 +138,20 @@ class GetPdfContentByRecordAction
     protected function generateFilename(Model $record): string
     {
         $modelName = class_basename(get_class($record));
-<<<<<<< HEAD
-        $baseFilename = mb_strtolower($modelName).'_'.(string) $record->getKey();
-
-        // Enhanced filename for records with identification fields
-        if (property_exists($record, 'matr') && property_exists($record, 'cognome') && property_exists($record, 'nome')) {
-            $matr = is_scalar($record->matr) ? (string) $record->matr : '';
-            $cognome = is_scalar($record->cognome) ? (string) $record->cognome : '';
-            $nome = is_scalar($record->nome) ? (string) $record->nome : '';
-            
-            return 'scheda_'.(string) $record->getKey().'_'.$matr.'_'.$cognome.'_'.$nome.'.pdf';
-=======
-        $baseFilename = mb_strtolower($modelName).'_'.$record->getKey();
+        $recordKey = $record->getKey();
+        $baseFilename = mb_strtolower($modelName).'_'.(string)($recordKey ?? 'unknown');
 
         // Enhanced filename for records with identification fields
         if (isset($record->matr) && isset($record->cognome) && isset($record->nome)) {
-            return 'scheda_'.$record->getKey().'_'.$record->matr.'_'.
-                   $record->cognome.'_'.$record->nome.'.pdf';
->>>>>>> d1a0a6c3 (.)
+            $matr = is_string($record->matr) ? $record->matr : 'unknown';
+            $cognome = is_string($record->cognome) ? $record->cognome : 'unknown';
+            $nome = is_string($record->nome) ? $record->nome : 'unknown';
+            
+            return 'scheda_'.(string)($recordKey ?? 'unknown').'_'.$matr.'_'.$cognome.'_'.$nome.'.pdf';
         }
 
         // Enhanced filename for records with name field
-        if (isset($record->name)) {
+        if (isset($record->name) && is_string($record->name)) {
             return $baseFilename.'_'.Str::slug($record->name).'.pdf';
         }
 
@@ -215,11 +193,6 @@ class GetPdfContentByRecordAction
         } catch (\Exception $e) {
             \Log::error('PDF generation failed in GetPdfContentByRecordAction', [
                 'filename' => $filename,
-<<<<<<< HEAD
-=======
-                'record_type' => get_class($record ?? null),
-                'record_id' => $record->getKey() ?? null,
->>>>>>> d1a0a6c3 (.)
                 'error' => $e->getMessage(),
                 'trace' => $e->getTraceAsString(),
             ]);

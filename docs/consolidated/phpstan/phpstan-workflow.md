@@ -137,7 +137,6 @@ class MyModel extends BaseModel
    - ❌ MAI correggere un solo errore alla volta se esistono errori simili
    - ❌ MAI rimandare le correzioni a sessioni successive
 
-<<<<<<< HEAD
 ## Struttura del Progetto e Workflow
 
 ### Architettura Modulare
@@ -157,8 +156,6 @@ Il progetto utilizza un'architettura modulare con Laravel Modules:
 4. **Testing**: Verificare che le correzioni non rompano funzionalità
 5. **Commit**: Commit atomici per gruppi di correzioni
 
-=======
->>>>>>> d1a0a6c3 (.)
 2. **Approccio Efficiente**
    - Identificare pattern comuni di errori
    - Correggere tutti gli errori dello stesso tipo in una volta
@@ -187,7 +184,6 @@ Il progetto utilizza un'architettura modulare con Laravel Modules:
      - Docs del modulo specifico
      - .cursor/rules per Cursor AI
      - .windsurfrules per Windsurf
-<<<<<<< HEAD
    - Mantenere coerenza tra le diverse documentazioni 
 ## Collegamenti tra versioni di PHPSTAN_WORKFLOW.md
 * [PHPSTAN_WORKFLOW.md](../../../Xot/project_docs/phpstan/PHPSTAN_WORKFLOW.md)
@@ -206,6 +202,4 @@ Il progetto utilizza un'architettura modulare con Laravel Modules:
 ---
 
 
-=======
    - Mantenere coerenza tra le diverse documentazioni 
->>>>>>> d1a0a6c3 (.)

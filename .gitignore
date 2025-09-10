@@ -1,24 +1,3 @@
-<<<<<<< HEAD
-
-# Dependencies and packages
-/docs/vendor/
-/node_modules/
-/vendor/
-npm-debug.log
-package-lock.json
-yarn-error.log
-
-# Build and compiled files
-*.cache
-*.jar
-*.lock
-*.phar
-.php-cs-fixer.cache
-.phpunit.result.cache
-/build
-/build/
-build/
-=======
 # Dependencies and packages
 /vendor/
 /node_modules/
@@ -34,61 +13,11 @@ yarn-error.log
 npm-debug.log
 .phpunit.result.cache
 .php-cs-fixer.cache
->>>>>>> d1a0a6c3 (.)
 
 # Log files
 *.log
 error_log
 
-<<<<<<< HEAD
-# Laravel specific
-.env
-app/storage/
-bootstrap/compiled.php
-public/hot
-public/storage
-public_html/hot
-public_html/storage
-
-# Local configurations
-/.vagrant
-Homestead.json
-Homestead.yaml
-
-# IDE specific
-.phpintel
-/.idea
-
-# Git specific
-.git-blame-ignore-revs
-.git-rewrite
-.git-rewrite/
-
-# Temporary and system files
-*.exe
-*.stackdump
-*.swo
-*.swp
-*.tmp
-*:Zone.Identifier
-.DS_Store
-
-# Backup files
-*.backup
-*.bak
-*.new
-*.old
-*.old1
-*.old2
-
-# Documentation and cache
-cache/
-docs/cache/
-docs/phpstan/
-
-# Other
-storage/*.key
-=======
 # Build directories
 /build/
 /build
@@ -128,7 +57,6 @@ Homestead.json
 .DS_Store
 *.old
 *.old1
-*.old2
 *.backup
 *.bak
 *.new
@@ -137,4 +65,3 @@ Homestead.json
 docs/phpstan/
 docs/cache/
 cache/
->>>>>>> d1a0a6c3 (.)

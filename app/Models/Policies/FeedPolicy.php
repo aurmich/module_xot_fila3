@@ -9,11 +9,6 @@ use Modules\Xot\Models\Feed;
 
 class FeedPolicy extends XotBasePolicy
 {
-<<<<<<< HEAD
-   
-}
-
-=======
     /**
      * Determine whether the user can view any models.
      */
@@ -70,4 +65,3 @@ class FeedPolicy extends XotBasePolicy
         return $user->hasPermissionTo('feed.forceDelete');
     }
 }
->>>>>>> d1a0a6c3 (.)

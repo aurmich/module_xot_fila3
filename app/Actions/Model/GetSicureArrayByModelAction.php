@@ -16,19 +16,8 @@ class GetSicureArrayByModelAction
      */
     public function execute(Model $model): array
     {
-<<<<<<< HEAD
-        $data = $model->toArray();
-        
-        // Rimuove campi sensibili
-        $sensitiveFields = ['password', 'remember_token', 'api_token'];
-        foreach ($sensitiveFields as $field) {
-            unset($data[$field]);
-        }
-        
-        return $data;
-=======
         try {
-            return $model->attributesToArray(); // "" is not a valid backing value for enum Modules\TechPlanner\Enums\OccurrenceFrequencyEnum
+            return $model->attributesToArray(); // "" is not a valid backing value for enum Modules\SaluteOra\Enums\OccurrenceFrequencyEnum
         } catch (\ValueError $e) {
             $data = [];
             foreach ($model->getAttributes() as $key => $value) {
@@ -42,6 +31,5 @@ class GetSicureArrayByModelAction
 
             return $data;
         }
->>>>>>> d1a0a6c3 (.)
     }
 }

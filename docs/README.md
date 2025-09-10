@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Laraxot PTVX - Documentazione Consolidata
 
 ## Panoramica
@@ -63,7 +62,6 @@ Laraxot PTVX è un ecosistema modulare basato su Laravel 11, progettato per appl
 **Data Creazione**: 27 Gennaio 2025  
 **Stato**: Consolidato da docs/ root  
 **Priorità**: CRITICA (Documentazione principale)
-=======
 # 🏗️ **Xot Module** - Framework Base Laraxot
 
 [![Laravel 12.x](https://img.shields.io/badge/Laravel-12.x-red.svg)](https://laravel.com/)
@@ -430,4 +428,3 @@ Per accedere alla documentazione dettagliata originale, vedere il backup in:
 - [Root Documentation](../../../docs/)
 - [SaluteOra Module](../SaluteOra/docs/)
 - [Original Documentation Backup](../../../docs-consolidation-backup-*/Xot-docs-original/)
->>>>>>> d1a0a6c3 (.)

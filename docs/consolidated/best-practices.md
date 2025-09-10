@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Best Practices per Laraxot
 
 ## Riferimenti al modello User
@@ -67,7 +66,6 @@ public function process(\Modules\User\Models\User $user) {
     // Codice
 }
 ``` 
-=======
 # 🔧 **Best Practices Modulo Xot**
 
 ## 📋 **Panoramica**
@@ -788,4 +786,3 @@ public function createModel(array $data): MioModello
 ---
 
 *Ultimo aggiornamento: giugno 2025 - Versione 2.0.0*
->>>>>>> d1a0a6c3 (.)

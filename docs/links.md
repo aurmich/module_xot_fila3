@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Links
 
 ## Documentazione Generale
@@ -166,7 +165,6 @@
 **Data Creazione**: 27 Gennaio 2025  
 **Stato**: Consolidato da docs/ root  
 **Priorità**: MEDIA (Raccolta link)
-=======
 # Collegamenti Documentazione Modulo Xot
 
 ## Documentazione Generica
@@ -219,4 +217,3 @@
 * [links.md](../../Cms/docs/links.md)
 * [links.md](../../../Themes/One/docs/links.md)
 
->>>>>>> d1a0a6c3 (.)

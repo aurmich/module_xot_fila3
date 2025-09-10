@@ -248,11 +248,8 @@ declare(strict_types=1);
 namespace Modules\SaluteMo\Filament\Resources;
 
 use Modules\SaluteMo\Filament\Resources\ReportResource\Pages;
-<<<<<<< HEAD
 use Modules\<nome progetto>\Models\Report;
-=======
 use Modules\SaluteOra\Models\Report;
->>>>>>> d1a0a6c3 (.)
 use Modules\Xot\Filament\Resources\XotBaseResource;
 use Filament\Forms;
 

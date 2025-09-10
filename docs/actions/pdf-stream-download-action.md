@@ -142,11 +142,8 @@ Generated PDF data can be attached to emails through the notification system.
 ## Related Files
 - `ContentPdfAction.php` - Content-specific PDF generation action
 - `Modules\Notify\Emails\SpatieEmail.php` - Email attachment handling
-<<<<<<< HEAD
 - `Modules\<nome modulo>\States\Appointment\Transitions\ReportPendingToReportCompleted.php` - Usage example
-=======
 - `Modules\SaluteOra\States\Appointment\Transitions\ReportPendingToReportCompleted.php` - Usage example
->>>>>>> d1a0a6c3 (.)
 
 ## Notes
 - The action uses QueueableAction trait, making it suitable for background processing
