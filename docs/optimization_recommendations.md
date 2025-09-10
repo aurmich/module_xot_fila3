@@ -16,8 +16,12 @@ public static string $projectBasePath = '/var/www/html/<nome progetto>';
 public static string $laravelBasePath = '/var/www/html/<nome progetto>/laravel';
 =======
 public static string $projectBasePath = '/var/www/html/saluteora';
+<<<<<<< HEAD
 public static string $laravelBasePath = '/var/www/html/saluteora/laravel';
 >>>>>>> d1a0a6c3 (.)
+=======
+public static string $laravelBasePath = '/var/www/html/_bases/base_techplanner_fila3_mono/laravel';
+>>>>>>> 05bf7bce (.)
 ```
 
 #### 2. XotData Incompleto

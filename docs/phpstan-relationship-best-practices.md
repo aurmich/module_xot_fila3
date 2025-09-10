@@ -225,10 +225,14 @@ Prima di committare modelli con relazioni, verificare:
 - [ ] I tipi di relazione sono corretti nel tipo di ritorno del metodo
 - [ ] PHPStan livello 9+ passa senza errori
 <<<<<<< HEAD
+<<<<<<< HEAD
 - [ ] **MAI** modificare `/var/www/html/_bases/base_techplanner_fila3_mono/laravel/phpstan.neon`
 =======
 - [ ] **MAI** modificare `/var/www/html/_bases/base_saluteora/laravel/phpstan.neon`
 >>>>>>> d1a0a6c3 (.)
+=======
+- [ ] **MAI** modificare `/var/www/html/_bases/base_techplanner_fila3_mono/laravel/phpstan.neon`
+>>>>>>> 05bf7bce (.)
 
 ## Verifica PHPStan
 

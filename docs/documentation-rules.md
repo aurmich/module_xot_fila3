@@ -43,11 +43,15 @@ Questo documento descrive le regole fondamentali per la creazione e la manutenzi
 
 # Collegamenti Non Corretti
 <<<<<<< HEAD
+<<<<<<< HEAD
 [Documento Correlato](/var/www/html/_bases/base_techplanner_fila3_mono/laravel/Modules/Xot/docs/documento.md)
 [Documento in Sottodirectory](https://github.com/<nome progetto>/progetto/blob/main/docs/documento.md)
 [Documento in Modulo Altro](C:\progetti\<nome progetto>\laravel\Modules\Xot\docs\documento.md)
 =======
 [Documento Correlato](/var/www/html/saluteora/laravel/Modules/Xot/project_docs/documento.md)
+=======
+[Documento Correlato](/var/www/html/_bases/base_techplanner_fila3_mono/laravel/Modules/Xot/project_docs/documento.md)
+>>>>>>> 05bf7bce (.)
 [Documento in Sottodirectory](https://github.com/saluteora/progetto/blob/main/project_docs/documento.md)
 [Documento in Modulo Altro](C:\progetti\saluteora\laravel\Modules\Xot\docs\documento.md)
 >>>>>>> d1a0a6c3 (.)
@@ -94,11 +98,15 @@ Questo documento descrive le regole fondamentali per la creazione e la manutenzi
 
 # Collegamenti Non Corretti
 <<<<<<< HEAD
+<<<<<<< HEAD
 [Documento Correlato](/var/www/html/_bases/base_techplanner_fila3_mono/laravel/Modules/Xot/docs/documento.md)
 [Documento in Sottodirectory](https://github.com/<nome progetto>/progetto/blob/main/docs/documento.md)
 [Documento in Modulo Altro](C:\progetti\<nome progetto>\laravel\Modules\Xot\docs\documento.md)
 =======
 [Documento Correlato](/var/www/html/saluteora/laravel/Modules/Xot/project_docs/documento.md)
+=======
+[Documento Correlato](/var/www/html/_bases/base_techplanner_fila3_mono/laravel/Modules/Xot/project_docs/documento.md)
+>>>>>>> 05bf7bce (.)
 [Documento in Sottodirectory](https://github.com/saluteora/progetto/blob/main/project_docs/documento.md)
 [Documento in Modulo Altro](C:\progetti\saluteora\laravel\Modules\Xot\docs\documento.md)
 >>>>>>> d1a0a6c3 (.)
@@ -146,11 +154,15 @@ Questo documento descrive le regole fondamentali per la creazione e la manutenzi
 
 # Collegamenti Non Corretti
 <<<<<<< HEAD
+<<<<<<< HEAD
 [Documento Correlato](/var/www/html/_bases/base_techplanner_fila3_mono/laravel/Modules/Xot/docs/documento.md)
 [Documento in Sottodirectory](https://github.com/<nome progetto>/progetto/blob/main/docs/documento.md)
 [Documento in Modulo Altro](C:\progetti\<nome progetto>\laravel\Modules\Xot\docs\documento.md)
 =======
 [Documento Correlato](/var/www/html/saluteora/laravel/Modules/Xot/project_docs/documento.md)
+=======
+[Documento Correlato](/var/www/html/_bases/base_techplanner_fila3_mono/laravel/Modules/Xot/project_docs/documento.md)
+>>>>>>> 05bf7bce (.)
 [Documento in Sottodirectory](https://github.com/saluteora/progetto/blob/main/project_docs/documento.md)
 [Documento in Modulo Altro](C:\progetti\saluteora\laravel\Modules\Xot\docs\documento.md)
 >>>>>>> d1a0a6c3 (.)

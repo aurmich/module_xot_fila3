@@ -180,10 +180,14 @@ $content = \file_get_contents($path); // Può restituire false
 ### 1. PHPStan Pre-Commit
 ```bash
 <<<<<<< HEAD
+<<<<<<< HEAD
 cd /var/www/html/_bases/base_techplanner_fila3_mono/laravel
 =======
 cd /var/www/html/_bases/base_saluteora/laravel
 >>>>>>> d1a0a6c3 (.)
+=======
+cd /var/www/html/_bases/base_techplanner_fila3_mono/laravel
+>>>>>>> 05bf7bce (.)
 ./vendor/bin/phpstan analyze Modules/ModuleName --level=9
 ```
 

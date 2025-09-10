@@ -239,10 +239,14 @@ Utilizzare grep per trovare tutti i file con namespace errato:
 
 ```bash
 <<<<<<< HEAD
+<<<<<<< HEAD
 grep -r "namespace Modules\\\\.*\\\\App\\\\" /var/www/html/base_<nome progetto>/laravel/Modules
 =======
 grep -r "namespace Modules\\\\.*\\\\App\\\\" /var/www/html/base_saluteora/laravel/Modules
 >>>>>>> d1a0a6c3 (.)
+=======
+grep -r "namespace Modules\\\\.*\\\\App\\\\" /var/www/html/base_techplanner_fila3_mono/laravel/Modules
+>>>>>>> 05bf7bce (.)
 ```
 
 ### PHP Stan

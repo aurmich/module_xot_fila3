@@ -128,9 +128,14 @@ $returnType = $parentMethod->getReturnType();
 ## collegamento ad altre risorse
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 - [regole di ereditarietà in php](/var/www/html/base_techplanner_fila3_mono/laravel/docs/standards/php-inheritance-rules.md)
 - [estensione pattern filament](/var/www/html/base_techplanner_fila3_mono/laravel/Modules/Xot/docs/filament_extension_pattern.md)
 =======
 - [regole di ereditarietà in php](/var/www/html/base_saluteora/laravel/docs/standards/php-inheritance-rules.md)
 - [estensione pattern filament](/var/www/html/base_saluteora/laravel/Modules/Xot/docs/filament_extension_pattern.md)
 >>>>>>> d1a0a6c3 (.)
+=======
+- [regole di ereditarietà in php](/var/www/html/base_techplanner_fila3_mono/laravel/docs/standards/php-inheritance-rules.md)
+- [estensione pattern filament](/var/www/html/base_techplanner_fila3_mono/laravel/Modules/Xot/docs/filament_extension_pattern.md)
+>>>>>>> 05bf7bce (.)

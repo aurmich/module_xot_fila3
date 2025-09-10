@@ -15,9 +15,14 @@ public static string $laravelBasePath = '/var/www/html/_bases/base_techplanner_f
 public static string $modulesBasePath = '/var/www/html/_bases/base_techplanner_fila3_mono/laravel/Modules';
 =======
 public static string $projectBasePath = '/var/www/html/saluteora';
+<<<<<<< HEAD
 public static string $laravelBasePath = '/var/www/html/saluteora/laravel';
 public static string $modulesBasePath = '/var/www/html/saluteora/laravel/Modules';
 >>>>>>> d1a0a6c3 (.)
+=======
+public static string $laravelBasePath = '/var/www/html/_bases/base_techplanner_fila3_mono/laravel';
+public static string $modulesBasePath = '/var/www/html/_bases/base_techplanner_fila3_mono/laravel/Modules';
+>>>>>>> 05bf7bce (.)
 ```
 
 **File contaminati:**
@@ -294,8 +299,8 @@ XOT_TRANSLATION_FALLBACK=xot
 XOT_TABLE_SCHEMAS=<nome progetto>,public,main,information_schema
 =======
 PROJECT_BASE_PATH=/var/www/html/saluteora
-LARAVEL_BASE_PATH=/var/www/html/saluteora/laravel
-MODULES_BASE_PATH=/var/www/html/saluteora/laravel/Modules
+LARAVEL_BASE_PATH=/var/www/html/_bases/base_techplanner_fila3_mono/laravel
+MODULES_BASE_PATH=/var/www/html/_bases/base_techplanner_fila3_mono/laravel/Modules
 
 # Configurazione Modelli Xot
 XOT_USER_MODEL=Modules\SaluteOra\Models\User
