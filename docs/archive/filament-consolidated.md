@@ -36,7 +36,7 @@ class UserWidget extends Widget
 
 declare(strict_types=1);
 
-namespace Modules\SaluteOra\Filament\Resources;
+namespace Modules\<nome modulo>\Filament\Resources;
 
 use Modules\Xot\Filament\Resources\XotBaseResource;
 use Filament\Forms\Components\TextInput;
@@ -76,14 +76,14 @@ class PatientResource extends XotBaseResource
 
 declare(strict_types=1);
 
-namespace Modules\SaluteOra\Filament\Pages;
+namespace Modules\<nome modulo>\Filament\Pages;
 
 use Modules\Xot\Filament\Pages\XotBasePage;
 
 class DashboardPage extends XotBasePage
 {
     protected static ?string $navigationIcon = 'heroicon-o-home';
-    protected static string $view = 'saluteora::filament.pages.dashboard';
+    protected static string $view = '<nome progetto>::filament.pages.dashboard';
 
     /**
      * @return array<class-string>
@@ -91,7 +91,7 @@ class DashboardPage extends XotBasePage
     protected function getHeaderWidgets(): array
     {
         return [
-            \Modules\SaluteOra\Filament\Widgets\StatsWidget::class,
+            \Modules\<nome modulo>\Filament\Widgets\StatsWidget::class,
         ];
     }
 }
@@ -103,7 +103,7 @@ class DashboardPage extends XotBasePage
 
 declare(strict_types=1);
 
-namespace Modules\SaluteOra\Filament\Widgets;
+namespace Modules\<nome modulo>\Filament\Widgets;
 
 use Modules\Xot\Filament\Widgets\XotBaseWidget;
 
@@ -129,9 +129,9 @@ class StatsWidget extends XotBaseWidget
 ### Text Input
 ```php
 TextInput::make('name')
-    ->label(__('saluteora::fields.name.label'))
-    ->placeholder(__('saluteora::fields.name.placeholder'))
-    ->helperText(__('saluteora::fields.name.help'))
+    ->label(__('<nome progetto>::fields.name.label'))
+    ->placeholder(__('<nome progetto>::fields.name.placeholder'))
+    ->helperText(__('<nome progetto>::fields.name.help'))
     ->required()
     ->maxLength(255);
 ```
@@ -139,10 +139,10 @@ TextInput::make('name')
 ### Select
 ```php
 Select::make('status')
-    ->label(__('saluteora::fields.status.label'))
+    ->label(__('<nome progetto>::fields.status.label'))
     ->options([
-        'active' => __('saluteora::fields.status.options.active'),
-        'inactive' => __('saluteora::fields.status.options.inactive'),
+        'active' => __('<nome progetto>::fields.status.options.active'),
+        'inactive' => __('<nome progetto>::fields.status.options.inactive'),
     ])
     ->required();
 ```
@@ -150,8 +150,8 @@ Select::make('status')
 ### Date Picker
 ```php
 DatePicker::make('appointment_date')
-    ->label(__('saluteora::fields.appointment_date.label'))
-    ->placeholder(__('saluteora::fields.appointment_date.placeholder'))
+    ->label(__('<nome progetto>::fields.appointment_date.label'))
+    ->placeholder(__('<nome progetto>::fields.appointment_date.placeholder'))
     ->required()
     ->minDate(now());
 ```
@@ -161,7 +161,7 @@ DatePicker::make('appointment_date')
 ### Text Column
 ```php
 Tables\Columns\TextColumn::make('name')
-    ->label(__('saluteora::fields.name.label'))
+    ->label(__('<nome progetto>::fields.name.label'))
     ->searchable()
     ->sortable();
 ```
@@ -169,7 +169,7 @@ Tables\Columns\TextColumn::make('name')
 ### Badge Column
 ```php
 Tables\Columns\BadgeColumn::make('status')
-    ->label(__('saluteora::fields.status.label'))
+    ->label(__('<nome progetto>::fields.status.label'))
     ->colors([
         'success' => 'active',
         'danger' => 'inactive',
@@ -179,12 +179,12 @@ Tables\Columns\BadgeColumn::make('status')
 ### Action Column
 ```php
 Tables\Columns\TextColumn::make('actions')
-    ->label(__('saluteora::actions.label'))
+    ->label(__('<nome progetto>::actions.label'))
     ->actions([
         Tables\Actions\EditAction::make()
-            ->label(__('saluteora::actions.edit.label')),
+            ->label(__('<nome progetto>::actions.edit.label')),
         Tables\Actions\DeleteAction::make()
-            ->label(__('saluteora::actions.delete.label')),
+            ->label(__('<nome progetto>::actions.delete.label')),
     ]);
 ```
 
@@ -193,7 +193,7 @@ Tables\Columns\TextColumn::make('actions')
 ### Create Action
 ```php
 Tables\Actions\CreateAction::make()
-    ->label(__('saluteora::actions.create.label'))
+    ->label(__('<nome progetto>::actions.create.label'))
     ->icon('heroicon-o-plus')
     ->color('primary');
 ```
@@ -201,7 +201,7 @@ Tables\Actions\CreateAction::make()
 ### Edit Action
 ```php
 Tables\Actions\EditAction::make()
-    ->label(__('saluteora::actions.edit.label'))
+    ->label(__('<nome progetto>::actions.edit.label'))
     ->icon('heroicon-o-pencil')
     ->color('warning');
 ```
@@ -209,12 +209,12 @@ Tables\Actions\EditAction::make()
 ### Delete Action
 ```php
 Tables\Actions\DeleteAction::make()
-    ->label(__('saluteora::actions.delete.label'))
+    ->label(__('<nome progetto>::actions.delete.label'))
     ->icon('heroicon-o-trash')
     ->color('danger')
     ->requiresConfirmation()
-    ->modalHeading(__('saluteora::actions.delete.modal_heading'))
-    ->modalDescription(__('saluteora::actions.delete.modal_description'));
+    ->modalHeading(__('<nome progetto>::actions.delete.modal_heading'))
+    ->modalDescription(__('<nome progetto>::actions.delete.modal_description'));
 ```
 
 ## 🎯 Best Practices
@@ -231,10 +231,10 @@ TextInput::make('name')->label('Nome')
 ### 2. Namespace
 ```php
 // ✅ CORRETTO - Namespace senza 'App'
-namespace Modules\SaluteOra\Filament\Resources;
+namespace Modules\<nome modulo>\Filament\Resources;
 
 // ❌ ERRATO - Namespace con 'App'
-namespace Modules\SaluteOra\App\Filament\Resources;
+namespace Modules\<nome modulo>\App\Filament\Resources;
 ```
 
 ### 3. Ereditarietà
@@ -249,13 +249,13 @@ class PatientResource extends Resource
 ### 4. Service Providers
 ```php
 // ✅ CORRETTO - Estendere XotBaseServiceProvider
-class SaluteOraServiceProvider extends XotBaseServiceProvider
+class ServiceProvider extends XotBaseServiceProvider
 {
-    protected string $module_name = 'SaluteOra';
+    protected string $module_name = '';
 }
 
 // ❌ ERRATO - Estendere direttamente
-class SaluteOraServiceProvider extends ServiceProvider
+class ServiceProvider extends ServiceProvider
 ```
 
 ## 🚨 Errori Comuni
@@ -283,10 +283,10 @@ TextInput::make('name')  // Traduzione automatica
 ### 3. Namespace Errato
 ```php
 // ❌ ERRATO
-namespace Modules\SaluteOra\App\Filament\Resources;
+namespace Modules\<nome modulo>\App\Filament\Resources;
 
 // ✅ CORRETTO
-namespace Modules\SaluteOra\Filament\Resources;
+namespace Modules\<nome modulo>\Filament\Resources;
 ```
 
 ## 📋 Checklist Pre-Commit

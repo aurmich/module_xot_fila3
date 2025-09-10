@@ -79,8 +79,6 @@ abstract class TestCase extends BaseTestCase
         $mockXotData = \Mockery::mock(\Modules\Xot\Datas\XotData::class)->makePartial();
         
         // Mock dei metodi critici con fallback sicuri
-        $mockXotData->shouldReceive('getUserClass')
-            ->andReturn(\Modules\SaluteOra\Models\User::class);
             
         $mockXotData->shouldReceive('getUserResourceClassByType')
             ->with('patient')

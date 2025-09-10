@@ -201,7 +201,6 @@ La **prevenzione** è superiore alla **cura**. Meglio controlli preventivi che d
 
 ### Pattern da Verificare
 ```bash
-
 # Cerca altri composer che potrebbero avere problemi simili
 grep -r "Auth::check()" Modules/*/View/Composers/
 grep -r "auth()->user()" Modules/*/View/Composers/
@@ -217,7 +216,7 @@ grep -r "auth()->user()" Modules/*/View/Composers/
 
 ## 🔗 Collegamenti
 
-- [XotComposer](/var/www/html/base_saluteora/laravel/Modules/Xot/app/View/Composers/XotComposer.php)
+- [XotComposer](/var/www/html/base_techplanner_fila3_mono/laravel/Modules/Xot/app/View/Composers/XotComposer.php)
 - [View Composer Laravel Docs](https://laravel.com/project_docs/views#view-composers)
 - [Container Resolution Laravel](https://laravel.com/project_docs/container)
 
@@ -227,3 +226,4 @@ grep -r "auth()->user()" Modules/*/View/Composers/
 **Priorità**: P0 (Critical) - Bloccava sistema completo  
 **Impatto**: Sistema completamente non funzionale  
 **Tempo di risoluzione**: 15 minuti  
+**Pattern**: View Composer Loop Prevention 

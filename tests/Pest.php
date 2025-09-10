@@ -14,8 +14,7 @@ use Modules\Xot\Tests\TestCase;
 |
 */
 
-pest()->extend(TestCase::class)
-    ->in('Feature', 'Unit');
+uses(TestCase::class)->in('Feature', 'Unit');
 
 /*
 |--------------------------------------------------------------------------
@@ -23,7 +22,7 @@ pest()->extend(TestCase::class)
 |--------------------------------------------------------------------------
 |
 | Qui puoi definire aspettative globali per il modulo Xot.
-| Quando definisci here expectation globali, saranno disponibili
+| Quando definisci here expectation globali, saranno disponibili 
 | in tutti i test del modulo.
 |
 */
@@ -44,4 +43,4 @@ pest()->extend(TestCase::class)
 
 // function something() {
 //     // ...
-// }
+// } 

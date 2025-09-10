@@ -1,8 +1,32 @@
-.idea
+
+# Dependencies and packages
+vendor/
+
+# Build and compiled files
 .phpunit.cache
 .phpunit.result.cache
-build
+build/
 composer.lock
+
+# Git specific
+.git-blame-ignore-revs
+.git-blame-ignore-revsnode_modules
+
+# Backup files
+*.backup
+*.backup.*
+*.bak
+*.old
+*.old1
+
+# Documentation and cache
+cache/
+docs/cache/
+docs/phpstan/
+
+# Other
+.idea
+build
 coverage
 docs
 phpunit.xml
@@ -10,18 +34,6 @@ phpstan.neon
 testbench.yaml
 vendor
 node_modules
-.git-blame-ignore-revsnode_modules
 vendor
-.git-blame-ignore-revs
-build/
-vendor/
-build/
 node_modules
-docs/cache/
-cache/
-
-# Backup files
-*.bak
--e 
-# PHPStan documentation
-docs/phpstan/
+-e

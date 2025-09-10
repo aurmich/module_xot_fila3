@@ -137,6 +137,25 @@ class MyModel extends BaseModel
    - ❌ MAI correggere un solo errore alla volta se esistono errori simili
    - ❌ MAI rimandare le correzioni a sessioni successive
 
+## Struttura del Progetto e Workflow
+
+### Architettura Modulare
+Il progetto utilizza un'architettura modulare con Laravel Modules:
+- **Xot**: Modulo core con funzionalità fondamentali
+- **TechPlanner**: Modulo principale per la pianificazione tecnica
+- **User**: Gestione utenti e autenticazione
+- **UI**: Componenti frontend e temi
+- **Media**: Gestione file e media
+- **Notify**: Sistema di notifiche
+- **Lang**: Supporto multilingua
+
+### Processo di Sviluppo
+1. **Analisi PHPStan**: Eseguire analisi per livello (1-10)
+2. **Correzione Batch**: Correggere gruppi di errori simili
+3. **Documentazione**: Aggiornare docs del modulo specifico
+4. **Testing**: Verificare che le correzioni non rompano funzionalità
+5. **Commit**: Commit atomici per gruppi di correzioni
+
 2. **Approccio Efficiente**
    - Identificare pattern comuni di errori
    - Correggere tutti gli errori dello stesso tipo in una volta
@@ -166,3 +185,20 @@ class MyModel extends BaseModel
      - .cursor/rules per Cursor AI
      - .windsurfrules per Windsurf
    - Mantenere coerenza tra le diverse documentazioni 
+## Collegamenti tra versioni di PHPSTAN_WORKFLOW.md
+* [PHPSTAN_WORKFLOW.md](../../../Xot/project_docs/phpstan/PHPSTAN_WORKFLOW.md)
+* [PHPSTAN_WORKFLOW.md](../../../Xot/project_docs/PHPSTAN_WORKFLOW.md)
+
+
+## Collegamenti tra versioni di phpstan_workflow.md
+### Versione HEAD
+
+* [phpstan_workflow.md](phpstan/phpstan_workflow.md)
+
+### Versione Incoming
+
+* [phpstan_workflow.md](../phpstan_workflow.md)
+
+---
+
+

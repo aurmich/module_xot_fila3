@@ -39,7 +39,7 @@ function mockXotData(): void
     $mockXotData = \Mockery::mock(\Modules\Xot\Datas\XotData::class)->makePartial();
     
     $mockXotData->shouldReceive('getUserClass')
-        ->andReturn(\Modules\SaluteOra\Models\User::class);
+        ->andReturn(\Modules\<nome modulo>\Models\User::class);
         
     $mockXotData->shouldReceive('make')
         ->andReturn($mockXotData);
@@ -178,7 +178,6 @@ app()->instance(\Modules\Xot\Datas\XotData::class, $mock);
 
 ### Monitoring Commands
 ```bash
-
 # Execution time monitoring
 ./vendor/bin/pest -v {TestFile} | grep -E "(seconds|ms)"
 
@@ -214,3 +213,4 @@ app()->instance(\Modules\Xot\Datas\XotData::class, $mock);
 **Status**: ✅ Best Practices Validate  
 **Enforcement**: Obbligatorio per tutti i test  
 **Version**: 1.0 - Gold Standard
+**Last Update**: Dicembre 2024 
