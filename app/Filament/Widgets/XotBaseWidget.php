@@ -227,6 +227,7 @@ abstract class XotBaseWidget extends FilamentWidget implements HasForms, HasActi
 
     public function getWizardSubmitAction(): Action
     {
+        /** @var view-string $submit_view */
         $submit_view = 'pub_theme::filament.wizard.submit-button';
 <<<<<<< HEAD
         /** @phpstan-ignore-next-line */

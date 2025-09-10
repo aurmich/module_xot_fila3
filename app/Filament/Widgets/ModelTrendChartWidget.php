@@ -8,9 +8,13 @@ use Modules\Xot\Filament\Widgets\XotBaseChartWidget;
 use Flowframe\Trend\Trend;
 use Flowframe\Trend\TrendValue;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 use Modules\SaluteOra\Models\Appointment;
 >>>>>>> d1a0a6c3 (.)
+=======
+use Modules\TechPlanner\Models\Appointment;
+>>>>>>> 8b1efa89 (.)
 
 class ModelTrendChartWidget extends XotBaseChartWidget
 {
