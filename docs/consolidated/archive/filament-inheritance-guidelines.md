@@ -95,9 +95,9 @@ public function getNavigationLabel(): string // Non static!
 ## Collegamenti
 
 - [Documentazione di Filament](https://filamentphp.com/project_docs/3.x/panels/pages)
-- [Principi di Ereditarietà](/var/www/html/base_techplanner_fila3_mono/laravel/Modules/Xot/project_docs/class_inheritance_principles.md)
-- [XotBasePage](/var/www/html/base_techplanner_fila3_mono/laravel/Modules/Xot/project_docs/filament/pages/xotbasepage.md)
+- [Principi di Ereditarietà](../Xot/project_docs/class_inheritance_principles.md)
+- [XotBasePage](../Xot/project_docs/filament/pages/xotbasepage.md)
 - [Principi di Ereditarietà](/var/www/html/base_saluteora/laravel/Modules/Xot/project_docs/class_inheritance_principles.md)
 - [XotBasePage](/var/www/html/base_saluteora/laravel/Modules/Xot/project_docs/filament/pages/xotbasepage.md)
-- [Principi di Ereditarietà](/var/www/html/base_techplanner_fila3_mono/laravel/Modules/Xot/project_docs/class_inheritance_principles.md)
-- [XotBasePage](/var/www/html/base_techplanner_fila3_mono/laravel/Modules/Xot/project_docs/filament/pages/xotbasepage.md)
+- [Principi di Ereditarietà](../Xot/project_docs/class_inheritance_principles.md)
+- [XotBasePage](../Xot/project_docs/filament/pages/xotbasepage.md)
