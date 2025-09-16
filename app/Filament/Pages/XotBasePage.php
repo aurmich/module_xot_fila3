@@ -68,7 +68,7 @@ abstract class XotBasePage extends FilamentPage implements HasForms
      * Cache timeout per operazioni di cache (in secondi).
      */
     protected static int $cacheTimeout = 3600;
-
+    
     /**
      * Ottiene il nome del modulo dalla classe.
      * Estrae il nome del modulo dal namespace della classe.

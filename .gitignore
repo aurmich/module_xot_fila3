@@ -11,6 +11,7 @@
 package-lock.json
 yarn-error.log
 npm-debug.log
+composer.lock
 .phpunit.result.cache
 .php-cs-fixer.cache
 
@@ -32,6 +33,11 @@ public_html/storage
 public_html/hot
 storage/*.key
 .env
+
+# Database directories
+database/Factories_
+database/Factories_old
+database/Migrations_old
 
 # Local configurations
 Homestead.yaml
@@ -66,3 +72,7 @@ Homestead.json
 docs/phpstan/
 docs/cache/
 cache/
+
+# Development tools
+.windsurf/
+.cursor/

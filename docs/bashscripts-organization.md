@@ -40,6 +40,12 @@ bashscripts/
 - Documentazione risoluzione conflitti
 - Automazione push/pull operations
 
+#### 4.1. **git/gitignore/** - Gestione GitIgnore
+- `update_gitignore.sh` - Aggiornamento batch .gitignore moduli
+- `fix_remaining_gitignore.sh` - Correzione moduli non conformi
+- `README.md` - Documentazione script gitignore
+- Script per standardizzazione .gitignore secondo prototipo Laraxot
+
 #### 5. **maintenance/** - Manutenzione Sistema
 - `backup.sh` - Script di backup
 - `restore_disk.md` - Documentazione ripristino
