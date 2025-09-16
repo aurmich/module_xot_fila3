@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Modules\Xot\Providers;
 
+<<<<<<< HEAD
 use Illuminate\Support\Str;
 use Webmozart\Assert\Assert;
 use Illuminate\Support\Facades\File;
@@ -15,6 +16,18 @@ use BladeUI\Icons\Factory as BladeIconsFactory;
 use Modules\Xot\Actions\Blade\RegisterBladeComponentsAction;
 use Modules\Xot\Actions\Module\GetModulePathByGeneratorAction;
 use Modules\Xot\Actions\Livewire\RegisterLivewireComponentsAction;
+=======
+use BladeUI\Icons\Factory as BladeIconsFactory;
+use Illuminate\Support\Facades\Blade;
+use Illuminate\Support\Facades\Config;
+use Illuminate\Support\ServiceProvider;
+use Illuminate\Support\Str;
+use Modules\Xot\Actions\Blade\RegisterBladeComponentsAction;
+use Modules\Xot\Actions\Livewire\RegisterLivewireComponentsAction;
+use Modules\Xot\Actions\Module\GetModulePathByGeneratorAction;
+use Nwidart\Modules\Traits\PathNamespace;
+use Webmozart\Assert\Assert;
+>>>>>>> 72cc7f6 (.)
 
 /**
  * Class XotBaseServiceProvider.
@@ -163,6 +176,7 @@ abstract class XotBaseServiceProvider extends ServiceProvider
         try {
             $configPath = app(GetModulePathByGeneratorAction::class)->execute($this->name, 'config');
 
+<<<<<<< HEAD
             $files = File::glob($configPath.'/*.php');
 
             foreach ($files as $file) {
@@ -172,6 +186,9 @@ abstract class XotBaseServiceProvider extends ServiceProvider
                 Config::set($key, $content);
             }
 
+=======
+            $this->mergeConfigFrom($configPath, $this->nameLower);
+>>>>>>> 72cc7f6 (.)
         } catch (\Exception $e) {
             // Ignore missing configuration
             return;
