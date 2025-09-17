@@ -12,9 +12,12 @@ package-lock.json
 yarn-error.log
 npm-debug.log
 <<<<<<< HEAD
+<<<<<<< HEAD
 composer.lock
 =======
 >>>>>>> 72cc7f6 (.)
+=======
+>>>>>>> b7f2af3 (.)
 .phpunit.result.cache
 .php-cs-fixer.cache
 
@@ -38,6 +41,7 @@ storage/*.key
 .env
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 # Database directories
 database/Factories_
 database/Factories_old
@@ -45,6 +49,8 @@ database/Migrations_old
 
 =======
 >>>>>>> 72cc7f6 (.)
+=======
+>>>>>>> b7f2af3 (.)
 # Local configurations
 Homestead.yaml
 Homestead.json
@@ -70,7 +76,10 @@ Homestead.json
 *.old
 *.old1
 *.backup
+<<<<<<< HEAD
 *.backup.*
+=======
+>>>>>>> b7f2af3 (.)
 *.bak
 *.new
 
@@ -78,6 +87,7 @@ Homestead.json
 docs/phpstan/
 docs/cache/
 cache/
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 # Development tools
@@ -98,3 +108,5 @@ database/Seeders_old
 database/Factories_old
 database_old
 >>>>>>> 72cc7f6 (.)
+=======
+>>>>>>> b7f2af3 (.)

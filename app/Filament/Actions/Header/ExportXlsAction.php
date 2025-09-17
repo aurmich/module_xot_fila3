@@ -23,9 +23,12 @@ class ExportXlsAction extends Action
         parent::setUp();
         $this->translateLabel()
 <<<<<<< HEAD
+<<<<<<< HEAD
             ->label('')
 =======
 >>>>>>> 72cc7f6 (.)
+=======
+>>>>>>> b7f2af3 (.)
             ->tooltip(__('xot::actions.export_xls'))
             ->icon('heroicon-o-arrow-down-tray')
             ->action(static function (ListRecords $livewire) {
@@ -42,9 +45,13 @@ class ExportXlsAction extends Action
                 if (method_exists($resource, 'getXlsFields')) {
                     $rawFields = $resource::getXlsFields($livewire->tableFilters);
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
                   
 >>>>>>> 72cc7f6 (.)
+=======
+                  
+>>>>>>> b7f2af3 (.)
                     if (is_array($rawFields)) {
                         $fields = array_map(static function ($field): string {
                             if (is_object($field) && method_exists($field, '__toString')) {

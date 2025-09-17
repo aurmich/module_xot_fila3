@@ -16,6 +16,10 @@ class ApplyMetatagToPanelAction
     {
         try {
             $metatag = MetatagData::make();
+<<<<<<< HEAD
+=======
+            
+>>>>>>> b7f2af3 (.)
             return $panel
                 // @phpstan-ignore argument.type
                 ->colors($metatag->getColors())
