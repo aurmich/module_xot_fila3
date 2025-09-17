@@ -58,7 +58,11 @@ class RouteDynService
     /**
      * @param  array<string, mixed>  $v
      */
+<<<<<<< HEAD
     public static function getAs(array $v, ?string $namespace): string
+=======
+    public static function getAs(array $v, ?string $_namespace): string
+>>>>>>> 887d760 (.)
     {
         if (isset($v['as'])) {
             Assert::string($as = $v['as']);
@@ -98,7 +102,11 @@ class RouteDynService
     /**
      * @param  array<string, mixed>  $v
      */
+<<<<<<< HEAD
     public static function getAct(array $v, ?string $namespace): string
+=======
+    public static function getAct(array $v, ?string $_namespace): string
+>>>>>>> 887d760 (.)
     {
         if (isset($v['act'])) {
             Assert::string($act = $v['act']);
@@ -123,7 +131,11 @@ class RouteDynService
     /**
      * @param  array<string, mixed>  $v
      */
+<<<<<<< HEAD
     public static function getParamName(array $v, ?string $namespace): string
+=======
+    public static function getParamName(array $v, ?string $_namespace): string
+>>>>>>> 887d760 (.)
     {
         if (isset($v['param_name'])) {
             Assert::string($param_name = $v['param_name']);
@@ -180,7 +192,11 @@ class RouteDynService
     /**
      * @param  array<string, mixed>  $v
      */
+<<<<<<< HEAD
     public static function getController(array $v, ?string $namespace): string
+=======
+    public static function getController(array $v, ?string $_namespace): string
+>>>>>>> 887d760 (.)
     {
         if (isset($v['controller'])) {
             Assert::string($controller = $v['controller']);
@@ -199,7 +215,11 @@ class RouteDynService
     /**
      * @param  array<string, mixed>  $v
      */
+<<<<<<< HEAD
     public static function getUri(array $v, ?string $namespace): string
+=======
+    public static function getUri(array $v, ?string $_namespace): string
+>>>>>>> 887d760 (.)
     {
         Assert::string($name = $v['name']);
 
@@ -211,7 +231,11 @@ class RouteDynService
      * @param  array<string, mixed>  $v
      * @return array<int, string>
      */
+<<<<<<< HEAD
     public static function getMethod(array $v, ?string $namespace): array
+=======
+    public static function getMethod(array $v, ?string $_namespace): array
+>>>>>>> 887d760 (.)
     {
         if (isset($v['method'])) {
             return Arr::wrap($v['method']);

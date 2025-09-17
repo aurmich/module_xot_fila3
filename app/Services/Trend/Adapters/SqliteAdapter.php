@@ -6,6 +6,10 @@ namespace Modules\Xot\Services\Trend\Adapters;
 
 class SqliteAdapter extends AbstractAdapter
 {
+<<<<<<< HEAD
+=======
+    #[\Override]
+>>>>>>> 887d760 (.)
     public function format(string $column, string $interval): string
     {
         $format = match ($interval) {

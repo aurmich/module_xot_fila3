@@ -12,6 +12,10 @@ class ModulePolicy extends XotBasePolicy
     /**
      * Determine whether the user can view any models.
      */
+<<<<<<< HEAD
+=======
+    #[\Override]
+>>>>>>> 887d760 (.)
     public function viewAny(UserContract $user): bool
     {
         return $user->hasPermissionTo('module.viewAny');

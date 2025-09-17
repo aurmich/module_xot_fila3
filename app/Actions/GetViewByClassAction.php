@@ -27,7 +27,11 @@ class GetViewByClassAction
      */
     public function execute(string $class, array $params = [], ?string $viewName = null): View
     {
+<<<<<<< HEAD
         $viewName = $viewName ?? $this->getViewNameFromClass($class);
+=======
+        $viewName ??= $this->getViewNameFromClass($class);
+>>>>>>> 887d760 (.)
         
         /** @var view-string $viewName */
         return view($viewName, $params);

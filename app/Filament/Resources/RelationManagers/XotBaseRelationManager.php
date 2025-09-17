@@ -48,6 +48,10 @@ abstract class XotBaseRelationManager extends FilamentRelationManager
         return $this->getResource()::getFormSchema();
     }
 //*
+<<<<<<< HEAD
+=======
+    #[\Override]
+>>>>>>> 887d760 (.)
     public function getTableColumns(): array
     {
         $index=Arr::get($this->getResource()::getPages(),'index');

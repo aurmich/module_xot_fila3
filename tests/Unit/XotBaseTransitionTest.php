@@ -16,6 +16,10 @@ describe('XotBaseTransition', function () {
         {
             public static string $name = 'test_transition';
 
+<<<<<<< HEAD
+=======
+            #[\Override]
+>>>>>>> 887d760 (.)
             public function getNotificationRecipients(): array
             {
                 return [
@@ -24,6 +28,10 @@ describe('XotBaseTransition', function () {
                 ];
             }
 
+<<<<<<< HEAD
+=======
+            #[\Override]
+>>>>>>> 887d760 (.)
             public function sendRecipientNotification(?UserContract $recipient): void
             {
                 // Mock implementation
@@ -96,7 +104,11 @@ describe('XotBaseTransition', function () {
 
     it('can send notifications without errors', function () {
         // This should not throw an exception
+<<<<<<< HEAD
         expect(fn () => $this->transition->sendNotifications())->not->toThrow(Exception::class);
+=======
+        expect($this->transition->sendNotifications(...))->not->toThrow(Exception::class);
+>>>>>>> 887d760 (.)
     });
 
     it('has getNotificationRecipients method', function () {
@@ -134,6 +146,10 @@ describe('XotBaseTransition', function () {
         {
             public static string $name = 'test_mixed_transition';
 
+<<<<<<< HEAD
+=======
+            #[\Override]
+>>>>>>> 887d760 (.)
             public function getNotificationRecipients(): array
             {
                 return [
@@ -172,6 +188,10 @@ describe('XotBaseTransition', function () {
                 ];
             }
 
+<<<<<<< HEAD
+=======
+            #[\Override]
+>>>>>>> 887d760 (.)
             public function sendRecipientNotification(?UserContract $recipient): void
             {
                 // Mock implementation
@@ -179,7 +199,11 @@ describe('XotBaseTransition', function () {
         };
 
         // This should process without errors
+<<<<<<< HEAD
         expect(fn () => $transition->sendNotifications())->not->toThrow(Exception::class);
+=======
+        expect($transition->sendNotifications(...))->not->toThrow(Exception::class);
+>>>>>>> 887d760 (.)
     });
 
     it('validates abstract class structure', function () {

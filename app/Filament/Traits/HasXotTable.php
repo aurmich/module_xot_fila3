@@ -222,7 +222,10 @@ trait HasXotTable
             ->filtersLayout(FiltersLayout::AboveContent)
             ->filtersFormColumns($this->getTableFiltersFormColumns())
             ->persistFiltersInSession()
+<<<<<<< HEAD
             ->persistSortInSession()
+=======
+>>>>>>> 887d760 (.)
             ->headerActions($this->getTableHeaderActions())
             ->actions($this->getTableActions())
             ->bulkActions($this->getTableBulkActions())
@@ -293,21 +296,33 @@ trait HasXotTable
             $actions['view'] = Tables\Actions\ViewAction::make()
                 ->iconButton()
                 ->tooltip(__('user::actions.view'))
+<<<<<<< HEAD
                 ->visible(fn (Model $record): bool => $resource::canView($record));
+=======
+                ->visible($resource::canView(...));
+>>>>>>> 887d760 (.)
         }
 
         if (method_exists($resource, 'canEdit')) {
             $actions['edit'] = Tables\Actions\EditAction::make()
                 ->iconButton()
                 ->tooltip(__('user::actions.edit'))
+<<<<<<< HEAD
                 ->visible(fn (Model $record): bool => $resource::canEdit($record));
+=======
+                ->visible($resource::canEdit(...));
+>>>>>>> 887d760 (.)
         }
         
         if (method_exists($resource, 'canDelete')) {
             $actions['delete'] = Tables\Actions\DeleteAction::make()
                 ->iconButton()
                 ->tooltip(__('user::actions.delete'))
+<<<<<<< HEAD
                 ->visible(fn (Model $record): bool => $resource::canDelete($record));
+=======
+                ->visible($resource::canDelete(...));
+>>>>>>> 887d760 (.)
         }
         
         if ($this->shouldShowReplicateAction()) {

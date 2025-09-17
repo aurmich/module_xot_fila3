@@ -3,6 +3,7 @@
 declare(strict_types=1);
 
 return [
+<<<<<<< HEAD
     // ==============================================
     // NAVIGATION & STRUCTURE
     // ==============================================
@@ -71,10 +72,31 @@ return [
             'tooltip' => 'Seleziona tutti gli elementi',
             'helper_text' => 'Seleziona tutti gli elementi disponibili nella lista',
             // Legacy support
+=======
+    'resources' => 'Risorse',
+    'pages' => 'Pagine',
+    'widgets' => 'Widgets',
+    'navigation' => [
+        'name' => 'dashboard',
+        'plural' => 'dashboard',
+        'group' => [
+            'name' => '',
+        ],
+    ],
+    'fields' => [
+        'name' => 'Nome',
+        'guard_name' => 'Guard',
+        'permissions' => 'Permessi',
+        'updated_at' => 'Aggiornato il',
+        'first_name' => 'Nome',
+        'last_name' => 'Cognome',
+        'select_all' => [
+>>>>>>> 887d760 (.)
             'name' => 'Seleziona Tutti',
             'message' => '',
         ],
     ],
+<<<<<<< HEAD
 
     // ==============================================
     // ACTIONS - STRUTTURA ESPANSA OBBLIGATORIA
@@ -95,11 +117,16 @@ return [
                 'success' => 'Dati importati con successo',
                 'error' => 'Errore durante l\'importazione',
             ],
+=======
+    'actions' => [
+        'import' => [
+>>>>>>> 887d760 (.)
             'fields' => [
                 'import_file' => 'Seleziona un file XLS o CSV da caricare',
             ],
         ],
         'export' => [
+<<<<<<< HEAD
             'label' => 'Esporta Dati',
             'icon' => 'heroicon-o-arrow-down-tray',
             'color' => 'primary',
@@ -114,6 +141,8 @@ return [
                 'success' => 'Dati esportati con successo',
                 'error' => 'Errore durante l\'esportazione',
             ],
+=======
+>>>>>>> 887d760 (.)
             'filename_prefix' => 'Aree al',
             'columns' => [
                 'name' => 'Nome area',
@@ -121,6 +150,7 @@ return [
             ],
         ],
     ],
+<<<<<<< HEAD
 
     // ==============================================
     // SECTIONS - ORGANIZZAZIONE FORM
@@ -170,4 +200,6 @@ return [
     'resources' => 'Risorse',
     'pages' => 'Pagine',
     'widgets' => 'Widgets',
+=======
+>>>>>>> 887d760 (.)
 ];

@@ -27,6 +27,10 @@ class ModuleResource extends XotBaseResource
     /**
      * @return array<string, Forms\Components\Component>
      */
+<<<<<<< HEAD
+=======
+    #[\Override]
+>>>>>>> 887d760 (.)
     public static function getFormSchema(): array
     {
         return [
@@ -38,12 +42,20 @@ class ModuleResource extends XotBaseResource
         ];
     }
 
+<<<<<<< HEAD
+=======
+    #[\Override]
+>>>>>>> 887d760 (.)
     public static function getRelations(): array
     {
         return [
         ];
     }
 
+<<<<<<< HEAD
+=======
+    #[\Override]
+>>>>>>> 887d760 (.)
     public static function getPages(): array
     {
         return [

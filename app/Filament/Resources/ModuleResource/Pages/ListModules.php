@@ -24,6 +24,10 @@ class ListModules extends XotBaseListRecords
 
     protected static string $resource = ModuleResource::class;
 
+<<<<<<< HEAD
+=======
+    #[\Override]
+>>>>>>> 887d760 (.)
     public function getGridTableColumns(): array
     {
         return [
@@ -34,6 +38,10 @@ class ListModules extends XotBaseListRecords
     /**
      * @return array<string, Tables\Columns\Column>
      */
+<<<<<<< HEAD
+=======
+    #[\Override]
+>>>>>>> 887d760 (.)
     public function getTableColumns(): array
     {
         return [
@@ -53,6 +61,10 @@ class ListModules extends XotBaseListRecords
      *
      * @return array<Tables\Filters\BaseFilter>
      */
+<<<<<<< HEAD
+=======
+    #[\Override]
+>>>>>>> 887d760 (.)
     public function getTableFilters(): array
     {
         return [
@@ -71,6 +83,10 @@ class ListModules extends XotBaseListRecords
      *
      * @return array<Tables\Actions\Action|Tables\Actions\ActionGroup>
      */
+<<<<<<< HEAD
+=======
+    #[\Override]
+>>>>>>> 887d760 (.)
     public function getTableActions(): array
     {
         return [
@@ -87,6 +103,10 @@ class ListModules extends XotBaseListRecords
     /**
      * @return array<string, Tables\Actions\BulkAction>
      */
+<<<<<<< HEAD
+=======
+    #[\Override]
+>>>>>>> 887d760 (.)
     public function getTableBulkActions(): array
     {
         return [

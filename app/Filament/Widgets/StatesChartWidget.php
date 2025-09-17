@@ -16,11 +16,19 @@ class StatesChartWidget extends XotBaseChartWidget
     public string $stateClass;
     public string $model;
 
+<<<<<<< HEAD
+=======
+    #[\Override]
+>>>>>>> 887d760 (.)
     public function getHeading(): ?string
     {
         return static::transClass($this->model, 'widgets.states_chart.heading');
     }
 
+<<<<<<< HEAD
+=======
+    #[\Override]
+>>>>>>> 887d760 (.)
     protected function getData(): array
     {
         $label = static::transClass($this->model, 'widgets.states_chart.label');
@@ -65,6 +73,10 @@ class StatesChartWidget extends XotBaseChartWidget
         }
     }
 
+<<<<<<< HEAD
+=======
+    #[\Override]
+>>>>>>> 887d760 (.)
     protected function getType(): string
     {
         return 'bar';

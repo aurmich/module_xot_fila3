@@ -1,5 +1,9 @@
 @php
+<<<<<<< HEAD
 '<?xml version="1.0" encoding="UTF-8"?>'.PHP_EOL
+=======
+'<?phpxml version="1.0" encoding="UTF-8"?>'.PHP_EOL
+>>>>>>> 887d760 (.)
 @endphp
 <rss version="2.0">
     <channel>

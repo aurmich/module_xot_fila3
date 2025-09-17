@@ -53,9 +53,13 @@ class HandlersRepository
      */
     public function getReportersByException(\Throwable $e): array
     {
+<<<<<<< HEAD
         return array_filter($this->reporters, function (mixed $handler) use ($e): bool {
             return is_callable($handler) && $this->handlesException($handler, $e);
         });
+=======
+        return array_filter($this->reporters, fn (mixed $handler) => is_callable($handler) && $this->handlesException($handler, $e));
+>>>>>>> 887d760 (.)
     }
 
     /**
@@ -63,9 +67,13 @@ class HandlersRepository
      */
     public function getRenderersByException(\Throwable $e): array
     {
+<<<<<<< HEAD
         return array_filter($this->renderers, function (mixed $handler) use ($e): bool {
             return is_callable($handler) && $this->handlesException($handler, $e);
         });
+=======
+        return array_filter($this->renderers, fn (mixed $handler) => is_callable($handler) && $this->handlesException($handler, $e));
+>>>>>>> 887d760 (.)
     }
 
     /**
@@ -73,9 +81,13 @@ class HandlersRepository
      */
     public function getConsoleRenderersByException(\Throwable $e): array
     {
+<<<<<<< HEAD
         return array_filter($this->consoleRenderers, function (mixed $handler) use ($e): bool {
             return is_callable($handler) && $this->handlesException($handler, $e);
         });
+=======
+        return array_filter($this->consoleRenderers, fn (mixed $handler) => is_callable($handler) && $this->handlesException($handler, $e));
+>>>>>>> 887d760 (.)
     }
 
     /**

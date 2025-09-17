@@ -14,6 +14,10 @@ class SessionResource extends XotBaseResource
 {
     protected static ?string $model = Session::class;
 
+<<<<<<< HEAD
+=======
+    #[\Override]
+>>>>>>> 887d760 (.)
     public static function getFormSchema(): array
     {
         return [

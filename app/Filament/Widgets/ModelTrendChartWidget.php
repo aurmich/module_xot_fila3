@@ -18,11 +18,19 @@ class ModelTrendChartWidget extends XotBaseChartWidget
 
     public string $model;
 
+<<<<<<< HEAD
+=======
+    #[\Override]
+>>>>>>> 887d760 (.)
     public function getHeading(): ?string
     {
         return static::transClass($this->model, 'widgets.model_trend_chart.heading');
     }
 
+<<<<<<< HEAD
+=======
+    #[\Override]
+>>>>>>> 887d760 (.)
     protected function getData(): array
     {
         try {
@@ -65,6 +73,10 @@ class ModelTrendChartWidget extends XotBaseChartWidget
         }
     }
 
+<<<<<<< HEAD
+=======
+    #[\Override]
+>>>>>>> 887d760 (.)
     protected function getType(): string
     {
         return 'line';

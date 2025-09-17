@@ -16,6 +16,10 @@ class ViewLog extends \Modules\Xot\Filament\Resources\Pages\XotBaseViewRecord
 {
     protected static string $resource = LogResource::class;
 
+<<<<<<< HEAD
+=======
+    #[\Override]
+>>>>>>> 887d760 (.)
     protected function getInfolistSchema(): array
     {
         $log = $this->getRecord()->getModel();

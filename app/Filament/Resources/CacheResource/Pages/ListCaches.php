@@ -30,6 +30,10 @@ class ListCaches extends XotBaseListRecords
         ];
     }
 
+<<<<<<< HEAD
+=======
+    #[\Override]
+>>>>>>> 887d760 (.)
     public function getTableColumns(): array
     {
         return [
@@ -51,6 +55,10 @@ class ListCaches extends XotBaseListRecords
         ];
     }
 
+<<<<<<< HEAD
+=======
+    #[\Override]
+>>>>>>> 887d760 (.)
     public function getGridTableColumns(): array
     {
         return [
@@ -61,6 +69,10 @@ class ListCaches extends XotBaseListRecords
     /**
      * @return array<string, \Filament\Actions\Action>
      */
+<<<<<<< HEAD
+=======
+    #[\Override]
+>>>>>>> 887d760 (.)
     protected function getHeaderActions(): array
     {
         return [

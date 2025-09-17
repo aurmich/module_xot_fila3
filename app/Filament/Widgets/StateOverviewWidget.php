@@ -49,6 +49,10 @@ class StateOverviewWidget extends XotBaseWidget
      *
      * @return array<int|string, \Filament\Forms\Components\Component>
      */
+<<<<<<< HEAD
+=======
+    #[\Override]
+>>>>>>> 887d760 (.)
     public function getFormSchema(): array
     {
         return [];
@@ -98,7 +102,11 @@ class StateOverviewWidget extends XotBaseWidget
         $res= Cache::remember(
             $this->getCacheKey(),
             now()->addMinutes(5),
+<<<<<<< HEAD
             fn () => $this->calculateStates()
+=======
+            $this->calculateStates(...)
+>>>>>>> 887d760 (.)
         );
 
         Assert::isArray($res);

@@ -12,7 +12,10 @@ namespace Modules\Xot\Filament\Actions\Form;
 // use Filament\Tables\Actions\Action;
 use Filament\Forms\Set;
 use Illuminate\Support\Str;
+<<<<<<< HEAD
 use Illuminate\Database\Eloquent\Model;
+=======
+>>>>>>> 887d760 (.)
 use Webmozart\Assert\Assert;
 use Filament\Resources\Pages\ListRecords;
 use Modules\Xot\Actions\GetTransKeyAction;
@@ -28,6 +31,7 @@ class FieldRefreshAction extends Action
         $this->translateLabel();
         $this->icon('heroicon-o-arrow-path')
             ->tooltip('Ricalcola valore')
+<<<<<<< HEAD
             ->action($this->getRefreshAction());
     }
 
@@ -58,6 +62,24 @@ class FieldRefreshAction extends Action
                 ->success()
                 ->send();
         };
+=======
+            ->action(function ($state,Set $set,$record) {
+                $name = $this->getName();
+                if ($name === null) {
+                    return;
+                }
+
+                $method = 'get'.Str::studly($name).'';
+                $value = $record->$method();
+                $set($name, $value);
+                Notification::make()
+                    ->title('Ricalcolato '.$name)
+                    ->body('vecchio valore: '.$state.' nuovo valore: '.$value)
+                    ->success()
+                    ->send();
+            });
+            
+>>>>>>> 887d760 (.)
     }
 
     public static function getDefaultName(): ?string

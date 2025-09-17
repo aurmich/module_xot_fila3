@@ -113,7 +113,11 @@ trait TransTrait
     /**
      * Get translation for a given function name.
      */
+<<<<<<< HEAD
     public static function transFunc(string $func, bool $exceptionIfNotExist = false): string
+=======
+    public static function transFunc(string $func, bool $_exceptionIfNotExist = false): string
+>>>>>>> 887d760 (.)
     {
         $key = static::getKeyTransFunc($func);
         /** @var string|array<int|string,mixed>|null */

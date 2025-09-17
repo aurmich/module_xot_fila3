@@ -167,7 +167,11 @@ describe('ModuleService Integration', function () {
         ];
 
         foreach ($edgeCaseServices as $service) {
+<<<<<<< HEAD
             expect(fn () => $service->getModels())->not->toThrow(Exception::class);
+=======
+            expect($service->getModels(...))->not->toThrow(Exception::class);
+>>>>>>> 887d760 (.)
         }
     });
 

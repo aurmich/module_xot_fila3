@@ -89,6 +89,10 @@ interface UserContract extends Authenticatable, Authorizable, CanResetPassword, 
      *
      * @return mixed|int|string
      */
+<<<<<<< HEAD
+=======
+    #[\Override]
+>>>>>>> 887d760 (.)
     public function getKey();
 
     /**

@@ -23,6 +23,10 @@ class HasTableWithoutOptionalMethodsTestClass implements HasTable
         return $mock;
     }
 
+<<<<<<< HEAD
+=======
+    #[\Override]
+>>>>>>> 887d760 (.)
     public function getTableColumns(): array
     {
         return [];

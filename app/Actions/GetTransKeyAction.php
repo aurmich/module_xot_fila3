@@ -35,9 +35,13 @@ class GetTransKeyAction
             $backtrace = array_slice(debug_backtrace(), 2);
             $res = Arr::first(
                 $backtrace,
+<<<<<<< HEAD
                 function (array $item): bool {
                     return isset($item['object']) && 'Modules' === explode('\\', get_class($item['object']))[0];
                 }
+=======
+                fn (array $item): bool => isset($item['object']) && 'Modules' === explode('\\', get_class($item['object']))[0]
+>>>>>>> 887d760 (.)
             );
 
             if (null === $res || ! isset($res['object'])) {

@@ -49,6 +49,10 @@ class XotServiceProvider extends XotBaseServiceProvider
 
     protected string $module_ns = __NAMESPACE__;
 
+<<<<<<< HEAD
+=======
+    #[\Override]
+>>>>>>> 887d760 (.)
     public function boot(): void
     {
         parent::boot();
@@ -61,6 +65,10 @@ class XotServiceProvider extends XotBaseServiceProvider
         $this->registerProviders();
     }
 
+<<<<<<< HEAD
+=======
+    #[\Override]
+>>>>>>> 887d760 (.)
     public function register(): void
     {
         parent::register();
@@ -134,6 +142,10 @@ class XotServiceProvider extends XotBaseServiceProvider
     }
         */
 
+<<<<<<< HEAD
+=======
+    #[\Override]
+>>>>>>> 887d760 (.)
     public function registerConfig(): void
     {
         // $config_file = realpath(__DIR__.'/../config/metatag.php');

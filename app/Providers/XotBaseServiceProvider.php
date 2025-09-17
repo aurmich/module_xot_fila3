@@ -172,7 +172,10 @@ abstract class XotBaseServiceProvider extends ServiceProvider
                 Config::set($key, $content);
             }
 
+<<<<<<< HEAD
             $this->mergeConfigFrom($configPath, $this->nameLower);
+=======
+>>>>>>> 887d760 (.)
         } catch (\Exception $e) {
             // Ignore missing configuration
             return;
