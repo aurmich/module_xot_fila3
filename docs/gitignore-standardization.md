@@ -6,21 +6,6 @@ Questo documento descrive il processo di standardizzazione dei file `.gitignore`
 
 ## Problemi Identificati
 
-### 🔴 Conflitti Git Critici
-Tutti i moduli presentavano marcatori di conflitto Git:
-```
-<<<<<<< HEAD
-<<<<<<< HEAD
-# Dependencies and packages
-/vendor/
-=======
-# Dependencies
-vendor/
->>>>>>> hash (.)
-=======
->>>>>>> hash (.)
-```
-
 ### 🔴 Inconsistenze Strutturali
 - Regole duplicate e ridondanti
 - Strutture diverse tra moduli

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # ==============================================
 # LARAXOT MODULE XOT - .GITIGNORE
 # ==============================================
@@ -52,7 +51,6 @@ lerna-debug.log*
 # ==============================================
 # LARAVEL SPECIFIC
 # ==============================================
-=======
 # Dependencies and packages
 /vendor/
 /node_modules/
@@ -80,7 +78,6 @@ error_log
 build/
 
 # Laravel specific
->>>>>>> 887d760 (.)
 bootstrap/compiled.php
 app/storage/
 public/storage
@@ -89,7 +86,6 @@ public_html/storage
 public_html/hot
 storage/*.key
 .env
-<<<<<<< HEAD
 .env.*
 !.env.example
 
@@ -171,7 +167,6 @@ packages/temp/
 # ==============================================
 # END OF XOT .GITIGNORE
 # ==============================================
-=======
 
 # Database directories
 database/Factories_
@@ -215,4 +210,3 @@ cache/
 # Development tools
 .windsurf/
 .cursor/
->>>>>>> 887d760 (.)

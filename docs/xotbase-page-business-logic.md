@@ -172,23 +172,6 @@ protected function getAutosaveDebounce(): ?int
 
 ## Conflitti Git Risolti
 
-### Problema Identificato
-```php
-// PRIMA (con conflitti):
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-
->>>>>>> 72cc7f6 (.)
-=======
-
->>>>>>> b7f2af3 (.)
-
-// DOPO (risolto):
-// Spaziatura uniforme mantenuta
-```
-
 **Risoluzione:**
 - Standardizzata spaziatura del codice
 - Rimossi marcatori di conflitto Git
@@ -197,11 +180,8 @@ protected function getAutosaveDebounce(): ?int
 ### Problema Commenti
 ```php
 // PRIMA:
-<<<<<<< HEAD
         //@phpstan-ignore-next-line
-=======
         // @phpstan-ignore-next-line
->>>>>>> b7f2af3 (.)
 
 // DOPO:
         // @phpstan-ignore-next-line

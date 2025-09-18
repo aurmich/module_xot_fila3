@@ -120,20 +120,6 @@ return app(ExportXlsByCollection::class)->execute(
 
 ## Conflitti Git Risolti
 
-### Problema Identificato
-```php
-// PRIMA (con conflitti):
-<<<<<<< HEAD
-<<<<<<< HEAD
-->label('')
-=======
->>>>>>> 72cc7f6 (.)
-=======
->>>>>>> b7f2af3 (.)
-
-// DOPO (risolto):
-->tooltip(__('xot::actions.export_xls'))
-```
 
 **Risoluzione:**
 - Rimossa label vuota
