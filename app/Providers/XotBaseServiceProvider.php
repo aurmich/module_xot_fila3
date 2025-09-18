@@ -15,6 +15,11 @@ use BladeUI\Icons\Factory as BladeIconsFactory;
 use Modules\Xot\Actions\Blade\RegisterBladeComponentsAction;
 use Modules\Xot\Actions\Module\GetModulePathByGeneratorAction;
 use Modules\Xot\Actions\Livewire\RegisterLivewireComponentsAction;
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 6b899385c (.)
 
 /**
  * Class XotBaseServiceProvider.
@@ -171,6 +176,11 @@ abstract class XotBaseServiceProvider extends ServiceProvider
                 $key = $this->nameLower.'::'.$info['filename'];
                 Config::set($key, $content);
             }
+<<<<<<< HEAD
+=======
+
+            //$this->mergeConfigFrom($configPath, $this->nameLower);
+>>>>>>> 6b899385c (.)
         } catch (\Exception $e) {
             // Ignore missing configuration
             return;

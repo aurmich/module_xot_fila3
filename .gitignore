@@ -210,3 +210,19 @@ cache/
 # Development tools
 .windsurf/
 .cursor/
+<<<<<<< HEAD
+=======
+# Old directories
+resources/views/Components_old
+database/Migrations_old
+database/Seeders_old
+database/Factories_old
+database_old
+
+# Old directories to ignore
+resources/views/Components_old
+database/Migrations_old
+database/Seeders_old
+database/Factories_old
+database_old
+>>>>>>> 6b899385c (.)

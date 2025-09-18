@@ -169,6 +169,7 @@ class MetatagData extends Data implements Wireable
         if (! self::$instance) {
             /** @var array<string, mixed> $data */
             $data = TenantService::getConfig('metatag');
+            $data['description'] = TenantService::trans('metatag.description');
             self::$instance = self::from($data);
         }
 
@@ -603,7 +604,14 @@ class MetatagData extends Data implements Wireable
      */
     public function getTitle(): string
     {
-        return $this->getBrandName();
+        //return $this->getBrandName();
+        return $this->title;
+    }
+
+    public function concatTitle(string $title): self
+    {
+        $this->title = $this->title.' - '.$title;
+        return $this;
     }
 
     /**
@@ -640,7 +648,15 @@ class MetatagData extends Data implements Wireable
 
     public function getDescription(int $limit=160): string
     {
-        return TenantService::trans('metatag.description');
+        return $this->description;
+    }
+
+    public function concatDescription(string|null $description): self
+    {
+        if (is_string($description)) {
+            $this->description = $this->description.' '.$description;
+        }
+        return $this;
     }
 
     public function getKeywords(): string

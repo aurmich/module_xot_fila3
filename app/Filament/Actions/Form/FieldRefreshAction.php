@@ -28,13 +28,22 @@ class FieldRefreshAction extends Action
         $this->icon('heroicon-o-arrow-path')
             ->tooltip('Ricalcola valore')
             ->action(function ($state,Set $set,$record) {
+<<<<<<< HEAD
                 $name = $this->getName();
+=======
+                $name=$this->getName();
+>>>>>>> 6b899385c (.)
                 if ($name === null) {
                     return;
                 }
 
+<<<<<<< HEAD
                 $method = 'get'.Str::studly($name).'';
                 $value = $record->$method();
+=======
+                $method='get'.Str::studly($name).'';
+                $value=$record->$method();
+>>>>>>> 6b899385c (.)
                 $set($name, $value);
                 Notification::make()
                     ->title('Ricalcolato '.$name)
