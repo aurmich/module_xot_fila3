@@ -31,11 +31,7 @@ abstract class XotBaseMigration extends Migration
     {
         
         
-<<<<<<< HEAD
-        $this->model_class = $this->model_class ?? $this->getModelClass();
-=======
         $this->model_class ??= $this->getModelClass();
->>>>>>> 887d760 (.)
         Assert::isInstanceOf($model = app($this->model_class), Model::class);
         $this->model = $model;
     }

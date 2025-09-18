@@ -23,10 +23,7 @@ class HasTableWithoutOptionalMethodsTestClass
         return $mock;
     }
 
-<<<<<<< HEAD
-=======
     #[\Override]
->>>>>>> 887d760 (.)
     public function getTableColumns(): array
     {
         return [];
@@ -67,11 +64,7 @@ class HasTableWithoutOptionalMethodsTestClass
         return null;
     }
 
-<<<<<<< HEAD
-    public function getTableFilterState(string $name): ?array
-=======
     public function getTableFilterState(string $_name): ?array
->>>>>>> 887d760 (.)
     {
         return [];
     }
@@ -216,11 +209,7 @@ class HasTableWithoutOptionalMethodsTestClass
         return null;
     }
 
-<<<<<<< HEAD
-    public function callTableColumnAction(string $name, string $recordKey): mixed
-=======
     public function callTableColumnAction(string $_name, string $_recordKey): mixed
->>>>>>> 887d760 (.)
     {
         return null;
     }

@@ -3,10 +3,7 @@
 declare(strict_types=1);
 
 return [
-<<<<<<< HEAD
-    // ==============================================
     // NAVIGATION & STRUCTURE
-    // ==============================================
     'navigation' => [
         'label' => 'Pulsanti',
         'plural_label' => 'Pulsanti',
@@ -16,18 +13,14 @@ return [
         'badge' => 'Etichette pulsanti interfaccia',
     ],
 
-    // ==============================================
     // MODEL INFORMATION
-    // ==============================================
     'model' => [
         'label' => 'Pulsante',
         'plural' => 'Pulsanti',
         'description' => 'Etichette e testi per pulsanti e controlli dell\'interfaccia',
     ],
 
-    // ==============================================
     // ACTIONS - STRUTTURA ESPANSA OBBLIGATORIA
-    // ==============================================
     'actions' => [
         'create' => [
             'label' => 'Crea',
@@ -85,9 +78,7 @@ return [
         ],
     ],
 
-    // ==============================================
     // MESSAGES - FEEDBACK UTENTE
-    // ==============================================
     'messages' => [
         'empty_state' => 'Nessun pulsante configurato',
         'loading' => 'Caricamento interfaccia...',
@@ -95,11 +86,7 @@ return [
         'success_operation' => 'Operazione dell\'interfaccia completata',
     ],
 
-    // ==============================================
     // LEGACY SUPPORT - Compatibilità con codice esistente
-    // ==============================================
-=======
->>>>>>> 887d760 (.)
     'backend' => [
         'access' => [
             'users' => [

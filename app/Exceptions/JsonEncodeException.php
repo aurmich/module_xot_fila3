@@ -12,19 +12,13 @@ use Illuminate\Http\Response;
 
 class JsonEncodeException extends ApplicationException
 {
-<<<<<<< HEAD
-=======
     #[\Override]
->>>>>>> 887d760 (.)
     public function status(): int
     {
         return Response::HTTP_BAD_REQUEST;
     }
 
-<<<<<<< HEAD
-=======
     #[\Override]
->>>>>>> 887d760 (.)
     public function help(): string
     {
         $res = trans('exception.json_not_encoded.help');
@@ -35,10 +29,7 @@ class JsonEncodeException extends ApplicationException
         return $res;
     }
 
-<<<<<<< HEAD
-=======
     #[\Override]
->>>>>>> 887d760 (.)
     public function error(): string
     {
         $res = trans('exception.json_not_encoded.error');

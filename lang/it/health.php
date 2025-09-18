@@ -1,35 +1,5 @@
 <?php
 
-<<<<<<< HEAD
-return array (
-  'navigation' => 
-  array (
-    'name' => 'Stato Sistema',
-    'plural' => 'Stato Sistema',
-    'group' => 
-    array (
-      'name' => 'Sistema',
-      'description' => 'Monitoraggio e diagnostica del sistema',
-    ),
-    'label' => 'health',
-    'sort' => 14,
-    'icon' => 'xot-health',
-  ),
-  'fields' => 
-  array (
-    'name' => 
-    array (
-      'label' => 'Nome',
-      'placeholder' => 'Inserisci il nome del controllo',
-      'help' => 'Nome identificativo del controllo di sistema',
-    ),
-    'status' => 
-    array (
-      'label' => 'Stato',
-      'help' => 'Stato attuale del controllo',
-      'options' => 
-      array (
-=======
 return  [
   'navigation' => 
    [
@@ -58,37 +28,11 @@ return  [
       'help' => 'Stato attuale del controllo',
       'options' => 
        [
->>>>>>> 887d760 (.)
         'ok' => 'Funzionante',
         'warning' => 'Attenzione',
         'error' => 'Errore',
         'critical' => 'Critico',
         'unknown' => 'Sconosciuto',
-<<<<<<< HEAD
-      ),
-    ),
-    'last_check' => 
-    array (
-      'label' => 'Ultimo Controllo',
-      'help' => 'Data e ora dell\'ultimo controllo effettuato',
-    ),
-    'next_check' => 
-    array (
-      'label' => 'Prossimo Controllo',
-      'help' => 'Data e ora del prossimo controllo programmato',
-    ),
-    'details' => 
-    array (
-      'label' => 'Dettagli',
-      'help' => 'Informazioni dettagliate sullo stato del controllo',
-    ),
-    'type' => 
-    array (
-      'label' => 'Tipo',
-      'help' => 'Categoria del controllo di sistema',
-      'options' => 
-      array (
-=======
       ],
     ],
     'last_check' => 
@@ -112,7 +56,6 @@ return  [
       'help' => 'Categoria del controllo di sistema',
       'options' => 
        [
->>>>>>> 887d760 (.)
         'database' => 'Database',
         'cache' => 'Cache',
         'storage' => 'Storage',
@@ -123,16 +66,6 @@ return  [
         'backup' => 'Backup',
         'logs' => 'Log',
         'network' => 'Rete',
-<<<<<<< HEAD
-      ),
-    ),
-    'severity' => 
-    array (
-      'label' => 'Gravità',
-      'help' => 'Livello di gravità del problema',
-      'options' => 
-      array (
-=======
       ],
     ],
     'severity' => 
@@ -141,55 +74,10 @@ return  [
       'help' => 'Livello di gravità del problema',
       'options' => 
        [
->>>>>>> 887d760 (.)
         'low' => 'Bassa',
         'medium' => 'Media',
         'high' => 'Alta',
         'critical' => 'Critica',
-<<<<<<< HEAD
-      ),
-    ),
-  ),
-  'actions' => 
-  array (
-    'check_all' => 
-    array (
-      'label' => 'Controlla Tutto',
-      'success' => 'Controlli completati con successo',
-      'error' => 'Errore durante l\'esecuzione dei controlli',
-    ),
-    'check_selected' => 
-    array (
-      'label' => 'Controlla Selezionati',
-      'success' => 'Controlli selezionati completati',
-      'error' => 'Errore durante l\'esecuzione dei controlli selezionati',
-    ),
-    'refresh' => 
-    array (
-      'label' => 'Aggiorna',
-      'success' => 'Stato aggiornato con successo',
-      'error' => 'Errore durante l\'aggiornamento dello stato',
-    ),
-    'export' => 
-    array (
-      'label' => 'Esporta Report',
-      'success' => 'Report esportato con successo',
-      'error' => 'Errore durante l\'esportazione del report',
-    ),
-    'fix' => 
-    array (
-      'label' => 'Risolvi Problema',
-      'success' => 'Problema risolto con successo',
-      'error' => 'Errore durante la risoluzione del problema',
-    ),
-  ),
-  'messages' => 
-  array (
-    'checks' => 
-    array (
-      'database' => 
-      array (
-=======
       ],
     ],
   ],
@@ -232,119 +120,68 @@ return  [
      [
       'database' => 
        [
->>>>>>> 887d760 (.)
         'connection' => 'Verifica connessione al database',
         'migrations' => 'Verifica stato migrazioni',
         'tables' => 'Verifica integrità tabelle',
         'indexes' => 'Verifica ottimizzazione indici',
         'deadlocks' => 'Verifica presenza deadlocks',
-<<<<<<< HEAD
-      ),
-      'cache' => 
-      array (
-=======
       ],
       'cache' => 
        [
->>>>>>> 887d760 (.)
         'connection' => 'Verifica connessione alla cache',
         'hits' => 'Analisi cache hits/miss',
         'memory' => 'Monitoraggio utilizzo memoria',
         'keys' => 'Verifica chiavi scadute',
         'fragmentation' => 'Analisi frammentazione',
-<<<<<<< HEAD
-      ),
-      'storage' => 
-      array (
-=======
       ],
       'storage' => 
        [
->>>>>>> 887d760 (.)
         'disk_space' => 'Verifica spazio disponibile',
         'permissions' => 'Verifica permessi directory',
         'write_access' => 'Verifica accesso in scrittura',
         'backup_space' => 'Verifica spazio backup',
         'temp_files' => 'Pulizia file temporanei',
-<<<<<<< HEAD
-      ),
-      'queue' => 
-      array (
-=======
       ],
       'queue' => 
        [
->>>>>>> 887d760 (.)
         'connection' => 'Verifica connessione code',
         'failed_jobs' => 'Analisi job falliti',
         'pending_jobs' => 'Monitoraggio job in attesa',
         'worker_status' => 'Verifica stato workers',
         'retry_jobs' => 'Gestione retry automatici',
-<<<<<<< HEAD
-      ),
-      'services' => 
-      array (
-=======
       ],
       'services' => 
        [
->>>>>>> 887d760 (.)
         'redis' => 'Verifica stato Redis',
         'elasticsearch' => 'Verifica stato Elasticsearch',
         'email' => 'Verifica configurazione email',
         'scheduler' => 'Verifica scheduler',
         'supervisor' => 'Verifica supervisor',
-<<<<<<< HEAD
-      ),
-      'security' => 
-      array (
-=======
       ],
       'security' => 
        [
->>>>>>> 887d760 (.)
         'ssl' => 'Verifica certificato SSL',
         'updates' => 'Verifica aggiornamenti sicurezza',
         'vulnerabilities' => 'Scansione vulnerabilità',
         'firewall' => 'Verifica configurazione firewall',
         'permissions' => 'Verifica permessi file',
-<<<<<<< HEAD
-      ),
-    ),
-    'status' => 
-    array (
-=======
       ],
     ],
     'status' => 
      [
->>>>>>> 887d760 (.)
       'ok' => 'Tutti i sistemi funzionano correttamente',
       'warning' => 'Rilevati problemi non critici che richiedono attenzione',
       'error' => 'Rilevati problemi critici che richiedono intervento',
       'critical' => 'Sistema compromesso, richiesto intervento immediato',
       'unknown' => 'Stato del sistema non determinabile',
-<<<<<<< HEAD
-    ),
-    'notifications' => 
-    array (
-=======
     ],
     'notifications' => 
      [
->>>>>>> 887d760 (.)
       'threshold_exceeded' => 'Soglia :name superata: :value',
       'service_down' => 'Servizio :name non raggiungibile',
       'backup_failed' => 'Backup fallito: :reason',
       'security_breach' => 'Rilevata potenziale violazione sicurezza',
-<<<<<<< HEAD
-    ),
-  ),
-  'title' => 'health',
-);
-=======
     ],
   ],
   'title' => 'health',
 ];
->>>>>>> 887d760 (.)

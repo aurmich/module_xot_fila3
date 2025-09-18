@@ -1,14 +1,3 @@
-<<<<<<< HEAD
-<?php return array (
-  'fields' => 
-  array (
-    'anno' => 
-    array (
-      'label' => 'anno',
-    ),
-  ),
-);
-=======
 <?php return  [
   'fields' => 
    [
@@ -18,4 +7,3 @@
     ],
   ],
 ];
->>>>>>> 887d760 (.)

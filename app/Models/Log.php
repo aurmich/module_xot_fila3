@@ -63,10 +63,7 @@ class Log extends BaseModel
     }
 
     /** @return array<string, string> */
-<<<<<<< HEAD
-=======
     #[\Override]
->>>>>>> 887d760 (.)
     protected function casts(): array
     {
         return [

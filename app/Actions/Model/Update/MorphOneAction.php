@@ -61,12 +61,6 @@ final class MorphOneAction
         }
 
         // Remove null values from the data array
-<<<<<<< HEAD
-        return array_filter($data, static function ($value): bool {
-            return null !== $value;
-        });
-=======
         return array_filter($data, static fn ($value): bool => null !== $value);
->>>>>>> 887d760 (.)
     }
 }

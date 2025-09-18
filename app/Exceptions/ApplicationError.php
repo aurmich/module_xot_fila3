@@ -27,10 +27,7 @@ class ApplicationError implements \JsonSerializable, Arrayable, Jsonable
         ];
     }
 
-<<<<<<< HEAD
-=======
     #[\Override]
->>>>>>> 887d760 (.)
     public function jsonSerialize(): array
     {
         return $this->toArray();

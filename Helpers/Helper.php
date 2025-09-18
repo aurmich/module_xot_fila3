@@ -403,11 +403,7 @@ if (! function_exists('params2ContainerItem')) {
             $pattern = '/(container|item)(\d+)/';
             preg_match($pattern, $k, $matches);
 
-<<<<<<< HEAD
-            if (!empty($matches) && isset($matches[1]) && isset($matches[2]) && is_string($matches[1]) && is_string($matches[2])) {
-=======
             if (!empty($matches) && isset($matches[1], $matches[2]) && is_string($matches[1]) && is_string($matches[2])) {
->>>>>>> 887d760 (.)
                 $sk = $matches[1];
                 $sv = $matches[2];
                 // @phpstan-ignore offsetAccess.nonOffsetAccessible
@@ -655,11 +651,7 @@ if (! function_exists('deltaTime')) {
 if (! function_exists('bracketsToDotted')) {
     // privacies[111][pivot][title] => privacies.111.pivot.title
 
-<<<<<<< HEAD
-    function bracketsToDotted(string $str, string $quotation_marks = ''): string
-=======
     function bracketsToDotted(string $str, string $_quotation_marks = ''): string
->>>>>>> 887d760 (.)
     {
         return str_replace(['[', ']'], ['.', ''], $str);
     }
@@ -667,11 +659,7 @@ if (! function_exists('bracketsToDotted')) {
 
 if (! function_exists('dottedToBrackets')) {
     // privacies.111.pivot.title => privacies[111][pivot][title]
-<<<<<<< HEAD
-    function dottedToBrackets(string $str, string $quotation_marks = ''): string
-=======
     function dottedToBrackets(string $str, string $_quotation_marks = ''): string
->>>>>>> 887d760 (.)
     {
         return collect(explode('.', $str))->map(
             static fn (string $v, $k): string => 0 === $k ? $v : '['.$v.']'

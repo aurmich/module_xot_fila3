@@ -15,19 +15,6 @@ use Webmozart\Assert\Assert;
 trait RelationX
 {
     /**
-<<<<<<< HEAD
-     * @param class-string<Model>             $related         aaa
-     * @param class-string<Model>|string|null $table           aaa
-     * @param string|null                     $foreignPivotKey aaa
-     * @param string|null                     $relatedPivotKey aaa
-     * @param string|null                     $parentKey       aaa
-     * @param string|null                     $relatedKey      aaa
-     * @param string|null                     $relation        aaa
-     */
-    public function belongsToManyX(
-        string $related,
-        ?string $table = null,
-=======
      * @param class-string<Model>             $related         Related model class
      * @param class-string<Model>|string|null $_table          Pivot table name
      * @param string|null                     $foreignPivotKey Foreign pivot key
@@ -39,7 +26,6 @@ trait RelationX
     public function belongsToManyX(
         string $related,
         ?string $_table = null,
->>>>>>> 887d760 (.)
         ?string $foreignPivotKey = null,
         ?string $relatedPivotKey = null,
         ?string $parentKey = null,
@@ -82,11 +68,7 @@ trait RelationX
      *
      * @param  class-string<TRelatedModel>  $related
      * @param  string  $name
-<<<<<<< HEAD
-     * @param  string|null  $table
-=======
      * @param  string|null  $_table
->>>>>>> 887d760 (.)
      * @param  string|null  $foreignPivotKey
      * @param  string|null  $relatedPivotKey
      * @param  string|null  $parentKey
@@ -95,15 +77,9 @@ trait RelationX
      * @param  bool  $inverse
      * @return \Illuminate\Database\Eloquent\Relations\MorphToMany<TRelatedModel, $this>
      */
-<<<<<<< HEAD
-    public function morphToManyX($related, $name, $table = null, $foreignPivotKey = null,
-                                $relatedPivotKey = null, $parentKey = null,
-                                $relatedKey = null, $relation = null, $inverse = false)
-=======
     public function morphToManyX(string $related, string $name, ?string $_table = null, ?string $foreignPivotKey = null,
                                 ?string $relatedPivotKey = null, ?string $parentKey = null,
                                 ?string $relatedKey = null, ?string $relation = null, bool $inverse = false)
->>>>>>> 887d760 (.)
     {
        
         $pivot = $this->guessMorphPivot($related);
@@ -135,11 +111,7 @@ trait RelationX
     /**
      * @return \Illuminate\Database\Eloquent\Relations\MorphPivot
      */
-<<<<<<< HEAD
-    public function guessMorphPivot(string $related,?string $class = null)
-=======
     public function guessMorphPivot(string $related,?string $_class = null)
->>>>>>> 887d760 (.)
     {
         $class = $this::class;
         $pivot_name = class_basename($related).'Morph';
@@ -159,11 +131,7 @@ trait RelationX
      */
     public function guessPivot(string $related, ?string $class = null)
     {
-<<<<<<< HEAD
-        $class = $class ?? $this::class;
-=======
         $class ??= $this::class;
->>>>>>> 887d760 (.)
         $model_names = [
             class_basename($class),
             class_basename($related),
@@ -181,11 +149,7 @@ trait RelationX
     }
 
     public function guessPivotFullClass(string $pivot_name, string $related, ?string $class = null):string{
-<<<<<<< HEAD
-        $class = $class ?? $this::class;
-=======
         $class ??= $this::class;
->>>>>>> 887d760 (.)
         $pivot_class = Str::of($class)
             ->beforeLast('\\')
             ->append('\\'.$pivot_name)

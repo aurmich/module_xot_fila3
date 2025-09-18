@@ -1,16 +1,5 @@
 <?php
 
-<<<<<<< HEAD
-return array (
-  'actions' => 
-  array (
-    'copy_from_last_year' => 
-    array (
-      'label' => 'copy_from_last_year',
-    ),
-  ),
-);
-=======
 return  [
   'actions' => 
    [
@@ -20,4 +9,3 @@ return  [
     ],
   ],
 ];
->>>>>>> 887d760 (.)

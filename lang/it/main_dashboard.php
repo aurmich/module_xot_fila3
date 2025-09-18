@@ -1,17 +1,5 @@
 <?php
 
-<<<<<<< HEAD
-return array (
-  'sections' => 
-  array (
-    'empty' => 
-    array (
-      'label' => '',
-      'heading' => '',
-    ),
-  ),
-);
-=======
 return  [
   'sections' => 
    [
@@ -22,4 +10,3 @@ return  [
     ],
   ],
 ];
->>>>>>> 887d760 (.)

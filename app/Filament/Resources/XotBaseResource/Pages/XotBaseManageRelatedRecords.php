@@ -51,10 +51,7 @@ abstract class XotBaseManageRelatedRecords extends FilamentManageRelatedRecords
      *
      * @return array<string, TextColumn>
      */
-<<<<<<< HEAD
-=======
     #[\Override]
->>>>>>> 887d760 (.)
     public function getTableColumns(): array
     {
         return [

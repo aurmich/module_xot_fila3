@@ -1,16 +1,5 @@
 <?php
 
-<<<<<<< HEAD
-return array (
-  'fields' => 
-  array (
-    'pdf' => 
-    array (
-      'label' => 'pdf',
-    ),
-  ),
-);
-=======
 return  [
   'fields' => 
    [
@@ -20,4 +9,3 @@ return  [
     ],
   ],
 ];
->>>>>>> 887d760 (.)

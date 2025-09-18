@@ -68,11 +68,7 @@ abstract class XotBasePage extends FilamentPage implements HasForms
      * Cache timeout per operazioni di cache (in secondi).
      */
     protected static int $cacheTimeout = 3600;
-<<<<<<< HEAD
-
-=======
     
->>>>>>> 887d760 (.)
     /**
      * Ottiene il nome del modulo dalla classe.
      * Estrae il nome del modulo dal namespace della classe.
@@ -107,11 +103,7 @@ abstract class XotBasePage extends FilamentPage implements HasForms
         $moduleNameLow = Str::lower(static::getModuleName());
         $p = Str::after(static::class, 'Filament\\Pages\\');
         $p_arr = explode('\\', $p);
-<<<<<<< HEAD
-        $slug = collect($p_arr)->map(static fn (string $item): string => Str::kebab($item))->implode('.');
-=======
         $slug = collect($p_arr)->map(Str::kebab(...))->implode('.');
->>>>>>> 887d760 (.)
 
         $translationKey = $moduleNameLow.'::'.$slug.'.'.$key;
         $translation = __($translationKey, $replace, $locale);
@@ -273,11 +265,7 @@ abstract class XotBasePage extends FilamentPage implements HasForms
     {
         $user = $this->getUser();
 
-<<<<<<< HEAD
-        // @phpstan-ignore-next-line
-=======
         //@phpstan-ignore-next-line        
->>>>>>> 887d760 (.)
         if (!method_exists($user, 'hasPermissionTo')) {
             throw new \RuntimeException('Il modello utente deve implementare il metodo hasPermissionTo');
         }

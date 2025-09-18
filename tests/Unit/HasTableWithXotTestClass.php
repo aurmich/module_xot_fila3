@@ -24,10 +24,7 @@ class HasTableWithXotTestClass
         return $mock;
     }
 
-<<<<<<< HEAD
-=======
     #[\Override]
->>>>>>> 887d760 (.)
     public function getTableColumns(): array
     {
         return [];
@@ -68,11 +65,7 @@ class HasTableWithXotTestClass
         return null;
     }
 
-<<<<<<< HEAD
-    public function getTableFilterState(string $name): ?array
-=======
     public function getTableFilterState(string $_name): ?array
->>>>>>> 887d760 (.)
     {
         return [];
     }
@@ -112,11 +105,7 @@ class HasTableWithXotTestClass
         return null;
     }
 
-<<<<<<< HEAD
-    public function getSelectedTableRecords(bool $shouldFetchSelectedRecords = true): Collection
-=======
     public function getSelectedTableRecords(bool $_shouldFetchSelectedRecords = true): Collection
->>>>>>> 887d760 (.)
     {
         return new Collection();
     }
@@ -221,11 +210,7 @@ class HasTableWithXotTestClass
         return null;
     }
 
-<<<<<<< HEAD
-    public function callTableColumnAction(string $name, string $recordKey): mixed
-=======
     public function callTableColumnAction(string $_name, string $_recordKey): mixed
->>>>>>> 887d760 (.)
     {
         return null;
     }

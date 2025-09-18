@@ -142,11 +142,7 @@ class GetPdfContentByRecordAction
         $baseFilename = mb_strtolower($modelName).'_'.(string)($recordKey ?? 'unknown');
 
         // Enhanced filename for records with identification fields
-<<<<<<< HEAD
-        if (isset($record->matr) && isset($record->cognome) && isset($record->nome)) {
-=======
         if (isset($record->matr, $record->cognome, $record->nome)) {
->>>>>>> 887d760 (.)
             $matr = is_string($record->matr) ? $record->matr : 'unknown';
             $cognome = is_string($record->cognome) ? $record->cognome : 'unknown';
             $nome = is_string($record->nome) ? $record->nome : 'unknown';
