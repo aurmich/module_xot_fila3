@@ -13,4 +13,8 @@ class DummyTestModel extends Model
 {
     protected $table = 'dummy_test_models';
     protected $fillable = ['name'];
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 4b5055e9 (.)

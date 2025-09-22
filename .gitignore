@@ -205,6 +205,7 @@ Homestead.json
 *:Zone.Identifier
 .DS_Store
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 *.new
 
@@ -217,6 +218,11 @@ Homestead.json
 *.bak
 <<<<<<< HEAD
 =======
+=======
+*.old
+*.old1
+*.backup
+>>>>>>> 4b5055e9 (.)
 *.bak
 >>>>>>> c4ec0fb6 (.)
 *.new
@@ -225,6 +231,7 @@ Homestead.json
 docs/phpstan/
 docs/cache/
 cache/
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -256,3 +263,5 @@ public_html
 =======
 >>>>>>> d9f8ef0b (.)
 >>>>>>> fcf6b127 (.)
+=======
+>>>>>>> 4b5055e9 (.)

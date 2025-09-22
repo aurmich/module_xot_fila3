@@ -3,12 +3,16 @@
 ## Regola Fondamentale
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 La cartella `/var/www/html/_bases/base_techplanner_fila3_mono/bashscripts` deve contenere **SOLO** il file `README.md` nella root. Tutti gli altri file devono essere categorizzati e organizzati in sottocartelle tematiche.
 La cartella `/var/www/html/_bases/base_saluteora/bashscripts` deve contenere **SOLO** il file `README.md` nella root. Tutti gli altri file devono essere categorizzati e organizzati in sottocartelle tematiche.
 La cartella `/var/www/html/_bases/base_techplanner_fila3_mono/bashscripts` deve contenere **SOLO** il file `README.md` nella root. Tutti gli altri file devono essere categorizzati e organizzati in sottocartelle tematiche.
 =======
 La cartella `/var/www/html/_bases/base_saluteora/bashscripts` deve contenere **SOLO** il file `README.md` nella root. Tutti gli altri file devono essere categorizzati e organizzati in sottocartelle tematiche.
 >>>>>>> c4ec0fb6 (.)
+=======
+La cartella `/var/www/html/_bases/base_saluteora/bashscripts` deve contenere **SOLO** il file `README.md` nella root. Tutti gli altri file devono essere categorizzati e organizzati in sottocartelle tematiche.
+>>>>>>> 4b5055e9 (.)
 
 ## Struttura Organizzata
 
@@ -45,6 +49,7 @@ bashscripts/
 - Automazione push/pull operations
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 #### 4.1. **git/gitignore/** - Gestione GitIgnore
 - `update_gitignore.sh` - Aggiornamento batch .gitignore moduli
 - `fix_remaining_gitignore.sh` - Correzione moduli non conformi
@@ -53,6 +58,8 @@ bashscripts/
 
 =======
 >>>>>>> c4ec0fb6 (.)
+=======
+>>>>>>> 4b5055e9 (.)
 #### 5. **maintenance/** - Manutenzione Sistema
 - `backup.sh` - Script di backup
 - `restore_disk.md` - Documentazione ripristino
@@ -71,9 +78,12 @@ bashscripts/
 #### 8. **translations/** - Gestione Traduzioni
 - `fix_all_english_translations.sh` - Fix traduzioni inglesi
 <<<<<<< HEAD
+<<<<<<< HEAD
 - `fix_<nome progetto>_translations.sh` - Fix traduzioni 
 =======
 >>>>>>> c4ec0fb6 (.)
+=======
+>>>>>>> 4b5055e9 (.)
 - `fix_saluteora_translations.sh` - Fix traduzioni SaluteOra
 - `verify_translations_syntax.sh` - Verifica sintassi traduzioni
 

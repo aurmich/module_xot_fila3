@@ -4,13 +4,8 @@ declare(strict_types=1);
 
 namespace Modules\Xot\Models\Policies;
 
-<<<<<<< HEAD
 use Modules\Xot\Contracts\UserContract;
 use Modules\Xot\Models\Log;
-=======
-use Modules\Xot\Models\Log;
-use Modules\Xot\Contracts\UserContract;
->>>>>>> d9f8ef0b (.)
 
 class LogPolicy extends XotBasePolicy
 {
@@ -89,8 +84,4 @@ class LogPolicy extends XotBasePolicy
     {
         return $user->hasPermissionTo('log.forceDelete');
     }
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> d9f8ef0b (.)

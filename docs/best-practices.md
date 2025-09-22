@@ -764,6 +764,7 @@ public function createModel(array $data): MioModello
 - [**Architettura**](architecture.md) - Architettura del modulo Xot
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 - [**Best Practices Globali**](../docs/best-practices.md) - Best practices globali
 =======
 - [**Best Practices Globali**](../project_docs/best-practices.md) - Best practices globali
@@ -774,6 +775,9 @@ public function createModel(array $data): MioModello
 - [**Best Practices Globali**](../docs/best-practices.md) - Best practices globali
 >>>>>>> d9f8ef0b (.)
 >>>>>>> fcf6b127 (.)
+=======
+- [**Best Practices Globali**](../project_docs/best-practices.md) - Best practices globali
+>>>>>>> 4b5055e9 (.)
 
 ---
 

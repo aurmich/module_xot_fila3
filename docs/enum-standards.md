@@ -1,9 +1,12 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 # Enum Standards in <nome progetto>
 
 This document defines the standards and best practices for working with Enums in the <nome progetto> project.
 =======
 >>>>>>> c4ec0fb6 (.)
+=======
+>>>>>>> 4b5055e9 (.)
 # Enum Standards in SaluteOra
 
 This document defines the standards and best practices for working with Enums in the SaluteOra project.
@@ -78,9 +81,12 @@ This document defines the standards and best practices for working with Enums in
 declare(strict_types=1);
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 namespace Modules\<nome progetto>\Enums;
 =======
 >>>>>>> c4ec0fb6 (.)
+=======
+>>>>>>> 4b5055e9 (.)
 namespace Modules\SaluteOra\Enums;
 
 use Filament\Support\Contracts\HasLabel;
@@ -101,10 +107,13 @@ enum AppointmentTypeEnum: string implements HasLabel
     {
         return match ($this) {
 <<<<<<< HEAD
+<<<<<<< HEAD
             self::CONSULTATION => __('<nome progetto>::app.consultation'),
             self::CLEANING => __('<nome progetto>::app.cleaning'),
 =======
 >>>>>>> c4ec0fb6 (.)
+=======
+>>>>>>> 4b5055e9 (.)
             self::CONSULTATION => __('saluteora::app.consultation'),
             self::CLEANING => __('saluteora::app.cleaning'),
             // ... other cases
@@ -114,9 +123,12 @@ enum AppointmentTypeEnum: string implements HasLabel
 
 // Alias for backward compatibility
 <<<<<<< HEAD
+<<<<<<< HEAD
 class_alias(AppointmentTypeEnum::class, 'Modules\\<nome progetto>\\Enums\\AppointmentType');
 =======
 >>>>>>> c4ec0fb6 (.)
+=======
+>>>>>>> 4b5055e9 (.)
 class_alias(AppointmentTypeEnum::class, 'Modules\\SaluteOra\\Enums\\AppointmentType');
 ```
 

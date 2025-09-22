@@ -23,7 +23,10 @@ class HasTableWithoutOptionalMethodsTestClass implements HasTable
         return $mock;
     }
 
+<<<<<<< HEAD
     #[\Override]
+=======
+>>>>>>> 4b5055e9 (.)
     public function getTableColumns(): array
     {
         return [];
@@ -34,7 +37,11 @@ class HasTableWithoutOptionalMethodsTestClass implements HasTable
         return \Mockery::mock(Table::class);
     }
 
+<<<<<<< HEAD
     public function getTablePage(): null|int
+=======
+    public function getTablePage(): ?int
+>>>>>>> 4b5055e9 (.)
     {
         return 1;
     }
@@ -44,12 +51,20 @@ class HasTableWithoutOptionalMethodsTestClass implements HasTable
         return 10;
     }
 
+<<<<<<< HEAD
     public function getTableSortColumn(): null|string
+=======
+    public function getTableSortColumn(): ?string
+>>>>>>> 4b5055e9 (.)
     {
         return null;
     }
 
+<<<<<<< HEAD
     public function getTableSortDirection(): null|string
+=======
+    public function getTableSortDirection(): ?string
+>>>>>>> 4b5055e9 (.)
     {
         return null;
     }
@@ -64,17 +79,29 @@ class HasTableWithoutOptionalMethodsTestClass implements HasTable
         return null;
     }
 
+<<<<<<< HEAD
     public function getTableFilterState(string $name): null|array
+=======
+    public function getTableFilterState(string $name): ?array
+>>>>>>> 4b5055e9 (.)
     {
         return [];
     }
 
+<<<<<<< HEAD
     public function getTableGrouping(): null|string
+=======
+    public function getTableGrouping(): ?string
+>>>>>>> 4b5055e9 (.)
     {
         return null;
     }
 
+<<<<<<< HEAD
     public function getTableSearchIndicator(): null|string
+=======
+    public function getTableSearchIndicator(): ?string
+>>>>>>> 4b5055e9 (.)
     {
         return null;
     }
@@ -149,7 +176,11 @@ class HasTableWithoutOptionalMethodsTestClass implements HasTable
         return null;
     }
 
+<<<<<<< HEAD
     public function getMountedTableAction(): null|string
+=======
+    public function getMountedTableAction(): ?string
+>>>>>>> 4b5055e9 (.)
     {
         return null;
     }
@@ -169,7 +200,11 @@ class HasTableWithoutOptionalMethodsTestClass implements HasTable
         return null;
     }
 
+<<<<<<< HEAD
     public function getMountedTableBulkAction(): null|string
+=======
+    public function getMountedTableBulkAction(): ?string
+>>>>>>> 4b5055e9 (.)
     {
         return null;
     }
@@ -179,7 +214,11 @@ class HasTableWithoutOptionalMethodsTestClass implements HasTable
         return null;
     }
 
+<<<<<<< HEAD
     public function getActiveTableLocale(): null|string
+=======
+    public function getActiveTableLocale(): ?string
+>>>>>>> 4b5055e9 (.)
     {
         return null;
     }
@@ -260,4 +299,8 @@ class HasTableWithoutOptionalMethodsTestClass implements HasTable
     {
         return null;
     }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 4b5055e9 (.)
