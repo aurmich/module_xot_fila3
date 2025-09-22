@@ -19,10 +19,17 @@ use Spatie\ModelStates\State;
  * that must be implemented by each concrete state class.
  *
 <<<<<<< HEAD
+<<<<<<< HEAD
  * @property string $name  Il nome dello stato
 =======
  * @property string $name Il nome dello stato
 >>>>>>> c4ec0fb6 (.)
+=======
+ * @property string $name Il nome dello stato
+=======
+ * @property string $name  Il nome dello stato
+>>>>>>> d9f8ef0b (.)
+>>>>>>> fcf6b127 (.)
  * @property string $value Il valore dello stato nel database
  */
 abstract class XotBaseState extends State implements StateContract
@@ -145,6 +152,7 @@ abstract class XotBaseState extends State implements StateContract
      * Fill form data for modal.
      *
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @param array<string, mixed> $arguments
      * @param array<string, mixed> $data
      *
@@ -152,6 +160,15 @@ abstract class XotBaseState extends State implements StateContract
      * @param  array<string, mixed>  $arguments
      * @param  array<string, mixed>  $data
 >>>>>>> c4ec0fb6 (.)
+=======
+     * @param  array<string, mixed>  $arguments
+     * @param  array<string, mixed>  $data
+=======
+     * @param array<string, mixed> $arguments
+     * @param array<string, mixed> $data
+     *
+>>>>>>> d9f8ef0b (.)
+>>>>>>> fcf6b127 (.)
      * @return array<string, mixed>
      */
     public function modalFillForm(array $arguments, array $data): array
@@ -177,12 +194,21 @@ abstract class XotBaseState extends State implements StateContract
      * Execute modal action.
      *
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @param array<string, mixed> $arguments
      * @param array<string, mixed> $data
 =======
      * @param  array<string, mixed>  $arguments
      * @param  array<string, mixed>  $data
 >>>>>>> c4ec0fb6 (.)
+=======
+     * @param  array<string, mixed>  $arguments
+     * @param  array<string, mixed>  $data
+=======
+     * @param array<string, mixed> $arguments
+     * @param array<string, mixed> $data
+>>>>>>> d9f8ef0b (.)
+>>>>>>> fcf6b127 (.)
      */
     public function modalAction(array $arguments, array $data): void
     {
@@ -193,12 +219,21 @@ abstract class XotBaseState extends State implements StateContract
      * Process state action.
      *
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @param array<string, mixed> $arguments
      * @param array<string, mixed> $data
 =======
      * @param  array<string, mixed>  $arguments
      * @param  array<string, mixed>  $data
 >>>>>>> c4ec0fb6 (.)
+=======
+     * @param  array<string, mixed>  $arguments
+     * @param  array<string, mixed>  $data
+=======
+     * @param array<string, mixed> $arguments
+     * @param array<string, mixed> $data
+>>>>>>> d9f8ef0b (.)
+>>>>>>> fcf6b127 (.)
      */
     public function processStateAction(array $arguments, array $data): void
     {
@@ -229,11 +264,17 @@ abstract class XotBaseState extends State implements StateContract
      * Execute modal action by record.
      *
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @param array<string, mixed> $data
      */
     #[\Override]
 =======
+=======
+>>>>>>> fcf6b127 (.)
      * @param  array<string, mixed>  $data
+=======
+     * @param array<string, mixed> $data
+>>>>>>> d9f8ef0b (.)
      */
 >>>>>>> c4ec0fb6 (.)
     public function modalActionByRecord(Model $record, array $data): void
@@ -245,10 +286,17 @@ abstract class XotBaseState extends State implements StateContract
      * Process state action by record.
      *
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @param array<string, mixed> $data
 =======
      * @param  array<string, mixed>  $data
 >>>>>>> c4ec0fb6 (.)
+=======
+     * @param  array<string, mixed>  $data
+=======
+     * @param array<string, mixed> $data
+>>>>>>> d9f8ef0b (.)
+>>>>>>> fcf6b127 (.)
      */
     public function processStateActionByRecord(Model $record, array $data): void
     {

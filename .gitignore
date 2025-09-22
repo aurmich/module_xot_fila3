@@ -225,7 +225,9 @@ Homestead.json
 docs/phpstan/
 docs/cache/
 cache/
+<<<<<<< HEAD
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 # Development tools
 .windsurf/
@@ -250,3 +252,7 @@ laravel
 public_html
 =======
 >>>>>>> c4ec0fb6 (.)
+=======
+=======
+>>>>>>> d9f8ef0b (.)
+>>>>>>> fcf6b127 (.)
