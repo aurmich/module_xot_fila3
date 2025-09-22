@@ -20,10 +20,17 @@ class GetTransFilenameAction
             $langPath = app(GetModulePathByGeneratorAction::class)->execute($ns, 'lang');
             Assert::string($langPath, 'Percorso lang non valido');
         } catch (\Throwable $e) {
+<<<<<<< HEAD
             $langPath = base_path('Modules/' . $ns . '/lang');
         }
 
         $lang_path_full = $langPath . '/' . $lang . '/' . $file . '.php';
+=======
+            $langPath = base_path('Modules/'.$ns.'/lang');
+        }
+
+        $lang_path_full = $langPath.'/'.$lang.'/'.$file.'.php';
+>>>>>>> c4ec0fb6 (.)
         $lang_path_full = str_replace(['\\', '/'], [DIRECTORY_SEPARATOR, DIRECTORY_SEPARATOR], $lang_path_full);
 
         return $lang_path_full;

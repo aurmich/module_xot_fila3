@@ -34,8 +34,11 @@ composer dump-autoload
 ### 2. Riavvio dei Servizi Web
 
 ```bash
+<<<<<<< HEAD
 # Riavvio del server web (Apache/Nginx)
 sudo systemctl restart apache2
+=======
+>>>>>>> c4ec0fb6 (.)
 
 # Riavvio del server web (Apache/Nginx)
 sudo systemctl restart apache2

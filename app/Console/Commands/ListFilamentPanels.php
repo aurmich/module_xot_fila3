@@ -22,17 +22,30 @@ class ListFilamentPanels extends Command
 
         /** @var Collection<string, \Nwidart\Modules\Module> $modules */
         foreach ($modules as $moduleName => $module) {
+<<<<<<< HEAD
             $providersPath = $module->getPath() . '/Providers';
             if (!is_dir($providersPath)) {
+=======
+            $providersPath = $module->getPath().'/Providers';
+            if (! is_dir($providersPath)) {
+>>>>>>> c4ec0fb6 (.)
                 continue;
             }
 
             $providers = collect(scandir($providersPath))
+<<<<<<< HEAD
                 ->filter(fn(string $file): bool => str_ends_with($file, 'ServiceProvider.php'));
 
             foreach ($providers as $provider) {
                 $providerClass = "Modules\\{$moduleName}\\Providers\\{$provider}";
                 if (!class_exists($providerClass)) {
+=======
+                ->filter(fn (string $file): bool => str_ends_with($file, 'ServiceProvider.php'));
+
+            foreach ($providers as $provider) {
+                $providerClass = "Modules\\{$moduleName}\\Providers\\{$provider}";
+                if (! class_exists($providerClass)) {
+>>>>>>> c4ec0fb6 (.)
                     continue;
                 }
 

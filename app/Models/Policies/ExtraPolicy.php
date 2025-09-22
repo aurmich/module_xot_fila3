@@ -12,7 +12,10 @@ class ExtraPolicy extends XotBasePolicy
     /**
      * Determine whether the user can view any models.
      */
+<<<<<<< HEAD
     #[\Override]
+=======
+>>>>>>> c4ec0fb6 (.)
     public function viewAny(UserContract $user): bool
     {
         return $user->hasPermissionTo('extra.viewAny');
@@ -21,7 +24,11 @@ class ExtraPolicy extends XotBasePolicy
     /**
      * Determine whether the user can view the model.
      */
+<<<<<<< HEAD
     public function view(UserContract $user, Extra $_extra): bool
+=======
+    public function view(UserContract $user, Extra $extra): bool
+>>>>>>> c4ec0fb6 (.)
     {
         return $user->hasPermissionTo('extra.view');
     }
@@ -37,7 +44,11 @@ class ExtraPolicy extends XotBasePolicy
     /**
      * Determine whether the user can update the model.
      */
+<<<<<<< HEAD
     public function update(UserContract $user, Extra $_extra): bool
+=======
+    public function update(UserContract $user, Extra $extra): bool
+>>>>>>> c4ec0fb6 (.)
     {
         return $user->hasPermissionTo('extra.update');
     }
@@ -45,7 +56,11 @@ class ExtraPolicy extends XotBasePolicy
     /**
      * Determine whether the user can delete the model.
      */
+<<<<<<< HEAD
     public function delete(UserContract $user, Extra $_extra): bool
+=======
+    public function delete(UserContract $user, Extra $extra): bool
+>>>>>>> c4ec0fb6 (.)
     {
         return $user->hasPermissionTo('extra.delete');
     }
@@ -53,7 +68,11 @@ class ExtraPolicy extends XotBasePolicy
     /**
      * Determine whether the user can restore the model.
      */
+<<<<<<< HEAD
     public function restore(UserContract $user, Extra $_extra): bool
+=======
+    public function restore(UserContract $user, Extra $extra): bool
+>>>>>>> c4ec0fb6 (.)
     {
         return $user->hasPermissionTo('extra.restore');
     }
@@ -66,3 +85,7 @@ class ExtraPolicy extends XotBasePolicy
         return $user->hasPermissionTo('extra.forceDelete');
     }
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> c4ec0fb6 (.)

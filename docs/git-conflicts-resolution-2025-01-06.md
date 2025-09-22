@@ -3,7 +3,11 @@
 ## Data: 2025-01-06
 
 ## Contesto
+<<<<<<< HEAD
 Sono stati identificati e risolti conflitti Git in diversi file del progetto , coinvolgendo moduli Geo, User e tema Two.
+=======
+Sono stati identificati e risolti conflitti Git in diversi file del progetto SaluteOra, coinvolgendo moduli Geo, User e tema Two.
+>>>>>>> c4ec0fb6 (.)
 
 ## File Corretti
 
@@ -92,6 +96,7 @@ $res=Locality::query()
 
 ## Verifiche Post-Correzione
 
+<<<<<<< HEAD
 
 ### 2. Validazione PHPStan
 ```bash
@@ -200,3 +205,7 @@ php artisan lang:check
 **Ultimo aggiornamento**: 2025-01-06
 **Autore**: Sistema di correzione automatica
 **Stato**: ✅ Completato
+=======
+### 1. Controllo Conflitti
+```bash
+>>>>>>> c4ec0fb6 (.)

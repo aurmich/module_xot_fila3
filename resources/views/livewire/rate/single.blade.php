@@ -1,8 +1,11 @@
+<<<<<<< HEAD
 <?php
 
 declare(strict_types=1);
 
 ?>
+=======
+>>>>>>> c4ec0fb6 (.)
 <div>
     @php
       Theme::add('xot::css/adorable_rating.css');

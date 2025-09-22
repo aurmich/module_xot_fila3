@@ -1,5 +1,6 @@
 <?php
 
+<<<<<<< HEAD
 declare(strict_types=1);
 
 
@@ -11,3 +12,15 @@ return [
         ],
     ],
 ];
+=======
+return array (
+  'sections' => 
+  array (
+    'empty' => 
+    array (
+      'label' => '',
+      'heading' => '',
+    ),
+  ),
+);
+>>>>>>> c4ec0fb6 (.)

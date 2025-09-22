@@ -602,14 +602,20 @@ Consulta l'esempio completo all'inizio di questo documento per una implementazio
 
 ### Esempio corretto
 ```php
+<<<<<<< HEAD
 protected static string $view = '<nome progetto>::filament.widgets.find-doctor-and-appointment';
+=======
+>>>>>>> c4ec0fb6 (.)
 protected static string $view = 'saluteora::filament.widgets.find-doctor-and-appointment';
 TextInput::make('location')->required()
 ```
 
 ### Esempio errato
 ```php
+<<<<<<< HEAD
 protected static string $view = '<nome progetto>::widgets.find-doctor-and-appointment';
+=======
+>>>>>>> c4ec0fb6 (.)
 protected static string $view = 'saluteora::widgets.find-doctor-and-appointment';
 TextInput::make('location')->label(__('modulo::campo.label'))
 ```

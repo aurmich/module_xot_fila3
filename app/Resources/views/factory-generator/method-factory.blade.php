@@ -1,8 +1,11 @@
+<<<<<<< HEAD
 <?php
 
 declare(strict_types=1);
 
 ?>
+=======
+>>>>>>> c4ec0fb6 (.)
 use Faker\Generator as Faker;
 @isset($properties['remember_token'])
     use Illuminate\Support\Str;

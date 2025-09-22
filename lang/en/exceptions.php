@@ -1,13 +1,21 @@
 <?php
 
+<<<<<<< HEAD
 declare(strict_types=1);
 
 
+=======
+>>>>>>> c4ec0fb6 (.)
 return [
     'backend' => [
         'takeaway' => [
             'newsletterSubscribe' => [
+<<<<<<< HEAD
                 'messages' => [],
+=======
+                'messages' => [
+                ],
+>>>>>>> c4ec0fb6 (.)
             ],
             'category' => [
                 'create_error' => 'Create Error',

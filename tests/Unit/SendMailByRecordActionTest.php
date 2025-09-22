@@ -2,6 +2,7 @@
 
 declare(strict_types=1);
 
+<<<<<<< HEAD
 use Illuminate\Database\Eloquent\Model;
 use Modules\Xot\Actions\Mail\SendMailByRecordAction;
 
@@ -24,5 +25,13 @@ it('throws if record has no email', function (): void {
     };
 
     expect(fn() => app(SendMailByRecordAction::class)->execute($record, \Illuminate\Mail\Mailable::class))
+=======
+namespace Modules\Xot\Tests\Unit\SendMailByRecordActionTest;
+
+
+    };
+
+    expect(fn () => app(SendMailByRecordAction::class)->execute($record, \Illuminate\Mail\Mailable::class))
+>>>>>>> c4ec0fb6 (.)
         ->toThrow(InvalidArgumentException::class);
 });

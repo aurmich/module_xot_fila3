@@ -20,6 +20,7 @@ use Webmozart\Assert\Assert;
  */
 trait HasCustomRelations
 {
+<<<<<<< HEAD
     public function customRelation(
         string $related,
         \Closure $baseConstraints,
@@ -29,6 +30,13 @@ trait HasCustomRelations
         $instance = new $related();
         // Call to an undefined method object::newQuery()
         Assert::isInstanceOf($instance, Model::class, '[' . __LINE__ . '][' . class_basename($this) . ']');
+=======
+    public function customRelation(string $related, \Closure $baseConstraints, ?\Closure $eagerConstraints = null, ?\Closure $eagerMatcher = null): CustomRelation
+    {
+        $instance = new $related();
+        // Call to an undefined method object::newQuery()
+        Assert::isInstanceOf($instance, Model::class, '['.__LINE__.']['.class_basename($this).']');
+>>>>>>> c4ec0fb6 (.)
         $query = $instance->newQuery();
 
         return new CustomRelation($query, $this, $baseConstraints, $eagerConstraints, $eagerMatcher);

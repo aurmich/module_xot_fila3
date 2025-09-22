@@ -2,6 +2,7 @@
 
 declare(strict_types=1);
 
+<<<<<<< HEAD
 namespace Modules\Xot\Tests\Feature\Filament;
 
 use Filament\Resources\Resource;
@@ -20,6 +21,14 @@ beforeEach(function () {
         protected static null|string $navigationGroup = 'Test Group';
 
         protected static null|int $navigationSort = 1;
+=======
+namespace Modules\Xot\Tests\Feature\Filament\XotBaseResourceTest;
+
+namespace Modules\Xot\Tests\Feature\Filament;
+
+
+        protected static ?int $navigationSort = 1;
+>>>>>>> c4ec0fb6 (.)
     };
 });
 

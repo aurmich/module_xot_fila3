@@ -1,5 +1,6 @@
 # Testing Best Practices - Laraxot Framework
 
+<<<<<<< HEAD
 ## 🏆 **Gold Standard Pattern**
 
 Basato sui successi misurabili dei test RegisterTypeWidgetTest.php (9/9 test passati) e RegisterTypeTest.php (10/14 test passati).
@@ -20,6 +21,8 @@ use Modules\{Module}\Filament\Widgets\{WidgetName};
 uses(\Modules\Xot\Tests\TestCase::class);
 
 // ✅ CRITICO: Mock XotData per ogni test
+=======
+>>>>>>> c4ec0fb6 (.)
 ## 🏆 Gold Standard per i Test
 
 - Preferire Pest a PHPUnit class-based.
@@ -41,13 +44,17 @@ beforeEach(function (): void {
     mockXotData();
 });
 
+<<<<<<< HEAD
 // ✅ CRITICO: Test diretti senza describe() o dataset()
+=======
+>>>>>>> c4ec0fb6 (.)
 test('widget can be rendered', function () {
     Livewire::test({WidgetName}::class)
         ->assertStatus(200);
 });
 ```
 
+<<<<<<< HEAD
 ### XotData Mock Pattern (Obbligatorio)
 
 ```php
@@ -231,6 +238,8 @@ app()->instance(\Modules\Xot\Datas\XotData::class, $mock);
 **Enforcement**: Obbligatorio per tutti i test  
 **Version**: 1.0 - Gold Standard
 **Last Update**: Dicembre 2024 
+=======
+>>>>>>> c4ec0fb6 (.)
 ### Esempio unit test semplice
 ```php
 <?php

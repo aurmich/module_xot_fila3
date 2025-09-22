@@ -109,9 +109,12 @@ class User extends Model {
 
 ## 5. Collegamenti
 - [.windsurf/rules/model-states.mdc](../../../.windsurf/rules/model-states.mdc)
+<<<<<<< HEAD
 - https://github.com/spatie/laravel-model-states
 
 
+=======
+>>>>>>> c4ec0fb6 (.)
 - [SaluteOra/docs/uso-label-filament.mdc](../../SaluteOra/docs/uso-label-filament.mdc)
 - https://github.com/spatie/laravel-model-states
 
@@ -132,7 +135,10 @@ Tutti i file di codice (Actions, Models, Controllers, ecc.) dei moduli Laravel D
 - Evita errori di caricamento e path
 - Facilita la manutenzione e la ricerca
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> c4ec0fb6 (.)
 ### Esempio
 ```php
 // Corretto
@@ -165,7 +171,10 @@ final class FetchEventsAction
 }
 ```
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> c4ec0fb6 (.)
 Vedi anche: [SaluteOra/docs/queueable-actions-guide.md](../../SaluteOra/docs/queueable-actions-guide.md)
 
 # Regola Namespace per Actions

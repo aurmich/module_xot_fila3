@@ -2,8 +2,13 @@
 
 declare(strict_types=1);
 
+<<<<<<< HEAD
 use Filament\Support\Colors\Color;
 use Modules\Xot\Datas\MetatagData;
+=======
+use Modules\Xot\Datas\MetatagData;
+use Filament\Support\Colors\Color;
+>>>>>>> c4ec0fb6 (.)
 
 /**
  * Test che la classe MetatagData possa essere istanziata correttamente.
@@ -23,6 +28,7 @@ test('getFilamentColors restituisce i colori Filament corretti', function () {
     $metatagData = new MetatagData();
     $colors = $metatagData->getFilamentColors();
 
+<<<<<<< HEAD
     expect($colors)
         ->toBeArray()
         ->and($colors)
@@ -31,6 +37,12 @@ test('getFilamentColors restituisce i colori Filament corretti', function () {
         ->toBe(Color::Red)
         ->and($colors['primary'])
         ->toBe(Color::Amber);
+=======
+    expect($colors)->toBeArray()
+        ->and($colors)->toHaveKeys(['danger', 'gray', 'info', 'primary', 'success', 'warning'])
+        ->and($colors['danger'])->toBe(Color::Red)
+        ->and($colors['primary'])->toBe(Color::Amber);
+>>>>>>> c4ec0fb6 (.)
 });
 
 /**
@@ -44,17 +56,32 @@ test('getColors gestisce correttamente i colori personalizzati', function () {
         'custom_color' => [
             'key' => 'custom_color',
             'color' => 'custom',
+<<<<<<< HEAD
             'hex' => '#FF5500',
         ],
         'primary' => [
             'key' => 'primary',
             'color' => 'amber',
         ],
+=======
+            'hex' => '#FF5500'
+        ],
+        'primary' => [
+            'key' => 'primary',
+            'color' => 'amber'
+        ]
+>>>>>>> c4ec0fb6 (.)
     ];
 
     $colors = $metatagData->getColors();
 
+<<<<<<< HEAD
     expect($colors)->toBeArray()->and($colors)->toHaveKey('custom_color')->and($colors)->toHaveKey('primary');
+=======
+    expect($colors)->toBeArray()
+        ->and($colors)->toHaveKey('custom_color')
+        ->and($colors)->toHaveKey('primary');
+>>>>>>> c4ec0fb6 (.)
 });
 
 /**
@@ -77,6 +104,7 @@ test('getLogoHeight restituisce il valore corretto', function () {
 test('Le proprietà hanno i valori di default corretti', function () {
     $metatagData = new MetatagData();
 
+<<<<<<< HEAD
     expect($metatagData->generator)
         ->toBe('xot')
         ->and($metatagData->charset)
@@ -87,4 +115,11 @@ test('Le proprietà hanno i valori di default corretti', function () {
         ->toBe('2em')
         ->and($metatagData->favicon)
         ->toBe('/favicon.ico');
+=======
+    expect($metatagData->generator)->toBe('xot')
+        ->and($metatagData->charset)->toBe('UTF-8')
+        ->and($metatagData->author)->toBe('xot')
+        ->and($metatagData->logo_height)->toBe('2em')
+        ->and($metatagData->favicon)->toBe('/favicon.ico');
+>>>>>>> c4ec0fb6 (.)
 });

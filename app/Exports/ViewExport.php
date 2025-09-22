@@ -19,16 +19,26 @@ class ViewExport implements FromView
      *
      * @var array<string>
      */
+<<<<<<< HEAD
     public null|array $fields = null;
 
     public null|string $transKey = null;
+=======
+    public ?array $fields = null;
+
+    public ?string $transKey = null;
+>>>>>>> c4ec0fb6 (.)
 
     /**
      * Summary of __construct.
      *
      * @param array<string> $fields
      */
+<<<<<<< HEAD
     public function __construct(View $view, null|string $transKey = null, null|array $fields = null)
+=======
+    public function __construct(View $view, ?string $transKey = null, ?array $fields = null)
+>>>>>>> c4ec0fb6 (.)
     {
         $this->view = $view;
         $this->transKey = $transKey;

@@ -8,8 +8,13 @@ declare(strict_types=1);
 
 namespace Modules\Xot\Actions\Filament;
 
+<<<<<<< HEAD
 use Filament\Forms\Components\Component;
 use Filament\Forms\Components\Field;
+=======
+use Filament\Forms\Components\Field;
+use Filament\Forms\Components\Component;
+>>>>>>> c4ec0fb6 (.)
 use Illuminate\Support\Arr;
 use Modules\Lang\Actions\SaveTransAction;
 use Modules\Xot\Actions\GetTransKeyAction;
@@ -34,7 +39,11 @@ class AutoLabelAction
         // Per i componenti Field di Filament
         if (method_exists($component, 'getName')) {
             $name = $component->getName();
+<<<<<<< HEAD
             return is_string($name) ? $name : ((string) $name);
+=======
+            return is_string($name) ? $name : (string) $name;
+>>>>>>> c4ec0fb6 (.)
         }
 
         // Per i componenti generali di Filament
@@ -62,7 +71,11 @@ class AutoLabelAction
      * Applica automaticamente le etichette ai componenti Filament.
      *
      * @param Field|Component $component Il componente a cui applicare l'etichetta
+<<<<<<< HEAD
      *
+=======
+     * 
+>>>>>>> c4ec0fb6 (.)
      * @return Field|Component Il componente con l'etichetta applicata
      */
     public function execute(Field|Component $component): Field|Component

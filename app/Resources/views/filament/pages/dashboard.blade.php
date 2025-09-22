@@ -1,8 +1,11 @@
+<<<<<<< HEAD
 <?php
 
 declare(strict_types=1);
 
 ?>
+=======
+>>>>>>> c4ec0fb6 (.)
 <x-filament-panels::page class="fi-dashboard-page">
     @if (method_exists($this, 'filtersForm'))
         {{ $this->filtersForm }}

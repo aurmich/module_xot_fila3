@@ -11,6 +11,10 @@ use Filament\Tables\Columns\TextColumn;
 use Modules\Xot\Filament\Resources\ExtraResource;
 use Modules\Xot\Filament\Resources\Pages\XotBaseListRecords;
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> c4ec0fb6 (.)
 /**
  * @see ExtraResource
  */
@@ -18,6 +22,7 @@ class ListExtras extends XotBaseListRecords
 {
     protected static string $resource = ExtraResource::class;
 
+<<<<<<< HEAD
     #[\Override]
     public function getTableColumns(): array
     {
@@ -26,13 +31,36 @@ class ListExtras extends XotBaseListRecords
             'model_type' => TextColumn::make('model_type')->searchable()->label('Model Type'),
             'model_id' => TextColumn::make('model_id')->sortable()->label('Model ID'),
             'extra_attributes' => TextColumn::make('extra_attributes')->searchable()->label('Extra Attributes'),
+=======
+    public function getTableColumns(): array
+    {
+        return [
+            'id' => TextColumn::make('id')
+                ->sortable()
+                ->label('ID'),
+
+            'model_type' => TextColumn::make('model_type')
+                ->searchable()
+                ->label('Model Type'),
+
+            'model_id' => TextColumn::make('model_id')
+                ->sortable()
+                ->label('Model ID'),
+
+            'extra_attributes' => TextColumn::make('extra_attributes')
+                ->searchable()
+                ->label('Extra Attributes'),
+>>>>>>> c4ec0fb6 (.)
         ];
     }
 
     /**
      * @return array<Tables\Filters\BaseFilter>
      */
+<<<<<<< HEAD
     #[\Override]
+=======
+>>>>>>> c4ec0fb6 (.)
     public function getTableFilters(): array
     {
         return [];
@@ -41,7 +69,10 @@ class ListExtras extends XotBaseListRecords
     /**
      * @return array<string, Tables\Actions\Action|Tables\Actions\ActionGroup>
      */
+<<<<<<< HEAD
     #[\Override]
+=======
+>>>>>>> c4ec0fb6 (.)
     public function getTableActions(): array
     {
         return [
@@ -52,7 +83,10 @@ class ListExtras extends XotBaseListRecords
     /**
      * @return array<string, Tables\Actions\BulkAction>
      */
+<<<<<<< HEAD
     #[\Override]
+=======
+>>>>>>> c4ec0fb6 (.)
     public function getTableBulkActions(): array
     {
         return [

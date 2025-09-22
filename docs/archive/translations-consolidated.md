@@ -18,7 +18,11 @@ Questo documento sostituisce e consolida **107+ file traduzioni duplicati** trov
 - Qualsiasi documentazione traduzioni specifica di modulo
 
 ### ✅ Unica Fonte di Verità
+<<<<<<< HEAD
 - **Questo file**: `/laravel/Modules/Xot/docs/translations-consolidated.md`
+=======
+- **Questo file**: `/laravel/Modules/Xot/project_docs/translations-consolidated.md`
+>>>>>>> c4ec0fb6 (.)
 - **File lang**: Solo nei singoli moduli (contenuto, non docs)
 
 ## Principi Fondamentali Universali
@@ -277,7 +281,10 @@ return [
 - **Campi comuni**: `patient_id`, `doctor_id`, `date`, `notes`
 - **Stati**: `scheduled`, `completed`, `cancelled`
 
+<<<<<<< HEAD
 ###  Module (CRITICO)
+=======
+>>>>>>> c4ec0fb6 (.)
 ### SaluteOra Module (CRITICO)
 - **Focus**: Core health platform, Appointments
 - **Campi comuni**: `appointment_id`, `patient_id`, `doctor_id`, `studio_id`
@@ -349,13 +356,19 @@ TextInput::make('name') // Label automatica da traduzione
 ### Controlli Automatici (Tutti i Moduli)
 ```bash
 # Controllo chiavi hardcoded (tutti i moduli)
+<<<<<<< HEAD
 for module in Activity Chart Cms FormBuilder Gdpr Geo Job Lang Media Notify SaluteMo  Tenant UI User Xot; do
+=======
+>>>>>>> c4ec0fb6 (.)
 for module in Activity Chart Cms FormBuilder Gdpr Geo Job Lang Media Notify SaluteMo SaluteOra Tenant UI User Xot; do
     php artisan translation:check-hardcoded --module=$module
 done
 
 # Validazione sintassi (tutti i moduli)
+<<<<<<< HEAD
 for module in Activity Chart Cms FormBuilder Gdpr Geo Job Lang Media Notify SaluteMo  Tenant UI User Xot; do
+=======
+>>>>>>> c4ec0fb6 (.)
 for module in Activity Chart Cms FormBuilder Gdpr Geo Job Lang Media Notify SaluteMo SaluteOra Tenant UI User Xot; do
     php artisan translation:validate-syntax --module=$module
 done
@@ -368,6 +381,7 @@ Tutti questi file sono DUPLICATI e vanno eliminati:
 
 ```bash
 # Activity
+<<<<<<< HEAD
 rm Modules/Activity/docs/translations.md
 
 # Chart
@@ -419,12 +433,61 @@ rm Modules/Lang/docs/translation_keys_best_practices.md
 rm Modules/Lang/docs/translation-preservation-rules.md
 rm Modules/Lang/docs/translation_standards_links.md
 rm Modules/Lang/docs/translation_notify_conversion.md
+=======
+rm Modules/Activity/project_docs/translations.md
+
+# Chart
+rm Modules/Chart/project_docs/translations.md
+
+# Cms
+rm Modules/Cms/project_docs/translations.md
+
+# FormBuilder
+rm Modules/FormBuilder/project_docs/translations.md
+
+# Job
+rm Modules/Job/project_docs/translations.md
+
+# Media
+rm Modules/Media/project_docs/translations.md
+
+# Tenant
+rm Modules/Tenant/project_docs/translations.md
+
+# UI
+rm Modules/UI/project_docs/translations.md
+rm Modules/UI/project_docs/translation-rules.md
+
+# SaluteOra
+rm Modules/SaluteOra/project_docs/translation-files-improvement.md
+rm Modules/SaluteOra/project_docs/translations.md
+rm Modules/SaluteOra/project_docs/translation_quality_standards.md
+rm Modules/SaluteOra/project_docs/translations-states-analysis.md
+rm Modules/SaluteOra/project_docs/translation-rules.md
+rm Modules/SaluteOra/project_docs/translation_standards.md
+rm Modules/SaluteOra/project_docs/translations-appointments.md
+
+# User
+rm Modules/User/project_docs/translations.md
+rm Modules/User/project_docs/translation_keys_rules.md
+rm Modules/User/project_docs/translation_best_practices.md
+
+# Lang
+rm Modules/Lang/project_docs/translation_keys_best_practices.md
+rm Modules/Lang/project_docs/translation-preservation-rules.md
+rm Modules/Lang/project_docs/translation_standards_links.md
+rm Modules/Lang/project_docs/translation_notify_conversion.md
+>>>>>>> c4ec0fb6 (.)
 
 # E tutti gli altri 57+ file duplicati...
 ```
 
 ### Mantenere Solo
+<<<<<<< HEAD
 - **Questo file**: `/laravel/Modules/Xot/docs/translations-consolidated.md`
+=======
+- **Questo file**: `/laravel/Modules/Xot/project_docs/translations-consolidated.md`
+>>>>>>> c4ec0fb6 (.)
 - **File lang**: Solo contenuto traduzioni nei singoli moduli
 
 ## Troubleshooting Universale

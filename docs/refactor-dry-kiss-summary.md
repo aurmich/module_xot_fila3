@@ -13,7 +13,11 @@
 - Manutenzione impossibile
 
 **Dopo il refactor:**
+<<<<<<< HEAD
 - ✅ **1 file centralizzato**: `/laravel/Modules/Xot/docs/phpstan-consolidated.md`
+=======
+- ✅ **1 file centralizzato**: `/laravel/Modules/Xot/project_docs/phpstan-consolidated.md`
+>>>>>>> c4ec0fb6 (.)
 - ✅ **99% riduzione duplicazioni**
 - ✅ **Single Source of Truth** implementato
 
@@ -37,7 +41,11 @@
 - Standard inconsistenti
 
 **Dopo il refactor:**
+<<<<<<< HEAD
 - ✅ **1 file centralizzato**: `/laravel/Modules/Xot/docs/translations-consolidated.md`
+=======
+- ✅ **1 file centralizzato**: `/laravel/Modules/Xot/project_docs/translations-consolidated.md`
+>>>>>>> c4ec0fb6 (.)
 - ✅ **99% riduzione duplicazioni**
 - ✅ **Regole universali** per tutti i moduli
 
@@ -58,7 +66,11 @@
 - Best practices frammentate
 
 **Dopo il refactor:**
+<<<<<<< HEAD
 - ✅ **1 file centralizzato**: `/laravel/Modules/Xot/docs/migrations-consolidated.md`
+=======
+- ✅ **1 file centralizzato**: `/laravel/Modules/Xot/project_docs/migrations-consolidated.md`
+>>>>>>> c4ec0fb6 (.)
 - ✅ **96% riduzione duplicazioni**
 - ✅ **Procedure universali** standardizzate
 
@@ -99,7 +111,10 @@
 | Media | 9+ | Asset management unificato |
 | Notify | 19+ | Notifiche standardizzate |
 | SaluteMo | 13+ | Business logic semplificata |
+<<<<<<< HEAD
 |  | 45+ | Core business centralizzato |
+=======
+>>>>>>> c4ec0fb6 (.)
 | SaluteOra | 45+ | Core business centralizzato |
 | Tenant | 7+ | Multi-tenancy unificata |
 | UI | 14+ | Componenti standardizzati |
@@ -122,7 +137,11 @@
 
 ### Documentazione Tecnica Centralizzata
 ```
+<<<<<<< HEAD
 /laravel/Modules/Xot/docs/
+=======
+/laravel/Modules/Xot/project_docs/
+>>>>>>> c4ec0fb6 (.)
 ├── phpstan-consolidated.md          # TUTTE le regole PHPStan
 ├── translations-consolidated.md     # TUTTE le regole traduzioni
 ├── migrations-consolidated.md       # TUTTE le regole migrazioni
@@ -139,7 +158,11 @@
 
 ### Documentazione Moduli (Solo Specifiche)
 ```
+<<<<<<< HEAD
 /laravel/Modules/{Module}/docs/
+=======
+/laravel/Modules/{Module}/project_docs/
+>>>>>>> c4ec0fb6 (.)
 ├── README.md                        # Overview modulo
 ├── api.md                          # API specifiche modulo
 └── features/                       # Funzionalità specifiche

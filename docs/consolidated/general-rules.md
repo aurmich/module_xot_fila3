@@ -1,6 +1,9 @@
+<<<<<<< HEAD
 # Regole Generali del Progetto 
 
 Questo documento contiene le regole generali che devono essere seguite in tutto il progetto  per garantire coerenza e qualità del codice.
+=======
+>>>>>>> c4ec0fb6 (.)
 # Regole Generali del Progetto SaluteOra
 
 Questo documento contiene le regole generali che devono essere seguite in tutto il progetto SaluteOra per garantire coerenza e qualità del codice.

@@ -12,7 +12,10 @@ class CacheLockPolicy extends XotBasePolicy
     /**
      * Determine whether the user can view any models.
      */
+<<<<<<< HEAD
     #[\Override]
+=======
+>>>>>>> c4ec0fb6 (.)
     public function viewAny(UserContract $user): bool
     {
         return $user->hasPermissionTo('cache_lock.viewAny');
@@ -21,7 +24,11 @@ class CacheLockPolicy extends XotBasePolicy
     /**
      * Determine whether the user can view the model.
      */
+<<<<<<< HEAD
     public function view(UserContract $user, CacheLock $_cache_lock): bool
+=======
+    public function view(UserContract $user, CacheLock $cache_lock): bool
+>>>>>>> c4ec0fb6 (.)
     {
         return $user->hasPermissionTo('cache_lock.view');
     }
@@ -37,7 +44,11 @@ class CacheLockPolicy extends XotBasePolicy
     /**
      * Determine whether the user can update the model.
      */
+<<<<<<< HEAD
     public function update(UserContract $user, CacheLock $_cache_lock): bool
+=======
+    public function update(UserContract $user, CacheLock $cache_lock): bool
+>>>>>>> c4ec0fb6 (.)
     {
         return $user->hasPermissionTo('cache_lock.update');
     }
@@ -45,7 +56,11 @@ class CacheLockPolicy extends XotBasePolicy
     /**
      * Determine whether the user can delete the model.
      */
+<<<<<<< HEAD
     public function delete(UserContract $user, CacheLock $_cache_lock): bool
+=======
+    public function delete(UserContract $user, CacheLock $cache_lock): bool
+>>>>>>> c4ec0fb6 (.)
     {
         return $user->hasPermissionTo('cache_lock.delete');
     }
@@ -53,7 +68,11 @@ class CacheLockPolicy extends XotBasePolicy
     /**
      * Determine whether the user can restore the model.
      */
+<<<<<<< HEAD
     public function restore(UserContract $user, CacheLock $_cache_lock): bool
+=======
+    public function restore(UserContract $user, CacheLock $cache_lock): bool
+>>>>>>> c4ec0fb6 (.)
     {
         return $user->hasPermissionTo('cache_lock.restore');
     }

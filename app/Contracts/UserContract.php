@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Modules\Xot\Contracts;
 
+<<<<<<< HEAD
 use Filament\Models\Contracts\FilamentUser;
 use Illuminate\Contracts\Auth\Access\Authorizable;
 use Illuminate\Contracts\Auth\Authenticatable;
@@ -22,6 +23,22 @@ use Spatie\Permission\Exceptions\GuardDoesNotMatch;
 use Spatie\Permission\Exceptions\PermissionDoesNotExist;
 use Spatie\Permission\Exceptions\RoleAlreadyExists;
 use Spatie\Permission\Exceptions\RoleDoesNotExist;
+=======
+use Laravel\Passport\Token;
+use Spatie\MediaLibrary\HasMedia;
+use Spatie\Permission\Contracts\Role;
+use Illuminate\Database\Eloquent\Model;
+use Filament\Models\Contracts\FilamentUser;
+use Modules\User\Contracts\HasTeamsContract;
+use Illuminate\Contracts\Auth\Authenticatable;
+use Illuminate\Contracts\Auth\MustVerifyEmail;
+use Illuminate\Contracts\Auth\CanResetPassword;
+use Illuminate\Contracts\Auth\Access\Authorizable;
+use Illuminate\Database\Eloquent\Relations\HasOne;
+use Spatie\MediaLibrary\MediaCollections\FileAdder;
+use Illuminate\Database\Eloquent\Relations\MorphMany;
+use Illuminate\Database\Eloquent\Relations\BelongsToMany;
+>>>>>>> c4ec0fb6 (.)
 
 // use Filament\Models\Contracts\HasTenants;
 
@@ -49,6 +66,7 @@ use Spatie\Permission\Exceptions\RoleDoesNotExist;
  *
  * @mixin \Eloquent
  */
+<<<<<<< HEAD
 interface UserContract extends
     Authenticatable,
     Authorizable,
@@ -66,6 +84,16 @@ interface UserContract extends
      * public function areas();
      * public function avatar();
      */
+=======
+interface UserContract extends Authenticatable, Authorizable, CanResetPassword, FilamentUser, HasTeamsContract, ModelContract, MustVerifyEmail, PassportHasApiTokensContract,HasMedia
+{
+    /*
+    public function isSuperAdmin();
+    public function name();
+    public function areas();
+    public function avatar();
+    */
+>>>>>>> c4ec0fb6 (.)
     public function profile(): HasOne;
 
     /**
@@ -97,16 +125,23 @@ interface UserContract extends
      *
      * @return mixed|int|string
      */
+<<<<<<< HEAD
     #[\Override]
+=======
+>>>>>>> c4ec0fb6 (.)
     public function getKey();
 
     /**
      * Determine if the model has (one of) the given role(s).
      */
+<<<<<<< HEAD
     public function hasRole(
         string|int|array|Role|\Illuminate\Support\Collection $roles,
         null|string $guard = null,
     ): bool;
+=======
+    public function hasRole(string|int|array|Role|\Illuminate\Support\Collection $roles, ?string $guard = null): bool;
+>>>>>>> c4ec0fb6 (.)
 
     /**
      * Assign the given role to the model.
@@ -123,7 +158,10 @@ interface UserContract extends
      * @return self
      */
     public function removeRole($role);
+<<<<<<< HEAD
 
+=======
+>>>>>>> c4ec0fb6 (.)
     /**
      * Get the current access token being used by the user.
      *
@@ -148,6 +186,7 @@ interface UserContract extends
      *
      */
     //public function consents(): MorphMany;
+<<<<<<< HEAD
 
     /**
      * Determine if the role may perform the given permission.
@@ -157,4 +196,7 @@ interface UserContract extends
      * @throws PermissionDoesNotExist|GuardDoesNotMatch
      */
     public function hasPermissionTo($permission, null|string $guardName = null): bool;
+=======
+    
+>>>>>>> c4ec0fb6 (.)
 }

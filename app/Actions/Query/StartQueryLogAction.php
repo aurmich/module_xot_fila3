@@ -24,10 +24,17 @@ class StartQueryLogAction
                 'driver' => 'daily',
                 'path' => storage_path('logs/querylog.log'),
             ]);
+<<<<<<< HEAD
             $log->debug('query : ' . $sql);
             $log->debug('time ' . $time);
             $log->debug('connection ' . $connection);
             $log->debug('bindings ' . print_r($query->bindings, true));
+=======
+            $log->debug('query : '.$sql);
+            $log->debug('time '.$time);
+            $log->debug('connection '.$connection);
+            $log->debug('bindings '.print_r($query->bindings, true));
+>>>>>>> c4ec0fb6 (.)
         });
     }
 }

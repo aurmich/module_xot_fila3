@@ -63,7 +63,11 @@ abstract class BaseExtra extends BaseModel implements ExtraContract
 
     public function scopeWithExtraAttributes(): Builder
     {
+<<<<<<< HEAD
         Assert::notNull($this->extra_attributes, '[' . __FILE__ . '][' . __LINE__ . ']');
+=======
+        Assert::notNull($this->extra_attributes, '['.__FILE__.']['.__LINE__.']');
+>>>>>>> c4ec0fb6 (.)
 
         return $this->extra_attributes->modelScope();
     }
@@ -73,14 +77,25 @@ abstract class BaseExtra extends BaseModel implements ExtraContract
      *
      * @return array<string, string>
      */
+<<<<<<< HEAD
     #[\Override]
+=======
+>>>>>>> c4ec0fb6 (.)
     protected function casts(): array
     {
         return [
             'extra_attributes' => SchemalessAttributes::class,
+<<<<<<< HEAD
             'created_at' => 'datetime',
             'updated_at' => 'datetime',
             'deleted_at' => 'datetime',
+=======
+
+            'created_at' => 'datetime',
+            'updated_at' => 'datetime',
+            'deleted_at' => 'datetime',
+
+>>>>>>> c4ec0fb6 (.)
             'updated_by' => 'string',
             'created_by' => 'string',
             'deleted_by' => 'string',

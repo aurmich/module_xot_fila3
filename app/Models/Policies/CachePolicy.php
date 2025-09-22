@@ -12,7 +12,10 @@ class CachePolicy extends XotBasePolicy
     /**
      * Determine whether the user can view any models.
      */
+<<<<<<< HEAD
     #[\Override]
+=======
+>>>>>>> c4ec0fb6 (.)
     public function viewAny(UserContract $user): bool
     {
         return $user->hasPermissionTo('cache.viewAny');
@@ -21,7 +24,11 @@ class CachePolicy extends XotBasePolicy
     /**
      * Determine whether the user can view the model.
      */
+<<<<<<< HEAD
     public function view(UserContract $user, Cache $_cache): bool
+=======
+    public function view(UserContract $user, Cache $cache): bool
+>>>>>>> c4ec0fb6 (.)
     {
         return $user->hasPermissionTo('cache.view');
     }
@@ -37,7 +44,11 @@ class CachePolicy extends XotBasePolicy
     /**
      * Determine whether the user can update the model.
      */
+<<<<<<< HEAD
     public function update(UserContract $user, Cache $_cache): bool
+=======
+    public function update(UserContract $user, Cache $cache): bool
+>>>>>>> c4ec0fb6 (.)
     {
         return $user->hasPermissionTo('cache.update');
     }
@@ -45,7 +56,11 @@ class CachePolicy extends XotBasePolicy
     /**
      * Determine whether the user can delete the model.
      */
+<<<<<<< HEAD
     public function delete(UserContract $user, Cache $_cache): bool
+=======
+    public function delete(UserContract $user, Cache $cache): bool
+>>>>>>> c4ec0fb6 (.)
     {
         return $user->hasPermissionTo('cache.delete');
     }
@@ -53,7 +68,11 @@ class CachePolicy extends XotBasePolicy
     /**
      * Determine whether the user can restore the model.
      */
+<<<<<<< HEAD
     public function restore(UserContract $user, Cache $_cache): bool
+=======
+    public function restore(UserContract $user, Cache $cache): bool
+>>>>>>> c4ec0fb6 (.)
     {
         return $user->hasPermissionTo('cache.restore');
     }
@@ -66,3 +85,7 @@ class CachePolicy extends XotBasePolicy
         return $user->hasPermissionTo('cache.forceDelete');
     }
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> c4ec0fb6 (.)

@@ -14,7 +14,11 @@ class GetStrBetweenStartsWithAction
     {
         $pos = mb_strpos($body, $start);
         if (false === $pos) {
+<<<<<<< HEAD
             throw new \Exception("Cannot find {$start} in {$body} [" . __LINE__ . '][' . __FILE__ . ']');
+=======
+            throw new \Exception("Cannot find $start in $body [".__LINE__.']['.__FILE__.']');
+>>>>>>> c4ec0fb6 (.)
         }
         $pos1 = mb_strpos($body, $close, $pos);
 

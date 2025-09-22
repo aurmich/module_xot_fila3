@@ -7,6 +7,7 @@ namespace Modules\Xot\Filament\Resources;
 use Filament\Forms\Components\KeyValue;
 use Filament\Forms\Components\TextInput;
 use Modules\Xot\Filament\Resources\CacheResource\Pages;
+<<<<<<< HEAD
 use Modules\Xot\Filament\Resources\RelationManagers\XotBaseRelationManager;
 use Modules\Xot\Models\Cache;
 
@@ -31,6 +32,37 @@ class CacheResource extends XotBaseResource
     }
 
     #[\Override]
+=======
+use Modules\Xot\Models\Cache;
+use Modules\Xot\Filament\Resources\RelationManagers\XotBaseRelationManager;
+
+class CacheResource extends XotBaseResource
+{
+    protected static ?string $model = Cache::class;
+
+    public static function getFormSchema(): array
+    {
+        return [
+            'key' => TextInput::make('key')
+                ->required()
+                ->maxLength(255),
+
+            'expiration' => TextInput::make('expiration')
+                ->required()
+                ->numeric(),
+
+            'value' => KeyValue::make('value')
+                ->columnSpanFull(),
+        ];
+    }
+
+    public static function getRelations(): array
+    {
+        return [
+        ];
+    }
+
+>>>>>>> c4ec0fb6 (.)
     public static function getPages(): array
     {
         return [

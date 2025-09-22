@@ -277,7 +277,10 @@ return [
 - **Campi comuni**: `patient_id`, `doctor_id`, `date`, `notes`
 - **Stati**: `scheduled`, `completed`, `cancelled`
 
+<<<<<<< HEAD
 ###  Module (CRITICO)
+=======
+>>>>>>> c4ec0fb6 (.)
 ### SaluteOra Module (CRITICO)
 - **Focus**: Core health platform, Appointments
 - **Campi comuni**: `appointment_id`, `patient_id`, `doctor_id`, `studio_id`
@@ -349,13 +352,19 @@ TextInput::make('name') // Label automatica da traduzione
 ### Controlli Automatici (Tutti i Moduli)
 ```bash
 # Controllo chiavi hardcoded (tutti i moduli)
+<<<<<<< HEAD
 for module in Activity Chart Cms FormBuilder Gdpr Geo Job Lang Media Notify SaluteMo  Tenant UI User Xot; do
+=======
+>>>>>>> c4ec0fb6 (.)
 for module in Activity Chart Cms FormBuilder Gdpr Geo Job Lang Media Notify SaluteMo SaluteOra Tenant UI User Xot; do
     php artisan translation:check-hardcoded --module=$module
 done
 
 # Validazione sintassi (tutti i moduli)
+<<<<<<< HEAD
 for module in Activity Chart Cms FormBuilder Gdpr Geo Job Lang Media Notify SaluteMo  Tenant UI User Xot; do
+=======
+>>>>>>> c4ec0fb6 (.)
 for module in Activity Chart Cms FormBuilder Gdpr Geo Job Lang Media Notify SaluteMo SaluteOra Tenant UI User Xot; do
     php artisan translation:validate-syntax --module=$module
 done
@@ -392,6 +401,7 @@ rm Modules/Tenant/project_docs/translations.md
 rm Modules/UI/project_docs/translations.md
 rm Modules/UI/project_docs/translation-rules.md
 
+<<<<<<< HEAD
 # Modulo Generico
 rm Modules/<nome modulo>/docs/translation-files-improvement.md
 rm Modules/<nome modulo>/docs/translations.md
@@ -400,6 +410,8 @@ rm Modules/<nome modulo>/docs/translations-states-analysis.md
 rm Modules/<nome modulo>/docs/translation-rules.md
 rm Modules/<nome modulo>/docs/translation_standards.md
 rm Modules/<nome modulo>/docs/translations-appointments.md
+=======
+>>>>>>> c4ec0fb6 (.)
 # SaluteOra
 rm Modules/SaluteOra/project_docs/translation-files-improvement.md
 rm Modules/SaluteOra/project_docs/translations.md

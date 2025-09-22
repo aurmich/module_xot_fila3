@@ -20,8 +20,15 @@ trait HasTableFunctionsTrait
         return [
             'id' => TextColumn::make('id'),
             'name' => TextColumn::make('name'),
+<<<<<<< HEAD
             'created_at' => TextColumn::make('created_at')->dateTime(),
             'updated_at' => TextColumn::make('updated_at')->dateTime(),
+=======
+            'created_at' => TextColumn::make('created_at')
+                ->dateTime(),
+            'updated_at' => TextColumn::make('updated_at')
+                ->dateTime(),
+>>>>>>> c4ec0fb6 (.)
         ];
     }
 
@@ -35,12 +42,19 @@ trait HasTableFunctionsTrait
         return [
             'edit' => Action::make('edit')
                 ->label('Modifica')
+<<<<<<< HEAD
                 ->url(fn($record): string => route('filament.resources.' . $this->getResourceSlug() . '.edit', [
                     'record' => $record,
                 ])),
             'delete' => Action::make('delete')
                 ->label('Elimina')
                 ->action(fn($record) => $record->delete())
+=======
+                ->url(fn ($record): string => route('filament.resources.' . $this->getResourceSlug() . '.edit', ['record' => $record])),
+            'delete' => Action::make('delete')
+                ->label('Elimina')
+                ->action(fn ($record) => $record->delete())
+>>>>>>> c4ec0fb6 (.)
                 ->requiresConfirmation(),
         ];
     }
@@ -55,7 +69,11 @@ trait HasTableFunctionsTrait
         return [
             'delete' => BulkAction::make('delete')
                 ->label('Elimina selezionati')
+<<<<<<< HEAD
                 ->action(fn($records) => $records->each->delete())
+=======
+                ->action(fn ($records) => $records->each->delete())
+>>>>>>> c4ec0fb6 (.)
                 ->requiresConfirmation(),
         ];
     }

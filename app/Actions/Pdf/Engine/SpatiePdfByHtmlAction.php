@@ -32,7 +32,11 @@ class SpatiePdfByHtmlAction
 
         return match ($out) {
             'download' => response()->download($path, $filename, $headers),
+<<<<<<< HEAD
             'content' => $html2pdf->output($path, 'S'), // D
+=======
+            'content' => $html2pdf->output($path, 'S'),  // D
+>>>>>>> c4ec0fb6 (.)
             default => $path,
         };
     }

@@ -11,10 +11,18 @@ namespace Modules\Xot\Console\Commands;
 use Illuminate\Console\Command;
 use Illuminate\Support\Carbon;
 use Illuminate\Support\Str;
+<<<<<<< HEAD
 use Webmozart\Assert\Assert;
 
 use function Safe\exec;
 
+=======
+
+use function Safe\exec;
+
+use Webmozart\Assert\Assert;
+
+>>>>>>> c4ec0fb6 (.)
 class DatabaseBackUpCommand extends Command
 {
     /**
@@ -36,23 +44,37 @@ class DatabaseBackUpCommand extends Command
      *
      * @return void
      */
+<<<<<<< HEAD
     
+=======
+    public function __construct()
+    {
+        parent::__construct();
+    }
+>>>>>>> c4ec0fb6 (.)
 
     /**
      * Execute the console command.
      */
     public function handle(): void
     {
+<<<<<<< HEAD
         $filename = 'backup-' . Carbon::now()->format('Y-m-d') . '.gz';
         $backup_path = storage_path('app/backup/' . $filename);
         Assert::string(
             $backup_path = Str::replace(['/', '\\'], [\DIRECTORY_SEPARATOR, \DIRECTORY_SEPARATOR], $backup_path),
             'wip',
         );
+=======
+        $filename = 'backup-'.Carbon::now()->format('Y-m-d').'.gz';
+        $backup_path = storage_path('app/backup/'.$filename);
+        Assert::string($backup_path = Str::replace(['/', '\\'], [\DIRECTORY_SEPARATOR, \DIRECTORY_SEPARATOR], $backup_path), 'wip');
+>>>>>>> c4ec0fb6 (.)
         Assert::string($user = config('database.connections.mysql.username'));
         Assert::string($password = config('database.connections.mysql.password'));
         Assert::string($host = config('database.connections.mysql.host'));
         Assert::string($database = config('database.connections.mysql.database'));
+<<<<<<< HEAD
         $command =
             'mysqldump --user=' .
             $user .
@@ -64,6 +86,9 @@ class DatabaseBackUpCommand extends Command
             $database .
             '  | gzip > ' .
             $backup_path;
+=======
+        $command = 'mysqldump --user='.$user.' --password='.$password.' --host='.$host.' '.$database.'  | gzip > '.$backup_path;
+>>>>>>> c4ec0fb6 (.)
 
         $returnVar = null;
         $output = null;

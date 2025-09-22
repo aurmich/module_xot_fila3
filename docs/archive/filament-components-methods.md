@@ -96,6 +96,11 @@ Tabs\Tab::make('tab_name')
    - Testare i componenti prima del deploy
 
 ## Collegamenti
+<<<<<<< HEAD
 - [Filament Forms Documentation](https://filamentphp.com/docs/forms)
 - [Tabs Component](https://filamentphp.com/docs/forms/layout#tabs)
+=======
+- [Filament Forms Documentation](https://filamentphp.com/project_docs/forms)
+- [Tabs Component](https://filamentphp.com/project_docs/forms/layout#tabs)
+>>>>>>> c4ec0fb6 (.)
 - [Best Practices](filament-best-practices.md) 

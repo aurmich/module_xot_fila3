@@ -12,7 +12,10 @@ class InformationSchemaTablePolicy extends XotBasePolicy
     /**
      * Determine whether the user can view any models.
      */
+<<<<<<< HEAD
     #[\Override]
+=======
+>>>>>>> c4ec0fb6 (.)
     public function viewAny(UserContract $user): bool
     {
         return $user->hasPermissionTo('information_schema_table.viewAny');
@@ -21,7 +24,11 @@ class InformationSchemaTablePolicy extends XotBasePolicy
     /**
      * Determine whether the user can view the model.
      */
+<<<<<<< HEAD
     public function view(UserContract $user, InformationSchemaTable $_information_schema_table): bool
+=======
+    public function view(UserContract $user, InformationSchemaTable $information_schema_table): bool
+>>>>>>> c4ec0fb6 (.)
     {
         return $user->hasPermissionTo('information_schema_table.view');
     }
@@ -37,7 +44,11 @@ class InformationSchemaTablePolicy extends XotBasePolicy
     /**
      * Determine whether the user can update the model.
      */
+<<<<<<< HEAD
     public function update(UserContract $user, InformationSchemaTable $_information_schema_table): bool
+=======
+    public function update(UserContract $user, InformationSchemaTable $information_schema_table): bool
+>>>>>>> c4ec0fb6 (.)
     {
         return $user->hasPermissionTo('information_schema_table.update');
     }
@@ -45,7 +56,11 @@ class InformationSchemaTablePolicy extends XotBasePolicy
     /**
      * Determine whether the user can delete the model.
      */
+<<<<<<< HEAD
     public function delete(UserContract $user, InformationSchemaTable $_information_schema_table): bool
+=======
+    public function delete(UserContract $user, InformationSchemaTable $information_schema_table): bool
+>>>>>>> c4ec0fb6 (.)
     {
         return $user->hasPermissionTo('information_schema_table.delete');
     }
@@ -53,7 +68,11 @@ class InformationSchemaTablePolicy extends XotBasePolicy
     /**
      * Determine whether the user can restore the model.
      */
+<<<<<<< HEAD
     public function restore(UserContract $user, InformationSchemaTable $_information_schema_table): bool
+=======
+    public function restore(UserContract $user, InformationSchemaTable $information_schema_table): bool
+>>>>>>> c4ec0fb6 (.)
     {
         return $user->hasPermissionTo('information_schema_table.restore');
     }

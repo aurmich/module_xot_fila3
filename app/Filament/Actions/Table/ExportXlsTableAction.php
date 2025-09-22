@@ -22,6 +22,7 @@ class ExportXlsTableAction extends Action
     {
         parent::setUp();
         $this->translateLabel()
+<<<<<<< HEAD
             ->tooltip(__('xot::actions.export_xls'))
             // ->icon('fas-file-excel')
             ->icon('heroicon-o-arrow-down-tray')
@@ -32,6 +33,15 @@ class ExportXlsTableAction extends Action
                     '-' .
                     collect($livewire->tableFilters)->flatten()->implode('-') .
                     '.xlsx';
+=======
+            
+            ->tooltip(__('xot::actions.export_xls'))
+             // ->icon('fas-file-excel')
+            ->icon('heroicon-o-arrow-down-tray')
+            ->action(static function (RelationManager $livewire) {
+                $livewire_class = $livewire::class;
+                $filename = class_basename($livewire).'-'.collect($livewire->tableFilters)->flatten()->implode('-').'.xlsx';
+>>>>>>> c4ec0fb6 (.)
                 $transKey = app(GetTransKeyAction::class)->execute($livewire_class);
                 $transKey .= '.fields';
                 $query = $livewire->getFilteredTableQuery();
@@ -42,7 +52,11 @@ class ExportXlsTableAction extends Action
                 if (method_exists($livewire_class, 'getXlsFields')) {
                     $rawFields = $livewire_class::getXlsFields($livewire->tableFilters);
                     Assert::isArray($rawFields);
+<<<<<<< HEAD
 
+=======
+                    
+>>>>>>> c4ec0fb6 (.)
                     // Ensure fields are properly formatted as array<int, string>
                     $fields = [];
                     foreach ($rawFields as $key => $field) {
@@ -58,7 +72,11 @@ class ExportXlsTableAction extends Action
             });
     }
 
+<<<<<<< HEAD
     public static function getDefaultName(): null|string
+=======
+    public static function getDefaultName(): ?string
+>>>>>>> c4ec0fb6 (.)
     {
         return 'export_xls';
     }

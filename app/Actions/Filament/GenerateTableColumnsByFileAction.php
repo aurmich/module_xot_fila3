@@ -34,23 +34,38 @@ class GenerateTableColumnsByFileAction
      * Genera colonne per tabelle e form Filament basate su un file di risorsa.
      *
      * @param File $file Il file della risorsa Filament
+<<<<<<< HEAD
      *
+=======
+     * 
+>>>>>>> c4ec0fb6 (.)
      * @return void
      */
     public function execute(File $file): void
     {
+<<<<<<< HEAD
         if (!$file->isFile()) {
             return;
         }
         if (!\in_array($file->getExtension(), ['php'], false)) {
+=======
+        if (! $file->isFile()) {
+            return;
+        }
+        if (! \in_array($file->getExtension(), ['php'], false)) {
+>>>>>>> c4ec0fb6 (.)
             return;
         }
         $filename = $file->getPathname();
         $class_name = Str::replace(base_path('Modules/'), 'Modules/', $filename);
+<<<<<<< HEAD
         Assert::string(
             $class_name = Str::replace('/', '\\', $class_name),
             '[' . __LINE__ . '][' . class_basename($this) . ']',
         );
+=======
+        Assert::string($class_name = Str::replace('/', '\\', $class_name), '['.__LINE__.']['.class_basename($this).']');
+>>>>>>> c4ec0fb6 (.)
         $class_name = Str::substr($class_name, 0, -4);
 
         // Verifichiamo che la classe esista
@@ -77,15 +92,29 @@ class GenerateTableColumnsByFileAction
         // *
         $body = app(GetMethodBodyAction::class)->execute($class_name, 'table');
         $body1 = app(GetStrBetweenStartsWithAction::class)->execute($body, '->columns(', '(', ')');
+<<<<<<< HEAD
         $body_new = '->columns([' . chr(13) . $this->getResourceTableColumns($modelClass) . chr(13) . '])';
         $body_up = Str::of($body)->replace($body1, $body_new)->toString();
+=======
+        $body_new = '->columns(['.chr(13).$this->getResourceTableColumns($modelClass).chr(13).'])';
+        $body_up = Str::of($body)
+            ->replace($body1, $body_new)
+            ->toString();
+>>>>>>> c4ec0fb6 (.)
         $content_new = Str::of($file->getContents())->replace($body, $body_up)->toString();
         LaravelFile::put($filename, $content_new);
         // -------------------- FORM ------------------------------
         $body = app(GetMethodBodyAction::class)->execute($class_name, 'form');
         $body1 = app(GetStrBetweenStartsWithAction::class)->execute($body, '->schema(', '(', ')');
+<<<<<<< HEAD
         $body_new = '->schema([' . chr(13) . $this->getResourceFormSchema($modelClass) . chr(13) . '])';
         $body_up = Str::of($body)->replace($body1, $body_new)->toString();
+=======
+        $body_new = '->schema(['.chr(13).$this->getResourceFormSchema($modelClass).chr(13).'])';
+        $body_up = Str::of($body)
+            ->replace($body1, $body_new)
+            ->toString();
+>>>>>>> c4ec0fb6 (.)
         $content_new = Str::of($file->getContents())->replace($body, $body_up)->toString();
         LaravelFile::put($filename, $content_new);
         // -----------------------------------------------------
@@ -95,19 +124,32 @@ class GenerateTableColumnsByFileAction
             $fillable = $modelInstance->getFillable();
 
             // Verifichiamo che $fillable sia un array e contenga 'anno'
+<<<<<<< HEAD
             if (is_array($fillable) && in_array('anno', $fillable, strict: true)) {
+=======
+            if (is_array($fillable) && in_array('anno', $fillable)) {
+>>>>>>> c4ec0fb6 (.)
                 $body = app(GetMethodBodyAction::class)->execute($class_name, 'table');
                 $body1 = app(GetStrBetweenStartsWithAction::class)->execute($body, '->filters(', '(', ')');
                 $body_new = "->filters([
                         app(\Modules\Xot\Actions\Filament\Filter\GetYearFilter::class)->execute('anno',intval(date('Y')) - 3,intval(date('Y'))),
                     ],layout: \Filament\Tables\Enums\FiltersLayout::AboveContent)
                     ->persistFiltersInSession()";
+<<<<<<< HEAD
                 $body_up = Str::of($body)->replace($body1, $body_new)->toString();
+=======
+                $body_up = Str::of($body)
+                    ->replace($body1, $body_new)
+                    ->toString();
+>>>>>>> c4ec0fb6 (.)
                 $content_new = Str::of($file->getContents())->replace($body, $body_up)->toString();
                 LaravelFile::put($filename, $content_new);
             }
         }
+<<<<<<< HEAD
 
+=======
+>>>>>>> c4ec0fb6 (.)
         // */
     }
 
@@ -115,7 +157,11 @@ class GenerateTableColumnsByFileAction
      * Mostra informazioni di debug su un file.
      *
      * @param File $file Il file da analizzare
+<<<<<<< HEAD
      *
+=======
+     * 
+>>>>>>> c4ec0fb6 (.)
      * @return void
      */
     public function ddFile(File $file): void

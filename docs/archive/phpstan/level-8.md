@@ -11,9 +11,13 @@ Trovati 4 errori al livello 8.
 
 ## Errori e suggerimenti
 
+<<<<<<< HEAD
 ### File: `/var/www/html/_bases/base_techplanner_fila3_mono/laravel/Modules/Xot/app/Actions/Export/ExportXlsByView.php`
 ### File: `/var/www/html/saluteora/laravel/Modules/Xot/app/Actions/Export/ExportXlsByView.php`
 ### File: `/var/www/html/_bases/base_techplanner_fila3_mono/laravel/Modules/Xot/app/Actions/Export/ExportXlsByView.php`
+=======
+### File: `/var/www/html/saluteora/laravel/Modules/Xot/app/Actions/Export/ExportXlsByView.php`
+>>>>>>> c4ec0fb6 (.)
 
 #### Linea 40: Syntax error, unexpected T_SR on line 40
 
@@ -31,9 +35,13 @@ Trovati 4 errori al livello 8.
 - Le variabili siano inizializzate prima dell'uso
 - I nomi di metodi e proprietà siano corretti
 
+<<<<<<< HEAD
 ### File: `/var/www/html/_bases/base_techplanner_fila3_mono/laravel/Modules/Xot/app/Actions/View/GetViewByClassAction.php`
 ### File: `/var/www/html/saluteora/laravel/Modules/Xot/app/Actions/View/GetViewByClassAction.php`
 ### File: `/var/www/html/_bases/base_techplanner_fila3_mono/laravel/Modules/Xot/app/Actions/View/GetViewByClassAction.php`
+=======
+### File: `/var/www/html/saluteora/laravel/Modules/Xot/app/Actions/View/GetViewByClassAction.php`
+>>>>>>> c4ec0fb6 (.)
 
 #### Linea 47: Syntax error, unexpected T_SR on line 47
 
@@ -61,6 +69,7 @@ aurmich/dev
 aurmich/dev
 
 ## Collegamenti tra versioni di level_8.md
+<<<<<<< HEAD
 * [level_8.md](laravel/Modules/Chart/docs/phpstan/level_8.md)
 * [level_8.md](laravel/Modules/Reporting/docs/phpstan/level_8.md)
 * [level_8.md](laravel/Modules/Gdpr/docs/phpstan/level_8.md)
@@ -76,4 +85,21 @@ aurmich/dev
 * [level_8.md](laravel/Modules/Activity/docs/phpstan/level_8.md)
 * [level_8.md](laravel/Modules/Patient/docs/phpstan/level_8.md)
 * [level_8.md](laravel/Modules/Cms/docs/phpstan/level_8.md)
+=======
+* [level_8.md](laravel/Modules/Chart/project_docs/phpstan/level_8.md)
+* [level_8.md](laravel/Modules/Reporting/project_docs/phpstan/level_8.md)
+* [level_8.md](laravel/Modules/Gdpr/project_docs/phpstan/level_8.md)
+* [level_8.md](laravel/Modules/Notify/project_docs/phpstan/level_8.md)
+* [level_8.md](laravel/Modules/Xot/project_docs/phpstan/level_8.md)
+* [level_8.md](laravel/Modules/Dental/project_docs/phpstan/level_8.md)
+* [level_8.md](laravel/Modules/User/project_docs/phpstan/level_8.md)
+* [level_8.md](laravel/Modules/UI/project_docs/phpstan/level_8.md)
+* [level_8.md](laravel/Modules/Lang/project_docs/phpstan/level_8.md)
+* [level_8.md](laravel/Modules/Job/project_docs/phpstan/level_8.md)
+* [level_8.md](laravel/Modules/Media/project_docs/phpstan/level_8.md)
+* [level_8.md](laravel/Modules/Tenant/project_docs/phpstan/level_8.md)
+* [level_8.md](laravel/Modules/Activity/project_docs/phpstan/level_8.md)
+* [level_8.md](laravel/Modules/Patient/project_docs/phpstan/level_8.md)
+* [level_8.md](laravel/Modules/Cms/project_docs/phpstan/level_8.md)
+>>>>>>> c4ec0fb6 (.)
 

@@ -8,10 +8,18 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Arr;
 use Nwidart\Modules\Facades\Module as ModuleFacade;
 use Nwidart\Modules\Module as NModule;
+<<<<<<< HEAD
 use Sushi\Sushi;
 
 use function Safe\json_encode;
 
+=======
+
+use function Safe\json_encode;
+
+use Sushi\Sushi;
+
+>>>>>>> c4ec0fb6 (.)
 /**
  * @property int         $id
  * @property string|null $name
@@ -56,6 +64,7 @@ class Module extends Model
     public function getRows(): array
     {
         $modules = ModuleFacade::all();
+<<<<<<< HEAD
         $modules = Arr::map($modules, function (NModule $module): array {
             $config = config('tenant::config');
             if (!is_array($config)) {
@@ -74,6 +83,29 @@ class Module extends Model
                 'colors' => json_encode($colors),
             ];
         });
+=======
+        $modules = Arr::map(
+            $modules,
+            function (NModule $module): array {
+                $config = config('tenant::config');
+                if (! is_array($config)) {
+                    $config = [];
+                }
+                $colors = Arr::get($config, 'colors', []);
+
+                return [
+                    'name' => $module->getName(),
+                    // 'alias' => $module->getAlias(),
+                    'description' => $module->getDescription(),
+                    'status' => $module->isEnabled(),
+                    'priority' => $module->get('priority'),
+                    'path' => $module->getPath(),
+                    'icon' => Arr::get($config, 'icon', 'heroicon-o-question-mark-circle'),
+                    'colors' => json_encode($colors),
+                ];
+            }
+        );
+>>>>>>> c4ec0fb6 (.)
 
         return array_values($modules);
     }

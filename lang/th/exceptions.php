@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 return [
     /*
+<<<<<<< HEAD
      * |--------------------------------------------------------------------------
      * | Exception Language Lines
      * |--------------------------------------------------------------------------
@@ -13,6 +14,17 @@ return [
      * | found in a intuitive way.
      * |
      */
+=======
+    |--------------------------------------------------------------------------
+    | Exception Language Lines
+    |--------------------------------------------------------------------------
+    |
+    | The following language lines are used in Exceptions thrown throughout the system.
+    | Regardless where it is placed, a button can be listed here so it is easily
+    | found in a intuitive way.
+    |
+    */
+>>>>>>> c4ec0fb6 (.)
 
     'backend' => [
         'access' => [
@@ -26,6 +38,10 @@ return [
                 'not_found' => 'ไม่พบบทบาทนี้',
                 'update_error' => 'มีข้อผิดพลาดในการแก้ไขบทบาทนี้ กรุณาลองใหม่อีกครั้ง',
             ],
+<<<<<<< HEAD
+=======
+
+>>>>>>> c4ec0fb6 (.)
             'users' => [
                 'cant_deactivate_self' => 'คุณไม่สามารถกระทำกับตนเองได้',
                 'cant_delete_self' => 'คุณไม่สามารถลบตนเองได้',
@@ -44,6 +60,10 @@ return [
             ],
         ],
     ],
+<<<<<<< HEAD
+=======
+
+>>>>>>> c4ec0fb6 (.)
     'frontend' => [
         'auth' => [
             'confirmation' => [
@@ -56,8 +76,15 @@ return [
                 'success' => 'บัญชีผู้ใช้ของคุณได้รับการยืนยันตัวตนสำเร็จแล้ว!',
                 'resent' => 'อีเมลยืนยันตัวตนฉบับใหม่ได้ถูกส่งไปยังปลายทางแล้ว',
             ],
+<<<<<<< HEAD
             'deactivated' => 'บัญชีผู้ใช้ของคุณถูกพักการใช้งาน',
             'email_taken' => 'อีเมลนี้ถูกใช้ในระบบแล้ว',
+=======
+
+            'deactivated' => 'บัญชีผู้ใช้ของคุณถูกพักการใช้งาน',
+            'email_taken' => 'อีเมลนี้ถูกใช้ในระบบแล้ว',
+
+>>>>>>> c4ec0fb6 (.)
             'password' => [
                 'change_mismatch' => 'รหัสผ่านเดิมไม่ถูกต้อง',
             ],

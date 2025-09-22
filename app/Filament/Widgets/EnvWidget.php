@@ -23,7 +23,11 @@ class EnvWidget extends Widget implements HasForms
     use InteractsWithForms;
 
     /** @var array<string, mixed>|null */
+<<<<<<< HEAD
     public null|array $data = [];
+=======
+    public ?array $data = [];
+>>>>>>> c4ec0fb6 (.)
 
     public array $only = [];
 
@@ -40,12 +44,23 @@ class EnvWidget extends Widget implements HasForms
 
     public function form(Forms\Form $form): Forms\Form
     {
+<<<<<<< HEAD
         return $form->schema($this->getFormSchema())->columns(1)->statePath('data');
+=======
+        return $form
+            ->schema($this->getFormSchema())
+            ->columns(1)
+            ->statePath('data');
+>>>>>>> c4ec0fb6 (.)
     }
 
     public function submit(): void
     {
+<<<<<<< HEAD
         if (!is_array($this->data)) {
+=======
+        if (! is_array($this->data)) {
+>>>>>>> c4ec0fb6 (.)
             return;
         }
         EnvData::make()->update($this->data);
@@ -53,6 +68,7 @@ class EnvWidget extends Widget implements HasForms
             ->title('Saved successfully')
             ->success()
             ->send();
+<<<<<<< HEAD
 
         /*
          * dddx([
@@ -60,6 +76,14 @@ class EnvWidget extends Widget implements HasForms
          * // 'data1' => $this->form->getState(),
          * ]);
          */
+=======
+        /*
+        dddx([
+            'data' => $this->data,
+            // 'data1' => $this->form->getState(),
+        ]);
+        */
+>>>>>>> c4ec0fb6 (.)
     }
 
     /**
@@ -69,12 +93,22 @@ class EnvWidget extends Widget implements HasForms
     {
         $all = [
             'app_url' => TextInput::make('app_url')
+<<<<<<< HEAD
                 ->placeholder('http://localhost')
                 ->helperText('Required for file uploads and other internal configs')
                 ->required(),
             'debugbar_enabled' => Toggle::make('debugbar_enabled')->helperText(
                 'Enable/Disable debug mode to help debug errors',
             ),
+=======
+
+                ->placeholder('http://localhost')
+                ->helperText('Required for file uploads and other internal configs')
+                ->required(),
+            'debugbar_enabled' => Toggle::make('debugbar_enabled')
+
+                ->helperText('Enable/Disable debug mode to help debug errors'),
+>>>>>>> c4ec0fb6 (.)
             'google_maps_api_key' => TextInput::make('google_maps_api_key')
                 ->placeholder('AIzaSyAuB_...')
                 ->helperText('google maps api key'),

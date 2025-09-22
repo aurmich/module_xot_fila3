@@ -32,6 +32,7 @@ abstract class XotBaseMainPanelProvider extends PanelProvider
     {
         $metatag = MetatagData::make();
 
+<<<<<<< HEAD
         $panel->id('admin')->path('admin');
 
         if (!Module::has('Cms')) {
@@ -39,10 +40,26 @@ abstract class XotBaseMainPanelProvider extends PanelProvider
         }
 
         $panel = $panel->passwordReset()->sidebarFullyCollapsibleOnDesktop()->spa()->profile(null, true);
+=======
+        $panel
+            ->id('admin')
+            ->path('admin');
+
+        if (! Module::has('Cms')) {
+            $panel->login();
+        }
+
+        $panel = $panel
+            ->passwordReset()
+            ->sidebarFullyCollapsibleOnDesktop()
+            ->spa()
+            ->profile(null, true);
+>>>>>>> c4ec0fb6 (.)
 
         app(ApplyMetatagToPanelAction::class)->execute(panel: $panel);
 
         $panel = $panel
+<<<<<<< HEAD
             ->discoverResources(
                 in: app_path('Filament/Resources'),
                 for: 'App\\Filament\\Resources',
@@ -51,14 +68,22 @@ abstract class XotBaseMainPanelProvider extends PanelProvider
                 in: app_path('Filament/Pages'),
                 for: 'App\\Filament\\Pages',
             )
+=======
+            ->discoverResources(in: app_path('Filament/Resources'), for: 'App\\Filament\\Resources')
+            ->discoverPages(in: app_path('Filament/Pages'), for: 'App\\Filament\\Pages')
+>>>>>>> c4ec0fb6 (.)
             ->pages([
                 MainDashboard::class,
                 MyProfilePage::class,
             ])
+<<<<<<< HEAD
             ->discoverWidgets(
                 in: app_path('Filament/Widgets'),
                 for: 'App\\Filament\\Widgets',
             )
+=======
+            ->discoverWidgets(in: app_path('Filament/Widgets'), for: 'App\\Filament\\Widgets')
+>>>>>>> c4ec0fb6 (.)
             ->widgets([
                 // Widgets\AccountWidget::class,
             ])
@@ -87,7 +112,13 @@ abstract class XotBaseMainPanelProvider extends PanelProvider
         }
 
         $panel->userMenuItems([
+<<<<<<< HEAD
             MenuItem::make()->url(fn(): string => $profile_url)->icon('heroicon-o-user'),
+=======
+            MenuItem::make()
+                ->url(fn (): string => $profile_url)
+                ->icon('heroicon-o-user'),
+>>>>>>> c4ec0fb6 (.)
         ]);
 
         return $panel;

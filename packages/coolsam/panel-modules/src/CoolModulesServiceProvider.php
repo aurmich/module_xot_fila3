@@ -15,7 +15,11 @@ class CoolModulesServiceProvider extends PackageServiceProvider
 {
     /**
      * Traccia i panel che hanno già gli hook registrati.
+<<<<<<< HEAD
      *
+=======
+     * 
+>>>>>>> c4ec0fb6 (.)
      * @var array<string, bool>
      */
     private static array $processedPanels = [];
@@ -28,7 +32,12 @@ class CoolModulesServiceProvider extends PackageServiceProvider
          * More info: https://github.com/spatie/laravel-package-tools
          */
 
+<<<<<<< HEAD
         $package->name('cool-modules');
+=======
+        $package
+            ->name('cool-modules');
+>>>>>>> c4ec0fb6 (.)
     }
 
     public function register()
@@ -37,15 +46,24 @@ class CoolModulesServiceProvider extends PackageServiceProvider
 
         $this->app->afterResolving('filament', function () {
             $panels = Filament::getPanels();
+<<<<<<< HEAD
 
             foreach ($panels as $panel) {
                 $id = Str::of($panel->getId());
                 $panelId = $panel->getId();
 
+=======
+           
+            foreach ($panels as $panel) {
+                $id = Str::of($panel->getId());
+                $panelId = $panel->getId();
+                
+>>>>>>> c4ec0fb6 (.)
                 // Controlla se questo panel è già stato processato
                 if (isset(self::$processedPanels[$panelId])) {
                     continue;
                 }
+<<<<<<< HEAD
 
                 if ($id->contains('::')) {
                     $title = $id->replace(['::', '-'], [' ', ' '])->title()->toString();
@@ -57,13 +75,36 @@ class CoolModulesServiceProvider extends PackageServiceProvider
                         fn() => new HtmlString('<a href="' .
                         url('/admin') .
                             '" class="m-2 p-2 mt-4 inline-flex gap-2 block rounded-lg font-bold bg-gray-500/10">
+=======
+                
+                if ($id->contains('::')) {
+                    $title = $id->replace(['::', '-'], [' ', ' '])->title()->toString();
+                    $panel
+                   
+                        ->renderHook(
+                            'panels::sidebar.nav.start',
+                            fn () => new HtmlString("<h2 class='m-2 p-2 font-black text-xl'>$title</h2>"),
+                        )
+                            
+                        ->renderHook(
+                            'panels::sidebar.nav.end',
+                            fn () => new HtmlString(
+                                '<a href="'.url('/admin').'" class="m-2 p-2 mt-4 inline-flex gap-2 block rounded-lg font-bold bg-gray-500/10">
+>>>>>>> c4ec0fb6 (.)
                                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5">
                                           <path stroke-linecap="round" stroke-linejoin="round" d="M9 15L3 9m0 0l6-6M3 9h12a6 6 0 010 12h-3" />
                                         </svg>
                                         Main Panel
+<<<<<<< HEAD
                                       </a>'),
                     );
 
+=======
+                                      </a>'
+                            ),
+                        );
+                    
+>>>>>>> c4ec0fb6 (.)
                     // Marca questo panel come processato
                     self::$processedPanels[$panelId] = true;
                 }

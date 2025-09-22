@@ -1,8 +1,11 @@
+<<<<<<< HEAD
 <?php
 
 declare(strict_types=1);
 
 ?>
+=======
+>>>>>>> c4ec0fb6 (.)
 <div>
     <span class="card-fav-icon position-relative z-index-40 " @if ($fav)style="background-color:#d60021"@endif wire:click="update()">
         <svg class="svg-icon text-white active">

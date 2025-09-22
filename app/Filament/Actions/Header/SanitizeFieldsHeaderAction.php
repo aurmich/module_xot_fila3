@@ -25,6 +25,10 @@ class SanitizeFieldsHeaderAction extends Action
     {
         parent::setUp();
         $this->translateLabel()
+<<<<<<< HEAD
+=======
+            
+>>>>>>> c4ec0fb6 (.)
             ->tooltip('sanitize')
             ->icon('heroicon-o-shield-exclamation')
             ->action(function (ListRecords $livewire) {
@@ -32,7 +36,11 @@ class SanitizeFieldsHeaderAction extends Action
                 $modelClass = $resource::getModel();
                 // @phpstan-ignore staticMethod.nonObject
                 $rows = $modelClass::get();
+<<<<<<< HEAD
                 if (!is_iterable($rows)) {
+=======
+                if (! is_iterable($rows)) {
+>>>>>>> c4ec0fb6 (.)
                     $rows = [];
                 }
                 $c = 0;
@@ -40,9 +48,15 @@ class SanitizeFieldsHeaderAction extends Action
                     Assert::isInstanceOf($row, Model::class);
                     $save = false;
                     foreach ($this->fields as $field) {
+<<<<<<< HEAD
                         Assert::string($item = $row->{$field}, __FILE__ . ':' . __LINE__ . ' - ' . class_basename(__CLASS__));
                         $string = app(SanitizeAction::class)->execute($item);
                         if ($string !== $item) {
+=======
+                        Assert::string($item = $row->{$field});
+                        $string = app(SanitizeAction::class)->execute($item);
+                        if ($string != $item) {
+>>>>>>> c4ec0fb6 (.)
                             $row->{$field} = $string;
                             $save = true;
                             ++$c;
@@ -53,7 +67,11 @@ class SanitizeFieldsHeaderAction extends Action
                     }
                 }
                 Notification::make()
+<<<<<<< HEAD
                     ->title('' . $c . ' record sanitized')
+=======
+                    ->title(''.$c.' record sanitized')
+>>>>>>> c4ec0fb6 (.)
                     ->success()
                     ->send();
             });
@@ -66,7 +84,11 @@ class SanitizeFieldsHeaderAction extends Action
         return $this;
     }
 
+<<<<<<< HEAD
     public static function getDefaultName(): null|string
+=======
+    public static function getDefaultName(): ?string
+>>>>>>> c4ec0fb6 (.)
     {
         return 'sanitize-fields-header';
     }

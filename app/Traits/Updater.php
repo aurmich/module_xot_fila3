@@ -34,7 +34,15 @@ trait Updater
         $profileClass = XotData::make()->getProfileClass();
 
         // @phpstan-ignore return.type
+<<<<<<< HEAD
         return $this->belongsTo($profileClass, 'created_by', 'user_id');
+=======
+        return $this->belongsTo(
+            $profileClass,
+            'created_by',
+            'user_id'
+        );
+>>>>>>> c4ec0fb6 (.)
     }
 
     /**
@@ -48,7 +56,15 @@ trait Updater
         $profileClass = XotData::make()->getProfileClass();
 
         // @phpstan-ignore return.type
+<<<<<<< HEAD
         return $this->belongsTo($profileClass, 'updated_by', 'user_id');
+=======
+        return $this->belongsTo(
+            $profileClass,
+            'updated_by',
+            'user_id'
+        );
+>>>>>>> c4ec0fb6 (.)
     }
 
     /**
@@ -56,6 +72,7 @@ trait Updater
      */
     protected static function bootUpdater(): void
     {
+<<<<<<< HEAD
         static::creating(static function (Model $model): void {
             Assert::isArray($attributes = $model->getAttributes());
 
@@ -75,10 +92,36 @@ trait Updater
                 $model->setAttribute('updated_by', authId());
             }
         });
+=======
+        static::creating(
+            static function (Model $model): void {
+                Assert::isArray($attributes = $model->getAttributes());
+
+                if (array_key_exists('created_by', $attributes)) {
+                    $model->setAttribute('created_by', authId());
+                }
+
+                if (array_key_exists('updated_by', $attributes)) {
+                    $model->setAttribute('updated_by', authId());
+                }
+            }
+        );
+
+        static::updating(
+            static function (Model $model): void {
+                Assert::isArray($attributes = $model->getAttributes());
+
+                if (array_key_exists('updated_by', $attributes)) {
+                    $model->setAttribute('updated_by', authId());
+                }
+            }
+        );
+>>>>>>> c4ec0fb6 (.)
         /*
          * Deleting a model is slightly different than creating or deleting.
          * For deletes we need to save the model first with the deleted_by field
          */
+<<<<<<< HEAD
         static::deleting(static function (Model $model): void {
             Assert::isArray($attributes = $model->attributes);
 
@@ -90,3 +133,16 @@ trait Updater
 }
 
 // end trait Updater
+=======
+        static::deleting(
+            static function (Model $model): void {
+                Assert::isArray($attributes = $model->attributes);
+
+                if (\in_array('deleted_by', array_keys($attributes), false)) {
+                    $model->setAttribute('deleted_by', authId());
+                }
+            }
+        );
+    }
+}// end trait Updater
+>>>>>>> c4ec0fb6 (.)

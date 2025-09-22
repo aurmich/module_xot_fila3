@@ -18,6 +18,11 @@ class PulseAggregateFactory extends Factory
      */
     public function definition(): array
     {
+<<<<<<< HEAD
         return [];
+=======
+        return [
+        ];
+>>>>>>> c4ec0fb6 (.)
     }
 }

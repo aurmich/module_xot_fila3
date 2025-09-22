@@ -18,9 +18,15 @@ class AssetAction
      * Gestisce i percorsi degli asset, copiandoli nella directory pubblica se necessario.
      *
      * @param string $path Il percorso dell'asset
+<<<<<<< HEAD
      *
      * @return string Il percorso pubblico dell'asset
      *
+=======
+     * 
+     * @return string Il percorso pubblico dell'asset
+     * 
+>>>>>>> c4ec0fb6 (.)
      * @throws \Exception Se il file sorgente non esiste o non può essere copiato
      */
     public function execute(string $path): string
@@ -45,8 +51,12 @@ class AssetAction
 
         $ns_after0 = Str::before($ns_after, '/');
         $ns_after1 = Str::after($ns_after, '/');
+<<<<<<< HEAD
         $ns_after =
             str_replace('.', '/', is_string($ns_after0) ? $ns_after0 : ((string) $ns_after0)) . '/' . $ns_after1;
+=======
+        $ns_after = str_replace('.', '/', is_string($ns_after0) ? $ns_after0 : (string) $ns_after0).'/'.$ns_after1;
+>>>>>>> c4ec0fb6 (.)
 
         if (Str::startsWith($ns_after, '/')) {
             $ns_after = Str::after($ns_after, '/');
@@ -56,24 +66,40 @@ class AssetAction
             // Assicuriamoci che $theme sia una stringa
             $theme = $xot->{$ns};
             Assert::string($theme, 'Il tema deve essere una stringa');
+<<<<<<< HEAD
 
             // Costruiamo i percorsi
             $themeResourcePath = 'Themes/' . $theme . '/resources/' . $ns_after;
             $filename_from = app(FixPathAction::class)->execute(base_path($themeResourcePath));
 
             $themeAssetPath = 'themes/' . $theme . '/' . $ns_after;
+=======
+            
+            // Costruiamo i percorsi
+            $themeResourcePath = 'Themes/'.$theme.'/resources/'.$ns_after;
+            $filename_from = app(FixPathAction::class)->execute(base_path($themeResourcePath));
+            
+            $themeAssetPath = 'themes/'.$theme.'/'.$ns_after;
+>>>>>>> c4ec0fb6 (.)
             $asset = $themeAssetPath;
             $filename_to = app(FixPathAction::class)->execute(public_path($asset));
             $asset = Str::replace(url(''), '', asset($asset));
 
+<<<<<<< HEAD
             if (!File::exists($filename_to)) {
                 if (!File::exists(\dirname($filename_to))) {
                     File::makeDirectory(\dirname($filename_to), 0o755, true, true);
+=======
+            if (! File::exists($filename_to)) {
+                if (! File::exists(\dirname($filename_to))) {
+                    File::makeDirectory(\dirname($filename_to), 0755, true, true);
+>>>>>>> c4ec0fb6 (.)
                 }
 
                 try {
                     File::copy($filename_from, $filename_to);
                 } catch (\Exception $e) {
+<<<<<<< HEAD
                     throw new \Exception(
                         'message:[' .
                         $e->getMessage() .
@@ -97,6 +123,17 @@ class AssetAction
             }
 
             Assert::string($asset, '[' . __LINE__ . '][' . class_basename(static::class) . ']');
+=======
+                    throw new \Exception('message:['.$e->getMessage().']
+                        public_path ['.public_path().']
+                        path ['.$path.']
+                        file from ['.$filename_from.']
+                        file to ['.$filename_to.']', $e->getCode(), $e);
+                }
+            }
+
+            Assert::string($asset, '['.__LINE__.']['.class_basename(static::class).']');
+>>>>>>> c4ec0fb6 (.)
 
             return $asset;
         }
@@ -107,6 +144,7 @@ class AssetAction
             $module_path = Str::beforeLast($module_path, '/');
         }
 
+<<<<<<< HEAD
         $filename_from = app(FixPathAction::class)->execute($module_path . '/resources/' . $ns_after);
         $asset = 'assets/' . $ns . '/' . $ns_after;
         $filename_to = app(FixPathAction::class)->execute(public_path($asset));
@@ -122,10 +160,28 @@ class AssetAction
         if (!File::exists($filename_to) || 'production' !== app()->environment()) {
             if (!File::exists(\dirname($filename_to))) {
                 File::makeDirectory(\dirname($filename_to), 0o755, true, true);
+=======
+        $filename_from = app(FixPathAction::class)->execute($module_path.'/resources/'.$ns_after);
+        $asset = 'assets/'.$ns.'/'.$ns_after;
+        $filename_to = app(FixPathAction::class)->execute(public_path($asset));
+        $asset = Str::replace(url(''), '', asset($asset));
+        if (! File::exists($filename_from)) {
+            if (isRunningTestBench()) {
+                return $path;
+            }
+            throw new \Exception('file ['.$filename_from.'] not Exists , path ['.$path.']');
+        }
+
+        // dddx(app()->environment());// local
+        if (! File::exists($filename_to) || 'production' !== app()->environment()) {
+            if (! File::exists(\dirname($filename_to))) {
+                File::makeDirectory(\dirname($filename_to), 0755, true, true);
+>>>>>>> c4ec0fb6 (.)
             }
             try {
                 File::copy($filename_from, $filename_to);
             } catch (\Exception $e) {
+<<<<<<< HEAD
                 throw new \Exception(
                     'message:[' .
                     $e->getMessage() .
@@ -149,6 +205,17 @@ class AssetAction
         }
 
         Assert::string($asset, '[' . __LINE__ . '][' . class_basename(static::class) . ']');
+=======
+                throw new \Exception('message:['.$e->getMessage().']
+                    public_path ['.public_path().']
+                    path ['.$path.']
+                    file from ['.$filename_from.']
+                    file to ['.$filename_to.']', $e->getCode(), $e);
+            }
+        }
+
+        Assert::string($asset, '['.__LINE__.']['.class_basename(static::class).']');
+>>>>>>> c4ec0fb6 (.)
 
         return $asset;
     }

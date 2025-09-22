@@ -20,6 +20,7 @@ class DownloadZipByPathsDiskAction
      * @param string $disk Nome del disco di storage
      * @return BinaryFileResponse|null Risposta di download o null se fallisce
      */
+<<<<<<< HEAD
     public function execute(array $attachments, string $disk): null|BinaryFileResponse
     {
         $zipFileName = 'temp_zip_' . uniqid() . '.zip';
@@ -36,6 +37,24 @@ class DownloadZipByPathsDiskAction
             foreach ($attachments as $attachment) {
                 $filePath = $attachment;
 
+=======
+    public function execute(array $attachments, string $disk): ?BinaryFileResponse
+    {
+        $zipFileName = 'temp_zip_' .uniqid() . '.zip';
+        $zipPath = 'temp/' . $zipFileName;
+        
+        // Crea un file temporaneo per lo ZIP usando Storage
+        $zip = new \ZipArchive();
+        $tempFilePath = storage_path('app/' . $zipPath);
+        
+        // Assicurati che la directory temp esista
+        Storage::disk('local')->makeDirectory('temp');
+        
+        if ($zip->open($tempFilePath, \ZipArchive::CREATE) === TRUE) {
+            foreach ($attachments as $attachment) {
+                $filePath = $attachment;
+                
+>>>>>>> c4ec0fb6 (.)
                 if (Storage::disk($disk)->exists($filePath)) {
                     $fileContent = Storage::disk($disk)->get($filePath);
                     if ($fileContent !== null) {
@@ -46,6 +65,7 @@ class DownloadZipByPathsDiskAction
                 }
             }
             $zip->close();
+<<<<<<< HEAD
 
             $downloadFileName = 'attachments_' . uniqid() . '.zip';
 
@@ -55,6 +75,17 @@ class DownloadZipByPathsDiskAction
             ]); //->deleteFileAfterSend(true);
         }
 
+=======
+            
+            $downloadFileName = 'attachments_' . uniqid() . '.zip';
+            
+            // Usa response()->download() per il download
+            return response()->download($tempFilePath, $downloadFileName, [
+                'Content-Type' => 'application/zip'
+            ]);//->deleteFileAfterSend(true);
+        }
+        
+>>>>>>> c4ec0fb6 (.)
         return null;
     }
 }

@@ -26,17 +26,29 @@ class GenerateModelClassCommand extends GeneratorCommand
 
     protected function getStub()
     {
+<<<<<<< HEAD
         return realpath(__DIR__ . '/../stubs/model.stub');
+=======
+        return realpath(__DIR__.'/../stubs/model.stub');
+>>>>>>> c4ec0fb6 (.)
     }
 
     protected function getDefaultNamespace($rootNamespace)
     {
+<<<<<<< HEAD
         return $rootNamespace . '\Models';
+=======
+        return $rootNamespace.'\Models';
+>>>>>>> c4ec0fb6 (.)
     }
 
     protected function replaceClass($stub, $name)
     {
+<<<<<<< HEAD
         $class = str_replace($this->getNamespace($name) . '\\', '', $name);
+=======
+        $class = str_replace($this->getNamespace($name).'\\', '', $name);
+>>>>>>> c4ec0fb6 (.)
 
         // Do string replacement
         return str_replace('{{service_name}}', $class, $stub);

@@ -16,12 +16,17 @@ abstract class XotBaseTableAction extends Action
     /**
      * @return \Illuminate\Database\Eloquent\Model|null
      */
+<<<<<<< HEAD
     public function getRecord(): null|Model
     {
         if ($this->record instanceof \Closure) {
             return null;
         }
 
+=======
+    public function getRecord(): ?Model
+    {
+>>>>>>> c4ec0fb6 (.)
         return $this->record;
     }
 }

@@ -384,7 +384,10 @@ $table->foreign('user_id')->references('id')->on('users')
 - **Relazioni**: User, Studio, Treatment
 - **Campi specifici**: `appointment_date`, `status`, `notes`
 
+<<<<<<< HEAD
 ###  Module (CRITICO)
+=======
+>>>>>>> c4ec0fb6 (.)
 ### SaluteOra Module (CRITICO)
 - **Tabelle**: `appointments`, `patients`, `doctors`, `studios`
 - **Relazioni**: User, Studio, Doctor, Patient

@@ -24,11 +24,19 @@ class EnvData extends Data implements Wireable
 
     public string $telegram_bot_token = '';
 
+<<<<<<< HEAD
     private static null|self $instance = null;
 
     public static function make(): self
     {
         if (!self::$instance) {
+=======
+    private static ?self $instance = null;
+
+    public static function make(): self
+    {
+        if (! self::$instance) {
+>>>>>>> c4ec0fb6 (.)
             $data = [];
 
             foreach ($_ENV as $k => $v) {
@@ -66,6 +74,7 @@ class EnvData extends Data implements Wireable
     {
         $key = str($key)->upper()->toString();
         $replace = $this->getLine($key, $value);
+<<<<<<< HEAD
         $pos_start = mb_strpos($env_content, $key . '=');
         if (false === $pos_start) {
             // throw new \Exception('['.__LINE__.']['.class_basename($this).']');
@@ -74,6 +83,16 @@ class EnvData extends Data implements Wireable
         $pos_end = mb_strpos($env_content, "\n", $pos_start);
         if (false === $pos_end) {
             throw new \Exception('[' . __LINE__ . '][' . class_basename($this) . ']');
+=======
+        $pos_start = mb_strpos($env_content, $key.'=');
+        if (false === $pos_start) {
+            // throw new \Exception('['.__LINE__.']['.class_basename($this).']');
+            return $env_content."\n".$replace;
+        }
+        $pos_end = mb_strpos($env_content, "\n", $pos_start);
+        if (false === $pos_end) {
+            throw new \Exception('['.__LINE__.']['.class_basename($this).']');
+>>>>>>> c4ec0fb6 (.)
         }
 
         $length = $pos_end - $pos_start;
@@ -86,12 +105,20 @@ class EnvData extends Data implements Wireable
 
     public function getLine(string $key, int|bool|string $value): string
     {
+<<<<<<< HEAD
         $replace = $key . '=';
+=======
+        $replace = $key.'=';
+>>>>>>> c4ec0fb6 (.)
         if (is_bool($value)) {
             $replace .= $value ? 'true' : 'false';
         }
         if (is_string($value)) {
+<<<<<<< HEAD
             $replace .= '"' . $value . '"';
+=======
+            $replace .= '"'.$value.'"';
+>>>>>>> c4ec0fb6 (.)
         }
         if (is_int($value)) {
             $replace .= $value;
