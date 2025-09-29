@@ -20,17 +20,22 @@ use Webmozart\Assert\Assert;
 =======
 use Livewire\Wireable;
 use Illuminate\Support\Arr;
+use Illuminate\Support\Str;
 use Spatie\LaravelData\Data;
 use Webmozart\Assert\Assert;
 use Filament\Support\Colors\Color;
+use function Safe\file_get_contents;
 use Modules\Xot\Actions\File\AssetAction;
 use Modules\Tenant\Services\TenantService;
 use Modules\Xot\Actions\File\AssetPathAction;
 use Spatie\LaravelData\Concerns\WireableData;
 use Spatie\LaravelData\Attributes\WithTransformer;
 use Modules\Xot\Datas\Transformers\AssetTransformer;
+<<<<<<< HEAD
 >>>>>>> c4ec0fb6 (.)
 use function Safe\file_get_contents;
+=======
+>>>>>>> 17bd364a (.)
 
 /**
  * Class MetatagData
@@ -212,7 +217,11 @@ class MetatagData extends Data implements Wireable
         if (! self::$instance) {
             /** @var array<string, mixed> $data */
             $data = TenantService::getConfig('metatag');
+<<<<<<< HEAD
 >>>>>>> c4ec0fb6 (.)
+=======
+            $data['description'] = TenantService::trans('metatag.description');
+>>>>>>> 17bd364a (.)
             self::$instance = self::from($data);
         }
 
@@ -719,13 +728,23 @@ class MetatagData extends Data implements Wireable
     public function getTitle(): string
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 17bd364a (.)
         //return $this->getBrandName();
         return $this->title;
     }
 
+<<<<<<< HEAD
 
 =======
         return $this->getBrandName();
+=======
+    public function concatTitle(string $title): self
+    {
+        $this->title = $this->title.' - '.$title;
+        return $this;
+>>>>>>> 17bd364a (.)
     }
 
 >>>>>>> c4ec0fb6 (.)
@@ -774,9 +793,17 @@ class MetatagData extends Data implements Wireable
 
     }
 
-    public function getDescription(int $limit=160): string
+    public function getDescription(int $limit=260): string
     {
-        return TenantService::trans('metatag.description');
+        return Str::limit(strval($this->description), $limit);
+    }
+
+    public function concatDescription(string|null $description): self
+    {
+        if (is_string($description)) {
+            $this->description = $this->description.' '.$description;
+        }
+        return $this;
     }
 
 >>>>>>> c4ec0fb6 (.)

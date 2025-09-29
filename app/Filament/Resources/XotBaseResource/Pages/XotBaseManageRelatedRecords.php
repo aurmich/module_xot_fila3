@@ -166,7 +166,10 @@ abstract class XotBaseManageRelatedRecords extends FilamentManageRelatedRecords
             'detach' => Tables\Actions\DetachAction::make(),
             
 
+<<<<<<< HEAD
 >>>>>>> c4ec0fb6 (.)
+=======
+>>>>>>> 17bd364a (.)
             // 'view' => Action::make('view')
             //     ->label('Visualizza')
             //     ->icon('heroicon-o-eye')

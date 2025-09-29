@@ -4,7 +4,9 @@ declare(strict_types=1);
 
 namespace Modules\Xot\Providers;
 
-use BladeUI\Icons\Factory as BladeIconsFactory;
+use Illuminate\Support\Str;
+use Webmozart\Assert\Assert;
+use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Blade;
 use Illuminate\Support\Facades\Config;
 <<<<<<< HEAD
@@ -12,12 +14,13 @@ use Illuminate\Support\Facades\File;
 =======
 >>>>>>> c4ec0fb6 (.)
 use Illuminate\Support\ServiceProvider;
-use Illuminate\Support\Str;
-use Modules\Xot\Actions\Blade\RegisterBladeComponentsAction;
-use Modules\Xot\Actions\Livewire\RegisterLivewireComponentsAction;
-use Modules\Xot\Actions\Module\GetModulePathByGeneratorAction;
 use Nwidart\Modules\Traits\PathNamespace;
-use Webmozart\Assert\Assert;
+use BladeUI\Icons\Factory as BladeIconsFactory;
+use Modules\Xot\Actions\Blade\RegisterBladeComponentsAction;
+use Modules\Xot\Actions\Module\GetModulePathByGeneratorAction;
+use Modules\Xot\Actions\Livewire\RegisterLivewireComponentsAction;
+
+
 
 /**
  * Class XotBaseServiceProvider.
@@ -228,17 +231,29 @@ abstract class XotBaseServiceProvider extends ServiceProvider
             $configPath = app(GetModulePathByGeneratorAction::class)->execute($this->name, 'config');
 
 <<<<<<< HEAD
+<<<<<<< HEAD
             $files = File::glob($configPath . '/*.php');
+=======
+            $files = File::glob($configPath.'/*.php');
+>>>>>>> 17bd364a (.)
 
             foreach ($files as $file) {
                 $content = File::getRequire($file);
                 $info = pathinfo($file);
+<<<<<<< HEAD
                 $key = $this->nameLower . '::' . $info['filename'];
                 Config::set($key, $content);
             }
 =======
             $this->mergeConfigFrom($configPath, $this->nameLower);
 >>>>>>> c4ec0fb6 (.)
+=======
+                $key = $this->nameLower.'::'.$info['filename'];
+                Config::set($key, $content);
+            }
+
+            //$this->mergeConfigFrom($configPath, $this->nameLower);
+>>>>>>> 17bd364a (.)
         } catch (\Exception $e) {
             // Ignore missing configuration
             return;

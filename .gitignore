@@ -68,9 +68,13 @@ package-lock.json
 yarn-error.log
 npm-debug.log
 <<<<<<< HEAD
+<<<<<<< HEAD
 composer.lock
 =======
 >>>>>>> c4ec0fb6 (.)
+=======
+composer.lock
+>>>>>>> 17bd364a (.)
 .phpunit.result.cache
 .php-cs-fixer.cache
 
@@ -182,6 +186,11 @@ database/Migrations_old
 =======
 >>>>>>> c4ec0fb6 (.)
 
+# Database directories
+database/Factories_
+database/Factories_old
+database/Migrations_old
+
 # Local configurations
 Homestead.yaml
 Homestead.json
@@ -233,9 +242,13 @@ docs/cache/
 cache/
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+
+>>>>>>> 17bd364a (.)
 # Development tools
 .windsurf/
 .cursor/
@@ -252,6 +265,7 @@ database/Migrations_old
 database/Seeders_old
 database/Factories_old
 database_old
+<<<<<<< HEAD
 
 # 🚫 File specifici del progetto
 *.fila2
@@ -265,3 +279,5 @@ public_html
 >>>>>>> fcf6b127 (.)
 =======
 >>>>>>> 4b5055e9 (.)
+=======
+>>>>>>> 17bd364a (.)

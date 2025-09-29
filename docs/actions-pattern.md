@@ -175,6 +175,7 @@ grep -r "public static function" Modules/ --include="*.php" | grep "Action"
 
 ### String Actions
 - `NormalizeDriverNameAction` - Normalizzazione nomi driver
+- `GetPronounceablePasswordAction` - Generazione password pronunciabili sicure
 
 ### Geo Actions
 - `GetDistanceExpressionAction` - Calcolo espressioni SQL distanza

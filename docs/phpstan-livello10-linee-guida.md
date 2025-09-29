@@ -94,6 +94,7 @@ public function processValue(?string $value): string
 - [Best Practices](./BEST-PRACTICES.md)
 - [Code Standards](./CODE-STANDARDS.md)
 - [Risoluzione Conflitti](./CONFLITTI_MERGE_RISOLTI.md)
+- [Offset Access Fix](./phpstan-fixes/offset-access-fix.md)
 
 # Linee Guida per PHPStan Livello 10 - Regole Comuni
 
@@ -458,6 +459,24 @@ if (is_string($mixedValue)) {
     $strValue = (string)$mixedValue;
 } else {
     $strValue = ''; // valore predefinito sicuro
+}
+```
+
+### 1.1. `Offset int<0, max> might not exist on string`
+
+Questo errore si verifica quando si accede agli offset di una stringa senza verificare che l'offset esista.
+
+**Soluzione**: Verificare sempre la lunghezza della stringa prima dell'accesso agli offset.
+
+```php
+// Errato - accesso non sicuro agli offset
+$char = $string[$index];
+
+// Corretto - controllo di sicurezza
+if (strlen($string) > 0 && $index < strlen($string)) {
+    $char = $string[$index];
+} else {
+    $char = 'default_value'; // fallback sicuro
 }
 ```
 
