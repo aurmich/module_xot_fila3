@@ -14,17 +14,10 @@ class ImportButton
     public function execute(): Action
     {
         return Action::make('import')
-<<<<<<< HEAD
-            ->tooltip('import XLS')
-            ->icon('heroicon-o-arrow-up-on-square')
-            // ->visible(null != $year)
-            ->action(static fn() => dddx('WIP'));
-=======
             
             ->tooltip('import XLS')
             ->icon('heroicon-o-arrow-up-on-square')
             // ->visible(null != $year)
             ->action(static fn () => dddx('WIP'));
->>>>>>> c4ec0fb6 (.)
     }
 }

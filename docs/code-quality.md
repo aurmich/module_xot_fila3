@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Code Quality Guidelines for Laravel Modules
 
 ## Overview
@@ -78,8 +77,6 @@ This document outlines the best practices for maintaining high code quality with
 - [Naming Conventions](./NAMING-CONVENTIONS.md)
 - [Service Provider Best Practices](./SERVICE-PROVIDER-BEST-PRACTICES.md)
 - [Filament Best Practices](./FILAMENT-BEST-PRACTICES.md)
-=======
->>>>>>> c4ec0fb6 (.)
 # Laraxot Code Quality Standards
 
 ## Overview
@@ -261,11 +258,7 @@ $content = \file_get_contents($path); // Può restituire false
 
 ### 1. PHPStan Pre-Commit
 ```bash
-<<<<<<< HEAD
 cd /var/www/html/_bases/base_techplanner_fila3_mono/laravel
-=======
-cd /var/www/html/_bases/base_saluteora/laravel
->>>>>>> c4ec0fb6 (.)
 ./vendor/bin/phpstan analyze Modules/ModuleName --level=9
 ```
 

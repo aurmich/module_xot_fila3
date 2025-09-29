@@ -6,13 +6,6 @@ namespace Modules\Xot\Filament\Resources\CacheLockResource\Pages;
 
 use Filament\Actions;
 use Modules\Xot\Filament\Resources\CacheLockResource;
-<<<<<<< HEAD
-use Modules\Xot\Filament\Resources\RelationManagers\XotBaseRelationManager;
-
-class EditCacheLock extends \Modules\Xot\Filament\Resources\Pages\XotBaseEditRecord
-{
-    protected static string $resource = CacheLockResource::class;
-=======
 
 
 
@@ -28,5 +21,4 @@ class EditCacheLock extends \Modules\Xot\Filament\Resources\Pages\XotBaseEditRec
     protected static string $resource = CacheLockResource::class;
 
 
->>>>>>> c4ec0fb6 (.)
 }

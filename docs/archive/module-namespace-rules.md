@@ -19,12 +19,7 @@
 - Test che verifica la presenza di tutte le chiavi di traduzione.
 
 ## Collegamenti
-<<<<<<< HEAD
 - [docs root](../../../../docs/actions.md)
 - [docs Lang](../../Lang/docs/filament-label.md)
-=======
-- [docs root](../../../../project_docs/actions.md)
-- [docs Lang](../../Lang/project_docs/filament-label.md)
->>>>>>> c4ec0fb6 (.)
 
 Ultimo aggiornamento: maggio 2025.

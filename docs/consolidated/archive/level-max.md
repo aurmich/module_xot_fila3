@@ -8,13 +8,9 @@ Trovati 4 errori al livello max.
 
 ## Errori e suggerimenti
 
-<<<<<<< HEAD
 ### File: `/var/www/html/_bases/base_techplanner_fila3_mono/laravel/Modules/Xot/app/Actions/Export/ExportXlsByView.php`
 ### File: `/var/www/html/saluteora/laravel/Modules/Xot/app/Actions/Export/ExportXlsByView.php`
 ### File: `/var/www/html/_bases/base_techplanner_fila3_mono/laravel/Modules/Xot/app/Actions/Export/ExportXlsByView.php`
-=======
-### File: `/var/www/html/saluteora/laravel/Modules/Xot/app/Actions/Export/ExportXlsByView.php`
->>>>>>> c4ec0fb6 (.)
 
 #### Linea 40: Syntax error, unexpected T_SR on line 40
 
@@ -32,13 +28,9 @@ Trovati 4 errori al livello max.
 - Le variabili siano inizializzate prima dell'uso
 - I nomi di metodi e proprietà siano corretti
 
-<<<<<<< HEAD
 ### File: `/var/www/html/_bases/base_techplanner_fila3_mono/laravel/Modules/Xot/app/Actions/View/GetViewByClassAction.php`
 ### File: `/var/www/html/saluteora/laravel/Modules/Xot/app/Actions/View/GetViewByClassAction.php`
 ### File: `/var/www/html/_bases/base_techplanner_fila3_mono/laravel/Modules/Xot/app/Actions/View/GetViewByClassAction.php`
-=======
-### File: `/var/www/html/saluteora/laravel/Modules/Xot/app/Actions/View/GetViewByClassAction.php`
->>>>>>> c4ec0fb6 (.)
 
 #### Linea 47: Syntax error, unexpected T_SR on line 47
 

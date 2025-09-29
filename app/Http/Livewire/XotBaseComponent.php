@@ -28,19 +28,11 @@ abstract class XotBaseComponent extends Component
         $comp_name = str_replace('\\', '.', $comp_name);
         $comp_name = Str::snake($comp_name);
 
-<<<<<<< HEAD
-        $view = $module_name_low . '::livewire.' . $comp_name;
-        $view = str_replace('._', '.', $view);
-        // fare distinzione fra inAdmin o no ?
-        if (!view()->exists($view)) {
-            throw new \Exception('View not Exists[' . $view . ']');
-=======
         $view = $module_name_low.'::livewire.'.$comp_name;
         $view = str_replace('._', '.', $view);
         // fare distinzione fra inAdmin o no ?
         if (! view()->exists($view)) {
             throw new \Exception('View not Exists['.$view.']');
->>>>>>> c4ec0fb6 (.)
         }
 
         return $view;

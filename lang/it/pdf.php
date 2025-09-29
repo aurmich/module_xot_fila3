@@ -1,17 +1,5 @@
 <?php
 
-<<<<<<< HEAD
-declare(strict_types=1);
-
-
-return [
-    'fields' => [
-        'pdf' => [
-            'label' => 'pdf',
-        ],
-    ],
-];
-=======
 return array (
   'fields' => 
   array (
@@ -21,4 +9,3 @@ return array (
     ),
   ),
 );
->>>>>>> c4ec0fb6 (.)

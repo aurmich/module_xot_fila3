@@ -13,20 +13,11 @@ use Illuminate\Contracts\Support\Jsonable;
 
 use function Safe\json_encode;
 
-<<<<<<< HEAD
-readonly class ApplicationError implements \JsonSerializable, Arrayable, Jsonable
-{
-    public function __construct(
-        private  string $help = '',
-        private  string $error = '',
-    ) {}
-=======
 class ApplicationError implements \JsonSerializable, Arrayable, Jsonable
 {
     public function __construct(private readonly string $help = '', private readonly string $error = '')
     {
     }
->>>>>>> c4ec0fb6 (.)
 
     public function toArray(): array
     {
@@ -36,10 +27,6 @@ class ApplicationError implements \JsonSerializable, Arrayable, Jsonable
         ];
     }
 
-<<<<<<< HEAD
-    #[\Override]
-=======
->>>>>>> c4ec0fb6 (.)
     public function jsonSerialize(): array
     {
         return $this->toArray();

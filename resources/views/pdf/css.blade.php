@@ -1,11 +1,3 @@
-<<<<<<< HEAD
-<?php
-
-declare(strict_types=1);
-
-?>
-=======
->>>>>>> c4ec0fb6 (.)
 {{-- CSS Base per PDF - Componente riutilizzabile --}}
 {{-- 
     Motivazione DRY: Evita duplicazione di stili CSS tra diversi template PDF

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Struttura dei Moduli in il progetto
 
 ## Panoramica
@@ -308,8 +307,6 @@ laravel/Modules/Patient/
 ├── app/
 │   ├── Filament/
 │   ├── Http/
-=======
->>>>>>> c4ec0fb6 (.)
 # Module Structure in Laraxot
 
 ## Directory Structure
@@ -328,7 +325,6 @@ Module/
 │   └── Providers/
 ├── config/
 ├── database/
-<<<<<<< HEAD
 │   ├── migrations/
 │   └── seeders/
 ├── resources/           ✓ CORRETTO
@@ -427,8 +423,6 @@ Se trovi una directory con case errato:
 
 ## Collegamenti tra versioni di module_structure.md
 * [module_structure.md](../../../../project_docs/error_analysis/module_structure.md)
-=======
->>>>>>> c4ec0fb6 (.)
 │   ├── factories/
 │   ├── migrations/
 │   └── seeders/

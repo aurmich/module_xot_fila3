@@ -1,18 +1,5 @@
 <?php
 
-<<<<<<< HEAD
-declare(strict_types=1);
-
-
-return [
-    'sections' => [
-        'empty' => [
-            'label' => '',
-            'heading' => '',
-        ],
-    ],
-];
-=======
 return array (
   'sections' => 
   array (
@@ -23,4 +10,3 @@ return array (
     ),
   ),
 );
->>>>>>> c4ec0fb6 (.)

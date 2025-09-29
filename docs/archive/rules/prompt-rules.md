@@ -35,13 +35,8 @@ Non è necessario applicare questa regola a:
 - Documentazione dei prompt 
 
 ## Collegamenti tra versioni di PROMPT_RULES.md
-<<<<<<< HEAD
 * [PROMPT_RULES.md](../../../Xot/docs/PROMPT_RULES.md)
 * [PROMPT_RULES.md](../../../Xot/docs/rules/PROMPT_RULES.md)
-=======
-* [PROMPT_RULES.md](../../../Xot/project_docs/PROMPT_RULES.md)
-* [PROMPT_RULES.md](../../../Xot/project_docs/rules/PROMPT_RULES.md)
->>>>>>> c4ec0fb6 (.)
 
 
 ## Collegamenti tra versioni di prompt_rules.md

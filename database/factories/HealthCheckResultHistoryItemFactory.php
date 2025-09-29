@@ -9,11 +9,7 @@ use Modules\Xot\Models\HealthCheckResultHistoryItem;
 
 /**
  * HealthCheckResultHistoryItem Factory
-<<<<<<< HEAD
- *
-=======
  * 
->>>>>>> c4ec0fb6 (.)
  * @extends Factory<HealthCheckResultHistoryItem>
  */
 class HealthCheckResultHistoryItemFactory extends Factory
@@ -25,11 +21,7 @@ class HealthCheckResultHistoryItemFactory extends Factory
         return [
             'check_name' => $this->faker->randomElement([
                 'DatabaseCheck',
-<<<<<<< HEAD
-                'CacheCheck',
-=======
                 'CacheCheck', 
->>>>>>> c4ec0fb6 (.)
                 'QueueCheck',
                 'StorageCheck',
                 'MemoryCheck',
@@ -48,11 +40,7 @@ class HealthCheckResultHistoryItemFactory extends Factory
 
     public function ok(): static
     {
-<<<<<<< HEAD
-        return $this->state(fn(array $_attributes): array => [
-=======
         return $this->state(fn (array $attributes): array => [
->>>>>>> c4ec0fb6 (.)
             'status' => 'ok',
             'notification_message' => null,
         ]);
@@ -60,11 +48,7 @@ class HealthCheckResultHistoryItemFactory extends Factory
 
     public function failed(): static
     {
-<<<<<<< HEAD
-        return $this->state(fn(array $_attributes): array => [
-=======
         return $this->state(fn (array $attributes): array => [
->>>>>>> c4ec0fb6 (.)
             'status' => 'failed',
             'notification_message' => $this->faker->sentence(),
         ]);

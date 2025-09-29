@@ -15,57 +15,26 @@ class ModelDeletionException extends ApplicationException
 {
     private readonly string $model;
 
-<<<<<<< HEAD
-    public function __construct(
-        private readonly int $id,
-        string $model,
-    ) {
-        $this->model = Str::afterLast($model, '\\');
-    }
-
-    #[\Override]
-=======
     public function __construct(private readonly int $id, string $model)
     {
         $this->model = Str::afterLast($model, '\\');
     }
 
->>>>>>> c4ec0fb6 (.)
     public function status(): int
     {
         return Response::HTTP_BAD_REQUEST;
     }
 
-<<<<<<< HEAD
-    #[\Override]
-    public function help(): string
-    {
-        $res = trans('exception.model_not_deleted.help');
-        if (!\is_string($res)) {
-            throw new \Exception('[' . __LINE__ . '][' . class_basename($this) . ']');
-=======
     public function help(): string
     {
         $res = trans('exception.model_not_deleted.help');
         if (! \is_string($res)) {
             throw new \Exception('['.__LINE__.']['.class_basename($this).']');
->>>>>>> c4ec0fb6 (.)
         }
 
         return $res;
     }
 
-<<<<<<< HEAD
-    #[\Override]
-    public function error(): string
-    {
-        $res = trans('exception.model_not_deleted.error', [
-            'id' => $this->id,
-            'model' => $this->model,
-        ]);
-        if (!\is_string($res)) {
-            throw new \Exception('[' . __LINE__ . '][' . class_basename($this) . ']');
-=======
     public function error(): string
     {
         $res = trans(
@@ -77,7 +46,6 @@ class ModelDeletionException extends ApplicationException
         );
         if (! \is_string($res)) {
             throw new \Exception('['.__LINE__.']['.class_basename($this).']');
->>>>>>> c4ec0fb6 (.)
         }
 
         return $res;

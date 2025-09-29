@@ -64,9 +64,5 @@ Imposta un nuovo stato per il modello con un motivo opzionale.
 
 ## Collegamenti correlati
 - [Documentazione Spatie Model Status](https://github.com/spatie/laravel-model-status)
-<<<<<<< HEAD
 - [Documentazione Laravel Eloquent](https://laravel.com/docs/eloquent)
-=======
-- [Documentazione Laravel Eloquent](https://laravel.com/project_docs/eloquent)
->>>>>>> c4ec0fb6 (.)
 - [Documentazione PHPStan](https://phpstan.org/) 

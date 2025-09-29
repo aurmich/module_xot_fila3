@@ -2,13 +2,9 @@
 
 ## 🚨 REGOLA ASSOLUTA 🚨
 
-<<<<<<< HEAD
 **MAI, MAI, MAI modificare il file `/var/www/html/_bases/base_techplanner_fila3_mono/laravel/phpstan.neon`**
 **MAI, MAI, MAI modificare il file `/var/www/html/_bases/base_saluteora/laravel/phpstan.neon`**
 **MAI, MAI, MAI modificare il file `/var/www/html/_bases/base_techplanner_fila3_mono/laravel/phpstan.neon`**
-=======
-**MAI, MAI, MAI modificare il file `/var/www/html/_bases/base_saluteora/laravel/phpstan.neon`**
->>>>>>> c4ec0fb6 (.)
 
 ## Motivazione
 

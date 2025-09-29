@@ -2,7 +2,6 @@
 
 declare(strict_types=1);
 
-<<<<<<< HEAD
 namespace Modules\Xot\Tests\Feature\Filament;
 
 use Filament\Resources\Resource;
@@ -13,22 +12,15 @@ use Modules\Xot\Tests\TestCase;
 uses(TestCase::class, RefreshDatabase::class);
 
 beforeEach(function () {
-    $this->resource = new class extends XotBaseResource {
-        protected static null|string $model = null;
+    $this->resource = new class extends XotBaseResource
+    {
+        protected static ?string $model = null;
 
-        protected static null|string $navigationIcon = 'heroicon-o-rectangle-stack';
+        protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
 
-        protected static null|string $navigationGroup = 'Test Group';
-
-        protected static null|int $navigationSort = 1;
-=======
-namespace Modules\Xot\Tests\Feature\Filament\XotBaseResourceTest;
-
-namespace Modules\Xot\Tests\Feature\Filament;
-
+        protected static ?string $navigationGroup = 'Test Group';
 
         protected static ?int $navigationSort = 1;
->>>>>>> c4ec0fb6 (.)
     };
 });
 

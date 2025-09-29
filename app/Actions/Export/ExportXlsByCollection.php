@@ -4,17 +4,6 @@ declare(strict_types=1);
 
 namespace Modules\Xot\Actions\Export;
 
-<<<<<<< HEAD
-use Illuminate\Database\Eloquent\Collection as EloquentCollection;
-use Illuminate\Support\Collection;
-use Maatwebsite\Excel\Facades\Excel;
-use Modules\Xot\Exports\CollectionExport;
-use PhpOffice\PhpSpreadsheet\Spreadsheet;
-use PhpOffice\PhpSpreadsheet\Worksheet\Worksheet;
-use PhpOffice\PhpSpreadsheet\Writer\Xlsx;
-use Spatie\QueueableAction\QueueableAction;
-use Symfony\Component\HttpFoundation\BinaryFileResponse;
-=======
 use Illuminate\Support\Collection;
 use Illuminate\Database\Eloquent\Collection as EloquentCollection;
 use Symfony\Component\HttpFoundation\BinaryFileResponse;
@@ -24,7 +13,6 @@ use Spatie\QueueableAction\QueueableAction;
 use PhpOffice\PhpSpreadsheet\Spreadsheet;
 use PhpOffice\PhpSpreadsheet\Writer\Xlsx;
 use PhpOffice\PhpSpreadsheet\Worksheet\Worksheet;
->>>>>>> c4ec0fb6 (.)
 
 /**
  * Classe per l'esportazione di collezioni in formato Excel.
@@ -46,18 +34,6 @@ class ExportXlsByCollection
     public function execute(
         Collection|EloquentCollection $collection,
         string $filename = 'test.xlsx',
-<<<<<<< HEAD
-        null|string $transKey = null,
-        array $fields = [],
-    ): BinaryFileResponse {
-        // Assicuriamo che $fields sia un array di stringhe
-        $stringFields = array_map(fn(mixed $field): string => (string) $field, array_values($fields));
-
-        $export = new CollectionExport(
-            collection: $collection,
-            transKey: $transKey,
-            fields: $stringFields,
-=======
         ?string $transKey = null,
         array $fields = [],
     ): BinaryFileResponse {
@@ -73,7 +49,6 @@ class ExportXlsByCollection
             collection: $collection,
             transKey: $transKey,
             fields: $stringFields
->>>>>>> c4ec0fb6 (.)
         );
 
         return Excel::download($export, $filename);

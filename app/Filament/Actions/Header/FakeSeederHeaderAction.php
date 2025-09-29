@@ -24,10 +24,7 @@ class FakeSeederHeaderAction extends Action
     {
         parent::setUp();
         $this->translateLabel()
-<<<<<<< HEAD
-=======
             
->>>>>>> c4ec0fb6 (.)
             ->tooltip(__('xot::actions.fake_seeder'))
             ->icon('fas-seedling')
             ->form([
@@ -48,17 +45,11 @@ class FakeSeederHeaderAction extends Action
                 $qty = max(1, (int) $qtyRaw);
                 Assert::greaterThanEq($qty, 1, 'Quantity must be greater than 0');
 
-<<<<<<< HEAD
-                app(FakeSeederAction::class)->onQueue()->execute($modelClass, $qty);
-
-                $title = 'On Queue ' . $qty . ' ' . $modelClass;
-=======
                 app(FakeSeederAction::class)
                     ->onQueue()
                     ->execute($modelClass, $qty);
 
                 $title = 'On Queue '.$qty.' '.$modelClass;
->>>>>>> c4ec0fb6 (.)
                 Notification::make()
                     ->title($title)
                     ->success()
@@ -67,11 +58,7 @@ class FakeSeederHeaderAction extends Action
             ->visible(false);
     }
 
-<<<<<<< HEAD
-    public static function getDefaultName(): null|string
-=======
     public static function getDefaultName(): ?string
->>>>>>> c4ec0fb6 (.)
     {
         return 'fake_seeder';
     }

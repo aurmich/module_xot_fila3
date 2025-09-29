@@ -77,13 +77,9 @@ Se la proprietà `$data` viene rimossa da `XotBaseWidget`, si verificano i segue
 Prima di ogni commit che coinvolge `XotBaseWidget`, eseguire questo controllo:
 
 ```bash
-<<<<<<< HEAD
 grep -n "public ?array \$data" /var/www/html/base_techplanner_fila3_mono/laravel/Modules/Xot/app/Filament/Widgets/XotBaseWidget.php
 grep -n "public ?array \$data" /var/www/html/base_saluteora/laravel/Modules/Xot/app/Filament/Widgets/XotBaseWidget.php
 grep -n "public ?array \$data" /var/www/html/base_techplanner_fila3_mono/laravel/Modules/Xot/app/Filament/Widgets/XotBaseWidget.php
-=======
-grep -n "public ?array \$data" /var/www/html/base_saluteora/laravel/Modules/Xot/app/Filament/Widgets/XotBaseWidget.php
->>>>>>> c4ec0fb6 (.)
 ```
 
 Se il comando non restituisce risultati, LA PROPRIETÀ È STATA RIMOSSA e deve essere ripristinata immediatamente.

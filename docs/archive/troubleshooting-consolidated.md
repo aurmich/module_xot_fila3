@@ -17,11 +17,7 @@ Questo documento sostituisce e consolida **35+ file di troubleshooting duplicati
 - Qualsiasi documentazione troubleshooting specifica di modulo
 
 ### ✅ Unica Fonte di Verità
-<<<<<<< HEAD
 - **Questo file**: `/laravel/Modules/Xot/docs/troubleshooting-consolidated.md`
-=======
-- **Questo file**: `/laravel/Modules/Xot/project_docs/troubleshooting-consolidated.md`
->>>>>>> c4ec0fb6 (.)
 - **Implementazione**: Fix nei singoli moduli (solo fix, non docs)
 
 ## Problemi Comuni e Soluzioni
@@ -210,13 +206,9 @@ Codice non conforme agli standard di tipizzazione.
 **Soluzione**
 ```bash
 # Eseguire da directory Laravel
-<<<<<<< HEAD
 cd /var/www/html/_bases/base_techplanner_fila3_mono/laravel
 cd /var/www/html/_bases/base_saluteora/laravel
 cd /var/www/html/_bases/base_techplanner_fila3_mono/laravel
-=======
-cd /var/www/html/_bases/base_saluteora/laravel
->>>>>>> c4ec0fb6 (.)
 ./vendor/bin/phpstan analyze --level=9 --memory-limit=2G
 ```
 
@@ -440,12 +432,6 @@ public function test_b(): void
 }
 ```
 
-<<<<<<< HEAD
-=======
-### Errore: Conflitti Git
-
-
->>>>>>> c4ec0fb6 (.)
 
 **Soluzione**
 1. **Analizzare i conflitti**:

@@ -4,24 +4,6 @@ declare(strict_types=1);
 
 namespace Modules\Xot\Filament\Widgets;
 
-<<<<<<< HEAD
-use Flowframe\Trend\Trend;
-use Flowframe\Trend\TrendValue;
-use Modules\SaluteOra\Models\Appointment;
-use Modules\Xot\Filament\Widgets\XotBaseChartWidget;
-
-class ModelTrendChartWidget extends XotBaseChartWidget
-{
-    protected static null|string $heading = null;
-    protected static null|int $sort = 5;
-    protected static bool $isLazy = true;
-    protected static null|string $pollingInterval = '300s'; // 5 minuti
-
-    public string $model;
-
-    #[\Override]
-    public function getHeading(): null|string
-=======
 use Modules\Xot\Filament\Widgets\XotBaseChartWidget;
 use Flowframe\Trend\Trend;
 use Flowframe\Trend\TrendValue;
@@ -37,15 +19,10 @@ class ModelTrendChartWidget extends XotBaseChartWidget
     public string $model;
 
     public function getHeading(): ?string
->>>>>>> c4ec0fb6 (.)
     {
         return static::transClass($this->model, 'widgets.model_trend_chart.heading');
     }
 
-<<<<<<< HEAD
-    #[\Override]
-=======
->>>>>>> c4ec0fb6 (.)
     protected function getData(): array
     {
         try {
@@ -61,26 +38,14 @@ class ModelTrendChartWidget extends XotBaseChartWidget
                 'datasets' => [
                     [
                         'label' => __('salutemo::widgets.appointment_creation_chart.label'),
-<<<<<<< HEAD
-                        'data' => $data->map(fn(mixed $value) => ($value instanceof TrendValue)
-                            ? $value->aggregate
-                            : 0),
-=======
                         'data' => $data->map(fn (mixed $value) => $value instanceof TrendValue ? $value->aggregate : 0),
->>>>>>> c4ec0fb6 (.)
                         'backgroundColor' => 'rgba(139, 92, 246, 0.5)',
                         'borderColor' => 'rgb(139, 92, 246)',
                         'borderWidth' => 2,
                         'tension' => 0.4,
                     ],
                 ],
-<<<<<<< HEAD
-                'labels' => $data->map(fn(mixed $value) => ($value instanceof TrendValue)
-                    ? \Carbon\Carbon::parse($value->date)->format('d/m')
-                    : ''),
-=======
                 'labels' => $data->map(fn (mixed $value) => $value instanceof TrendValue ? \Carbon\Carbon::parse($value->date)->format('d/m') : ''),
->>>>>>> c4ec0fb6 (.)
             ];
         } catch (\Exception $e) {
             // Fallback appropriato senza logging inutile
@@ -100,16 +65,8 @@ class ModelTrendChartWidget extends XotBaseChartWidget
         }
     }
 
-<<<<<<< HEAD
-    #[\Override]
-=======
->>>>>>> c4ec0fb6 (.)
     protected function getType(): string
     {
         return 'line';
     }
-<<<<<<< HEAD
-}
-=======
 } 
->>>>>>> c4ec0fb6 (.)

@@ -22,20 +22,12 @@ class GetFilenameByClassnameAction
             }
         } catch (\Exception $e) {
             $filename = str_replace('\\', '/', $class_name);
-<<<<<<< HEAD
-            $filename = base_path($filename) . '.php';
-=======
             $filename = base_path($filename).'.php';
->>>>>>> c4ec0fb6 (.)
         }
 
         if (is_string($filename)) {
             return $filename;
         }
-<<<<<<< HEAD
-        throw new \Exception('[' . __LINE__ . '][' . class_basename($this) . '][' . $class_name . ']');
-=======
         throw new \Exception('['.__LINE__.']['.class_basename($this).']['.$class_name.']');
->>>>>>> c4ec0fb6 (.)
     }
 }

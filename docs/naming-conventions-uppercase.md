@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Convenzioni di Nomenclatura in <nome progetto>
 
 Questo documento definisce le convenzioni ufficiali di nomenclatura da utilizzare in tutto il progetto <nome progetto>.
@@ -143,8 +142,6 @@ Descrizione dettagliata se necessaria
 ```
 
 Tipi: `feat`, `fix`, `docs`, `style`, `refactor`, `test`, `chore`
-=======
->>>>>>> c4ec0fb6 (.)
 # Convenzioni di Nomenclatura in Laravel Modules
 
 Questo documento definisce le convenzioni ufficiali di nomenclatura da utilizzare in tutto il progetto Laravel Modules.

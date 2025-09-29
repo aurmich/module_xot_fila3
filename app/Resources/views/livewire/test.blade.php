@@ -1,11 +1,3 @@
-<<<<<<< HEAD
-<?php
-
-declare(strict_types=1);
-
-?>
-=======
->>>>>>> c4ec0fb6 (.)
 <div>
     <div class="btn-group group-toggle">
         <x-filament-forms::field-wrapper.label class="btn btn-danger">

@@ -14,11 +14,7 @@ class MorphOneAction
 {
     use QueueableAction;
 
-<<<<<<< HEAD
-    public function execute(Model $_model, RelationDTO $relationDTO): void
-=======
     public function execute(Model $model, RelationDTO $relationDTO): void
->>>>>>> c4ec0fb6 (.)
     {
         Assert::isInstanceOf($rows = $relationDTO->rows, MorphOne::class);
         // if (is_string($relation->data) && isJson($relation->data)) {

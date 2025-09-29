@@ -51,12 +51,8 @@ abstract class XotBaseRelationManager extends RelationManager
 
     final public function form(Form $form): Form
     {
-<<<<<<< HEAD
-        return $form->schema($this->getFormSchema());
-=======
         return $form
             ->schema($this->getFormSchema());
->>>>>>> c4ec0fb6 (.)
     }
 
     /**
@@ -74,17 +70,9 @@ abstract class XotBaseRelationManager extends RelationManager
      *
      * @return array<string, Tables\Columns\Column>
      */
-<<<<<<< HEAD
-    #[\Override]
     public function getTableColumns(): array
     {
         return [];
-
-=======
-    public function getTableColumns(): array
-    {
-        return [];
->>>>>>> c4ec0fb6 (.)
         //return $this->getResource()::getTableColumns();
     }
 
@@ -115,10 +103,7 @@ abstract class XotBaseRelationManager extends RelationManager
     //     return [];
     // }
 
-<<<<<<< HEAD
-=======
 
->>>>>>> c4ec0fb6 (.)
     /**
      * Get the resource class.
      *
@@ -137,11 +122,7 @@ abstract class XotBaseRelationManager extends RelationManager
         } catch (\Exception $e) {
             // Fallback if parent method fails
         }
-<<<<<<< HEAD
-
-=======
         
->>>>>>> c4ec0fb6 (.)
         // Fallback: derive the resource class name from the relation manager name
         $class = get_class($this);
         $resource_name = Str::of(class_basename($this))
@@ -153,21 +134,12 @@ abstract class XotBaseRelationManager extends RelationManager
             ->before('Resources\\')
             ->append('Resources\\')
             ->toString();
-<<<<<<< HEAD
-        $resourceClass = $ns . '\\' . $resource_name;
-
-        if (!class_exists($resourceClass)) {
-            throw new \Exception("Cannot find resource class {$resourceClass}");
-        }
-
-=======
         $resourceClass = $ns.'\\'.$resource_name;
         
         if (!class_exists($resourceClass)) {
             throw new \Exception("Cannot find resource class {$resourceClass}");
         }
         
->>>>>>> c4ec0fb6 (.)
         if (!is_subclass_of($resourceClass, \Modules\Xot\Filament\Resources\XotBaseResource::class)) {
             throw new \Exception("{$resourceClass} must extend XotBaseResource");
         }

@@ -22,11 +22,7 @@ class GetTreeOptionsByModelClassAction
      *
      * @return array<int|string, string>
      */
-<<<<<<< HEAD
-    public function execute(string $class, Model|callable|null $_where = null): array
-=======
     public function execute(string $class, Model|callable|null $where = null): array
->>>>>>> c4ec0fb6 (.)
     {
         /** @var HasRecursiveRelationshipsContract $model */
         $model = new $class();
@@ -38,14 +34,8 @@ class GetTreeOptionsByModelClassAction
 
         foreach ($rows as $row) {
             /* @var HasRecursiveRelationshipsContract $row */
-<<<<<<< HEAD
             $key = $row->getKey();
-            $this->options[is_string($key) ? $key : ((string) $key)] = is_string($row)
-                ? $row
-                : ((string) $row->getLabel());
-=======
-            $this->options[$row->getKey()] = is_string($row) ? $row : (string) $row->getLabel();
->>>>>>> c4ec0fb6 (.)
+            $this->options[is_string($key) ? $key : (string) $key] = is_string($row) ? $row : (string) $row->getLabel();
             $this->parse($row);
         }
 
@@ -55,14 +45,9 @@ class GetTreeOptionsByModelClassAction
     public function parse(HasRecursiveRelationshipsContract $model): void
     {
         foreach ($model->children as $child) {
-<<<<<<< HEAD
             /** @var HasRecursiveRelationshipsContract $child */
             $key = $child->getKey();
-            $this->options[is_string($key) ? $key : ((string) $key)] =
-                Str::repeat('---', $child->depth) . '   ' . $child->getLabel();
-=======
-            $this->options[$child->getKey()] = Str::repeat('---', $child->depth).'   '.$child->getLabel();
->>>>>>> c4ec0fb6 (.)
+            $this->options[is_string($key) ? $key : (string) $key] = Str::repeat('---', $child->depth).'   '.$child->getLabel();
         }
     }
 }

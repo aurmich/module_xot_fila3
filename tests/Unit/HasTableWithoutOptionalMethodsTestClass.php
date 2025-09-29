@@ -4,13 +4,8 @@ declare(strict_types=1);
 
 namespace Modules\Xot\Tests\Unit;
 
-<<<<<<< HEAD
-use Filament\Tables\Table;
-use Mockery;
-=======
 use Mockery;
 use Filament\Tables\Table;
->>>>>>> 4b5055e9 (.)
 use Modules\Xot\Filament\Traits\HasXotTable;
 
 /**
@@ -28,10 +23,6 @@ class HasTableWithoutOptionalMethodsTestClass
         return $mock;
     }
 
-<<<<<<< HEAD
-    #[\Override]
-=======
->>>>>>> 4b5055e9 (.)
     public function getTableColumns(): array
     {
         return [];
@@ -42,11 +33,7 @@ class HasTableWithoutOptionalMethodsTestClass
         return Mockery::mock(Table::class);
     }
 
-<<<<<<< HEAD
-    public function getTablePage(): null|int
-=======
     public function getTablePage(): ?int
->>>>>>> 4b5055e9 (.)
     {
         return 1;
     }
@@ -56,20 +43,12 @@ class HasTableWithoutOptionalMethodsTestClass
         return 10;
     }
 
-<<<<<<< HEAD
-    public function getTableSortColumn(): null|string
-=======
     public function getTableSortColumn(): ?string
->>>>>>> 4b5055e9 (.)
     {
         return null;
     }
 
-<<<<<<< HEAD
-    public function getTableSortDirection(): null|string
-=======
     public function getTableSortDirection(): ?string
->>>>>>> 4b5055e9 (.)
     {
         return null;
     }
@@ -84,29 +63,17 @@ class HasTableWithoutOptionalMethodsTestClass
         return null;
     }
 
-<<<<<<< HEAD
-    public function getTableFilterState(string $_name): null|array
-=======
     public function getTableFilterState(string $name): ?array
->>>>>>> 4b5055e9 (.)
     {
         return [];
     }
 
-<<<<<<< HEAD
-    public function getTableGrouping(): null|string
-=======
     public function getTableGrouping(): ?string
->>>>>>> 4b5055e9 (.)
     {
         return null;
     }
 
-<<<<<<< HEAD
-    public function getTableSearchIndicator(): null|string
-=======
     public function getTableSearchIndicator(): ?string
->>>>>>> 4b5055e9 (.)
     {
         return null;
     }
@@ -181,11 +148,7 @@ class HasTableWithoutOptionalMethodsTestClass
         return null;
     }
 
-<<<<<<< HEAD
-    public function getMountedTableAction(): null|string
-=======
     public function getMountedTableAction(): ?string
->>>>>>> 4b5055e9 (.)
     {
         return null;
     }
@@ -205,11 +168,7 @@ class HasTableWithoutOptionalMethodsTestClass
         return null;
     }
 
-<<<<<<< HEAD
-    public function getMountedTableBulkAction(): null|string
-=======
     public function getMountedTableBulkAction(): ?string
->>>>>>> 4b5055e9 (.)
     {
         return null;
     }
@@ -219,11 +178,7 @@ class HasTableWithoutOptionalMethodsTestClass
         return null;
     }
 
-<<<<<<< HEAD
-    public function getActiveTableLocale(): null|string
-=======
     public function getActiveTableLocale(): ?string
->>>>>>> 4b5055e9 (.)
     {
         return null;
     }
@@ -253,11 +208,7 @@ class HasTableWithoutOptionalMethodsTestClass
         return null;
     }
 
-<<<<<<< HEAD
-    public function callTableColumnAction(string $_name, string $_recordKey): mixed
-=======
     public function callTableColumnAction(string $name, string $recordKey): mixed
->>>>>>> 4b5055e9 (.)
     {
         return null;
     }

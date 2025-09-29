@@ -1,11 +1,3 @@
-<<<<<<< HEAD
-<?php
-
-declare(strict_types=1);
-
-?>
-=======
->>>>>>> c4ec0fb6 (.)
 <!DOCTYPE html>
 <html>
 <head>
@@ -52,8 +44,4 @@ declare(strict_types=1);
         @yield('content')
     </div>
 </body>
-<<<<<<< HEAD
-</html>
-=======
 </html> 
->>>>>>> c4ec0fb6 (.)

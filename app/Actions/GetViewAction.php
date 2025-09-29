@@ -37,21 +37,6 @@ class GetViewAction
         // $tmp = array_slice($arr, 3);//senza "app"
         $tmp = array_slice($arr, 4); // con "app"
 
-<<<<<<< HEAD
-        $tmp = collect($tmp)
-            ->map(static function ($item) {
-                $item = str_replace('.php', '', $item);
-
-                return Str::slug(Str::snake($item));
-            })
-            ->implode('.');
-
-        $pub_view = 'pub_theme::' . $tmp;
-        Assert::string($pub_view, '[' . __LINE__ . '][' . class_basename($this) . ']');
-
-        if ('' !== $tpl) {
-            $pub_view .= '.' . $tpl;
-=======
         $tmp = collect($tmp)->map(
             static function ($item) {
                 $item = str_replace('.php', '', $item);
@@ -65,46 +50,28 @@ class GetViewAction
 
         if ('' !== $tpl) {
             $pub_view .= '.'.$tpl;
->>>>>>> c4ec0fb6 (.)
         }
         if (view()->exists($pub_view)) {
             return $pub_view;
         }
 
-<<<<<<< HEAD
-        $view = Str::lower($mod) . '::' . $tmp;
-
-        if ('' !== $tpl) {
-            $view .= '.' . $tpl;
-=======
         $view = Str::lower($mod).'::'.$tmp;
 
         if ('' !== $tpl) {
             $view .= '.'.$tpl;
->>>>>>> c4ec0fb6 (.)
         }
 
         // if (inAdmin()) {
         if (Str::contains($view, '::panels.actions.')) {
-<<<<<<< HEAD
-            $to = '::' . (inAdmin() ? 'admin.' : '') . 'home.acts.';
-=======
             $to = '::'.(inAdmin() ? 'admin.' : '').'home.acts.';
->>>>>>> c4ec0fb6 (.)
             $view = Str::replace('::panels.actions.', $to, $view);
             $view = Str::replace('-action', '', $view);
         }
 
         // }
-<<<<<<< HEAD
-        Assert::string($view, '[' . __LINE__ . '][' . class_basename($this) . ']');
-        if (!view()->exists($view)) {
-            throw new \Exception('View [' . $view . '] not found');
-=======
         Assert::string($view, '['.__LINE__.']['.class_basename($this).']');
         if (! view()->exists($view)) {
             throw new \Exception('View ['.$view.'] not found');
->>>>>>> c4ec0fb6 (.)
         }
 
         return $view;

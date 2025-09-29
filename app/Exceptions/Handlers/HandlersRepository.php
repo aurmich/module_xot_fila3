@@ -53,16 +53,9 @@ class HandlersRepository
      */
     public function getReportersByException(\Throwable $e): array
     {
-<<<<<<< HEAD
-        return array_filter(
-            $this->reporters,
-            fn(mixed $handler) => is_callable($handler) && $this->handlesException($handler, $e),
-        );
-=======
         return array_filter($this->reporters, function (mixed $handler) use ($e): bool {
             return is_callable($handler) && $this->handlesException($handler, $e);
         });
->>>>>>> c4ec0fb6 (.)
     }
 
     /**
@@ -70,16 +63,9 @@ class HandlersRepository
      */
     public function getRenderersByException(\Throwable $e): array
     {
-<<<<<<< HEAD
-        return array_filter(
-            $this->renderers,
-            fn(mixed $handler) => is_callable($handler) && $this->handlesException($handler, $e),
-        );
-=======
         return array_filter($this->renderers, function (mixed $handler) use ($e): bool {
             return is_callable($handler) && $this->handlesException($handler, $e);
         });
->>>>>>> c4ec0fb6 (.)
     }
 
     /**
@@ -87,16 +73,9 @@ class HandlersRepository
      */
     public function getConsoleRenderersByException(\Throwable $e): array
     {
-<<<<<<< HEAD
-        return array_filter(
-            $this->consoleRenderers,
-            fn(mixed $handler) => is_callable($handler) && $this->handlesException($handler, $e),
-        );
-=======
         return array_filter($this->consoleRenderers, function (mixed $handler) use ($e): bool {
             return is_callable($handler) && $this->handlesException($handler, $e);
         });
->>>>>>> c4ec0fb6 (.)
     }
 
     /**
@@ -110,18 +89,10 @@ class HandlersRepository
             $reflection = new \ReflectionFunction(\Closure::fromCallable($handler));
         }
 
-<<<<<<< HEAD
-        if (!($params = $reflection->getParameters())) {
-            return false;
-        }
-
-        return ($params[0]->getClass() instanceof \ReflectionClass) ? $params[0]->getClass()->isInstance($e) : true;
-=======
         if (! $params = $reflection->getParameters()) {
             return false;
         }
 
         return $params[0]->getClass() instanceof \ReflectionClass ? $params[0]->getClass()->isInstance($e) : true;
->>>>>>> c4ec0fb6 (.)
     }
 }

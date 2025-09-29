@@ -1,11 +1,3 @@
-<<<<<<< HEAD
-<?php
-
-declare(strict_types=1);
-
-?>
-=======
->>>>>>> c4ec0fb6 (.)
 namespace Database\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;

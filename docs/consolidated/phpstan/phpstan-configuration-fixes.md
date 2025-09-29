@@ -16,13 +16,10 @@ ignoreErrors:
     - '#Method .+::.+ should return .+<.+, (.+)> but returns .+<.+, \$this\(\1\)>#' # Ignora errori di covarianza nei tipi generici delle relazioni Eloquent
 ```
 
-<<<<<<< HEAD
 **Moduli Interessati**: , Geo, User, e tutti i moduli con relazioni Eloquent
 
 **Documentazione Specifica**: 
 - [Modulo Generico - PHPStan Relationship Covariance Fix](../<nome modulo>/docs/phpstan-relationship-covariance-fix.md)
-=======
->>>>>>> c4ec0fb6 (.)
 **Moduli Interessati**: SaluteOra, Geo, User, e tutti i moduli con relazioni Eloquent
 
 **Documentazione Specifica**: 

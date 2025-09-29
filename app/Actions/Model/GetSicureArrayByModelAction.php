@@ -16,7 +16,6 @@ class GetSicureArrayByModelAction
      */
     public function execute(Model $model): array
     {
-<<<<<<< HEAD
         try {
             return $model->attributesToArray(); // "" is not a valid backing value for enum Modules\SaluteOra\Enums\OccurrenceFrequencyEnum
         } catch (\ValueError $e) {
@@ -24,13 +23,11 @@ class GetSicureArrayByModelAction
             foreach ($model->getAttributes() as $key => $value) {
                 try {
                     $data[$key] = $this->$key;
-
                     /** @phpstan-ignore-next-line */
                 } catch (\ValueError $e) {
+
                 }
             }
-=======
->>>>>>> c4ec0fb6 (.)
 
             return $data;
         }

@@ -13,23 +13,11 @@ class CopyAction
 
     public function execute(string $from, string $to): void
     {
-<<<<<<< HEAD
-        if (!File::exists(\dirname($to))) {
-            try {
-                File::makeDirectory(\dirname($to), 0o755, true, true);
-            } catch (\Exception $e) {
-                dd(
-                    'Caught exception: ',
-                    $e->getMessage(),
-                    '\n[' . __LINE__ . '][' . class_basename(static::class) . ']',
-                );
-=======
         if (! File::exists(\dirname($to))) {
             try {
                 File::makeDirectory(\dirname($to), 0755, true, true);
             } catch (\Exception $e) {
                 dd('Caught exception: ', $e->getMessage(), '\n['.__LINE__.']['.class_basename(static::class).']');
->>>>>>> c4ec0fb6 (.)
             }
         }
 
@@ -45,27 +33,10 @@ class CopyAction
         try {
             File::copy($from, $to);
         } catch (\Exception $exception) {
-<<<<<<< HEAD
-            throw new \Exception(
-                'Unable to copy
-                    from [' .
-                $from .
-                ']
-                    to [' .
-                $to .
-                ']
-                    message [' .
-                $exception->getMessage() .
-                    ']',
-                $exception->getCode(),
-                $exception,
-            );
-=======
             throw new \Exception('Unable to copy
                     from ['.$from.']
                     to ['.$to.']
                     message ['.$exception->getMessage().']', $exception->getCode(), $exception);
->>>>>>> c4ec0fb6 (.)
         }
     }
 }

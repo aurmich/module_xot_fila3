@@ -42,47 +42,26 @@ interface ProfileContract extends HasMedia
      *
      * @return $this
      */
-<<<<<<< HEAD
-    public function assignRole(array|string|int|\Spatie\Permission\Contracts\Role|\Illuminate\Support\Collection $roles = [
-    ]);
-=======
     public function assignRole(array|string|int|\Spatie\Permission\Contracts\Role|\Illuminate\Support\Collection $roles = []);
->>>>>>> c4ec0fb6 (.)
 
     /**
      * Determine if the model has (one of) the given role(s).
      */
-<<<<<<< HEAD
-    public function hasRole(
-        string|int|array|\Spatie\Permission\Contracts\Role|\Illuminate\Support\Collection $roles,
-        null|string $guard = null,
-    ): bool;
-=======
     public function hasRole(string|int|array|\Spatie\Permission\Contracts\Role|\Illuminate\Support\Collection $roles, ?string $guard = null): bool;
->>>>>>> c4ec0fb6 (.)
 
     /**
      * Determine if the model has any of the given role(s).
      *
      * Alias to hasRole() but without Guard controls
      */
-<<<<<<< HEAD
-    public function hasAnyRole(string|int|array|\Spatie\Permission\Contracts\Role|\Illuminate\Support\Collection $roles = [
-    ]): bool;
-=======
     public function hasAnyRole(string|int|array|\Spatie\Permission\Contracts\Role|\Illuminate\Support\Collection $roles = []): bool;
->>>>>>> c4ec0fb6 (.)
 
     /**
      * Determine if the model may perform the given permission.
      *
      * @throws PermissionDoesNotExist
      */
-<<<<<<< HEAD
-    public function hasPermissionTo(string|int|Permission $permission, null|string $guardName = null): bool;
-=======
     public function hasPermissionTo(string|int|Permission $permission, ?string $guardName = null): bool;
->>>>>>> c4ec0fb6 (.)
 
     /**
      * Create a new Eloquent query builder for the model.

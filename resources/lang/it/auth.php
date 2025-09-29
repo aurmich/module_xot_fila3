@@ -1,11 +1,5 @@
 <?php
 
-<<<<<<< HEAD
-declare(strict_types=1);
-
-
-=======
->>>>>>> c4ec0fb6 (.)
 return [
     'failed' => 'Queste credenziali non corrispondono ai nostri dati.',
     'password' => 'La password fornita non è corretta.',
@@ -79,7 +73,3 @@ return [
         'settings' => 'Impostazioni Utente',
     ],
 ];
-<<<<<<< HEAD
-=======
-
->>>>>>> c4ec0fb6 (.)

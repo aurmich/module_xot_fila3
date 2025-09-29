@@ -1,11 +1,5 @@
 <?php
 
-<<<<<<< HEAD
-declare(strict_types=1);
-
-
-=======
->>>>>>> c4ec0fb6 (.)
 return [
     'navigation' => [
         'name' => 'Cache Lock',
@@ -79,8 +73,4 @@ return [
             'lock_extended' => 'Durata del lock estesa',
         ],
     ],
-<<<<<<< HEAD
-];
-=======
 ]; 
->>>>>>> c4ec0fb6 (.)

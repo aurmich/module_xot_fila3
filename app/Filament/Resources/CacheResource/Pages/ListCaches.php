@@ -13,10 +13,7 @@ use Modules\Xot\Filament\Resources\CacheResource;
 use Modules\Xot\Filament\Resources\Pages\XotBaseListRecords;
 use Modules\Xot\Filament\Widgets\Clock;
 
-<<<<<<< HEAD
-=======
 
->>>>>>> c4ec0fb6 (.)
 /**
  * @see CacheResource
  */
@@ -33,10 +30,6 @@ class ListCaches extends XotBaseListRecords
         ];
     }
 
-<<<<<<< HEAD
-    #[\Override]
-=======
->>>>>>> c4ec0fb6 (.)
     public function getTableColumns(): array
     {
         return [
@@ -45,18 +38,12 @@ class ListCaches extends XotBaseListRecords
                 ->sortable()
                 ->wrap()
                 ->label('Key'),
-<<<<<<< HEAD
-=======
 
->>>>>>> c4ec0fb6 (.)
             'value' => TextColumn::make('value')
                 ->searchable()
                 ->wrap()
                 ->label('Value'),
-<<<<<<< HEAD
-=======
 
->>>>>>> c4ec0fb6 (.)
             'expiration' => TextColumn::make('expiration')
                 ->dateTime()
                 ->sortable()
@@ -64,10 +51,6 @@ class ListCaches extends XotBaseListRecords
         ];
     }
 
-<<<<<<< HEAD
-    #[\Override]
-=======
->>>>>>> c4ec0fb6 (.)
     public function getGridTableColumns(): array
     {
         return [
@@ -78,10 +61,6 @@ class ListCaches extends XotBaseListRecords
     /**
      * @return array<string, \Filament\Actions\Action>
      */
-<<<<<<< HEAD
-    #[\Override]
-=======
->>>>>>> c4ec0fb6 (.)
     protected function getHeaderActions(): array
     {
         return [

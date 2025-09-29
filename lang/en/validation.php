@@ -1,11 +1,5 @@
 <?php
 
-<<<<<<< HEAD
-declare(strict_types=1);
-
-
-=======
->>>>>>> c4ec0fb6 (.)
 return [
     'accepted' => 'The :attribute rmust be accepted.',
     'active_url' => 'The :attribute is not a valid URL.',

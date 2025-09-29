@@ -12,10 +12,6 @@ class SessionPolicy extends XotBasePolicy
     /**
      * Determine whether the user can view any models.
      */
-<<<<<<< HEAD
-    #[\Override]
-=======
->>>>>>> c4ec0fb6 (.)
     public function viewAny(UserContract $user): bool
     {
         return $user->hasPermissionTo('session.viewAny');
@@ -24,11 +20,7 @@ class SessionPolicy extends XotBasePolicy
     /**
      * Determine whether the user can view the model.
      */
-<<<<<<< HEAD
-    public function view(UserContract $user, Session $_session): bool
-=======
     public function view(UserContract $user, Session $session): bool
->>>>>>> c4ec0fb6 (.)
     {
         return $user->hasPermissionTo('session.view');
     }
@@ -44,11 +36,7 @@ class SessionPolicy extends XotBasePolicy
     /**
      * Determine whether the user can update the model.
      */
-<<<<<<< HEAD
-    public function update(UserContract $user, Session $_session): bool
-=======
     public function update(UserContract $user, Session $session): bool
->>>>>>> c4ec0fb6 (.)
     {
         return $user->hasPermissionTo('session.update');
     }
@@ -56,11 +44,7 @@ class SessionPolicy extends XotBasePolicy
     /**
      * Determine whether the user can delete the model.
      */
-<<<<<<< HEAD
-    public function delete(UserContract $user, Session $_session): bool
-=======
     public function delete(UserContract $user, Session $session): bool
->>>>>>> c4ec0fb6 (.)
     {
         return $user->hasPermissionTo('session.delete');
     }
@@ -68,11 +52,7 @@ class SessionPolicy extends XotBasePolicy
     /**
      * Determine whether the user can restore the model.
      */
-<<<<<<< HEAD
-    public function restore(UserContract $user, Session $_session): bool
-=======
     public function restore(UserContract $user, Session $session): bool
->>>>>>> c4ec0fb6 (.)
     {
         return $user->hasPermissionTo('session.restore');
     }

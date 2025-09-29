@@ -4,13 +4,8 @@ declare(strict_types=1);
 
 namespace Modules\Xot\Traits;
 
-<<<<<<< HEAD
-use Illuminate\Support\Facades\App;
-use Illuminate\Support\Facades\Session;
-=======
 use Illuminate\Support\Facades\Session;
 use Illuminate\Support\Facades\App;
->>>>>>> c4ec0fb6 (.)
 
 trait HasCsrfToken
 {
@@ -50,8 +45,4 @@ trait HasCsrfToken
     {
         return Session::token() === $this->_token;
     }
-<<<<<<< HEAD
-}
-=======
 } 
->>>>>>> c4ec0fb6 (.)

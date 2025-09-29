@@ -23,8 +23,5 @@ abstract class XotBaseViewRecord extends FilamentViewRecord
      * @return array<int|string, \Filament\Infolists\Components\Component>
      */
     abstract protected function getInfolistSchema(): array;
-<<<<<<< HEAD
-=======
     
->>>>>>> c4ec0fb6 (.)
 }

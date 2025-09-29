@@ -33,14 +33,10 @@ class LivewireComponentsListCommand extends Command
      *
      * @return void
      */
-<<<<<<< HEAD
-    
-=======
     public function __construct()
     {
         parent::__construct();
     }
->>>>>>> c4ec0fb6 (.)
 
     /**
      * Execute the console command.
@@ -49,25 +45,17 @@ class LivewireComponentsListCommand extends Command
     {
         // Call to undefined method Livewire\LivewireManager::getComponents()
         // $registeredComponents = Livewire::getComponents();
-<<<<<<< HEAD
-        // Stampa o manipola l'array di componenti come desiderato
-        // print_r($registeredComponents);
-=======
 
         // Stampa o manipola l'array di componenti come desiderato
         // print_r($registeredComponents);
 
->>>>>>> c4ec0fb6 (.)
         // dddx(get_class_methods(app(ComponentRegistry::class)));
         // $manifest = app(\Livewire\LivewireComponentsFinder::class)->getManifest();
         // dddx($manifest);
         // dddx(get_class_methods(app(HandleComponents::class)));
         // Ottieni tutti i componenti registrati
         // $registeredComponents = LivewireManager::getAliases();
-<<<<<<< HEAD
-=======
 
->>>>>>> c4ec0fb6 (.)
         // Stampa o manipola l'array di componenti come desiderato
         // print_r($registeredComponents);
         // dddx(get_class_methods(app(LivewireManager::class)));

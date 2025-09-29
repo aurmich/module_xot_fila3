@@ -247,11 +247,7 @@ Questo documento definisce le linee guida di Clean Code adottate nel progetto, b
    - Non alterare le proprietà cruciali delle classi base
 
 4. **Rispetta la struttura standard dei moduli**
-<<<<<<< HEAD
    - Usa il percorso `/var/www/html/base_techplanner_fila3_mono/laravel/Modules/NomeModulo/app/Models/` per i modelli
    - Usa il percorso `/var/www/html/base_saluteora/laravel/Modules/NomeModulo/app/Models/` per i modelli
    - Usa il percorso `/var/www/html/base_techplanner_fila3_mono/laravel/Modules/NomeModulo/app/Models/` per i modelli
-=======
-   - Usa il percorso `/var/www/html/base_saluteora/laravel/Modules/NomeModulo/app/Models/` per i modelli
->>>>>>> c4ec0fb6 (.)
    - Usa il namespace `Modules\NomeModulo\Models` (senza "app")

@@ -9,11 +9,7 @@ use Modules\Xot\Models\InformationSchemaTable;
 
 /**
  * InformationSchemaTable Factory
-<<<<<<< HEAD
- *
-=======
  * 
->>>>>>> c4ec0fb6 (.)
  * @extends Factory<InformationSchemaTable>
  */
 class InformationSchemaTableFactory extends Factory
@@ -24,24 +20,10 @@ class InformationSchemaTableFactory extends Factory
     {
         /** @var string $tableName */
         $tableName = $this->faker->randomElement([
-<<<<<<< HEAD
-            'users',
-            'posts',
-            'comments',
-            'categories',
-            'tags',
-            'orders',
-            'products',
-            'customers',
-            'invoices',
-        ]);
-
-=======
             'users', 'posts', 'comments', 'categories', 'tags',
             'orders', 'products', 'customers', 'invoices'
         ]);
         
->>>>>>> c4ec0fb6 (.)
         return [
             'table_catalog' => 'def',
             'table_schema' => $this->faker->randomElement(['saluteora', 'public', 'main']),
@@ -69,22 +51,14 @@ class InformationSchemaTableFactory extends Factory
 
     public function baseTable(): static
     {
-<<<<<<< HEAD
-        return $this->state(fn(array $_attributes): array => [
-=======
         return $this->state(fn (array $attributes): array => [
->>>>>>> c4ec0fb6 (.)
             'table_type' => 'BASE TABLE',
         ]);
     }
 
     public function view(): static
     {
-<<<<<<< HEAD
-        return $this->state(fn(array $_attributes): array => [
-=======
         return $this->state(fn (array $attributes): array => [
->>>>>>> c4ec0fb6 (.)
             'table_type' => 'VIEW',
         ]);
     }

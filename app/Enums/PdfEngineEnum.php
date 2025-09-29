@@ -5,13 +5,8 @@ declare(strict_types=1);
 namespace Modules\Xot\Enums;
 
 //use Modules\Xot\Datas\PdfData;
-<<<<<<< HEAD
-use Filament\Support\Contracts\HasColor;
-use Filament\Support\Contracts\HasIcon;
-=======
 use Filament\Support\Contracts\HasIcon;
 use Filament\Support\Contracts\HasColor;
->>>>>>> c4ec0fb6 (.)
 use Filament\Support\Contracts\HasLabel;
 
 enum PdfEngineEnum: string implements HasColor, HasIcon, HasLabel

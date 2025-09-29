@@ -14,32 +14,12 @@ use Webmozart\Assert\Assert;
  */
 class MainDashboard extends XotBaseDashboard
 {
-<<<<<<< HEAD
-    protected static null|string $navigationIcon = 'heroicon-o-home';
-=======
     protected static ?string $navigationIcon = 'heroicon-o-home';
->>>>>>> c4ec0fb6 (.)
 
     protected static string $view = 'xot::filament.pages.dashboard';
 
     // protected static string $routePath = 'main';
 
-<<<<<<< HEAD
-    protected static null|string $title = 'Main Dashboard';
-
-    protected static null|int $navigationSort = 1;
-
-    public function mount(): void
-    {
-        Assert::notNull($user = auth()->user(), '[' . __LINE__ . '][' . class_basename($this) . ']');
-        $modules = $user->roles->filter(static fn($item) => Str::endsWith($item->name, '::admin'));
-
-        if (1 === $modules->count()) {
-            Assert::notNull($module_first = $modules->first(), '[' . __LINE__ . '][' . class_basename($this) . ']');
-            $panel_name = $module_first->name;
-            $module_name = Str::before($panel_name, '::admin');
-            $url = '/' . $module_name . '/admin';
-=======
     protected static ?string $title = 'Main Dashboard';
 
     protected static ?int $navigationSort = 1;
@@ -59,16 +39,11 @@ class MainDashboard extends XotBaseDashboard
             $panel_name = $module_first->name;
             $module_name = Str::before($panel_name, '::admin');
             $url = '/'.$module_name.'/admin';
->>>>>>> c4ec0fb6 (.)
             redirect($url);
         }
 
         if (0 === $modules->count()) {
-<<<<<<< HEAD
-            $url = '/' . app()->getLocale();
-=======
             $url = '/'.app()->getLocale();
->>>>>>> c4ec0fb6 (.)
             redirect($url);
         }
     }

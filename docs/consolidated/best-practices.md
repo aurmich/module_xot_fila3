@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Best Practices per Laraxot
 
 ## Riferimenti al modello User
@@ -67,8 +66,6 @@ public function process(\Modules\User\Models\User $user) {
     // Codice
 }
 ``` 
-=======
->>>>>>> c4ec0fb6 (.)
 # 🔧 **Best Practices Modulo Xot**
 
 ## 📋 **Panoramica**

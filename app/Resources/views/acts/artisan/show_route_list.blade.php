@@ -1,11 +1,3 @@
-<<<<<<< HEAD
-<?php
-
-declare(strict_types=1);
-
-?>
-=======
->>>>>>> c4ec0fb6 (.)
 @extends('pub_theme::layouts.app')
 @section('title', 'Web Routes List')
 @section('content')
@@ -57,8 +49,4 @@ declare(strict_types=1);
         });
     });
 </script>
-<<<<<<< HEAD
 @endsection
-=======
-@endsection
->>>>>>> c4ec0fb6 (.)

@@ -15,15 +15,6 @@ use Spipu\Html2Pdf\Exception\Html2PdfException;
 use Spipu\Html2Pdf\Html2Pdf;
 
 /*
-<<<<<<< HEAD
- * ExceptionFormatter
- * HtmlParsingException
- * ImageException
- * LocaleException
- * LongSentenceException
- * TableException
- */
-=======
 ExceptionFormatter
 HtmlParsingException
 ImageException
@@ -31,24 +22,14 @@ LocaleException
 LongSentenceException
 TableException
 */
->>>>>>> c4ec0fb6 (.)
 
 /**
  * Class HtmlService.
  */
 class HtmlService
 {
-<<<<<<< HEAD
-    public static function toPdf(
-        string $html,
-        string $out = 'show',
-        string $pdforientation = 'L',
-        string $filename = '',
-    ): string {
-=======
     public static function toPdf(string $html, string $out = 'show', string $pdforientation = 'L', string $filename = ''): string
     {
->>>>>>> c4ec0fb6 (.)
         // dddx($params);
 
         // include_once __DIR__.'/vendor/autoload.php';
@@ -58,19 +39,11 @@ class HtmlService
             $filename = Storage::disk('local')->path('test.pdf');
         }
         /*
-<<<<<<< HEAD
-         * extract($params);
-         * if (! isset($html)) {
-         * throw new \Exception('err html is missing');
-         * }
-         */
-=======
         extract($params);
         if (! isset($html)) {
             throw new \Exception('err html is missing');
         }
         */
->>>>>>> c4ec0fb6 (.)
         if (request('debug', false)) {
             return $html;
         }
@@ -80,11 +53,7 @@ class HtmlService
             $html2pdf->setTestTdInOnePage(false);
             $html2pdf->WriteHTML($html);
             if ('content_PDF' === $out) {
-<<<<<<< HEAD
-                return $html2pdf->Output($filename . '.pdf', 'S');
-=======
                 return $html2pdf->Output($filename.'.pdf', 'S');
->>>>>>> c4ec0fb6 (.)
             }
 
             if ('file' === $out) {
@@ -112,17 +81,6 @@ class HtmlService
     }
 
     /*
-<<<<<<< HEAD
-     * public static function toMpdf($html): string {
-     * require_once __DIR__.'/vendor/autoload.php';
-     *
-     * $mpdf = new Mpdf();
-     * $mpdf->WriteHTML($html);
-     *
-     * return $mpdf->Output();
-     * }
-     */
-=======
     public static function toMpdf($html): string {
         require_once __DIR__.'/vendor/autoload.php';
 
@@ -132,5 +90,4 @@ class HtmlService
         return $mpdf->Output();
     }
     */
->>>>>>> c4ec0fb6 (.)
 }

@@ -1,11 +1,3 @@
-<<<<<<< HEAD
-<?php
-
-declare(strict_types=1);
-
-?>
-=======
->>>>>>> c4ec0fb6 (.)
 @extends('adm_theme::layouts.app')
 @section('content')
 PASSO 1
@@ -30,8 +22,4 @@ PASSO 1
 </form>
 
 
-<<<<<<< HEAD
 @endsection
-=======
-@endsection
->>>>>>> c4ec0fb6 (.)

@@ -125,11 +125,6 @@ Tutti i moduli devono seguire i principi DDD:
 - [Documentazione](../documentation-rules.md) 
 
 ## Collegamenti tra versioni di module-structure.md
-<<<<<<< HEAD
 * [module-structure.md](../../../Xot/docs/laraxot/module-structure.md)
 * [module-structure.md](../../../Xot/docs/architecture/module-structure.md)
-=======
-* [module-structure.md](../../../Xot/project_docs/laraxot/module-structure.md)
-* [module-structure.md](../../../Xot/project_docs/architecture/module-structure.md)
->>>>>>> c4ec0fb6 (.)
 

@@ -9,11 +9,7 @@
 - Ogni errore e soluzione va documentato sia nella docs del modulo sia qui, con link bidirezionali.
 
 ## Collegamenti
-<<<<<<< HEAD
 - [../../<nome progetto>/docs/state-machine.md](../../<nome progetto>/docs/state-machine.md)
 - [../../saluteora/docs/state-machine.md](../../saluteora/docs/state-machine.md)
-=======
-- [../../saluteora/project_docs/state-machine.md](../../saluteora/project_docs/state-machine.md)
->>>>>>> c4ec0fb6 (.)
 - [../../.windsurf/rules/filament-state-transitions.mdc](../../.windsurf/rules/filament-state-transitions.mdc)
 - [../../.cursor/rules/filament-state-transitions.mdc](../../.cursor/rules/filament-state-transitions.mdc)

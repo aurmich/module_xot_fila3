@@ -1,17 +1,5 @@
 <?php
 
-<<<<<<< HEAD
-declare(strict_types=1);
-
-
-return [
-    'actions' => [
-        'copy_from_last_year' => [
-            'label' => 'copy_from_last_year',
-        ],
-    ],
-];
-=======
 return array (
   'actions' => 
   array (
@@ -21,4 +9,3 @@ return array (
     ),
   ),
 );
->>>>>>> c4ec0fb6 (.)

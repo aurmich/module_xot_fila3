@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 namespace Modules\Xot\Filament\Resources\XotBaseResource\Pages;
 
-<<<<<<< HEAD
 use Filament\Forms\Concerns\InteractsWithForms;
 use Filament\Forms\Form;
 use Filament\Resources\Pages\ManageRelatedRecords as FilamentManageRelatedRecords;
@@ -17,23 +16,6 @@ use Illuminate\Support\Str;
 use Modules\Xot\Filament\Traits\HasXotTable;
 use Modules\Xot\Filament\Traits\NavigationLabelTrait;
 use Webmozart\Assert\Assert;
-=======
-use Filament\Tables;
-use Filament\Forms\Form;
-use Filament\Tables\Table;
-use Illuminate\Support\Str;
-use Webmozart\Assert\Assert;
-use Illuminate\Support\Facades\DB;
-use Filament\Tables\Actions\Action;
-use Filament\Tables\Columns\TextColumn;
-use Illuminate\Database\Eloquent\Model;
-use Filament\Tables\Actions\CreateAction;
-use Illuminate\Database\Eloquent\Builder;
-use Modules\Xot\Filament\Traits\HasXotTable;
-use Filament\Forms\Concerns\InteractsWithForms;
-use Modules\Xot\Filament\Traits\NavigationLabelTrait;
-use Filament\Resources\Pages\ManageRelatedRecords as FilamentManageRelatedRecords;
->>>>>>> c4ec0fb6 (.)
 
 /**
  * Classe base per la gestione delle relazioni nelle risorse Filament.
@@ -69,13 +51,6 @@ abstract class XotBaseManageRelatedRecords extends FilamentManageRelatedRecords
      *
      * @return array<string, TextColumn>
      */
-<<<<<<< HEAD
-    #[\Override]
-    public function getTableColumns(): array
-    {
-        return [
-            'id' => TextColumn::make('id')->label('ID')->sortable(),
-=======
     public function getTableColumns(): array
     {
         return [
@@ -83,15 +58,11 @@ abstract class XotBaseManageRelatedRecords extends FilamentManageRelatedRecords
                 ->label('ID')
                 ->sortable(),
 
->>>>>>> c4ec0fb6 (.)
             'name' => TextColumn::make('name')
                 ->label('Nome')
                 ->searchable()
                 ->sortable(),
-<<<<<<< HEAD
-=======
 
->>>>>>> c4ec0fb6 (.)
             'created_at' => TextColumn::make('created_at')
                 ->label('Data Creazione')
                 ->dateTime('d/m/Y H:i')
@@ -107,43 +78,11 @@ abstract class XotBaseManageRelatedRecords extends FilamentManageRelatedRecords
      */
     public function getTableHeaderActions(): array
     {
-<<<<<<< HEAD
         return [
-            'create' => CreateAction::make()->label('Crea Nuovo')->disableCreateAnother(),
+            'create' => CreateAction::make()
+                ->label('Crea Nuovo')
+                ->disableCreateAnother(),
         ];
-=======
-        $actions = [];
-        $resource = static::class;
-        // if (method_exists($resource, 'canCreate')) {
-        //     $actions['create'] = Tables\Actions\CreateAction::make()
-        //         ->iconButton()
-        //         ->tooltip(__('user::actions.create'))
-        //         ->visible(fn (?Model $record): bool => $resource::canCreate());
-        // }
-
-        // if (method_exists($resource, 'canAssociate')) {
-        //     $actions['associate'] = Tables\Actions\AssociateAction::make()
-        //         ->label('')
-        //         ->icon('heroicon-o-paper-clip')
-        //         ->tooltip(__('user::actions.associate_user'))
-        //         ->visible(fn (?Model $record): bool => $resource::canAssociate());
-
-        // }
-
-        if (method_exists($resource, 'canAttach')) {
-            $actions['attach'] = Tables\Actions\AttachAction::make()
-                ->label('')
-                ->icon('heroicon-o-link')
-                ->tooltip(__('user::actions.attach_user'))
-                ->visible(fn (?Model $record): bool => $resource::canAttach())
-                // ->recordSelectOptionsQuery(fn (Builder $query) => 
-                //     $query->addSelect(DB::raw("CONCAT(nome, ' ', cognome, ' (ID: ', matricola, ')') as display_name"))
-                // )
-            // ->recordTitleAttribute('display_name')
-            ->preloadRecordSelect();
-        }
-        return $actions;
->>>>>>> c4ec0fb6 (.)
     }
 
     /**
@@ -158,18 +97,8 @@ abstract class XotBaseManageRelatedRecords extends FilamentManageRelatedRecords
             'edit' => Action::make('edit')
                 ->label('Modifica')
                 ->icon('heroicon-o-pencil')
-<<<<<<< HEAD
-                ->url(fn(Model $record): string => static::getResource()::getUrl('edit', ['record' => $record])),
-=======
                 ->url(fn (Model $record): string => static::getResource()::getUrl('edit', ['record' => $record])),
-                
-            'detach' => Tables\Actions\DetachAction::make(),
-            
 
-<<<<<<< HEAD
->>>>>>> c4ec0fb6 (.)
-=======
->>>>>>> 17bd364a (.)
             // 'view' => Action::make('view')
             //     ->label('Visualizza')
             //     ->icon('heroicon-o-eye')
@@ -192,23 +121,6 @@ abstract class XotBaseManageRelatedRecords extends FilamentManageRelatedRecords
      * ->disableCreateAnother(),
      * ]);
      * }.
-<<<<<<< HEAD
-     *
-     * public function table(Table $table): Table
-     * {
-     * return $table
-     * ->columns($this->getTableColumns())
-     * ->headerActions($this->getTableHeaderActions())
-     * ->actions($this->getTableActions())
-     * ->bulkActions([])
-     * ->emptyStateActions([
-     * 'create' => CreateAction::make()
-     * ->label('Crea Nuovo')
-     * ->disableCreateAnother(),
-     * ]);
-     * }
-     */
-=======
      
     public function table(Table $table): Table
     {
@@ -224,7 +136,6 @@ abstract class XotBaseManageRelatedRecords extends FilamentManageRelatedRecords
             ]);
     }
     */
->>>>>>> c4ec0fb6 (.)
     /**
      * Configura il form per la creazione/modifica dei record correlati.
      */
@@ -253,11 +164,7 @@ abstract class XotBaseManageRelatedRecords extends FilamentManageRelatedRecords
 
         return Str::of($relationship)
             ->title()
-<<<<<<< HEAD
-            ->prepend($titleString . ' - ')
-=======
             ->prepend($titleString.' - ')
->>>>>>> c4ec0fb6 (.)
             ->toString();
     }
 }

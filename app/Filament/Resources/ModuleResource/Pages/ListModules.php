@@ -14,26 +14,16 @@ use Filament\Tables\Columns\TextColumn;
 use Modules\UI\Enums\TableLayoutEnum;
 use Modules\Xot\Filament\Resources\ModuleResource;
 use Modules\Xot\Filament\Resources\Pages\XotBaseListRecords;
-<<<<<<< HEAD
-use Modules\Xot\Filament\Resources\RelationManagers\XotBaseRelationManager;
-use Nwidart\Modules\Facades\Module;
-
-=======
 use Nwidart\Modules\Facades\Module;
 
 use Modules\Xot\Filament\Resources\RelationManagers\XotBaseRelationManager;
 
->>>>>>> c4ec0fb6 (.)
 class ListModules extends XotBaseListRecords
 {
     public TableLayoutEnum $layoutView = TableLayoutEnum::LIST;
 
     protected static string $resource = ModuleResource::class;
 
-<<<<<<< HEAD
-    #[\Override]
-=======
->>>>>>> c4ec0fb6 (.)
     public function getGridTableColumns(): array
     {
         return [
@@ -44,15 +34,6 @@ class ListModules extends XotBaseListRecords
     /**
      * @return array<string, Tables\Columns\Column>
      */
-<<<<<<< HEAD
-    #[\Override]
-    public function getTableColumns(): array
-    {
-        return [
-            'name' => TextColumn::make('name')->searchable()->sortable(),
-            'path' => TextColumn::make('path')->searchable()->sortable(),
-            'enabled' => TextColumn::make('enabled')->sortable(),
-=======
     public function getTableColumns(): array
     {
         return [
@@ -64,7 +45,6 @@ class ListModules extends XotBaseListRecords
                 ->sortable(),
             'enabled' => TextColumn::make('enabled')
                 ->sortable(),
->>>>>>> c4ec0fb6 (.)
         ];
     }
 
@@ -73,10 +53,6 @@ class ListModules extends XotBaseListRecords
      *
      * @return array<Tables\Filters\BaseFilter>
      */
-<<<<<<< HEAD
-    #[\Override]
-=======
->>>>>>> c4ec0fb6 (.)
     public function getTableFilters(): array
     {
         return [
@@ -95,15 +71,6 @@ class ListModules extends XotBaseListRecords
      *
      * @return array<Tables\Actions\Action|Tables\Actions\ActionGroup>
      */
-<<<<<<< HEAD
-    #[\Override]
-    public function getTableActions(): array
-    {
-        return [
-            ViewAction::make(),
-            EditAction::make(),
-            DeleteAction::make()->requiresConfirmation(),
-=======
     public function getTableActions(): array
     {
         return [
@@ -114,17 +81,12 @@ class ListModules extends XotBaseListRecords
             DeleteAction::make()
 
                 ->requiresConfirmation(),
->>>>>>> c4ec0fb6 (.)
         ];
     }
 
     /**
      * @return array<string, Tables\Actions\BulkAction>
      */
-<<<<<<< HEAD
-    #[\Override]
-=======
->>>>>>> c4ec0fb6 (.)
     public function getTableBulkActions(): array
     {
         return [

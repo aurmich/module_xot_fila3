@@ -1,11 +1,3 @@
-<<<<<<< HEAD
-<?php
-
-declare(strict_types=1);
-
-?>
-=======
->>>>>>> c4ec0fb6 (.)
 <div
     x-data="{
         output: @entangle('output'),
@@ -64,8 +56,4 @@ declare(strict_types=1);
 .animate-blink {
     animation: blink 1s infinite;
 }
-<<<<<<< HEAD
-</style>
-=======
 </style> 
->>>>>>> c4ec0fb6 (.)

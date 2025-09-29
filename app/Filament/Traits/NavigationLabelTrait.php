@@ -21,10 +21,6 @@ trait NavigationLabelTrait
     public static function getPluralModelLabel(): string
     {
         return static::getNavigationLabel();
-<<<<<<< HEAD
-
-=======
->>>>>>> c4ec0fb6 (.)
         // return static::transFunc(__FUNCTION__);
     }
 
@@ -53,21 +49,13 @@ trait NavigationLabelTrait
         return static::transFunc(__FUNCTION__);
     }
 
-<<<<<<< HEAD
-    public static function getNavigationSort(): null|int
-=======
     public static function getNavigationSort(): ?int
->>>>>>> c4ec0fb6 (.)
     {
         $res = static::transFunc(__FUNCTION__);
 
         $value = intval($res);
 
-<<<<<<< HEAD
-        if (0 === $value) {
-=======
         if (0 == $value) {
->>>>>>> c4ec0fb6 (.)
             $key = static::getKeyTransFunc(__FUNCTION__);
             $value = rand(1, 100);
             app(SaveTransAction::class)->execute($key, $value);
@@ -88,55 +76,6 @@ trait NavigationLabelTrait
 
         return $default;
     }
-<<<<<<< HEAD
-
-    /*
-     *
-     * public function getHeading(): string|Htmlable
-     * {
-     * return 'AAAAAAAAAA';
-     * }
-     *
-     *
-     *
-     * public static function getBreadcrumb(): string {
-     * return JobsWaitingPlugin::make()->getBreadcrumb();
-     * }
-     *
-     * public static function shouldRegisterNavigation(): bool {
-     * return JobsWaitingPlugin::make()->shouldRegisterNavigation();
-     * }
-     *
-     * public static function getNavigationIcon(): string {
-     * return JobsWaitingPlugin::make()->getNavigationIcon();
-     * }
-     *
-     */
-}
-
-/*
- * public static function transPath(string $key): string
- * {
- * $moduleNameLow = Str::lower(static::getModuleName());
- * // $modelClass = static::$model ?? static::getModel();
- * $modelClass = static::getModel();
- * Assert::notNull($modelClass,'['.__LINE__.']['.class_basename($this).']');
- * $modelNameSlug = Str::kebab(class_basename($modelClass));
- *
- * return $moduleNameLow.'::'.$modelNameSlug.'.'.$key;
- * }
- *
- * public static function trans(string $key): string
- * {
- * $res = __(static::transPath($key));
- * if (\is_array($res)) {
- * throw new \Exception('fix lang ['.$key.']');
- * }
- *
- * return $res;
- * }
- */
-=======
     /*
 
     public function getHeading(): string|Htmlable
@@ -183,4 +122,3 @@ public static function transPath(string $key): string
         return $res;
     }
 */
->>>>>>> c4ec0fb6 (.)

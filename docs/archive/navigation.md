@@ -23,11 +23,7 @@ return [
             'Custom 404 Page' => 'docs/custom-404-page',
         ],
     ],
-<<<<<<< HEAD
     'Jigsaw Docs' => 'https://jigsaw.tighten.co/docs/installation',
-=======
-    'Jigsaw Docs' => 'https://jigsaw.tighten.co/project_docs/installation',
->>>>>>> c4ec0fb6 (.)
 ];
 
 // config.php
@@ -40,21 +36,12 @@ $page->navigation
 
 
 ## Collegamenti tra versioni di navigation.md
-<<<<<<< HEAD
 * [navigation.md](../../../Gdpr/docs/navigation.md)
 * [navigation.md](../../../Xot/docs/navigation.md)
 * [navigation.md](../../../UI/docs/navigation.md)
 * [navigation.md](../../../Cms/docs/blocks/navigation.md)
 * [navigation.md](../../../Cms/docs/navigation.md)
 * [navigation.md](../../../Cms/docs/components/navigation.md)
-=======
-* [navigation.md](../../../Gdpr/project_docs/navigation.md)
-* [navigation.md](../../../Xot/project_docs/navigation.md)
-* [navigation.md](../../../UI/project_docs/navigation.md)
-* [navigation.md](../../../Cms/project_docs/blocks/navigation.md)
-* [navigation.md](../../../Cms/project_docs/navigation.md)
-* [navigation.md](../../../Cms/project_docs/components/navigation.md)
->>>>>>> c4ec0fb6 (.)
 
 
 ### Versione Incoming

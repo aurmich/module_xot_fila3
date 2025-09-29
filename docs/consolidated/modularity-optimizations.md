@@ -9,7 +9,6 @@ Durante l'audit del modulo `Xot` (modulo base del framework), sono state identif
 ### 1. Path Hardcoded per Progetti Specifici
 ```php
 // ❌ ERRORE CRITICO - Path hardcoded
-<<<<<<< HEAD
 public static string $projectBasePath = '/var/www/html/<nome progetto>';
 public static string $laravelBasePath = '/var/www/html/_bases/base_techplanner_fila3_mono/laravel';
 public static string $modulesBasePath = '/var/www/html/_bases/base_techplanner_fila3_mono/laravel/Modules';
@@ -18,11 +17,6 @@ public static string $laravelBasePath = '/var/www/html/saluteora/laravel';
 public static string $modulesBasePath = '/var/www/html/saluteora/laravel/Modules';
 public static string $laravelBasePath = '/var/www/html/_bases/base_techplanner_fila3_mono/laravel';
 public static string $modulesBasePath = '/var/www/html/_bases/base_techplanner_fila3_mono/laravel/Modules';
-=======
-public static string $projectBasePath = '/var/www/html/saluteora';
-public static string $laravelBasePath = '/var/www/html/saluteora/laravel';
-public static string $modulesBasePath = '/var/www/html/saluteora/laravel/Modules';
->>>>>>> c4ec0fb6 (.)
 ```
 
 **File contaminati:**
@@ -31,10 +25,7 @@ public static string $modulesBasePath = '/var/www/html/saluteora/laravel/Modules
 ### 2. Dipendenze su Moduli Specifici nei Test
 ```php
 // ❌ ERRORE CRITICO - Dipendenze hardcoded nei test
-<<<<<<< HEAD
 ->andReturn(\Modules\<nome modulo>\Models\User::class);
-=======
->>>>>>> c4ec0fb6 (.)
 ->andReturn(\Modules\SaluteOra\Models\User::class);
 ```
 
@@ -44,11 +35,8 @@ public static string $modulesBasePath = '/var/www/html/saluteora/laravel/Modules
 ### 3. Riferimenti a Traduzioni Specifiche
 ```php
 // ❌ ERRORE CRITICO - Traduzioni hardcoded
-<<<<<<< HEAD
 self::MONDAY => __('<nome progetto>::common.days.description.monday'),
 self::TUESDAY => __('<nome progetto>::common.days.description.tuesday'),
-=======
->>>>>>> c4ec0fb6 (.)
 self::MONDAY => __('saluteora::common.days.description.monday'),
 self::TUESDAY => __('saluteora::common.days.description.tuesday'),
 ```
@@ -59,10 +47,7 @@ self::TUESDAY => __('saluteora::common.days.description.tuesday'),
 ### 4. Factory con Dati Specifici
 ```php
 // ❌ ERRORE CRITICO - Dati hardcoded nelle factory
-<<<<<<< HEAD
 'table_schema' => $this->faker->randomElement(['<nome progetto>', 'public', 'main']),
-=======
->>>>>>> c4ec0fb6 (.)
 'table_schema' => $this->faker->randomElement(['saluteora', 'public', 'main']),
 ```
 
@@ -72,10 +57,7 @@ self::TUESDAY => __('saluteora::common.days.description.tuesday'),
 ### 5. Dipendenze su Moduli Specifici nei Widget
 ```php
 // ❌ ERRORE CRITICO - Import hardcoded
-<<<<<<< HEAD
 use Modules\<nome modulo>\Models\Appointment;
-=======
->>>>>>> c4ec0fb6 (.)
 use Modules\SaluteOra\Models\Appointment;
 ```
 
@@ -125,10 +107,7 @@ class PathHelper
         
         // Normalizzazione dinamica
         return str_replace(
-<<<<<<< HEAD
             ['/<nome progetto>/', '/Modules/'],
-=======
->>>>>>> c4ec0fb6 (.)
             ['/saluteora/', '/Modules/'],
             [$projectPath, $modulesPath],
             $path
@@ -282,7 +261,6 @@ enum DayOfWeek: int
 ### Variabili d'Ambiente
 ```env
 # Configurazione Path Xot
-<<<<<<< HEAD
 PROJECT_BASE_PATH=/var/www/html/<nome progetto>
 LARAVEL_BASE_PATH=/var/www/html/_bases/base_techplanner_fila3_mono/laravel
 MODULES_BASE_PATH=/var/www/html/_bases/base_techplanner_fila3_mono/laravel/Modules
@@ -300,11 +278,6 @@ XOT_TABLE_SCHEMAS=<nome progetto>,public,main,information_schema
 PROJECT_BASE_PATH=/var/www/html/saluteora
 LARAVEL_BASE_PATH=/var/www/html/_bases/base_techplanner_fila3_mono/laravel
 MODULES_BASE_PATH=/var/www/html/_bases/base_techplanner_fila3_mono/laravel/Modules
-=======
-PROJECT_BASE_PATH=/var/www/html/saluteora
-LARAVEL_BASE_PATH=/var/www/html/saluteora/laravel
-MODULES_BASE_PATH=/var/www/html/saluteora/laravel/Modules
->>>>>>> c4ec0fb6 (.)
 
 # Configurazione Modelli Xot
 XOT_USER_MODEL=Modules\SaluteOra\Models\User
@@ -326,7 +299,6 @@ Ogni progetto può personalizzare path, modelli e traduzioni tramite variabili d
 ### Comando di Verifica
 ```bash
 # Verifica path hardcoded
-<<<<<<< HEAD
 grep -r "/var/www/html/<nome progetto>" laravel/Modules/Xot/ --include="*.php"
 
 # Verifica dipendenze hardcoded
@@ -334,8 +306,6 @@ grep -r "Modules\\" laravel/Modules/Xot/ --include="*.php"
 
 # Verifica traduzioni hardcoded
 grep -r "<nome progetto>::" laravel/Modules/Xot/ --include="*.php"
-=======
->>>>>>> c4ec0fb6 (.)
 grep -r "/var/www/html/saluteora" laravel/Modules/Xot/ --include="*.php"
 
 # Verifica dipendenze hardcoded

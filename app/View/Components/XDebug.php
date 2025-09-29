@@ -23,12 +23,8 @@ class XDebug extends Component
         // public Post $article,
         // public bool $showAuthor = false,
         public string $tpl = 'v1',
-<<<<<<< HEAD
-    ) {}
-=======
     ) {
     }
->>>>>>> c4ec0fb6 (.)
 
     public function render(): Renderable
     {
@@ -47,11 +43,7 @@ class XDebug extends Component
 
     public function debugStack(): string
     {
-<<<<<<< HEAD
-        if (!extension_loaded('xdebug')) {
-=======
         if (! extension_loaded('xdebug')) {
->>>>>>> c4ec0fb6 (.)
             throw new \RuntimeException('XDebug must be installed to use this function');
         }
 
@@ -71,10 +63,6 @@ class XDebug extends Component
         $out1 = ob_get_contents();
         ob_end_clean();
 
-<<<<<<< HEAD
-        return is_string($out1) ? $out1 : ((string) $out1);
-=======
         return is_string($out1) ? $out1 : (string) $out1;
->>>>>>> c4ec0fb6 (.)
     }
 }

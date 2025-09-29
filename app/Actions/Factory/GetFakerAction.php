@@ -22,11 +22,7 @@ class GetFakerAction
 {
     use QueueableAction;
 
-<<<<<<< HEAD
-    public function execute(string $name, null|string $type = null, null|string $_table = null): string
-=======
     public function execute(string $name, ?string $type = null, ?string $table = null): string
->>>>>>> c4ec0fb6 (.)
     {
         if (null !== $type && Str::startsWith($type, 'factory(')) {
             return $type;

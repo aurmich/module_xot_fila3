@@ -1,10 +1,7 @@
 # Struttura Traduzioni Espansa - Modulo Xot
 
 ## Scopo
-<<<<<<< HEAD
 Implementazione della struttura espansa per le traduzioni del modulo Xot, seguendo i principi DRY/KISS e le regole del progetto .
-=======
->>>>>>> c4ec0fb6 (.)
 Implementazione della struttura espansa per le traduzioni del modulo Xot, seguendo i principi DRY/KISS e le regole del progetto SaluteOra.
 
 ## Problema Identificato
